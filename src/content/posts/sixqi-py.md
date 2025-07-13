@@ -45,4 +45,6 @@ lang: ''
 
 现已可在 https://sixqi.afo.im/ 游玩！
 
+开源： [GitHub - afoim/sixqi](https://github.com/afoim/sixqi)
+
 ![](https://sb-r2.afo.im/myblog/img/1416208a-b44c-40b7-a1ba-743e8a28d3bc.webp)
