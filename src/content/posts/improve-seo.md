@@ -53,15 +53,11 @@ lang: ''
 
 `分享网络技术、服务器部署、内网穿透、静态网站搭建、CDN优化、容器化部署等技术教程与实践经验的个人技术博客，专注于云原生、无服务器架构和前后端开发，作者为AcoFork/afoim/二叉树树`
 
-# 添加相关关键词
+# 关键词
 
 > 即每个HTML head部分的 `meta name="keywords"`
 
-这个我认为是越多越好
-
-我的关键词为
-
-`IT技术, 网络技术, 服务器部署, 内网穿透, 静态网站, 技术博客, CDN技术, 无服务器, 前后端逆向, Serverless, 云原生, 容器化, Docker, 性能优化, 网站优化, Blog, 博客, afoim, afoim Blog, 二叉树树, AcoFork Blog, Cloudflare, Cloudflare Tunnel, Cloudflare Workers, Cloudflare Pages, Cloudflare R2, EdgeOne CDN, SecBit MCDN, Netlify, Vercel, IPFS, Fleek, Next.js, Hugo, Fuwari, React, Vue, Docker Compose, Umami, GitHub, GitHub Pages, STUN, NAT, NAT1, Tailscale, Zerotier, 反向代理, 负载均衡, SSL证书, 域名解析, NAS, 对象存储, 云存储, 图床, 文件存储, 数据备份, QQBot, Koishi, ChatBot, 自动化部署, CI/CD, GitHub Actions, 域名邮箱, 短链接, 在线工具, meme-generator, 表情包生成, AI工具, 网站安全, 防火墙, 访问控制, DDoS防护, Web安全, 网站统计, 访问分析, 监控告警, 性能监控, 日志分析, 前端开发, 后端开发, 全栈开发, API开发, 微服务, REST API, 技术教程, 部署指南, 配置教程, 实践经验, 开发笔记, 踩坑记录, Kubernetes, k8s, 微服务架构, 分布式系统, 负载均衡, 高可用, 弹性伸缩, MinIO, S3, 对象存储, 文件系统, 数据库, Redis, CDN加速, 缓存优化, 带宽优化, 延迟优化, 边缘计算, PWA, 响应式设计, 移动端优化, 跨平台开发`
+现代搜索引擎基本不看，很容易被滥用。所以不需要写
 
 # 同内容网站只能有一个
 
