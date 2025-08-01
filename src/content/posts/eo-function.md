@@ -17,7 +17,7 @@ lang: ''
 
 部署到EdgeOne边缘函数
 
-![](https://eo-r2.2x.nz/myblog/img/4274a5c6-c3d5-468b-8c98-d515a0a22762.webp)
+![](../assets/images/4274a5c6-c3d5-468b-8c98-d515a0a22762.webp)
 
 将代码开头的 `R2_CONFIG` 设为你自己的
 
@@ -46,11 +46,11 @@ var R2_CONFIG = {
 
 访问 `/h` 则展示一张横屏随机图，访问 `/v` 则展示一张竖屏随机图
 
-![](https://eo-r2.2x.nz/myblog/img/fe7629b7-2acd-4e84-bd0c-d66ee7a54528.webp)
+![](../assets/images/fe7629b7-2acd-4e84-bd0c-d66ee7a54528.webp)
 
 如果需要绑定域名请设置触发规则
 
-![](https://eo-r2.2x.nz/myblog/img/33d931d4-e7cd-4d5d-afd8-85b787524391.webp)
+![](../assets/images/33d931d4-e7cd-4d5d-afd8-85b787524391.webp)
 
 # 注意
 

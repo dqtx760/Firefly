@@ -21,11 +21,11 @@ Cloudflare带宽联盟（Bandwidth Alliance） 由一群具有前瞻性思维的
 
 截止到文章发布日，这些服务支持
 
-![](https://eo-r2.2x.nz/myblog/img/e04c6bee-efc2-4998-83aa-aeacc80e6908.webp)
+![](../assets/images/e04c6bee-efc2-4998-83aa-aeacc80e6908.webp)
 
 在这里可以看到，如果您每月需要传输1TB的流量，Cloudflare将为您每月节省如此多的美刀
 
-![](https://eo-r2.2x.nz/myblog/img/3ac81964-bb93-4528-921f-d801a66cb72d.webp)
+![](../assets/images/3ac81964-bb93-4528-921f-d801a66cb72d.webp)
 
 # 如何使用？
 

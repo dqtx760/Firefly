@@ -23,7 +23,7 @@ Cloudflare Byoip，即如果用户自己拥有一个IP、IP段，可以将其托
 
 > 我这里返回404是正常的，因为 r2.afo.im 直接连接到Cloudflare R2对象存储，直接访问就是404
 
-![](https://eo-r2.2x.nz/myblog/img/838f685e-3913-4b21-995e-5ee149f4bffa.webp)
+![](../assets/images/838f685e-3913-4b21-995e-5ee149f4bffa.webp)
 
 需要注意，有一些Byoip可能会强制跳转到它自己的网站。需要查看ITDog的测试日志是否有重定向，别让你的网站成为他人的引流站
 

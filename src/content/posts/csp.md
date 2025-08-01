@@ -15,7 +15,7 @@ lang: ''
 
 不出意外，你的浏览器会弹出一个提示
 
-![](https://eo-r2.2x.nz/myblog/img/b279f283-b5d2-4dbd-955e-5b3bba6ff656.webp)
+![](../assets/images/b279f283-b5d2-4dbd-955e-5b3bba6ff656.webp)
 
 # 这是如何做到的？
 
@@ -48,7 +48,7 @@ HTML内容为
 
 比如你输入 https://none-csp-demo.pages.dev/nocsp?name=AcoFork 网页就会显示
 
-![](https://eo-r2.2x.nz/myblog/img/366d0934-9c3a-4196-a7ae-1c230c916daf.webp)
+![](../assets/images/366d0934-9c3a-4196-a7ae-1c230c916daf.webp)
 
 而根据源码 网页是通过 `innerHTML` 直接进行文本插入的
 
@@ -62,11 +62,11 @@ https://none-csp-demo.pages.dev/nocsp?name=%3Cimg%20src=x%20onerror=%22alert(%27
 
 你会发现网站并没有打印出任何用户名，而且浏览器还弹出了一个奇怪的窗口
 
-![](https://eo-r2.2x.nz/myblog/img/e86cfeed-a9d4-402b-aed0-fc3624f3e925.webp)
+![](../assets/images/e86cfeed-a9d4-402b-aed0-fc3624f3e925.webp)
 
 我们F12查看当前网页的源代码
 
-![](https://eo-r2.2x.nz/myblog/img/ad38bc52-e689-4923-b79c-894dc9ab4136.webp)
+![](../assets/images/ad38bc52-e689-4923-b79c-894dc9ab4136.webp)
 
 发现在 `<span id="name"></span>` 中
 
@@ -101,7 +101,7 @@ https://none-csp-demo.pages.dev/csp?name=%3Cimg%20src=x%20onerror=%22alert(%27XS
 
 你会发现并未弹出提示框，并且F12控制台出现报错
 
-![](https://eo-r2.2x.nz/myblog/img/2febeecf-6f54-4c6a-b775-ef2ac8598f37.webp)
+![](../assets/images/2febeecf-6f54-4c6a-b775-ef2ac8598f37.webp)
 
 **以下是GPT给出的翻译和解释**
 

@@ -30,4 +30,4 @@ http://46.232.60.28
 
 07/29 二改 中文SEO更烂，又改回来了
 
-![](https://eo-r2.2x.nz/myblog/img/bc4981b2-5343-46d6-a428-94d7ae7af4e1.webp)
+![](../assets/images/bc4981b2-5343-46d6-a428-94d7ae7af4e1.webp)
