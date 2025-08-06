@@ -39,7 +39,7 @@ lang: ''
 
 ![](../assets/images/dd10cabf-3455-4aa0-95c6-bb23f9764783.webp)
 
-编辑 家服务器
+编辑 `家服务器`
 
 ![](../assets/images/55aada68-f144-461c-8857-d4114ee2e8de.webp)
 
