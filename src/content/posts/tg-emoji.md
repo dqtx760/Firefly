@@ -2,7 +2,7 @@
 title: 教你制作自己的Telegram Emoji！
 published: 2025-08-11T21:22:46
 description: '欧呦不赖，开了个大会员终于可以戴上Netlify的表情咯~'
-image: '../assets/images/2025-08-11-21-24-33-image.png'
+image: '../assets/images/2025-08-11-22-19-55-image.png'
 tags: [Telegram]
 category: '教程'
 draft: false 
