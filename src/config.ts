@@ -1,4 +1,5 @@
 import type {
+    ExpressiveCodeConfig,
 	ImageFallbackConfig,
 	LicenseConfig,
 	NavBarConfig,
@@ -118,4 +119,8 @@ export const umamiConfig: UmamiConfig = {
 	baseUrl: "https://umami.2x.nz",
 	shareId: "ZyDjOrmjaBTlmGtd",
 	timezone: "Asia/Shanghai",
+};
+
+export const expressiveCodeConfig: ExpressiveCodeConfig = {
+	theme: "github-dark",
 };
