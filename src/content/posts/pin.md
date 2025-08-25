@@ -8,7 +8,11 @@ tags: [联系]
 description: 关于如何联系二叉树树~
 ---
 
-# 官方群
+# 官方
+
+## 论坛
+
+https://bbs.2x.nz
 
 ## Telegram群组
 
@@ -24,7 +28,7 @@ description: 关于如何联系二叉树树~
 
 ![](../assets/images/2025-08-15-03-24-11-image.png)
 
-# 非官方群
+# 非官方
 
 > 粉丝自建
 
