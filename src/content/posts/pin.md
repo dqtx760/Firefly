@@ -12,7 +12,7 @@ description: 关于如何联系二叉树树~
 
 ## 论坛
 
-https://bbs.2x.nz
+https://support.qq.com/product/775071
 
 ## Telegram群组
 
