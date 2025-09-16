@@ -7,9 +7,6 @@ dist/
 # dependencies
 node_modules/
 
-# 黑曜石
-.obsidian/
-
 # logs
 npm-debug.log*
 yarn-debug.log*
