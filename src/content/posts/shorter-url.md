@@ -6,6 +6,9 @@ image: ../assets/images/shorter-url.png
 draft: false
 lang: ""
 ---
+# 视频
+https://www.bilibili.com/video/BV1BCi1B7E1q/
+
 # Demo
 https://2x.nz/s
 
