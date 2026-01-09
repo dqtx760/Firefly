@@ -36,3 +36,4 @@ jobs:
           publish_dir: ./dist
           publish_branch: page
           cname: ${{ secrets.CNAME }}
+          commit_message: ${{ github.event.head_commit.message }} ${{ github.sha }}
