@@ -73,7 +73,7 @@ export default defineConfig({
 		},
 		"/gal": {
 			status: 302,
-			destination: "https://www.notion.so/acofork/AcoFork-24c1e011d4e580ea8b0ee36fdb4a2363",
+			destination: "https://i.2x.nz/posts/94",
 		},
 		"/ok": {
 			status: 302,
