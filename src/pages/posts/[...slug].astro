@@ -166,74 +166,19 @@ const jsonLd = {
 
             
             <!-- Giscus 评论区 -->
-            <div id="giscus-container" data-swup-ignore-script></div>
-            <script is:inline data-swup-ignore-script>
-                function loadGiscus() {
-                    const theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
-                    
-                    const script = document.createElement('script');
-                    script.src = "https://giscus.app/client.js";
-                    script.setAttribute("data-repo", "afoim/giscus-fuwari");
-                    script.setAttribute("data-repo-id", "R_kgDOOi8quw");
-                    script.setAttribute("data-category", "Announcements");
-                    script.setAttribute("data-category-id", "DIC_kwDOOi8qu84CprDV");
-                    script.setAttribute("data-mapping", "pathname");
-                    script.setAttribute("data-strict", "1");
-                    script.setAttribute("data-reactions-enabled", "1");
-                    script.setAttribute("data-emit-metadata", "0");
-                    script.setAttribute("data-input-position", "top");
-                    script.setAttribute("data-theme", theme);
-                    script.setAttribute("data-lang", "zh-CN");
-                    script.setAttribute("data-loading", "lazy");
-                    script.setAttribute("crossorigin", "anonymous");
-                    script.async = true;
-                    
-                    const container = document.getElementById('giscus-container');
-                    if (container) {
-                        container.innerHTML = '';
-                        container.appendChild(script);
-                    }
-                }
-
-                // 监听主题变化
-                const observer = new MutationObserver((mutations) => {
-                    mutations.forEach((mutation) => {
-                        if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-                            const iframe = document.querySelector('iframe.giscus-frame');
-                            if (iframe) {
-                                const theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
-                                iframe.contentWindow.postMessage({
-                                    giscus: {
-                                        setConfig: {
-                                            theme: theme
-                                        }
-                                    }
-                                }, 'https://giscus.app');
-                            }
-                        }
-                    });
-                });
-
-                observer.observe(document.documentElement, {
-                    attributes: true,
-                    attributeFilter: ['class']
-                });
-
-                // 初始加载
-                loadGiscus();
-
-                // 支持 Swup 页面切换
-                document.addEventListener('swup:contentReplaced', loadGiscus);
-                document.addEventListener('swup:pageView', loadGiscus); 
-                document.addEventListener('swup:visit:end', (event) => {
-                     // 只有当访问的是文章页面时才加载 Giscus
-                     // 这里的逻辑可以根据实际情况调整，例如检查页面是否包含 giscus-container
-                     const container = document.getElementById('giscus-container');
-                     if (container) {
-                        loadGiscus();
-                     }
-                });
-            </script>
+            <div id="giscus-container" class="giscus" data-swup-ignore-script
+                data-repo="afoim/giscus-fuwari"
+                data-repo-id="R_kgDOOi8quw"
+                data-category="Announcements"
+                data-category-id="DIC_kwDOOi8qu84CprDV"
+                data-mapping="pathname"
+                data-strict="1"
+                data-reactions-enabled="1"
+                data-emit-metadata="0"
+                data-input-position="top"
+                data-lang="zh-CN"
+                data-loading="lazy"
+            ></div>
     <br>
 
     <div class="flex flex-col md:flex-row justify-between mb-4 gap-4 overflow-hidden w-full">

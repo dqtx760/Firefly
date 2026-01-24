@@ -636,6 +636,73 @@ if (window.swup) {
 }
 </script>
 
+<script is:inline>
+    // Giscus Loader
+    function loadGiscus() {
+        const container = document.getElementById('giscus-container');
+        if (!container) return;
+        
+        // Prevent double loading if script is already there
+        if (container.querySelector('script[src*="giscus"]')) return;
+
+        const script = document.createElement('script');
+        script.src = "https://giscus.app/client.js";
+        script.async = true;
+        script.crossOrigin = "anonymous";
+
+        // Required attributes
+        const requiredAttrs = [
+            'repo', 'repoId', 'category', 'categoryId', 
+            'mapping', 'strict', 'reactionsEnabled', 
+            'emitMetadata', 'inputPosition', 'lang', 'loading'
+        ];
+
+        requiredAttrs.forEach(attr => {
+            if (container.dataset[attr]) {
+                const kebab = attr.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase();
+                script.setAttribute(`data-${kebab}`, container.dataset[attr]);
+            }
+        });
+
+        // Theme handling
+        const theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+        script.setAttribute('data-theme', theme);
+
+        container.appendChild(script);
+    }
+
+    function initGiscus() {
+        loadGiscus();
+        
+        // Listen for Swup navigation
+        if (window.swup) {
+            window.swup.hooks.on('page:view', loadGiscus);
+        }
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initGiscus);
+    } else {
+        initGiscus();
+    }
+    
+    // Global theme observer
+    const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+                const iframe = document.querySelector('iframe.giscus-frame');
+                if (iframe) {
+                    const theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+                    iframe.contentWindow.postMessage({
+                        giscus: { setConfig: { theme: theme } }
+                    }, 'https://giscus.app');
+                }
+            }
+        });
+    });
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+</script>
+
 <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" aria-hidden="true">
   <defs>
     <filter id="liquid-glass">
