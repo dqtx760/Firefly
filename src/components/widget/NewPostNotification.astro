@@ -1,0 +1,114 @@
+<div id="new-post-notification" class="fixed bottom-4 right-4 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+    <div class="bg-[var(--card-bg)] border border-[var(--primary)] rounded-xl shadow-lg p-4 max-w-sm relative pointer-events-auto">
+        <button id="close-notification" class="absolute top-2 right-2 text-black/50 dark:text-white/50 hover:text-[var(--primary)] transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+        <div class="flex items-start gap-3">
+            <div class="bg-[var(--primary)]/10 p-2 rounded-full shrink-0 text-[var(--primary)]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg>
+            </div>
+            <div>
+                <h3 class="font-bold text-black dark:text-white mb-1 transition-colors">发现新文章</h3>
+                <div id="new-post-list" class="text-sm text-black/80 dark:text-white/80 transition-colors space-y-1"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script is:inline>
+(async function() {
+    const STORAGE_KEY = 'blog-posts-cache';
+    const NOTIFICATION_ID = 'new-post-notification';
+    const LIST_ID = 'new-post-list';
+    
+    // Helper to get current RSS items
+    async function fetchRSS() {
+        try {
+            const response = await fetch('/rss.xml');
+            const text = await response.text();
+            const parser = new DOMParser();
+            const xml = parser.parseFromString(text, 'text/xml');
+            const items = Array.from(xml.querySelectorAll('item'));
+            
+            return items.map(item => ({
+                title: item.querySelector('title')?.textContent || '',
+                link: item.querySelector('link')?.textContent || '',
+                guid: item.querySelector('guid')?.textContent || item.querySelector('link')?.textContent || '',
+                pubDate: new Date(item.querySelector('pubDate')?.textContent || '').getTime()
+            }));
+        } catch (e) {
+            console.error('Failed to fetch RSS:', e);
+            return [];
+        }
+    }
+
+    // Helper to show notification
+    function showNotification(newPosts) {
+        const notification = document.getElementById(NOTIFICATION_ID);
+        const list = document.getElementById(LIST_ID);
+        if (!notification || !list) return;
+
+        // Show all posts, no limit
+        let html = '';
+        newPosts.forEach(post => {
+            // Added break-words to handle long titles wrapping
+            html += `<a href="${post.link}" class="block hover:text-[var(--primary)] hover:underline break-words transition-colors text-black dark:text-white mb-2 last:mb-0" target="_blank">• ${post.title}</a>`;
+        });
+
+        list.innerHTML = html;
+        
+        // Show animation
+        setTimeout(() => {
+            notification.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+        }, 1000); // Slight delay after page load
+
+        // Close handler
+        document.getElementById('close-notification')?.addEventListener('click', () => {
+            notification.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+        });
+    }
+
+    // Main logic
+    try {
+        // Developer Mode Check
+        const urlParams = new URLSearchParams(window.location.search);
+        const isDevMode = urlParams.has('debug-notification');
+
+        if (isDevMode) {
+            console.log('[Notification] Developer mode active');
+            const mockPosts = [
+                { title: '测试新文章 1', link: '#', guid: 'test-1' },
+                { title: '测试新文章 2 - 标题很长很长很长很长很长很长很长很长很长很长很长', link: '#', guid: 'test-2' },
+                { title: '测试新文章 3', link: '#', guid: 'test-3' },
+                { title: '测试新文章 4 (应该被隐藏)', link: '#', guid: 'test-4' }
+            ];
+            showNotification(mockPosts);
+            return; // Skip normal logic
+        }
+
+        const currentPosts = await fetchRSS();
+        if (currentPosts.length === 0) return;
+
+        const storedData = localStorage.getItem(STORAGE_KEY);
+        
+        if (!storedData) {
+            // First visit: just cache current state
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(currentPosts.map(p => p.guid)));
+        } else {
+            // Subsequent visit: compare
+            const cachedGuids = JSON.parse(storedData); // Array of strings
+            const newPosts = currentPosts.filter(post => !cachedGuids.includes(post.guid));
+            
+            // Only notify if we found new posts that are genuinely newer than what we have
+            if (newPosts.length > 0) {
+                showNotification(newPosts);
+            }
+            
+            // Update cache with current state
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(currentPosts.map(p => p.guid)));
+        }
+    } catch (e) {
+        console.error('New post check failed:', e);
+    }
+})();
+</script>
