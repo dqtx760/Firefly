@@ -20,7 +20,7 @@ lang: ""
 
 创建D1数据库
 ```sql
-wrangler d1 create vault1
+wrangler d1 create warden-sql
 ```
 
 ![](../assets/images/warden-worker-25.png)
