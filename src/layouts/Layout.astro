@@ -503,6 +503,7 @@ const setup = () => {
 		if (heightExtend) {
 			heightExtend.classList.remove('hidden')
 		}
+		scrollFunction()
 	});
 	window.swup.hooks.on('visit:end', (_visit: {to: {url: string}}) => {
 		setTimeout(() => {
@@ -529,7 +530,14 @@ let backToTopBtn = document.getElementById('back-to-top-btn');
 let goToCommentsBtn = document.getElementById('go-to-comments-btn');
 let toc = document.getElementById('toc-wrapper');
 let navbar = document.getElementById('navbar-wrapper')
+function refreshControlRefs() {
+	backToTopBtn = document.getElementById('back-to-top-btn');
+	goToCommentsBtn = document.getElementById('go-to-comments-btn');
+	toc = document.getElementById('toc-wrapper');
+	navbar = document.getElementById('navbar-wrapper')
+}
 function scrollFunction() {
+	refreshControlRefs()
 	let bannerHeight = window.innerHeight * (BANNER_HEIGHT / 100)
 
 	if (backToTopBtn) {
@@ -576,6 +584,11 @@ function scrollFunction() {
 	}
 }
 window.onscroll = scrollFunction
+if (document.readyState === 'loading') {
+	document.addEventListener('DOMContentLoaded', scrollFunction)
+} else {
+	scrollFunction()
+}
 
 window.onresize = () => {
 	// calculate the --banner-height-extend, which needs to be a multiple of 4 to avoid blurry text
