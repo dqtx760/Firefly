@@ -132,6 +132,17 @@ function getProxyPrefix(hostname) {
 最后写一条DNS解析 `CNAME gitea.afo.im --> 社区优选域名，如 cf.090227.xyz` 即可
 
 # 传统优选
+
+> 简单易懂（pro.yourdomain.com 是最终访问域名）：
+> CF SaaS DNS
+> origin.yourdomain.com -> 源站开小黄云
+> cdn.yourdomain.com -> cf优选域名
+> pro.yourdomain.com -> cdn.yourdomain.com
+> 
+> CF SaaS
+> 添加自定义主机名pro.yourdomain.com
+> 源站为origin.yourdomain.com
+
 > [!WARNING]
 > Cloudflare最近将新接入的域名SSL默认设为了完全，记得将 SSL 改为灵活。
 > ![](../assets/images/cf-fastip-1.png)
