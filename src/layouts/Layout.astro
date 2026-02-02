@@ -274,6 +274,7 @@ const bannerOffset =
 	};
 
 	const markCookieConsentHeadAssetsPersistent = () => {
+		// console.time("markCookieConsentHeadAssetsPersistent");
 		const attr = "data-swup-theme";
 		const candidates = document.head?.querySelectorAll?.("link[rel='stylesheet'][href], style, script[src]") ?? [];
 		candidates.forEach(el => {
@@ -303,6 +304,7 @@ const bannerOffset =
 				}
 			}
 		});
+		// console.timeEnd("markCookieConsentHeadAssetsPersistent");
 	};
 
 	let scheduled = false;
@@ -619,11 +621,14 @@ function loadGiscus() {
 }
 
 function init() {
+	// console.time("init");
 	// disableAnimation()()		// TODO
 	loadTheme();
 	loadHue();
     loadBgBlur();
-	initCustomScrollbar();
+	// console.time("initCustomScrollbar");
+	// initCustomScrollbar();
+	// console.timeEnd("initCustomScrollbar");
 	showBanner();
 	loadGiscus();
 
@@ -633,6 +638,7 @@ function init() {
 		const theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
 		frame.contentWindow.postMessage({ giscus: { setConfig: { theme } } }, 'https://giscus.app');
 	}).observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+	// console.timeEnd("init");
 }
 
 /* Load settings when entering the site */
