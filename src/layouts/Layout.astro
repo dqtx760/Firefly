@@ -594,6 +594,30 @@ function showBanner() {
 	banner.classList.remove('opacity-0', 'scale-105');
 }
 
+function loadGiscus() {
+	const container = document.getElementById('giscus-container');
+	if (!container) return;
+
+	if (container.querySelector('iframe.giscus-frame') || container.querySelector('script[src*="giscus"]')) return;
+
+	const script = document.createElement('script');
+	script.src = "https://giscus.app/client.js";
+	const attributes = [
+		"data-repo", "data-repo-id", "data-category", "data-category-id",
+		"data-mapping", "data-strict", "data-reactions-enabled",
+		"data-emit-metadata", "data-input-position", "data-lang", "data-loading"
+	];
+	attributes.forEach(attr => {
+		const val = container.getAttribute(attr);
+		if (val) script.setAttribute(attr, val);
+	});
+	script.setAttribute("data-theme", document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+	script.crossOrigin = "anonymous";
+	script.async = true;
+
+	container.appendChild(script);
+}
+
 function init() {
 	// disableAnimation()()		// TODO
 	loadTheme();
@@ -601,6 +625,14 @@ function init() {
     loadBgBlur();
 	initCustomScrollbar();
 	showBanner();
+	loadGiscus();
+
+	new MutationObserver(() => {
+		const frame = document.querySelector('iframe.giscus-frame');
+		if (!frame) return;
+		const theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+		frame.contentWindow.postMessage({ giscus: { setConfig: { theme } } }, 'https://giscus.app');
+	}).observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
 }
 
 /* Load settings when entering the site */
@@ -665,6 +697,7 @@ const setup = () => {
 			heightExtend.classList.remove('hidden')
 		}
 		scrollFunction()
+		loadGiscus()
 	});
 	window.swup.hooks.on('visit:end', (_visit: {to: {url: string}}) => {
 		setTimeout(() => {
