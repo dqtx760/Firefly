@@ -65,6 +65,8 @@ image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
 最后，如果您想做到图片必须是 **游客访问** ，又不想让他人滥用。可以使用CORP（Cross-Origin-Resource-Policy）
 
 只需要在别人拉取图片时返回一个CORP响应头，如： **Cross-Origin-Resource-Policy: same-origin** 
+> 另外，CORP不仅能保护图片，它可以保护一切东西，下面是一个简单的示意图
+> 浏览器拉取资源 -> 请求资源，检查响应头 -> CORP（给不给用，默认给用） -> CORS（给不给JS读，默认不给） -> 返回 
 
 当CORP响应头返回的策略中和将要拉取资源的源不匹配，**浏览器会阻止资源在页面加载，但并不会阻断原始请求**
 
