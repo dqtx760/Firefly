@@ -58,7 +58,7 @@ export function setBgBlur(blur: number): void {
 		const hueRotate = hueRotateMatch ? hueRotateMatch[1] : "0";
 		bgBox.style.setProperty(
 			"filter",
-			`blur(${blur}px) hue-rotate(${hueRotate}deg)`,
+			`blur(${blur / 16}rem) hue-rotate(${hueRotate}deg)`,
 		);
 	}
 }
@@ -67,10 +67,8 @@ export function setBgHueRotate(hue: number): void {
 	const bgBox = document.getElementById("bg-box");
 	if (bgBox) {
 		// Retrieve existing blur value
-		const currentFilter = bgBox.style.filter || "";
-		const blurMatch = currentFilter.match(/blur\((.*?)px\)/);
-		const blur = blurMatch ? blurMatch[1] : getBgBlur();
-		bgBox.style.setProperty("filter", `blur(${blur}px) hue-rotate(${hue}deg)`);
+		const blur = getBgBlur();
+		bgBox.style.setProperty("filter", `blur(${blur / 16}rem) hue-rotate(${hue}deg)`);
 	}
 }
 
