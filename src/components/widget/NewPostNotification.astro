@@ -543,6 +543,18 @@
             });
 
             if (detectedChanges.length > 0) {
+                // Intercept: If all posts in the feed are detected as new (likely due to ID change or cache issue), suppress notification
+                const isAllNew = detectedChanges.length === currentPosts.length && detectedChanges.every(p => !p.isUpdated);
+                if (isAllNew) {
+                    console.log('[Notification] Intercepted "all new" posts scenario. Suppressing notification.');
+                    // Update DB to sync with new state
+                    await savePosts(db, currentPosts);
+                    // Clear state
+                    localStorage.removeItem(NOTIFICATION_STATE_KEY);
+                    showNotification([], Date.now(), false, initTime);
+                    return;
+                }
+
                 // CASE 1: New updates detected
                 const timestamp = Date.now();
                 // Persist notification state
