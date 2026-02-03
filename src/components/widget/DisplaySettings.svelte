@@ -203,7 +203,7 @@ let isDevMode = getDevMode();
         <div class="flex gap-1">
             <div class="transition bg-[var(--btn-regular-bg)] w-10 h-7 rounded-md flex justify-center
             font-bold text-sm items-center text-[var(--btn-content)]">
-                {bgBlur}px
+                {bgBlur}
             </div>
         </div>
     </div>
