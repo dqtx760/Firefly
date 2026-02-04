@@ -320,7 +320,7 @@ $ARGUMENTS
 &lt;p&gt;&lt;img src=&quot;https://mmbiz.qpic.cn/mmbiz_png/gz2sdHyQbaa1ZQyJicMI8k2NbjBib4XlyyJscbYZGRrw3unMhtcLjFuHf7vzJYZ5761IkGjUrRoP4Z8pTzBnWbfw/640?wx_fmt=png&amp;amp;from=appmsg&amp;amp;tp=wxpic&amp;amp;wxfrom=5&amp;amp;wx_lazy=1&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;这样，Typora + PicList + Gitee 的图床方案就配置好了，之后写 Markdown 时插入的图片会自动上传到 Gitee，并返回在线链接，非常省心。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20250826173904610.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-</content:encoded></item><item><title>干货教程：我的博客发布工作流</title><link>https://blog.acofork.com/posts/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/gongzuoliu/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/gongzuoliu/</guid><description>分享我的无服务器博客发布流程：使用 GitHub 托管 + EdgeOne 自动部署，配合 Typora 和脚本实现高效的文章发布工作流。</description><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;../../assets/images/gitee-typora-workflow.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+</content:encoded></item><item><title>干货教程：我的博客发布工作流</title><link>https://blog.acofork.com/posts/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/gongzuoliu/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/gongzuoliu/</guid><description>分享我的无服务器博客发布流程：使用 GitHub 托管 + EdgeOne 自动部署，配合 Typora 和脚本实现高效的文章发布工作流。</description><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260204103206520.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;今天想跟大家分享一下我的博客发布工作流。我的博客没有服务器，只有一个域名通过 GitHub 进行托管，配合 EdgeOne 实现自动构建部署。整个过程非常高效，下面就来详细介绍！&lt;/p&gt;
 &lt;h2&gt;创建文章&lt;/h2&gt;
 &lt;h3&gt;1. 新建 Markdown 文件&lt;/h3&gt;
@@ -415,6 +415,47 @@ https://mumu.163.com/&lt;/p&gt;
 &lt;p&gt;点击模拟器桌面的设置-壁纸，然后更换即可&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20251130144137855.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;经过这些配置之后，MuMu 就会变成一个干净优雅的虚拟空间，使用 MuMu 的过程中遇到任何问题，或者有更好用的优化技巧，欢迎在评论区交流分享。&lt;/p&gt;
+</content:encoded></item><item><title>Typora + PicList + Gitee 图床完整配置教程</title><link>https://blog.acofork.com/posts/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%88%A9/typora--piclist--gitee-%E5%9B%BE%E5%BA%8A%E5%AE%8C%E6%95%B4%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%88%A9/typora--piclist--gitee-%E5%9B%BE%E5%BA%8A%E5%AE%8C%E6%95%B4%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;如果你经常写 Markdown 文档，那么 &lt;strong&gt;Typora&lt;/strong&gt; 是一款非常好用的编辑器。而在图片管理方面，推荐搭配免费的图床工具 &lt;strong&gt;PicList&lt;/strong&gt;，它支持一键上传图片到各类图床。我自己的方案是：&lt;strong&gt;Typora + PicList + Gitee&lt;/strong&gt;，写作体验非常流畅。&lt;/p&gt;
+&lt;h2&gt;Typora设置&lt;/h2&gt;
+&lt;p&gt;打开 &lt;strong&gt;Typora&lt;/strong&gt;，依次进入 &lt;code&gt;文件 → 偏好设置 → 图像&lt;/code&gt;，在上传服务中选择 &lt;strong&gt;PicList&lt;/strong&gt;。
+不过因为我们还没有安装 PicList，所以接下来需要先安装软件&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20250823223254969.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;安装PicList&lt;/h2&gt;
+&lt;p&gt;有两种方式可以安装：&lt;/p&gt;
+&lt;p&gt;1.&lt;strong&gt;命令行安装&lt;/strong&gt;（推荐）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;winget install Kuingsmile.PicList
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;2. 安装包安装&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;下载安装包后直接运行即可：
+下载地址：&lt;/p&gt;
+&lt;h2&gt;安装插件（Gitee 图床支持）&lt;/h2&gt;
+&lt;p&gt;PicList 默认没有内置 Gitee 图床，所以需要单独安装插件。打开 PicList，点击左侧 **插件，搜索 &lt;code&gt;gitee&lt;/code&gt; 并安装。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20250823222935347.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;图床设置&lt;/h2&gt;
+&lt;p&gt;为了让界面更简洁，建议把用不到的图床隐藏，只保留 Gitee。&lt;/p&gt;
+&lt;p&gt;操作方法：
+进入 &lt;strong&gt;设置 → 上传&lt;/strong&gt;，往下找到 &lt;strong&gt;“请选择显示在菜单的图床”&lt;/strong&gt;，取消勾选不需要的选项，只留下 Gitee。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20250825203516467.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;然后，点击 &lt;strong&gt;图床 → gitee → 配置&lt;/strong&gt;，会看到以下参数需要填写：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;配置名&lt;/strong&gt;：随便起个名字，方便区分&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;repo&lt;/strong&gt;：仓库名（如 &lt;code&gt;用户名/仓库名&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;branch&lt;/strong&gt;：&lt;code&gt;master&lt;/code&gt; 或主分支名&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;token&lt;/strong&gt;：Gitee 生成的私人令牌&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;path&lt;/strong&gt;：存放图片的目录（例如 &lt;code&gt;image&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;customPath&lt;/strong&gt;：可选，自定义路径规则&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20250825203600014.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;参数获取（以 Gitee 为例）&lt;/h2&gt;
+&lt;p&gt;打开 &lt;a href=&quot;https://gitee.com/&quot;&gt;Gitee 官网&lt;/a&gt; 注册并登录账号&lt;/p&gt;
+&lt;p&gt;点击右上角 &lt;strong&gt;+号 → 新建仓库&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;勾选 “设置模板” 与 “选择分支模型”&lt;/p&gt;
+&lt;p&gt;按照下图示例完成仓库创建&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://mmbiz.qpic.cn/mmbiz_png/gz2sdHyQbaa1ZQyJicMI8k2NbjBib4XlyyU2Q3Ple8gn264DP8CqEPGsPyALibHm3VPulNEUGDkNv0KiazPicmKbmLA/640?wx_fmt=png&amp;amp;from=appmsg&amp;amp;tp=wxpic&amp;amp;wxfrom=5&amp;amp;wx_lazy=1&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;之后点击个人头像，点设置-私人令牌，生成新令牌&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://mmbiz.qpic.cn/mmbiz_png/gz2sdHyQbaa1ZQyJicMI8k2NbjBib4XlyyJscbYZGRrw3unMhtcLjFuHf7vzJYZ5761IkGjUrRoP4Z8pTzBnWbfw/640?wx_fmt=png&amp;amp;from=appmsg&amp;amp;tp=wxpic&amp;amp;wxfrom=5&amp;amp;wx_lazy=1&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;这样，Typora + PicList + Gitee 的图床方案就配置好了，之后写 Markdown 时插入的图片会自动上传到 Gitee，并返回在线链接，非常省心。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20250826173904610.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 </content:encoded></item><item><title>蔡澜：以生活智慧诠释 &quot;过好这一生&quot; 的本质内涵</title><link>https://blog.acofork.com/posts/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%88%A9/shengm/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%88%A9/shengm/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;作为华语圈知名的生活家、作家与文化学者，蔡澜先生始终以通透豁达的人生态度影响着无数读者。在其随笔集《过好这一生》中，他结合疫情三年来的生活感悟，从字句哲思、饮食记忆到处世心态，为当代人提供了一份兼具烟火气与人生智慧的生活指南，传递出 &quot;真正活在当下&quot; 的生命哲学。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260204101447685.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;字句中的人生态度：删繁就简，活出本真&lt;/h2&gt;
