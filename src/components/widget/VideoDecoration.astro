@@ -26,12 +26,14 @@ const decodedSrc = decodeURI(src);
     </video>
 </div>
 
-<script data-swup-reload-script>
-    // 确保视频在 Swup 页面切换后正常加载
+<script>
     function initVideos() {
         document.querySelectorAll('.video-decoration-video').forEach(video => {
             // 重置视频状态
             video.classList.remove('loading', 'loaded', 'error');
+
+            // 强制重新加载视频
+            video.load();
 
             // 添加加载事件监听
             video.addEventListener('loadstart', () => {
@@ -41,6 +43,7 @@ const decodedSrc = decodeURI(src);
             video.addEventListener('canplay', () => {
                 video.classList.remove('loading');
                 video.classList.add('loaded');
+                video.play().catch(() => {});
             }, { once: true });
 
             video.addEventListener('error', () => {
@@ -61,12 +64,20 @@ const decodedSrc = decodeURI(src);
         });
     }
 
-    // 初始化视频
-    initVideos();
+    const setup = () => {
+        // 初始化视频
+        initVideos();
 
-    // 监听 Swup 页面切换完成事件
-    document.addEventListener('swup:content:replace', initVideos);
-    document.addEventListener('swup:page:view', initVideos);
+        // 使用 Swup hooks 监听页面切换
+        window.swup.hooks.on('content:replace', initVideos);
+        window.swup.hooks.on('page:view', initVideos);
+    };
+
+    if (window.swup) {
+        setup();
+    } else {
+        document.addEventListener('swup:enable', setup);
+    }
 </script>
 
 <style>
