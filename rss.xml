@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Derek Zhao Blog</title><description>技术分享与实践</description><link>https://blog.acofork.com/</link><language>zh_CN</language><item><title>Obsidian+AI：让笔记变成智能知识库</title><link>https://blog.acofork.com/posts/obsidian-ai/</link><guid isPermaLink="true">https://blog.acofork.com/posts/obsidian-ai/</guid><description>这几天，在github发现Obsidian重磅插件，直接把 AI 功能深度集成到核心里了！今天我要分享的 Obsidian+AI 组合，一次性解决这些痛点！</description><pubDate>Wed, 04 Feb 2026 04:54:28 GMT</pubDate><content:encoded>&lt;p&gt;这几天，在gihub发现Obsidian重磅插件，直接把 AI 功能深度集成到核心里了！网上都在夸赞，确实&lt;strong&gt;牛批&lt;/strong&gt;！今天我要分享的 Obsidian+AI 组合，&lt;em&gt;一次性解决这些痛点&lt;/em&gt;！简单说，你的笔记不再是一个个&lt;strong&gt;死文档*，而是变成了能理解、能推理、能自动化的&lt;/strong&gt;AI 上下文层**。&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Derek Zhao Blog</title><description>技术分享与实践</description><link>https://blog.acofork.com/</link><language>zh_CN</language><item><title>Obsidian+AI：让笔记变成智能知识库</title><link>https://blog.acofork.com/posts/ai%E6%96%B0%E9%B2%9C%E7%8E%A9%E6%B3%95/obsidian-ai/</link><guid isPermaLink="true">https://blog.acofork.com/posts/ai%E6%96%B0%E9%B2%9C%E7%8E%A9%E6%B3%95/obsidian-ai/</guid><description>这几天，在github发现Obsidian重磅插件，直接把 AI 功能深度集成到核心里了！今天我要分享的 Obsidian+AI 组合，一次性解决这些痛点！</description><pubDate>Wed, 04 Feb 2026 04:54:28 GMT</pubDate><content:encoded>&lt;p&gt;这几天，在gihub发现Obsidian重磅插件，直接把 AI 功能深度集成到核心里了！网上都在夸赞，确实&lt;strong&gt;牛批&lt;/strong&gt;！今天我要分享的 Obsidian+AI 组合，&lt;em&gt;一次性解决这些痛点&lt;/em&gt;！简单说，你的笔记不再是一个个&lt;strong&gt;死文档*，而是变成了能理解、能推理、能自动化的&lt;/strong&gt;AI 上下文层**。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260113215058651.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;一.准备工作&lt;/h2&gt;
 &lt;p&gt;✅已安装 Obsidian&lt;/p&gt;
@@ -279,7 +279,7 @@ $ARGUMENTS
 &lt;p&gt;如果返回正确的技能列表并创建了文件，说明配置成功！&lt;/p&gt;
 &lt;p&gt;以上.今天的分享就到这里。Obsidian + AI 的组合，确实让知识管理效率&lt;strong&gt;爆表&lt;/strong&gt;！&lt;/p&gt;
 &lt;p&gt;如果内容对你有所帮助，欢迎一键三连（点赞、在看、转发）。如果你有其他软件需求，也欢迎评论区留言，我们下次再见。&lt;/p&gt;
-</content:encoded></item><item><title>Typora + PicList + Gitee 图床完整配置教程</title><link>https://blog.acofork.com/posts/typora--piclist--gitee-%E5%9B%BE%E5%BA%8A%E5%AE%8C%E6%95%B4%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://blog.acofork.com/posts/typora--piclist--gitee-%E5%9B%BE%E5%BA%8A%E5%AE%8C%E6%95%B4%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;如果你经常写 Markdown 文档，那么 &lt;strong&gt;Typora&lt;/strong&gt; 是一款非常好用的编辑器。而在图片管理方面，推荐搭配免费的图床工具 &lt;strong&gt;PicList&lt;/strong&gt;，它支持一键上传图片到各类图床。我自己的方案是：&lt;strong&gt;Typora + PicList + Gitee&lt;/strong&gt;，写作体验非常流畅。&lt;/p&gt;
+</content:encoded></item><item><title>Typora + PicList + Gitee 图床完整配置教程</title><link>https://blog.acofork.com/posts/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/typora--piclist--gitee-%E5%9B%BE%E5%BA%8A%E5%AE%8C%E6%95%B4%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/typora--piclist--gitee-%E5%9B%BE%E5%BA%8A%E5%AE%8C%E6%95%B4%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;如果你经常写 Markdown 文档，那么 &lt;strong&gt;Typora&lt;/strong&gt; 是一款非常好用的编辑器。而在图片管理方面，推荐搭配免费的图床工具 &lt;strong&gt;PicList&lt;/strong&gt;，它支持一键上传图片到各类图床。我自己的方案是：&lt;strong&gt;Typora + PicList + Gitee&lt;/strong&gt;，写作体验非常流畅。&lt;/p&gt;
 &lt;h2&gt;Typora设置&lt;/h2&gt;
 &lt;p&gt;打开 &lt;strong&gt;Typora&lt;/strong&gt;，依次进入 &lt;code&gt;文件 → 偏好设置 → 图像&lt;/code&gt;，在上传服务中选择 &lt;strong&gt;PicList&lt;/strong&gt;。
 不过因为我们还没有安装 PicList，所以接下来需要先安装软件&lt;/p&gt;
@@ -320,48 +320,7 @@ $ARGUMENTS
 &lt;p&gt;&lt;img src=&quot;https://mmbiz.qpic.cn/mmbiz_png/gz2sdHyQbaa1ZQyJicMI8k2NbjBib4XlyyJscbYZGRrw3unMhtcLjFuHf7vzJYZ5761IkGjUrRoP4Z8pTzBnWbfw/640?wx_fmt=png&amp;amp;from=appmsg&amp;amp;tp=wxpic&amp;amp;wxfrom=5&amp;amp;wx_lazy=1&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;这样，Typora + PicList + Gitee 的图床方案就配置好了，之后写 Markdown 时插入的图片会自动上传到 Gitee，并返回在线链接，非常省心。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20250826173904610.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-</content:encoded></item><item><title>MuMu模拟器</title><link>https://blog.acofork.com/posts/mumu%E6%A8%A1%E6%8B%9F%E5%99%A8/</link><guid isPermaLink="true">https://blog.acofork.com/posts/mumu%E6%A8%A1%E6%8B%9F%E5%99%A8/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;MuMu模拟器作为市面上兼容性和稳定性极佳的安卓模拟器，一直是玩手游、刷视频及跑脚本用户的首选。不过默认设置下它会有一些开屏广告、桌面广告，本文将手把手教你：**最新版 MuMu 5.9 下载、广告屏蔽、壁纸自定义、快捷技巧等。**建议收藏转发.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20251130144036028.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;一.软件下载&lt;/h2&gt;
-&lt;p&gt;MuMu模拟器官网：
-https://mumu.163.com/&lt;/p&gt;
-&lt;h2&gt;二.广告屏蔽&lt;/h2&gt;
-&lt;h3&gt;1.屏蔽开屏广告&lt;/h3&gt;
-&lt;p&gt;在系统 Host 文件中添加如下规则👇&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;114.115.116.117 mumu.nie.netease.com
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;2.删除桌面广告&lt;/h3&gt;
-&lt;p&gt;直接替换系统镜像文件:&lt;strong&gt;&lt;a href=&quot;https://pan.xunlei.com/x/VOfIXk-qqm-IpJmek_9iba1DA1?pwd=2wqi#&quot;&gt;点此下载&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;路径为：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;.\nx_device\12.0\vms\MuMuPlayer-12.0-base\system.vdi
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;三.使用技巧&lt;/h2&gt;
-&lt;h3&gt;快捷启动&lt;/h3&gt;
-&lt;p&gt;在桌面建立启动直达图标,双击即可直接启动指定的模拟器实例&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20251130144131759.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;壁纸更换&lt;/h3&gt;
-&lt;p&gt;先打开电脑端共享文件夹,将你喜欢的壁纸拖进去&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20251130144134739.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;点击模拟器桌面的设置-壁纸，然后更换即可&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20251130144137855.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;经过这些配置之后，MuMu 就会变成一个干净优雅的虚拟空间，使用 MuMu 的过程中遇到任何问题，或者有更好用的优化技巧，欢迎在评论区交流分享。&lt;/p&gt;
-</content:encoded></item><item><title>蔡澜：以生活智慧诠释 &quot;过好这一生&quot; 的本质内涵</title><link>https://blog.acofork.com/posts/shengm/</link><guid isPermaLink="true">https://blog.acofork.com/posts/shengm/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;作为华语圈知名的生活家、作家与文化学者，蔡澜先生始终以通透豁达的人生态度影响着无数读者。在其随笔集《过好这一生》中，他结合疫情三年来的生活感悟，从字句哲思、饮食记忆到处世心态，为当代人提供了一份兼具烟火气与人生智慧的生活指南，传递出 &quot;真正活在当下&quot; 的生命哲学。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260204101447685.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;字句中的人生态度：删繁就简，活出本真&lt;/h2&gt;
-&lt;p&gt;文字是蔡澜表达生活态度的重要载体，他在筹备书法展时对字句的甄选与改编，恰是其人生哲学的浓缩体现：
-拒绝鸡汤，偏爱通透表达：摒弃 “岂能尽如人意，但求无愧于心” 等陈腐说教，推崇 “管他天下千万事，闲来轻笑两三声” 的松弛感，将 “轻笑” 改为 “怪笑” 更添随性趣味；引用臧克家 “自沐朝晖意蓊茏，休凭白发便呼翁” 的诗句，彰显不服老的生命热忱。
-化用经典，赋予生活气息：将郑板桥 “难得糊涂” 改为 “时常糊涂”，把 “不吃人间烟火” 变为 “大吃人间烟火”，让迂腐字句焕发生活质感；结合自身经历创作 “喜为五斗米折腰”，打破传统清高执念，体现对世俗生活的热爱。
-短句明心，传递纯粹快乐：提炼 “懒得管”“别紧张”“使劲玩” 等三字短语，以及 “俗气到底”“白日梦梦” 等四字表达，用直白语言传递简单快乐的生活主张，契合当代人对解压生活的追求。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260204101757096.webp&quot; alt=&quot;image-20260204101757096&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;处世哲学的核心：接纳不完美，活在当下&lt;/h2&gt;
-&lt;p&gt;蔡澜的 “人生解题思路”，核心在于接纳生活的不完美，以豁达心态面对世事变迁：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;坦然面对得失&lt;/strong&gt;：疫情改变了每个人的生活节奏，但他强调 “生活还在继续”，主张通过 “吃点儿好的、怀念美好记忆、坦然做自己” 等简单方式，在逆境中寻找生活的乐趣。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;坚守内心本真&lt;/strong&gt;：面对网友对其 “为五斗米折腰” 的质疑，他以 “哈哈大笑” 回应并改编诗句，展现不被外界评价裹挟的通透；推崇 “若世上无佛，善事父母，便是佛” 的禅理，将人生价值回归到朴素的亲情与善行中。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;拥抱世俗快乐&lt;/strong&gt;：不追求 “超凡脱俗” 的虚假境界，反而热爱 “大吃人间烟火” 的真实生活，从 “清晨焙饼煮茶，傍晚喝酒看花” 的日常中提炼幸福感，诠释了 “过好这一生” 的本质的是 “真正地活着”。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;蔡澜在《过好这一生》中，以清淡质朴的文字、琐碎真实的生活片段，勾勒出一种 “通透、豁达、热爱生活” 的人生范式。他不刻意点化，却通过字句改编、饮食记忆与处世感悟，让读者明白：“过好这一生” 无需追求宏大叙事，而是要在每一个当下接纳不完美、珍视烟火气、坚守本真心。这种兼具实用性与哲理性的生活智慧，为当代人在快节奏、高压力的生活中提供了一剂解压良方，也让 “活在当下” 的生命哲学拥有了更具体的实践路径。&lt;/p&gt;
-</content:encoded></item><item><title>干货教程：我的博客发布工作流</title><link>https://blog.acofork.com/posts/gongzuoliu/</link><guid isPermaLink="true">https://blog.acofork.com/posts/gongzuoliu/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天我想通过这篇文章来跟大家谈一谈，关于我的博客是如何发布自动更新的，我的博客没有服务器，我只有一个域名通过 GitHub 进行了托管，下面我分享一下我的工作流！&lt;/p&gt;
+</content:encoded></item><item><title>干货教程：我的博客发布工作流</title><link>https://blog.acofork.com/posts/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/gongzuoliu/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/gongzuoliu/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天我想通过这篇文章来跟大家谈一谈，关于我的博客是如何发布自动更新的，我的博客没有服务器，我只有一个域名通过 GitHub 进行了托管，下面我分享一下我的工作流！&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260204103206520.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;创建文章&lt;/h2&gt;
 &lt;ol&gt;
@@ -422,7 +381,48 @@ npm run dev
   3. 打开网站
     - 自动打开 http://localhost:4321/
 &lt;/code&gt;&lt;/pre&gt;
-</content:encoded></item><item><title>闪电说：端侧AI语音输入法</title><link>https://blog.acofork.com/posts/%E9%97%AA%E7%94%B5%E8%AF%B4%E7%AB%AF%E4%BE%A7ai%E8%AF%AD%E9%9F%B3%E8%BE%93%E5%85%A5%E6%B3%95/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E9%97%AA%E7%94%B5%E8%AF%B4%E7%AB%AF%E4%BE%A7ai%E8%AF%AD%E9%9F%B3%E8%BE%93%E5%85%A5%E6%B3%95/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;闪电说是由武汉团队打造的&lt;strong&gt;国产 AI 语音输入法&lt;/strong&gt;，前身为代体输入法，以 “端侧本地处理” 为核心特色，实现毫秒级语音转文字体验。它打破传统云端语音输入的延迟与隐私痛点，通过本地 AI 引擎构建 “即说即显、思维同步” 的输入模式，兼容 Windows 和 macOS 全平台，是一款完全免费的系统级输入工具，被观猹平台评为 8.6 分高分产品。&lt;/p&gt;
+</content:encoded></item><item><title>MuMu模拟器</title><link>https://blog.acofork.com/posts/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%88%A9/mumu%E6%A8%A1%E6%8B%9F%E5%99%A8/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%88%A9/mumu%E6%A8%A1%E6%8B%9F%E5%99%A8/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;MuMu模拟器作为市面上兼容性和稳定性极佳的安卓模拟器，一直是玩手游、刷视频及跑脚本用户的首选。不过默认设置下它会有一些开屏广告、桌面广告，本文将手把手教你：**最新版 MuMu 5.9 下载、广告屏蔽、壁纸自定义、快捷技巧等。**建议收藏转发.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20251130144036028.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;一.软件下载&lt;/h2&gt;
+&lt;p&gt;MuMu模拟器官网：
+https://mumu.163.com/&lt;/p&gt;
+&lt;h2&gt;二.广告屏蔽&lt;/h2&gt;
+&lt;h3&gt;1.屏蔽开屏广告&lt;/h3&gt;
+&lt;p&gt;在系统 Host 文件中添加如下规则👇&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;114.115.116.117 mumu.nie.netease.com
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;2.删除桌面广告&lt;/h3&gt;
+&lt;p&gt;直接替换系统镜像文件:&lt;strong&gt;&lt;a href=&quot;https://pan.xunlei.com/x/VOfIXk-qqm-IpJmek_9iba1DA1?pwd=2wqi#&quot;&gt;点此下载&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;路径为：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.\nx_device\12.0\vms\MuMuPlayer-12.0-base\system.vdi
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;三.使用技巧&lt;/h2&gt;
+&lt;h3&gt;快捷启动&lt;/h3&gt;
+&lt;p&gt;在桌面建立启动直达图标,双击即可直接启动指定的模拟器实例&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20251130144131759.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;壁纸更换&lt;/h3&gt;
+&lt;p&gt;先打开电脑端共享文件夹,将你喜欢的壁纸拖进去&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20251130144134739.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;点击模拟器桌面的设置-壁纸，然后更换即可&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20251130144137855.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;经过这些配置之后，MuMu 就会变成一个干净优雅的虚拟空间，使用 MuMu 的过程中遇到任何问题，或者有更好用的优化技巧，欢迎在评论区交流分享。&lt;/p&gt;
+</content:encoded></item><item><title>蔡澜：以生活智慧诠释 &quot;过好这一生&quot; 的本质内涵</title><link>https://blog.acofork.com/posts/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%88%A9/shengm/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%88%A9/shengm/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;作为华语圈知名的生活家、作家与文化学者，蔡澜先生始终以通透豁达的人生态度影响着无数读者。在其随笔集《过好这一生》中，他结合疫情三年来的生活感悟，从字句哲思、饮食记忆到处世心态，为当代人提供了一份兼具烟火气与人生智慧的生活指南，传递出 &quot;真正活在当下&quot; 的生命哲学。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260204101447685.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;字句中的人生态度：删繁就简，活出本真&lt;/h2&gt;
+&lt;p&gt;文字是蔡澜表达生活态度的重要载体，他在筹备书法展时对字句的甄选与改编，恰是其人生哲学的浓缩体现：
+拒绝鸡汤，偏爱通透表达：摒弃 “岂能尽如人意，但求无愧于心” 等陈腐说教，推崇 “管他天下千万事，闲来轻笑两三声” 的松弛感，将 “轻笑” 改为 “怪笑” 更添随性趣味；引用臧克家 “自沐朝晖意蓊茏，休凭白发便呼翁” 的诗句，彰显不服老的生命热忱。
+化用经典，赋予生活气息：将郑板桥 “难得糊涂” 改为 “时常糊涂”，把 “不吃人间烟火” 变为 “大吃人间烟火”，让迂腐字句焕发生活质感；结合自身经历创作 “喜为五斗米折腰”，打破传统清高执念，体现对世俗生活的热爱。
+短句明心，传递纯粹快乐：提炼 “懒得管”“别紧张”“使劲玩” 等三字短语，以及 “俗气到底”“白日梦梦” 等四字表达，用直白语言传递简单快乐的生活主张，契合当代人对解压生活的追求。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260204101757096.webp&quot; alt=&quot;image-20260204101757096&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;处世哲学的核心：接纳不完美，活在当下&lt;/h2&gt;
+&lt;p&gt;蔡澜的 “人生解题思路”，核心在于接纳生活的不完美，以豁达心态面对世事变迁：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;坦然面对得失&lt;/strong&gt;：疫情改变了每个人的生活节奏，但他强调 “生活还在继续”，主张通过 “吃点儿好的、怀念美好记忆、坦然做自己” 等简单方式，在逆境中寻找生活的乐趣。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;坚守内心本真&lt;/strong&gt;：面对网友对其 “为五斗米折腰” 的质疑，他以 “哈哈大笑” 回应并改编诗句，展现不被外界评价裹挟的通透；推崇 “若世上无佛，善事父母，便是佛” 的禅理，将人生价值回归到朴素的亲情与善行中。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;拥抱世俗快乐&lt;/strong&gt;：不追求 “超凡脱俗” 的虚假境界，反而热爱 “大吃人间烟火” 的真实生活，从 “清晨焙饼煮茶，傍晚喝酒看花” 的日常中提炼幸福感，诠释了 “过好这一生” 的本质的是 “真正地活着”。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;蔡澜在《过好这一生》中，以清淡质朴的文字、琐碎真实的生活片段，勾勒出一种 “通透、豁达、热爱生活” 的人生范式。他不刻意点化，却通过字句改编、饮食记忆与处世感悟，让读者明白：“过好这一生” 无需追求宏大叙事，而是要在每一个当下接纳不完美、珍视烟火气、坚守本真心。这种兼具实用性与哲理性的生活智慧，为当代人在快节奏、高压力的生活中提供了一剂解压良方，也让 “活在当下” 的生命哲学拥有了更具体的实践路径。&lt;/p&gt;
+</content:encoded></item><item><title>闪电说：端侧AI语音输入法</title><link>https://blog.acofork.com/posts/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%88%A9/%E9%97%AA%E7%94%B5%E8%AF%B4%E7%AB%AF%E4%BE%A7ai%E8%AF%AD%E9%9F%B3%E8%BE%93%E5%85%A5%E6%B3%95/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%88%A9/%E9%97%AA%E7%94%B5%E8%AF%B4%E7%AB%AF%E4%BE%A7ai%E8%AF%AD%E9%9F%B3%E8%BE%93%E5%85%A5%E6%B3%95/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;闪电说是由武汉团队打造的&lt;strong&gt;国产 AI 语音输入法&lt;/strong&gt;，前身为代体输入法，以 “端侧本地处理” 为核心特色，实现毫秒级语音转文字体验。它打破传统云端语音输入的延迟与隐私痛点，通过本地 AI 引擎构建 “即说即显、思维同步” 的输入模式，兼容 Windows 和 macOS 全平台，是一款完全免费的系统级输入工具，被观猹平台评为 8.6 分高分产品。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260204111254949.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;上手指南&lt;/h2&gt;
 &lt;ol&gt;
@@ -431,7 +431,7 @@ npm run dev
 &lt;li&gt;&lt;strong&gt;个性化设置&lt;/strong&gt;：自定义激活快捷键、默认语言、输入模式等基础配置；&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;即时使用&lt;/strong&gt;：在任意文本输入框按下快捷键，启动语音输入，转写文本自动优化呈现，支持后续编辑调整。&lt;/li&gt;
 &lt;/ol&gt;
-</content:encoded></item><item><title>零成本搭建在线图床</title><link>https://blog.acofork.com/posts/%E9%9B%B6%E6%88%90%E6%9C%AC%E6%90%AD%E5%BB%BA%E5%9C%A8%E7%BA%BF%E5%9B%BE%E5%BA%8A/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E9%9B%B6%E6%88%90%E6%9C%AC%E6%90%AD%E5%BB%BA%E5%9C%A8%E7%BA%BF%E5%9B%BE%E5%BA%8A/</guid><description>90%的博主都不知道！免费100G图床竟比付费的还稳定～ 写文章、做分享时，你是不是也总被图床问题折磨？免费的容量小得可怜，付费的一年要花几百块，更糟的是还常遇...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;p&gt;90%的博主都不知道！免费100G图床竟比付费的还稳定～ 写文章、做分享时，你是不是也总被图床问题折磨？免费的容量小得可怜，付费的一年要花几百块，更糟的是还常遇到文件失效、大文件传不了的坑，辛苦写的内容全白费！今天就分享一个零成本神方案——用GitHub 4k+星标的开源项目CloudFlare-ImgBed搭配HuggingFace，10分钟快速搭建100G免费图床，无需实名认证、支持大文件自动分片上传，不用额外买服务器，稳定又省心，自媒体、学生、打工人都能用～&lt;/p&gt;
+</content:encoded></item><item><title>零成本搭建在线图床</title><link>https://blog.acofork.com/posts/ai%E6%96%B0%E9%B2%9C%E7%8E%A9%E6%B3%95/%E9%9B%B6%E6%88%90%E6%9C%AC%E6%90%AD%E5%BB%BA%E5%9C%A8%E7%BA%BF%E5%9B%BE%E5%BA%8A/</link><guid isPermaLink="true">https://blog.acofork.com/posts/ai%E6%96%B0%E9%B2%9C%E7%8E%A9%E6%B3%95/%E9%9B%B6%E6%88%90%E6%9C%AC%E6%90%AD%E5%BB%BA%E5%9C%A8%E7%BA%BF%E5%9B%BE%E5%BA%8A/</guid><description>90%的博主都不知道！免费100G图床竟比付费的还稳定～ 写文章、做分享时，你是不是也总被图床问题折磨？免费的容量小得可怜，付费的一年要花几百块，更糟的是还常遇...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;p&gt;90%的博主都不知道！免费100G图床竟比付费的还稳定～ 写文章、做分享时，你是不是也总被图床问题折磨？免费的容量小得可怜，付费的一年要花几百块，更糟的是还常遇到文件失效、大文件传不了的坑，辛苦写的内容全白费！今天就分享一个零成本神方案——用GitHub 4k+星标的开源项目CloudFlare-ImgBed搭配HuggingFace，10分钟快速搭建100G免费图床，无需实名认证、支持大文件自动分片上传，不用额外买服务器，稳定又省心，自媒体、学生、打工人都能用～&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260122014636902.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;一、工具介绍：CloudFlare-ImgBed&lt;/h2&gt;
 &lt;p&gt;这是一个 GitHub 星标 4k + 的开源项目，基于 Cloudflare Pages 构建，核心优势：&lt;/p&gt;
@@ -535,7 +535,7 @@ KV命名空间：img_url
 &lt;hr /&gt;
 &lt;p&gt;帮你省了几百块付费图床钱，觉得有用的话，别忘了&lt;strong&gt;点赞 + 收藏 + 转发&lt;/strong&gt;三连呀！转发给需要图床的朋友，一起薅这 100G 免费资源～ 关注我，后续分享更多「免费存储方案、效率工具实操、技术教程干货」，下次见～ 👋&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;大强远程技术支持：742112.xyz&lt;/strong&gt;&lt;/p&gt;
-</content:encoded></item><item><title>配置打包自解压方法</title><link>https://blog.acofork.com/posts/%E9%85%8D%E7%BD%AE%E6%89%93%E5%8C%85%E8%87%AA%E8%A7%A3%E5%8E%8B%E6%96%B9%E6%B3%95/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E9%85%8D%E7%BD%AE%E6%89%93%E5%8C%85%E8%87%AA%E8%A7%A3%E5%8E%8B%E6%96%B9%E6%B3%95/</guid><description>实际路径与环境变量路径 | 环境变量路径（代号） | 实际路径（你的电脑） | 核心用途（小白易懂） | | ----------------------- |...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;h2&gt;打包工具：Make SFX 5.6&lt;/h2&gt;
+</content:encoded></item><item><title>配置打包自解压方法</title><link>https://blog.acofork.com/posts/ai%E6%96%B0%E9%B2%9C%E7%8E%A9%E6%B3%95/%E9%85%8D%E7%BD%AE%E6%89%93%E5%8C%85%E8%87%AA%E8%A7%A3%E5%8E%8B%E6%96%B9%E6%B3%95/</link><guid isPermaLink="true">https://blog.acofork.com/posts/ai%E6%96%B0%E9%B2%9C%E7%8E%A9%E6%B3%95/%E9%85%8D%E7%BD%AE%E6%89%93%E5%8C%85%E8%87%AA%E8%A7%A3%E5%8E%8B%E6%96%B9%E6%B3%95/</guid><description>实际路径与环境变量路径 | 环境变量路径（代号） | 实际路径（你的电脑） | 核心用途（小白易懂） | | ----------------------- |...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;h2&gt;打包工具：Make SFX 5.6&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260109211141738.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;实际路径与环境变量路径&lt;/h2&gt;
 &lt;table&gt;
@@ -680,7 +680,7 @@ KV命名空间：img_url
 备选方案：  
 - %windir%\Resources\
 &lt;/code&gt;&lt;/pre&gt;
-</content:encoded></item><item><title>轻松打造家庭影视库，实现4K观影自由</title><link>https://blog.acofork.com/posts/%E8%BD%BB%E6%9D%BE%E6%89%93%E9%80%A0%E5%AE%B6%E5%BA%AD%E5%BD%B1%E8%A7%86%E5%BA%93%E5%AE%9E%E7%8E%B04k%E8%A7%82%E5%BD%B1%E8%87%AA%E7%94%B1/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E8%BD%BB%E6%9D%BE%E6%89%93%E9%80%A0%E5%AE%B6%E5%BA%AD%E5%BD%B1%E8%A7%86%E5%BA%93%E5%AE%9E%E7%8E%B04k%E8%A7%82%E5%BD%B1%E8%87%AA%E7%94%B1/</guid><description>如果你想拥有个人家庭影视库，追求 4K 观影体验，但觉得爱优腾会员贵、NAS 设备成本又高，那今天这期视频，我去将手把手教你花小钱，轻松打造自己的家庭影视库，拥...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;p&gt;如果你想拥有个人家庭影视库，追求 4K 观影体验，但觉得爱优腾会员贵、NAS 设备成本又高，那今天这期视频，我去将手把手教你花小钱，轻松打造自己的家庭影视库，拥有海量资源，实现 4K 观影自由！&lt;/p&gt;
+</content:encoded></item><item><title>轻松打造家庭影视库，实现4K观影自由</title><link>https://blog.acofork.com/posts/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/%E8%BD%BB%E6%9D%BE%E6%89%93%E9%80%A0%E5%AE%B6%E5%BA%AD%E5%BD%B1%E8%A7%86%E5%BA%93%E5%AE%9E%E7%8E%B04k%E8%A7%82%E5%BD%B1%E8%87%AA%E7%94%B1/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/%E8%BD%BB%E6%9D%BE%E6%89%93%E9%80%A0%E5%AE%B6%E5%BA%AD%E5%BD%B1%E8%A7%86%E5%BA%93%E5%AE%9E%E7%8E%B04k%E8%A7%82%E5%BD%B1%E8%87%AA%E7%94%B1/</guid><description>如果你想拥有个人家庭影视库，追求 4K 观影体验，但觉得爱优腾会员贵、NAS 设备成本又高，那今天这期视频，我去将手把手教你花小钱，轻松打造自己的家庭影视库，拥...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;p&gt;如果你想拥有个人家庭影视库，追求 4K 观影体验，但觉得爱优腾会员贵、NAS 设备成本又高，那今天这期视频，我去将手把手教你花小钱，轻松打造自己的家庭影视库，拥有海量资源，实现 4K 观影自由！&lt;/p&gt;
 &lt;h2&gt;115 网盘（存影视资源）&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -696,7 +696,7 @@ KV命名空间：img_url
 &lt;h2&gt;网易爆米花（手机端/TV端）&lt;/h2&gt;
 &lt;p&gt;网易爆米花官网：&lt;a href=&quot;https://bmh.163.com/&quot;&gt;点此直达&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;添加WebDAV，自动刮削&lt;/p&gt;
-</content:encoded></item><item><title>软件打包自解压方法</title><link>https://blog.acofork.com/posts/%E8%BD%AF%E4%BB%B6%E6%89%93%E5%8C%85%E8%87%AA%E8%A7%A3%E5%8E%8B%E6%96%B9%E6%B3%95/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E8%BD%AF%E4%BB%B6%E6%89%93%E5%8C%85%E8%87%AA%E8%A7%A3%E5%8E%8B%E6%96%B9%E6%B3%95/</guid><description>你是不是也遇到过这种困扰？把文件打包成 7Z 压缩包发给别人，对方却不会解压，要么找不到合适的解压软件，要么对着压缩包手足无措；自己想给压缩包加个专属设置，普通...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;p&gt;你是不是也遇到过这种困扰？把文件打包成 7Z 压缩包发给别人，对方却不会解压，要么找不到合适的解压软件，要么对着压缩包手足无措；自己想给压缩包加个专属设置，普通打包工具又满足不了需求。今天给大家安利一款超实用的 7Z 压缩包自解压制作工具，下面是使用教程！&lt;/p&gt;
+</content:encoded></item><item><title>软件打包自解压方法</title><link>https://blog.acofork.com/posts/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%88%A9/%E8%BD%AF%E4%BB%B6%E6%89%93%E5%8C%85%E8%87%AA%E8%A7%A3%E5%8E%8B%E6%96%B9%E6%B3%95/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%88%A9/%E8%BD%AF%E4%BB%B6%E6%89%93%E5%8C%85%E8%87%AA%E8%A7%A3%E5%8E%8B%E6%96%B9%E6%B3%95/</guid><description>你是不是也遇到过这种困扰？把文件打包成 7Z 压缩包发给别人，对方却不会解压，要么找不到合适的解压软件，要么对着压缩包手足无措；自己想给压缩包加个专属设置，普通...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;p&gt;你是不是也遇到过这种困扰？把文件打包成 7Z 压缩包发给别人，对方却不会解压，要么找不到合适的解压软件，要么对着压缩包手足无措；自己想给压缩包加个专属设置，普通打包工具又满足不了需求。今天给大家安利一款超实用的 7Z 压缩包自解压制作工具，下面是使用教程！&lt;/p&gt;
 &lt;h2&gt;基本设置&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;这里我会首先导入配置，如果你是第一次用这个软件，跟着操作完，然后保存配置，后续直接导入配置即可，非常方便。&lt;/p&gt;
@@ -727,11 +727,11 @@ KV命名空间：img_url
 &lt;p&gt;首次设置完后，点击一键制作即可&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260109235318496.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;软件下载&lt;/h2&gt;
-</content:encoded></item><item><title>搞定油管4K高清下载，采用yt-dlp构建</title><link>https://blog.acofork.com/posts/%E6%90%9E%E5%AE%9A%E6%B2%B9%E7%AE%A14k%E9%AB%98%E6%B8%85%E4%B8%8B%E8%BD%BD%E9%87%87%E7%94%A8yt-dlp%E6%9E%84%E5%BB%BA/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E6%90%9E%E5%AE%9A%E6%B2%B9%E7%AE%A14k%E9%AB%98%E6%B8%85%E4%B8%8B%E8%BD%BD%E9%87%87%E7%94%A8yt-dlp%E6%9E%84%E5%BB%BA/</guid><description>https://vidbee.org/ https://github.com/oop7/YTSage https://github.com/aandrew-me...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;p&gt;https://vidbee.org/&lt;/p&gt;
+</content:encoded></item><item><title>搞定油管4K高清下载，采用yt-dlp构建</title><link>https://blog.acofork.com/posts/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%88%A9/%E6%90%9E%E5%AE%9A%E6%B2%B9%E7%AE%A14k%E9%AB%98%E6%B8%85%E4%B8%8B%E8%BD%BD%E9%87%87%E7%94%A8yt-dlp%E6%9E%84%E5%BB%BA/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%88%A9/%E6%90%9E%E5%AE%9A%E6%B2%B9%E7%AE%A14k%E9%AB%98%E6%B8%85%E4%B8%8B%E8%BD%BD%E9%87%87%E7%94%A8yt-dlp%E6%9E%84%E5%BB%BA/</guid><description>https://vidbee.org/ https://github.com/oop7/YTSage https://github.com/aandrew-me...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;p&gt;https://vidbee.org/&lt;/p&gt;
 &lt;p&gt;https://github.com/oop7/YTSage&lt;/p&gt;
 &lt;p&gt;https://github.com/aandrew-me/ytDownloader&lt;/p&gt;
 &lt;p&gt;https://423down.lanzouo.com/b03fkcmb9e&lt;/p&gt;
-</content:encoded></item><item><title>命令大全</title><link>https://blog.acofork.com/posts/%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/</guid><description>✅PowerShell命令 | 说明 | 命令 | |------------------------|----------------------------...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;h2&gt;&amp;lt;b style=&quot;color: red;&quot;&amp;gt;常用cmd/PowerShell命令&amp;lt;/b&amp;gt;&lt;/h2&gt;
+</content:encoded></item><item><title>命令大全</title><link>https://blog.acofork.com/posts/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%88%A9/%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%88%A9/%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/</guid><description>✅PowerShell命令 | 说明 | 命令 | |------------------------|----------------------------...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;h2&gt;&amp;lt;b style=&quot;color: red;&quot;&amp;gt;常用cmd/PowerShell命令&amp;lt;/b&amp;gt;&lt;/h2&gt;
 &lt;h3&gt;✅PowerShell命令&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -964,7 +964,7 @@ KV命名空间：img_url
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;a href=&quot;https://hotkeycheatsheet.com/zh&quot;&gt;快捷键备忘录&lt;/a&gt;&lt;/p&gt;
-</content:encoded></item><item><title>Zed安装使用教程</title><link>https://blog.acofork.com/posts/zed%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://blog.acofork.com/posts/zed%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid><description>Zed 是 Rust 编写、GPU 加速的跨平台开源代码编辑器（Windows/macOS/Linux），主打极速性能、原生 AI 代理协作、实时多人开发，定位...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;p&gt;Zed 是 Rust 编写、GPU 加速的跨平台开源代码编辑器（Windows/macOS/Linux），主打&lt;strong&gt;极速性能、原生 AI 代理协作、实时多人开发&lt;/strong&gt;，定位为下一代 AI 驱动的 IDE，由 Atom/Tree-sitter 核心团队打造，兼顾个人开发与团队协作Zed&lt;/p&gt;
+</content:encoded></item><item><title>Zed安装使用教程</title><link>https://blog.acofork.com/posts/ai%E6%96%B0%E9%B2%9C%E7%8E%A9%E6%B3%95/zed%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://blog.acofork.com/posts/ai%E6%96%B0%E9%B2%9C%E7%8E%A9%E6%B3%95/zed%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid><description>Zed 是 Rust 编写、GPU 加速的跨平台开源代码编辑器（Windows/macOS/Linux），主打极速性能、原生 AI 代理协作、实时多人开发，定位...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;p&gt;Zed 是 Rust 编写、GPU 加速的跨平台开源代码编辑器（Windows/macOS/Linux），主打&lt;strong&gt;极速性能、原生 AI 代理协作、实时多人开发&lt;/strong&gt;，定位为下一代 AI 驱动的 IDE，由 Atom/Tree-sitter 核心团队打造，兼顾个人开发与团队协作Zed&lt;/p&gt;
 &lt;p&gt;定价：基础编辑器永久免费（无 AI 功能）；Zed Pro 含免费额度，付费版 20 美元 / 月（500 次提示），协作功能全用户免费&lt;/p&gt;
 &lt;h2&gt;下载安装&lt;/h2&gt;
 &lt;p&gt;官方地址：https://zed.dev/&lt;/p&gt;
@@ -976,7 +976,7 @@ KV命名空间：img_url
 &lt;p&gt;3，开始对话&lt;/p&gt;
 &lt;p&gt;Ctrl-Alt-B打开对话框&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260124225337099.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-</content:encoded></item><item><title>Windows系统上开启Chrome-Gemini</title><link>https://blog.acofork.com/posts/windows%E7%B3%BB%E7%BB%9F%E4%B8%8A%E5%BC%80%E5%90%AFchrome-gemini/</link><guid isPermaLink="true">https://blog.acofork.com/posts/windows%E7%B3%BB%E7%BB%9F%E4%B8%8A%E5%BC%80%E5%90%AFchrome-gemini/</guid><description>仅针对对美区，chrome语言必须始终银英语 1. 前置条件：魔法美区，chrome语言英语 2. 关闭chrome浏览器，PowerShell执行命令 irm...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;p&gt;仅针对对美区，chrome语言必须始终银英语&lt;/p&gt;
+</content:encoded></item><item><title>Windows系统上开启Chrome-Gemini</title><link>https://blog.acofork.com/posts/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/windows%E7%B3%BB%E7%BB%9F%E4%B8%8A%E5%BC%80%E5%90%AFchrome-gemini/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/windows%E7%B3%BB%E7%BB%9F%E4%B8%8A%E5%BC%80%E5%90%AFchrome-gemini/</guid><description>仅针对对美区，chrome语言必须始终银英语 1. 前置条件：魔法美区，chrome语言英语 2. 关闭chrome浏览器，PowerShell执行命令 irm...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;p&gt;仅针对对美区，chrome语言必须始终银英语&lt;/p&gt;
 &lt;h2&gt;操作步骤&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;前置条件：魔法美区，&lt;a&gt;点此设置&lt;/a&gt;chrome语言英语&lt;/li&gt;
@@ -992,7 +992,7 @@ KV命名空间：img_url
 &lt;p&gt;https://x.com/linxiaobei888/status/2017061177311056343&lt;/p&gt;
 &lt;p&gt;如果觉得这篇教程对你有帮助，别忘了&lt;strong&gt;点赞+收藏+转发&lt;/strong&gt;三连呀！关注我，后续分享更多实用技巧、效率工具干货，下次见～ 👋&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;大强远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-</content:encoded></item><item><title>Windows7终极版</title><link>https://blog.acofork.com/posts/windows7%E7%BB%88%E6%9E%81%E7%89%88/</link><guid isPermaLink="true">https://blog.acofork.com/posts/windows7%E7%BB%88%E6%9E%81%E7%89%88/</guid><description>对很多人来说，Windows 7 是刻在电脑里的青春 —— 当年抱着主机装系统、通宵跑老游戏的日子，都和这个系统绑在一起。但从 2020 年官方停更，到 202...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;h2&gt;一、引言&lt;/h2&gt;
+</content:encoded></item><item><title>Windows7终极版</title><link>https://blog.acofork.com/posts/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%88%A9/windows7%E7%BB%88%E6%9E%81%E7%89%88/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%88%A9/windows7%E7%BB%88%E6%9E%81%E7%89%88/</guid><description>对很多人来说，Windows 7 是刻在电脑里的青春 —— 当年抱着主机装系统、通宵跑老游戏的日子，都和这个系统绑在一起。但从 2020 年官方停更，到 202...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;h2&gt;一、引言&lt;/h2&gt;
 &lt;p&gt;对很多人来说，Windows 7 是刻在电脑里的青春 —— 当年抱着主机装系统、通宵跑老游戏的日子，都和这个系统绑在一起。但从 2020 年官方停更，到 2023 年最后一个安全补丁，Win7 早该彻底 “躺平” 了。&lt;/p&gt;
 &lt;p&gt;可 2026 年的今天，有个开发者偏要给它 “续上一口气”：一个叫 BobPony 的大神，把 Win7 重新打包成了 “史上终极版”，不仅能装在新电脑上，还解决了老 Win7 的所有硬件痛点。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260201221806923.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -1028,13 +1028,13 @@ KV命名空间：img_url
 &lt;h2&gt;四、结语&lt;/h2&gt;
 &lt;p&gt;这个 “终极 Win7” 更像一份 “情怀礼包”：它不是让你回到过去，而是给老用户留了个 “怀旧入口”，给老设备续了口命。Win7 的时代早就结束了，但那些抱着它通宵打游戏、熬夜写论文的日子，永远是我们和电脑的独家记忆。&lt;/p&gt;
 &lt;p&gt;如果你也想再摸一把 “青春系统”，可以试试这个版本 —— 但记得：别把它当主力，当个玩具就好。&lt;/p&gt;
-</content:encoded></item><item><title>Windows1125H2</title><link>https://blog.acofork.com/posts/windows1125h2/</link><guid isPermaLink="true">https://blog.acofork.com/posts/windows1125h2/</guid><description>Shift + F10 打开 CMD 终端，绕过联网命令 start ms-cxh:localonly</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;h3&gt;Windows 11 25H2 正式版&lt;/h3&gt;
+</content:encoded></item><item><title>Windows1125H2</title><link>https://blog.acofork.com/posts/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%88%A9/windows1125h2/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%88%A9/windows1125h2/</guid><description>Shift + F10 打开 CMD 终端，绕过联网命令 start ms-cxh:localonly</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;h3&gt;Windows 11 25H2 正式版&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.microsoft.com/zh-cn/software-download/windows11&quot;&gt;微软官网&lt;/a&gt;  &lt;a href=&quot;https://pan.xunlei.com/s/VOaYhGKXIZ3N0b128CaJnSsTA1?pwd=634v#&quot;&gt;迅雷网盘&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Shift + F10&lt;/strong&gt; 打开 CMD 终端，绕过联网命令&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;start ms-cxh:localonly
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;&lt;/h3&gt;
-</content:encoded></item><item><title>Typora快捷键</title><link>https://blog.acofork.com/posts/typora%E5%BF%AB%E6%8D%B7%E9%94%AE/</link><guid isPermaLink="true">https://blog.acofork.com/posts/typora%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid><description>--- YAML Front Matter：一种在文本文件（常见于 Markdown、HTML 等）开头添加的元数据格式，核心用于存储文件的额外信息（如标题、日...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;hr /&gt;
+</content:encoded></item><item><title>Typora快捷键</title><link>https://blog.acofork.com/posts/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%88%A9/typora%E5%BF%AB%E6%8D%B7%E9%94%AE/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%88%A9/typora%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid><description>--- YAML Front Matter：一种在文本文件（常见于 Markdown、HTML 等）开头添加的元数据格式，核心用于存储文件的额外信息（如标题、日...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;hr /&gt;
 &lt;h2&gt;YAML Front Matter：一种在文本文件（常见于 Markdown、HTML 等）开头添加的元数据格式，核心用于存储文件的额外信息（如标题、日期、分类、作者等。位置：段落最后一个项目就是。&lt;/h2&gt;
 &lt;h2&gt;Typora快捷键&lt;/h2&gt;
 &lt;table&gt;
@@ -1282,7 +1282,7 @@ KV命名空间：img_url
 &lt;blockquote&gt;&lt;/blockquote&gt;
 &lt;pre&gt;&lt;code&gt;
 &lt;/code&gt;&lt;/pre&gt;
-</content:encoded></item><item><title>Typora图床完整配置教程</title><link>https://blog.acofork.com/posts/typora%E5%9B%BE%E5%BA%8A%E5%AE%8C%E6%95%B4%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://blog.acofork.com/posts/typora%E5%9B%BE%E5%BA%8A%E5%AE%8C%E6%95%B4%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/</guid><description>如果你经常写 Markdown 文档，那么 Typora 是一款非常好用的编辑器。而在图片管理方面，推荐搭配免费的图床工具 PicList，它支持一键上传图片到...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;h2&gt;Typora + PicList + Gitee 图床完整配置教程&lt;/h2&gt;
+</content:encoded></item><item><title>Typora图床完整配置教程</title><link>https://blog.acofork.com/posts/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%88%A9/typora%E5%9B%BE%E5%BA%8A%E5%AE%8C%E6%95%B4%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%88%A9/typora%E5%9B%BE%E5%BA%8A%E5%AE%8C%E6%95%B4%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/</guid><description>如果你经常写 Markdown 文档，那么 Typora 是一款非常好用的编辑器。而在图片管理方面，推荐搭配免费的图床工具 PicList，它支持一键上传图片到...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;h2&gt;Typora + PicList + Gitee 图床完整配置教程&lt;/h2&gt;
 &lt;p&gt;如果你经常写 Markdown 文档，那么 &lt;strong&gt;Typora&lt;/strong&gt; 是一款非常好用的编辑器。而在图片管理方面，推荐搭配免费的图床工具 &lt;strong&gt;PicList&lt;/strong&gt;，它支持一键上传图片到各类图床。我自己的方案是：&lt;strong&gt;Typora + PicList + Gitee&lt;/strong&gt;，写作体验非常流畅。&lt;/p&gt;
 &lt;h2&gt;Typora设置&lt;/h2&gt;
 &lt;p&gt;打开 &lt;strong&gt;Typora&lt;/strong&gt;，依次进入 &lt;code&gt;文件 → 偏好设置 → 图像&lt;/code&gt;，在上传服务中选择 &lt;strong&gt;PicList&lt;/strong&gt;。
@@ -1351,7 +1351,7 @@ KV命名空间：img_url
 &lt;p&gt;视频教程：https://www.youtube.com/watch?v=vD6ns5UEETs&lt;/p&gt;
 &lt;h2&gt;拓展：搭建一个在线图床&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://88.dqtx.cc/main.html#/article/%E9%9B%B6%E6%88%90%E6%9C%AC%E6%90%AD%E5%BB%BA%E5%9C%A8%E7%BA%BF%E5%9B%BE%E5%BA%8A&quot;&gt;零成本！100G 免费图床搭建，小白 10 分钟搞定&lt;/a&gt;&lt;/p&gt;
-</content:encoded></item><item><title>PixPin截图配置指南</title><link>https://blog.acofork.com/posts/pixpin%E6%88%AA%E5%9B%BE%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/</link><guid isPermaLink="true">https://blog.acofork.com/posts/pixpin%E6%88%AA%E5%9B%BE%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/</guid><description>使用PixPin有段时间了，集截图、长截图、贴图、标注、OCR 识别、屏幕录制等功能都有，但是我发现这个软件的快捷键/动作才是王炸，比如我自己配置的 ，截图并复...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;p&gt;使用PixPin有段时间了，集截图、长截图、贴图、标注、OCR 识别、屏幕录制等功能都有，但是我发现这个软件的快捷键/动作才是王炸，比如我自己配置的 ，截图并复制OCR，截图并翻译，下面看下教程！&lt;/p&gt;
+</content:encoded></item><item><title>PixPin截图配置指南</title><link>https://blog.acofork.com/posts/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%88%A9/pixpin%E6%88%AA%E5%9B%BE%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%88%A9/pixpin%E6%88%AA%E5%9B%BE%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/</guid><description>使用PixPin有段时间了，集截图、长截图、贴图、标注、OCR 识别、屏幕录制等功能都有，但是我发现这个软件的快捷键/动作才是王炸，比如我自己配置的 ，截图并复...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;p&gt;使用PixPin有段时间了，集截图、长截图、贴图、标注、OCR 识别、屏幕录制等功能都有，但是我发现这个软件的快捷键/动作才是王炸，比如我自己配置的 ，截图并复制OCR，截图并翻译，下面看下教程！&lt;/p&gt;
 &lt;h2&gt;一.软件下载&lt;/h2&gt;
 &lt;p&gt;官网：https://pixpin.cn/&lt;/p&gt;
 &lt;p&gt;数码荔枝折专属折扣：&lt;a href=&quot;https://lizhi.shop/products/pixpin?cid=wbm93g4b&quot;&gt;点此购买&lt;/a&gt;&lt;/p&gt;
@@ -1381,7 +1381,7 @@ KV命名空间：img_url
 &lt;/blockquote&gt;
 &lt;p&gt;如果觉得这篇教程对你有帮助，别忘了&lt;strong&gt;点赞+收藏+转发&lt;/strong&gt;三连呀！关注我，后续分享更多OBS 实用技巧、效率工具干货，下次见～ 👋&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;大强远程技术支持：742112.xyz&lt;/strong&gt;&lt;/p&gt;
-</content:encoded></item><item><title>Passkeys通行密钥</title><link>https://blog.acofork.com/posts/passkeys%E9%80%9A%E8%A1%8C%E5%AF%86%E9%92%A5/</link><guid isPermaLink="true">https://blog.acofork.com/posts/passkeys%E9%80%9A%E8%A1%8C%E5%AF%86%E9%92%A5/</guid><description>你是否厌倦了记密码？设个简单的不安全，设个复杂的记不住？每次登录还要翻找密码本、或者点那该死的&apos;忘记密码&apos;？这几天测试了一圈Passkeys（通行密钥），我只能...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;p&gt;你是否厌倦了记密码？设个简单的不安全，设个复杂的记不住？每次登录还要翻找密码本、或者点那该死的&quot;忘记密码&quot;？这几天测试了一圈&lt;strong&gt;Passkeys（通行密钥）&lt;/strong&gt;，我只能说：**真TM牛逼！**以后再也不用记密码了，指纹一按、Face ID 一扫，直接登录，速度那叫一个快！今天就给大家分享这个让密码彻底淘汰的神仙技术。&lt;/p&gt;
+</content:encoded></item><item><title>Passkeys通行密钥</title><link>https://blog.acofork.com/posts/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/passkeys%E9%80%9A%E8%A1%8C%E5%AF%86%E9%92%A5/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/passkeys%E9%80%9A%E8%A1%8C%E5%AF%86%E9%92%A5/</guid><description>你是否厌倦了记密码？设个简单的不安全，设个复杂的记不住？每次登录还要翻找密码本、或者点那该死的&apos;忘记密码&apos;？这几天测试了一圈Passkeys（通行密钥），我只能...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;p&gt;你是否厌倦了记密码？设个简单的不安全，设个复杂的记不住？每次登录还要翻找密码本、或者点那该死的&quot;忘记密码&quot;？这几天测试了一圈&lt;strong&gt;Passkeys（通行密钥）&lt;/strong&gt;，我只能说：**真TM牛逼！**以后再也不用记密码了，指纹一按、Face ID 一扫，直接登录，速度那叫一个快！今天就给大家分享这个让密码彻底淘汰的神仙技术。&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h2&gt;一、什么是 Passkeys？&lt;/h2&gt;
 &lt;p&gt;简单说，&lt;strong&gt;Passkeys 就是用你的生物特征（指纹、面部识别）代替密码&lt;/strong&gt;。&lt;/p&gt;
@@ -1543,7 +1543,7 @@ https://www.passkeys.com/websites-with-passkey-support-sites-directory&lt;/p&gt;
 &lt;li&gt;建议配合密码管理器使用，覆盖不支持的场景&lt;/li&gt;
 &lt;li&gt;多设备备份很重要，别只依赖单一设备&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>Obsidian+AI</title><link>https://blog.acofork.com/posts/obsidianai/</link><guid isPermaLink="true">https://blog.acofork.com/posts/obsidianai/</guid><description>这几天，在gihub发现Obsidian重磅插件，直接把 AI 功能深度集成到核心里了！网上都在夸赞，确实牛批！今天我要分享的 Obsidian+AI 组合，一...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;p&gt;这几天，在gihub发现Obsidian重磅插件，直接把 AI 功能深度集成到核心里了！网上都在夸赞，确实&lt;strong&gt;牛批&lt;/strong&gt;！今天我要分享的 Obsidian+AI 组合，&lt;em&gt;一次性解决这些痛点&lt;/em&gt;*！简单说，你的笔记不再是一个个&lt;strong&gt;死文档*，而是变成了能理解、能推理、能自动化的&lt;/strong&gt;AI 上下文层**。&lt;/p&gt;
+</content:encoded></item><item><title>Obsidian+AI</title><link>https://blog.acofork.com/posts/ai%E6%96%B0%E9%B2%9C%E7%8E%A9%E6%B3%95/obsidianai/</link><guid isPermaLink="true">https://blog.acofork.com/posts/ai%E6%96%B0%E9%B2%9C%E7%8E%A9%E6%B3%95/obsidianai/</guid><description>这几天，在gihub发现Obsidian重磅插件，直接把 AI 功能深度集成到核心里了！网上都在夸赞，确实牛批！今天我要分享的 Obsidian+AI 组合，一...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;p&gt;这几天，在gihub发现Obsidian重磅插件，直接把 AI 功能深度集成到核心里了！网上都在夸赞，确实&lt;strong&gt;牛批&lt;/strong&gt;！今天我要分享的 Obsidian+AI 组合，&lt;em&gt;一次性解决这些痛点&lt;/em&gt;*！简单说，你的笔记不再是一个个&lt;strong&gt;死文档*，而是变成了能理解、能推理、能自动化的&lt;/strong&gt;AI 上下文层**。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260113215058651.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;一.准备工作&lt;/h2&gt;
 &lt;p&gt;✅已安装 Obsidian&lt;/p&gt;
@@ -1824,7 +1824,7 @@ $ARGUMENTS
 &lt;p&gt;如果返回正确的技能列表并创建了文件，说明配置成功！&lt;/p&gt;
 &lt;p&gt;以上.今天的分享就到这里。Obsidian + AI 的组合，确实让知识管理效率&lt;strong&gt;爆表&lt;/strong&gt;！&lt;/p&gt;
 &lt;p&gt;如果内容对你有所帮助，欢迎一键三连（点赞、在看、转发）。如果你有其他软件需求，也欢迎评论区留言，我们下次再见。&lt;/p&gt;
-</content:encoded></item><item><title>推荐：使用 winget 安装</title><link>https://blog.acofork.com/posts/md2wechat-skill%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://blog.acofork.com/posts/md2wechat-skill%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</guid><description>如果你用Markdown写公众号文章，需要先复制内容到排版工具，再复制公众号很麻烦，既耗时间又难保证格式精美，每次操作都要反复调整，成了不少人的痛点，这几天在G...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;p&gt;如果你用Markdown写公众号文章，需要先复制内容到排版工具，再复制公众号很麻烦，既耗时间又难保证格式精美，每次操作都要反复调整，成了不少人的痛点，这几天在GitHub发现了&lt;strong&gt;md2wechat-skill&lt;/strong&gt;，听说能一键转换Markdown为精美排版并自动上传到微信草稿箱，好奇测试了下！&lt;/p&gt;
+</content:encoded></item><item><title>推荐：使用 winget 安装</title><link>https://blog.acofork.com/posts/ai%E6%96%B0%E9%B2%9C%E7%8E%A9%E6%B3%95/md2wechat-skill%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://blog.acofork.com/posts/ai%E6%96%B0%E9%B2%9C%E7%8E%A9%E6%B3%95/md2wechat-skill%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</guid><description>如果你用Markdown写公众号文章，需要先复制内容到排版工具，再复制公众号很麻烦，既耗时间又难保证格式精美，每次操作都要反复调整，成了不少人的痛点，这几天在G...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;p&gt;如果你用Markdown写公众号文章，需要先复制内容到排版工具，再复制公众号很麻烦，既耗时间又难保证格式精美，每次操作都要反复调整，成了不少人的痛点，这几天在GitHub发现了&lt;strong&gt;md2wechat-skill&lt;/strong&gt;，听说能一键转换Markdown为精美排版并自动上传到微信草稿箱，好奇测试了下！&lt;/p&gt;
 &lt;p&gt;我安装踩了不少坑，终于搞定，流程算跑通了，不过吐槽下，我是在Claude中用的Ai模式真的慢，有这时间，我10篇文章都排版好了！不过做个记录，相信随着时间技术成熟，一切都会发生变化！&lt;/p&gt;
 &lt;h2&gt;⚠️ 安装前必读（踩坑预警）&lt;/h2&gt;
 &lt;p&gt;安装过程中遇到的主要问题：&lt;/p&gt;
@@ -2080,7 +2080,7 @@ echo &quot;# 测试标题
 &lt;li&gt;Go 语言下载：https://go.dev/dl/&lt;/li&gt;
 &lt;li&gt;大强远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>Listary使用参考文档</title><link>https://blog.acofork.com/posts/listary%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83/</link><guid isPermaLink="true">https://blog.acofork.com/posts/listary%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83/</guid><description>Listary是一款知名的效率工具，以用户友好，使用方式简单而备受好评。单论文件搜索，Listary 和 Everything 属于同一梯队，在搜索速度和内存占...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;h1&gt;Listary使用参考文档&lt;/h1&gt;
+</content:encoded></item><item><title>Listary使用参考文档</title><link>https://blog.acofork.com/posts/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%88%A9/listary%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%88%A9/listary%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83/</guid><description>Listary是一款知名的效率工具，以用户友好，使用方式简单而备受好评。单论文件搜索，Listary 和 Everything 属于同一梯队，在搜索速度和内存占...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;h1&gt;Listary使用参考文档&lt;/h1&gt;
 &lt;p&gt;Listary是一款知名的效率工具，以用户友好，使用方式简单而备受好评。单论文件搜索，Listary 和 Everything 属于同一梯队，在搜索速度和内存占用上秒杀任何其他软件。任何文件，只要你知道他的名称（或者部分名称），就能迅速找到并打开。&lt;/p&gt;
 &lt;h2&gt;本地搜索&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;双击Ctrl&lt;/strong&gt;搜索软件/命令（如：hosts）&lt;/p&gt;
@@ -2137,7 +2137,7 @@ echo &quot;# 测试标题
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-</content:encoded></item><item><title>ClaudeCode安装使用教程</title><link>https://blog.acofork.com/posts/claudecode%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://blog.acofork.com/posts/claudecode%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid><description>1. Node.js 18 或更高版本 请前往 Node.js 官方网站安装最新 LTS 版本，确保 Claude Code 能正常运行。 https://no...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+</content:encoded></item><item><title>ClaudeCode安装使用教程</title><link>https://blog.acofork.com/posts/ai%E6%96%B0%E9%B2%9C%E7%8E%A9%E6%B3%95/claudecode%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://blog.acofork.com/posts/ai%E6%96%B0%E9%B2%9C%E7%8E%A9%E6%B3%95/claudecode%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid><description>1. Node.js 18 或更高版本 请前往 Node.js 官方网站安装最新 LTS 版本，确保 Claude Code 能正常运行。 https://no...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;这几天，c彻底火了，网上都在夸赞这个由Anthropic出品的命令行AI编码工具。不同于那些花哨的AI插件，Claude Code直接住进你的终端，像个老司机一样帮你写代码、修bug、重构项目。我也测试了一圈下来，确实牛批！免费、不限量、速度快，关键是它真的能理解你的整个项目结构。今天，我就给大家整理一份保姆级教程，让你5分钟上手Claude Code。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260106202139189.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -2290,7 +2290,7 @@ argument-hint: [搜索关键词]
 &lt;h2&gt;七.写在最后&lt;/h2&gt;
 &lt;p&gt;Claude Code确实是目前最好用的AI编程工具之一，它不像其他工具那样花哨，而是专注于真正提升你的编程效率。当然，一些简单的任务基本用不到AI，反而会拖累你的效率，日常可以根据自己的实际情况，是否使用AI辅助。&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;以上，既然看到这里了，如果觉得不错，随手点个赞、在看、转发三连吧，如果想第一时间收到推送，也可以给我个星标⭐～谢谢你看我的文章，我们，下次再见。&lt;/em&gt;&lt;/p&gt;
-</content:encoded></item><item><title>AutoHotkey打包exe完全指南！</title><link>https://blog.acofork.com/posts/autohotkey%E6%89%93%E5%8C%85exe%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/</link><guid isPermaLink="true">https://blog.acofork.com/posts/autohotkey%E6%89%93%E5%8C%85exe%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/</guid><description>AutoHotkey（AHK）是一种强大的自动化脚本语言，能够帮助用户简化日常计算机操作。将AHK脚本转换为可执行文件（.exe）不仅可以分发和使用，还能保护脚...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;p&gt;AutoHotkey（AHK）是一种强大的自动化脚本语言，能够帮助用户简化日常计算机操作。将AHK脚本转换为可执行文件（.exe）不仅可以分发和使用，还能保护脚本代码不被轻易查看。本文将详细介绍如何使用AutoHotkey将代码转换为EXE文件的完整流程。&lt;/p&gt;
+</content:encoded></item><item><title>AutoHotkey打包exe完全指南！</title><link>https://blog.acofork.com/posts/ai%E6%96%B0%E9%B2%9C%E7%8E%A9%E6%B3%95/autohotkey%E6%89%93%E5%8C%85exe%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/</link><guid isPermaLink="true">https://blog.acofork.com/posts/ai%E6%96%B0%E9%B2%9C%E7%8E%A9%E6%B3%95/autohotkey%E6%89%93%E5%8C%85exe%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/</guid><description>AutoHotkey（AHK）是一种强大的自动化脚本语言，能够帮助用户简化日常计算机操作。将AHK脚本转换为可执行文件（.exe）不仅可以分发和使用，还能保护脚...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;p&gt;AutoHotkey（AHK）是一种强大的自动化脚本语言，能够帮助用户简化日常计算机操作。将AHK脚本转换为可执行文件（.exe）不仅可以分发和使用，还能保护脚本代码不被轻易查看。本文将详细介绍如何使用AutoHotkey将代码转换为EXE文件的完整流程。&lt;/p&gt;
 &lt;h2&gt;&lt;strong&gt;一、安装AutoHotkey&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;在开始转换之前，首先需要安装AutoHotkey软件。&lt;/p&gt;
 &lt;ol&gt;
@@ -2418,7 +2418,7 @@ pyinstaller --onefile --windowed edit_hosts.py
 &lt;p&gt;将AutoHotkey脚本转换为EXE文件是一个简单而强大的功能，它使脚本更加容易分发和使用，同时保护了代码的安全性。通过本文介绍的步骤，您可以轻松完成从脚本脚本到EXE生成的全过程。无论是用于个人自动化还是商业应用，AutoHotkey的EXE编译功能都能满足您的需求。&lt;/p&gt;
 &lt;p&gt;如果觉得这篇教程对你有帮助，别忘了&lt;strong&gt;点赞+收藏+转发&lt;/strong&gt;三连呀！关注我，后续分享更多实用技巧、效率工具干货，下次见～ 👋&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;大强远程技术支持：&lt;a href=&quot;742112.xyz&quot;&gt;742112.xyz&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-</content:encoded></item><item><title>API封装成Skill最佳实践</title><link>https://blog.acofork.com/posts/api%E5%B0%81%E8%A3%85%E6%88%90skill%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</link><guid isPermaLink="true">https://blog.acofork.com/posts/api%E5%B0%81%E8%A3%85%E6%88%90skill%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</guid><description>最近被阿里巴巴通义MAI的Z-Image狠狠圈粉，不仅搭载了高效的 Z-Image-Turbo 模型，更关键的是每天能免费生 2000 张图，不管是生成文章视频...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;p&gt;最近被阿里巴巴通义MAI的Z-Image狠狠圈粉，不仅搭载了高效的 &lt;strong&gt;Z-Image-Turbo&lt;/strong&gt; 模型，更关键的是&lt;strong&gt;每天能免费生 2000 张图&lt;/strong&gt;，不管是生成文章视频封面还是异常创作，这个配额都完全够用。&lt;/p&gt;
+</content:encoded></item><item><title>API封装成Skill最佳实践</title><link>https://blog.acofork.com/posts/ai%E6%96%B0%E9%B2%9C%E7%8E%A9%E6%B3%95/api%E5%B0%81%E8%A3%85%E6%88%90skill%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</link><guid isPermaLink="true">https://blog.acofork.com/posts/ai%E6%96%B0%E9%B2%9C%E7%8E%A9%E6%B3%95/api%E5%B0%81%E8%A3%85%E6%88%90skill%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</guid><description>最近被阿里巴巴通义MAI的Z-Image狠狠圈粉，不仅搭载了高效的 Z-Image-Turbo 模型，更关键的是每天能免费生 2000 张图，不管是生成文章视频...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;p&gt;最近被阿里巴巴通义MAI的Z-Image狠狠圈粉，不仅搭载了高效的 &lt;strong&gt;Z-Image-Turbo&lt;/strong&gt; 模型，更关键的是&lt;strong&gt;每天能免费生 2000 张图&lt;/strong&gt;，不管是生成文章视频封面还是异常创作，这个配额都完全够用。&lt;/p&gt;
 &lt;p&gt;恰巧这段时间我正在研究 Claude 的 Skills 功能，于是就萌生了一个想法：&lt;strong&gt;把 Z-Image 的免费生图能力和 Claude Skills 结合起来&lt;/strong&gt;，做一个专属生图 Skill，通过自然语言就可以生图到本地文件夹，既省时间又能充分利用免费配额。带着这个实操需求，我把整个创建过程整理成了这篇文章，希望能给同样喜欢折腾工具、需要生图功能的朋友提供一点参考～&lt;/p&gt;
 &lt;h2&gt;一.创建方法&lt;/h2&gt;
 &lt;p&gt;登录（可用GitHub）魔搭社区，打开下方地址，点击“查看代码范例”进去复制API代码&lt;/p&gt;
@@ -2498,7 +2498,7 @@ pyinstaller --onefile --windowed edit_hosts.py
 &lt;p&gt;通过上面的例子可以看出，其实不仅是 API，任何你过往用过的优质提示词，都可以让 Claude 帮你封装成一个个 Skills，Skills 的调用方式更简单，也更有优势：你不用每次都跟 AI 详细说明要怎么做，只要用自然语言表达需求，Claude 就会自动判断并调用合适的 Skills，而且多个 Skills 还可以协同工作，组合出更复杂、更完整的工作流。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;以上，既然看到这里了，如果你觉得内容不错，随手点个赞、在看、转发三连吧！如果想第一时间收到推送，可以给我点个星标⭐～&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;如需要远程技术支持：742112.xyz&lt;/p&gt;
-</content:encoded></item><item><title>Antigravity安装使用教程</title><link>https://blog.acofork.com/posts/antigravity%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://blog.acofork.com/posts/antigravity%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid><description>Google Antigravity 是 DeepMind 推出的 AI 编程 IDE（2025-11-18 与 Gemini 3 同步发布），基于 VS Co...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;p&gt;Google Antigravity 是 DeepMind 推出的 AI 编程 IDE（2025-11-18 与 Gemini 3 同步发布），基于 VS Code 内核，核心是 “智能代理（Agentic）” 开发范式，能让 AI 自主规划、执行、验证编程任务，支持多智能体并行协作，适配复杂全栈开发场景&lt;/p&gt;
+</content:encoded></item><item><title>Antigravity安装使用教程</title><link>https://blog.acofork.com/posts/ai%E6%96%B0%E9%B2%9C%E7%8E%A9%E6%B3%95/antigravity%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://blog.acofork.com/posts/ai%E6%96%B0%E9%B2%9C%E7%8E%A9%E6%B3%95/antigravity%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid><description>Google Antigravity 是 DeepMind 推出的 AI 编程 IDE（2025-11-18 与 Gemini 3 同步发布），基于 VS Co...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;p&gt;Google Antigravity 是 DeepMind 推出的 AI 编程 IDE（2025-11-18 与 Gemini 3 同步发布），基于 VS Code 内核，核心是 “智能代理（Agentic）” 开发范式，能让 AI 自主规划、执行、验证编程任务，支持多智能体并行协作，适配复杂全栈开发场景&lt;/p&gt;
 &lt;h2&gt;软件下载安装&lt;/h2&gt;
 &lt;p&gt;官方地址https://antigravity.google/&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260124223748577.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -2548,7 +2548,7 @@ pyinstaller --onefile --windowed edit_hosts.py
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-</content:encoded></item><item><title>AntigravityTool使用教程</title><link>https://blog.acofork.com/posts/antigravitytool%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://blog.acofork.com/posts/antigravitytool%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid><description>Antigravity Tool 是一款智能代理项目，用于将Antigravity内的模型转换为不同协议标准 API，支持OpenAI 协议，Anthropic...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;p&gt;Antigravity Tool 是一款智能代理项目，用于将Antigravity内的模型转换为不同协议标准 API，支持OpenAI 协议，Anthropic协议，Gemini 协议，本文主要演示供Claude使用。&lt;/p&gt;
+</content:encoded></item><item><title>AntigravityTool使用教程</title><link>https://blog.acofork.com/posts/ai%E6%96%B0%E9%B2%9C%E7%8E%A9%E6%B3%95/antigravitytool%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://blog.acofork.com/posts/ai%E6%96%B0%E9%B2%9C%E7%8E%A9%E6%B3%95/antigravitytool%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid><description>Antigravity Tool 是一款智能代理项目，用于将Antigravity内的模型转换为不同协议标准 API，支持OpenAI 协议，Anthropic...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;p&gt;Antigravity Tool 是一款智能代理项目，用于将Antigravity内的模型转换为不同协议标准 API，支持OpenAI 协议，Anthropic协议，Gemini 协议，本文主要演示供Claude使用。&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -2614,7 +2614,7 @@ Claude
 &lt;h2&gt;写在最后&lt;/h2&gt;
 &lt;p&gt;Antigravity Tools可以添加多个 Google 账号，每个账号都有一定的 Antigravity 模型额度，如果额度不够可点击切换账号，智能切换到额度足够的账号。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;大强远程技术支持：742112.xyz&lt;/strong&gt;&lt;/p&gt;
-</content:encoded></item><item><title>7个优质精选Claude Skills</title><link>https://blog.acofork.com/posts/7%E4%B8%AA%E4%BC%98%E8%B4%A8%E7%B2%BE%E9%80%89claude-skills/</link><guid isPermaLink="true">https://blog.acofork.com/posts/7%E4%B8%AA%E4%BC%98%E8%B4%A8%E7%B2%BE%E9%80%89claude-skills/</guid><description>Claude Skills 作为 AI 助手的功能拓展核心，能精准对接各类场景化需求，让智能协作更高效、更具针对性。以下是安装的7个实用且强大的 Claude ...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;p&gt;Claude Skills 作为 AI 助手的功能拓展核心，能精准对接各类场景化需求，让智能协作更高效、更具针对性。以下是安装的7个实用且强大的 Claude Skills。&lt;/p&gt;
+</content:encoded></item><item><title>7个优质精选Claude Skills</title><link>https://blog.acofork.com/posts/ai%E6%96%B0%E9%B2%9C%E7%8E%A9%E6%B3%95/7%E4%B8%AA%E4%BC%98%E8%B4%A8%E7%B2%BE%E9%80%89claude-skills/</link><guid isPermaLink="true">https://blog.acofork.com/posts/ai%E6%96%B0%E9%B2%9C%E7%8E%A9%E6%B3%95/7%E4%B8%AA%E4%BC%98%E8%B4%A8%E7%B2%BE%E9%80%89claude-skills/</guid><description>Claude Skills 作为 AI 助手的功能拓展核心，能精准对接各类场景化需求，让智能协作更高效、更具针对性。以下是安装的7个实用且强大的 Claude ...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;p&gt;Claude Skills 作为 AI 助手的功能拓展核心，能精准对接各类场景化需求，让智能协作更高效、更具针对性。以下是安装的7个实用且强大的 Claude Skills。&lt;/p&gt;
 &lt;p&gt;这些Skills覆盖了工作与创作中的关键场景，从基础的笔记优化、项目管理，到高阶的内容生成、设计开发，均能提供专业化支持。&lt;/p&gt;
 &lt;h3&gt;obsidian-skills&lt;/h3&gt;
 &lt;p&gt;https://github.com/obsidian-community/obsidian-skills&lt;br /&gt;
@@ -2639,7 +2639,7 @@ AI 驱动的高质量 PPT 与视频生成工具，支持智能文档分析、核
 跨平台 UI/UX 专业设计智能工具，集成 57 种 UI 风格、95 套行业配色、56 组字体搭配、24 类图表类型及 98 条 UX 设计规范，支持 React、Next.js、Vue、Tailwind 等 11 种主流技术栈。可作为 Claude Code、Cursor、GitHub Copilot 等 AI 助手的技能插件，通过 CLI 或手动安装快速启用，适用于 SaaS 产品、医疗分析、电商 App 等多场景 UI/UX 设计与开发。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;以上，既然看到这里了，如果你觉得内容不错，随手点个赞、在看、转发三连吧！如果想第一时间收到推送，也可以给我点上关注或星标⭐&lt;/strong&gt;～&lt;/p&gt;
 &lt;p&gt;谢谢你看我的文章，&lt;strong&gt;远程服务：742112.xyz&lt;/strong&gt;&lt;/p&gt;
-</content:encoded></item><item><title>OBS摄像头一键移动插件</title><link>https://blog.acofork.com/posts/obs%E6%91%84%E5%83%8F%E5%A4%B4%E4%B8%80%E9%94%AE%E7%A7%BB%E5%8A%A8%E6%8F%92%E4%BB%B6/</link><guid isPermaLink="true">https://blog.acofork.com/posts/obs%E6%91%84%E5%83%8F%E5%A4%B4%E4%B8%80%E9%94%AE%E7%A7%BB%E5%8A%A8%E6%8F%92%E4%BB%B6/</guid><description>想让 OBS 摄像头实现「一键移动+一键复位」的平滑效果？不管是直播过场切换、录课构图调整，还是避免画面遮挡，motion-effect 插件都能轻松搞定！无需复杂操作，3 步就能实现精准位移，让你的...</description><pubDate>Tue, 03 Feb 2026 21:08:17 GMT</pubDate><content:encoded>&lt;p&gt;想让 OBS 摄像头实现「一键移动+一键复位」的平滑效果？不管是直播过场切换、录课构图调整，还是避免画面遮挡，motion-effect 插件都能轻松搞定！无需复杂操作，3 步就能实现精准位移，让你的画面切换更专业～&lt;/p&gt;
+</content:encoded></item><item><title>OBS摄像头一键移动插件</title><link>https://blog.acofork.com/posts/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%88%A9/obs%E6%91%84%E5%83%8F%E5%A4%B4%E4%B8%80%E9%94%AE%E7%A7%BB%E5%8A%A8%E6%8F%92%E4%BB%B6/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%88%A9/obs%E6%91%84%E5%83%8F%E5%A4%B4%E4%B8%80%E9%94%AE%E7%A7%BB%E5%8A%A8%E6%8F%92%E4%BB%B6/</guid><description>想让 OBS 摄像头实现「一键移动+一键复位」的平滑效果？不管是直播过场切换、录课构图调整，还是避免画面遮挡，motion-effect 插件都能轻松搞定！无需复杂操作，3 步就能实现精准位移，让你的...</description><pubDate>Tue, 03 Feb 2026 21:08:17 GMT</pubDate><content:encoded>&lt;p&gt;想让 OBS 摄像头实现「一键移动+一键复位」的平滑效果？不管是直播过场切换、录课构图调整，还是避免画面遮挡，motion-effect 插件都能轻松搞定！无需复杂操作，3 步就能实现精准位移，让你的画面切换更专业～&lt;/p&gt;
 &lt;h2&gt;一、插件简介&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;开发者：CatxFish（免费开源）&lt;/li&gt;
@@ -2699,7 +2699,7 @@ AI 驱动的高质量 PPT 与视频生成工具，支持智能文档分析、核
 &lt;a href=&quot;https://github.com/TGX-Android/Telegram-X/releases&quot;&gt;telegramx&lt;/a&gt; &lt;a href=&quot;https://github.com/forkgram/TelegramAndroid/releases&quot;&gt;第三方客户端&lt;/a&gt; &lt;a href=&quot;https://www.apkmirror.com/uploads/?devcategory=telegram-fz-llc&quot;&gt;飞机旧版&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;3、卡bug，可以邮箱验证优先邮箱验证。遇到付费解密强制重启app，多试几次有概率可以跳过。&lt;/p&gt;
 &lt;/blockquote&gt;
-</content:encoded></item><item><title>公开架构，我的二次元随机图API是怎么做的</title><link>https://blog.acofork.com/posts/acg-randompic-api/</link><guid isPermaLink="true">https://blog.acofork.com/posts/acg-randompic-api/</guid><description>发现很多小伙伴也想搭建一个自己的随机图API，这里我就公开一下我的架构，打磨2年了，供大家参考~</description><pubDate>Sat, 06 Sep 2025 02:22:00 GMT</pubDate><content:encoded>&lt;h1&gt;API端点&lt;/h1&gt;
+</content:encoded></item><item><title>公开架构，我的二次元随机图API是怎么做的</title><link>https://blog.acofork.com/posts/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/acg-randompic-api/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/acg-randompic-api/</guid><description>发现很多小伙伴也想搭建一个自己的随机图API，这里我就公开一下我的架构，打磨2年了，供大家参考~</description><pubDate>Sat, 06 Sep 2025 02:22:00 GMT</pubDate><content:encoded>&lt;h1&gt;API端点&lt;/h1&gt;
 &lt;p&gt;&lt;s&gt;门户： https://pic.072103.xyz&lt;/s&gt;&lt;/p&gt;
 &lt;p&gt;&lt;s&gt;门户里面的API端点： https://hpic.072103.xyz https://vpic.072103.xyz （CF Worker）&lt;/s&gt;&lt;/p&gt;
 &lt;p&gt;博客用的API端点： https://eopfapi.acofork.com/pic?img=ua （EdgeOne Pages Functions）&lt;/p&gt;
@@ -2712,15 +2712,15 @@ AI 驱动的高质量 PPT 与视频生成工具，支持智能文档分析、核
 &lt;p&gt;在Cloudflare R2被刷了 &lt;strong&gt;7千万次（GET）请求&lt;/strong&gt; 并且扣款 &lt;strong&gt;28.08 USD（折合人民币 207.93 CNY）&lt;/strong&gt; 后废弃&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;图源全部存在 &lt;strong&gt;Cloudflare R2&lt;/strong&gt;，全部采用 &lt;strong&gt;Webp&lt;/strong&gt; 格式，仅分类为 &lt;strong&gt;横屏、竖屏&lt;/strong&gt; ，如图&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://blog.acofork.com/_astro/2025-08-31-04-13-08-image.CQ_Xo6cU.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://blog.acofork.com/_astro/2025-08-31-04-13-17-image.DJLoqL7l.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../assets/images/2025-08-31-04-13-08-image.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../assets/images/2025-08-31-04-13-17-image.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;API就拿我正投入使用的 https://eopfapi.acofork.com/pic?img=ua 来说&lt;/p&gt;
 &lt;p&gt;看域名也可以看出来，这是一个 &lt;strong&gt;EdgeOne Pages Functions&lt;/strong&gt; 服务（下文简称 &lt;strong&gt;eopf&lt;/strong&gt; ），什么？你问为什么用这个？那当然是因为！ &lt;strong&gt;目前所有功能完全免费！&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://blog.acofork.com/_astro/2025-08-31-04-18-45-image.BXXhv1XP.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../assets/images/2025-08-31-04-18-45-image.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;源码在 &lt;a href=&quot;https://github.com/afoim/EdgeOne_Function_PicAPI&quot;&gt;afoim/EdgeOne_Function_PicAPI: 适用于EdgeOne边缘函数的随机图API&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;原理为让 &lt;strong&gt;eopf&lt;/strong&gt; 连接上 &lt;strong&gt;Cloudflare R2&lt;/strong&gt; 然后随机拿一张图出来。没错！就这么简单！&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;上文提到的另一个CF Worker端点原理也一样，只不过CF内部连接R2就不用手搓S3鉴权了&lt;/em&gt;&lt;/p&gt;
-</content:encoded></item><item><title>AI写不出优质的代码？其实是你引导错了！</title><link>https://blog.acofork.com/posts/aicode-prompt/</link><guid isPermaLink="true">https://blog.acofork.com/posts/aicode-prompt/</guid><description>如今，大语言模型百花齐放，有开山鼻祖OpenAI的ChatGPT系列，也有Anthropic开发的代码神器Claude系列。但是，哪怕模型再先进再聪明，如果用它的人使用的方法不对，那再好的模型用起来也是笨笨的</description><pubDate>Tue, 17 Jun 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+</content:encoded></item><item><title>AI写不出优质的代码？其实是你引导错了！</title><link>https://blog.acofork.com/posts/ai%E6%96%B0%E9%B2%9C%E7%8E%A9%E6%B3%95/aicode-prompt/</link><guid isPermaLink="true">https://blog.acofork.com/posts/ai%E6%96%B0%E9%B2%9C%E7%8E%A9%E6%B3%95/aicode-prompt/</guid><description>如今，大语言模型百花齐放，有开山鼻祖OpenAI的ChatGPT系列，也有Anthropic开发的代码神器Claude系列。但是，哪怕模型再先进再聪明，如果用它的人使用的方法不对，那再好的模型用起来也是笨笨的</description><pubDate>Tue, 17 Jun 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;视频链接： https://www.bilibili.com/video/BV1jw38z9EEn/&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h1&gt;正确的引导方法&lt;/h1&gt;
@@ -2741,19 +2741,19 @@ AI 驱动的高质量 PPT 与视频生成工具，支持智能文档分析、核
 &lt;p&gt;最后，请善用AI，你也可以询问AI： &lt;code&gt;你的最佳调用方式是什么&lt;/code&gt;。&lt;s&gt;当然，她也有可能欺骗你&lt;/s&gt;。&lt;/p&gt;
 &lt;h1&gt;AI推荐&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&quot;https://chatgpt.com&quot;&gt;ChatGPT&lt;/a&gt;：快速，不限额。适合解决你的疑问
-&lt;img src=&quot;https://blog.acofork.com/_astro/c2e37057-78c9-403f-b3af-e84bdad98f1e.CXFN4SmF.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;../../assets/images/c2e37057-78c9-403f-b3af-e84bdad98f1e.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://claude.ai&quot;&gt;Claude&lt;/a&gt;：相比于GPT更强大，更擅长编写代码，尤其是前端，目前大部分AI IDE都接入了Claude 3.5 Sonnet及以上的模型，非常适合编写可拆解，易维护的小脚本&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://blog.acofork.com/_astro/f9adcc5e-64bc-48f0-8845-893242abec33.TPqPbTPQ.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../assets/images/f9adcc5e-64bc-48f0-8845-893242abec33.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://code.visualstudio.com/&quot;&gt;VS Code（Github Copilot）&lt;/a&gt;：AI IDE。由微软开发，免费用户可以使用Claude 3.5 Sonnet模型，但是份额较少。Pro计划10USD/m，仅支持Paypal和海外卡支付&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://blog.acofork.com/_astro/70b6f916-ba70-45a6-b572-3b32214f0c1f._MksDzQK.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../assets/images/70b6f916-ba70-45a6-b572-3b32214f0c1f.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.cursor.com&quot;&gt;Cursor&lt;/a&gt;：AI IDE。由Anysphere开发，免费用户仅能使用Auto模型（一般不会分配到Claude模型）。Pro计划10USD/m，仅支持Paypal和海外卡支付&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://blog.acofork.com/_astro/4287002f-eb0e-43b0-87b7-1fa43c37a497.aynFFXXk.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../assets/images/4287002f-eb0e-43b0-87b7-1fa43c37a497.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.trae.ai&quot;&gt;Trae（国际版）&lt;/a&gt;：AI IDE。由字节跳动开发，需要国外IP。新用户Pro计划开通首月仅需3USD/m（之后为10USD/m），支持支付宝和海外卡支付。本人目前在用&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://blog.acofork.com/_astro/40b76f69-2c50-49d0-b861-05f8879accab.D3TzgNS4.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../assets/images/40b76f69-2c50-49d0-b861-05f8879accab.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;写任何项目都完全不推荐使用网页版的任何大模型编写！请使用AI IDE！&lt;/p&gt;
 &lt;/blockquote&gt;
-</content:encoded></item><item><title>自建邮局太麻烦？来用网易免费企业邮！绑定你的域名收发自如！</title><link>https://blog.acofork.com/posts/163-free-domain-email/</link><guid isPermaLink="true">https://blog.acofork.com/posts/163-free-domain-email/</guid><description>网易免费企业邮是一个免费的电子邮箱服务，它最重要的特点就是可以绑定你的域名，比如sudo@onani.cn，并且完全免费且能收能发！</description><pubDate>Wed, 12 Mar 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;引言&lt;/h1&gt;
+</content:encoded></item><item><title>自建邮局太麻烦？来用网易免费企业邮！绑定你的域名收发自如！</title><link>https://blog.acofork.com/posts/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%88%A9/163-free-domain-email/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%88%A9/163-free-domain-email/</guid><description>网易免费企业邮是一个免费的电子邮箱服务，它最重要的特点就是可以绑定你的域名，比如sudo@onani.cn，并且完全免费且能收能发！</description><pubDate>Wed, 12 Mar 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;引言&lt;/h1&gt;
 &lt;p&gt;最早我开始知道域名邮箱是因为偶然在一位我朋友的开发群内看到他的微软账户绑定的邮箱是admin@他网站的域名.com。&lt;/p&gt;
 &lt;p&gt;我当时就很好奇，就去问他你这个邮箱是自建的吗？&lt;/p&gt;
 &lt;p&gt;因为我当时也知道可以通过购买VPS然后配上一些开源邮局框架来自建邮箱，但是这需要金钱和时间成本，而且我认为不大稳定，所以一直就没有试过，而且我觉得我当时的acofork@foxmail.com这个邮箱虽然是托管在QQ的，但是也够用了。&lt;/p&gt;
@@ -2769,27 +2769,27 @@ AI 驱动的高质量 PPT 与视频生成工具，支持智能文档分析、核
 &lt;p&gt;注意，注册完毕后登录账户名和登录密码会通过&lt;strong&gt;短信&lt;/strong&gt;发给你，然后前往 https://mail.qiye.163.com/ 进行登录&lt;/p&gt;
 &lt;p&gt;如果你不喜欢系统随机生成的密码，可以先点击忘记密码，然后填写账户名，验证绑定的手机号后即可重置密码&lt;/p&gt;
 &lt;p&gt;登陆进去后大概是这样&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://blog.acofork.com/_astro/65e5b400-96d7-44c6-b16e-a7a409104c3c.DIlVUdsv.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../assets/images/65e5b400-96d7-44c6-b16e-a7a409104c3c.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;如果你不喜欢你的账户名，比如我的就是 &lt;strong&gt;erchashush&lt;/strong&gt; @acofork.freeqiye.com，这个erchashush其实是可以更改的&lt;/p&gt;
 &lt;p&gt;在组织机构管理中点击账号管理，选择新建账号&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://blog.acofork.com/_astro/a20e7931-c460-4134-b1b0-0fee82f8a7fc.HOtGv46q.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../assets/images/a20e7931-c460-4134-b1b0-0fee82f8a7fc.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;然后写一个你想要的别名。绑定手机填你的，因为第一次登录需要验证码验证，如果填错了直接删除即可&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://blog.acofork.com/_astro/b9ac287d-ff90-4f8c-88ba-0d7bb1588f1c.CLCAm3VD.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../assets/images/b9ac287d-ff90-4f8c-88ba-0d7bb1588f1c.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;然后我们需要给这个新账号提权，如果你想用superadmin登录后台的话&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://blog.acofork.com/_astro/6f21feca-984d-444e-b80f-bf1a28e4cf79.C3B43xx9.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../assets/images/6f21feca-984d-444e-b80f-bf1a28e4cf79.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;接着右上角退出登录，然后使用新创建的管理员账户登录&lt;/p&gt;
 &lt;h2&gt;绑定你的域名&lt;/h2&gt;
 &lt;p&gt;前往组织机构管理 - 域名管理 - 添加域名
-&lt;img src=&quot;https://blog.acofork.com/_astro/2fa04b72-f0e7-43c0-9c2a-1daab62e67cb.BLUNEm3u.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;../../assets/images/2fa04b72-f0e7-43c0-9c2a-1daab62e67cb.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;根据提示在你的域名提供商（比如Cloudflare）配置TXT记录和MX记录即可&lt;/p&gt;
 &lt;h2&gt;登录你的邮箱&lt;/h2&gt;
 &lt;p&gt;前往 &lt;a href=&quot;https://dashi.163.com/&quot;&gt;网易邮箱大师-高效强大的全平台邮箱客户端&lt;/a&gt; 下载对应的版本&lt;/p&gt;
 &lt;p&gt;使用你的邮箱 + 密码进行登录即可。如果需要手机验证验证即可。最好下载一个手机端的网易邮箱大师，在手机端登录后任何其他平台登录都会需要手机端授权，更安全&lt;/p&gt;
 &lt;h2&gt;效果展示&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;https://blog.acofork.com/_astro/614794bd-d84d-4b66-b816-1d6d6ce73727.B-BKEgJg.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../assets/images/614794bd-d84d-4b66-b816-1d6d6ce73727.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;签名和发件人头像可以通过手机的网易邮箱大师设置&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://blog.acofork.com/_astro/57f759bc-46fb-4f99-b6bb-751464661240.DRSHb9It.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-</content:encoded></item><item><title>利用阿里云云函数 FC 搭建AList后端，每月仅需5毛！</title><link>https://blog.acofork.com/posts/alist-for-aliyun/</link><guid isPermaLink="true">https://blog.acofork.com/posts/alist-for-aliyun/</guid><description>阿里云云函数 FC是一个弹性的计算平台，可托管多种服务。搭配AList的前后端分离部署，实现比VPS更低的价格，得到更好的体验</description><pubDate>Mon, 13 Jan 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;还是建议购买一个便宜的云服务器来部署或者用家里云，这种方法很灵车&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&quot;../../assets/images/57f759bc-46fb-4f99-b6bb-751464661240.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+</content:encoded></item><item><title>利用阿里云云函数 FC 搭建AList后端，每月仅需5毛！</title><link>https://blog.acofork.com/posts/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/alist-for-aliyun/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/alist-for-aliyun/</guid><description>阿里云云函数 FC是一个弹性的计算平台，可托管多种服务。搭配AList的前后端分离部署，实现比VPS更低的价格，得到更好的体验</description><pubDate>Mon, 13 Jan 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;还是建议购买一个便宜的云服务器来部署或者用家里云，这种方法很灵车&lt;/h1&gt;
 &lt;p&gt;推荐Akile：https://akile.io/register?aff_code=503fe5ea-e7c5-4d68-ae05-6de99513680e&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h1&gt;原理&lt;/h1&gt;
@@ -2847,7 +2847,7 @@ AI 驱动的高质量 PPT 与视频生成工具，支持智能文档分析、核
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-</content:encoded></item><item><title>究极喂饭教程，手把手教你内网穿透</title><link>https://blog.acofork.com/posts/across-nat/</link><guid isPermaLink="true">https://blog.acofork.com/posts/across-nat/</guid><description>使用Zerotier，Tailscale，Cloudflare Tunnel可以实现多种内网穿透，其中有适用于个人访问的，也有适用于公众访问的</description><pubDate>Mon, 28 Oct 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;经实测，Zerotier的打洞能力明显优于Tailscale，所以建议通过Zerotier来实现内网穿透&lt;/h1&gt;
+</content:encoded></item><item><title>究极喂饭教程，手把手教你内网穿透</title><link>https://blog.acofork.com/posts/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/across-nat/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/across-nat/</guid><description>使用Zerotier，Tailscale，Cloudflare Tunnel可以实现多种内网穿透，其中有适用于个人访问的，也有适用于公众访问的</description><pubDate>Mon, 28 Oct 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;经实测，Zerotier的打洞能力明显优于Tailscale，所以建议通过Zerotier来实现内网穿透&lt;/h1&gt;
 &lt;p&gt;详细报表：&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -2891,41 +2891,41 @@ ping你的对端设备，如果延迟大于200ms或者经常丢包大概率就�
 &lt;h1&gt;啥是内网穿透？&lt;/h1&gt;
 &lt;p&gt;当我们在家中有个NAS，想要在学校/公司的网络来访问，就需要用到内网穿透，实现外网访问内网服务。原理一般是P2P打洞和服务器中转流量&lt;/p&gt;
 &lt;h1&gt;前期准备&lt;/h1&gt;
-&lt;p&gt;路由器开启UPnP&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-28-17-08-00-image.D3nm75yS.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;关闭路由器的IPv4，IPv6防火墙 &lt;strong&gt;（可选）&lt;/strong&gt;&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-28-17-09-19-image.C3UGHG99.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;路由器开启UPnP&lt;img src=&quot;../../assets/images/2024-10-28-17-08-00-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;关闭路由器的IPv4，IPv6防火墙 &lt;strong&gt;（可选）&lt;/strong&gt;&lt;img src=&quot;../../assets/images/2024-10-28-17-09-19-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h1&gt;&lt;em&gt;使用Zerotier/Tailscale进行内网穿透&lt;/em&gt;&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;他们俩的原理都是尝试对端建立P2P连接，需要对端安装一个软件并且长期运行&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h1&gt;使用Zerotier进行内网穿透的详细教程&lt;/h1&gt;
 &lt;h2&gt;创建Zerotier账号&lt;/h2&gt;
-&lt;p&gt;前往：&lt;a href=&quot;https://www.zerotier.com/&quot;&gt;ZeroTier | Global Networking Solution for IoT, SD-WAN, and VPN&lt;/a&gt;。如果你进不去，请尝试挂梯子。如果看不懂英文可以开启浏览器的翻译功能&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-28-17-12-51-image.Ddi3o4wp.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;选择 &lt;code&gt;Sign up&lt;/code&gt;&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-28-17-13-06-image.mYYPjbz1.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;如果你到了这个界面，请仍然选择&lt;code&gt;Sign up&lt;/code&gt;&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-28-17-15-08-image.CsKcWiIB.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-28-17-16-52-image.DxGkCjJp.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;账号创建完毕后，登录即可&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-28-17-17-47-image.CwgRWoMp.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;前往：&lt;a href=&quot;https://www.zerotier.com/&quot;&gt;ZeroTier | Global Networking Solution for IoT, SD-WAN, and VPN&lt;/a&gt;。如果你进不去，请尝试挂梯子。如果看不懂英文可以开启浏览器的翻译功能&lt;img src=&quot;../../assets/images/2024-10-28-17-12-51-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;选择 &lt;code&gt;Sign up&lt;/code&gt;&lt;img src=&quot;../../assets/images/2024-10-28-17-13-06-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;如果你到了这个界面，请仍然选择&lt;code&gt;Sign up&lt;/code&gt;&lt;img src=&quot;../../assets/images/2024-10-28-17-15-08-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../assets/images/2024-10-28-17-16-52-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;账号创建完毕后，登录即可&lt;img src=&quot;../../assets/images/2024-10-28-17-17-47-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;创建一个新的Zerotier网络组&lt;/h2&gt;
 &lt;p&gt;当你账号登录成功后，会自动跳转到这个页面，点击&lt;code&gt;Create A Network&lt;/code&gt;。如果没有，请访问&lt;a href=&quot;https://my.zerotier.com/&quot;&gt;ZeroTier Central&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-28-17-20-24-image.f8oScQGB.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;下面的列表会增加一个新的网络组，点击它&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-28-17-21-31-image.Xnc9h9zy.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../assets/images/2024-10-28-17-20-24-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;下面的列表会增加一个新的网络组，点击它&lt;img src=&quot;../../assets/images/2024-10-28-17-21-31-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;Zerotier默认的网络组模式为&lt;code&gt;Private&lt;/code&gt;。即私密模式，哪怕别人知道了你的&lt;code&gt;Network ID&lt;/code&gt;尝试加入你的网络组也需要你进行验证&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-28-17-22-38-image.B-eU03LS.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;复制这个&lt;code&gt;Network ID&lt;/code&gt;&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-28-17-22-13-image.DL6BJFdN.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../assets/images/2024-10-28-17-22-38-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;复制这个&lt;code&gt;Network ID&lt;/code&gt;&lt;img src=&quot;../../assets/images/2024-10-28-17-22-13-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h1&gt;在设备上安装Zerotier应用&lt;/h1&gt;
 &lt;h2&gt;Windows：&lt;/h2&gt;
-&lt;p&gt;前往&lt;a href=&quot;https://www.zerotier.com/download/&quot;&gt;Download - ZeroTier&lt;/a&gt;，下载exe安装文件&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-28-17-25-52-image.Cf50Yqec.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;打开Zerotier&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-28-17-27-20-image.jl_-Sny8.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;查看右下角托盘，按照图片操作加入网络组&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-28-17-28-20-image.vuLpRAAo.webp&quot; alt=&quot;&quot; /&gt;&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-28-17-29-12-image.Dt6EL3_x.webp&quot; alt=&quot;&quot; /&gt;&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-28-17-30-26-image.BTCSEbnz.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;前往&lt;a href=&quot;https://www.zerotier.com/download/&quot;&gt;Download - ZeroTier&lt;/a&gt;，下载exe安装文件&lt;img src=&quot;../../assets/images/2024-10-28-17-25-52-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;打开Zerotier&lt;img src=&quot;../../assets/images/2024-10-28-17-27-20-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;查看右下角托盘，按照图片操作加入网络组&lt;img src=&quot;../../assets/images/2024-10-28-17-28-20-image.webp&quot; alt=&quot;&quot; /&gt;&lt;img src=&quot;../../assets/images/2024-10-28-17-29-12-image.webp&quot; alt=&quot;&quot; /&gt;&lt;img src=&quot;../../assets/images/2024-10-28-17-30-26-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;这里可以查询到你的设备ID和你在这个网络组的IP&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-28-18-03-19-image.BYPZXFfC.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../assets/images/2024-10-28-18-03-19-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;然后参考：&lt;a href=&quot;#zerotier%E6%8E%88%E6%9D%83%E8%AE%BE%E5%A4%87&quot;&gt;Zerotier授权设备&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;h2&gt;Linux（飞牛OS）：&lt;/h2&gt;
 &lt;p&gt;通过SSH连接上你的Linux设备&lt;/p&gt;
-&lt;p&gt;查看安装命令：&lt;a href=&quot;https://www.zerotier.com/download/&quot;&gt;Download - ZeroTier&lt;/a&gt;&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-28-17-38-19-image.Gzx7L_Cn.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;查看安装命令：&lt;a href=&quot;https://www.zerotier.com/download/&quot;&gt;Download - ZeroTier&lt;/a&gt;&lt;img src=&quot;../../assets/images/2024-10-28-17-38-19-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;终端执行： &lt;code&gt;curl -s https://install.zerotier.com | sudo bash&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;看到这一行即安装完毕，后面那一串即你的设备ID：&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-28-17-39-23-image.Cw5ity2X.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;加入网络：&lt;code&gt;sudo zerotier-cli join 你的Network ID&lt;/code&gt;&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-28-17-42-01-image.iZzNeRsh.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;看到这一行即安装完毕，后面那一串即你的设备ID：&lt;img src=&quot;../../assets/images/2024-10-28-17-39-23-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;加入网络：&lt;code&gt;sudo zerotier-cli join 你的Network ID&lt;/code&gt;&lt;img src=&quot;../../assets/images/2024-10-28-17-42-01-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;然后参考：&lt;a href=&quot;#zerotier%E6%8E%88%E6%9D%83%E8%AE%BE%E5%A4%87&quot;&gt;Zerotier授权设备&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;h2&gt;Android（安卓）&lt;/h2&gt;
 &lt;p&gt;下载客户端&lt;/p&gt;
@@ -2938,32 +2938,32 @@ ping你的对端设备，如果延迟大于200ms或者经常丢包大概率就�
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;如图操作&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-28-17-59-06-image.DNvl3C1n.webp&quot; alt=&quot;&quot; /&gt;&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-28-17-59-46-image.Cb6Z0gLJ.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../assets/images/2024-10-28-17-59-06-image.webp&quot; alt=&quot;&quot; /&gt;&lt;img src=&quot;../../assets/images/2024-10-28-17-59-46-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;然后参考：&lt;a href=&quot;#zerotier%E6%8E%88%E6%9D%83%E8%AE%BE%E5%A4%87&quot;&gt;Zerotier授权设备&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h1&gt;Zerotier授权设备&lt;/h1&gt;
 &lt;p&gt;前往Zerotier的网页控制台：&lt;a href=&quot;%5Bhttps://my.zerotier.com/%5D(https://my.zerotier.com/)&quot;&gt;ZeroTier Central&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;授权刚才加入的设备&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-28-17-31-51-image.s1EedpqN.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;勾选然后保存&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-28-17-33-10-image.DkUZVGaz.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;授权刚才加入的设备&lt;img src=&quot;../../assets/images/2024-10-28-17-31-51-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;勾选然后保存&lt;img src=&quot;../../assets/images/2024-10-28-17-33-10-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h1&gt;Zerotier访问测试&lt;/h1&gt;
 &lt;p&gt;如果你同一个网络组里已经有两台以上的设备了，可以尝试ping一下测试连通性，请先确保两台设备不在同一个局域网（比如手机开流量，NAS用家里的无线网）&lt;/p&gt;
-&lt;p&gt;IP可以在这里查看&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-28-18-02-00-image.DidndU1x.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;ping测试：&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-28-18-07-13-image.Dsot47uv.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;IP可以在这里查看&lt;img src=&quot;../../assets/images/2024-10-28-18-02-00-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;ping测试：&lt;img src=&quot;../../assets/images/2024-10-28-18-07-13-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h1&gt;使用Tailscale进行内网穿透的详细教程&lt;/h1&gt;
 &lt;h2&gt;创建Tailscale账号&lt;/h2&gt;
 &lt;p&gt;前往：&lt;a href=&quot;https://login.tailscale.com/start&quot;&gt;Tailscale&lt;/a&gt;。如果你进不去，请尝试挂梯子。如果看不懂英文可以开启浏览器的翻译功能&lt;/p&gt;
-&lt;p&gt;选择任意一个登录方式&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-28-18-24-32-image.Wjpa6v28.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;选择任意一个登录方式&lt;img src=&quot;../../assets/images/2024-10-28-18-24-32-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;账号创建完毕后，登录即可&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h1&gt;在设备上安装Tailscale应用&lt;/h1&gt;
 &lt;h2&gt;Windows：&lt;/h2&gt;
 &lt;p&gt;前往&lt;a href=&quot;https://tailscale.com/download&quot;&gt;Download · Tailscale&lt;/a&gt;，下载exe安装文件&lt;/p&gt;
-&lt;p&gt;官方教程：&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-28-18-31-48-image.DVGnVU9p.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;官方教程：&lt;img src=&quot;../../assets/images/2024-10-28-18-31-48-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;Linux（飞牛OS）：&lt;/h2&gt;
 &lt;p&gt;通过SSH连接上你的Linux设备&lt;/p&gt;
-&lt;p&gt;查看安装命令：&lt;a href=&quot;https://tailscale.com/download/linux&quot;&gt;Download · Tailscale&lt;/a&gt;&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-28-18-32-58-image.BMg-y-Aw.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;查看安装命令：&lt;a href=&quot;https://tailscale.com/download/linux&quot;&gt;Download · Tailscale&lt;/a&gt;&lt;img src=&quot;../../assets/images/2024-10-28-18-32-58-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;终端执行： &lt;code&gt;curl -fsSL https://tailscale.com/install.sh | sh&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;等待安装完毕后输入：&lt;code&gt;tailscale login&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;打开弹出的浏览器窗口，登录你的账号即可&lt;/p&gt;
@@ -2972,8 +2972,8 @@ ping你的对端设备，如果延迟大于200ms或者经常丢包大概率就�
 &lt;p&gt;登录你的账号即可&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h2&gt;Tailscale访问测试&lt;/h2&gt;
-&lt;p&gt;前往Tailscale的网页控制台：&lt;a href=&quot;https://login.tailscale.com/admin/machines&quot;&gt;Machines - Tailscale&lt;/a&gt;。可以查看到每个设备Tailscale分配的IP&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-28-18-26-58-image.axvEtzCv.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;ping测试&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-28-18-41-45-image.DFXGsO_N.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;前往Tailscale的网页控制台：&lt;a href=&quot;https://login.tailscale.com/admin/machines&quot;&gt;Machines - Tailscale&lt;/a&gt;。可以查看到每个设备Tailscale分配的IP&lt;img src=&quot;../../assets/images/2024-10-28-18-26-58-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;ping测试&lt;img src=&quot;../../assets/images/2024-10-28-18-41-45-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h1&gt;使用Cloudflare Tunnel进行内网穿透&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -2981,18 +2981,18 @@ ping你的对端设备，如果延迟大于200ms或者经常丢包大概率就�
 &lt;/blockquote&gt;
 &lt;p&gt;创建Cloudflare账号&lt;a href=&quot;https://dash.cloudflare.com/&quot;&gt;主页 | Cloudflare&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;进入&lt;a href=&quot;https://one.dash.cloudflare.com/&quot;&gt;Cloudflare One&lt;/a&gt;（需要绑定PayPal）&lt;/p&gt;
-&lt;p&gt;如图操作，创建一个Tunnel&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-28-18-45-41-image.DeKN_ocp.webp&quot; alt=&quot;&quot; /&gt;&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-28-18-45-54-image.KXocwOIX.webp&quot; alt=&quot;&quot; /&gt;&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-28-18-46-22-image.DBhzZjGY.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;如图操作，创建一个Tunnel&lt;img src=&quot;../../assets/images/2024-10-28-18-45-41-image.webp&quot; alt=&quot;&quot; /&gt;&lt;img src=&quot;../../assets/images/2024-10-28-18-45-54-image.webp&quot; alt=&quot;&quot; /&gt;&lt;img src=&quot;../../assets/images/2024-10-28-18-46-22-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;Docker方式&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;使用1Panel&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;复制如图的命令&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://blog.acofork.com/_astro/48e9c43eb5c0fb49cc5517687698e3d9d1e60220.DhtealJQ.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;将其粘贴，并且复制后面的令牌&lt;img src=&quot;https://blog.acofork.com/_astro/a2e18519d3782d765d7293c7a3d21031c787d575.BUXoBbSN.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;1Panel应用商店搜索&lt;code&gt;cloudflared&lt;/code&gt;&lt;img src=&quot;https://blog.acofork.com/_astro/cf2eba61f0aaa7605240187e1c46f80a3954edfa.CLm7N0oy.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;填入令牌&lt;img src=&quot;https://blog.acofork.com/_astro/6f661ffa778b2be2e108912d3d44d8b3301df6d6.Bb2JsIaa.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../assets/images/48e9c43eb5c0fb49cc5517687698e3d9d1e60220.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;将其粘贴，并且复制后面的令牌&lt;img src=&quot;../../assets/images/a2e18519d3782d765d7293c7a3d21031c787d575.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;1Panel应用商店搜索&lt;code&gt;cloudflared&lt;/code&gt;&lt;img src=&quot;../../assets/images/cf2eba61f0aaa7605240187e1c46f80a3954edfa.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;填入令牌&lt;img src=&quot;../../assets/images/6f661ffa778b2be2e108912d3d44d8b3301df6d6.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;然后前往&lt;a href=&quot;#%E6%9F%A5%E7%9C%8Bcloudflared%E7%9A%84ip&quot;&gt;查看IP&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;使用命令运行&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;复制底下的命令然后SSH连接到Linux（飞牛OS）在终端输入&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-28-18-46-49-image.DaTfGSmY.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../assets/images/2024-10-28-18-46-49-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;然后前往&lt;a href=&quot;#%E6%9F%A5%E7%9C%8Bcloudflared%E7%9A%84ip&quot;&gt;查看IP&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;查看cloudflared的IP&lt;/h3&gt;
 &lt;p&gt;因为我们是Docker模式，所以IP需要通过SSH终端输入&lt;code&gt;ip a&lt;/code&gt;来查看。我这里是&lt;code&gt;192.168.124.34&lt;/code&gt;&lt;/p&gt;
@@ -3016,17 +3016,17 @@ ping你的对端设备，如果延迟大于200ms或者经常丢包大概率就�
 &lt;p&gt;&lt;strong&gt;然后前往&lt;a href=&quot;#%E9%85%8D%E7%BD%AE%E5%B9%B6%E8%AE%BF%E9%97%AEtunnel&quot;&gt;配置并访问Tunnel&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;h2&gt;原生模式（以Debian为例）&lt;/h2&gt;
 &lt;p&gt;选择Debian，然后复制底下的命令，直接到终端执行&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-28-20-00-49-image.B1FDc-jT.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../assets/images/2024-10-28-20-00-49-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;如果你的环境无法连接上Github&lt;/p&gt;
 &lt;p&gt;尝试手动下载：&lt;a href=&quot;https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb&quot;&gt;https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;然后将其通过SSH等方式传到Linux上，如图终端为MobaXterm&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-29-10-18-29-image.D6aMyLhl.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;然后将其通过SSH等方式传到Linux上，如图终端为MobaXterm&lt;img src=&quot;../../assets/images/2024-10-29-10-18-29-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;然后使用：&lt;code&gt;dpkg -i cloudflared-linux-amd64.deb&lt;/code&gt;安装这个软件包&lt;/p&gt;
-&lt;p&gt;然后直接复制右边的命令到SSH终端执行&lt;img src=&quot;https://blog.acofork.com/_astro/48e9c43eb5c0fb49cc5517687698e3d9d1e60220.DhtealJQ.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;然后直接复制右边的命令到SSH终端执行&lt;img src=&quot;../../assets/images/2024-10-29-10-19-27-3dcfad6977bdecf80fc0366f257788e6.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;然后前往&lt;a href=&quot;#%E9%85%8D%E7%BD%AE%E5%B9%B6%E8%AE%BF%E9%97%AEtunnel&quot;&gt;配置并访问Tunnel&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;h2&gt;Android（Termux）&lt;/h2&gt;
 &lt;p&gt;在Android上安装&lt;a href=&quot;https://termux.dev&quot;&gt;Termux | The main termux site and help pages.&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;在终端执行：&lt;code&gt;pkg install cloudflared&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;选择&lt;code&gt;Debian&lt;/code&gt;然后复制最右边的命令到终端执行&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-29-08-42-38-image.Epg3ZSDA.webp&quot; alt=&quot;&quot; /&gt;
+&lt;p&gt;选择&lt;code&gt;Debian&lt;/code&gt;然后复制最右边的命令到终端执行&lt;img src=&quot;../../assets/images/2024-10-29-08-42-38-image.webp&quot; alt=&quot;&quot; /&gt;
 如果你无法使用Termux自带的cloudflared，请尝试安装proot容器实现&lt;/p&gt;
 &lt;p&gt;依次输入命令：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;pkg update &amp;amp;&amp;amp; pkg upgrade
@@ -3040,7 +3040,7 @@ wget https://github.com/cloudflare/cloudflared/releases/download/2024.10.1/cloud
 dpkg -i cloudflared-linux-amd64.deb
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;然后直接复制右边的命令到SSH终端执行&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-29-08-42-38-image.Epg3ZSDA.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../assets/images/2024-10-29-08-42-38-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;如果你无法通过令牌配置cloudflared，请参见&lt;a href=&quot;#%E6%9C%AC%E5%9C%B0%E6%96%B9%E5%BC%8F&quot;&gt;本地方式配置cloudflared&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;然后前往&lt;a href=&quot;#%E9%85%8D%E7%BD%AE%E5%B9%B6%E8%AE%BF%E9%97%AEtunnel&quot;&gt;配置并访问Tunnel&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;hr /&gt;
@@ -3050,8 +3050,8 @@ dpkg -i cloudflared-linux-amd64.deb
 &lt;p&gt;这种方法需要直接在安装了cloudflared的设备上通过令牌运行&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;如图进入，创建一个HTTP隧道&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-28-18-49-21-image.eADBBM2j.webp&quot; alt=&quot;&quot; /&gt;&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-28-18-49-44-image.DpwCTS0j.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;填写你的IP和端口，非Docker模式可以直接填写localhost&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-28-18-53-37-image.DtsQD-YS.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;../../assets/images/2024-10-28-18-49-21-image.webp&quot; alt=&quot;&quot; /&gt;&lt;img src=&quot;../../assets/images/2024-10-28-18-49-44-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;填写你的IP和端口，非Docker模式可以直接填写localhost&lt;img src=&quot;../../assets/images/2024-10-28-18-53-37-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;本地方式&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;这种方法只需要在安装了cloudflared的设备上输入一些命令然后通过网页授权，后续更改配置也需要在本地操作&lt;/p&gt;
@@ -3059,12 +3059,12 @@ dpkg -i cloudflared-linux-amd64.deb
 &lt;p&gt;登录并授权：&lt;code&gt;cloudflared tunnel login&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;创建隧道并设置隧道（HTTP模式穿透，目标地址&lt;code&gt;127.0.0.1&lt;/code&gt;，端口：&lt;code&gt;8080&lt;/code&gt;，外部域名：&lt;code&gt;test.onani.cn&lt;/code&gt;）：&lt;code&gt;cloudflared tunnel --name test --url http://127.0.0.1:8080 --http2 --hostname test.onani.cn&lt;/code&gt;&lt;/p&gt;
 &lt;h2&gt;访问测试&lt;/h2&gt;
-&lt;p&gt;成功访问&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-28-18-54-42-image.ngPhAoGm.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;成功访问&lt;img src=&quot;../../assets/images/2024-10-28-18-54-42-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h1&gt;使用STUN打洞&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;这种方法可以不进行任何配置直接在公网上被访问，并且所有类型的服务都能正常使用。但是这种方式进行的内网穿透无法固定也无法指定IP和端口，在3~7天后会改变&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2&gt;安装Lucky&lt;/h2&gt;
 &lt;p&gt;执行：&lt;code&gt;curl -o /tmp/install.sh http://6.666666.host:6/files/golucky.sh &amp;amp;&amp;amp; sh /tmp/install.sh http://6.666666.host:6/files 2.13.4&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;通过&lt;code&gt;host:16601&lt;/code&gt; 进入Lucky后台，设置STUN穿透。如果DMZ主机不设为Lucky主机可能会失败。打码的地方即公网访问的IP和端口&lt;img src=&quot;https://blog.acofork.com/_astro/2024-10-28-18-56-16-image.B4KvIkrQ.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;通过&lt;code&gt;host:16601&lt;/code&gt; 进入Lucky后台，设置STUN穿透。如果DMZ主机不设为Lucky主机可能会失败。打码的地方即公网访问的IP和端口&lt;img src=&quot;../../assets/images/2024-10-28-18-56-16-image.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 </content:encoded></item></channel></rss>
