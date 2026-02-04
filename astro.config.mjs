@@ -248,6 +248,10 @@ export default defineConfig({
 		],
 	},
 	vite: {
+		server: {
+			port: 4321,
+			host: true,
+		},
 		build: {
 			rollupOptions: {
 				onwarn(warning, warn) {
