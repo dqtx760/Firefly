@@ -6,7 +6,7 @@ const postsDir = 'src/content/posts';
 // Frontmatter 模板
 const frontmatterTemplate = `---
 title:
-published:
+published: 2026-02-04
 tags: []
 category:
 draft: false
