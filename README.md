@@ -58,8 +58,10 @@
 │   ├── utils/             # 工具函数
 │   └── config.ts          # 站点配置
 ├── scripts/               # 脚本工具
-│   ├── import-posts.cjs   # 批量导入文章
-│   └── update-categories.cjs # 批量更新分类
+│   ├── add-frontmatter.cjs # 自动添加 frontmatter 模板
+│   ├── clean-unused-images.js # 清理未使用的图片
+│   ├── del-space.js      # 删除空格
+│   └── new-post.js       # 创建新文章
 └── package.json
 ```
 
@@ -91,6 +93,8 @@ npm run dev
 ```
 
 访问 http://localhost:4321/ 查看效果
+
+> **注意**: 开发服务器端口已固定为 4321（配置在 `astro.config.mjs` 中），无需担心端口变化。
 
 ### 构建生产版本
 
@@ -271,6 +275,95 @@ image: https://图片URL（可选，留空则自动提取第一张）
 | 软件安利 | 软件推荐、工具介绍 | Typora、PicList、快捷键 |
 | 技术教程 | 技术教程、部署指南 | AList部署、内网穿透 |
 | AI新鲜玩法 | AI 相关内容 | Claude、ChatGPT、提示词 |
+
+### ⚠️ Frontmatter 注意事项
+
+#### 1. 冒号后必须有空格（YAML 语法要求）
+
+**错误写法：**
+```yaml
+title:文章标题
+published:2026-02-04
+category:软件安利
+```
+
+**正确写法：**
+```yaml
+title: 文章标题
+published: 2026-02-04
+category: 软件安利
+```
+
+#### 2. 日期格式必须使用连字符
+
+**错误格式：** `published: 2026/02/04`（会被当作字符串，导致构建失败）
+
+**正确格式：** `published: 2026-02-04`（ISO 格式）
+
+#### 3. 标签必须使用数组格式
+
+**错误写法：** `tags: 标签1, 标签2`
+
+**正确写法：** `tags: [标签1, 标签2]`
+
+### 🖥️ 使用 .bat 脚本简化工作流
+
+创建桌面快捷脚本 `启动博客并添加模板.bat`：
+
+```batch
+@echo off
+chcp 65001 >nul
+cd /d D:\project2026\fuwari
+
+echo ========================================
+echo    1. 检查开发服务器...
+echo ========================================
+
+:: 检查端口4321是否被占用
+netstat -ano | findstr ":4321" >nul 2>&1
+if %errorlevel% equ 0 (
+    echo ✓ 开发服务器已在运行
+) else (
+    echo ✗ 开发服务器未运行，正在启动...
+    start /B npm run dev >nul 2>&1
+    echo   等待服务器启动...
+    timeout /t 5 /nobreak >nul
+    echo ✓ 开发服务器已启动
+)
+
+echo.
+echo ========================================
+echo    2. 为文章添加 Frontmatter 模板...
+echo ========================================
+
+node scripts/add-frontmatter.cjs
+
+echo.
+echo ========================================
+echo    3. 打开网站...
+echo ========================================
+
+start http://localhost:4321/
+
+echo.
+echo ✓ 所有任务完成！
+pause
+```
+
+**使用方法：**
+1. 在 Typora 写完文章后，保存到 `src/content/posts/` 目录
+2. 双击运行桌面上的 `启动博客并添加模板.bat`
+3. 脚本会自动：
+   - 启动开发服务器（如果未运行）
+   - 为没有 frontmatter 的文章添加模板
+   - 打开浏览器预览
+
+**添加 Frontmatter 模板脚本：**
+
+也可以单独运行：
+```bash
+npm run add-frontmatter
+```
 
 ## 🎨 自定义配置
 
