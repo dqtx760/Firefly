@@ -5,10 +5,10 @@ description: '分享我的无服务器博客发布流程：使用 GitHub 托管 
 tags: [教程, 博客, 工作流, Typora, 自动化]
 category: 技术教程
 draft: false
-image: ../../assets/images/gitee-typora-workflow.webp
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260204103206520.webp
 ---
 
-![](../../assets/images/gitee-typora-workflow.webp)
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260204103206520.webp)
 
 今天想跟大家分享一下我的博客发布工作流。我的博客没有服务器，只有一个域名通过 GitHub 进行托管，配合 EdgeOne 实现自动构建部署。整个过程非常高效，下面就来详细介绍！
 
