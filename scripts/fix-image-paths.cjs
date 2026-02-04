@@ -1,3 +1,4 @@
+// Image path fixer for posts in subdirectories
 const fs = require('fs');
 const path = require('path');
 
