@@ -1,0 +1,33 @@
+---
+/**
+ * 视频装饰组件
+ * 显示循环播放的视频
+ */
+interface Props {
+    src?: string;
+}
+
+const { src = "https://storage.googleapis.com/creatorspace-public/users%2Fcm69rcp2205nuql01acfbyq0v%2Fokcia7dTfbFQHS73-users-cld4n5p4q1ahnpo0y6kwwv333-rJ1JJZyb4PQAnAlc-waterfall_test.mp4" } = Astro.props;
+---
+
+<div class="video-decoration">
+    <video autoplay loop muted playsinline>
+        <source src={src} type="video/mp4">
+    </video>
+</div>
+
+<style>
+    .video-decoration {
+        width: 100%;
+        height: 160px;
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .video-decoration video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>

@@ -7,6 +7,7 @@ tags: [随机图API]
 
 draft: false 
 lang: ''
+category: 技术教程
 ---
 
 # API端点

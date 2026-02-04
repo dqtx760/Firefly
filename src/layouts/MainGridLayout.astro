@@ -121,4 +121,118 @@ const mainPanelTop = siteConfig.banner.enable
         {!siteConfig.toc.enable && <div id="toc"></div>}
     </div>
 </div>
+
+<!-- 霓虹灯风格微信二维码弹窗 -->
+<style define:vars={{}}>
+    @property --neon-angle { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
+
+    .neon-modal-backdrop {
+        background: radial-gradient(900px 500px at 50% 25%, rgba(255, 105, 198, 0.15), rgba(0, 0, 0, 0) 65%),
+                    radial-gradient(900px 500px at 35% 70%, rgba(181, 107, 255, 0.15), rgba(0, 0, 0, 0) 65%),
+                    radial-gradient(900px 500px at 70% 75%, rgba(77, 199, 255, 0.15), rgba(0, 0, 0, 0) 65%),
+                    rgba(0, 0, 0, 0.75);
+        backdrop-filter: blur(16px) saturate(140%);
+    }
+
+    .neon-modal-box {
+        position: relative;
+        border-radius: 28px;
+        background: linear-gradient(145deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.05));
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(20px) saturate(150%);
+        overflow: hidden;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7),
+                    0 0 25px rgba(255, 105, 198, 0.25),
+                    0 0 50px rgba(77, 199, 255, 0.15);
+    }
+
+    .neon-modal-box::before {
+        content: "";
+        position: absolute;
+        inset: -2px;
+        border-radius: inherit;
+        padding: 2.5px;
+        background: conic-gradient(from var(--neon-angle), #ff69c6, #b56bff, #4dc7ff, #ff69c6);
+        -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        animation: neonAngle 6s linear infinite;
+        pointer-events: none;
+        z-index: 10;
+    }
+
+    @keyframes neonAngle { to { --neon-angle: 360deg; } }
+
+    .neon-modal-box button:hover {
+        background: rgba(255,255,255,0.2) !important;
+    }
+</style>
+
+<div id="qr-modal" class="hidden neon-modal-backdrop" onclick="closeQRModal()" style="position: fixed; inset: 0; z-index: 99999; display: none; align-items: center; justify-content: center; padding: 1rem;">
+    <div class="neon-modal-box" onclick="event.stopPropagation()" style="padding: 2rem; max-width: 28rem; width: 100%; display: flex; flex-direction: column; align-items: center;">
+        <h3 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1.5rem; color: #f472b6; text-shadow: 0 0 10px rgba(236, 72, 153, 0.5);">扫码添加微信</h3>
+        <div style="position: relative; margin-bottom: 1.5rem; border: 1px solid rgba(255,255,255,0.2); padding: 0.5rem; border-radius: 1rem; background: rgba(0,0,0,0.2); backdrop-filter: blur(4px);">
+            <img src="/qq-qrcode.png" alt="WeChat QR Code" style="width: 16rem; height: 16rem; object-fit: contain; border-radius: 0.75rem; display: block;" />
+        </div>
+        <p style="color: rgba(255,255,255,0.8); font-family: monospace; font-size: 0.875rem;">微信号: <span id="modal-wx-id" style="color: #f472b6; font-weight: bold;">dqtx33</span></p>
+        <div style="display: flex; gap: 1rem; width: 100%; margin-top: 1.5rem;">
+            <button onclick="copyModalWx(event)" class="wx-copy-btn" style="flex: 1; padding: 0.75rem; border-radius: 0.75rem; font-weight: 600; font-size: 0.875rem; background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.2); cursor: pointer; transition: all 0.2s;">复制微信号</button>
+            <button onclick="closeQRModal()" style="flex: 1; padding: 0.75rem; border-radius: 0.75rem; font-weight: 600; font-size: 0.875rem; background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.2); cursor: pointer; transition: all 0.2s;">关闭</button>
+        </div>
+    </div>
+</div>
+
+<script is:inline>
+    // 打开二维码弹窗
+    function openQRModal() {
+        const modal = document.getElementById('qr-modal');
+        modal.classList.remove('hidden');
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+
+    // 关闭二维码弹窗
+    function closeQRModal() {
+        const modal = document.getElementById('qr-modal');
+        modal.classList.add('hidden');
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+    }
+
+    // 复制微信号
+    function copyModalWx(e) {
+        if (e) e.stopPropagation();
+        const wxId = document.getElementById('modal-wx-id').innerText;
+        const textArea = document.createElement("textarea");
+        textArea.value = wxId;
+        textArea.style.position = "fixed";
+        textArea.style.left = "-9999px";
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        try {
+            const successful = document.execCommand('copy');
+            if (successful) {
+                const btn = e.target;
+                const oldText = btn.innerText;
+                btn.innerText = '已复制！';
+                btn.style.color = "#4ade80";
+                setTimeout(() => {
+                    btn.innerText = oldText;
+                    btn.style.color = "";
+                }, 2000);
+            }
+        } catch (err) {
+            console.error('复制失败', err);
+        }
+        document.body.removeChild(textArea);
+    }
+
+    // ESC 键关闭弹窗
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeQRModal();
+        }
+    });
+</script>
 </Layout>

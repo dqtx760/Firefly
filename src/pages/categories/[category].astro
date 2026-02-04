@@ -1,0 +1,82 @@
+---
+import { getCollection } from "astro:content";
+import { getSortedPosts } from "@utils/content-utils";
+import MainGridLayout from "@layouts/MainGridLayout.astro";
+
+export async function getStaticPaths() {
+    const posts = await getCollection("posts", ({ data }) => {
+        return import.meta.env.PROD ? data.draft !== true : true;
+    });
+
+    // 获取所有唯一的分类
+    const categories = [...new Set(posts.map(post => post.data.category || "未分类"))];
+
+    return categories.map(category => ({
+        params: { category }
+    }));
+}
+
+const { category } = Astro.params;
+
+// 获取当前分类的文章
+const allPosts = await getSortedPosts();
+const categoryPosts = allPosts.filter(post => (post.data.category || "未分类") === category);
+
+const config = {
+    title: `${category} - 文章分类`,
+    description: `查看所有 ${category} 分类下的文章`
+};
+---
+
+<MainGridLayout title={config.title} description={config.description}>
+    <div class="card-base p-6 rounded-xl">
+        <div class="mb-6">
+            <h1 class="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-2">
+                📁 {category}
+            </h1>
+            <p class="text-neutral-600 dark:text-neutral-400">共 {categoryPosts.length} 篇文章</p>
+        </div>
+
+        {categoryPosts.length > 0 ? (
+            <div class="flex flex-col gap-4">
+                {categoryPosts.map((post) => (
+                    <a href={`/posts/${post.slug}/`} class="block group">
+                        <div class="p-4 rounded-lg border border-neutral-200 dark:border-neutral-800 hover:border-[var(--primary)] transition-all hover:bg-neutral-50 dark:hover:bg-neutral-900/50">
+                            <div class="flex items-start justify-between gap-4">
+                                <div class="flex-1">
+                                    <h2 class="text-lg font-bold text-neutral-800 dark:text-neutral-200 group-hover:text-[var(--primary)] transition-colors mb-1">
+                                        {post.data.title}
+                                    </h2>
+                                    <p class="text-sm text-neutral-600 dark:text-neutral-400 line-clamp-2">
+                                        {post.data.description}
+                                    </p>
+                                    <div class="flex items-center gap-3 mt-2 text-xs text-neutral-500 dark:text-neutral-500">
+                                        <span>{new Date(post.data.published).toLocaleDateString('zh-CN')}</span>
+                                        {post.data.tags && (
+                                            <span class="flex gap-1">
+                                                {post.data.tags.slice(0, 3).map(tag => (
+                                                    <span class="px-2 py-0.5 rounded-full bg-neutral-200 dark:bg-neutral-800">
+                                                        {tag}
+                                                    </span>
+                                                ))}
+                                            </span>
+                                        )}
+                                    </div>
+                                </div>
+                                {post.data.image && (
+                                    <div class="w-20 h-20 flex-shrink-0">
+                                        <img src={post.data.image} alt={post.data.title} class="w-full h-full object-cover rounded-lg" />
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+                    </a>
+                ))}
+            </div>
+        ) : (
+            <div class="text-center py-12 text-neutral-500 dark:text-neutral-400">
+                <p>暂无该分类的文章</p>
+            </div>
+        )}
+    </div>
+</MainGridLayout>
