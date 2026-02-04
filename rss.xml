@@ -279,6 +279,72 @@ $ARGUMENTS
 &lt;p&gt;如果返回正确的技能列表并创建了文件，说明配置成功！&lt;/p&gt;
 &lt;p&gt;以上.今天的分享就到这里。Obsidian + AI 的组合，确实让知识管理效率&lt;strong&gt;爆表&lt;/strong&gt;！&lt;/p&gt;
 &lt;p&gt;如果内容对你有所帮助，欢迎一键三连（点赞、在看、转发）。如果你有其他软件需求，也欢迎评论区留言，我们下次再见。&lt;/p&gt;
+</content:encoded></item><item><title>Typora + PicList + Gitee 图床完整配置教程</title><link>https://blog.acofork.com/posts/typora--piclist--gitee-%E5%9B%BE%E5%BA%8A%E5%AE%8C%E6%95%B4%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://blog.acofork.com/posts/typora--piclist--gitee-%E5%9B%BE%E5%BA%8A%E5%AE%8C%E6%95%B4%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;如果你经常写 Markdown 文档，那么 &lt;strong&gt;Typora&lt;/strong&gt; 是一款非常好用的编辑器。而在图片管理方面，推荐搭配免费的图床工具 &lt;strong&gt;PicList&lt;/strong&gt;，它支持一键上传图片到各类图床。我自己的方案是：&lt;strong&gt;Typora + PicList + Gitee&lt;/strong&gt;，写作体验非常流畅。&lt;/p&gt;
+&lt;h2&gt;Typora设置&lt;/h2&gt;
+&lt;p&gt;打开 &lt;strong&gt;Typora&lt;/strong&gt;，依次进入 &lt;code&gt;文件 → 偏好设置 → 图像&lt;/code&gt;，在上传服务中选择 &lt;strong&gt;PicList&lt;/strong&gt;。
+不过因为我们还没有安装 PicList，所以接下来需要先安装软件&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20250823223254969.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;安装PicList&lt;/h2&gt;
+&lt;p&gt;有两种方式可以安装：&lt;/p&gt;
+&lt;p&gt;1.&lt;strong&gt;命令行安装&lt;/strong&gt;（推荐）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;winget install Kuingsmile.PicList
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;2. 安装包安装&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;下载安装包后直接运行即可：
+下载地址：&lt;/p&gt;
+&lt;h2&gt;安装插件（Gitee 图床支持）&lt;/h2&gt;
+&lt;p&gt;PicList 默认没有内置 Gitee 图床，所以需要单独安装插件。打开 PicList，点击左侧 **插件，搜索 &lt;code&gt;gitee&lt;/code&gt; 并安装。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20250823222935347.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;图床设置&lt;/h2&gt;
+&lt;p&gt;为了让界面更简洁，建议把用不到的图床隐藏，只保留 Gitee。&lt;/p&gt;
+&lt;p&gt;操作方法：
+进入 &lt;strong&gt;设置 → 上传&lt;/strong&gt;，往下找到 &lt;strong&gt;“请选择显示在菜单的图床”&lt;/strong&gt;，取消勾选不需要的选项，只留下 Gitee。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20250825203516467.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;然后，点击 &lt;strong&gt;图床 → gitee → 配置&lt;/strong&gt;，会看到以下参数需要填写：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;配置名&lt;/strong&gt;：随便起个名字，方便区分&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;repo&lt;/strong&gt;：仓库名（如 &lt;code&gt;用户名/仓库名&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;branch&lt;/strong&gt;：&lt;code&gt;master&lt;/code&gt; 或主分支名&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;token&lt;/strong&gt;：Gitee 生成的私人令牌&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;path&lt;/strong&gt;：存放图片的目录（例如 &lt;code&gt;image&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;customPath&lt;/strong&gt;：可选，自定义路径规则&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20250825203600014.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;参数获取（以 Gitee 为例）&lt;/h2&gt;
+&lt;p&gt;打开 &lt;a href=&quot;https://gitee.com/&quot;&gt;Gitee 官网&lt;/a&gt; 注册并登录账号&lt;/p&gt;
+&lt;p&gt;点击右上角 &lt;strong&gt;+号 → 新建仓库&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;勾选 “设置模板” 与 “选择分支模型”&lt;/p&gt;
+&lt;p&gt;按照下图示例完成仓库创建&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://mmbiz.qpic.cn/mmbiz_png/gz2sdHyQbaa1ZQyJicMI8k2NbjBib4XlyyU2Q3Ple8gn264DP8CqEPGsPyALibHm3VPulNEUGDkNv0KiazPicmKbmLA/640?wx_fmt=png&amp;amp;from=appmsg&amp;amp;tp=wxpic&amp;amp;wxfrom=5&amp;amp;wx_lazy=1&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;之后点击个人头像，点设置-私人令牌，生成新令牌&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://mmbiz.qpic.cn/mmbiz_png/gz2sdHyQbaa1ZQyJicMI8k2NbjBib4XlyyJscbYZGRrw3unMhtcLjFuHf7vzJYZ5761IkGjUrRoP4Z8pTzBnWbfw/640?wx_fmt=png&amp;amp;from=appmsg&amp;amp;tp=wxpic&amp;amp;wxfrom=5&amp;amp;wx_lazy=1&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;这样，Typora + PicList + Gitee 的图床方案就配置好了，之后写 Markdown 时插入的图片会自动上传到 Gitee，并返回在线链接，非常省心。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20250826173904610.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+</content:encoded></item><item><title>MuMu模拟器</title><link>https://blog.acofork.com/posts/mumu%E6%A8%A1%E6%8B%9F%E5%99%A8/</link><guid isPermaLink="true">https://blog.acofork.com/posts/mumu%E6%A8%A1%E6%8B%9F%E5%99%A8/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;MuMu模拟器作为市面上兼容性和稳定性极佳的安卓模拟器，一直是玩手游、刷视频及跑脚本用户的首选。不过默认设置下它会有一些开屏广告、桌面广告，本文将手把手教你：**最新版 MuMu 5.9 下载、广告屏蔽、壁纸自定义、快捷技巧等。**建议收藏转发.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20251130144036028.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;一.软件下载&lt;/h2&gt;
+&lt;p&gt;MuMu模拟器官网：
+https://mumu.163.com/&lt;/p&gt;
+&lt;h2&gt;二.广告屏蔽&lt;/h2&gt;
+&lt;h3&gt;1.屏蔽开屏广告&lt;/h3&gt;
+&lt;p&gt;在系统 Host 文件中添加如下规则👇&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;114.115.116.117 mumu.nie.netease.com
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;2.删除桌面广告&lt;/h3&gt;
+&lt;p&gt;直接替换系统镜像文件:&lt;strong&gt;&lt;a href=&quot;https://pan.xunlei.com/x/VOfIXk-qqm-IpJmek_9iba1DA1?pwd=2wqi#&quot;&gt;点此下载&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;路径为：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.\nx_device\12.0\vms\MuMuPlayer-12.0-base\system.vdi
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;三.使用技巧&lt;/h2&gt;
+&lt;h3&gt;快捷启动&lt;/h3&gt;
+&lt;p&gt;在桌面建立启动直达图标,双击即可直接启动指定的模拟器实例&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20251130144131759.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;壁纸更换&lt;/h3&gt;
+&lt;p&gt;先打开电脑端共享文件夹,将你喜欢的壁纸拖进去&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20251130144134739.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;点击模拟器桌面的设置-壁纸，然后更换即可&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20251130144137855.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;经过这些配置之后，MuMu 就会变成一个干净优雅的虚拟空间，使用 MuMu 的过程中遇到任何问题，或者有更好用的优化技巧，欢迎在评论区交流分享。&lt;/p&gt;
 </content:encoded></item><item><title>蔡澜：以生活智慧诠释 &quot;过好这一生&quot; 的本质内涵</title><link>https://blog.acofork.com/posts/shengm/</link><guid isPermaLink="true">https://blog.acofork.com/posts/shengm/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;作为华语圈知名的生活家、作家与文化学者，蔡澜先生始终以通透豁达的人生态度影响着无数读者。在其随笔集《过好这一生》中，他结合疫情三年来的生活感悟，从字句哲思、饮食记忆到处世心态，为当代人提供了一份兼具烟火气与人生智慧的生活指南，传递出 &quot;真正活在当下&quot; 的生命哲学。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260204101447685.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;字句中的人生态度：删繁就简，活出本真&lt;/h2&gt;
@@ -305,7 +371,6 @@ $ARGUMENTS
 &lt;pre&gt;&lt;code&gt;---
 title: 文章标题
 published: 2026-02-04
-description: 文章摘要（可选，第一段自动提取）
 tags: [标签1, 标签2]
 category: 软件安利
 draft: false
@@ -315,6 +380,9 @@ draft: false
 &lt;h2&gt;自动封面、描述触发&lt;/h2&gt;
 &lt;p&gt;开始写文章，一般我会先写开头，（脚本会被自动用作文章描述）&lt;/p&gt;
 &lt;p&gt;过程中会插入图片（第一张图脚本会自动会用作文章封面）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cd D:\project2026\fuwari
+npm run add-frontmatter
+&lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;本地预览&lt;/h2&gt;
 &lt;p&gt;我写完会先在本次进行预览&lt;/p&gt;
 &lt;p&gt;桌面右边，运行&lt;/p&gt;
@@ -327,6 +395,42 @@ npm run dev
 &lt;p&gt;Edge0ne会自动检测到推送，从而触发自动构建，1分钟左右后，自动发布到我的博客。&lt;/p&gt;
 &lt;p&gt;以上就是我的博客发布工作流了&lt;/p&gt;
 &lt;p&gt;欢迎大家交流讨论，有问题评论区留言&lt;/p&gt;
+&lt;h2&gt;进阶操作&lt;/h2&gt;
+&lt;p&gt;写一个BAT,写完文章后点下&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📝 使用流程&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Typora 写文章&lt;/li&gt;
+&lt;li&gt;双击「启动博客并添加模板.bat」&lt;/li&gt;
+&lt;li&gt;填写文章的 frontmatter&lt;/li&gt;
+&lt;li&gt;刷新浏览器查看效果&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;p&gt;提示：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第一次运行会自动启动开发服务器（需要等5秒）&lt;/li&gt;
+&lt;li&gt;以后运行会自动检测并跳过&lt;/li&gt;
+&lt;li&gt;开发服务器会一直保持运行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;                                                                                      
+  1. 检查开发服务器
+    - 如果没运行 → 自动启动                                     
+    - 如果已运行 → 跳过
+  2. 添加 Frontmatter 模板
+    - 给没有模板的文章添加 frontmatter
+  3. 打开网站
+    - 自动打开 http://localhost:4321/
+&lt;/code&gt;&lt;/pre&gt;
+</content:encoded></item><item><title>闪电说：端侧AI语音输入法</title><link>https://blog.acofork.com/posts/%E9%97%AA%E7%94%B5%E8%AF%B4%E7%AB%AF%E4%BE%A7ai%E8%AF%AD%E9%9F%B3%E8%BE%93%E5%85%A5%E6%B3%95/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E9%97%AA%E7%94%B5%E8%AF%B4%E7%AB%AF%E4%BE%A7ai%E8%AF%AD%E9%9F%B3%E8%BE%93%E5%85%A5%E6%B3%95/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;闪电说是由武汉团队打造的&lt;strong&gt;国产 AI 语音输入法&lt;/strong&gt;，前身为代体输入法，以 “端侧本地处理” 为核心特色，实现毫秒级语音转文字体验。它打破传统云端语音输入的延迟与隐私痛点，通过本地 AI 引擎构建 “即说即显、思维同步” 的输入模式，兼容 Windows 和 macOS 全平台，是一款完全免费的系统级输入工具，被观猹平台评为 8.6 分高分产品。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260204111254949.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;上手指南&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;下载安装&lt;/strong&gt;：访问官网（https://shandianshuo.cn），根据系统选择 Windows 或 macOS 版本下载安装；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;权限配置&lt;/strong&gt;：授予麦克风权限，测试音频输入是否正常；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;个性化设置&lt;/strong&gt;：自定义激活快捷键、默认语言、输入模式等基础配置；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;即时使用&lt;/strong&gt;：在任意文本输入框按下快捷键，启动语音输入，转写文本自动优化呈现，支持后续编辑调整。&lt;/li&gt;
+&lt;/ol&gt;
 </content:encoded></item><item><title>零成本搭建在线图床</title><link>https://blog.acofork.com/posts/%E9%9B%B6%E6%88%90%E6%9C%AC%E6%90%AD%E5%BB%BA%E5%9C%A8%E7%BA%BF%E5%9B%BE%E5%BA%8A/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E9%9B%B6%E6%88%90%E6%9C%AC%E6%90%AD%E5%BB%BA%E5%9C%A8%E7%BA%BF%E5%9B%BE%E5%BA%8A/</guid><description>90%的博主都不知道！免费100G图床竟比付费的还稳定～ 写文章、做分享时，你是不是也总被图床问题折磨？免费的容量小得可怜，付费的一年要花几百块，更糟的是还常遇...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;p&gt;90%的博主都不知道！免费100G图床竟比付费的还稳定～ 写文章、做分享时，你是不是也总被图床问题折磨？免费的容量小得可怜，付费的一年要花几百块，更糟的是还常遇到文件失效、大文件传不了的坑，辛苦写的内容全白费！今天就分享一个零成本神方案——用GitHub 4k+星标的开源项目CloudFlare-ImgBed搭配HuggingFace，10分钟快速搭建100G免费图床，无需实名认证、支持大文件自动分片上传，不用额外买服务器，稳定又省心，自媒体、学生、打工人都能用～&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260122014636902.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;一、工具介绍：CloudFlare-ImgBed&lt;/h2&gt;
