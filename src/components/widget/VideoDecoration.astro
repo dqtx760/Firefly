@@ -19,13 +19,55 @@ const decodedSrc = decodeURI(src);
         loop
         muted
         playsinline
-        onloadstart="this.classList.add('loading')"
-        oncanplay="this.classList.remove('loading');this.classList.add('loaded')"
-        onerror="this.classList.add('error');setTimeout(()=>{this.src=this.src;},2000)"
+        data-video-src={decodedSrc}
+        class="video-decoration-video"
     >
         <source src={decodedSrc} type="video/mp4">
     </video>
 </div>
+
+<script data-swup-reload-script>
+    // 确保视频在 Swup 页面切换后正常加载
+    function initVideos() {
+        document.querySelectorAll('.video-decoration-video').forEach(video => {
+            // 重置视频状态
+            video.classList.remove('loading', 'loaded', 'error');
+
+            // 添加加载事件监听
+            video.addEventListener('loadstart', () => {
+                video.classList.add('loading');
+            }, { once: true });
+
+            video.addEventListener('canplay', () => {
+                video.classList.remove('loading');
+                video.classList.add('loaded');
+            }, { once: true });
+
+            video.addEventListener('error', () => {
+                video.classList.add('error');
+                // 2秒后重试
+                setTimeout(() => {
+                    const currentSrc = video.src;
+                    video.src = '';
+                    video.src = currentSrc;
+                    video.load();
+                }, 2000);
+            }, { once: true });
+
+            // 如果视频已加载，直接标记为已加载
+            if (video.readyState >= 2) {
+                video.classList.add('loaded');
+            }
+        });
+    }
+
+    // 初始化视频
+    initVideos();
+
+    // 监听 Swup 页面切换完成事件
+    document.addEventListener('swup:content:replace', initVideos);
+    document.addEventListener('swup:page:view', initVideos);
+</script>
 
 <style>
     .video-decoration {
