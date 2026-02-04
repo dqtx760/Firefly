@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git commit:*)",
+      "Bash(git push)",
+      "Bash(npm run organize-posts:*)",
+      "Bash(node:*)",
+      "Bash(git add:*)",
+      "Bash(curl -s \"https://raw.githubusercontent.com/dqtx760/Firefly/main/src/content/posts/AI新鲜玩法/aicode-prompt.md\")",
+      "Bash(curl:*)",
+      "Bash(findstr:*)",
+      "Bash(powershell:*)"
+    ]
+  }
+}
