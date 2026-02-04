@@ -7,7 +7,7 @@ const postsDir = 'src/content/posts';
 const frontmatterTemplate = `---
 title:
 published:
-tags:
+tags: []
 category:
 draft: false
 ---
