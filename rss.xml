@@ -320,13 +320,13 @@ $ARGUMENTS
 &lt;p&gt;&lt;img src=&quot;https://mmbiz.qpic.cn/mmbiz_png/gz2sdHyQbaa1ZQyJicMI8k2NbjBib4XlyyJscbYZGRrw3unMhtcLjFuHf7vzJYZ5761IkGjUrRoP4Z8pTzBnWbfw/640?wx_fmt=png&amp;amp;from=appmsg&amp;amp;tp=wxpic&amp;amp;wxfrom=5&amp;amp;wx_lazy=1&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;这样，Typora + PicList + Gitee 的图床方案就配置好了，之后写 Markdown 时插入的图片会自动上传到 Gitee，并返回在线链接，非常省心。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20250826173904610.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-</content:encoded></item><item><title>干货教程：我的博客发布工作流</title><link>https://blog.acofork.com/posts/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/gongzuoliu/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/gongzuoliu/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天我想通过这篇文章来跟大家谈一谈，关于我的博客是如何发布自动更新的，我的博客没有服务器，我只有一个域名通过 GitHub 进行了托管，下面我分享一下我的工作流！&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260204103206520.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+</content:encoded></item><item><title>干货教程：我的博客发布工作流</title><link>https://blog.acofork.com/posts/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/gongzuoliu/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/gongzuoliu/</guid><description>分享我的无服务器博客发布流程：使用 GitHub 托管 + EdgeOne 自动部署，配合 Typora 和脚本实现高效的文章发布工作流。</description><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;../../assets/images/gitee-typora-workflow.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;今天想跟大家分享一下我的博客发布工作流。我的博客没有服务器，只有一个域名通过 GitHub 进行托管，配合 EdgeOne 实现自动构建部署。整个过程非常高效，下面就来详细介绍！&lt;/p&gt;
 &lt;h2&gt;创建文章&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;点击 Typora 的&quot;文件&quot; → &quot;新建文本&quot;（或按 Ctrl+N），文件名可最好是英文&lt;/li&gt;
-&lt;li&gt;微信输入法常用语推送Frontmatter 模板&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h3&gt;1. 新建 Markdown 文件&lt;/h3&gt;
+&lt;p&gt;打开 Typora，点击「文件」→「新建文本」（或按 &lt;code&gt;Ctrl+N&lt;/code&gt;），文件名建议使用英文。&lt;/p&gt;
+&lt;h3&gt;2. 添加 Frontmatter&lt;/h3&gt;
+&lt;p&gt;在文章开头添加 Frontmatter 模板：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;---
 title: 文章标题
 published: 2026-02-04
@@ -335,52 +335,61 @@ category: 软件安利
 draft: false
 ---
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;这里面修改下标题、时间、分类&lt;/p&gt;
-&lt;h2&gt;自动封面、描述触发&lt;/h2&gt;
-&lt;p&gt;开始写文章，一般我会先写开头，（脚本会被自动用作文章描述）&lt;/p&gt;
-&lt;p&gt;过程中会插入图片（第一张图脚本会自动会用作文章封面）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;提示：&lt;/strong&gt; 可以设置微信输入法的常用语，快速插入这个模板，省时省力。&lt;/p&gt;
+&lt;p&gt;根据需要修改以下字段：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;title&lt;/code&gt;：文章标题&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;published&lt;/code&gt;：发布日期（格式：&lt;code&gt;YYYY-MM-DD&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tags&lt;/code&gt;：文章标签&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;category&lt;/code&gt;：文章分类&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;draft&lt;/code&gt;：是否为草稿（&lt;code&gt;true&lt;/code&gt;/&lt;code&gt;false&lt;/code&gt;）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;自动封面与描述&lt;/h2&gt;
+&lt;p&gt;博客脚本会自动处理封面图和描述：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;封面图&lt;/strong&gt;：文章中插入的第一张图片会自动作为文章封面&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;描述&lt;/strong&gt;：文章开头的第一段文字会自动作为文章描述&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;写文章时，先写好开头段落，然后插入第一张图片即可。&lt;/p&gt;
+&lt;h2&gt;运行脚本&lt;/h2&gt;
+&lt;p&gt;写完文章后，运行以下命令给文章添加 frontmatter：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;cd D:\project2026\fuwari
 npm run add-frontmatter
 &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这个脚本会自动扫描所有文章，给没有 frontmatter 的文章添加模板。&lt;/p&gt;
 &lt;h2&gt;本地预览&lt;/h2&gt;
-&lt;p&gt;我写完会先在本次进行预览&lt;/p&gt;
-&lt;p&gt;桌面右边，运行&lt;/p&gt;
+&lt;p&gt;写完文章后，先在本地预览效果：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;cd D:\project2026\fuwari
 npm run dev
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;访问 http://localhost:4321/预览&lt;/p&gt;
-&lt;h2&gt;提交文章&lt;/h2&gt;
-&lt;p&gt;预览感觉没有问题，通过GitHub Desktop推送github即可&lt;/p&gt;
-&lt;p&gt;Edge0ne会自动检测到推送，从而触发自动构建，1分钟左右后，自动发布到我的博客。&lt;/p&gt;
-&lt;p&gt;以上就是我的博客发布工作流了&lt;/p&gt;
-&lt;p&gt;欢迎大家交流讨论，有问题评论区留言&lt;/p&gt;
-&lt;h2&gt;进阶操作&lt;/h2&gt;
-&lt;p&gt;写一个BAT,写完文章后点下&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;📝 使用流程&lt;/p&gt;
+&lt;p&gt;然后访问 &lt;a href=&quot;http://localhost:4321/&quot;&gt;http://localhost:4321/&lt;/a&gt; 查看效果。&lt;/p&gt;
+&lt;h2&gt;发布上线&lt;/h2&gt;
+&lt;p&gt;预览确认无误后，通过 GitHub Desktop 推送到 GitHub。&lt;/p&gt;
+&lt;p&gt;EdgeOne 会自动检测到推送，触发自动构建。大约 1 分钟后，文章就会自动发布到博客了！&lt;/p&gt;
+&lt;h2&gt;进阶：一键启动脚本&lt;/h2&gt;
+&lt;p&gt;为了更高效，我写了一个 BAT 脚本，写完文章后双击即可完成所有操作。&lt;/p&gt;
+&lt;h3&gt;使用流程&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;Typora 写文章&lt;/li&gt;
 &lt;li&gt;双击「启动博客并添加模板.bat」&lt;/li&gt;
 &lt;li&gt;填写文章的 frontmatter&lt;/li&gt;
 &lt;li&gt;刷新浏览器查看效果&lt;/li&gt;
 &lt;/ol&gt;
-&lt;hr /&gt;
-&lt;p&gt;提示：&lt;/p&gt;
+&lt;h3&gt;脚本功能&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;第一次运行会自动启动开发服务器（需要等5秒）&lt;/li&gt;
-&lt;li&gt;以后运行会自动检测并跳过&lt;/li&gt;
-&lt;li&gt;开发服务器会一直保持运行&lt;/li&gt;
+&lt;li&gt;✅ 自动检查开发服务器状态（未运行则自动启动）&lt;/li&gt;
+&lt;li&gt;✅ 自动给文章添加 frontmatter 模板&lt;/li&gt;
+&lt;li&gt;✅ 自动打开浏览器预览&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;pre&gt;&lt;code&gt;                                                                                      
-  1. 检查开发服务器
-    - 如果没运行 → 自动启动                                     
-    - 如果已运行 → 跳过
-  2. 添加 Frontmatter 模板
-    - 给没有模板的文章添加 frontmatter
-  3. 打开网站
-    - 自动打开 http://localhost:4321/
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;提示：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第一次运行会自动启动开发服务器（需要等 5 秒）&lt;/li&gt;
+&lt;li&gt;以后运行会自动检测服务器状态，已运行则跳过&lt;/li&gt;
+&lt;li&gt;开发服务器会一直保持运行，无需重复启动&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;p&gt;以上就是我的博客发布工作流了。虽然博客没有服务器，但通过 GitHub + EdgeOne 的组合，配合一些小脚本，依然可以实现高效的自动化发布。&lt;/p&gt;
+&lt;p&gt;欢迎大家交流讨论，有问题评论区留言！&lt;/p&gt;
 </content:encoded></item><item><title>MuMu模拟器</title><link>https://blog.acofork.com/posts/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%88%A9/mumu%E6%A8%A1%E6%8B%9F%E5%99%A8/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%88%A9/mumu%E6%A8%A1%E6%8B%9F%E5%99%A8/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;MuMu模拟器作为市面上兼容性和稳定性极佳的安卓模拟器，一直是玩手游、刷视频及跑脚本用户的首选。不过默认设置下它会有一些开屏广告、桌面广告，本文将手把手教你：**最新版 MuMu 5.9 下载、广告屏蔽、壁纸自定义、快捷技巧等。**建议收藏转发.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20251130144036028.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;一.软件下载&lt;/h2&gt;
