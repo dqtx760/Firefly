@@ -1,0 +1,74 @@
+---
+/**
+ * 文章分类组件
+ * 显示所有分类及其文章数量
+ */
+import { getCollection } from "astro:content";
+
+// 获取所有文章并统计分类
+const allPosts = await getCollection("posts", ({ data }) => {
+    return import.meta.env.PROD ? data.draft !== true : true;
+});
+
+// 统计每个分类的文章数量
+const categoryCount = new Map<string, number>();
+for (const post of allPosts) {
+    const category = post.data.category || "未分类";
+    categoryCount.set(category, (categoryCount.get(category) || 0) + 1);
+}
+
+// 转换为数组并按文章数量排序
+const categories = Array.from(categoryCount.entries())
+    .map(([name, count]) => ({ name, count }))
+    .sort((a, b) => b.count - a.count);
+---
+
+<div class="category-list">
+    <div class="category-header">
+        <div class="flex items-center justify-center gap-2 mb-3">
+            <div class="w-8 h-px border-t border-dashed border-[var(--primary)]/50"></div>
+            <div class="relative w-5 h-5 rounded-lg bg-gradient-to-br from-[var(--primary)] to-[var(--primary)]/70 flex items-center justify-center overflow-hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 text-white dark:text-black/70 relative z-10">
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+                <div class="absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent"></div>
+            </div>
+            <span class="font-bold text-neutral-800 dark:text-neutral-200">文章分类</span>
+            <div class="w-8 h-px border-t border-dashed border-[var(--primary)]/50"></div>
+        </div>
+    </div>
+
+    <div class="flex flex-col gap-2">
+        {categories.map((category) => (
+            <a href={`/categories/${category.name}/`} class="category-item group">
+                <div class="flex items-center justify-between p-2 rounded-lg bg-[var(--btn-regular-bg)] hover:bg-[var(--btn-regular-bg-hover)] transition-all active:scale-95">
+                    <span class="text-neutral-700 dark:text-neutral-300 text-sm group-hover:text-[var(--primary)] transition-colors">
+                        {category.name}
+                    </span>
+                    <span class="text-neutral-500 dark:text-neutral-500 text-xs bg-neutral-200 dark:bg-neutral-800 px-2 py-0.5 rounded-full">
+                        {category.count}
+                    </span>
+                </div>
+            </a>
+        ))}
+    </div>
+</div>
+
+<style>
+    .category-list {
+        padding: 0.5rem 0;
+    }
+
+    .category-item {
+        text-decoration: none;
+        display: block;
+    }
+
+    .category-item:hover .category-count {
+        background: var(--primary);
+        color: white;
+    }
+</style>

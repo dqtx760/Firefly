@@ -4,9 +4,9 @@ published: 2025-06-17
 description: '如今，大语言模型百花齐放，有开山鼻祖OpenAI的ChatGPT系列，也有Anthropic开发的代码神器Claude系列。但是，哪怕模型再先进再聪明，如果用它的人使用的方法不对，那再好的模型用起来也是笨笨的'
 image: ../assets/images/65f8862e-2a66-4acc-8fef-c8b3dc7f5c29.webp
 tags: [AI, Prompt]
-category: '教程'
-draft: false 
+draft: false
 lang: ''
+category: AI新鲜玩法
 ---
 > 视频链接： https://www.bilibili.com/video/BV1jw38z9EEn/
 # 正确的引导方法

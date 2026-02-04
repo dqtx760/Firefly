@@ -18,10 +18,10 @@ export const noticeConfig: NoticeConfig = {
 };
 
 export const siteConfig: SiteConfig = {
-	title: "AcoFork Blog",
+	title: "Derek Zhao Blog",
 	subtitle: "技术分享与实践",
 	description:
-		"分享网络技术、服务器部署、内网穿透、静态网站搭建、CDN优化、容器化部署等技术教程与实践经验的个人技术博客，专注于云原生、无服务器架构和前后端开发，作者为afoim/二叉树树",
+		"分享网络技术、服务器部署、内网穿透、静态网站搭建、CDN优化、容器化部署等技术教程与实践经验的个人技术博客，专注于云原生、无服务器架构和前后端开发，作者为Derek Zhao",
 
 	keywords: [],
 	lang: "zh_CN", // 'en', 'zh_CN', 'zh_TW', 'ja', 'ko', 'es', 'th'
@@ -89,53 +89,53 @@ export const navBarConfig: NavBarConfig = {
 			external: false, // Show an external link icon and will open in a new tab
 		},
 		{
-			name: "统计",
-			url: "https://umami.acofork.com/share/CdkXbGgZr6ECKOyK", // Internal links should not include the base path, as it is automatically added
+			name: "电视喵",
+			url: "https://tv.dqtx.cc/", // Internal links should not include the base path, as it is automatically added
 			external: true, // Show an external link icon and will open in a new tab
 		},
 		{
-			name: "监控",
-			url: "https://status.acofork.com", // Internal links should not include the base path, as it is automatically added
+			name: "工坊",
+			url: "https://app.dqtx.cc/", // Internal links should not include the base path, as it is automatically added
 			external: true, // Show an external link icon and will open in a new tab
 		},
 		{
-			name: "论坛",
-			url: "https://i.2x.nz", // Internal links should not include the base path, as it is automatically added
+			name: "远程",
+			url: "https://www.742112.xyz/", // Internal links should not include the base path, as it is automatically added
 			external: true, // Show an external link icon and will open in a new tab
 		},
 	],
 };
 
 export const profileConfig: ProfileConfig = {
-	avatar: "https://q2.qlogo.cn/headimg_dl?dst_uin=2726730791&spec=0", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
-	name: "二叉树树",
-	bio: "Protect What You Love.",
+	avatar: "/avatar.jpg", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+	name: "大强同学",
+	bio: "人间忽晚，山河已秋。",
 	links: [
 		{
-			name: "QQ",
-			icon: "qq", // Local icon
-			url: "https://qm.qq.com/q/FWqOHlwL2m",
+			name: "微信",
+			icon: "qq", // Local icon (已改为微信样式)
+			url: "javascript:;", // 占位链接
 		},
 		{
 			name: "Telegram",
 			icon: "telegram", // Local icon
-			url: "https://t.me/+_07DERp7k1ljYTc1",
+			url: "https://t.me/+Vk17JyylJkdjMmU1",
 		},
 		{
 			name: "Bilibli",
 			icon: "bilibili", // Local icon
-			url: "https://space.bilibili.com/325903362",
+			url: "https://space.bilibili.com/491358682/upload/video",
 		},
 		{
 			name: "GitHub",
 			icon: "github", // Local icon
-			url: "https://github.com/afoim",
+			url: "https://github.com/dqtx760",
 		}
 	],
 };
 
 export const licenseConfig: LicenseConfig = {
-	enable: true,
+	enable: false,
 	name: "CC BY-NC-SA 4.0",
 	url: "https://creativecommons.org/licenses/by-nc-sa/4.0/",
 };
@@ -147,7 +147,7 @@ export const imageFallbackConfig: ImageFallbackConfig = {
 };
 
 export const umamiConfig: UmamiConfig = {
-	enable: true,
+	enable: false,
 	baseUrl: "https://umami.acofork.com",
 	shareId: "CdkXbGgZr6ECKOyK",
 	timezone: "Asia/Shanghai",
@@ -159,7 +159,7 @@ export const expressiveCodeConfig: ExpressiveCodeConfig = {
 
 export const gitHubEditConfig: GitHubEditConfig = {
 	enable: true,
-	baseUrl: "https://github.com/afoim/fuwari/blob/main/src/content/posts",
+	baseUrl: "https://github.com/dqtx760/Firefly/blob/main/src/content/posts",
 };
 
 // todoConfig removed from here
