@@ -17,7 +17,10 @@ function extractFirstImageFromMarkdown(markdown: string): string | undefined {
     if (imgMatch) {
         // 提取 URL，可能是 ![alt](url) 或 ![alt](url "title")
         const url = imgMatch[1].split(/\s+/)[0];
-        return url;
+        // 验证 URL 格式：必须是 http://, https://, 或 / 开头
+        if (url.match(/^https?:\/\//) || url.match(/^\//)) {
+            return url;
+        }
     }
     return undefined;
 }
