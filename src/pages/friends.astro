@@ -10,6 +10,21 @@ const friends = Object.values(
 		import: "default",
 	}),
 );
+
+// 按分类分组友链
+const friendsByCategory = new Map<string, Friend[]>();
+for (const friend of friends) {
+	const category = friend.category || "未分类";
+	if (!friendsByCategory.has(category)) {
+		friendsByCategory.set(category, []);
+	}
+	friendsByCategory.get(category)!.push(friend);
+}
+
+// 按分类名称排序
+const sortedCategories = Array.from(friendsByCategory.entries()).sort((a, b) =>
+	a[0].localeCompare(b[0], "zh-CN")
+);
 ---
 
 <MainGridLayout title="友链">
@@ -22,28 +37,55 @@ const friends = Object.values(
         </div>
 
         <!-- 申请友链 -->
-            <p class="text-sm text-black/60 dark:text-white/60 mb-4">
+        <p class="text-sm text-black/60 dark:text-white/60 mb-6">
             如果您也想加入友链名单，<a target="_blank" href="https://github.com/dqtx760/Firefly/tree/main/src/data/friends" class="transition link text-[var(--primary)] font-medium underline">请点击这里提交</a>
-            </p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {friends.map((friend) => (
-                <a href={friend.url} target="_blank" class="friend-card">
-                    <div class="flex items-center gap-2">
-                        <div class="relative w-5 h-5 rounded overflow-hidden" style={`--theme-hue: ${siteConfig.themeColor.hue}`}>
-                            <img src={friend.avatar} loading="lazy" class="w-full h-full object-cover transition-opacity duration-500" alt={`${friend.name}的头像`} />
+        </p>
+
+        <!-- 按分类显示友链 -->
+        <div class="space-y-8">
+            {sortedCategories.map(([category, categoryFriends]) => (
+                <div class="category-section">
+                    <div class="category-header">
+                        <div class="flex items-center justify-center gap-2 mb-4">
+                            <div class="w-8 h-px border-t border-dashed border-[var(--primary)]/50"></div>
+                            <div class="relative w-5 h-5 rounded-lg bg-gradient-to-br from-[var(--primary)] to-[var(--primary)]/70 flex items-center justify-center overflow-hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 text-white dark:text-black/70 relative z-10">
+                                    <rect x="3" y="3" width="7" height="7"></rect>
+                                    <rect x="14" y="3" width="7" height="7"></rect>
+                                    <rect x="14" y="14" width="7" height="7"></rect>
+                                    <rect x="3" y="14" width="7" height="7"></rect>
+                                </svg>
+                                <div class="absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent"></div>
+                            </div>
+                            <span class="font-bold" style="color: var(--primary)">{category}</span>
+                            <div class="w-8 h-px border-t border-dashed border-[var(--primary)]/50"></div>
                         </div>
-                        <div class="font-bold text-black dark:text-white">{friend.name}</div>
                     </div>
-                    <div class="text-sm text-black/50 dark:text-white/50">{friend.description}</div>
-                </a>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {categoryFriends.map((friend) => (
+                            <a href={friend.url} target="_blank" class="friend-card">
+                                <div class="flex items-center gap-2">
+                                    <div class="relative w-5 h-5 rounded overflow-hidden" style={`--theme-hue: ${siteConfig.themeColor.hue}`}>
+                                        <img src={friend.avatar} loading="lazy" class="w-full h-full object-cover transition-opacity duration-500" alt={`${friend.name}的头像`} />
+                                    </div>
+                                    <div class="font-bold text-black dark:text-white">{friend.name}</div>
+                                </div>
+                                <div class="text-sm text-black/50 dark:text-white/50">{friend.description}</div>
+                            </a>
+                        ))}
+                    </div>
+                </div>
             ))}
         </div>
-
-
-
+    </div>
 </MainGridLayout>
 
 <style>
+    .category-section {
+        margin-bottom: 1rem;
+    }
+
     .friend-card {
         @apply flex flex-col gap-1 p-4 rounded-lg bg-[var(--card-bg)] border border-black/10 dark:border-white/10 hover:border-black/20 dark:hover:border-white/20 hover:bg-black/5 dark:hover:bg-white/5;
         transition-property: background-color, border-color, scale;
@@ -51,22 +93,22 @@ const friends = Object.values(
         transition-duration: 0.15s;
         transform: translateZ(0);
     }
-    
+
     .friend-card:active {
         scale: .98;
         background-color: var(--btn-regular-bg-active);
     }
-    
+
     .friend-card:hover {
         background-color: var(--btn-regular-bg-hover);
     }
-    
+
     .friend-card:hover .font-bold {
         color: var(--btn-content);
     }
-    
+
     .friend-card:hover .text-sm {
-    @apply text-gray-700 dark:text-white;
+        @apply text-gray-700 dark:text-white;
     }
 
     .friend-card .font-bold,
