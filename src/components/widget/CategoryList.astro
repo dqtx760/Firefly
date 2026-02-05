@@ -17,10 +17,26 @@ for (const post of allPosts) {
     categoryCount.set(category, (categoryCount.get(category) || 0) + 1);
 }
 
-// 转换为数组并按文章数量排序
+// 自定义分类排序顺序
+const categoryOrder = ["软件安利", "技术教程", "AI新鲜玩法"];
+
+// 转换为数组并按自定义顺序排序，不在列表中的排在后面
 const categories = Array.from(categoryCount.entries())
     .map(([name, count]) => ({ name, count }))
-    .sort((a, b) => b.count - a.count);
+    .sort((a, b) => {
+        const aIndex = categoryOrder.indexOf(a.name);
+        const bIndex = categoryOrder.indexOf(b.name);
+        // 都在自定义列表中，按顺序排
+        if (aIndex !== -1 && bIndex !== -1) {
+            return aIndex - bIndex;
+        }
+        // a在列表中，a排前面
+        if (aIndex !== -1) return -1;
+        // b在列表中，b排前面
+        if (bIndex !== -1) return 1;
+        // 都不在列表中，按数量排序
+        return b.count - a.count;
+    });
 
 // 定义分类的对齐方式：左对齐或居中
 const categoryAlign = new Map<string, "left" | "center">();
@@ -147,12 +163,19 @@ categoryAlign.set("技术教程", "center");
         gap: 8px;
     }
 
+    /* 左对齐：名称和数字都在左侧 */
     .category-card-left {
         justify-content: flex-start;
     }
 
+    /* 居中对齐：名称居中，数字在右侧 */
     .category-card-center {
-        justify-content: center;
+        justify-content: space-between;
+    }
+
+    .category-card-center .category-name {
+        flex: 1;
+        text-align: center;
     }
 
     .category-name {
@@ -181,6 +204,7 @@ categoryAlign.set("技术教程", "center");
         transition: all 0.3s ease;
         min-width: 24px;
         text-align: center;
+        flex-shrink: 0;
     }
 
     .dark .category-count {
