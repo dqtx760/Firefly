@@ -509,23 +509,7 @@ const setup = () => {
 			navbar.classList.add('navbar-hidden')
 		}
 	})
-	window.swup.hooks.on('content:replace', () => {
-		initCustomScrollbar();
-		// Re-trigger animations after Swup content replacement
-		requestAnimationFrame(() => {
-			const animatedElements = document.querySelectorAll('.onload-animation');
-			animatedElements.forEach((el) => {
-				// Remove and re-add animation class to trigger it
-				el.style.animation = 'none';
-				el.style.opacity = '0';
-				// Force reflow
-				void el.offsetWidth;
-				// Re-apply animation
-				el.style.animation = '';
-				el.style.opacity = '';
-			});
-		});
-	})
+	window.swup.hooks.on('content:replace', initCustomScrollbar)
 	window.swup.hooks.on('visit:start', (visit: {to: {url: string}}) => {
 		// change banner height immediately when a link is clicked
 		const bodyElement = document.querySelector('body')
