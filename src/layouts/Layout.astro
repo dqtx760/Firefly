@@ -509,7 +509,16 @@ const setup = () => {
 			navbar.classList.add('navbar-hidden')
 		}
 	})
-	window.swup.hooks.on('content:replace', initCustomScrollbar)
+	window.swup.hooks.on('content:replace', () => {
+		initCustomScrollbar();
+		// Re-trigger onload animations after Swup content replacement
+		const animatedElements = document.querySelectorAll('.onload-animation');
+		animatedElements.forEach((el) => {
+			el.style.animation = 'none';
+			el.offsetHeight; // Trigger reflow
+			el.style.animation = '300ms fade-in-up forwards';
+		});
+	})
 	window.swup.hooks.on('visit:start', (visit: {to: {url: string}}) => {
 		// change banner height immediately when a link is clicked
 		const bodyElement = document.querySelector('body')
