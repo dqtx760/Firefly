@@ -50,21 +50,9 @@ const config = {
                 {categoryPosts.map((post) => (
                     <a href={`/posts/${post.slug}/`} class="block group">
                         <div class="p-4 rounded-lg border border-neutral-200 dark:border-neutral-800 hover:border-[var(--primary)] transition-all hover:bg-neutral-50 dark:hover:bg-neutral-900/50">
-                            <h2 class="text-lg font-bold text-neutral-800 dark:text-neutral-200 group-hover:text-[var(--primary)] transition-colors mb-2">
+                            <h2 class="text-lg font-bold text-neutral-800 dark:text-neutral-200 group-hover:text-[var(--primary)] transition-colors">
                                 {post.data.title}
                             </h2>
-                            <div class="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-500">
-                                <span>{new Date(post.data.published).toLocaleDateString('zh-CN')}</span>
-                                {post.data.tags && (
-                                    <span class="flex gap-1">
-                                        {post.data.tags.slice(0, 3).map(tag => (
-                                            <span class="px-2 py-0.5 rounded-full bg-neutral-200 dark:bg-neutral-800">
-                                                {tag}
-                                            </span>
-                                        ))}
-                                    </span>
-                                )}
-                            </div>
                         </div>
                     </a>
                 ))}
