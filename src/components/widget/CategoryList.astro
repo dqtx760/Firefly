@@ -100,7 +100,7 @@ categoryAlign.set("技术教程", "center");
     .hacker-icon {
         font-size: 14px;
         font-weight: 700;
-        color: #A8C398;
+        color: var(--primary);
         font-family: 'Courier New', 'Consolas', monospace;
         letter-spacing: -1px;
     }
@@ -108,7 +108,7 @@ categoryAlign.set("技术教程", "center");
     .decoration-title {
         font-size: 14px;
         font-weight: 600;
-        color: #A8C398;
+        color: var(--primary);
         white-space: nowrap;
     }
 
@@ -147,7 +147,7 @@ categoryAlign.set("技术教程", "center");
         top: 0;
         bottom: 0;
         width: 3px;
-        background: linear-gradient(180deg, #A8C398, #A8C398 / 0.5);
+        background: linear-gradient(180deg, var(--primary), var(--primary) / 0.5);
         opacity: 0;
         transition: opacity 0.3s ease;
     }
@@ -168,14 +168,15 @@ categoryAlign.set("技术教程", "center");
         justify-content: flex-start;
     }
 
-    /* 居中对齐：名称居中，数字在右侧 */
+    /* 居中对齐：名称右对齐（首字对齐文章分类），数字在右侧 */
     .category-card-center {
         justify-content: space-between;
     }
 
     .category-card-center .category-name {
         flex: 1;
-        text-align: center;
+        text-align: left;
+        padding-left: 24px;
     }
 
     .category-name {
@@ -190,7 +191,7 @@ categoryAlign.set("技术教程", "center");
     }
 
     .category-card:hover .category-name {
-        color: #A8C398;
+        color: var(--primary);
     }
 
     .category-count {
@@ -213,9 +214,9 @@ categoryAlign.set("技术教程", "center");
     }
 
     .category-card:hover .category-count {
-        background: rgb(168, 195, 152);
+        background: var(--primary);
         color: rgb(20, 20, 20);
-        border-color: #A8C398;
+        border-color: var(--primary);
     }
 
     @keyframes slideIn {
