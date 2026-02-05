@@ -2,7 +2,9 @@
 import { siteConfig } from "@/config";
 import MainGridLayout from "@layouts/MainGridLayout.astro";
 import { Icon } from "astro-icon/components";
-const sponsors = (await import('../../data/sponsors.json')).default;
+import sponsorsData from '../../data/sponsors.json';
+
+const sponsors = sponsorsData;
 
 <MainGridLayout title="赞助支持">
     <div class="card-base p-6 md:p-8">
