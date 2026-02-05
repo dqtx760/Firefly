@@ -2,15 +2,17 @@
 import { siteConfig } from "@/config";
 import MainGridLayout from "@layouts/MainGridLayout.astro";
 import { Icon } from "astro-icon/components";
-import sponsorsData from '../../data/sponsors.json';
 
-const sponsors = sponsorsData;
+// Import all sponsors
+const sponsorFiles = import.meta.glob('../../data/sponsors/*.json', { eager: true });
+const sponsors = Object.values(sponsorFiles).map(m => m.default).sort((a, b) => new Date(b.date) - new Date(a.date));
+---
 
 <MainGridLayout title="赞助支持">
     <div class="card-base p-6 md:p-8">
         <div class="flex items-center gap-2 mb-6">
             <div class="h-8 w-8 rounded-lg bg-[var(--primary)] flex items-center justify-center text-white dark:text-black/70">
-                <Icon name="material-symbols:favorite" class="text-[1.5rem]">
+                <Icon name="material-symbols:favorite" class="text-[1.5rem]" />
             </div>
             <h1 class="text-2xl font-bold text-black dark:text-white">赞助支持</h1>
         </div>
@@ -29,7 +31,7 @@ const sponsors = sponsorsData;
             <div class="donate-card">
                 <div class="flex items-center gap-3 mb-4">
                     <div class="h-10 w-10 rounded-lg bg-blue-500 flex items-center justify-center">
-                        <Icon name="simple-icons:alipay" class="text-[1.5rem] text-white">
+                        <Icon name="simple-icons:alipay" class="text-[1.5rem] text-white" />
                     </div>
                     <div>
                         <h3 class="text-lg font-bold text-black dark:text-white">支付宝</h3>
@@ -47,7 +49,7 @@ const sponsors = sponsorsData;
             <div class="donate-card">
                 <div class="flex items-center gap-3 mb-4">
                     <div class="h-10 w-10 rounded-lg bg-green-500 flex items-center justify-center">
-                        <Icon name="simple-icons:wechat" class="text-[1.5rem] text-white">
+                        <Icon name="simple-icons:wechat" class="text-[1.5rem] text-white" />
                     </div>
                     <div>
                         <h3 class="text-lg font-bold text-black dark:text-white">微信支付</h3>
@@ -85,7 +87,7 @@ const sponsors = sponsorsData;
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div class="support-card">
                     <div class="flex items-center gap-2 mb-2">
-                        <Icon name="material-symbols:share" class="text-[1.2rem] text-[var(--primary)]">
+                        <Icon name="material-symbols:share" class="text-[1.2rem] text-[var(--primary)]" />
                         <span class="font-semibold text-black dark:text-white">分享推荐</span>
                     </div>
                     <p class="text-sm text-black/60 dark:text-white/60">
@@ -95,7 +97,7 @@ const sponsors = sponsorsData;
 
                 <div class="support-card">
                     <div class="flex items-center gap-2 mb-2">
-                        <Icon name="material-symbols:comment" class="text-[1.2rem] text-[var(--primary)]">
+                        <Icon name="material-symbols:comment" class="text-[1.2rem] text-[var(--primary)]" />
                         <span class="font-semibold text-black dark:text-white">留言互动</span>
                     </div>
                     <p class="text-sm text-black/60 dark:text-white/60">
@@ -105,7 +107,7 @@ const sponsors = sponsorsData;
 
                 <div class="support-card">
                     <div class="flex items-center gap-2 mb-2">
-                        <Icon name="material-symbols:star" class="text-[1.2rem] text-[var(--primary)]">
+                        <Icon name="material-symbols:star" class="text-[1.2rem] text-[var(--primary)]" />
                         <span class="font-semibold text-black dark:text-white">关注订阅</span>
                     </div>
                     <p class="text-sm text-black/60 dark:text-white/60">
