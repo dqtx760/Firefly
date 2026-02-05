@@ -50,31 +50,19 @@ const config = {
                 {categoryPosts.map((post) => (
                     <a href={`/posts/${post.slug}/`} class="block group">
                         <div class="p-4 rounded-lg border border-neutral-200 dark:border-neutral-800 hover:border-[var(--primary)] transition-all hover:bg-neutral-50 dark:hover:bg-neutral-900/50">
-                            <div class="flex items-start justify-between gap-4">
-                                <div class="flex-1">
-                                    <h2 class="text-lg font-bold text-neutral-800 dark:text-neutral-200 group-hover:text-[var(--primary)] transition-colors mb-1">
-                                        {post.data.title}
-                                    </h2>
-                                    <p class="text-sm text-neutral-600 dark:text-neutral-400 line-clamp-2">
-                                        {post.data.description}
-                                    </p>
-                                    <div class="flex items-center gap-3 mt-2 text-xs text-neutral-500 dark:text-neutral-500">
-                                        <span>{new Date(post.data.published).toLocaleDateString('zh-CN')}</span>
-                                        {post.data.tags && (
-                                            <span class="flex gap-1">
-                                                {post.data.tags.slice(0, 3).map(tag => (
-                                                    <span class="px-2 py-0.5 rounded-full bg-neutral-200 dark:bg-neutral-800">
-                                                        {tag}
-                                                    </span>
-                                                ))}
+                            <h2 class="text-lg font-bold text-neutral-800 dark:text-neutral-200 group-hover:text-[var(--primary)] transition-colors mb-2">
+                                {post.data.title}
+                            </h2>
+                            <div class="flex items-center gap-3 text-xs text-neutral-500 dark:text-neutral-500">
+                                <span>{new Date(post.data.published).toLocaleDateString('zh-CN')}</span>
+                                {post.data.tags && (
+                                    <span class="flex gap-1">
+                                        {post.data.tags.slice(0, 3).map(tag => (
+                                            <span class="px-2 py-0.5 rounded-full bg-neutral-200 dark:bg-neutral-800">
+                                                {tag}
                                             </span>
-                                        )}
-                                    </div>
-                                </div>
-                                {post.data.image && (
-                                    <div class="w-20 h-20 flex-shrink-0">
-                                        <img src={post.data.image} alt={post.data.title} class="w-full h-full object-cover rounded-lg" />
-                                    </div>
+                                        ))}
+                                    </span>
                                 )}
                             </div>
                         </div>
