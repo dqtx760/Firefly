@@ -21,10 +21,31 @@ for (const friend of friends) {
 	friendsByCategory.get(category)!.push(friend);
 }
 
-// 按分类名称排序
-const sortedCategories = Array.from(friendsByCategory.entries()).sort((a, b) =>
-	a[0].localeCompare(b[0], "zh-CN")
-);
+// 自定义分类排序优先级
+const categoryOrder = [
+	"人工智能",
+	"网络相关",
+	"网站搭建",
+	"下载工具",
+	"效率工具",
+	"系统相关",
+	"运营工具",
+	"图片工具",
+	"苹果相关",
+	"影音娱乐",
+	"壁纸网站",
+	"其他网站"
+];
+
+// 按自定义顺序排序，未列出的分类排在后面
+const sortedCategories = Array.from(friendsByCategory.entries()).sort((a, b) => {
+	const indexA = categoryOrder.indexOf(a[0]);
+	const indexB = categoryOrder.indexOf(b[0]);
+	if (indexA === -1 && indexB === -1) return a[0].localeCompare(b[0], "zh-CN");
+	if (indexA === -1) return 1;
+	if (indexB === -1) return -1;
+	return indexA - indexB;
+});
 ---
 
 <MainGridLayout title="友链">
