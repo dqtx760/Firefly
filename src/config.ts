@@ -44,7 +44,7 @@ export const siteConfig: SiteConfig = {
 	},
 	background: {
 		enable: true, // Enable background image
-		src: "https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260205193657530.webp", // Background image URL (supports HTTPS)
+		src: "https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260205193657530.webp?v=2", // Background image URL (supports HTTPS)
 		position: "center", // Background position: 'top', 'center', 'bottom'
 		size: "cover", // Background size: 'cover', 'contain', 'auto'
 		repeat: "no-repeat", // Background repeat: 'no-repeat', 'repeat', 'repeat-x', 'repeat-y'
