@@ -25,7 +25,7 @@ const categories = Array.from(categoryCount.entries())
 
 <div class="category-list">
     <div class="category-header">
-        <div class="decoration-line"></div>
+        <span class="hacker-icon">&gt;_</span>
         <span class="decoration-title">文章分类</span>
         <div class="decoration-line"></div>
     </div>
@@ -53,9 +53,23 @@ const categories = Array.from(categoryCount.entries())
     .category-header {
         display: flex;
         align-items: center;
-        justify-content: center;
         gap: 8px;
         margin-bottom: 12px;
+    }
+
+    .hacker-icon {
+        font-size: 14px;
+        font-weight: 700;
+        color: #9FB48E;
+        font-family: 'Courier New', 'Consolas', monospace;
+        letter-spacing: -1px;
+    }
+
+    .decoration-title {
+        font-size: 14px;
+        font-weight: 600;
+        color: #9FB48E;
+        white-space: nowrap;
     }
 
     .decoration-line {
@@ -68,18 +82,6 @@ const categories = Array.from(categoryCount.entries())
 
     .dark .decoration-line {
         border-color: rgb(70, 70, 70);
-    }
-
-    .decoration-title {
-        font-size: 14px;
-        font-weight: 600;
-        color: hsl(91, 60%, 45%);
-        white-space: nowrap;
-        padding: 0 8px;
-    }
-
-    .dark .decoration-title {
-        color: hsl(91, 60%, 60%);
     }
 
     .category-item {
@@ -117,7 +119,7 @@ const categories = Array.from(categoryCount.entries())
         top: 0;
         bottom: 0;
         width: 3px;
-        background: linear-gradient(180deg, hsl(91, 60%, 55%), hsl(91, 60%, 55%) / 0.5);
+        background: linear-gradient(180deg, #9FB48E, #9FB48E / 0.5);
         opacity: 0;
         transition: opacity 0.3s ease;
     }
@@ -146,7 +148,7 @@ const categories = Array.from(categoryCount.entries())
     }
 
     .category-card:hover .category-name {
-        color: hsl(91, 60%, 45%);
+        color: #9FB48E;
     }
 
     .category-count {
@@ -166,15 +168,9 @@ const categories = Array.from(categoryCount.entries())
     }
 
     .category-card:hover .category-count {
-        background: hsl(91, 60%, 90%);
-        color: hsl(91, 60%, 45%);
-        border-color: hsl(91, 60%, 55%);
-    }
-
-    .dark .category-card:hover .category-count {
-        background: hsl(91, 60%, 20%);
-        color: hsl(91, 60%, 60%);
-        border-color: hsl(91, 60%, 50%);
+        background: rgb(159, 180, 142);
+        color: rgb(20, 20, 20);
+        border-color: #9FB48E;
     }
 
     @keyframes slideIn {
