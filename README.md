@@ -16,10 +16,11 @@
 - 📝 **Markdown 支持** - 完整的 Markdown 语法
 - 🔍 **内置搜索** - 快速查找文章
 - 📊 **阅读时间** - 自动统计文章阅读时长
+- 🎨 **霞鹜文楷字体** - 优雅的中文手写风格
 
 ### 内容管理
 - 🏷️ **标签系统** - 灵活的文章标签
-- 📂 **分类管理** - 软件安利 / 技术教程 / AI新鲜玩法
+- 📂 **分类管理** - Software / Technical / AIHacks
 - 🖼️ **自动封面** - 首张图片自动作为封面
 - 📄 **自动摘要** - 开头段落自动作为描述
 
@@ -34,6 +35,11 @@
 - 📈 **SEO 友好** - 自动生成 sitemap
 - 🔗 **结构化数据** - 搜索引擎优化
 - 📱 **社交分享** - Open Graph 支持
+
+### 性能优化
+- ⚡ **快速加载** - 优先加载首屏图片
+- 🎯 **字体优化** - CDN 加载霞鹜文楷字体
+- 🚀 **无抖动导航** - 优化的页面切换体验
 
 ---
 
@@ -54,7 +60,9 @@
 ```
 fuwari/
 ├── public/                          # 静态资源目录
-│   ├── avatar.jpg                   # 网站头像
+│   ├── avatar.jpg                   # 网站头像 / Favicon
+│   ├── gzh-qrcode.webp              # 公众号二维码
+│   ├── qq-qrcode.png               # 微信二维码
 │   ├── icons/                       # 图标资源
 │   ├── sponsors/                    # 赞助收款码
 │   └── js/                          # JavaScript 脚本
@@ -63,8 +71,8 @@ fuwari/
 │   ├── components/                  # 组件目录
 │   │   ├── widget/                  # 侧边栏组件
 │   │   │   ├── Profile.astro        # 个人信息卡片
-│   │   │   ├── CategoryList.astro   # 分类列表（Hacker 风格）
-│   │   │   └── VideoDecoration.astro # 视频装饰
+│   │   │   ├── CategoryList.astro   # 分类列表（Hacker 风格，英文显示）
+│   │   │   └── VideoDecoration.astro # 微信公众号装饰
 │   │   ├── PostCard.astro           # 文章卡片组件
 │   │   └── PostPage.astro           # 文章列表页（含自动封面/描述提取）
 │   │
@@ -79,31 +87,35 @@ fuwari/
 │   │   └── config.ts                # 内容集合配置
 │   │
 │   ├── data/                        # 数据目录
-│   │   └── friends/                 # 友链数据（149个）
+│   │   └── friends/                 # 友链数据（147个）
 │   │
 │   ├── layouts/                     # 布局文件
-│   │   ├── Layout.astro             # 主布局
-│   │   └── MainGridLayout.astro     # 网格布局
+│   │   ├── Layout.astro             # 主布局（霞鹜文楷字体）
+│   │   └── MainGridLayout.astro     # 网格布局（微信二维码弹窗）
 │   │
 │   ├── pages/                       # 页面文件
 │   │   ├── index.astro              # 首页
 │   │   ├── posts/                   # 文章相关页面
 │   │   │   ├── [...slug].astro      # 文章详情页（含 Giscus 评论）
 │   │   │   └── [page].astro         # 文章列表分页
-│   │   ├── categories/              # 分类页面
+│   │   ├── categories/              # 分类页面（英文 URL）
 │   │   │   └── [category].astro     # 分类文章列表
 │   │   ├── archive.astro            # 归档页面
-│   │   ├── sponsors.astro           # 赞助页面
+│   │   ├── sponsors.astro           # 赞助页面（无赞助者名单）
 │   │   └── friends.astro            # 友链页面
 │   │
 │   ├── styles/                      # 样式文件
+│   │   ├── main.css                  # 主样式文件
+│   │   ├── transition.css           # 页面切换动画（含 fallback）
+│   │   ├── scrollbar.css             # 滚动条样式
+│   │   └── markdown.css             # Markdown 样式
+│   │
 │   ├── utils/                       # 工具函数
 │   └── config.ts                    # 站点配置
 │
 ├── scripts/                         # 脚本工具
 │   ├── add-frontmatter.cjs          # 自动添加 frontmatter 模板
 │   ├── organize-posts.cjs           # 按分类组织文章
-│   ├── fix-image-paths.cjs          # 修复图片路径
 │   ├── clean-unused-images.js       # 清理未使用的图片
 │   ├── del-space.js                 # 删除文件名空格
 │   ├── new-post.js                  # 创建新文章
@@ -112,7 +124,7 @@ fuwari/
 │
 ├── package.json                     # 项目配置
 ├── astro.config.mjs                 # Astro 配置
-├── tailwind.config.mjs              # Tailwind 配置
+├── tailwind.config.cjs              # Tailwind 配置（霞鹜文楷字体）
 └── README.md                        # 项目说明
 ```
 
@@ -210,205 +222,120 @@ npm run build
 - 等待构建完成（约 1-2 分钟）
 - 配置自定义域名（可选）
 
-### Vercel
+---
 
-#### 1. 导入项目
+## 🎨 自定义配置
 
-1. 访问 [vercel.com](https://vercel.com)
-2. 点击「New Project」
-3. 导入 GitHub 仓库
+### 站点配置
 
-#### 2. 构建配置
+编辑 `src/config.ts` 文件：
 
-```json
-{
-  "buildCommand": "pnpm run build",
-  "outputDirectory": "dist",
-  "devCommand": "pnpm dev"
+```typescript
+// 站点基本信息
+export const siteConfig: SiteConfig = {
+  title: "Derek Zhao Blog",
+  subtitle: "技术分享与实践",
+  lang: "zh_CN",
+  url: "https://blog.acofork.com",
+  author: "大强同学",
+};
+
+// 个人信息卡片
+export const profileConfig: ProfileConfig = {
+  name: "大强同学",
+  bio: "人间忽晚，山河已秋。",
+  avatar: "/avatar.jpg",
+  email: "your-email@example.com",
+  socialLinks: {
+    github: "https://github.com/dqtx760",
+    bilibili: "https://space.bilibili.com/xxx",
+    telegram: "https://t.me/xxx",
+  },
+};
+
+// 导航栏链接
+export const navBarConfig: NavBarConfig = {
+  links: [
+    { name: "电视喵", url: "https://tv.dqtx.cc/" },
+    { name: "工坊", url: "https://app.dqtx.cc/" },
+    { name: "远程", url: "https://www.742112.xyz/" },
+  ],
+};
+```
+
+### 主题颜色
+
+```typescript
+themeColor: {
+  hue: 91,        // 主色调 (0-360) - 绿色主题
+  fixed: true,    // 固定颜色
 }
 ```
 
-### Netlify
+### Giscus 评论配置
 
-#### 1. 添加站点
+编辑 `src/pages/posts/[...slug].astro` 中的 Giscus 配置：
 
-1. 访问 [netlify.com](https://netlify.com)
-2. 点击「Add new site」→「Import an existing project」
-
-#### 2. 构建配置
-
-```
-Build command: pnpm run build
-Publish directory: dist
-```
-
-### Cloudflare Pages
-
-#### 1. 创建项目
-
-1. 访问 [dash.cloudflare.com](https://dash.cloudflare.com)
-2. 进入「Workers & Pages」→「Create application」→「Pages」→「Connect to Git」
-
-#### 2. 构建设置
-
-```
-构建命令: pnpm run build
-构建输出目录: dist
+```astro
+<div id="giscus-container"
+    data-repo="你的用户名/仓库名"
+    data-repo-id="R_kgDOxxxxxxxxx"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOxxxxxxxxx"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="preferred_color_scheme"
+    data-lang="zh-CN"
+    data-loading="lazy"
+></div>
 ```
 
-#### 3. 环境变量
+获取配置：访问 [giscus.app](https://giscus.app)
+
+---
+
+## 📋 文章分类
+
+| 英文名称 | 中文名称 | URL 路径 |
+|----------|----------|----------|
+| Software | 软件安利 | /categories/Software/ |
+| Technical | 技术教程 | /categories/Technical/ |
+| AIHacks | AI新鲜玩法 | /categories/AIHacks/ |
+
+---
+
+## 🔧 开发脚本
+
+### 添加 Frontmatter 模板
 
 ```bash
-NODE_VERSION=18
+npm run add-frontmatter
 ```
+
+自动为没有 frontmatter 的文章添加模板，包含：
+- title（从文件名或内容提取）
+- published（当前日期）
+- tags（根据内容关键词）
+- category（根据内容关键词）
+- draft（设置为 false）
+
+### 按分类组织文章
+
+```bash
+npm run organize-posts
+```
+
+根据文章的 frontmatter category 字段，将文章移动到对应的分类目录：
+- `软件安利` → `src/content/posts/软件安利/`
+- `技术教程` → `src/content/posts/技术教程/`
+- `AI新鲜玩法` → `src/content/posts/AI新鲜玩法/`
 
 ---
 
-## 📝 博客写作工作流
-
-### 工作流概览
-
-```
-Typora（写作）→ PicList（图片上传）→ BAT 脚本（添加模板）→ 浏览器预览 → GitHub Desktop（提交）→ 自动部署
-```
-
-### 准备工作
-
-#### 1. 安装必备工具
-
-| 工具 | 用途 | 下载链接 |
-|------|------|----------|
-| **Typora** | Markdown 编辑器 | https://typora.io/ |
-| **PicList** | 图床上传工具 | https://github.com/Kuingsmile/PicList |
-| **GitHub Desktop** | Git 图形化客户端 | https://desktop.github.com/ |
-
-#### 2. 配置 PicList 图床（推荐 Gitee）
-
-1. **打开 PicList**，点击「图床设置」
-2. **选择图床**：Gitee（或其他对象存储）
-3. **配置参数**：
-   - Repository: 你的 Gitee 仓库
-   - Branch: `master`
-   - Path: `image/`（图片存放路径）
-   - Custom URL: 图片访问 URL 前缀
-4. **设置格式**：
-   - 上传后自动复制 Markdown 格式链接
-   - URL 格式设置为完整 URL
-
-### 写作步骤
-
-#### 步骤 1: 在 Typora 中创建文章
-
-1. 打开 Typora，新建文件（`Ctrl+N`）
-2. 保存到项目目录：`src/content/posts/分类/文章名.md`
-
-#### 步骤 2: 添加 Frontmatter 模板
-
-**方式一：使用 BAT 脚本（推荐）**
-
-双击运行「启动博客并添加模板.bat」，脚本会自动添加模板。
-
-**方式二：手动添加**
-
-```yaml
----
-title: 文章标题
-published: 2026-02-04
-description: 文章描述（可选，留空则自动提取第一段）
-tags: [标签1, 标签2]
-category: 软件安利
-draft: false
-image: https://图片URL（可选，留空则自动提取第一张）
----
-
-第一段文字会自动成为文章摘要...
-
-文章正文...
-```
-
-#### 步骤 3: 写作与插入图片
-
-1. **编写文章内容**
-2. **插入图片**：
-   - 直接拖拽图片到 Typora
-   - 或使用 PicList 快捷键上传
-   - 图片自动上传到 Gitee 图床
-   - Markdown 中自动插入图床 URL
-
-#### 步骤 4: 本地预览
-
-1. 确保开发服务器正在运行
-2. 访问 [http://localhost:4321/](http://localhost:4321/)
-3. 检查文章显示效果
-
-#### 步骤 5: 提交发布
-
-1. 打开 **GitHub Desktop**
-2. 查看文件变更
-3. 填写提交信息
-4. 点击「Push origin」推送到 GitHub
-5. 等待 EdgeOne 自动构建（约 1 分钟）
-
----
-
-## 🔧 BAT 脚本使用
-
-### 创建桌面快捷脚本
-
-创建文件 `启动博客并添加模板.bat`：
-
-```batch
-@echo off
-chcp 65001 >nul
-cd /d D:\project2026\fuwari
-
-echo ========================================
-echo    1. 检查开发服务器...
-echo ========================================
-
-:: 检查端口4321是否被占用
-netstat -ano | findstr ":4321" >nul 2>&1
-if %errorlevel% equ 0 (
-    echo ✓ 开发服务器已在运行
-) else (
-    echo ✗ 开发服务器未运行，正在启动...
-    start /B npm run dev >nul 2>&1
-    echo   等待服务器启动...
-    timeout /t 5 /nobreak >nul
-    echo ✓ 开发服务器已启动
-)
-
-echo.
-echo ========================================
-echo    2. 为文章添加 Frontmatter 模板...
-echo ========================================
-
-node scripts/add-frontmatter.cjs
-
-echo.
-echo ========================================
-echo    3. 打开网站...
-echo ========================================
-
-start http://localhost:4321/
-
-echo.
-echo ✓ 所有任务完成！
-pause
-```
-
-### 使用方法
-
-1. 在 Typora 写完文章，保存到 `src/content/posts/` 目录
-2. 双击运行桌面上的 `启动博客并添加模板.bat`
-3. 脚本自动完成：
-   - ✅ 检查并启动开发服务器
-   - ✅ 为没有 frontmatter 的文章添加模板
-   - ✅ 打开浏览器预览
-
----
-
-## 📋 Frontmatter 详解
+## 📝 Frontmatter 详解
 
 ### 完整模板
 
@@ -486,129 +413,6 @@ category: 软件安利
 
 ---
 
-## 🎨 自定义配置
-
-### 站点配置
-
-编辑 `src/config.ts` 文件：
-
-```typescript
-// 站点基本信息
-export const siteConfig: SiteConfig = {
-  title: "Derek Zhao Blog",
-  subtitle: "Derek Zhao",
-  lang: "zh-CN",
-  url: "https://blog.acofork.com",
-  author: "大强同学",
-};
-
-// 个人信息卡片
-export const profileConfig: ProfileConfig = {
-  name: "大强同学",
-  bio: "人间忽晚，山河已秋。",
-  avatar: "/avatar.jpg",
-  email: "your-email@example.com",
-  socialLinks: {
-    github: "https://github.com/dqtx760",
-    bilibili: "https://space.bilibili.com/xxx",
-    telegram: "https://t.me/xxx",
-  },
-};
-
-// 导航栏链接
-export const navBarConfig: NavBarConfig = {
-  links: [
-    { name: "电视喵", url: "https://tv.dqtx.cc/" },
-    { name: "工坊", url: "https://app.dqtx.cc/" },
-    { name: "远程", url: "https://www.742112.xyz/" },
-  ],
-};
-```
-
-### 主题颜色
-
-```typescript
-themeColor: {
-  hue: 91,        // 主色调 (0-360) - 绿色主题
-  fixed: true,    // 固定颜色
-}
-```
-
-### Giscus 评论配置
-
-编辑 `src/pages/posts/[...slug].astro` 中的 Giscus 配置：
-
-```astro
-<div id="giscus-container"
-    data-repo="你的用户名/仓库名"
-    data-repo-id="R_kgDOxxxxxxxxx"
-    data-category="Announcements"
-    data-category-id="DIC_kwDOxxxxxxxxx"
-    data-mapping="pathname"
-    data-strict="0"
-    data-reactions-enabled="1"
-    data-emit-metadata="0"
-    data-input-position="bottom"
-    data-theme="preferred_color_scheme"
-    data-lang="zh-CN"
-    data-loading="lazy"
-></div>
-```
-
-获取配置：访问 [giscus.app](https://giscus.app)
-
----
-
-## 📚 常见问题
-
-### Q1: 图片路径如何处理？
-
-**A:** 有两种方式：
-
-1. **Gitee 图床（推荐）**：使用 PicList 自动上传，图片以外链形式存在
-2. **本地图片**：存放在 `src/content/assets/images/` 目录
-
-本地图片路径规则：
-- `posts/` 根目录文章：`../assets/images/xxx.webp`
-- `posts/分类/` 子目录文章：`../../assets/images/xxx.webp`
-
-### Q2: 如何创建新分类？
-
-**A:** 编辑 `src/config.ts`，在 `categoryConfig` 中添加新分类：
-
-```typescript
-export const categoryConfig: CategoryConfig = {
-  categories: [
-    { name: "软件安利", slug: "software", icon: "mdi:package-variant" },
-    { name: "技术教程", slug: "tutorial", icon: "mdi:book-open-variant" },
-    { name: "AI新鲜玩法", slug: "ai", icon: "mdi:robot" },
-    // 添加新分类
-    { name: "新分类", slug: "new-category", icon: "mdi:star" },
-  ],
-};
-```
-
-### Q3: 构建失败怎么办？
-
-**A:** 常见原因：
-
-1. **Frontmatter 语法错误**：检查冒号后是否有空格
-2. **日期格式错误**：使用 `2026-02-04` 而非 `2026/02/04`
-3. **图片路径错误**：检查相对路径是否正确
-4. **依赖未安装**：运行 `pnpm install`
-
-查看错误日志：`pnpm build` 会显示详细错误信息
-
-### Q4: 如何备份文章？
-
-**A:** 文章以 Markdown 文件形式存储，直接备份 `src/content/posts/` 目录即可。
-
-### Q5: 如何迁移到其他平台？
-
-**A:** 所有文章都是纯 Markdown 格式，可轻松迁移到 Hugo、Hexo、VuePress 等其他静态博客平台。
-
----
-
 ## 🤝 鸣谢
 
 - **Fuwari 原项目**: [https://github.com/saicaca/fuwari](https://github.com/saicaca/fuwari)
@@ -630,4 +434,4 @@ export const categoryConfig: CategoryConfig = {
 
 ---
 
-*最后更新: 2026-02-05*
+*最后更新: 2026-02-06*
