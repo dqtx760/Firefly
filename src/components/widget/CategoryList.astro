@@ -42,15 +42,14 @@ const categories = Array.from(categoryCount.entries())
     </div>
 
     <div class="flex flex-col gap-2">
-        {categories.map((category) => (
+        {categories.map((category, index) => (
             <a href={`/categories/${encodeURIComponent(category.name)}/`} class="category-item group">
-                <div class="flex items-center justify-between p-2 rounded-lg bg-[var(--btn-regular-bg)] hover:bg-[var(--btn-regular-bg-hover)] transition-all active:scale-95">
-                    <span class="text-neutral-700 dark:text-neutral-300 text-sm group-hover:text-[var(--primary)] transition-colors">
-                        {category.name}
-                    </span>
-                    <span class="text-neutral-500 dark:text-neutral-500 text-xs bg-neutral-200 dark:bg-neutral-800 px-2 py-0.5 rounded-full">
-                        {category.count}
-                    </span>
+                <div class="category-card" style={"animation-delay: " + index * 0.05 + "s"}>
+                    <div class="category-card-border"></div>
+                    <div class="category-card-content">
+                        <span class="category-name">{category.name}</span>
+                        <span class="category-count">{category.count}</span>
+                    </div>
                 </div>
             </a>
         ))}
@@ -67,8 +66,84 @@ const categories = Array.from(categoryCount.entries())
         display: block;
     }
 
-    .category-item:hover .category-count {
+    .category-card {
+        position: relative;
+        background: rgba(128, 128, 128, 0.05);
+        backdrop-filter: blur(10px);
+        border-radius: 12px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        animation: slideIn 0.4s ease-out backwards;
+    }
+
+    .category-card:hover {
+        background: rgba(128, 128, 128, 0.08);
+        transform: translateX(4px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .category-card-border {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background: linear-gradient(180deg, var(--primary), var(--primary) / 0.5);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .category-card:hover .category-card-border {
+        opacity: 1;
+    }
+
+    .category-card-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 14px;
+        gap: 8px;
+    }
+
+    .category-name {
+        font-size: 14px;
+        color: rgb(87, 87, 87);
+        dark:color: rgb(212, 212, 212);
+        transition: color 0.3s ease;
+    }
+
+    .dark .category-name {
+        color: rgb(212, 212, 212);
+    }
+
+    .category-card:hover .category-name {
+        color: var(--primary);
+    }
+
+    .category-count {
+        font-size: 12px;
+        font-weight: 500;
+        color: rgb(120, 120, 120);
+        background: rgba(128, 128, 128, 0.1);
+        padding: 4px 10px;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+    }
+
+    .category-card:hover .category-count {
         background: var(--primary);
         color: white;
+        transform: scale(1.05);
+    }
+
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateX(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
     }
 </style>
