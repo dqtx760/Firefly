@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Derek Zhao Blog</title><description>技术分享与实践</description><link>https://blog.acofork.com/</link><language>zh_CN</language><item><title>耗时 1 天！用 GitHub + EdgeOne 搭建个人博客的过程</title><link>https://blog.acofork.com/posts/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/github-edgeone-da-jian-bo-ke/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/github-edgeone-da-jian-bo-ke/</guid><pubDate>Fri, 06 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Derek Zhao Blog</title><description>技术分享与实践</description><link>https://blog.acofork.com/</link><language>zh_CN</language><item><title>GitHub + EdgeOne 搭建个人博客的过程</title><link>https://blog.acofork.com/posts/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/github-edgeone-da-jian-bo-ke/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/github-edgeone-da-jian-bo-ke/</guid><pubDate>Fri, 06 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;想要一个属于自己的博客，但不知道从哪里开始？本文详细记录了从零开始搭建个人博客的全过程，包括踩过的各种坑和解决方案。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2&gt;为什么选择 Fuwari 主题？&lt;/h2&gt;
@@ -305,6 +305,27 @@ if (url.match(/^https?:\/\//) || url.match(/^\//)) {
   coverImage = url;
 }
 &lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;坑 7：EdgeOne 构建时 import.meta.glob 不工作&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;现象&lt;/strong&gt;：本地开发正常，但 EdgeOne 构建后数据不显示。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：&lt;code&gt;import.meta.glob&lt;/code&gt; 在 EdgeOne 构建环境下无法正确加载 JSON 文件。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;错误代码&lt;/strong&gt;：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+// ❌ 在 EdgeOne 构建时不工作
+const sponsorFiles = import.meta.glob(&apos;../../data/sponsors/*.json&apos;, { eager: true });
+const sponsors = Object.values(sponsorFiles).map(m =&amp;gt; m.default);
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：将数据直接内联到文件中&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+// ✅ 直接内联数据
+const sponsors = [
+  { &quot;name&quot;: &quot;赞助者1&quot;, &quot;avatar&quot;: &quot;https://...&quot;, &quot;date&quot;: &quot;2026-01-01&quot; },
+  { &quot;name&quot;: &quot;赞助者2&quot;, &quot;avatar&quot;: &quot;https://...&quot;, &quot;date&quot;: &quot;2026-01-02&quot; },
+  // ...更多数据
+];
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;经验教训&lt;/strong&gt;：在 EdgeOne 等云端构建环境中，尽量避免使用动态导入，对于静态数据直接内联更可靠。&lt;/p&gt;
 &lt;h2&gt;五、特色功能实现&lt;/h2&gt;
 &lt;h3&gt;5.1 自动提取封面和摘要&lt;/h3&gt;
 &lt;p&gt;无需手动填写，系统自动处理：&lt;/p&gt;
@@ -433,12 +454,16 @@ node scripts/update-categories.cjs
 &lt;td&gt;1 小时&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
+&lt;td&gt;修复构建问题&lt;/td&gt;
+&lt;td&gt;1 小时&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
 &lt;td&gt;其他调整&lt;/td&gt;
 &lt;td&gt;2 小时&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;strong&gt;总计&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;约 8 小时&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;约 9 小时&lt;/strong&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -449,6 +474,7 @@ node scripts/update-categories.cjs
 &lt;li&gt;&lt;strong&gt;关键资源优先加载&lt;/strong&gt;：首屏图片不要使用 &lt;code&gt;loading=&quot;lazy&quot;&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;测试深色模式&lt;/strong&gt;：确保在深色模式下也能正常显示&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;善用 Astro 的自动提取&lt;/strong&gt;：减少手动填写的工作量&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;注意云端构建差异&lt;/strong&gt;：&lt;code&gt;import.meta.glob&lt;/code&gt; 在云端可能不工作，静态数据直接内联更可靠&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3&gt;推荐资源&lt;/h3&gt;
 &lt;ul&gt;
