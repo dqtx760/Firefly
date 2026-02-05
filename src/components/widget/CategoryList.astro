@@ -12,12 +12,9 @@ const allPosts = await getCollection("posts", ({ data }) => {
 
 // 统计每个分类的文章数量
 const categoryCount = new Map<string, number>();
-const excludedCategories = ["实用导航"]; // 不显示在分类列表中的分类
 for (const post of allPosts) {
     const category = post.data.category || "未分类";
-    if (!excludedCategories.includes(category)) {
-        categoryCount.set(category, (categoryCount.get(category) || 0) + 1);
-    }
+    categoryCount.set(category, (categoryCount.get(category) || 0) + 1);
 }
 
 // 转换为数组并按文章数量排序
