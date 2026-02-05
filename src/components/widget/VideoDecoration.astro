@@ -12,27 +12,30 @@ const { src = "https://gitee.com/da-qiang-classmate/typora/raw/master/image/gzhh
 ---
 
 <div class="image-decoration">
-    <div class="image-decoration-title">{title}</div>
+    <div class="flex items-center justify-center gap-2 mb-3">
+        <div class="w-8 h-px border-t border-dashed border-[var(--primary)]/50"></div>
+        <div class="relative w-5 h-5 rounded-lg bg-gradient-to-br from-[var(--primary)] to-[var(--primary)]/70 flex items-center justify-center overflow-hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 text-white dark:text-black/70 relative z-10">
+                <path d="M8 12.01c.01-.4.19-.78.48-1.06l1.41-1.41c.56-.56 1.44-.56 2 0l1.41 1.41c.28.28.45.66.45 1.06v3.83c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2v-3.83c0-.4.17-.78.45-1.06l1.41-1.41c.56-.56 1.44-.56 2 0l.39.39"/>
+                <circle cx="12" cy="12" r="10"/>
+            </svg>
+            <div class="absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent"></div>
+        </div>
+        <span class="font-bold bg-gradient-to-r from-[var(--primary)] to-[var(--primary)]/70 bg-clip-text text-transparent">{title}</span>
+        <div class="w-8 h-px border-t border-dashed border-[var(--primary)]/50"></div>
+    </div>
     <img src={src} alt="装饰图片" class="image-decoration-img" loading="lazy" />
 </div>
 
 <style>
     .image-decoration {
         width: 100%;
+        padding: 12px;
         overflow: hidden;
         border-radius: 12px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         background: linear-gradient(135deg, var(--primary) / 10%, var(--primary) / 5%);
         position: relative;
-    }
-
-    .image-decoration-title {
-        padding: 8px 12px;
-        font-size: 14px;
-        font-weight: 500;
-        color: var(--primary);
-        text-align: center;
-        border-bottom: 1px solid rgba(128, 128, 128, 0.2);
     }
 
     .image-decoration img {
