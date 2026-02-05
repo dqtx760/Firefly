@@ -1,4 +1,473 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Derek Zhao Blog</title><description>技术分享与实践</description><link>https://blog.acofork.com/</link><language>zh_CN</language><item><title>Obsidian+AI：让笔记变成智能知识库</title><link>https://blog.acofork.com/posts/ai%E6%96%B0%E9%B2%9C%E7%8E%A9%E6%B3%95/obsidian-ai/</link><guid isPermaLink="true">https://blog.acofork.com/posts/ai%E6%96%B0%E9%B2%9C%E7%8E%A9%E6%B3%95/obsidian-ai/</guid><description>这几天，在github发现Obsidian重磅插件，直接把 AI 功能深度集成到核心里了！今天我要分享的 Obsidian+AI 组合，一次性解决这些痛点！</description><pubDate>Wed, 04 Feb 2026 04:54:28 GMT</pubDate><content:encoded>&lt;p&gt;这几天，在gihub发现Obsidian重磅插件，直接把 AI 功能深度集成到核心里了！网上都在夸赞，确实&lt;strong&gt;牛批&lt;/strong&gt;！今天我要分享的 Obsidian+AI 组合，&lt;em&gt;一次性解决这些痛点&lt;/em&gt;！简单说，你的笔记不再是一个个&lt;strong&gt;死文档*，而是变成了能理解、能推理、能自动化的&lt;/strong&gt;AI 上下文层**。&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Derek Zhao Blog</title><description>技术分享与实践</description><link>https://blog.acofork.com/</link><language>zh_CN</language><item><title>耗时 1 天！用 GitHub + EdgeOne 搭建个人博客的过程</title><link>https://blog.acofork.com/posts/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/github-edgeone-da-jian-bo-ke/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/github-edgeone-da-jian-bo-ke/</guid><pubDate>Fri, 06 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;想要一个属于自己的博客，但不知道从哪里开始？本文详细记录了从零开始搭建个人博客的全过程，包括踩过的各种坑和解决方案。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;为什么选择 Fuwari 主题？&lt;/h2&gt;
+&lt;p&gt;在决定搭建博客之前，我对比了多个静态博客生成器：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;工具&lt;/th&gt;
+&lt;th&gt;优点&lt;/th&gt;
+&lt;th&gt;缺点&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Hexo&lt;/td&gt;
+&lt;td&gt;插件丰富、中文文档多&lt;/td&gt;
+&lt;td&gt;生成速度慢、配置复杂&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Hugo&lt;/td&gt;
+&lt;td&gt;构建极快&lt;/td&gt;
+&lt;td&gt;学习曲线陡峭&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;VuePress&lt;/td&gt;
+&lt;td&gt;Vue 生态友好&lt;/td&gt;
+&lt;td&gt;主要用于文档&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Astro&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;性能卓越、配置简单&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;相对较新&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;最终选择了基于 &lt;strong&gt;Astro 5.7+&lt;/strong&gt; 的 &lt;strong&gt;Fuwari&lt;/strong&gt; 主题，原因很简单：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;零配置即可使用&lt;/li&gt;
+&lt;li&gt;完美适配移动端&lt;/li&gt;
+&lt;li&gt;内置深色模式&lt;/li&gt;
+&lt;li&gt;性能评分接近满分&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;一、前期准备&lt;/h2&gt;
+&lt;h3&gt;1.1 所需账号&lt;/h3&gt;
+&lt;p&gt;在开始之前，你需要准备：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;服务&lt;/th&gt;
+&lt;th&gt;用途&lt;/th&gt;
+&lt;th&gt;是否必需&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;GitHub 账号&lt;/td&gt;
+&lt;td&gt;代码托管&lt;/td&gt;
+&lt;td&gt;必需&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EdgeOne 账号&lt;/td&gt;
+&lt;td&gt;静态网站部署&lt;/td&gt;
+&lt;td&gt;必需&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Gitee 账号&lt;/td&gt;
+&lt;td&gt;图床（可选）&lt;/td&gt;
+&lt;td&gt;可选&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;1.2 环境要求&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;# 检查 Node.js 版本（需要 18.0+）
+node -v
+
+# 推荐：使用 pnpm 作为包管理器
+npm install -g pnpm
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;二、克隆与配置&lt;/h2&gt;
+&lt;h3&gt;2.1 克隆项目&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;# 克隆 Fuwari 项目
+git clone https://github.com/saicaca/fuwari.git my-blog
+cd my-blog
+
+# 安装依赖
+pnpm install
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;2.2 启动开发服务器&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;pnpm dev
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;访问 http://localhost:4321/ 即可看到效果。&lt;/p&gt;
+&lt;h3&gt;2.3 基本配置&lt;/h3&gt;
+&lt;p&gt;编辑 &lt;code&gt;src/config.ts&lt;/code&gt; 文件：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// 站点基本信息
+export const siteConfig: SiteConfig = {
+  title: &quot;你的博客标题&quot;,
+  subtitle: &quot;副标题描述&quot;,
+  lang: &quot;zh_CN&quot;,
+  url: &quot;https://your-domain.com&quot;,
+  author: &quot;你的名字&quot;,
+};
+
+// 个人信息卡片
+export const profileConfig: ProfileConfig = {
+  name: &quot;你的名字&quot;,
+  bio: &quot;个性签名&quot;,
+  avatar: &quot;/avatar.jpg&quot;,  // 头像放在 public/ 目录
+  email: &quot;your-email@example.com&quot;,
+  socialLinks: {
+    github: &quot;https://github.com/your-username&quot;,
+    // 添加更多社交链接...
+  },
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;三、部署到 EdgeOne&lt;/h2&gt;
+&lt;h3&gt;3.1 为什么选择 EdgeOne？&lt;/h3&gt;
+&lt;p&gt;对比了多个部署平台：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;平台&lt;/th&gt;
+&lt;th&gt;优点&lt;/th&gt;
+&lt;th&gt;缺点&lt;/th&gt;
+&lt;th&gt;选择&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Vercel&lt;/td&gt;
+&lt;td&gt;体验好、速度快&lt;/td&gt;
+&lt;td&gt;国内访问慢&lt;/td&gt;
+&lt;td&gt;❌&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Netlify&lt;/td&gt;
+&lt;td&gt;功能强大&lt;/td&gt;
+&lt;td&gt;国内访问慢&lt;/td&gt;
+&lt;td&gt;❌&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;EdgeOne&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;国内访问快、免费额度充足&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;需要备案域名&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;3.2 部署步骤&lt;/h3&gt;
+&lt;h4&gt;步骤 1：创建 GitHub 仓库&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;# 初始化 git 仓库
+git init
+git add .
+git commit -m &quot;Initial commit&quot;
+
+# 推送到 GitHub
+git remote add origin https://github.com/your-username/your-repo.git
+git branch -M main
+git push -u origin main
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;步骤 2：EdgeOne 配置&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;登录 &lt;a href=&quot;https://console.cloud.tencent.com/edgeone&quot;&gt;EdgeOne 控制台&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;选择「静态网站」→「新建站点」&lt;/li&gt;
+&lt;li&gt;连接 GitHub 仓库，选择分支：&lt;code&gt;main&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4&gt;步骤 3：构建设置&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;框架预设: Astro
+根目录: ./
+输出目录: dist
+编译命令: pnpm run build
+安装命令: pnpm install
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;步骤 4：开始部署&lt;/h4&gt;
+&lt;p&gt;点击「开始部署」，等待 1-2 分钟即可完成。&lt;/p&gt;
+&lt;h2&gt;四、踩过的坑（重点！）&lt;/h2&gt;
+&lt;h3&gt;坑 1：YAML Frontmatter 格式错误&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;现象&lt;/strong&gt;：文章发布后只显示标题，没有封面、摘要、正文。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：YAML 格式极其严格，任何一个空格错误都会导致解析失败。&lt;/p&gt;
+&lt;h4&gt;❌ 错误写法&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;---
+title:文章标题
+published:2026/02/04
+category:软件安利
+tags: 标签1, 标签2
+draft: True
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;✅ 正确写法&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;---
+title: 文章标题           # 冒号后必须有空格
+published: 2026-02-04     # 日期必须用连字符
+category: 技术教程         # 冒号后必须有空格
+tags: [标签1, 标签2]      # 必须用数组格式
+draft: true               # 布尔值必须小写
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;YAML 四大黄金规则&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;冒号后必须有空格&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;title: 文章标题  # ✅ 正确
+title:文章标题   # ❌ 错误
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;日期必须用连字符&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;published: 2026-02-04  # ✅ 正确
+published: 2026/02/04  # ❌ 错误
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;标签必须用数组格式&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;tags: [Astro, 教程, 前端]  # ✅ 正确
+tags: Astro, 教程, 前端     # ❌ 错误
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;布尔值必须小写&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;draft: true   # ✅ 正确
+draft: True   # ❌ 错误
+draft: TRUE   # ❌ 错误
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;坑 2：导航栏抖动问题&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;现象&lt;/strong&gt;：点击「归档」「友链」等页面时，顶部导航栏会抖动一下。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：页面切换时 &lt;code&gt;page-height-extend&lt;/code&gt; 元素的显示/隐藏导致高度变化。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;移除 &lt;code&gt;top-row&lt;/code&gt; 的 &lt;code&gt;transition-all&lt;/code&gt; 过渡动画&lt;/li&gt;
+&lt;li&gt;在 Swup 钩子中禁用 &lt;code&gt;onload-animation&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;完全移除 &lt;code&gt;page-height-extend&lt;/code&gt; 逻辑&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;修改 &lt;code&gt;src/layouts/Layout.astro&lt;/code&gt;：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;window.swup.hooks.on(&apos;visit:start&apos;, (visit) =&amp;gt; {
+  // 禁用导航时的动画，防止抖动
+  const animatedElements = document.querySelectorAll(&apos;.onload-animation&apos;);
+  animatedElements.forEach(el =&amp;gt; {
+    el.style.opacity = &apos;1&apos;;
+    el.style.animation = &apos;none&apos;;
+  });
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;坑 3：深色模式颜色不和谐&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;现象&lt;/strong&gt;：深色模式下，某些元素的颜色显得突兀。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：使用了固定的颜色值（如 &lt;code&gt;#A8C398&lt;/code&gt;），没有跟随主题色。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：将所有固定颜色改为使用 CSS 变量 &lt;code&gt;var(--primary)&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/* ❌ 错误：固定颜色 */
+color: #A8C398;
+
+/* ✅ 正确：主题色变量 */
+color: var(--primary);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;深色模式下使用 oklch 色空间的半透明颜色：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.dark .decoration-line {
+  border-color: oklch(0.35 0.02 var(--hue));
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;坑 4：图片加载延迟&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;现象&lt;/strong&gt;：打开网站时，左侧二维码和封面图片有明显延迟。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：默认使用了 &lt;code&gt;loading=&quot;lazy&quot;&lt;/code&gt; 延迟加载。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;关键图片移除 &lt;code&gt;loading=&quot;lazy&quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;添加 &lt;code&gt;loading=&quot;eager&quot;&lt;/code&gt; 和 &lt;code&gt;fetchpriority=&quot;high&quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;外部图片下载到本地托管&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;修改 &lt;code&gt;src/components/misc/ImageWrapper.astro&lt;/code&gt;：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;img
+  src={src}
+  alt={alt}
+  loading=&quot;eager&quot;
+  fetchpriority=&quot;high&quot;
+/&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;坑 5：分类对齐问题&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;现象&lt;/strong&gt;：文章分类的名称和数字对齐不统一。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;尝试的方案&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;使用固定宽度 &lt;code&gt;width: 80px&lt;/code&gt; → 数字多的时候溢出&lt;/li&gt;
+&lt;li&gt;使用 &lt;code&gt;text-align: left&lt;/code&gt; → 不美观&lt;/li&gt;
+&lt;li&gt;使用 &lt;code&gt;justify-content: center&lt;/code&gt; → 数字没有靠右&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;最终方案&lt;/strong&gt;：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.category-name {
+  flex: 1;           /* 占据剩余空间 */
+  text-align: center; /* 名称居中 */
+}
+
+.category-count {
+  /* 数字自然靠右 */
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;使用 &lt;code&gt;flex: 1&lt;/code&gt; 让名称占据剩余空间并居中，数字徽章自然靠右。&lt;/p&gt;
+&lt;h3&gt;坑 6：文章导入时图片 URL 错误&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;现象&lt;/strong&gt;：批量导入文章后，有些封面图显示无效。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：正则表达式匹配到了错误的图片 URL，例如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;image: generate:  # ❌ 这不是有效 URL
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;实际内容是 &lt;code&gt;![image: generate:](https://...)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：添加 URL 验证&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// 只接受有效的 URL 格式
+if (url.match(/^https?:\/\//) || url.match(/^\//)) {
+  coverImage = url;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;五、特色功能实现&lt;/h2&gt;
+&lt;h3&gt;5.1 自动提取封面和摘要&lt;/h3&gt;
+&lt;p&gt;无需手动填写，系统自动处理：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+title: 文章标题
+published: 2026-02-06
+tags: [标签]
+category: 技术教程
+# 无需填写 image 和 description
+---
+
+第一段文字会自动成为摘要...
+
+文章正文...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;封面&lt;/strong&gt;：自动提取第一张图片&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;摘要&lt;/strong&gt;：自动提取第一段文字&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;5.2 微信二维码弹窗&lt;/h3&gt;
+&lt;p&gt;点击微信图标弹出霓虹灯风格弹窗，支持一键复制微信号。&lt;/p&gt;
+&lt;p&gt;修改 &lt;code&gt;src/layouts/MainGridLayout.astro&lt;/code&gt; 添加弹窗 HTML 和 JavaScript。&lt;/p&gt;
+&lt;h3&gt;5.3 Giscus 评论区&lt;/h3&gt;
+&lt;p&gt;基于 GitHub Discussions 的评论系统，无需数据库。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;配置步骤&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在 GitHub 仓库启用 Discussions&lt;/li&gt;
+&lt;li&gt;访问 https://giscus.app 获取配置&lt;/li&gt;
+&lt;li&gt;更新 &lt;code&gt;src/pages/posts/[...slug].astro&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;div id=&quot;giscus-container&quot;
+    data-repo=&quot;你的用户名/仓库名&quot;
+    data-repo-id=&quot;R_kgDOxxxxxxxxx&quot;
+    data-category=&quot;Announcements&quot;
+    data-category-id=&quot;DIC_kwDOxxxxxxxxx&quot;
+    data-mapping=&quot;pathname&quot;
+    data-theme=&quot;preferred_color_scheme&quot;
+    data-lang=&quot;zh-CN&quot;
+&amp;gt;&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;5.4 文章分类功能&lt;/h3&gt;
+&lt;p&gt;自动统计每个分类的文章数量，点击查看分类文章。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;分类规则&lt;/strong&gt;：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;分类&lt;/th&gt;
+&lt;th&gt;关键词&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Software&lt;/td&gt;
+&lt;td&gt;Typora, PicList, 快捷键, 图床, 工具&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Technical&lt;/td&gt;
+&lt;td&gt;教程, 部署, 搭建, 安装, 完整指南&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AIHacks&lt;/td&gt;
+&lt;td&gt;Claude, ChatGPT, GPT, 提示词, LLM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;六、常用命令&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;# 创建新文章
+npm run new-post &quot;文章标题&quot;
+
+# 启动开发服务器
+npm run dev
+
+# 构建生产版本
+npm run build
+
+# 预览构建结果
+npm run preview
+
+# 批量导入文章
+node scripts/import-posts.cjs
+
+# 更新文章分类
+node scripts/update-categories.cjs
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;七、性能优化建议&lt;/h2&gt;
+&lt;h3&gt;7.1 图片优化&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;使用 WebP 格式（体积更小）&lt;/li&gt;
+&lt;li&gt;关键图片添加 &lt;code&gt;fetchpriority=&quot;high&quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;非关键图片使用 &lt;code&gt;loading=&quot;lazy&quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;7.2 字体优化&lt;/h3&gt;
+&lt;p&gt;使用 CDN 加载霞鹜文楷字体：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css&quot; /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;7.3 构建优化&lt;/h3&gt;
+&lt;p&gt;Astro 默认进行代码分割和 tree-shaking，无需额外配置。&lt;/p&gt;
+&lt;h2&gt;八、总结&lt;/h2&gt;
+&lt;h3&gt;时间分配&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;任务&lt;/th&gt;
+&lt;th&gt;耗时&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;项目配置&lt;/td&gt;
+&lt;td&gt;1 小时&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;部署上线&lt;/td&gt;
+&lt;td&gt;30 分钟&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;修复 YAML 问题&lt;/td&gt;
+&lt;td&gt;2 小时&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;解决导航栏抖动&lt;/td&gt;
+&lt;td&gt;1 小时&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;性能优化&lt;/td&gt;
+&lt;td&gt;1 小时&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;其他调整&lt;/td&gt;
+&lt;td&gt;2 小时&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;总计&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;约 8 小时&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;经验总结&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;YAML 格式极其严格&lt;/strong&gt;：一个空格错误就会导致整篇文章无法显示&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;使用 CSS 变量&lt;/strong&gt;：避免固定颜色值，让主题自动适配&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;关键资源优先加载&lt;/strong&gt;：首屏图片不要使用 &lt;code&gt;loading=&quot;lazy&quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;测试深色模式&lt;/strong&gt;：确保在深色模式下也能正常显示&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;善用 Astro 的自动提取&lt;/strong&gt;：减少手动填写的工作量&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;推荐资源&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Fuwari 主题&lt;/strong&gt;：https://github.com/saicaca/fuwari&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Astro 文档&lt;/strong&gt;：https://docs.astro.build&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;EdgeOne 控制台&lt;/strong&gt;：https://console.cloud.tencent.com/edgeone&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;霞鹜文楷字体&lt;/strong&gt;：https://github.com/lxgw/LxgwWenKai&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;下一步&lt;/h2&gt;
+&lt;p&gt;博客已经上线，接下来可以：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;完善个人信息和社交链接&lt;/li&gt;
+&lt;li&gt;配置自定义域名（需要备案）&lt;/li&gt;
+&lt;li&gt;添加更多文章&lt;/li&gt;
+&lt;li&gt;优化 SEO（搜索引擎优化）&lt;/li&gt;
+&lt;li&gt;集成统计工具（如 Umami）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;祝你搭建顺利！有任何问题欢迎在评论区留言。&lt;/p&gt;
+</content:encoded></item><item><title>Obsidian+AI：让笔记变成智能知识库</title><link>https://blog.acofork.com/posts/ai%E6%96%B0%E9%B2%9C%E7%8E%A9%E6%B3%95/obsidian-ai/</link><guid isPermaLink="true">https://blog.acofork.com/posts/ai%E6%96%B0%E9%B2%9C%E7%8E%A9%E6%B3%95/obsidian-ai/</guid><description>这几天，在github发现Obsidian重磅插件，直接把 AI 功能深度集成到核心里了！今天我要分享的 Obsidian+AI 组合，一次性解决这些痛点！</description><pubDate>Wed, 04 Feb 2026 04:54:28 GMT</pubDate><content:encoded>&lt;p&gt;这几天，在gihub发现Obsidian重磅插件，直接把 AI 功能深度集成到核心里了！网上都在夸赞，确实&lt;strong&gt;牛批&lt;/strong&gt;！今天我要分享的 Obsidian+AI 组合，&lt;em&gt;一次性解决这些痛点&lt;/em&gt;！简单说，你的笔记不再是一个个&lt;strong&gt;死文档*，而是变成了能理解、能推理、能自动化的&lt;/strong&gt;AI 上下文层**。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260113215058651.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;一.准备工作&lt;/h2&gt;
 &lt;p&gt;✅已安装 Obsidian&lt;/p&gt;
@@ -456,22 +925,6 @@ npm run dev
 &lt;p&gt;&lt;img src=&quot;https://mmbiz.qpic.cn/mmbiz_png/gz2sdHyQbaa1ZQyJicMI8k2NbjBib4XlyyJscbYZGRrw3unMhtcLjFuHf7vzJYZ5761IkGjUrRoP4Z8pTzBnWbfw/640?wx_fmt=png&amp;amp;from=appmsg&amp;amp;tp=wxpic&amp;amp;wxfrom=5&amp;amp;wx_lazy=1&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;这样，Typora + PicList + Gitee 的图床方案就配置好了，之后写 Markdown 时插入的图片会自动上传到 Gitee，并返回在线链接，非常省心。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20250826173904610.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-</content:encoded></item><item><title>蔡澜：以生活智慧诠释 &quot;过好这一生&quot; 的本质内涵</title><link>https://blog.acofork.com/posts/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%88%A9/shengm/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%88%A9/shengm/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;作为华语圈知名的生活家、作家与文化学者，蔡澜先生始终以通透豁达的人生态度影响着无数读者。在其随笔集《过好这一生》中，他结合疫情三年来的生活感悟，从字句哲思、饮食记忆到处世心态，为当代人提供了一份兼具烟火气与人生智慧的生活指南，传递出 &quot;真正活在当下&quot; 的生命哲学。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260204101447685.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;字句中的人生态度：删繁就简，活出本真&lt;/h2&gt;
-&lt;p&gt;文字是蔡澜表达生活态度的重要载体，他在筹备书法展时对字句的甄选与改编，恰是其人生哲学的浓缩体现：
-拒绝鸡汤，偏爱通透表达：摒弃 “岂能尽如人意，但求无愧于心” 等陈腐说教，推崇 “管他天下千万事，闲来轻笑两三声” 的松弛感，将 “轻笑” 改为 “怪笑” 更添随性趣味；引用臧克家 “自沐朝晖意蓊茏，休凭白发便呼翁” 的诗句，彰显不服老的生命热忱。
-化用经典，赋予生活气息：将郑板桥 “难得糊涂” 改为 “时常糊涂”，把 “不吃人间烟火” 变为 “大吃人间烟火”，让迂腐字句焕发生活质感；结合自身经历创作 “喜为五斗米折腰”，打破传统清高执念，体现对世俗生活的热爱。
-短句明心，传递纯粹快乐：提炼 “懒得管”“别紧张”“使劲玩” 等三字短语，以及 “俗气到底”“白日梦梦” 等四字表达，用直白语言传递简单快乐的生活主张，契合当代人对解压生活的追求。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260204101757096.webp&quot; alt=&quot;image-20260204101757096&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;处世哲学的核心：接纳不完美，活在当下&lt;/h2&gt;
-&lt;p&gt;蔡澜的 “人生解题思路”，核心在于接纳生活的不完美，以豁达心态面对世事变迁：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;坦然面对得失&lt;/strong&gt;：疫情改变了每个人的生活节奏，但他强调 “生活还在继续”，主张通过 “吃点儿好的、怀念美好记忆、坦然做自己” 等简单方式，在逆境中寻找生活的乐趣。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;坚守内心本真&lt;/strong&gt;：面对网友对其 “为五斗米折腰” 的质疑，他以 “哈哈大笑” 回应并改编诗句，展现不被外界评价裹挟的通透；推崇 “若世上无佛，善事父母，便是佛” 的禅理，将人生价值回归到朴素的亲情与善行中。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;拥抱世俗快乐&lt;/strong&gt;：不追求 “超凡脱俗” 的虚假境界，反而热爱 “大吃人间烟火” 的真实生活，从 “清晨焙饼煮茶，傍晚喝酒看花” 的日常中提炼幸福感，诠释了 “过好这一生” 的本质的是 “真正地活着”。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;蔡澜在《过好这一生》中，以清淡质朴的文字、琐碎真实的生活片段，勾勒出一种 “通透、豁达、热爱生活” 的人生范式。他不刻意点化，却通过字句改编、饮食记忆与处世感悟，让读者明白：“过好这一生” 无需追求宏大叙事，而是要在每一个当下接纳不完美、珍视烟火气、坚守本真心。这种兼具实用性与哲理性的生活智慧，为当代人在快节奏、高压力的生活中提供了一剂解压良方，也让 “活在当下” 的生命哲学拥有了更具体的实践路径。&lt;/p&gt;
 </content:encoded></item><item><title>闪电说：端侧AI语音输入法</title><link>https://blog.acofork.com/posts/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%88%A9/%E9%97%AA%E7%94%B5%E8%AF%B4%E7%AB%AF%E4%BE%A7ai%E8%AF%AD%E9%9F%B3%E8%BE%93%E5%85%A5%E6%B3%95/</link><guid isPermaLink="true">https://blog.acofork.com/posts/%E8%BD%AF%E4%BB%B6%E5%AE%89%E5%88%A9/%E9%97%AA%E7%94%B5%E8%AF%B4%E7%AB%AF%E4%BE%A7ai%E8%AF%AD%E9%9F%B3%E8%BE%93%E5%85%A5%E6%B3%95/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;闪电说是由武汉团队打造的&lt;strong&gt;国产 AI 语音输入法&lt;/strong&gt;，前身为代体输入法，以 “端侧本地处理” 为核心特色，实现毫秒级语音转文字体验。它打破传统云端语音输入的延迟与隐私痛点，通过本地 AI 引擎构建 “即说即显、思维同步” 的输入模式，兼容 Windows 和 macOS 全平台，是一款完全免费的系统级输入工具，被观猹平台评为 8.6 分高分产品。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260204111254949.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;上手指南&lt;/h2&gt;
