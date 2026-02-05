@@ -46,32 +46,21 @@ const sortedCategories = Array.from(friendsByCategory.entries()).sort((a, b) =>
             {sortedCategories.map(([category, categoryFriends]) => (
                 <div class="category-section">
                     <div class="category-header">
-                        <div class="flex items-center justify-center gap-2 mb-4">
-                            <div class="w-8 h-px border-t border-dashed border-[var(--primary)]/50"></div>
-                            <div class="relative w-5 h-5 rounded-lg bg-gradient-to-br from-[var(--primary)] to-[var(--primary)]/70 flex items-center justify-center overflow-hidden">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3 text-white dark:text-black/70 relative z-10">
-                                    <rect x="3" y="3" width="7" height="7"></rect>
-                                    <rect x="14" y="3" width="7" height="7"></rect>
-                                    <rect x="14" y="14" width="7" height="7"></rect>
-                                    <rect x="3" y="14" width="7" height="7"></rect>
-                                </svg>
-                                <div class="absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent"></div>
-                            </div>
-                            <span class="font-bold" style="color: var(--primary)">{category}</span>
-                            <div class="w-8 h-px border-t border-dashed border-[var(--primary)]/50"></div>
-                        </div>
+                        <span class="font-bold text-base" style="color: var(--primary)">{category}</span>
                     </div>
 
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                         {categoryFriends.map((friend) => (
                             <a href={friend.url} target="_blank" class="friend-card">
-                                <div class="flex items-center gap-2">
-                                    <div class="relative w-5 h-5 rounded overflow-hidden" style={`--theme-hue: ${siteConfig.themeColor.hue}`}>
-                                        <img src={friend.avatar} loading="lazy" class="w-full h-full object-cover transition-opacity duration-500" alt={`${friend.name}的头像`} />
+                                <div class="friend-card-inner">
+                                    <div class="friend-card-icon">
+                                        <img src={friend.avatar} loading="lazy" alt={friend.name} />
                                     </div>
-                                    <div class="font-bold text-black dark:text-white">{friend.name}</div>
+                                    <div class="friend-card-content">
+                                        <div class="friend-card-name">{friend.name}</div>
+                                        <div class="friend-card-desc">{friend.description}</div>
+                                    </div>
                                 </div>
-                                <div class="text-sm text-black/50 dark:text-white/50">{friend.description}</div>
                             </a>
                         ))}
                     </div>
@@ -86,35 +75,101 @@ const sortedCategories = Array.from(friendsByCategory.entries()).sort((a, b) =>
         margin-bottom: 1rem;
     }
 
+    .category-header {
+        margin-bottom: 1rem;
+        padding-left: 0.25rem;
+    }
+
     .friend-card {
-        @apply flex flex-col gap-1 p-4 rounded-lg bg-[var(--card-bg)] border border-black/10 dark:border-white/10 hover:border-black/20 dark:hover:border-white/20 hover:bg-black/5 dark:hover:bg-white/5;
-        transition-property: background-color, border-color, scale;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-duration: 0.15s;
-        transform: translateZ(0);
+        display: block;
+        text-decoration: none;
+        transition: all 0.3s ease;
     }
 
-    .friend-card:active {
-        scale: .98;
-        background-color: var(--btn-regular-bg-active);
+    .friend-card-inner {
+        background: rgb(255, 255, 255);
+        border-radius: 12px;
+        padding: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        height: 100%;
     }
 
-    .friend-card:hover {
-        background-color: var(--btn-regular-bg-hover);
+    .dark .friend-card-inner {
+        background: rgb(45, 45, 45);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     }
 
-    .friend-card:hover .font-bold {
-        color: var(--btn-content);
+    .friend-card:hover .friend-card-inner {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     }
 
-    .friend-card:hover .text-sm {
-        @apply text-gray-700 dark:text-white;
+    .dark .friend-card:hover .friend-card-inner {
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
     }
 
-    .friend-card .font-bold,
-    .friend-card .text-sm {
-        transition-property: color;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-duration: 0.15s;
+    .friend-card-icon {
+        width: 36px;
+        height: 36px;
+        flex-shrink: 0;
+        border-radius: 8px;
+        overflow: hidden;
+        background: rgb(245, 245, 245);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .dark .friend-card-icon {
+        background: rgb(55, 55, 55);
+    }
+
+    .friend-card-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .friend-card-content {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .friend-card-name {
+        font-size: 14px;
+        font-weight: 600;
+        color: rgb(30, 30, 30);
+        margin-bottom: 2px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .dark .friend-card-name {
+        color: rgb(230, 230, 230);
+    }
+
+    .friend-card-desc {
+        font-size: 12px;
+        color: rgb(140, 140, 140);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .dark .friend-card-desc {
+        color: rgb(160, 160, 160);
+    }
+
+    .friend-card:hover .friend-card-name {
+        color: var(--primary);
+    }
+
+    .friend-card:hover .friend-card-icon {
+        background: var(--primary) / 0.1;
     }
 </style>
