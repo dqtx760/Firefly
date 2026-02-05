@@ -129,7 +129,7 @@ onMount(async () => {
 				link:
 					item
 						.querySelector("link")
-						?.textContent?.replace(/.*\/posts\/(.*?)\//, "$1") || "",
+						?.textContent?.replace(/.*\/posts\//, "")?.replace(/\/$/, "") || "",
 			};
 		});
 	} catch (error) {
