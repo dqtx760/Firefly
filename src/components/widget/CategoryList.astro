@@ -129,24 +129,25 @@ const categories = Array.from(categoryCount.entries())
     }
 
     .category-count {
-        font-size: 12px;
-        font-weight: 600;
-        color: rgb(255, 255, 255);
-        background: rgb(180, 180, 180);
-        padding: 4px 10px;
-        border-radius: 20px;
+        font-size: 11px;
+        font-weight: 500;
+        color: rgb(140, 140, 140);
+        background: transparent;
+        padding: 2px 8px;
+        border-radius: 12px;
+        border: 1px solid rgb(220, 220, 220);
         transition: all 0.3s ease;
     }
 
     .dark .category-count {
-        color: rgb(30, 30, 30);
-        background: rgb(150, 150, 150);
+        color: rgb(160, 160, 160);
+        border-color: rgb(70, 70, 70);
     }
 
     .category-card:hover .category-count {
-        background: var(--primary);
-        color: white;
-        transform: scale(1.05);
+        background: var(--primary) / 0.1;
+        color: var(--primary);
+        border-color: var(--primary);
     }
 
     @keyframes slideIn {
