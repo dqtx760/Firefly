@@ -68,7 +68,7 @@ const categories = Array.from(categoryCount.entries())
 
     .category-card {
         position: relative;
-        background: rgba(128, 128, 128, 0.05);
+        background: rgb(245, 245, 245);
         backdrop-filter: blur(10px);
         border-radius: 12px;
         overflow: hidden;
@@ -76,10 +76,18 @@ const categories = Array.from(categoryCount.entries())
         animation: slideIn 0.4s ease-out backwards;
     }
 
+    .dark .category-card {
+        background: rgb(40, 40, 40);
+    }
+
     .category-card:hover {
-        background: rgba(128, 128, 128, 0.08);
+        background: rgb(235, 235, 235);
         transform: translateX(4px);
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .dark .category-card:hover {
+        background: rgb(50, 50, 50);
     }
 
     .category-card-border {
@@ -107,13 +115,13 @@ const categories = Array.from(categoryCount.entries())
 
     .category-name {
         font-size: 14px;
-        color: rgb(87, 87, 87);
-        dark:color: rgb(212, 212, 212);
+        color: rgb(60, 60, 60);
+        font-weight: 500;
         transition: color 0.3s ease;
     }
 
     .dark .category-name {
-        color: rgb(212, 212, 212);
+        color: rgb(220, 220, 220);
     }
 
     .category-card:hover .category-name {
@@ -122,12 +130,17 @@ const categories = Array.from(categoryCount.entries())
 
     .category-count {
         font-size: 12px;
-        font-weight: 500;
-        color: rgb(120, 120, 120);
-        background: rgba(128, 128, 128, 0.1);
+        font-weight: 600;
+        color: rgb(255, 255, 255);
+        background: rgb(180, 180, 180);
         padding: 4px 10px;
         border-radius: 20px;
         transition: all 0.3s ease;
+    }
+
+    .dark .category-count {
+        color: rgb(30, 30, 30);
+        background: rgb(150, 150, 150);
     }
 
     .category-card:hover .category-count {
