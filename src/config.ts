@@ -68,7 +68,6 @@ export const siteConfig: SiteConfig = {
 		{ url: "https://2x.nz", alias: "Global" },
 	],
 	server: [
-		{ url: "", text: "Blog" },
 		{ url: "https://umami.acofork.com", text: "Umami" },
 		{ url: "https://pic1.acofork.com", text: "RandomPic" },
 	],
