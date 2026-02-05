@@ -38,12 +38,12 @@ const categories = Array.from(categoryCount.entries())
         return b.count - a.count;
     });
 
-// 定义分类的对齐方式：左对齐或居中
+// 所有分类都使用居中对齐（文字居中，数字在右侧）
 const categoryAlign = new Map<string, "left" | "center">();
-categoryAlign.set("软件安利", "left");
+categoryAlign.set("软件安利", "center");
 categoryAlign.set("AI新鲜玩法", "center");
 categoryAlign.set("技术教程", "center");
-// 默认为左对齐
+// 默认为居中对齐
 ---
 
 <div class="category-list">
@@ -56,7 +56,7 @@ categoryAlign.set("技术教程", "center");
 
     <div class="flex flex-col gap-2">
         {categories.map((category, index) => {
-            const align = categoryAlign.get(category.name) || "left";
+            const align = categoryAlign.get(category.name) || "center";
             const displayCount = category.count < 10 ? `0${category.count}` : String(category.count);
             return (
                 <a href={`/categories/${encodeURIComponent(category.name)}/`} class="category-item group">
