@@ -13,7 +13,7 @@ const { src = "https://gitee.com/da-qiang-classmate/typora/raw/master/image/gzhh
 
 <div class="image-decoration-wrapper">
     <div class="image-decoration-header">
-        <div class="decoration-line"></div>
+        <span class="hacker-icon">&gt;_</span>
         <span class="decoration-title">{title}</span>
         <div class="decoration-line"></div>
     </div>
@@ -31,9 +31,23 @@ const { src = "https://gitee.com/da-qiang-classmate/typora/raw/master/image/gzhh
     .image-decoration-header {
         display: flex;
         align-items: center;
-        justify-content: center;
         gap: 8px;
         margin-bottom: 12px;
+    }
+
+    .hacker-icon {
+        font-size: 14px;
+        font-weight: 700;
+        color: #9FB48E;
+        font-family: 'Courier New', 'Consolas', monospace;
+        letter-spacing: -1px;
+    }
+
+    .decoration-title {
+        font-size: 14px;
+        font-weight: 600;
+        color: #9FB48E;
+        white-space: nowrap;
     }
 
     .decoration-line {
@@ -46,18 +60,6 @@ const { src = "https://gitee.com/da-qiang-classmate/typora/raw/master/image/gzhh
 
     .dark .decoration-line {
         border-color: rgb(70, 70, 70);
-    }
-
-    .decoration-title {
-        font-size: 14px;
-        font-weight: 600;
-        color: hsl(91, 60%, 45%);
-        white-space: nowrap;
-        padding: 0 8px;
-    }
-
-    .dark .decoration-title {
-        color: hsl(91, 60%, 60%);
     }
 
     .image-decoration {
