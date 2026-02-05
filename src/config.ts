@@ -63,8 +63,8 @@ export const siteConfig: SiteConfig = {
 		},
 	],
 	officialSites: [
-		{ url: "https://blog.acofork.com", alias: "CN" },
-		{ url: "https://2x.nz", alias: "Global" },
+		{ url: "https://dqtx.cc", alias: "主页" },
+		{ url: "https://www.dqtx.cc", alias: "WWW" },
 	],
 	server: [
 		{ url: "https://umami.acofork.com", text: "Umami" },

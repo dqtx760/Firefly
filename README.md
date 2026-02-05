@@ -236,7 +236,7 @@ export const siteConfig: SiteConfig = {
   title: "Derek Zhao Blog",
   subtitle: "技术分享与实践",
   lang: "zh_CN",
-  url: "https://blog.acofork.com",
+  url: "https://dqtx.cc",
   author: "大强同学",
 };
 
@@ -428,7 +428,7 @@ category: 软件安利
 
 ---
 
-**博客地址**: [https://blog.acofork.com](https://blog.acofork.com)
+**博客地址**: [https://dqtx.cc](https://dqtx.cc)
 
 **GitHub 仓库**: [https://github.com/dqtx760/Firefly](https://github.com/dqtx760/Firefly)
 
