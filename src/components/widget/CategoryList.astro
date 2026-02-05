@@ -20,9 +20,19 @@ for (const post of allPosts) {
 // 自定义分类排序顺序
 const categoryOrder = ["软件安利", "技术教程", "AI新鲜玩法"];
 
+// 分类名称映射（中文 -> 英文显示）
+const categoryDisplayName = new Map<string, string>();
+categoryDisplayName.set("软件安利", "Software");
+categoryDisplayName.set("技术教程", "Technical");
+categoryDisplayName.set("AI新鲜玩法", "AIHacks");
+
 // 转换为数组并按自定义顺序排序，不在列表中的排在后面
 const categories = Array.from(categoryCount.entries())
-    .map(([name, count]) => ({ name, count }))
+    .map(([name, count]) => ({
+        name,
+        displayName: categoryDisplayName.get(name) || name,
+        count
+    }))
     .sort((a, b) => {
         const aIndex = categoryOrder.indexOf(a.name);
         const bIndex = categoryOrder.indexOf(b.name);
@@ -63,7 +73,7 @@ categoryAlign.set("技术教程", "center");
                     <div class="category-card" style={"animation-delay: " + index * 0.05 + "s"}>
                         <div class="category-card-border"></div>
                         <div class={`category-card-content category-card-${align}`}>
-                            <span class="category-name">{category.name}</span>
+                            <span class="category-name">{category.displayName}</span>
                             <span class="category-count">{displayCount}</span>
                         </div>
                     </div>
