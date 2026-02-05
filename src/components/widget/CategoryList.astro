@@ -21,6 +21,13 @@ for (const post of allPosts) {
 const categories = Array.from(categoryCount.entries())
     .map(([name, count]) => ({ name, count }))
     .sort((a, b) => b.count - a.count);
+
+// 定义分类的对齐方式：左对齐或居中
+const categoryAlign = new Map<string, "left" | "center">();
+categoryAlign.set("软件安利", "left");
+categoryAlign.set("AI新鲜玩法", "center");
+categoryAlign.set("技术教程", "center");
+// 默认为左对齐
 ---
 
 <div class="category-list">
@@ -32,17 +39,21 @@ const categories = Array.from(categoryCount.entries())
     </div>
 
     <div class="flex flex-col gap-2">
-        {categories.map((category, index) => (
-            <a href={`/categories/${encodeURIComponent(category.name)}/`} class="category-item group">
-                <div class="category-card" style={"animation-delay: " + index * 0.05 + "s"}>
-                    <div class="category-card-border"></div>
-                    <div class="category-card-content">
-                        <span class="category-name">{category.name}</span>
-                        <span class="category-count">{category.count}</span>
+        {categories.map((category, index) => {
+            const align = categoryAlign.get(category.name) || "left";
+            const displayCount = category.count < 10 ? `0${category.count}` : String(category.count);
+            return (
+                <a href={`/categories/${encodeURIComponent(category.name)}/`} class="category-item group">
+                    <div class="category-card" style={"animation-delay: " + index * 0.05 + "s"}>
+                        <div class="category-card-border"></div>
+                        <div class={`category-card-content category-card-${align}`}>
+                            <span class="category-name">{category.name}</span>
+                            <span class="category-count">{displayCount}</span>
+                        </div>
                     </div>
-                </div>
-            </a>
-        ))}
+                </a>
+            );
+        })}
     </div>
 </div>
 
@@ -132,9 +143,16 @@ const categories = Array.from(categoryCount.entries())
     .category-card-content {
         display: flex;
         align-items: center;
-        justify-content: space-between;
         padding: 10px 14px;
         gap: 8px;
+    }
+
+    .category-card-left {
+        justify-content: flex-start;
+    }
+
+    .category-card-center {
+        justify-content: center;
     }
 
     .category-name {
@@ -161,6 +179,8 @@ const categories = Array.from(categoryCount.entries())
         border-radius: 12px;
         border: 1px solid rgb(220, 220, 220);
         transition: all 0.3s ease;
+        min-width: 24px;
+        text-align: center;
     }
 
     .dark .category-count {
