@@ -11,20 +11,28 @@ export async function getStaticPaths() {
     // 获取所有唯一的分类
     const categories = [...new Set(posts.map(post => post.data.category || "未分类"))];
 
+    // 英文名称映射
+    const categoryEnglishName = new Map<string, string>();
+    categoryEnglishName.set("软件安利", "Software");
+    categoryEnglishName.set("技术教程", "Technical");
+    categoryEnglishName.set("AI新鲜玩法", "AIHacks");
+
     return categories.map(category => ({
-        params: { category }
+        params: { category: categoryEnglishName.get(category) || category },
+        props: { chineseName: category }
     }));
 }
 
-const { category } = Astro.params;
+const { category: englishCategory } = Astro.params;
+const { chineseName } = Astro.props;
 
 // 获取当前分类的文章
 const allPosts = await getSortedPosts();
-const categoryPosts = allPosts.filter(post => (post.data.category || "未分类") === category);
+const categoryPosts = allPosts.filter(post => (post.data.category || "未分类") === chineseName);
 
 const config = {
-    title: `${category} - 文章分类`,
-    description: `查看所有 ${category} 分类下的文章`
+    title: `${englishCategory} - 文章分类`,
+    description: `查看所有 ${chineseName}(${englishCategory}) 分类下的文章`
 };
 ---
 
@@ -32,7 +40,7 @@ const config = {
     <div class="card-base p-6 rounded-xl">
         <div class="mb-6">
             <h1 class="text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-2">
-                📁 {category}
+                📁 {englishCategory}
             </h1>
             <p class="text-neutral-600 dark:text-neutral-400">共 {categoryPosts.length} 篇文章</p>
         </div>
