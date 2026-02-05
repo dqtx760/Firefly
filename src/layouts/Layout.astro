@@ -522,6 +522,13 @@ const setup = () => {
 			bodyElement!.classList.remove('lg:is-home');
 		}
 
+		// Disable onload animations during navigation to prevent jitter
+		const animatedElements = document.querySelectorAll('.onload-animation');
+		animatedElements.forEach(el => {
+			el.style.opacity = '1';
+			el.style.animation = 'none';
+		});
+
 		// Hide the TOC while scrolling back to top
 		let toc = document.getElementById('toc-wrapper');
 		if (toc) {
