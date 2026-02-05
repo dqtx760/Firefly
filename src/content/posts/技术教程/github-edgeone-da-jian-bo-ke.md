@@ -1,9 +1,10 @@
 ---
-title: 耗时 1 天！用 GitHub + EdgeOne 搭建个人博客的过程
+title: GitHub + EdgeOne 搭建个人博客的过程
 published: 2026-02-06
 tags: [博客, Astro, EdgeOne, GitHub, 部署]
 category: 技术教程
 draft: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260206033446484.webp
 ---
 
 > 想要一个属于自己的博客，但不知道从哪里开始？本文详细记录了从零开始搭建个人博客的全过程，包括踩过的各种坑和解决方案。
@@ -319,6 +320,37 @@ if (url.match(/^https?:\/\//) || url.match(/^\//)) {
 }
 ```
 
+### 坑 7：EdgeOne 构建时 import.meta.glob 不工作
+
+**现象**：本地开发正常，但 EdgeOne 构建后数据不显示。
+
+**原因**：`import.meta.glob` 在 EdgeOne 构建环境下无法正确加载 JSON 文件。
+
+**错误代码**：
+
+```astro
+---
+// ❌ 在 EdgeOne 构建时不工作
+const sponsorFiles = import.meta.glob('../../data/sponsors/*.json', { eager: true });
+const sponsors = Object.values(sponsorFiles).map(m => m.default);
+---
+```
+
+**解决方案**：将数据直接内联到文件中
+
+```astro
+---
+// ✅ 直接内联数据
+const sponsors = [
+  { "name": "赞助者1", "avatar": "https://...", "date": "2026-01-01" },
+  { "name": "赞助者2", "avatar": "https://...", "date": "2026-01-02" },
+  // ...更多数据
+];
+---
+```
+
+**经验教训**：在 EdgeOne 等云端构建环境中，尽量避免使用动态导入，对于静态数据直接内联更可靠。
+
 ## 五、特色功能实现
 
 ### 5.1 自动提取封面和摘要
@@ -435,8 +467,9 @@ Astro 默认进行代码分割和 tree-shaking，无需额外配置。
 | 修复 YAML 问题 | 2 小时 |
 | 解决导航栏抖动 | 1 小时 |
 | 性能优化 | 1 小时 |
+| 修复构建问题 | 1 小时 |
 | 其他调整 | 2 小时 |
-| **总计** | **约 8 小时** |
+| **总计** | **约 9 小时** |
 
 ### 经验总结
 
@@ -445,6 +478,7 @@ Astro 默认进行代码分割和 tree-shaking，无需额外配置。
 3. **关键资源优先加载**：首屏图片不要使用 `loading="lazy"`
 4. **测试深色模式**：确保在深色模式下也能正常显示
 5. **善用 Astro 的自动提取**：减少手动填写的工作量
+6. **注意云端构建差异**：`import.meta.glob` 在云端可能不工作，静态数据直接内联更可靠
 
 ### 推荐资源
 
