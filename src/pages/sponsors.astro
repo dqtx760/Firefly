@@ -1,15 +1,7 @@
 ---
 import { siteConfig } from "@/config";
-import type { Sponsor } from "@/types/data";
 import MainGridLayout from "@layouts/MainGridLayout.astro";
 import { Icon } from "astro-icon/components";
-
-const sponsors = Object.values(
-	import.meta.glob<Sponsor>("@/data/sponsors/*.json", {
-		eager: true,
-		import: "default",
-	}),
-);
 ---
 
 <MainGridLayout title="赞助支持">
@@ -108,37 +100,6 @@ const sponsors = Object.values(
                 </div>
             </div>
         </div>
-        <div class="sponsors-section card-base p-6">
-            <h2 class="text-xl font-bold text-black dark:text-white mb-3 flex items-center gap-2">
-                <Icon name="material-symbols:group" class="text-[1.5rem] text-[var(--primary)]"></Icon>
-                <span>已赞助的小伙伴</span>
-            </h2>
-            <p class="text-sm text-black/60 dark:text-white/60 mb-4">
-            如果您已赞助，并且想加入赞助名单，<a target="_blank" href="https://github.com/dqtx760/Firefly/tree/main/src/data/sponsors" class="transition link text-[var(--primary)] font-medium underline">请点击这里提交</a>
-            </p>
-            <div class="sponsors-grid">
-                {sponsors.map((sponsor) => (
-                    <div class="sponsor-card">
-                        <div class="flex items-center gap-3 p-4 rounded-lg bg-[var(--card-bg)] border border-black/10 dark:border-white/10" style="backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);">
-                            <div class="w-10 h-10 rounded-lg flex items-center justify-center overflow-hidden">
-                            {sponsor.avatar ? (
-                                <div class="relative w-full h-full rounded-lg overflow-hidden" style={`--theme-hue: ${siteConfig.themeColor.hue}`}>
-                                    <img src={sponsor.avatar} alt={`${sponsor.name}的头像`} loading="lazy" class="w-full h-full object-cover transition duration-500" />
-                                </div>
-                            ) : (
-                                <Icon name="material-symbols:person" class="text-gray-500 dark:text-gray-400 text-[1.2rem]" />
-                            )}
-                        </div>
-                            <div class="flex-1">
-                                <h4 class="font-semibold text-black dark:text-white text-sm">{sponsor.name}</h4>
-                                <p class="text-xs text-black/60 dark:text-white/60">{sponsor.date}</p>
-                            </div>
-                            <div class="text-xs text-[var(--primary)] font-medium">{sponsor.amount}</div>
-                        </div>
-                    </div>
-                ))}
-            </div>
-        </div>
     </div>
 </MainGridLayout>
 
@@ -157,21 +118,5 @@ const sponsors = Object.values(
 
 .qr-code-placeholder {
     @apply text-center;
-}
-
-.sponsors-section {
-    @apply mt-6;
-}
-
-.sponsors-grid {
-    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4;
-}
-
-.sponsor-placeholder {
-    @apply transition-all duration-200 hover:scale-105;
-}
-
-.sponsor-card {
-    @apply transition-all duration-200 hover:shadow-md hover:scale-105;
 }
 </style>
