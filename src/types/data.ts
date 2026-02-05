@@ -10,6 +10,7 @@ export interface Friend {
 	avatar: string;
 	description: string;
 	url: string;
+	category?: string;
 }
 
 export interface SponsorsData {
