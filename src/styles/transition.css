@@ -24,6 +24,17 @@ html.is-animating .transition-swup-fade {
     animation: 300ms fade-in-up;
     animation-fill-mode: forwards;
 }
+
+/* Fallback: ensure content becomes visible even if animation doesn't trigger */
+.onload-animation {
+    animation: 300ms fade-in-up forwards, 300ms fade-in-visible forwards;
+}
+
+@keyframes fade-in-visible {
+    to {
+        opacity: 1;
+    }
+}
 #navbar {
     animation-delay: 0ms
 }
