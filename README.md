@@ -28,6 +28,7 @@
 - 📡 **RSS 订阅** - 支持 RSS/Atom 订阅
 - 🎥 **视频装饰** - 独特的视频装饰组件
 - 🔄 **页面切换** - Swup 平滑过渡动画
+- 💚 **Hacker 风格** - 终端风格装饰图标（>_）
 
 ### SEO 优化
 - 📈 **SEO 友好** - 自动生成 sitemap
@@ -62,7 +63,7 @@ fuwari/
 │   ├── components/                  # 组件目录
 │   │   ├── widget/                  # 侧边栏组件
 │   │   │   ├── Profile.astro        # 个人信息卡片
-│   │   │   ├── CategoryList.astro   # 分类列表
+│   │   │   ├── CategoryList.astro   # 分类列表（Hacker 风格）
 │   │   │   └── VideoDecoration.astro # 视频装饰
 │   │   ├── PostCard.astro           # 文章卡片组件
 │   │   └── PostPage.astro           # 文章列表页（含自动封面/描述提取）
@@ -76,6 +77,9 @@ fuwari/
 │   │   ├── assets/                  # 本地图片资源
 │   │   │   └── images/              # 图片文件
 │   │   └── config.ts                # 内容集合配置
+│   │
+│   ├── data/                        # 数据目录
+│   │   └── friends/                 # 友链数据（149个）
 │   │
 │   ├── layouts/                     # 布局文件
 │   │   ├── Layout.astro             # 主布局
@@ -102,7 +106,9 @@ fuwari/
 │   ├── fix-image-paths.cjs          # 修复图片路径
 │   ├── clean-unused-images.js       # 清理未使用的图片
 │   ├── del-space.js                 # 删除文件名空格
-│   └── new-post.js                  # 创建新文章
+│   ├── new-post.js                  # 创建新文章
+│   ├── import-posts.cjs             # 批量导入文章
+│   └── update-categories.cjs        # 批量更新分类
 │
 ├── package.json                     # 项目配置
 ├── astro.config.mjs                 # Astro 配置
@@ -513,7 +519,8 @@ export const profileConfig: ProfileConfig = {
 export const navBarConfig: NavBarConfig = {
   links: [
     { name: "电视喵", url: "https://tv.dqtx.cc/" },
-    { name: "关于", url: "/about" },
+    { name: "工坊", url: "https://app.dqtx.cc/" },
+    { name: "远程", url: "https://www.742112.xyz/" },
   ],
 };
 ```
@@ -522,8 +529,8 @@ export const navBarConfig: NavBarConfig = {
 
 ```typescript
 themeColor: {
-  hue: 250,        // 主色调 (0-360)
-  fixed: false,    // 是否固定颜色（false 则随时间变化）
+  hue: 91,        // 主色调 (0-360) - 绿色主题
+  fixed: true,    // 固定颜色
 }
 ```
 
@@ -620,3 +627,7 @@ export const categoryConfig: CategoryConfig = {
 **博客地址**: [https://blog.acofork.com](https://blog.acofork.com)
 
 **GitHub 仓库**: [https://github.com/dqtx760/Firefly](https://github.com/dqtx760/Firefly)
+
+---
+
+*最后更新: 2026-02-05*
