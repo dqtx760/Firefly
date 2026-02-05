@@ -5,7 +5,6 @@ description: '分享我的无服务器博客发布流程：使用 GitHub 托管 
 tags: [教程, 博客, 工作流, Typora, 自动化]
 category: 技术教程
 draft: false
-image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260204103206520.webp
 ---
 
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260204103206520.webp)
