@@ -1,87 +1,21 @@
 ---
 /**
- * 视频装饰组件
- * 显示循环播放的视频，带错误处理和重试机制
+ * 图片装饰组件
+ * 显示装饰性图片
  */
 interface Props {
     src?: string;
 }
 
-const { src = "https://storage.googleapis.com/creatorspace-public/users%2Fcm69rcp2205nuql01acfbyq0v%2Fokcia7dTfbFQHS73-users-cld4n5p4q1ahnpo0y6kwwv333-rJ1JJZyb4PQAnAlc-waterfall_test.mp4" } = Astro.props;
-
-// 解码URL（处理已编码的URL）
-const decodedSrc = decodeURI(src);
+const { src = "https://gitee.com/da-qiang-classmate/typora/raw/master/image/gzhhao.webp" } = Astro.props;
 ---
 
-<div class="video-decoration">
-    <video
-        autoplay
-        loop
-        muted
-        playsinline
-        data-video-src={decodedSrc}
-        class="video-decoration-video"
-    >
-        <source src={decodedSrc} type="video/mp4">
-    </video>
+<div class="image-decoration">
+    <img src={src} alt="装饰图片" class="image-decoration-img" loading="lazy" />
 </div>
 
-<script>
-    function initVideos() {
-        document.querySelectorAll('.video-decoration-video').forEach(video => {
-            // 重置视频状态
-            video.classList.remove('loading', 'loaded', 'error');
-
-            // 强制重新加载视频
-            video.load();
-
-            // 添加加载事件监听
-            video.addEventListener('loadstart', () => {
-                video.classList.add('loading');
-            }, { once: true });
-
-            video.addEventListener('canplay', () => {
-                video.classList.remove('loading');
-                video.classList.add('loaded');
-                video.play().catch(() => {});
-            }, { once: true });
-
-            video.addEventListener('error', () => {
-                video.classList.add('error');
-                // 2秒后重试
-                setTimeout(() => {
-                    const currentSrc = video.src;
-                    video.src = '';
-                    video.src = currentSrc;
-                    video.load();
-                }, 2000);
-            }, { once: true });
-
-            // 如果视频已加载，直接标记为已加载
-            if (video.readyState >= 2) {
-                video.classList.add('loaded');
-            }
-        });
-    }
-
-    const setup = () => {
-        // 初始化视频
-        initVideos();
-
-        // 使用 Swup hooks 监听页面切换
-        window.swup.hooks.on('content:replace', initVideos);
-        window.swup.hooks.on('page:view', initVideos);
-    };
-
-    if (window.swup) {
-        setup();
-    } else {
-        document.addEventListener('swup:enable', setup);
-    }
-</script>
-
 <style>
-    .video-decoration {
+    .image-decoration {
         width: 100%;
         height: 160px;
         overflow: hidden;
@@ -91,40 +25,14 @@ const decodedSrc = decodeURI(src);
         position: relative;
     }
 
-    .video-decoration video {
+    .image-decoration img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        transition: transform 0.3s ease;
     }
 
-    .video-decoration video.loading {
-        opacity: 0.5;
-    }
-
-    .video-decoration video.error {
-        opacity: 0.3;
-        filter: grayscale(50%);
-    }
-
-    /* 加载指示器 */
-    .video-decoration::after {
-        content: '加载中...';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 12px;
-        color: var(--primary);
-        opacity: 0;
-        transition: opacity 0.3s;
-    }
-
-    .video-decoration:has(.loading)::after {
-        opacity: 1;
-    }
-
-    .video-decoration:has(.loaded)::after,
-    .video-decoration:has(.error)::after {
-        opacity: 0;
+    .image-decoration:hover img {
+        transform: scale(1.05);
     }
 </style>
