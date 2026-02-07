@@ -497,6 +497,12 @@ function init() {
 	showBanner();
 	loadGiscus();
 
+	// 显示背景
+	const bgBox = document.getElementById('bg-box');
+	if (bgBox) {
+		bgBox.classList.add('loaded');
+	}
+
 	new MutationObserver(() => {
 		const frame = document.querySelector('iframe.giscus-frame');
 		if (!frame) return;
