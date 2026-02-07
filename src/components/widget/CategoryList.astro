@@ -42,15 +42,15 @@ const categories = Array.from(categoryCount.entries())
         <span class="category-title">文章分类</span>
     </div>
 
-    <div class="category-rail">
+    <div class="flex flex-col gap-2">
         {categories.map((category, index) => {
             const displayCount = category.count < 10 ? `0${category.count}` : String(category.count);
-            const isCurrent = Astro.url.pathname === `/categories/${category.name}/` ||
-                             (Astro.url.pathname === '/' && index === 0);
             return (
-                <a href={`/categories/${category.name}/`} class:list={["category-item", { "category-current": isCurrent }]}>
-                    <span class="category-name">{category.name}</span>
-                    <span class="category-count">{displayCount}</span>
+                <a href={`/categories/${category.name}/`} class="category-item group">
+                    <div class="category-card">
+                        <span class="category-name">{category.name}</span>
+                        <span class="category-count">{displayCount}</span>
+                    </div>
                 </a>
             );
         })}
@@ -59,17 +59,11 @@ const categories = Array.from(categoryCount.entries())
 
 <style>
     .category-list {
-        padding: 0;
+        padding: 0.5rem 0;
     }
 
     .category-header {
-        margin-bottom: 0;
-        padding-bottom: 12px;
-        border-bottom: 1px solid oklch(0.85 0.005 268);
-    }
-
-    html.dark .category-header {
-        border-bottom-color: oklch(0.30 0.01 268);
+        margin-bottom: 12px;
     }
 
     .category-title {
@@ -84,91 +78,70 @@ const categories = Array.from(categoryCount.entries())
         color: oklch(0.60 0.01 268);
     }
 
-    /* 栏位容器 - 连续区域 */
-    .category-rail {
-        display: flex;
-        flex-direction: column;
-        padding: 4px 0;
+    .category-item {
+        text-decoration: none;
+        display: block;
     }
 
-    /* 分类项 - 线性、垂直、规整 */
-    .category-item {
+    .category-card {
+        background: oklch(0.95 0.004 268 / 0.6);
+        backdrop-filter: blur(8px);
+        border-radius: 8px;
+        padding: 10px 14px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 10px 8px;
-        text-decoration: none;
-        border-left: 2px solid transparent;
-        transition: all 0.15s ease;
-        position: relative;
+        transition: all 0.2s ease;
+        border: 1px solid oklch(0.58 0.16 268 / 0.15);
     }
 
-    /* 未选中态 - 退到背景 */
-    .category-item:not(.category-current) {
-        margin-left: 0;
+    html.dark .category-card {
+        background: oklch(0.25 0.008 268 / 0.6);
+        border-color: oklch(0.58 0.16 268 / 0.2);
     }
 
-    .category-item:not(.category-current) .category-name {
-        color: oklch(0.50 0.01 268);
-        font-weight: 400;
+    .category-card:hover {
+        background: oklch(0.95 0.004 268 / 0.8);
+        border-color: oklch(0.58 0.16 268 / 0.3);
+        transform: translateX(2px);
     }
 
-    html.dark .category-item:not(.category-current) .category-name {
-        color: oklch(0.60 0.01 268);
-    }
-
-    .category-item:not(.category-current) .category-count {
-        color: oklch(0.55 0.01 268);
-    }
-
-    html.dark .category-item:not(.category-current) .category-count {
-        color: oklch(0.50 0.01 268);
-    }
-
-    /* 悬停态 */
-    .category-item:not(.category-current):hover {
-        background: oklch(0.96 0.002 268);
-        margin-left: 2px;
-    }
-
-    html.dark .category-item:not(.category-current):hover {
-        background: oklch(0.24 0.005 268);
-    }
-
-    /* 当前分类 - 站出来 */
-    .category-current {
-        background: oklch(0.95 0.004 268);
-        border-left-color: oklch(0.58 0.16 268);
-        padding-left: 12px;
-        margin-right: -8px;
-    }
-
-    html.dark .category-current {
-        background: oklch(0.26 0.008 268);
-    }
-
-    .category-current .category-name {
-        color: oklch(0.25 0.01 268);
-        font-weight: 500;
-    }
-
-    html.dark .category-current .category-name {
-        color: oklch(0.85 0.01 268);
-    }
-
-    .category-current .category-count {
-        color: oklch(0.58 0.16 268);
-        font-weight: 500;
+    html.dark .category-card:hover {
+        background: oklch(0.25 0.008 268 / 0.8);
+        border-color: oklch(0.58 0.16 268 / 0.4);
     }
 
     .category-name {
         font-size: 14px;
-        transition: all 0.15s ease;
+        color: oklch(0.30 0.01 268);
+        font-weight: 500;
+        transition: color 0.2s ease;
+    }
+
+    html.dark .category-name {
+        color: oklch(0.80 0.01 268);
+    }
+
+    .category-card:hover .category-name {
+        color: oklch(0.58 0.16 268);
+    }
+
+    html.dark .category-card:hover .category-name {
+        color: oklch(0.70 0.14 268);
     }
 
     .category-count {
         font-size: 12px;
+        color: oklch(0.50 0.01 268);
         font-variant-numeric: tabular-nums;
-        transition: all 0.15s ease;
+        transition: color 0.2s ease;
+    }
+
+    html.dark .category-count {
+        color: oklch(0.55 0.01 268);
+    }
+
+    .category-card:hover .category-count {
+        color: oklch(0.58 0.16 268);
     }
 </style>
