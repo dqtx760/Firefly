@@ -17,20 +17,21 @@ for (const post of allPosts) {
     categoryCount.set(category, (categoryCount.get(category) || 0) + 1);
 }
 
-// 自定义分类排序顺序
-const categoryOrder = ["软件安利", "技术教程", "AI新鲜玩法"];
+// 自定义分类排序顺序（使用英文名称，因为文章用的是英文）
+const categoryOrder = ["Software", "Technical", "AIHacks"];
 
-// 分类名称映射（中文 -> 英文）
-const categoryEnglishName = new Map<string, string>();
-categoryEnglishName.set("软件安利", "Software");
-categoryEnglishName.set("技术教程", "Technical");
-categoryEnglishName.set("AI新鲜玩法", "AIHacks");
+// 分类名称映射（英文 -> 中文显示名）
+const categoryDisplayName = new Map<string, string>();
+categoryDisplayName.set("Software", "软件安利");
+categoryDisplayName.set("Technical", "技术教程");
+categoryDisplayName.set("AIHacks", "AI新鲜玩法");
+categoryDisplayName.set("未分类", "未分类");
 
 // 转换为数组并按自定义顺序排序，不在列表中的排在后面
 const categories = Array.from(categoryCount.entries())
     .map(([name, count]) => ({
         name,
-        englishName: categoryEnglishName.get(name) || name,
+        displayName: categoryDisplayName.get(name) || name,
         count
     }))
     .sort((a, b) => {
@@ -50,9 +51,9 @@ const categories = Array.from(categoryCount.entries())
 
 // 所有分类都使用居中对齐（文字居中，数字在右侧）
 const categoryAlign = new Map<string, "left" | "center">();
-categoryAlign.set("软件安利", "center");
-categoryAlign.set("AI新鲜玩法", "center");
-categoryAlign.set("技术教程", "center");
+categoryAlign.set("Software", "center");
+categoryAlign.set("AIHacks", "center");
+categoryAlign.set("Technical", "center");
 // 默认为居中对齐
 ---
 
@@ -69,11 +70,11 @@ categoryAlign.set("技术教程", "center");
             const align = categoryAlign.get(category.name) || "center";
             const displayCount = category.count < 10 ? `0${category.count}` : String(category.count);
             return (
-                <a href={`/categories/${category.englishName}/`} class="category-item group">
+                <a href={`/categories/${category.name}/`} class="category-item group">
                     <div class="category-card" style={"animation-delay: " + index * 0.05 + "s"}>
                         <div class="category-card-border"></div>
                         <div class={`category-card-content category-card-${align}`}>
-                            <span class="category-name">{category.englishName}</span>
+                            <span class="category-name">{category.displayName}</span>
                             <span class="category-count">{displayCount}</span>
                         </div>
                     </div>
@@ -139,28 +140,28 @@ categoryAlign.set("技术教程", "center");
 
     .category-card {
         position: relative;
-        background: oklch(0.98 0.005 var(--hue));
+        background: rgba(183, 246, 5, 0.8);
         backdrop-filter: blur(10px);
         border-radius: 12px;
         overflow: hidden;
         transition: all 0.3s ease;
         animation: slideIn 0.4s ease-out backwards;
-        border: 1px solid rgb(0, 0, 0, 0.05);
+        border: 1px solid rgba(183, 246, 5, 0.3);
     }
 
     .dark .category-card {
-        background: oklch(0.23 0.015 var(--hue) / 0.75);
-        border: 1px solid rgb(255, 255, 255, 0.1);
+        background: rgba(183, 246, 5, 0.7);
+        border: 1px solid rgba(183, 246, 5, 0.4);
     }
 
     .category-card:hover {
-        background: oklch(0.95 0.01 var(--hue));
+        background: rgba(183, 246, 5, 0.95);
         transform: translateX(4px);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 4px 12px rgba(183, 246, 5, 0.3);
     }
 
     .dark .category-card:hover {
-        background: oklch(0.28 0.02 var(--hue));
+        background: rgba(183, 246, 5, 0.85);
     }
 
     .category-card-border {
