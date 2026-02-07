@@ -41,7 +41,24 @@ const categoryAlign = new Map<string, "left" | "center">();
 categoryAlign.set("Software", "center");
 categoryAlign.set("AIHacks", "center");
 categoryAlign.set("Technical", "center");
-// 默认为居中对齐
+
+// 为每个分类定义绿色系的配色方案（同色系不同深浅）
+const categoryColors = new Map<string, { bg: string, border: string, shadow: string }>();
+categoryColors.set("Software", {
+    bg: "rgba(134, 239, 172, 0.75)",      // 浅绿 - 最浅
+    border: "rgba(134, 239, 172, 0.35)",
+    shadow: "rgba(134, 239, 172, 0.25)"
+});
+categoryColors.set("Technical", {
+    bg: "rgba(52, 211, 153, 0.80)",       // 中绿 - 中等
+    border: "rgba(52, 211, 153, 0.40)",
+    shadow: "rgba(52, 211, 153, 0.30)"
+});
+categoryColors.set("AIHacks", {
+    bg: "rgba(16, 185, 129, 0.85)",       // 深绿 - 最深
+    border: "rgba(16, 185, 129, 0.45)",
+    shadow: "rgba(16, 185, 129, 0.35)"
+});
 ---
 
 <div class="category-list">
@@ -55,10 +72,11 @@ categoryAlign.set("Technical", "center");
     <div class="flex flex-col gap-2">
         {categories.map((category, index) => {
             const align = categoryAlign.get(category.name) || "center";
+            const colors = categoryColors.get(category.name) || categoryColors.get("Software")!;
             const displayCount = category.count < 10 ? `0${category.count}` : String(category.count);
             return (
                 <a href={`/categories/${category.name}/`} class="category-item group">
-                    <div class="category-card" style={"animation-delay: " + index * 0.05 + "s"}>
+                    <div class="category-card" style={`animation-delay: ${index * 0.05}s; --cat-bg: ${colors.bg}; --cat-border: ${colors.border}; --cat-shadow: ${colors.shadow};`}>
                         <div class="category-card-border"></div>
                         <div class={`category-card-content category-card-${align}`}>
                             <span class="category-name">{category.name}</span>
@@ -101,14 +119,14 @@ categoryAlign.set("Technical", "center");
         color: var(--primary);
         font-family: 'Courier New', 'Consolas', monospace;
         letter-spacing: -1px;
-        background: linear-gradient(135deg, #0ea5e9, #8b5cf6);
+        background: linear-gradient(135deg, #10b981, #34d399);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
     }
 
     .dark .hacker-icon {
-        background: linear-gradient(135deg, #38bdf8, #a78bfa);
+        background: linear-gradient(135deg, #34d399, #6ee7b7);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -127,28 +145,20 @@ categoryAlign.set("Technical", "center");
 
     .category-card {
         position: relative;
-        background: rgba(183, 246, 5, 0.85);
+        background: var(--cat-bg);
         backdrop-filter: blur(10px);
         border-radius: 12px;
         overflow: hidden;
         transition: all 0.3s ease;
         animation: slideIn 0.4s ease-out backwards;
-        border: 1px solid rgba(183, 246, 5, 0.3);
-    }
-
-    .dark .category-card {
-        background: rgba(183, 246, 5, 0.85);
-        border: 1px solid rgba(183, 246, 5, 0.4);
+        border: 1px solid var(--cat-border);
+        box-shadow: 0 2px 8px var(--cat-shadow);
     }
 
     .category-card:hover {
-        background: rgba(183, 246, 5, 1);
+        filter: brightness(1.08);
         transform: translateX(4px);
-        box-shadow: 0 4px 12px rgba(183, 246, 5, 0.3);
-    }
-
-    .dark .category-card:hover {
-        background: rgba(183, 246, 5, 1);
+        box-shadow: 0 4px 16px var(--cat-shadow);
     }
 
     .category-card-border {
@@ -190,33 +200,33 @@ categoryAlign.set("Technical", "center");
 
     .category-name {
         font-size: 14px;
-        color: black !important;
+        color: #0f2025 !important;
         font-weight: 600;
         transition: all 0.3s ease;
     }
 
     .dark .category-name {
-        color: black !important;
+        color: #0f2025 !important;
     }
 
     .category-card:hover .category-name {
-        color: black !important;
+        color: #0a1619 !important;
     }
 
     .dark .category-card:hover .category-name {
-        color: black !important;
+        color: #0a1619 !important;
     }
 
-    /* 文章分类标题渐变 */
+    /* 文章分类标题渐变 - 绿色系 */
     .gradient-text-cat {
-        background: linear-gradient(135deg, #0ea5e9, #8b5cf6);
+        background: linear-gradient(135deg, #10b981, #34d399);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
     }
 
     .dark .gradient-text-cat {
-        background: linear-gradient(135deg, #38bdf8, #a78bfa);
+        background: linear-gradient(135deg, #34d399, #6ee7b7);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
