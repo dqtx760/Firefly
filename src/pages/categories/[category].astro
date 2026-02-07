@@ -26,9 +26,9 @@ export async function getStaticPaths() {
 const { category: englishCategory } = Astro.params;
 const { chineseName } = Astro.props;
 
-// 获取当前分类的文章
+// 获取当前分类的文章（使用英文名过滤，与侧边栏保持一致）
 const allPosts = await getSortedPosts();
-const categoryPosts = allPosts.filter(post => (post.data.category || "未分类") === chineseName);
+const categoryPosts = allPosts.filter(post => (post.data.category || "未分类") === englishCategory);
 
 const config = {
     title: `${englishCategory} - 文章分类`,

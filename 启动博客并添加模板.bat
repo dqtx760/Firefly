@@ -13,11 +13,11 @@ echo [2] 启动构建预览
 echo [3] 退出
 echo.
 echo ========================================
-set /p choice="请选择操作 (1-3): "
+choice /c 123 /n /m "请选择操作 (1-3): "
 
-if "%choice%"=="1" goto template
-if "%choice%"=="2" goto preview
-if "%choice%"=="3" goto exit
+if errorlevel 3 goto exit
+if errorlevel 2 goto preview
+if errorlevel 1 goto template
 goto menu
 
 :template
@@ -44,6 +44,7 @@ echo.
 echo 预览地址: http://localhost:4321
 echo 按 Ctrl+C 可停止预览
 echo.
+start http://localhost:4321
 npm run dev
 goto menu
 
