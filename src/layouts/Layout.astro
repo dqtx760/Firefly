@@ -164,6 +164,32 @@ const bannerOffset =
 			offset = offset - offset % 4;
 			document.documentElement.style.setProperty('--banner-height-extend', `${offset}px`);
 		</script>
+
+		<!-- 防止闪烁：立即设置渐变色样式 -->
+		<style is:inline>
+			.navbar-title-gradient,
+			.navbar-title-gradient-icon,
+			.gradient-text,
+			.hacker-icon,
+			.category-title,
+			.decoration-title {
+				background: linear-gradient(135deg, #0ea5e9, #8b5cf6) !important;
+				-webkit-background-clip: text !important;
+				-webkit-text-fill-color: transparent !important;
+				background-clip: text !important;
+			}
+			html.dark .navbar-title-gradient,
+			html.dark .navbar-title-gradient-icon,
+			html.dark .gradient-text,
+			html.dark .hacker-icon,
+			html.dark .category-title,
+			html.dark .decoration-title {
+				background: linear-gradient(135deg, #38bdf8, #a78bfa) !important;
+				-webkit-background-clip: text !important;
+				-webkit-text-fill-color: transparent !important;
+				background-clip: text !important;
+			}
+		</style>
         
         <style define:vars={{ configHue }}>
             /* Fallback for no-js: Apply default theme hue */
