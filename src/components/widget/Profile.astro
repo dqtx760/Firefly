@@ -151,16 +151,28 @@ for (const post of posts) {
     /* 图标颜色统一为浅灰色系，与绿色背景协调 */
     .social-icon-btn svg,
     .social-icon-btn :deep(svg),
-    .social-icon-btn :deep(.iconify) {
+    .social-icon-btn :deep(.iconify),
+    .social-icon-btn svg path,
+    .social-icon-btn :deep(svg path),
+    .social-icon-btn :deep(.iconify) path,
+    .social-icon-btn svg *,
+    .social-icon-btn :deep(svg *) {
         fill: #d1d5db !important;
         color: #d1d5db !important;
+        stroke: #d1d5db !important;
     }
 
     .social-icon-btn:hover svg,
     .social-icon-btn:hover :deep(svg),
-    .social-icon-btn:hover :deep(.iconify) {
+    .social-icon-btn:hover :deep(.iconify),
+    .social-icon-btn:hover svg path,
+    .social-icon-btn:hover :deep(svg path),
+    .social-icon-btn:hover :deep(.iconify) path,
+    .social-icon-btn:hover svg *,
+    .social-icon-btn:hover :deep(svg *) {
         fill: #f3f4f6 !important;
         color: #f3f4f6 !important;
+        stroke: #f3f4f6 !important;
     }
 
     /* 个人信息卡片增强阴影 */

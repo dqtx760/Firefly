@@ -39,8 +39,8 @@ const { remarkPluginFrontmatter } = await entry.render();
            class="transition group w-full block font-bold mb-2 md:mb-3 text-xl md:text-3xl text-90 relative
         hover:text-[var(--primary)] dark:hover:text-[var(--primary)]
         active:text-[var(--title-active)] dark:active:text-[var(--title-active)]
-        before:w-1.5 before:h-6 before:rounded-sm before:bg-gradient-to-b before:from-emerald-400 before:to-emerald-500
-        before:shadow-[0_0_10px_rgba(16,185,129,0.6)] before:absolute before:top-1 md:before:top-2 before:-left-[1.125rem] before:block
+        before:w-1.5 before:h-6 before:rounded-sm before:absolute before:top-1 md:before:top-2 before:-left-[1.125rem] before:block
+        title-accent-bar
         ">
 
             {title}
@@ -98,6 +98,22 @@ const { remarkPluginFrontmatter } = await entry.render();
 
 
 <style define:vars={{coverWidth}}>
+    /* 文章标题前的竖线 - 与分类按钮绿色统一 */
+    .title-accent-bar::before {
+        content: '';
+        position: absolute;
+        width: 6px;
+        height: 24px;
+        border-radius: 2px;
+        background: linear-gradient(180deg, rgb(52, 211, 153) 0%, rgb(16, 185, 129) 100%);
+        box-shadow: 0 0 12px rgba(52, 211, 153, 0.6);
+    }
+
+    @media (min-width: 768px) {
+        .title-accent-bar::before {
+            height: 28px;
+        }
+    }
 </style>
 
 <script>
