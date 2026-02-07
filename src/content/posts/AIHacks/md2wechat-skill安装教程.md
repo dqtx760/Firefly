@@ -1,12 +1,10 @@
 ---
 title: md2wechat-skill安装教程
-published: 2026-03-18T10:45:00.000ZZ
-description: 如果你用Markdown写公众号文章，需要先复制内容到排版工具，再复制公众号很麻烦，既耗时间又难保证格式精美，每次操作都要反复调整，成了不少人的痛点，这几天在G...
-tags: ["效率工具","AI","Claude","Windows"]
-draft: false
-lang: zh_CN
-
+published: 2026-02-08
+tags: []
 category: AIHacks
+draft: false
+pinned: false
 ---
 
 如果你用Markdown写公众号文章，需要先复制内容到排版工具，再复制公众号很麻烦，既耗时间又难保证格式精美，每次操作都要反复调整，成了不少人的痛点，这几天在GitHub发现了**md2wechat-skill**，听说能一键转换Markdown为精美排版并自动上传到微信草稿箱，好奇测试了下！
@@ -15,7 +13,7 @@ category: AIHacks
 
 我安装踩了不少坑，终于搞定，流程算跑通了，不过吐槽下，我是在Claude中用的Ai模式真的慢，有这时间，我10篇文章都排版好了！不过做个记录，相信随着时间技术成熟，一切都会发生变化！
 
-
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/workany_writing_1280x720.webp)
 
 ## ⚠️ 安装前必读（踩坑预警）
 

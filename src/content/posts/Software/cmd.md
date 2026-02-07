@@ -1,13 +1,13 @@
 ---
-title: 命令大全
-published: 2025-09-22T14:20:00.000Z
-description: ✅PowerShell命令 | 说明 | 命令 | |------------------------|----------------------------...
-tags: ["效率工具","Windows"]
-draft: false
-lang: zh_CN
-
+title:Dos常用命令汇总
+published: 2026-02-08
+tags: []
 category: Software
+draft: false
+pinned: false
 ---
+
+
 
 ## <b style="color: red;">常用cmd/PowerShell命令</b>
 
