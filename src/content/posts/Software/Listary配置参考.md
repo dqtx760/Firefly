@@ -1,6 +1,6 @@
 ---
 title: Listary使用参考文档
-published: 2026-02-03T21:22:43.310Z
+published: 2025-11-22T09:15:00.000Z
 description: Listary是一款知名的效率工具，以用户友好，使用方式简单而备受好评。单论文件搜索，Listary 和 Everything 属于同一梯队，在搜索速度和内存占...
 tags: ["效率工具"]
 draft: false

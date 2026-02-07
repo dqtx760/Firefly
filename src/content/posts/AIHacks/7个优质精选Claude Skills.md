@@ -1,6 +1,6 @@
 ---
 title: 7个优质精选Claude Skills
-published: 2026-02-03T21:22:43.294Z
+published: 2026-01-15T11:20:00.000Z
 description: Claude Skills 作为 AI 助手的功能拓展核心，能精准对接各类场景化需求，让智能协作更高效、更具针对性。以下是安装的7个实用且强大的 Claude ...
 tags: ["效率工具","AI","Claude"]
 draft: false
