@@ -20,7 +20,7 @@ for (const post of posts) {
         <img src={config.avatar} alt="Profile Image of the Author" class="w-full h-full object-cover transition duration-500" />
     </div>
     <div class="px-2 text-center">
-        <div class="font-bold text-xl mb-1 gradient-text transition">{config.name}</div>
+        <div class="font-bold text-xl mb-1 profile-gradient-text transition">{config.name}</div>
         <div class="h-1 w-5 bg-[var(--primary)] mx-auto rounded-full mb-2 transition"></div>
         <div class="text-center mb-2.5 transition text-black dark:text-neutral-400">{config.bio}</div>
         <div class="flex flex-wrap gap-2 justify-center mb-1">
@@ -81,9 +81,11 @@ for (const post of posts) {
     .animate-scale-in {
         animation: scale-in 0.2s ease-out;
     }
+</style>
 
-    /* 标题渐变样式 - 强制应用 */
-    .gradient-text {
+<style is:global>
+    /* 标题渐变样式 - 全局样式 */
+    .profile-gradient-text {
         background: linear-gradient(135deg, #0ea5e9, #8b5cf6) !important;
         -webkit-background-clip: text !important;
         -webkit-text-fill-color: transparent !important;
@@ -92,7 +94,7 @@ for (const post of posts) {
     }
 
     /* 暗黑模式适配 */
-    :global(html.dark) .gradient-text {
+    html.dark .profile-gradient-text {
         background: linear-gradient(135deg, #38bdf8, #a78bfa) !important;
         -webkit-background-clip: text !important;
         -webkit-text-fill-color: transparent !important;
