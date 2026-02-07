@@ -69,7 +69,7 @@ categoryAlign.set("技术教程", "center");
             const align = categoryAlign.get(category.name) || "center";
             const displayCount = category.count < 10 ? `0${category.count}` : String(category.count);
             return (
-                <a href={`/categories/${encodeURIComponent(category.englishName)}/`} class="category-item group">
+                <a href={`/categories/${category.englishName}/`} class="category-item group">
                     <div class="category-card" style={"animation-delay: " + index * 0.05 + "s"}>
                         <div class="category-card-border"></div>
                         <div class={`category-card-content category-card-${align}`}>
