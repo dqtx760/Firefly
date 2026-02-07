@@ -217,8 +217,11 @@ const bannerOffset =
 				pointer-events: none;
 				z-index: -1;
 				transition: opacity 0.3s ease-in-out;
-				/* 星空科技背景 */
+				/* 星空科技背景 + 克莱因蓝网格 */
 				background:
+					/* 克莱因蓝网格线 */
+					linear-gradient(90deg, rgba(183, 246, 5, 0.03) 1px, transparent 1px),
+					linear-gradient(rgba(183, 246, 5, 0.03) 1px, transparent 1px),
 					/* 星星点缀 */
 					radial-gradient(1px 1px at 10% 10%, rgba(255,255,255,0.8) 0%, transparent 100%),
 					radial-gradient(1px 1px at 20% 20%, rgba(255,255,255,0.6) 0%, transparent 100%),
@@ -241,7 +244,7 @@ const bannerOffset =
 					radial-gradient(2px 2px at 5% 35%, rgba(255,255,255,0.7) 0%, transparent 100%),
 					/* 深蓝科技渐变背景 */
 					linear-gradient(135deg, #0a0a1a 0%, #0d1525 25%, #0a1929 50%, #0d1525 75%, #0a0a1a 100%);
-				background-size: 100% 100%, 100% 100%;
+				background-size: 50px 50px, 50px 50px, 100% 100%, 100% 100%;
 				animation: twinkle 8s ease-in-out infinite alternate;
 			}
 
