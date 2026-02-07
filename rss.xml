@@ -1,4 +1,145 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Derek Zhao Blog</title><description>技术分享与实践</description><link>https://dqtx.cc/</link><language>zh_CN</language><item><title>GitHub + EdgeOne 搭建个人博客的过程</title><link>https://dqtx.cc/posts/technical/github-edgeone-da-jian-bo-ke/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/github-edgeone-da-jian-bo-ke/</guid><pubDate>Fri, 06 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Derek Zhao Blog</title><description>技术分享与实践</description><link>https://dqtx.cc/</link><language>zh_CN</language><item><title>OpenList挂载阿里云盘</title><link>https://dqtx.cc/posts/technical/openlist-ali/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/openlist-ali/</guid><pubDate>Sun, 08 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;很多人使用 OpenList 搭建网盘聚合时，希望接入阿里云盘，实现文件集中管理与在线播放。本文将手把手教你如何在 OpenList 中添加阿里云盘存储，从获取 Token 到配置参数，简单几步即可完成接入。&lt;/p&gt;
+&lt;h2&gt;教程步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;访问&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;地址https://api.oplist.org/&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20251013222806220.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;手机扫码登录&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;使用阿里云盘 App 扫描二维码登录。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20251013222908278.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;授权登录&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;在授权页面取消勾选 &lt;strong&gt;“备份盘”&lt;/strong&gt;，然后点击 &lt;strong&gt;允许&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20251013223149217.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;获取刷新令牌&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;登录成功后会自动跳转回授权页面，复制页面中的 &lt;strong&gt;刷新令牌&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20251013223503994.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;添加到 OpenList&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;回到OpenList管理后台&lt;/p&gt;
+&lt;p&gt;依次点击 存储 → 添加，并填写以下信息：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;驱动：阿里云盘(Oauth2)&lt;/li&gt;
+&lt;li&gt;挂载路径：随便写&lt;/li&gt;
+&lt;li&gt;刷新令牌：粘贴第四部复制的令牌&lt;/li&gt;
+&lt;li&gt;根文件夹 ID：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;默认为&lt;code&gt;root&lt;/code&gt;，展示全部云盘内容，若只想展示某文件夹內内容，可以改为&lt;code&gt;file_id&lt;/code&gt;，打开阿里云盘官网，点击进入要设置的文件夹时点击 URL 后面的字符串&lt;/p&gt;
+&lt;p&gt;这个文件夹的 file_id 即为 &lt;code&gt;68ed113250419512244e4ea3831a29b2000462d0&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20251013231704751.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;保存配置&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;填写完成后，滑到页面底部点击 &lt;strong&gt;保存&lt;/strong&gt; 即可。&lt;/p&gt;
+&lt;p&gt;✅至此，阿里云盘已成功接入 OpenList，可在前台正常浏览、预览与播放文件。&lt;/p&gt;
+</content:encoded></item><item><title>OpenList挂载豆包云盘</title><link>https://dqtx.cc/posts/technical/openlist-doubao/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/openlist-doubao/</guid><pubDate>Sun, 08 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;本篇文章将教你如何把&lt;strong&gt;豆包网盘&lt;/strong&gt;接入 OpenList，通过 WebDAV 方式实现挂载与访问。只需按照以下步骤操作，即可实现豆包网盘文件管理、本地读取与在线播放。&lt;/p&gt;
+&lt;h2&gt;一、挂载方式&lt;/h2&gt;
+&lt;p&gt;在 OpenList 的存储策略里：&lt;/p&gt;
+&lt;p&gt;选择 &lt;strong&gt;WebDAV&lt;/strong&gt;策略使用 &lt;strong&gt;本地代理&lt;/strong&gt;&lt;/p&gt;
+&lt;h2&gt;二、获取 Cookie&lt;/h2&gt;
+&lt;p&gt;检查-网络-查找&lt;/p&gt;
+&lt;p&gt;搜索下方命令，随便点进去一个文件再退出来，刷新下，&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20251130152350228.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;搜索关键词&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sid_guard
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;点搜索结果进去，会自动定位到，标头-cookie，复制以sid_guard开头的内容即可&lt;/p&gt;
+&lt;h2&gt;三、根文件夹 ID&lt;/h2&gt;
+&lt;p&gt;OpenList 挂载豆包网盘，需要指定访问目录。
+你可以选择挂载：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;所有文件根目录&lt;/li&gt;
+&lt;li&gt;某个指定单文件夹&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;获取 root_id&lt;/h3&gt;
+&lt;p&gt;这个用于挂载整个网盘，进入文件夹，再出来，再进去，搜索&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;root_id
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;会自动定位响应，点击预览就可以看到root_id，直接复制值&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20251130152354231.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;获取单文件夹 ID&lt;/h3&gt;
+&lt;p&gt;直接打开你的文件，地址栏里的数字就是了&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20251130152357486.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;以上，一个稳定、可管理、可在线播放的豆包网盘就成功接入了 OpenList。&lt;/p&gt;
+&lt;p&gt;如果觉得这篇教程对你有帮助，别忘了&lt;strong&gt;点赞+收藏+转发&lt;/strong&gt;三连呀！关注我，后续分享更多实用技巧、效率工具干货，下次见～ 👋&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;大强远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+</content:encoded></item><item><title>OpenClaw完整安装指南</title><link>https://dqtx.cc/posts/technical/openclaw/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/openclaw/</guid><pubDate>Sun, 08 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近爆火的开源机械爪控制工具库OpenClaw，凭借轻量适配、无缝对接ROS/ROS2的优势，成为机器人抓取项目的刚需选择，但网上热议的大多是功能应用，却鲜有完整的安装配置指南——如果您正被依赖缺失、编译报错、环境不生效、launch文件启动失败等问题卡住，搜遍教程要么简略要么过时，那这篇超详细、可直接复制命令、新手也能照做的OpenClaw安装配置教程，绝对能帮您一步跑通，Ubuntu 20.04/22.04通用，全程无跳步直接抄作业。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260208013915419.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;一、环境准备（必做前置步骤）&lt;/h2&gt;
+&lt;p&gt;推荐系统：Ubuntu 20.04 LTS（搭配ROS Noetic）、Ubuntu 22.04 LTS（搭配ROS2 Humble），打开终端依次执行以下命令安装基础编译工具与依赖库：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo apt update &amp;amp;&amp;amp; sudo apt upgrade -y
+sudo apt install -y git cmake build-essential gcc g++
+sudo apt install -y libboost-all-dev libeigen3-dev libpcl-dev
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;OpenClaw核心功能依赖ROS生态，未安装ROS/ROS2的可快速补齐（以ROS Noetic为例）：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo sh -c &apos;echo &quot;deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main&quot; &amp;gt; /etc/apt/sources.list.d/ros-latest.list&apos;
+curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+sudo apt update
+sudo apt install -y ros-noetic-desktop-full
+sudo rosdep init
+rosdep update
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;临时加载ROS环境（后续将配置永久生效）：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;source /opt/ros/noetic/setup.bash
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;二、源码获取与编译构建&lt;/h2&gt;
+&lt;p&gt;首先创建标准ROS工作空间并拉取OpenClaw源码：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mkdir -p ~/catkin_ws/src
+cd ~/catkin_ws/src
+git clone https://github.com/openclaw/openclaw.git
+cd ~/catkin_ws
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;接着自动安装ROS包依赖并编译工作空间：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;rosdep install --from-paths src --ignore-src -r -y
+catkin_make -DCMAKE_BUILD_TYPE=Release
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;小提示：如果提示C++版本不兼容，可添加编译参数：&lt;code&gt;catkin_make -DCMAKE_CXX_STANDARD=11&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;三、环境变量配置（永久生效）&lt;/h2&gt;
+&lt;p&gt;未配置环境变量会导致每次打开终端都需重新加载，操作如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;gedit ~/.bashrc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;在打开的文件末尾添加对应ROS版本的配置（根据系统选择）：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# ROS Noetic（Ubuntu 20.04）
+source /opt/ros/noetic/setup.bash
+source ~/catkin_ws/devel/setup.bash
+
+# ROS2 Humble（Ubuntu 22.04）
+# source /opt/ros/humble/setup.bash
+# source ~/catkin_ws/install/setup.bash
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;保存文件后，执行以下命令使配置立即生效：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;source ~/.bashrc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;四、安装验证（确认成功标志）&lt;/h2&gt;
+&lt;h3&gt;检查包识别状态&lt;/h3&gt;
+&lt;p&gt;执行以下命令，若输出OpenClaw的安装路径，则说明系统已成功识别该包：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;rospack list | grep openclaw
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;启动示例节点验证&lt;/h3&gt;
+&lt;p&gt;运行核心控制节点，若终端无报错且正常输出INFO日志，即为安装配置完全成功：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;roslaunch openclaw openclaw_controller.launch
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;五、常见问题快速排坑&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;rosdep update 失败：多为网络问题，可更换国内镜像源，或跳过该步骤直接手动安装缺失依赖；&lt;/li&gt;
+&lt;li&gt;编译提示找不到 Eigen/PCL：重新执行安装命令：&lt;code&gt;sudo apt install libeigen3-dev libpcl-dev&lt;/code&gt;；&lt;/li&gt;
+&lt;li&gt;提示找不到launch文件/节点：回到工作空间根目录重新编译（&lt;code&gt;catkin_make&lt;/code&gt;），并执行 &lt;code&gt;source devel/setup.bash&lt;/code&gt;；&lt;/li&gt;
+&lt;li&gt;命令不生效：99%是未配置环境变量或未在正确工作空间操作，可重新检查&lt;code&gt;.bashrc&lt;/code&gt;文件配置并source生效。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;写在最后&lt;/h2&gt;
+&lt;p&gt;OpenClaw本身的使用门槛并不高，真正卡住大多数开发者的，始终是环境依赖、编译细节、环境变量这三大核心问题。这篇教程已做到命令可直接复制、步骤无跳步、逻辑贴合新手操作习惯，且提前标注了高频坑点，只要跟着顺序执行，基本都能一次成功。如果您在安装过程中遇到特殊报错、特定硬件适配（如不同品牌机械爪）问题，或需要Windows版本的适配方案，欢迎在评论区留言，我会逐一回复并补充到后续教程中。原创教程不易，整理、测试、排坑均花费大量时间，欢迎点赞、在看、转发给身边做机器人、机械臂、抓取项目的朋友，您的支持就是我持续更新干货的动力～ 后续还会推出OpenClaw基础控制示例（开合、力度、闭环控制）、ROS2迁移与移植指南、机械爪常见硬件接线与驱动等内容，关注我，不错过每一篇能直接落地的机器人开发教程。&lt;/p&gt;
+</content:encoded></item><item><title>GitHub + EdgeOne 搭建个人博客的过程</title><link>https://dqtx.cc/posts/technical/github-edgeone-da-jian-bo-ke/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/github-edgeone-da-jian-bo-ke/</guid><pubDate>Fri, 06 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;想要一个属于自己的博客，但不知道从哪里开始？本文详细记录了从零开始搭建个人博客的全过程，包括踩过的各种坑和解决方案。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2&gt;为什么选择 Fuwari 主题？&lt;/h2&gt;
