@@ -217,9 +217,38 @@ const bannerOffset =
 				pointer-events: none;
 				z-index: -1;
 				transition: opacity 0.3s ease-in-out;
-                /* Prevent background jump on mobile browsers with dynamic URL bars */
-                will-change: transform;
-                transform: translateZ(0);
+				/* 星空科技背景 */
+				background:
+					/* 星星点缀 */
+					radial-gradient(1px 1px at 10% 10%, rgba(255,255,255,0.8) 0%, transparent 100%),
+					radial-gradient(1px 1px at 20% 20%, rgba(255,255,255,0.6) 0%, transparent 100%),
+					radial-gradient(1px 1px at 30% 30%, rgba(255,255,255,0.7) 0%, transparent 100%),
+					radial-gradient(1px 1px at 40% 40%, rgba(255,255,255,0.5) 0%, transparent 100%),
+					radial-gradient(1px 1px at 50% 50%, rgba(255,255,255,0.8) 0%, transparent 100%),
+					radial-gradient(1px 1px at 60% 60%, rgba(255,255,255,0.6) 0%, transparent 100%),
+					radial-gradient(1px 1px at 70% 70%, rgba(255,255,255,0.7) 0%, transparent 100%),
+					radial-gradient(1px 1px at 80% 80%, rgba(255,255,255,0.5) 0%, transparent 100%),
+					radial-gradient(1px 1px at 90% 90%, rgba(255,255,255,0.8) 0%, transparent 100%),
+					radial-gradient(2px 2px at 15% 45%, rgba(255,255,255,0.6) 0%, transparent 100%),
+					radial-gradient(2px 2px at 25% 55%, rgba(255,255,255,0.7) 0%, transparent 100%),
+					radial-gradient(2px 2px at 35% 65%, rgba(255,255,255,0.5) 0%, transparent 100%),
+					radial-gradient(2px 2px at 45% 75%, rgba(255,255,255,0.8) 0%, transparent 100%),
+					radial-gradient(2px 2px at 55% 85%, rgba(255,255,255,0.6) 0%, transparent 100%),
+					radial-gradient(2px 2px at 65% 95%, rgba(255,255,255,0.7) 0%, transparent 100%),
+					radial-gradient(2px 2px at 75% 5%, rgba(255,255,255,0.5) 0%, transparent 100%),
+					radial-gradient(2px 2px at 85% 15%, rgba(255,255,255,0.8) 0%, transparent 100%),
+					radial-gradient(2px 2px at 95% 25%, rgba(255,255,255,0.6) 0%, transparent 100%),
+					radial-gradient(2px 2px at 5% 35%, rgba(255,255,255,0.7) 0%, transparent 100%),
+					/* 深蓝科技渐变背景 */
+					linear-gradient(135deg, #0a0a1a 0%, #0d1525 25%, #0a1929 50%, #0d1525 75%, #0a0a1a 100%);
+				background-size: 100% 100%, 100% 100%;
+				animation: twinkle 8s ease-in-out infinite alternate;
+			}
+
+			/* 星星闪烁动画 */
+			@keyframes twinkle {
+				0%, 100% { opacity: 1; }
+				50% { opacity: 0.7; }
 			}
 			
 			#bg-box.loaded {

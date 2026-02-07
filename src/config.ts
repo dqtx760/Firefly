@@ -43,13 +43,13 @@ export const siteConfig: SiteConfig = {
 		},
 	},
 	background: {
-		enable: true, // Enable background image
-		src: "/background.webp", // Background image URL (supports HTTPS)
-		position: "center", // Background position: 'top', 'center', 'bottom'
-		size: "cover", // Background size: 'cover', 'contain', 'auto'
-		repeat: "no-repeat", // Background repeat: 'no-repeat', 'repeat', 'repeat-x', 'repeat-y'
-		attachment: "fixed", // Background attachment: 'fixed', 'scroll', 'local'
-		opacity: 1, // Background opacity (0-1)
+		enable: true, // Enable background
+		src: "", // 使用 CSS 渐变而非图片
+		position: "center",
+		size: "cover",
+		repeat: "no-repeat",
+		attachment: "fixed",
+		opacity: 1,
 	},
 	toc: {
 		enable: true, // Display the table of contents on the right side of the post
