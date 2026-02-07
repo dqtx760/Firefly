@@ -1,6 +1,14 @@
 @tailwind components;
 
 @layer components {
+    /* 覆盖卡片背景色，更冷的灰蓝 */
+    :root {
+        --card-bg: oklch(0.97 0.003 268) !important;
+    }
+    html.dark :root {
+        --card-bg: oklch(0.22 0.008 268) !important;
+    }
+
     /* Rainbow Mode Animation */
     @keyframes rainbow-rotate {
         0% { filter: hue-rotate(0deg); }

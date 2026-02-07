@@ -98,19 +98,18 @@ const { remarkPluginFrontmatter } = await entry.render();
 
 
 <style define:vars={{coverWidth}}>
-    /* 文章标题前的竖线 - 主色，即判断与立场 */
+    /* 文章标题前的竖线 - 判断标记，压深亮度 */
     .title-accent-bar::before {
         content: '';
         position: absolute;
         width: 3px;
         height: 20px;
-        background: oklch(0.58 0.16 268);
+        background: oklch(0.45 0.15 268);
     }
 
     @media (min-width: 768px) {
         .title-accent-bar::before {
             height: 24px;
-            width: 3px;
         }
     }
 </style>
