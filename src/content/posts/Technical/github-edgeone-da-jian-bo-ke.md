@@ -362,7 +362,7 @@ const sponsors = [
 title: 文章标题
 published: 2026-02-06
 tags: [标签]
-category: 技术教程
+category: Technical
 # 无需填写 image 和 description
 ---
 
