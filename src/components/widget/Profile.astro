@@ -20,12 +20,12 @@ for (const post of posts) {
         <img src={config.avatar} alt="Profile Image of the Author" class="w-full h-full object-cover transition duration-500" />
     </div>
     <div class="px-2 text-center">
-        <div class="font-bold text-xl mb-1 profile-name-gradient transition" style="background: linear-gradient(135deg, #38bdf8, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent;">{config.name}</div>
+        <div class="font-bold text-xl mb-1 transition text-black" style="color: black !important;">{config.name}</div>
         <div class="h-1 w-5 bg-[var(--primary)] mx-auto rounded-full mb-2 transition"></div>
         <div class="text-center mb-2.5 transition text-black dark:text-neutral-400">{config.bio}</div>
         <div class="flex flex-wrap gap-2 justify-center mb-1">
             <!-- 微信图标 - 点击弹窗 -->
-            <button aria-label="微信" onclick="openQRModal()" class="btn-regular rounded-lg h-10 w-10 active:scale-90">
+            <button aria-label="微信" onclick="openQRModal()" class="social-icon-btn rounded-lg h-10 w-10 active:scale-90">
                 <svg class="w-6 h-6 transition fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M21.502 19.525c1.524-1.105 2.498-2.738 2.498-4.554 0-3.326-3.237-6.023-7.229-6.023s-7.229 2.697-7.229 6.023c0 3.327 3.237 6.024 7.229 6.024.825 0 1.621-.117 2.36-.33l.212-.032c.139 0 .265.043.384.111l1.583.914.139.045c.133 0 .241-.108.241-.241l-.039-.176-.326-1.215-.025-.154c0-.162.08-.305.202-.392zm-12.827-17.228c-4.791 0-8.675 3.236-8.675 7.229 0 2.178 1.168 4.139 2.997 5.464.147.104.243.276.243.471l-.03.184-.391 1.458-.047.211c0 .16.13.29.289.29l.168-.054 1.899-1.097c.142-.082.293-.133.46-.133l.255.038c.886.255 1.842.397 2.832.397l.476-.012c-.188-.564-.291-1.158-.291-1.771 0-3.641 3.542-6.593 7.911-6.593l.471.012c-.653-3.453-4.24-6.094-8.567-6.094zm5.686 11.711c-.532 0-.963-.432-.963-.964 0-.533.431-.964.963-.964.533 0 .964.431.964.964 0 .532-.431.964-.964.964zm4.82 0c-.533 0-.964-.432-.964-.964 0-.533.431-.964.964-.964.532 0 .963.431.963.964 0 .532-.431.964-.963.964zm-13.398-5.639c-.639 0-1.156-.518-1.156-1.156 0-.639.517-1.157 1.156-1.157.639 0 1.157.518 1.157 1.157 0 .638-.518 1.156-1.157 1.156zm5.783 0c-.639 0-1.156-.518-1.156-1.156 0-.639.517-1.157 1.156-1.157.639 0 1.157.518 1.157 1.157 0 .638-.518 1.156-1.157 1.156z"/>
                 </svg>
@@ -33,7 +33,7 @@ for (const post of posts) {
 
             <!-- 其他社交链接 -->
             {config.links.slice(1).map((item) => (
-                <a rel="me" aria-label={item.name} href={item.url} target="_blank" class="btn-regular rounded-lg h-10 w-10 active:scale-90">
+                <a rel="me" aria-label={item.name} href={item.url} target="_blank" class="social-icon-btn rounded-lg h-10 w-10 active:scale-90">
                     <Icon name={item.icon} class="text-[1.5rem]"></Icon>
                 </a>
             ))}
@@ -124,6 +124,26 @@ for (const post of posts) {
         -webkit-background-clip: text !important;
         -webkit-text-fill-color: transparent !important;
         background-clip: text !important;
+    }
+
+    /* 社交图标按钮 - 绿色背景 */
+    .social-icon-btn {
+        background-color: #b7f605 !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+    }
+
+    .social-icon-btn:hover {
+        background-color: #a3e600 !important;
+        transform: scale(1.05);
+    }
+
+    .social-icon-btn svg,
+    .social-icon-btn :deep(svg) {
+        fill: white;
+        color: white;
     }
 </style>
 
