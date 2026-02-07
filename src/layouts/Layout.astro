@@ -167,12 +167,16 @@ const bannerOffset =
 
 		<!-- 防止闪烁：立即设置渐变色样式 -->
 		<style is:inline>
+			/* 导航栏 */
 			.navbar-title-gradient,
 			.navbar-title-gradient-icon,
-			.gradient-text,
+			/* 分类组件 */
 			.hacker-icon,
 			.category-title,
-			.decoration-title {
+			/* 微信公众号 */
+			.decoration-title,
+			.gradient-text,
+			.gradient-icon {
 				background: linear-gradient(135deg, #0ea5e9, #8b5cf6) !important;
 				-webkit-background-clip: text !important;
 				-webkit-text-fill-color: transparent !important;
@@ -180,14 +184,26 @@ const bannerOffset =
 			}
 			html.dark .navbar-title-gradient,
 			html.dark .navbar-title-gradient-icon,
-			html.dark .gradient-text,
 			html.dark .hacker-icon,
 			html.dark .category-title,
-			html.dark .decoration-title {
+			html.dark .decoration-title,
+			html.dark .gradient-text,
+			html.dark .gradient-icon {
 				background: linear-gradient(135deg, #38bdf8, #a78bfa) !important;
 				-webkit-background-clip: text !important;
 				-webkit-text-fill-color: transparent !important;
 				background-clip: text !important;
+			}
+			/* 确保卡片背景色 */
+			.card-base {
+				background: oklch(0.97 0.003 268) !important;
+			}
+			html.dark .card-base {
+				background: oklch(0.22 0.008 268) !important;
+			}
+			/* 背景色 */
+			#bg-box {
+				background: oklch(0.12 0.01 268) !important;
 			}
 		</style>
         
