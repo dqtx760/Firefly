@@ -952,6 +952,31 @@ $ARGUMENTS
 &lt;p&gt;下载地址：https://workany.ai/zh&lt;/p&gt;
 &lt;p&gt;如果觉得这篇教程对你有帮助，别忘了&lt;strong&gt;点赞+收藏+转发&lt;/strong&gt;三连呀！关注我，后续分享更多实用技巧、效率工具干货，下次见～ 👋&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;大强远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+</content:encoded></item><item><title>MuMu模拟器</title><link>https://dqtx.cc/posts/software/mumu%E6%A8%A1%E6%8B%9F%E5%99%A8/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/mumu%E6%A8%A1%E6%8B%9F%E5%99%A8/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;MuMu模拟器作为市面上兼容性和稳定性极佳的安卓模拟器，一直是玩手游、刷视频及跑脚本用户的首选。不过默认设置下它会有一些开屏广告、桌面广告，本文将手把手教你：**最新版 MuMu 5.9 下载、广告屏蔽、壁纸自定义、快捷技巧等。**建议收藏转发.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20251130144036028.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;一.软件下载&lt;/h2&gt;
+&lt;p&gt;MuMu模拟器官网：
+https://mumu.163.com/&lt;/p&gt;
+&lt;h2&gt;二.广告屏蔽&lt;/h2&gt;
+&lt;h3&gt;1.屏蔽开屏广告&lt;/h3&gt;
+&lt;p&gt;在系统 Host 文件中添加如下规则👇&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;114.115.116.117 mumu.nie.netease.com
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;2.删除桌面广告&lt;/h3&gt;
+&lt;p&gt;直接替换系统镜像文件:&lt;strong&gt;&lt;a href=&quot;https://pan.xunlei.com/x/VOfIXk-qqm-IpJmek_9iba1DA1?pwd=2wqi#&quot;&gt;点此下载&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;路径为：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.\nx_device\12.0\vms\MuMuPlayer-12.0-base\system.vdi
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;三.使用技巧&lt;/h2&gt;
+&lt;h3&gt;快捷启动&lt;/h3&gt;
+&lt;p&gt;在桌面建立启动直达图标,双击即可直接启动指定的模拟器实例&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20251130144131759.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;壁纸更换&lt;/h3&gt;
+&lt;p&gt;先打开电脑端共享文件夹,将你喜欢的壁纸拖进去&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20251130144134739.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;点击模拟器桌面的设置-壁纸，然后更换即可&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20251130144137855.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;经过这些配置之后，MuMu 就会变成一个干净优雅的虚拟空间，使用 MuMu 的过程中遇到任何问题，或者有更好用的优化技巧，欢迎在评论区交流分享。&lt;/p&gt;
 </content:encoded></item><item><title>Typora + PicList + Gitee 图床完整配置教程</title><link>https://dqtx.cc/posts/software/typora--piclist--gitee-%E5%9B%BE%E5%BA%8A%E5%AE%8C%E6%95%B4%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/typora--piclist--gitee-%E5%9B%BE%E5%BA%8A%E5%AE%8C%E6%95%B4%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;如果你经常写 Markdown 文档，那么 &lt;strong&gt;Typora&lt;/strong&gt; 是一款非常好用的编辑器。而在图片管理方面，推荐搭配免费的图床工具 &lt;strong&gt;PicList&lt;/strong&gt;，它支持一键上传图片到各类图床。我自己的方案是：&lt;strong&gt;Typora + PicList + Gitee&lt;/strong&gt;，写作体验非常流畅。&lt;/p&gt;
 &lt;h2&gt;Typora设置&lt;/h2&gt;
 &lt;p&gt;打开 &lt;strong&gt;Typora&lt;/strong&gt;，依次进入 &lt;code&gt;文件 → 偏好设置 → 图像&lt;/code&gt;，在上传服务中选择 &lt;strong&gt;PicList&lt;/strong&gt;。
@@ -993,31 +1018,6 @@ $ARGUMENTS
 &lt;p&gt;&lt;img src=&quot;https://mmbiz.qpic.cn/mmbiz_png/gz2sdHyQbaa1ZQyJicMI8k2NbjBib4XlyyJscbYZGRrw3unMhtcLjFuHf7vzJYZ5761IkGjUrRoP4Z8pTzBnWbfw/640?wx_fmt=png&amp;amp;from=appmsg&amp;amp;tp=wxpic&amp;amp;wxfrom=5&amp;amp;wx_lazy=1&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;这样，Typora + PicList + Gitee 的图床方案就配置好了，之后写 Markdown 时插入的图片会自动上传到 Gitee，并返回在线链接，非常省心。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20250826173904610.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-</content:encoded></item><item><title>MuMu模拟器</title><link>https://dqtx.cc/posts/software/mumu%E6%A8%A1%E6%8B%9F%E5%99%A8/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/mumu%E6%A8%A1%E6%8B%9F%E5%99%A8/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;MuMu模拟器作为市面上兼容性和稳定性极佳的安卓模拟器，一直是玩手游、刷视频及跑脚本用户的首选。不过默认设置下它会有一些开屏广告、桌面广告，本文将手把手教你：**最新版 MuMu 5.9 下载、广告屏蔽、壁纸自定义、快捷技巧等。**建议收藏转发.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20251130144036028.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;一.软件下载&lt;/h2&gt;
-&lt;p&gt;MuMu模拟器官网：
-https://mumu.163.com/&lt;/p&gt;
-&lt;h2&gt;二.广告屏蔽&lt;/h2&gt;
-&lt;h3&gt;1.屏蔽开屏广告&lt;/h3&gt;
-&lt;p&gt;在系统 Host 文件中添加如下规则👇&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;114.115.116.117 mumu.nie.netease.com
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;2.删除桌面广告&lt;/h3&gt;
-&lt;p&gt;直接替换系统镜像文件:&lt;strong&gt;&lt;a href=&quot;https://pan.xunlei.com/x/VOfIXk-qqm-IpJmek_9iba1DA1?pwd=2wqi#&quot;&gt;点此下载&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;路径为：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;.\nx_device\12.0\vms\MuMuPlayer-12.0-base\system.vdi
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;三.使用技巧&lt;/h2&gt;
-&lt;h3&gt;快捷启动&lt;/h3&gt;
-&lt;p&gt;在桌面建立启动直达图标,双击即可直接启动指定的模拟器实例&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20251130144131759.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;壁纸更换&lt;/h3&gt;
-&lt;p&gt;先打开电脑端共享文件夹,将你喜欢的壁纸拖进去&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20251130144134739.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;点击模拟器桌面的设置-壁纸，然后更换即可&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20251130144137855.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;经过这些配置之后，MuMu 就会变成一个干净优雅的虚拟空间，使用 MuMu 的过程中遇到任何问题，或者有更好用的优化技巧，欢迎在评论区交流分享。&lt;/p&gt;
 </content:encoded></item><item><title>闪电说：端侧AI语音输入法</title><link>https://dqtx.cc/posts/software/%E9%97%AA%E7%94%B5%E8%AF%B4%E7%AB%AF%E4%BE%A7ai%E8%AF%AD%E9%9F%B3%E8%BE%93%E5%85%A5%E6%B3%95/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E9%97%AA%E7%94%B5%E8%AF%B4%E7%AB%AF%E4%BE%A7ai%E8%AF%AD%E9%9F%B3%E8%BE%93%E5%85%A5%E6%B3%95/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;闪电说是由武汉团队打造的&lt;strong&gt;国产 AI 语音输入法&lt;/strong&gt;，前身为代体输入法，以 “端侧本地处理” 为核心特色，实现毫秒级语音转文字体验。它打破传统云端语音输入的延迟与隐私痛点，通过本地 AI 引擎构建 “即说即显、思维同步” 的输入模式，兼容 Windows 和 macOS 全平台，是一款完全免费的系统级输入工具，被观猹平台评为 8.6 分高分产品。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260204111254949.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;上手指南&lt;/h2&gt;
