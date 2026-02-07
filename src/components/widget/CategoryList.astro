@@ -35,61 +35,22 @@ const categories = Array.from(categoryCount.entries())
         const bIndex = categoryOrder.indexOf(b.name);
         return aIndex - bIndex;
     });
-
-// 所有分类都使用居中对齐（文字居中，数字在右侧）
-const categoryAlign = new Map<string, "left" | "center">();
-categoryAlign.set("Software", "center");
-categoryAlign.set("AIHacks", "center");
-categoryAlign.set("Technical", "center");
-
-// 为每个分类定义主色系的配色 - 使用冷紫蓝，同一色值
-const categoryColors = new Map<string, { bg: string, border: string, shadow: string, hoverBg: string }>();
-const primaryColor = "oklch(0.58 0.16 268)";
-const primaryColorDim = "oklch(0.58 0.16 268 / 0.7)";
-const primaryColorHover = "oklch(0.62 0.17 268)";
-
-categoryColors.set("Software", {
-    bg: "oklch(0.58 0.16 268 / 0.12)",
-    border: "oklch(0.58 0.16 268 / 0.3)",
-    shadow: "oklch(0.58 0.16 268 / 0.15)",
-    hoverBg: "oklch(0.58 0.16 268 / 0.18)"
-});
-categoryColors.set("Technical", {
-    bg: "oklch(0.58 0.16 268 / 0.12)",
-    border: "oklch(0.58 0.16 268 / 0.3)",
-    shadow: "oklch(0.58 0.16 268 / 0.15)",
-    hoverBg: "oklch(0.58 0.16 268 / 0.18)"
-});
-categoryColors.set("AIHacks", {
-    bg: "oklch(0.58 0.16 268 / 0.12)",
-    border: "oklch(0.58 0.16 268 / 0.3)",
-    shadow: "oklch(0.58 0.16 268 / 0.15)",
-    hoverBg: "oklch(0.58 0.16 268 / 0.18)"
-});
 ---
 
 <div class="category-list">
     <div class="category-header">
-        <div class="decoration-line"></div>
-        <span class="hacker-icon">&gt;_</span>
-        <span class="decoration-title gradient-text-cat">文章分类</span>
-        <div class="decoration-line"></div>
+        <span class="category-title">文章分类</span>
     </div>
 
-    <div class="flex flex-col gap-2">
+    <div class="category-rail">
         {categories.map((category, index) => {
-            const align = categoryAlign.get(category.name) || "center";
-            const colors = categoryColors.get(category.name) || categoryColors.get("Software")!;
             const displayCount = category.count < 10 ? `0${category.count}` : String(category.count);
+            const isCurrent = Astro.url.pathname === `/categories/${category.name}/` ||
+                             (Astro.url.pathname === '/' && index === 0);
             return (
-                <a href={`/categories/${category.name}/`} class="category-item group">
-                    <div class="category-card" style={`animation-delay: ${index * 0.05}s; --cat-bg: ${colors.bg}; --cat-border: ${colors.border}; --cat-shadow: ${colors.shadow}; --cat-hover-bg: ${colors.hoverBg};`}>
-                        <div class="category-card-border"></div>
-                        <div class={`category-card-content category-card-${align}`}>
-                            <span class="category-name">{category.name}</span>
-                            <span class="category-count">{displayCount}</span>
-                        </div>
-                    </div>
+                <a href={`/categories/${category.name}/`} class:list={["category-item", { "category-current": isCurrent }]}>
+                    <span class="category-name">{category.name}</span>
+                    <span class="category-count">{displayCount}</span>
                 </a>
             );
         })}
@@ -98,159 +59,116 @@ categoryColors.set("AIHacks", {
 
 <style>
     .category-list {
-        padding: 0.5rem 0;
+        padding: 0;
     }
 
     .category-header {
+        margin-bottom: 0;
+        padding-bottom: 12px;
+        border-bottom: 1px solid oklch(0.85 0.005 268);
+    }
+
+    html.dark .category-header {
+        border-bottom-color: oklch(0.30 0.01 268);
+    }
+
+    .category-title {
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: oklch(0.45 0.01 268);
+    }
+
+    html.dark .category-title {
+        color: oklch(0.60 0.01 268);
+    }
+
+    /* 栏位容器 - 连续区域 */
+    .category-rail {
         display: flex;
-        align-items: center;
-        gap: 8px;
-        margin-bottom: 12px;
+        flex-direction: column;
+        padding: 4px 0;
     }
 
-    .decoration-line {
-        flex: 1;
-        height: 1px;
-        border-top: 1px dashed;
-        border-color: oklch(0.85 0.01 var(--hue));
-        opacity: 0.6;
-    }
-
-    .dark .decoration-line {
-        border-color: oklch(0.35 0.02 var(--hue));
-    }
-
-    .hacker-icon {
-        font-size: 13px;
-        font-weight: 400;
-        color: oklch(0.58 0.16 268);
-        font-family: 'Courier New', 'Consolas', monospace;
-        letter-spacing: 0;
-    }
-
-    .dark .hacker-icon {
-        color: oklch(0.70 0.14 268);
-    }
-
-    .decoration-title {
-        font-size: 14px;
-        font-weight: 600;
-        white-space: nowrap;
-    }
-
+    /* 分类项 - 线性、垂直、规整 */
     .category-item {
-        text-decoration: none;
-        display: block;
-    }
-
-    .category-card {
-        position: relative;
-        background: transparent;
-        border-radius: 4px;
-        overflow: hidden;
-        transition: all 0.15s ease;
-        animation: slideIn 0.4s ease-out backwards;
-        border: 1px solid transparent;
-    }
-
-    .category-card:hover {
-        background: oklch(0.58 0.16 268 / 0.08);
-        border-color: oklch(0.58 0.16 268 / 0.15);
-    }
-
-    .category-card-border {
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        width: 3px;
-        background: linear-gradient(180deg, var(--primary), var(--primary) / 0.5);
-        opacity: 0;
-        transition: opacity 0.3s ease;
-    }
-
-    .category-card:hover .category-card-border {
-        opacity: 1;
-    }
-
-    .category-card-content {
         display: flex;
         align-items: center;
-        padding: 10px 14px;
-        gap: 8px;
-    }
-
-    /* 左对齐：名称和数字都在左侧 */
-    .category-card-left {
-        justify-content: flex-start;
-    }
-
-    /* 居中对齐：名称居中，数字在右侧 */
-    .category-card-center {
         justify-content: space-between;
+        padding: 10px 8px;
+        text-decoration: none;
+        border-left: 2px solid transparent;
+        transition: all 0.15s ease;
+        position: relative;
     }
 
-    .category-card-center .category-name {
-        flex: 1;
-        text-align: center;
+    /* 未选中态 - 退到背景 */
+    .category-item:not(.category-current) {
+        margin-left: 0;
+    }
+
+    .category-item:not(.category-current) .category-name {
+        color: oklch(0.50 0.01 268);
+        font-weight: 400;
+    }
+
+    html.dark .category-item:not(.category-current) .category-name {
+        color: oklch(0.60 0.01 268);
+    }
+
+    .category-item:not(.category-current) .category-count {
+        color: oklch(0.55 0.01 268);
+    }
+
+    html.dark .category-item:not(.category-current) .category-count {
+        color: oklch(0.50 0.01 268);
+    }
+
+    /* 悬停态 */
+    .category-item:not(.category-current):hover {
+        background: oklch(0.96 0.002 268);
+        margin-left: 2px;
+    }
+
+    html.dark .category-item:not(.category-current):hover {
+        background: oklch(0.24 0.005 268);
+    }
+
+    /* 当前分类 - 站出来 */
+    .category-current {
+        background: oklch(0.95 0.004 268);
+        border-left-color: oklch(0.58 0.16 268);
+        padding-left: 12px;
+        margin-right: -8px;
+    }
+
+    html.dark .category-current {
+        background: oklch(0.26 0.008 268);
+    }
+
+    .category-current .category-name {
+        color: oklch(0.25 0.01 268);
+        font-weight: 500;
+    }
+
+    html.dark .category-current .category-name {
+        color: oklch(0.85 0.01 268);
+    }
+
+    .category-current .category-count {
+        color: oklch(0.58 0.16 268);
+        font-weight: 500;
     }
 
     .category-name {
         font-size: 14px;
-        color: oklch(0.40 0.01 268) !important;
-        font-weight: 400;
-        letter-spacing: 0.01em;
-        transition: color 0.15s ease;
-    }
-
-    .dark .category-name {
-        color: oklch(0.65 0.01 268) !important;
-    }
-
-    .category-card:hover .category-name {
-        color: oklch(0.58 0.16 268) !important;
-        font-weight: 500;
-    }
-
-    .dark .category-card:hover .category-name {
-        color: oklch(0.70 0.14 268) !important;
-    }
-
-    /* 文章分类标题 - 主色 */
-    .gradient-text-cat {
-        color: oklch(0.58 0.16 268) !important;
-        font-weight: 500;
-        letter-spacing: 0.02em;
-    }
-
-    .dark .gradient-text-cat {
-        color: oklch(0.70 0.14 268) !important;
+        transition: all 0.15s ease;
     }
 
     .category-count {
         font-size: 12px;
-        font-weight: 400;
-        color: oklch(0.50 0.01 268);
         font-variant-numeric: tabular-nums;
-        transition: color 0.2s ease;
-    }
-
-    .dark .category-count {
-        color: oklch(0.60 0.01 268);
-    }
-
-    .category-card:hover .category-count {
-        color: oklch(0.58 0.16 268);
-    }
-
-    @keyframes slideIn {
-        from {
-            opacity: 0;
-            transform: translateX(-10px);
-        }
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
+        transition: all 0.15s ease;
     }
 </style>
