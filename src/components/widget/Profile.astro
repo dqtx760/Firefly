@@ -61,6 +61,31 @@ for (const post of posts) {
     </div>
 </div>
 
+<script is:inline define:vars={{ name: config.name }}>
+    // 立即设置标题渐变
+    document.addEventListener('DOMContentLoaded', () => {
+        const updateGradient = () => {
+            const isDark = document.documentElement.classList.contains('dark');
+            const nameElements = document.querySelectorAll('.profile-name-gradient');
+            nameElements.forEach(el => {
+                el.style.background = isDark
+                    ? 'linear-gradient(135deg, #38bdf8, #a78bfa)'
+                    : 'linear-gradient(135deg, #0ea5e9, #8b5cf6)';
+                el.style.webkitBackgroundClip = 'text';
+                el.style.webkitTextFillColor = 'transparent';
+                el.style.backgroundClip = 'text';
+                el.style.color = 'transparent';
+            });
+        };
+        updateGradient();
+        // 监听主题变化
+        new MutationObserver(updateGradient).observe(document.documentElement, {
+            attributes: true,
+            attributeFilter: ['class']
+        });
+    });
+</script>
+
 <style>
     .loading-bar {
         transition: opacity 0.5s ease-out;
