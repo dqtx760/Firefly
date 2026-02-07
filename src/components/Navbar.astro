@@ -103,31 +103,54 @@ a:hover .rss-icon {
   transform: rotate(360deg);
 }
 
-/* 导航栏标题渐变 */
+/* 导航栏底部绿色点缀 */
+#navbar .card-base {
+    position: relative;
+}
+
+#navbar .card-base::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 2px;
+    background: linear-gradient(90deg,
+        transparent 0%,
+        rgba(52, 211, 153, 0.3) 20%,
+        rgba(52, 211, 153, 0.5) 50%,
+        rgba(52, 211, 153, 0.3) 80%,
+        transparent 100%
+    );
+    border-radius: 0 0 4px 4px;
+}
+
+/* 导航栏标题渐变 - 绿色系 */
 .navbar-title-gradient {
-    background: linear-gradient(135deg, #0ea5e9, #8b5cf6);
+    background: linear-gradient(135deg, #10b981, #06b6d4);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
 html.dark .navbar-title-gradient {
-    background: linear-gradient(135deg, #38bdf8, #a78bfa);
+    background: linear-gradient(135deg, #34d399, #22d3ee);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
-/* 导航栏图标渐变 */
+/* 导航栏图标渐变 - 绿色系 */
 .navbar-title-gradient-icon {
-    background: linear-gradient(135deg, #0ea5e9, #8b5cf6);
+    background: linear-gradient(135deg, #10b981, #06b6d4);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
 html.dark .navbar-title-gradient-icon {
-    background: linear-gradient(135deg, #38bdf8, #a78bfa);
+    background: linear-gradient(135deg, #34d399, #22d3ee);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

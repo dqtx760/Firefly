@@ -21,7 +21,7 @@ for (const post of posts) {
     </div>
     <div class="px-2 text-center">
         <div class="font-bold text-xl mb-1 transition text-black" style="color: black !important;">{config.name}</div>
-        <div class="h-1 w-5 bg-[var(--primary)] mx-auto rounded-full mb-2 transition"></div>
+        <div class="h-1 w-5 mx-auto rounded-full mb-2 transition bg-gradient-to-r from-emerald-400 via-teal-400 to-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.5)]"></div>
         <div class="text-center mb-2.5 transition text-black dark:text-neutral-400">{config.bio}</div>
         <div class="flex flex-wrap gap-2 justify-center mb-1">
             <!-- 微信图标 - 点击弹窗 -->
@@ -126,27 +126,31 @@ for (const post of posts) {
         background-clip: text !important;
     }
 
-    /* 社交图标按钮 - 统一深绿色主题 */
+    /* 社交图标按钮 - 统一深绿色主题，增强立体感 */
     .social-icon-btn {
-        background: linear-gradient(135deg, rgba(16, 185, 129, 0.85), rgba(52, 211, 153, 0.85)) !important;
+        background: linear-gradient(145deg, rgba(16, 185, 129, 0.9), rgba(5, 150, 105, 0.95)) !important;
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: all 0.3s ease;
-        box-shadow: 0 2px 8px rgba(16, 185, 129, 0.2);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow:
+            0 2px 8px rgba(16, 185, 129, 0.3),
+            inset 0 1px 0 rgba(255, 255, 255, 0.1);
     }
 
     .social-icon-btn:hover {
-        background: linear-gradient(135deg, rgba(16, 185, 129, 1), rgba(52, 211, 153, 1)) !important;
-        transform: scale(1.05);
-        box-shadow: 0 4px 12px rgba(16, 185, 129, 0.35);
+        background: linear-gradient(145deg, rgba(5, 150, 105, 0.95), rgba(16, 185, 129, 1)) !important;
+        transform: scale(1.08) translateY(-1px);
+        box-shadow:
+            0 6px 16px rgba(16, 185, 129, 0.4),
+            inset 0 1px 0 rgba(255, 255, 255, 0.15);
     }
 
     /* 图标颜色统一为深色系，与整体配色协调 */
     .social-icon-btn svg,
     .social-icon-btn :deep(svg) {
-        fill: #0f2025 !important;
-        color: #0f2025 !important;
+        fill: #0a1619 !important;
+        color: #0a1619 !important;
     }
 </style>
 
