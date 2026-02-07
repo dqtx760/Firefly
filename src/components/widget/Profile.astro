@@ -126,24 +126,27 @@ for (const post of posts) {
         background-clip: text !important;
     }
 
-    /* 社交图标按钮 - 绿色背景 */
+    /* 社交图标按钮 - 统一深绿色主题 */
     .social-icon-btn {
-        background-color: rgba(183, 246, 5, 0.85) !important;
+        background: linear-gradient(135deg, rgba(16, 185, 129, 0.85), rgba(52, 211, 153, 0.85)) !important;
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: all 0.2s ease;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(16, 185, 129, 0.2);
     }
 
     .social-icon-btn:hover {
-        background-color: rgba(183, 246, 5, 1) !important;
+        background: linear-gradient(135deg, rgba(16, 185, 129, 1), rgba(52, 211, 153, 1)) !important;
         transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(16, 185, 129, 0.35);
     }
 
+    /* 图标颜色统一为深色系，与整体配色协调 */
     .social-icon-btn svg,
     .social-icon-btn :deep(svg) {
-        fill: white !important;
-        color: white !important;
+        fill: #0f2025 !important;
+        color: #0f2025 !important;
     }
 </style>
 
