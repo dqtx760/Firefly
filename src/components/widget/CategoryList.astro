@@ -85,21 +85,21 @@ const categories = Array.from(categoryCount.entries())
 
     .hacker-icon {
         font-size: 13px;
-        font-weight: 400;
+        font-weight: 600;
         color: oklch(0.58 0.16 268);
         font-family: 'Courier New', 'Consolas', monospace;
     }
 
     .category-title {
         font-size: 12px;
-        font-weight: 500;
+        font-weight: 600;
         letter-spacing: 0.08em;
         text-transform: uppercase;
-        color: oklch(0.45 0.01 268);
+        color: oklch(0.50 0.01 268);
     }
 
     html.dark .category-title {
-        color: oklch(0.60 0.01 268);
+        color: oklch(0.65 0.01 268);
     }
 
     .category-item {
@@ -108,7 +108,7 @@ const categories = Array.from(categoryCount.entries())
     }
 
     .category-card {
-        background: oklch(0.95 0.004 268 / 0.6);
+        background: oklch(0.95 0.004 268 / 0.4);
         backdrop-filter: blur(8px);
         border-radius: 2px;
         padding: 10px 14px;
@@ -116,29 +116,29 @@ const categories = Array.from(categoryCount.entries())
         align-items: center;
         justify-content: space-between;
         transition: all 0.2s ease;
-        border: 1px solid oklch(0.58 0.16 268 / 0.15);
+        border: 1px solid oklch(0.58 0.16 268 / 0.2);
     }
 
     html.dark .category-card {
-        background: oklch(0.25 0.008 268 / 0.6);
-        border-color: oklch(0.58 0.16 268 / 0.2);
+        background: oklch(0.25 0.008 268 / 0.4);
+        border-color: oklch(0.58 0.16 268 / 0.25);
     }
 
     .category-card:hover {
-        background: oklch(0.95 0.004 268 / 0.8);
-        border-color: oklch(0.58 0.16 268 / 0.3);
+        background: oklch(0.95 0.004 268 / 0.6);
+        border-color: oklch(0.58 0.16 268 / 0.35);
         transform: translateX(2px);
     }
 
     html.dark .category-card:hover {
-        background: oklch(0.25 0.008 268 / 0.8);
+        background: oklch(0.25 0.008 268 / 0.6);
         border-color: oklch(0.58 0.16 268 / 0.4);
     }
 
     .category-name {
         font-size: 14px;
         color: oklch(0.30 0.01 268);
-        font-weight: 500;
+        font-weight: 600;
         transition: color 0.2s ease;
     }
 
@@ -158,6 +158,7 @@ const categories = Array.from(categoryCount.entries())
         font-size: 12px;
         color: oklch(0.50 0.01 268);
         font-variant-numeric: tabular-nums;
+        font-weight: 600;
         transition: color 0.2s ease;
     }
 
