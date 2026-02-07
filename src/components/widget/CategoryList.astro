@@ -83,11 +83,39 @@ const categories = Array.from(categoryCount.entries())
         border-top-color: oklch(0.30 0.01 268);
     }
 
+    /* 通用渐变样式 */
+    .gradient-text {
+        background: linear-gradient(135deg, #0ea5e9, #8b5cf6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .dark .gradient-text {
+        background: linear-gradient(135deg, #38bdf8, #a78bfa);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
     .hacker-icon {
         font-size: 13px;
         font-weight: 600;
-        color: oklch(0.58 0.16 268);
         font-family: 'Courier New', 'Consolas', monospace;
+    }
+
+    .hacker-icon {
+        background: linear-gradient(135deg, #0ea5e9, #8b5cf6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .dark .hacker-icon {
+        background: linear-gradient(135deg, #38bdf8, #a78bfa);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
     }
 
     .category-title {
@@ -95,11 +123,17 @@ const categories = Array.from(categoryCount.entries())
         font-weight: 600;
         letter-spacing: 0.08em;
         text-transform: uppercase;
-        color: oklch(0.50 0.01 268);
+        background: linear-gradient(135deg, #0ea5e9, #8b5cf6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
     }
 
     html.dark .category-title {
-        color: oklch(0.65 0.01 268);
+        background: linear-gradient(135deg, #38bdf8, #a78bfa);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
     }
 
     .category-item {
@@ -108,8 +142,8 @@ const categories = Array.from(categoryCount.entries())
     }
 
     .category-card {
-        background: oklch(0.95 0.004 268 / 0.4);
-        backdrop-filter: blur(8px);
+        background: transparent;
+        backdrop-filter: none;
         border-radius: 2px;
         padding: 10px 14px;
         display: flex;
@@ -120,18 +154,18 @@ const categories = Array.from(categoryCount.entries())
     }
 
     html.dark .category-card {
-        background: oklch(0.25 0.008 268 / 0.4);
+        background: transparent;
         border-color: oklch(0.58 0.16 268 / 0.25);
     }
 
     .category-card:hover {
-        background: oklch(0.95 0.004 268 / 0.6);
+        background: oklch(0.95 0.004 268 / 0.2);
         border-color: oklch(0.58 0.16 268 / 0.35);
         transform: translateX(2px);
     }
 
     html.dark .category-card:hover {
-        background: oklch(0.25 0.008 268 / 0.6);
+        background: oklch(0.25 0.008 268 / 0.2);
         border-color: oklch(0.58 0.16 268 / 0.4);
     }
 
