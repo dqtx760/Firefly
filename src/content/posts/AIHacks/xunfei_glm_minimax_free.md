@@ -2,7 +2,7 @@
 title: 讯飞GLM-4.7与MiniMax-M2.1免费开放：开发者福利与行业变革
 published: 2024-01-15
 description: '讯飞近日宣布开放 GLM-4.7 和 MiniMax-M2.1 两款大语言模型的免费使用，为开发者提供零门槛的AI接入机会'
-category: 技术教程
+category: Technical
 tags: ['AI', 'API', '大模型']
 draft: false
 ---
