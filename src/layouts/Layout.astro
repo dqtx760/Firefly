@@ -482,11 +482,30 @@ function init() {
 		bgBox.classList.add('loaded');
 	}
 
+	// 设置标题渐变颜色
+	const updateTitleGradient = () => {
+		const isDark = document.documentElement.classList.contains('dark');
+		const titleElement = document.querySelector('.profile-name-gradient');
+		if (titleElement) {
+			if (isDark) {
+				titleElement.style.background = 'linear-gradient(135deg, #38bdf8, #a78bfa)';
+			} else {
+				titleElement.style.background = 'linear-gradient(135deg, #0ea5e9, #8b5cf6)';
+			}
+			titleElement.style.webkitBackgroundClip = 'text';
+			titleElement.style.webkitTextFillColor = 'transparent';
+			titleElement.style.backgroundClip = 'text';
+			titleElement.style.color = 'transparent';
+		}
+	};
+	updateTitleGradient();
+
 	new MutationObserver(() => {
 		const frame = document.querySelector('iframe.giscus-frame');
 		if (!frame) return;
 		const theme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
 		frame.contentWindow.postMessage({ giscus: { setConfig: { theme } } }, 'https://giscus.app');
+		updateTitleGradient();
 	}).observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
 	// console.timeEnd("init");
 }
