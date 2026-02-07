@@ -98,20 +98,19 @@ const { remarkPluginFrontmatter } = await entry.render();
 
 
 <style define:vars={{coverWidth}}>
-    /* 文章标题前的竖线 - 与分类按钮绿色统一 */
+    /* 文章标题前的竖线 - 主色，即判断与立场 */
     .title-accent-bar::before {
         content: '';
         position: absolute;
-        width: 6px;
-        height: 24px;
-        border-radius: 2px;
-        background: linear-gradient(180deg, rgb(52, 211, 153) 0%, rgb(16, 185, 129) 100%);
-        box-shadow: 0 0 12px rgba(52, 211, 153, 0.6);
+        width: 3px;
+        height: 20px;
+        background: oklch(0.58 0.16 268);
     }
 
     @media (min-width: 768px) {
         .title-accent-bar::before {
-            height: 28px;
+            height: 24px;
+            width: 3px;
         }
     }
 </style>

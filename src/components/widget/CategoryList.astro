@@ -42,25 +42,29 @@ categoryAlign.set("Software", "center");
 categoryAlign.set("AIHacks", "center");
 categoryAlign.set("Technical", "center");
 
-// 为每个分类定义绿色系的配色方案（同色系不同深浅，增加饱和度）
+// 为每个分类定义主色系的配色 - 使用冷紫蓝，同一色值
 const categoryColors = new Map<string, { bg: string, border: string, shadow: string, hoverBg: string }>();
+const primaryColor = "oklch(0.58 0.16 268)";
+const primaryColorDim = "oklch(0.58 0.16 268 / 0.7)";
+const primaryColorHover = "oklch(0.62 0.17 268)";
+
 categoryColors.set("Software", {
-    bg: "rgba(52, 211, 153, 0.85)",           // 亮绿 - 提高饱和度
-    border: "rgba(52, 211, 153, 0.5)",
-    shadow: "rgba(52, 211, 153, 0.35), 0 4px 12px rgba(52, 211, 153, 0.2)",
-    hoverBg: "rgba(52, 211, 153, 0.95)"
+    bg: "oklch(0.58 0.16 268 / 0.12)",
+    border: "oklch(0.58 0.16 268 / 0.3)",
+    shadow: "oklch(0.58 0.16 268 / 0.15)",
+    hoverBg: "oklch(0.58 0.16 268 / 0.18)"
 });
 categoryColors.set("Technical", {
-    bg: "rgba(16, 185, 129, 0.88)",           // 中绿 - 提高饱和度和对比度
-    border: "rgba(16, 185, 129, 0.55)",
-    shadow: "rgba(16, 185, 129, 0.4), 0 4px 12px rgba(16, 185, 129, 0.25)",
-    hoverBg: "rgba(16, 185, 129, 0.98)"
+    bg: "oklch(0.58 0.16 268 / 0.12)",
+    border: "oklch(0.58 0.16 268 / 0.3)",
+    shadow: "oklch(0.58 0.16 268 / 0.15)",
+    hoverBg: "oklch(0.58 0.16 268 / 0.18)"
 });
 categoryColors.set("AIHacks", {
-    bg: "rgba(5, 150, 105, 0.90)",            // 深绿 - 最深，最高对比
-    border: "rgba(5, 150, 105, 0.6)",
-    shadow: "rgba(5, 150, 105, 0.45), 0 4px 12px rgba(5, 150, 105, 0.3)",
-    hoverBg: "rgba(5, 150, 105, 1)"
+    bg: "oklch(0.58 0.16 268 / 0.12)",
+    border: "oklch(0.58 0.16 268 / 0.3)",
+    shadow: "oklch(0.58 0.16 268 / 0.15)",
+    hoverBg: "oklch(0.58 0.16 268 / 0.18)"
 });
 ---
 
@@ -117,22 +121,15 @@ categoryColors.set("AIHacks", {
     }
 
     .hacker-icon {
-        font-size: 14px;
-        font-weight: 700;
-        color: var(--primary);
+        font-size: 13px;
+        font-weight: 400;
+        color: oklch(0.58 0.16 268);
         font-family: 'Courier New', 'Consolas', monospace;
-        letter-spacing: -1px;
-        background: linear-gradient(135deg, #10b981, #34d399);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+        letter-spacing: 0;
     }
 
     .dark .hacker-icon {
-        background: linear-gradient(135deg, #34d399, #6ee7b7);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+        color: oklch(0.70 0.14 268);
     }
 
     .decoration-title {
@@ -150,18 +147,17 @@ categoryColors.set("AIHacks", {
         position: relative;
         background: var(--cat-bg);
         backdrop-filter: blur(10px);
-        border-radius: 12px;
+        border-radius: 4px;
         overflow: hidden;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: all 0.2s ease;
         animation: slideIn 0.4s ease-out backwards;
         border: 1px solid var(--cat-border);
-        box-shadow: var(--cat-shadow);
     }
 
     .category-card:hover {
         background: var(--cat-hover-bg);
-        transform: translateX(6px) translateY(-2px);
-        box-shadow: 0 8px 24px var(--cat-shadow), 0 0 0 1px var(--cat-border);
+        transform: translateX(2px);
+        border-color: oklch(0.58 0.16 268 / 0.5);
     }
 
     .category-card-border {
@@ -203,61 +199,49 @@ categoryColors.set("AIHacks", {
 
     .category-name {
         font-size: 14px;
-        color: #0f2025 !important;
-        font-weight: 600;
-        transition: all 0.3s ease;
+        color: oklch(0.25 0.01 268) !important;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        transition: color 0.2s ease;
     }
 
     .dark .category-name {
-        color: #0f2025 !important;
+        color: oklch(0.85 0.01 268) !important;
     }
 
     .category-card:hover .category-name {
-        color: #0a1619 !important;
+        color: oklch(0.58 0.16 268) !important;
     }
 
     .dark .category-card:hover .category-name {
-        color: #0a1619 !important;
+        color: oklch(0.70 0.14 268) !important;
     }
 
-    /* 文章分类标题渐变 - 绿色系 */
+    /* 文章分类标题 - 主色 */
     .gradient-text-cat {
-        background: linear-gradient(135deg, #10b981, #34d399);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+        color: oklch(0.58 0.16 268) !important;
+        font-weight: 500;
+        letter-spacing: 0.02em;
     }
 
     .dark .gradient-text-cat {
-        background: linear-gradient(135deg, #34d399, #6ee7b7);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+        color: oklch(0.70 0.14 268) !important;
     }
 
     .category-count {
-        font-size: 11px;
-        font-weight: 500;
-        color: oklch(0.55 0.05 var(--hue));
-        background: transparent;
-        padding: 2px 8px;
-        border-radius: 12px;
-        border: 1px solid oklch(0.90 0.02 var(--hue));
-        transition: all 0.3s ease;
-        min-width: 24px;
-        text-align: center;
-        flex-shrink: 0;
+        font-size: 12px;
+        font-weight: 400;
+        color: oklch(0.50 0.01 268);
+        font-variant-numeric: tabular-nums;
+        transition: color 0.2s ease;
     }
 
     .dark .category-count {
-        color: oklch(0.65 0.05 var(--hue));
-        border-color: oklch(0.35 0.03 var(--hue));
+        color: oklch(0.60 0.01 268);
     }
 
     .category-card:hover .category-count {
-        background: var(--primary);
-        color: rgb(20, 20, 20);
-        border-color: var(--primary);
+        color: oklch(0.58 0.16 268);
     }
 
     @keyframes slideIn {
