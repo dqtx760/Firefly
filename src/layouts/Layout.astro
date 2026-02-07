@@ -217,52 +217,16 @@ const bannerOffset =
 				pointer-events: none;
 				z-index: -1;
 				transition: opacity 0.3s ease-in-out;
-				/* Grainient 噪点渐变背景 */
+				/* 渐变背景 */
 				background:
-					/* 主色层 - 紫色到青色渐变 */
-					linear-gradient(125deg, #1a0a2e 0%, #16213e 25%, #0f3460 50%, #1a1a4e 75%, #1a0a2e 100%),
 					/* 渐变光晕层 */
 					radial-gradient(ellipse at 20% 30%, rgba(138, 43, 226, 0.4) 0%, transparent 50%),
 					radial-gradient(ellipse at 80% 70%, rgba(6, 182, 212, 0.3) 0%, transparent 50%),
 					radial-gradient(ellipse at 50% 50%, rgba(236, 72, 153, 0.25) 0%, transparent 60%),
-					radial-gradient(ellipse at 70% 20%, rgba(99, 102, 241, 0.35) 0%, transparent 40%);
+					radial-gradient(ellipse at 70% 20%, rgba(99, 102, 241, 0.35) 0%, transparent 40%),
+					/* 主色层 */
+					linear-gradient(125deg, #1a0a2e 0%, #16213e 25%, #0f3460 50%, #1a1a4e 75%, #1a0a2e 100%);
 				background-blend-mode: screen, normal, normal, normal, normal;
-				filter: url(#grain) contrast(1.1) brightness(0.9);
-			}
-
-			/* Grainient 噪点动画 */
-			@keyframes grain {
-				0%, 100% {
-					transform: translate(0, 0);
-				}
-				10% {
-					transform: translate(-5%, -10%);
-				}
-				30% {
-					transform: translate(3%, -15%);
-				}
-				50% {
-					transform: translate(-8%, 5%);
-				}
-				70% {
-					transform: translate(6%, 8%);
-				}
-				90% {
-					transform: translate(-3%, -6%);
-				}
-			}
-
-			#bg-box::before {
-				content: '';
-				position: absolute;
-				top: -50%;
-				left: -50%;
-				width: 200%;
-				height: 200%;
-				background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-				opacity: 0.08;
-				animation: grain 8s steps(10) infinite;
-				pointer-events: none;
 			}
 			
 			#bg-box.loaded {
