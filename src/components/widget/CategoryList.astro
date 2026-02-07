@@ -39,7 +39,10 @@ const categories = Array.from(categoryCount.entries())
 
 <div class="category-list">
     <div class="category-header">
+        <div class="decoration-line"></div>
+        <span class="hacker-icon">&gt;_</span>
         <span class="category-title">文章分类</span>
+        <div class="decoration-line"></div>
     </div>
 
     <div class="flex flex-col gap-2">
@@ -63,7 +66,28 @@ const categories = Array.from(categoryCount.entries())
     }
 
     .category-header {
+        display: flex;
+        align-items: center;
+        gap: 8px;
         margin-bottom: 12px;
+    }
+
+    .decoration-line {
+        flex: 1;
+        height: 1px;
+        border-top: 1px dashed oklch(0.85 0.005 268);
+        opacity: 0.5;
+    }
+
+    html.dark .decoration-line {
+        border-top-color: oklch(0.30 0.01 268);
+    }
+
+    .hacker-icon {
+        font-size: 13px;
+        font-weight: 400;
+        color: oklch(0.58 0.16 268);
+        font-family: 'Courier New', 'Consolas', monospace;
     }
 
     .category-title {
@@ -86,7 +110,7 @@ const categories = Array.from(categoryCount.entries())
     .category-card {
         background: oklch(0.95 0.004 268 / 0.6);
         backdrop-filter: blur(8px);
-        border-radius: 8px;
+        border-radius: 2px;
         padding: 10px 14px;
         display: flex;
         align-items: center;
