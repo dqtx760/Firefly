@@ -21,7 +21,7 @@ for (const post of posts) {
     </div>
     <div class="px-2 text-center">
         <div class="font-bold text-xl mb-1 transition text-black" style="color: black !important;">{config.name}</div>
-        <div class="h-1 w-5 mx-auto rounded-full mb-2 transition bg-gradient-to-r from-emerald-400 via-teal-400 to-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.5)]"></div>
+        <div class="h-px w-8 mx-auto mb-3 transition bg-[oklch(0.58_0.16_268)]"></div>
         <div class="text-center mb-2.5 transition text-black dark:text-neutral-400">{config.bio}</div>
         <div class="flex flex-wrap gap-2 justify-center mb-1">
             <!-- 微信图标 - 点击弹窗 -->
@@ -126,29 +126,23 @@ for (const post of posts) {
         background-clip: text !important;
     }
 
-    /* 社交图标按钮 - 统一深绿色主题，增强立体感 */
+    /* 社交图标按钮 - 极简中性样式 */
     .social-icon-btn {
-        background: linear-gradient(145deg, rgba(16, 185, 129, 0.92), rgba(5, 150, 105, 0.96)) !important;
+        background: oklch(0.95 0.005 268) !important;
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        box-shadow:
-            0 3px 10px rgba(16, 185, 129, 0.35),
-            0 1px 3px rgba(0, 0, 0, 0.1),
-            inset 0 1px 0 rgba(255, 255, 255, 0.15);
+        transition: all 0.2s ease;
+        border: 1px solid oklch(0.85 0.01 268);
     }
 
     .social-icon-btn:hover {
-        background: linear-gradient(145deg, rgba(5, 150, 105, 0.96), rgba(16, 185, 129, 1)) !important;
-        transform: scale(1.1) translateY(-2px);
-        box-shadow:
-            0 8px 20px rgba(16, 185, 129, 0.45),
-            0 2px 6px rgba(0, 0, 0, 0.15),
-            inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        background: oklch(0.58 0.16 268) !important;
+        border-color: oklch(0.58 0.16 268);
+        transform: translateY(-1px);
     }
 
-    /* 图标颜色统一为浅灰色系，与绿色背景协调 */
+    /* 图标颜色 - 中性灰，悬停时变白 */
     .social-icon-btn svg,
     .social-icon-btn :deep(svg),
     .social-icon-btn :deep(.iconify),
@@ -157,9 +151,9 @@ for (const post of posts) {
     .social-icon-btn :deep(.iconify) path,
     .social-icon-btn svg *,
     .social-icon-btn :deep(svg *) {
-        fill: #d1d5db !important;
-        color: #d1d5db !important;
-        stroke: #d1d5db !important;
+        fill: oklch(0.40 0.01 268) !important;
+        color: oklch(0.40 0.01 268) !important;
+        stroke: oklch(0.40 0.01 268) !important;
     }
 
     .social-icon-btn:hover svg,
@@ -170,24 +164,22 @@ for (const post of posts) {
     .social-icon-btn:hover :deep(.iconify) path,
     .social-icon-btn:hover svg *,
     .social-icon-btn:hover :deep(svg *) {
-        fill: #f3f4f6 !important;
-        color: #f3f4f6 !important;
-        stroke: #f3f4f6 !important;
+        fill: oklch(0.98 0.005 268) !important;
+        color: oklch(0.98 0.005 268) !important;
+        stroke: oklch(0.98 0.005 268) !important;
     }
 
-    /* 个人信息卡片增强阴影 */
+    /* 个人信息卡片阴影 - 去掉彩色边框 */
     .profile-card-enhanced {
         box-shadow:
-            0 2px 8px rgba(0, 0, 0, 0.08),
-            0 6px 20px rgba(0, 0, 0, 0.06),
-            0 0 0 1px rgba(16, 185, 129, 0.08) !important;
+            0 1px 3px rgba(0, 0, 0, 0.08),
+            0 4px 12px rgba(0, 0, 0, 0.05) !important;
     }
 
     html.dark .profile-card-enhanced {
         box-shadow:
-            0 2px 8px rgba(0, 0, 0, 0.5),
-            0 6px 20px rgba(0, 0, 0, 0.35),
-            0 0 0 1px rgba(16, 185, 129, 0.12) !important;
+            0 1px 3px rgba(0, 0, 0, 0.4),
+            0 4px 12px rgba(0, 0, 0, 0.25) !important;
     }
 </style>
 

@@ -27,34 +27,22 @@
 
     .card-base {
         @apply rounded-[var(--radius-large)] overflow-hidden bg-[var(--card-bg)] transition;
-        border: 1px solid rgba(0, 0, 0, 0.08);
-        box-shadow:
-            0 1px 3px rgba(0, 0, 0, 0.06),
-            0 4px 12px rgba(0, 0, 0, 0.04),
-            0 0 0 1px rgba(0, 0, 0, 0.02);
+        border: 1px solid oklch(0.90 0.005 268);
+        box-shadow: 0 1px 4px oklch(0 0 0 / 0.04);
     }
     .dark .card-base {
-        border-color: rgba(255, 255, 255, 0.08);
-        box-shadow:
-            0 1px 3px rgba(0, 0, 0, 0.4),
-            0 4px 12px rgba(0, 0, 0, 0.25),
-            0 0 0 1px rgba(255, 255, 255, 0.03);
+        border-color: oklch(0.25 0.01 268);
+        box-shadow: 0 1px 4px oklch(0 0 0 / 0.3);
     }
     .card-hover {
-        @apply hover:scale-[1.01] hover:z-10;
-        border-color: rgba(0, 0, 0, 0.12);
-        box-shadow:
-            0 4px 16px rgba(0, 0, 0, 0.08),
-            0 8px 32px rgba(0, 0, 0, 0.06),
-            0 0 0 1px rgba(0, 0, 0, 0.03);
-        transition: all 0.3s ease;
+        @apply hover:scale-[1.005] hover:z-10;
+        border-color: oklch(0.58 0.16 268 / 0.2);
+        box-shadow: 0 2px 8px oklch(0 0 0 / 0.06);
+        transition: all 0.2s ease;
     }
     .dark .card-hover {
-        border-color: rgba(255, 255, 255, 0.15);
-        box-shadow:
-            0 4px 16px rgba(0, 0, 0, 0.5),
-            0 8px 32px rgba(0, 0, 0, 0.35),
-            0 0 0 1px rgba(255, 255, 255, 0.05);
+        border-color: oklch(0.58 0.16 268 / 0.3);
+        box-shadow: 0 2px 8px oklch(0 0 0 / 0.4);
     }
     h1, h2, h3, h4, h5, h6, p, a, span, li, ul, ol, blockquote, code, pre, table, th, td, strong {
         @apply transition;

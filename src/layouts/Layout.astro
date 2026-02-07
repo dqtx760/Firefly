@@ -216,18 +216,8 @@ const bannerOffset =
 				pointer-events: none;
 				z-index: -1;
 				transition: opacity 0.3s ease-in-out;
-				/* 更柔和的渐变背景 - 降低对比度和饱和度 */
-				background:
-					/* 柔和的绿色光晕层 */
-					radial-gradient(ellipse at 15% 25%, rgba(134, 239, 172, 0.15) 0%, transparent 55%),
-					radial-gradient(ellipse at 85% 75%, rgba(52, 211, 153, 0.12) 0%, transparent 50%),
-					radial-gradient(ellipse at 50% 40%, rgba(16, 185, 129, 0.08) 0%, transparent 60%),
-					/* 柔和的紫蓝色点缀 */
-					radial-gradient(ellipse at 75% 15%, rgba(167, 139, 250, 0.1) 0%, transparent 45%),
-					radial-gradient(ellipse at 25% 85%, rgba(56, 189, 248, 0.08) 0%, transparent 50%),
-					/* 主色层 - 更柔和的深色调 */
-					linear-gradient(135deg, #0f1f1a 0%, #1a2e25 25%, #0f2025 50%, #1a252e 75%, #0f1f1a 100%);
-				background-blend-mode: screen, screen, screen, screen, screen, normal;
+				/* 极简暗色背景 - 单一色调，无装饰 */
+				background: oklch(0.12 0.01 268);
 			}
 			
 			#bg-box.loaded {
