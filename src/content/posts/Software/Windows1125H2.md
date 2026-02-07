@@ -1,6 +1,6 @@
 ---
 title: Windows1125H2
-published: 2026-02-03T21:22:43.321Z
+published: 2025-08-15T10:30:00.000Z
 description: Shift + F10 打开 CMD 终端，绕过联网命令 start ms-cxh:localonly
 tags: ["效率工具","Windows"]
 draft: false

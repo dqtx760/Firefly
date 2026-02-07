@@ -1,6 +1,6 @@
 ---
 title: Passkeys通行密钥
-published: 2026-02-03T21:22:43.316Z
+published: 2026-01-15T11:20:00.000ZZ
 description: 你是否厌倦了记密码？设个简单的不安全，设个复杂的记不住？每次登录还要翻找密码本、或者点那该死的'忘记密码'？这几天测试了一圈Passkeys（通行密钥），我只能...
 tags: ["效率工具","Windows"]
 draft: false

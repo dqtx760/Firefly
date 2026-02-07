@@ -1,6 +1,6 @@
 ---
-title: 推荐：使用 winget 安装
-published: 2026-02-03T21:22:43.312Z
+title: md2wechat-skill安装教程
+published: 2026-03-18T10:45:00.000ZZ
 description: 如果你用Markdown写公众号文章，需要先复制内容到排版工具，再复制公众号很麻烦，既耗时间又难保证格式精美，每次操作都要反复调整，成了不少人的痛点，这几天在G...
 tags: ["效率工具","AI","Claude","Windows"]
 draft: false

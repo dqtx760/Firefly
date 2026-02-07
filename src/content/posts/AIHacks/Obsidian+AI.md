@@ -1,6 +1,6 @@
 ---
 title: Obsidian+AI
-published: 2026-02-03T21:22:43.314Z
+published: 2026-03-18T10:45:00.000ZZ
 description: 这几天，在gihub发现Obsidian重磅插件，直接把 AI 功能深度集成到核心里了！网上都在夸赞，确实牛批！今天我要分享的 Obsidian+AI 组合，一...
 tags: ["效率工具","AI","Claude","Typora"]
 draft: false

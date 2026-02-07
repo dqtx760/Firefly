@@ -17,24 +17,22 @@ pinned: true
 
 ## 我的网站↓
 
-| 用途说明 | 域名（带超链接） |
-| :--- | :--- |
-| 个人博客 | [dqtx.cc](https://dqtx.cc) |
-| 个人主页 | [me.dqtx.cc](https://me.dqtx.cc) |
-| 电视喵 | [tv.dqtx.cc](https://tv.dqtx.cc) |
-| 数字工坊 | [app.dqtx.cc](https://app.dqtx.cc) |
-| 大强导航 | [123.dqtx.cc](https://123.dqtx.cc) |
-| 魔法 | [77.dqtx.cc](https://77.dqtx.cc) |
-| 插件/脚本 | [110.dqtx.cc](https://110.dqtx.cc) |
-| 在线密码生成器 | [key.dqtx.cc/](https://key.dqtx.cc/在线密码生成器) |
-| 远程 | [742112.xyz](https://742112.xyz) |
-| 生图 | [ai.dqtx.cc](https://ai.dqtx.cc) |
-| 旁路由 | [op.dqtx.cc](https://op.dqtx.cc) |
-| 源检测 | [go.dqtx.cc](https://go.dqtx.cc) |
-| 计算器 | [jsq.dqtx.cc](https://jsq.dqtx.cc) |
-| 卡片生成器 | [cd.dqtx.cc](https://cd.dqtx.cc) |
-| 医疗报销助手 v4.1 | [bx.dqtx.cc](https://bx.dqtx.cc) |
-| 商务合作报价 | [help.dqtx.cc/](https://help.dqtx.cc/商务合作报价) |
+- 个人博客 [dqtx.cc](https://dqtx.cc)
+- 个人主页 [me.dqtx.cc](https://me.dqtx.cc)
+- 电视喵 [tv.dqtx.cc](https://tv.dqtx.cc)
+- 数字工坊 [app.dqtx.cc](https://app.dqtx.cc)
+- 大强导航 [123.dqtx.cc](https://123.dqtx.cc)
+- 魔法 [77.dqtx.cc](https://77.dqtx.cc)
+- 插件/脚本 [110.dqtx.cc](https://110.dqtx.cc)
+- 在线密码生成器 [key.dqtx.cc/](https://key.dqtx.cc/)
+- 远程 [742112.xyz](https://742112.xyz)
+- 生图 [ai.dqtx.cc](https://ai.dqtx.cc)
+- 旁路由 [op.dqtx.cc](https://op.dqtx.cc)
+- 源检测 [go.dqtx.cc](https://go.dqtx.cc)
+- 计算器 [jsq.dqtx.cc](https://jsq.dqtx.cc)
+- 卡片生成器 [cd.dqtx.cc](https://cd.dqtx.cc)
+- 医疗报销助手 v4.1 [bx.dqtx.cc](https://bx.dqtx.cc)
+- 商务合作报价 [help.dqtx.cc/](https://help.dqtx.cc/)
 
 
 
@@ -62,16 +60,15 @@ pinned: true
 
 
 ## 社交媒体
-1. 哔哩哔哩：[点此直达](https://space.bilibili.com/491358682/video)
-2. YouTube：[点此直达](https://www.youtube.com/@dqtx760/videos)
-3. 公众号：[点此直达](https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzI0NjYxNTM3NQ==&scene=124#wechat_redirect)
-4. 小红书：[点此直达](https://www.xiaohongshu.com/user/profile/5ce0d3a7000000001202e31b?xhsshare=CopyLink&appuid=5ce0d3a7000000001202e31b&apptime=1715165695)
-5. Twitter：[点此直达](https://twitter.com/dqtx760)
-6. 即刻：[点此直达](https://web.okjike.com/u/24236868-c3e9-49ef-ab93-93a60e1a25db)
-7. 微博：[点此直达](https://www.weibo.com/u/3488818185)
-8. 知乎：[点此直达](https://www.zhihu.com/people/da-qiang-sheng-huo-ri-ji)
-9. CSDN：[点此直达](https://blog.csdn.net/2402_82616859?spm=1011.2266.3001.5343)
-10. 掘金：[点此直达](https://juejin.cn/user/1805849856318867/posts)
+- 哔哩哔哩：[点此直达](https://space.bilibili.com/491358682/video)
+- YouTube：[点此直达](https://www.youtube.com/@dqtx760/videos)
+- 小红书：[点此直达](https://www.xiaohongshu.com/user/profile/5ce0d3a7000000001202e31b?xhsshare=CopyLink&appuid=5ce0d3a7000000001202e31b&apptime=1715165695)
+- Twitter：[点此直达](https://twitter.com/dqtx760)
+- 即刻：[点此直达](https://web.okjike.com/u/24236868-c3e9-49ef-ab93-93a60e1a25db)
+- 微博：[点此直达](https://www.weibo.com/u/3488818185)
+- 知乎：[点此直达](https://www.zhihu.com/people/da-qiang-sheng-huo-ri-ji)
+- CSDN：[点此直达](https://blog.csdn.net/2402_82616859?spm=1011.2266.3001.5343)
+- 掘金：[点此直达](https://juejin.cn/user/1805849856318867/posts)
 
 
 
