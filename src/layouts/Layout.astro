@@ -79,10 +79,18 @@ const bannerOffset =
 ---
 
 <!DOCTYPE html>
-    <html lang={siteLang} class="bg-[var(--page-bg)] transition text-[12px] md:text-[16px] dark"  
+    <html lang={siteLang} class="bg-[var(--page-bg)] transition text-[12px] md:text-[16px]"
 	  data-overlayscrollbars-initialize>  <!-- 手机端适配 -->
 
 	<head>
+		<!-- 防止主题闪烁 - 在页面渲染前立即设置主题 -->
+		<script is:inline define:vars={{forceDarkMode: siteConfig.themeColor.forceDarkMode}}>
+			// 立即设置主题，防止页面闪烁
+			const theme = localStorage.getItem('theme');
+			if (forceDarkMode || theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+				document.documentElement.classList.add('dark');
+			}
+		</script>
 
 		<title>{pageTitle}</title>
 
