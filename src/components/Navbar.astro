@@ -30,11 +30,11 @@ let links: NavBarLink[] = navBarConfig.links.map(
                 <span class="navbar-title-gradient">{siteConfig.title}</span>
             </div>
         </a>
-        <div class="hidden md:flex">
+        <div class="hidden md:flex items-center gap-1">
             {links.map((l) => {
                 const isRSS = l.name === "RSS";
                 return <a aria-label={l.name} href={l.external ? l.url : url(l.url)} target={l.external ? "_blank" : null}
-                          class:list={["btn-plain scale-animation rounded-lg h-11 font-bold active:scale-95", {"px-5": !isRSS, "px-3": isRSS}]}
+                          class:list={["btn-plain scale-animation rounded-lg h-11 font-bold active:scale-95", {"px-3": !isRSS, "px-2": isRSS}]}
                 >
                     <div class="flex items-center">
                         {isRSS ? (

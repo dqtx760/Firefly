@@ -1,6 +1,6 @@
 ---
-title:Dos常用命令汇总
-published: 2026-02-08
+title: Dos常用命令汇总
+published: 2024-05-18T10:30:00.000Z
 tags: []
 category: Software
 draft: false

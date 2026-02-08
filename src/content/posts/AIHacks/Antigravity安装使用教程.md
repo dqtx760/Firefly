@@ -1,6 +1,6 @@
 ---
 title: Antigravity安装使用教程
-published: 2026-03-18T10:45:00.000ZZ
+published: 2026-03-18T10:45:00.000Z
 description: Google Antigravity 是 DeepMind 推出的 AI 编程 IDE（2025-11-18 与 Gemini 3 同步发布），基于 VS Co...
 tags: ["效率工具","AI","Claude","Windows"]
 draft: false

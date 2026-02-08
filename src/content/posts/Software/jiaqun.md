@@ -1,6 +1,6 @@
 ---
 title: 个人说明书
-published: 2026-02-08
+published: 2024-11-30T16:45:00.000Z
 tags: []
 category: Software 
 draft: false
