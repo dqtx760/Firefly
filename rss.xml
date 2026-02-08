@@ -797,128 +797,7 @@ source ~/catkin_ws/devel/setup.bash
 &lt;/ol&gt;
 &lt;h2&gt;写在最后&lt;/h2&gt;
 &lt;p&gt;OpenClaw本身的使用门槛并不高，真正卡住大多数开发者的，始终是环境依赖、编译细节、环境变量这三大核心问题。这篇教程已做到命令可直接复制、步骤无跳步、逻辑贴合新手操作习惯，且提前标注了高频坑点，只要跟着顺序执行，基本都能一次成功。如果您在安装过程中遇到特殊报错、特定硬件适配（如不同品牌机械爪）问题，或需要Windows版本的适配方案，欢迎在评论区留言，我会逐一回复并补充到后续教程中。原创教程不易，整理、测试、排坑均花费大量时间，欢迎点赞、在看、转发给身边做机器人、机械臂、抓取项目的朋友，您的支持就是我持续更新干货的动力～ 后续还会推出OpenClaw基础控制示例（开合、力度、闭环控制）、ROS2迁移与移植指南、机械爪常见硬件接线与驱动等内容，关注我，不错过每一篇能直接落地的机器人开发教程。&lt;/p&gt;
-</content:encoded></item><item><title>讯飞:GLM-4.7与MiniMax-M2.1免费</title><link>https://dqtx.cc/posts/aihacks/xunfei_glm_minimax_free/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/xunfei_glm_minimax_free/</guid><description>讯飞近日宣布开放 GLM-4.7 和 MiniMax-M2.1 两款大语言模型的免费使用，为开发者提供零门槛的AI接入机会</description><pubDate>Sat, 07 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;讯飞近日宣布开放 GLM-4.7 和 MiniMax-M2.1 两款大语言模型的免费使用，这一举措立即在 AI 开发者社区引发热烈讨论。作为国内领先的 AI 平台，讯飞此次开放的两款模型各具特色：GLM-4.7 以其强大的中文理解和生成能力著称，而 MiniMax-M2.1 则在多模态处理和长文本理解方面表现突出。&lt;/p&gt;
-&lt;h2&gt;一、模型核心能力解析&lt;/h2&gt;
-&lt;p&gt;GLM-4.7 是智谱 AI 与讯飞联合打造的新一代大语言模型，在中文语境下展现出卓越的性能。经过多项权威测试验证，该模型在阅读理解、逻辑推理、创意写作等任务上的表现已接近 GPT-4 水平。特别值得一提的是，GLM-4.7 针对中国文化背景进行了深度优化，能够准确理解成语、典故、网络流行语等中文特有表达，这在处理本土化应用场景时具有天然优势。&lt;/p&gt;
-&lt;p&gt;MiniMax-M2.1 则是讯飞自主研发的多模态大模型，最大亮点在于其 128K 的超长上下文窗口和强大的图文理解能力。这意味着用户可以一次性输入整本书籍、长篇报告或多份文档，模型依然能够保持准确的记忆和连贯的对话。此外，M2.1 在图文结合场景下表现优异，能够理解图片内容并结合文本进行综合分析，非常适合内容审核、智能标注等应用。&lt;/p&gt;
-&lt;h2&gt;二、免费使用的行业意义&lt;/h2&gt;
-&lt;p&gt;此次开放免费使用，短期内看是讯飞抢占市场份额的战略举措，从长远来看则可能重塑国内 AI 应用生态。对于开发者而言，最直接的好处是大幅降低了开发成本和试错门槛。以往使用类似级别的 API，每月动辄数千元的调用费用让许多创业团队望而却步，而现在开发者可以零成本接入顶级模型能力，专注于产品创新而非基础设施投入。&lt;/p&gt;
-&lt;p&gt;从行业竞争格局来看，讯飞的这一动作无疑会对其他 AI 平台形成压力。百度文心一言、阿里通义千问、腾讯混元等平台很可能跟进推出类似政策，最终受益的将是整个开发者群体和终端用户。这种良性竞争将加速 AI 技术的民主化进程，推动更多创新应用落地。&lt;/p&gt;
-&lt;h2&gt;三、快速接入指南&lt;/h2&gt;
-&lt;h3&gt;注册与认证&lt;/h3&gt;
-&lt;p&gt;接入流程十分简洁。首先访问讯飞开放平台（xfyun.cn），完成企业或个人开发者注册。注册后需要进行实名认证，企业用户需上传营业执照，个人用户则需绑定银行卡进行身份验证。认证通常在 1-2 个工作日内完成，通过后即可创建应用并获取 API Key 和 Secret Key。&lt;/p&gt;
-&lt;h3&gt;API 调用示例&lt;/h3&gt;
-&lt;p&gt;以下是一个简单的 Python 调用示例：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;import requests
-import json
-
-# 配置认证信息
-app_id = &quot;your_app_id&quot;
-api_key = &quot;your_api_key&quot;
-api_secret = &quot;your_api_secret&quot;
-
-# 构建请求
-url = &quot;https://spark-api.xf-yun.com/v1/chat/completions&quot;
-headers = {
-    &quot;Authorization&quot;: f&quot;Bearer {api_key}&quot;,
-    &quot;Content-Type&quot;: &quot;application/json&quot;
-}
-
-payload = {
-    &quot;model&quot;: &quot;glm-4.7&quot;,  # 或 &quot;minimax-m2.1&quot;
-    &quot;messages&quot;: [
-        {&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;请介绍一下人工智能的发展历程&quot;}
-    ],
-    &quot;temperature&quot;: 0.7,
-    &quot;max_tokens&quot;: 2000
-}
-
-response = requests.post(url, headers=headers, data=json.dumps(payload))
-print(response.json())
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;免费额度说明&lt;/h3&gt;
-&lt;p&gt;目前免费政策包含每日 10 万次 API 调用额度，单次请求最大支持 4000 tokens 输入和 2000 tokens 输出。对于中小型应用而言，这一额度完全能够满足日常需求。如需更高额度，可申请企业版服务，讯飞为创业公司提供优惠的升级方案。&lt;/p&gt;
-&lt;h2&gt;四、应用场景推荐&lt;/h2&gt;
-&lt;h3&gt;内容创作领域&lt;/h3&gt;
-&lt;p&gt;GLM-4.7 在文案生成、稿件创作方面表现优异。自媒体创作者可以利用其快速生成文章大纲、扩充段落、润色语言，大幅提升写作效率。配合人工审核和精修，可将单篇内容生产时间从数小时压缩至半小时以内。&lt;/p&gt;
-&lt;h3&gt;智能客服系统&lt;/h3&gt;
-&lt;p&gt;MiniMax-M2.1 的长文档理解能力使其成为构建智能客服的理想选择。将产品手册、FAQ 文档、历史对话记录输入模型，即可打造一个具备完整知识库的客服助手，准确回答用户咨询，显著降低人工客服压力。&lt;/p&gt;
-&lt;h3&gt;教育辅导应用&lt;/h3&gt;
-&lt;p&gt;GLM-4.7 的中文理解能力在教育场景下大有可为。无论是作文批改、作业辅导，还是知识点讲解、学习计划制定，该模型都能提供接近真人教师质量的辅助。许多在线教育平台已经开始集成类似能力，为用户提供个性化的学习体验。&lt;/p&gt;
-&lt;h3&gt;代码开发辅助&lt;/h3&gt;
-&lt;p&gt;两款模型都具备较强的代码理解和生成能力。开发者可以用它来生成代码片段、解释复杂逻辑、调试错误、优化算法，甚至进行代码审查。实际测试表明，GLM-4.7 在 Python、Java 等主流编程语言上的表现与专用代码模型相差无几。&lt;/p&gt;
-&lt;h2&gt;五、最佳实践建议&lt;/h2&gt;
-&lt;h3&gt;Prompt 设计技巧&lt;/h3&gt;
-&lt;p&gt;有效的 Prompt 设计是发挥模型能力的关键。建议遵循以下原则：明确指定任务目标和输出格式；提供必要的背景信息和上下文；使用结构化指令（如&quot;请按以下步骤...&quot;）；设定约束条件（如字数限制、风格要求）。对于复杂任务，可以采用&quot;链式提示&quot;策略，将大任务拆解为多个小步骤逐步完成。&lt;/p&gt;
-&lt;h3&gt;性能优化方案&lt;/h3&gt;
-&lt;p&gt;在高并发场景下，建议实现请求队列管理和响应缓存机制。对于常见问题，可以预先构建答案库，避免重复调用 API。同时注意控制单次请求的 token 数量，过长的输入会增加响应延迟和成本。对于需要一致输出的场景（如固定格式的报告生成），可以适当降低 temperature 参数（如设置为 0.3-0.5）。&lt;/p&gt;
-&lt;h3&gt;安全合规考虑&lt;/h3&gt;
-&lt;p&gt;在使用 API 时需要特别注意数据安全和隐私保护。严禁将用户敏感信息直接输入模型，建议对个人数据、商业机密进行脱敏处理。同时要建立内容审核机制，防止模型生成不当或违法违规内容。讯飞平台提供了内容过滤接口，建议在应用层进行二次过滤以确保合规。&lt;/p&gt;
-&lt;h2&gt;六、与其他平台对比&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;平台&lt;/th&gt;
-&lt;th&gt;模型&lt;/th&gt;
-&lt;th&gt;中文能力&lt;/th&gt;
-&lt;th&gt;长文本&lt;/th&gt;
-&lt;th&gt;多模态&lt;/th&gt;
-&lt;th&gt;免费额度&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;讯飞&lt;/td&gt;
-&lt;td&gt;GLM-4.7&lt;/td&gt;
-&lt;td&gt;★★★★★&lt;/td&gt;
-&lt;td&gt;32K&lt;/td&gt;
-&lt;td&gt;否&lt;/td&gt;
-&lt;td&gt;10万次/日&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;讯飞&lt;/td&gt;
-&lt;td&gt;MiniMax-M2.1&lt;/td&gt;
-&lt;td&gt;★★★★☆&lt;/td&gt;
-&lt;td&gt;128K&lt;/td&gt;
-&lt;td&gt;是&lt;/td&gt;
-&lt;td&gt;10万次/日&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;百度&lt;/td&gt;
-&lt;td&gt;文心一言 4.0&lt;/td&gt;
-&lt;td&gt;★★★★☆&lt;/td&gt;
-&lt;td&gt;16K&lt;/td&gt;
-&lt;td&gt;是&lt;/td&gt;
-&lt;td&gt;5万次/日&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;阿里&lt;/td&gt;
-&lt;td&gt;通义千问 Plus&lt;/td&gt;
-&lt;td&gt;★★★★☆&lt;/td&gt;
-&lt;td&gt;30K&lt;/td&gt;
-&lt;td&gt;是&lt;/td&gt;
-&lt;td&gt;20万次/月&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;智谱&lt;/td&gt;
-&lt;td&gt;GLM-4&lt;/td&gt;
-&lt;td&gt;★★★★★&lt;/td&gt;
-&lt;td&gt;128K&lt;/td&gt;
-&lt;td&gt;否&lt;/td&gt;
-&lt;td&gt;付费&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;从对比可以看出，讯飞此次开放的两款模型在中文能力和免费额度上都具备明显优势，特别是 GLM-4.7 的中文理解和 MiniMax-M2.1 的长文本处理能力，在同类产品中处于领先地位。&lt;/p&gt;
-&lt;h2&gt;七、未来展望&lt;/h2&gt;
-&lt;p&gt;随着更多 AI 厂商加入免费开放的行列，大模型的使用成本将持续下降，这将催生更多创新应用场景。预计未来一年内，我们将看到 AI 能力被集成到各类软件和服务中，成为像水电一样的基础设施。&lt;/p&gt;
-&lt;p&gt;同时，模型能力也将持续进化。多模态理解、推理能力、工具使用等方向是当前的技术热点。讯飞已透露正在研发下一代模型，预计将在逻辑推理和科学计算方面实现突破。&lt;/p&gt;
-&lt;h2&gt;八、给开发者的建议&lt;/h2&gt;
-&lt;p&gt;对于个人开发者，现在正是尝试和学习的最佳时机。建议选择一个感兴趣的方向（如内容创作、数据分析、自动化办公），深入了解该领域的痛点和需求，然后基于免费 API 开发原型产品。通过实践积累经验，建立自己的技术护城河。&lt;/p&gt;
-&lt;p&gt;对于企业用户，建议评估现有业务中 AI 可以降本增效的环节，选择合适的应用场景进行试点。同时关注模型的更新迭代，制定长期的技术路线图。需要注意的是，免费政策可能存在调整风险，对于关键业务应准备备用方案。&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;随着 AI 技术的普及，未来的竞争将不再是&quot;谁有 AI&quot;，而是&quot;谁会用 AI&quot;。讯飞开放 GLM-4.7 和 MiniMax-M2.1 免费使用，为广大开发者和企业提供了一个零门槛的入场机会。抓住这个机会，用 AI 赋能产品和服务，在这场技术变革中抢占先机。&lt;/p&gt;
-</content:encoded></item><item><title>GitHub + EdgeOne 搭建个人博客的过程</title><link>https://dqtx.cc/posts/technical/github-edgeone-da-jian-bo-ke/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/github-edgeone-da-jian-bo-ke/</guid><pubDate>Fri, 06 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+</content:encoded></item><item><title>GitHub + EdgeOne 搭建个人博客的过程</title><link>https://dqtx.cc/posts/technical/github-edgeone-da-jian-bo-ke/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/github-edgeone-da-jian-bo-ke/</guid><pubDate>Sun, 08 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;想要一个属于自己的博客，但不知道从哪里开始？本文详细记录了从零开始搭建个人博客的全过程，包括踩过的各种坑和解决方案。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2&gt;为什么选择 Fuwari 主题？&lt;/h2&gt;
@@ -1162,7 +1041,31 @@ draft: TRUE   # ❌ 错误
   });
 });
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;坑 3：深色模式颜色不和谐&lt;/h3&gt;
+&lt;h3&gt;坑 3：页面加载时颜色闪烁&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;现象&lt;/strong&gt;：刷新网页时会闪一下另一种配色，然后才变成正确的颜色。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：CSS 样式加载有延迟，导致使用了默认样式。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：在 &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; 中添加内联样式&lt;/p&gt;
+&lt;p&gt;修改 &lt;code&gt;src/layouts/Layout.astro&lt;/code&gt;：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;head&amp;gt;
+  &amp;lt;!-- 其他 head 内容 --&amp;gt;
+
+  &amp;lt;!-- 内联渐变样式，防止闪烁 --&amp;gt;
+  &amp;lt;style is:inline&amp;gt;
+    .navbar-title-gradient,
+    .navbar-title-gradient-icon,
+    .gradient-text,
+    .hacker-icon,
+    .category-title,
+    .decoration-title {
+        background: linear-gradient(135deg, #0ea5e9, #8b5cf6) !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        background-clip: text !important;
+    }
+  &amp;lt;/style&amp;gt;
+&amp;lt;/head&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;坑 4：深色模式颜色不和谐&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;现象&lt;/strong&gt;：深色模式下，某些元素的颜色显得突兀。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：使用了固定的颜色值（如 &lt;code&gt;#A8C398&lt;/code&gt;），没有跟随主题色。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：将所有固定颜色改为使用 CSS 变量 &lt;code&gt;var(--primary)&lt;/code&gt;&lt;/p&gt;
@@ -1177,7 +1080,25 @@ color: var(--primary);
   border-color: oklch(0.35 0.02 var(--hue));
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;坑 4：图片加载延迟&lt;/h3&gt;
+&lt;h3&gt;坑 5：Svelte 组件编译错误&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;现象&lt;/strong&gt;：搜索组件在开发服务器中无法正常显示。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：&lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt; 标签缺少 &lt;code&gt;lang&lt;/code&gt; 属性，导致 Svelte 编译器无法正确解析。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：为 &lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt; 标签添加 &lt;code&gt;lang=&quot;css&quot;&lt;/code&gt; 属性&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!-- ❌ 错误：缺少 lang 属性 --&amp;gt;
+&amp;lt;style&amp;gt;
+  .search-panel {
+    background-color: var(--float-panel-bg-opaque);
+  }
+&amp;lt;/style&amp;gt;
+
+&amp;lt;!-- ✅ 正确：添加 lang 属性 --&amp;gt;
+&amp;lt;style lang=&quot;css&quot;&amp;gt;
+  .search-panel {
+    background-color: var(--float-panel-bg-opaque);
+  }
+&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;坑 6：图片加载延迟&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;现象&lt;/strong&gt;：打开网站时，左侧二维码和封面图片有明显延迟。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：默认使用了 &lt;code&gt;loading=&quot;lazy&quot;&lt;/code&gt; 延迟加载。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：&lt;/p&gt;
@@ -1194,7 +1115,7 @@ color: var(--primary);
   fetchpriority=&quot;high&quot;
 /&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;坑 5：分类对齐问题&lt;/h3&gt;
+&lt;h3&gt;坑 7：分类对齐问题&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;现象&lt;/strong&gt;：文章分类的名称和数字对齐不统一。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;尝试的方案&lt;/strong&gt;：&lt;/p&gt;
 &lt;ol&gt;
@@ -1213,7 +1134,7 @@ color: var(--primary);
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;使用 &lt;code&gt;flex: 1&lt;/code&gt; 让名称占据剩余空间并居中，数字徽章自然靠右。&lt;/p&gt;
-&lt;h3&gt;坑 6：文章导入时图片 URL 错误&lt;/h3&gt;
+&lt;h3&gt;坑 8：文章导入时图片 URL 错误&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;现象&lt;/strong&gt;：批量导入文章后，有些封面图显示无效。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：正则表达式匹配到了错误的图片 URL，例如：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;image: generate:  # ❌ 这不是有效 URL
@@ -1225,7 +1146,7 @@ if (url.match(/^https?:\/\//) || url.match(/^\//)) {
   coverImage = url;
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;坑 7：EdgeOne 构建时 import.meta.glob 不工作&lt;/h3&gt;
+&lt;h3&gt;坑 9：EdgeOne 构建时 import.meta.glob 不工作&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;现象&lt;/strong&gt;：本地开发正常，但 EdgeOne 构建后数据不显示。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：&lt;code&gt;import.meta.glob&lt;/code&gt; 在 EdgeOne 构建环境下无法正确加载 JSON 文件。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;错误代码&lt;/strong&gt;：&lt;/p&gt;
@@ -1246,8 +1167,103 @@ const sponsors = [
 ---
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;strong&gt;经验教训&lt;/strong&gt;：在 EdgeOne 等云端构建环境中，尽量避免使用动态导入，对于静态数据直接内联更可靠。&lt;/p&gt;
-&lt;h2&gt;五、特色功能实现&lt;/h2&gt;
-&lt;h3&gt;5.1 自动提取封面和摘要&lt;/h3&gt;
+&lt;h3&gt;坑 10：浮动按钮挡住大纲&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;现象&lt;/strong&gt;：文章页面的评论/回到顶部按钮挡住了右侧大纲的部分区域。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：按钮位置设置过高。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：调整浮动按钮的 &lt;code&gt;bottom&lt;/code&gt; 值&lt;/p&gt;
+&lt;p&gt;修改 &lt;code&gt;src/components/control/BackToTop.astro&lt;/code&gt;：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.back-to-top-btn
+  // 从 bottom: 10rem 改为 bottom: 6rem（向下移动 4rem）
+
+#go-to-comments-btn
+  // 从 bottom: 14.5rem 改为 bottom: 10.5rem（向下移动 4rem）
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;五、配色系统设计&lt;/h2&gt;
+&lt;h3&gt;设计理念&lt;/h3&gt;
+&lt;p&gt;博客采用&lt;strong&gt;冷紫蓝系&lt;/strong&gt;作为唯一签名色，打造冷静编辑部的视觉氛围。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;设计原则&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;背景作为舞台&lt;/strong&gt; - 更深的背景，更浅的卡片&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;标题作为判断&lt;/strong&gt; - 更强的视觉层次&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;极端色彩克制&lt;/strong&gt; - 最少的颜色，创造可记忆的身份&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;配色方案&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;主题配置&lt;/strong&gt;（&lt;code&gt;src/config.ts&lt;/code&gt;）：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;themeColor: {
+  hue: 268,        // 冷紫蓝系
+  fixed: true,
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;颜色应用&lt;/strong&gt;：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;元素&lt;/th&gt;
+&lt;th&gt;颜色&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;背景色&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;oklch(0.12 0.01 268)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;深色纯色背景&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;主题渐变&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;#0ea5e9 → #8b5cf6&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;蓝紫渐变，用于标题和图标&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;分类悬停&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;#b7f605&lt;/code&gt; + 黑字&lt;/td&gt;
+&lt;td&gt;亮绿色点缀，唯一暖色&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;渐变元素&lt;/h3&gt;
+&lt;p&gt;使用蓝紫渐变的元素：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;导航栏网站名称和图标&lt;/li&gt;
+&lt;li&gt;分类标题（&quot;文章分类&quot;）&lt;/li&gt;
+&lt;li&gt;公众号标题&lt;/li&gt;
+&lt;li&gt;Hacker 风格装饰图标&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;内联样式&lt;/strong&gt;（防止 FOUC 闪烁）：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;style is:inline&amp;gt;
+.navbar-title-gradient,
+.navbar-title-gradient-icon,
+.gradient-text,
+.hacker-icon,
+.category-title,
+.decoration-title {
+    background: linear-gradient(135deg, #0ea5e9, #8b5cf6) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;六、特色功能实现&lt;/h2&gt;
+&lt;h3&gt;6.1 评论/回到顶部浮动按钮&lt;/h3&gt;
+&lt;p&gt;右下角浮动按钮，提供快捷导航：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;功能特性&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;默认显示&quot;评论&quot;按钮，点击跳转到评论区&lt;/li&gt;
+&lt;li&gt;点击后切换为&quot;回到顶部&quot;按钮&lt;/li&gt;
+&lt;li&gt;位置下移避免挡住大纲&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;修改文件&lt;/strong&gt;：&lt;code&gt;src/components/control/BackToTop.astro&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;6.2 表格样式优化&lt;/h3&gt;
+&lt;p&gt;表格采用表头浅色、数据行深色的配色方案：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;样式配置&lt;/strong&gt;（&lt;code&gt;src/styles/markdown-extend.styl&lt;/code&gt;）：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;thead th
+  background: var(--btn-plain-bg-hover)  // 表头：浅色
+
+tbody tr
+  background: var(--btn-regular-bg)      // 数据行：深色
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;6.3 自动提取封面和摘要&lt;/h3&gt;
 &lt;p&gt;无需手动填写，系统自动处理：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;---
 title: 文章标题
@@ -1263,12 +1279,12 @@ category: Technical
 &lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;封面&lt;/strong&gt;：自动提取第一张图片&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;摘要&lt;/strong&gt;：自动提取第一段文字&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;摘要&lt;/strong&gt;：自动提取第一段文字（文章页隐藏，避免重复）&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;5.2 微信二维码弹窗&lt;/h3&gt;
+&lt;h3&gt;6.4 微信二维码弹窗&lt;/h3&gt;
 &lt;p&gt;点击微信图标弹出霓虹灯风格弹窗，支持一键复制微信号。&lt;/p&gt;
 &lt;p&gt;修改 &lt;code&gt;src/layouts/MainGridLayout.astro&lt;/code&gt; 添加弹窗 HTML 和 JavaScript。&lt;/p&gt;
-&lt;h3&gt;5.3 Giscus 评论区&lt;/h3&gt;
+&lt;h3&gt;6.5 Giscus 评论区&lt;/h3&gt;
 &lt;p&gt;基于 GitHub Discussions 的评论系统，无需数据库。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;配置步骤&lt;/strong&gt;：&lt;/p&gt;
 &lt;ol&gt;
@@ -1286,7 +1302,7 @@ category: Technical
     data-lang=&quot;zh-CN&quot;
 &amp;gt;&amp;lt;/div&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;5.4 文章分类功能&lt;/h3&gt;
+&lt;h3&gt;6.6 文章分类功能&lt;/h3&gt;
 &lt;p&gt;自动统计每个分类的文章数量，点击查看分类文章。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;分类规则&lt;/strong&gt;：&lt;/p&gt;
 &lt;table&gt;
@@ -1311,7 +1327,7 @@ category: Technical
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2&gt;六、常用命令&lt;/h2&gt;
+&lt;h2&gt;七、常用命令&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;# 创建新文章
 npm run new-post &quot;文章标题&quot;
 
@@ -1330,7 +1346,7 @@ node scripts/import-posts.cjs
 # 更新文章分类
 node scripts/update-categories.cjs
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;七、性能优化建议&lt;/h2&gt;
+&lt;h2&gt;八、性能优化建议&lt;/h2&gt;
 &lt;h3&gt;7.1 图片优化&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;使用 WebP 格式（体积更小）&lt;/li&gt;
@@ -1343,7 +1359,7 @@ node scripts/update-categories.cjs
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;7.3 构建优化&lt;/h3&gt;
 &lt;p&gt;Astro 默认进行代码分割和 tree-shaking，无需额外配置。&lt;/p&gt;
-&lt;h2&gt;八、总结&lt;/h2&gt;
+&lt;h2&gt;九、总结&lt;/h2&gt;
 &lt;h3&gt;时间分配&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -1413,6 +1429,127 @@ node scripts/update-categories.cjs
 &lt;li&gt;集成统计工具（如 Umami）&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;祝你搭建顺利！有任何问题欢迎在评论区留言。&lt;/p&gt;
+</content:encoded></item><item><title>讯飞:GLM-4.7与MiniMax-M2.1免费</title><link>https://dqtx.cc/posts/aihacks/xunfei_glm_minimax_free/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/xunfei_glm_minimax_free/</guid><description>讯飞近日宣布开放 GLM-4.7 和 MiniMax-M2.1 两款大语言模型的免费使用，为开发者提供零门槛的AI接入机会</description><pubDate>Sat, 07 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;讯飞近日宣布开放 GLM-4.7 和 MiniMax-M2.1 两款大语言模型的免费使用，这一举措立即在 AI 开发者社区引发热烈讨论。作为国内领先的 AI 平台，讯飞此次开放的两款模型各具特色：GLM-4.7 以其强大的中文理解和生成能力著称，而 MiniMax-M2.1 则在多模态处理和长文本理解方面表现突出。&lt;/p&gt;
+&lt;h2&gt;一、模型核心能力解析&lt;/h2&gt;
+&lt;p&gt;GLM-4.7 是智谱 AI 与讯飞联合打造的新一代大语言模型，在中文语境下展现出卓越的性能。经过多项权威测试验证，该模型在阅读理解、逻辑推理、创意写作等任务上的表现已接近 GPT-4 水平。特别值得一提的是，GLM-4.7 针对中国文化背景进行了深度优化，能够准确理解成语、典故、网络流行语等中文特有表达，这在处理本土化应用场景时具有天然优势。&lt;/p&gt;
+&lt;p&gt;MiniMax-M2.1 则是讯飞自主研发的多模态大模型，最大亮点在于其 128K 的超长上下文窗口和强大的图文理解能力。这意味着用户可以一次性输入整本书籍、长篇报告或多份文档，模型依然能够保持准确的记忆和连贯的对话。此外，M2.1 在图文结合场景下表现优异，能够理解图片内容并结合文本进行综合分析，非常适合内容审核、智能标注等应用。&lt;/p&gt;
+&lt;h2&gt;二、免费使用的行业意义&lt;/h2&gt;
+&lt;p&gt;此次开放免费使用，短期内看是讯飞抢占市场份额的战略举措，从长远来看则可能重塑国内 AI 应用生态。对于开发者而言，最直接的好处是大幅降低了开发成本和试错门槛。以往使用类似级别的 API，每月动辄数千元的调用费用让许多创业团队望而却步，而现在开发者可以零成本接入顶级模型能力，专注于产品创新而非基础设施投入。&lt;/p&gt;
+&lt;p&gt;从行业竞争格局来看，讯飞的这一动作无疑会对其他 AI 平台形成压力。百度文心一言、阿里通义千问、腾讯混元等平台很可能跟进推出类似政策，最终受益的将是整个开发者群体和终端用户。这种良性竞争将加速 AI 技术的民主化进程，推动更多创新应用落地。&lt;/p&gt;
+&lt;h2&gt;三、快速接入指南&lt;/h2&gt;
+&lt;h3&gt;注册与认证&lt;/h3&gt;
+&lt;p&gt;接入流程十分简洁。首先访问讯飞开放平台（xfyun.cn），完成企业或个人开发者注册。注册后需要进行实名认证，企业用户需上传营业执照，个人用户则需绑定银行卡进行身份验证。认证通常在 1-2 个工作日内完成，通过后即可创建应用并获取 API Key 和 Secret Key。&lt;/p&gt;
+&lt;h3&gt;API 调用示例&lt;/h3&gt;
+&lt;p&gt;以下是一个简单的 Python 调用示例：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;import requests
+import json
+
+# 配置认证信息
+app_id = &quot;your_app_id&quot;
+api_key = &quot;your_api_key&quot;
+api_secret = &quot;your_api_secret&quot;
+
+# 构建请求
+url = &quot;https://spark-api.xf-yun.com/v1/chat/completions&quot;
+headers = {
+    &quot;Authorization&quot;: f&quot;Bearer {api_key}&quot;,
+    &quot;Content-Type&quot;: &quot;application/json&quot;
+}
+
+payload = {
+    &quot;model&quot;: &quot;glm-4.7&quot;,  # 或 &quot;minimax-m2.1&quot;
+    &quot;messages&quot;: [
+        {&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;请介绍一下人工智能的发展历程&quot;}
+    ],
+    &quot;temperature&quot;: 0.7,
+    &quot;max_tokens&quot;: 2000
+}
+
+response = requests.post(url, headers=headers, data=json.dumps(payload))
+print(response.json())
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;免费额度说明&lt;/h3&gt;
+&lt;p&gt;目前免费政策包含每日 10 万次 API 调用额度，单次请求最大支持 4000 tokens 输入和 2000 tokens 输出。对于中小型应用而言，这一额度完全能够满足日常需求。如需更高额度，可申请企业版服务，讯飞为创业公司提供优惠的升级方案。&lt;/p&gt;
+&lt;h2&gt;四、应用场景推荐&lt;/h2&gt;
+&lt;h3&gt;内容创作领域&lt;/h3&gt;
+&lt;p&gt;GLM-4.7 在文案生成、稿件创作方面表现优异。自媒体创作者可以利用其快速生成文章大纲、扩充段落、润色语言，大幅提升写作效率。配合人工审核和精修，可将单篇内容生产时间从数小时压缩至半小时以内。&lt;/p&gt;
+&lt;h3&gt;智能客服系统&lt;/h3&gt;
+&lt;p&gt;MiniMax-M2.1 的长文档理解能力使其成为构建智能客服的理想选择。将产品手册、FAQ 文档、历史对话记录输入模型，即可打造一个具备完整知识库的客服助手，准确回答用户咨询，显著降低人工客服压力。&lt;/p&gt;
+&lt;h3&gt;教育辅导应用&lt;/h3&gt;
+&lt;p&gt;GLM-4.7 的中文理解能力在教育场景下大有可为。无论是作文批改、作业辅导，还是知识点讲解、学习计划制定，该模型都能提供接近真人教师质量的辅助。许多在线教育平台已经开始集成类似能力，为用户提供个性化的学习体验。&lt;/p&gt;
+&lt;h3&gt;代码开发辅助&lt;/h3&gt;
+&lt;p&gt;两款模型都具备较强的代码理解和生成能力。开发者可以用它来生成代码片段、解释复杂逻辑、调试错误、优化算法，甚至进行代码审查。实际测试表明，GLM-4.7 在 Python、Java 等主流编程语言上的表现与专用代码模型相差无几。&lt;/p&gt;
+&lt;h2&gt;五、最佳实践建议&lt;/h2&gt;
+&lt;h3&gt;Prompt 设计技巧&lt;/h3&gt;
+&lt;p&gt;有效的 Prompt 设计是发挥模型能力的关键。建议遵循以下原则：明确指定任务目标和输出格式；提供必要的背景信息和上下文；使用结构化指令（如&quot;请按以下步骤...&quot;）；设定约束条件（如字数限制、风格要求）。对于复杂任务，可以采用&quot;链式提示&quot;策略，将大任务拆解为多个小步骤逐步完成。&lt;/p&gt;
+&lt;h3&gt;性能优化方案&lt;/h3&gt;
+&lt;p&gt;在高并发场景下，建议实现请求队列管理和响应缓存机制。对于常见问题，可以预先构建答案库，避免重复调用 API。同时注意控制单次请求的 token 数量，过长的输入会增加响应延迟和成本。对于需要一致输出的场景（如固定格式的报告生成），可以适当降低 temperature 参数（如设置为 0.3-0.5）。&lt;/p&gt;
+&lt;h3&gt;安全合规考虑&lt;/h3&gt;
+&lt;p&gt;在使用 API 时需要特别注意数据安全和隐私保护。严禁将用户敏感信息直接输入模型，建议对个人数据、商业机密进行脱敏处理。同时要建立内容审核机制，防止模型生成不当或违法违规内容。讯飞平台提供了内容过滤接口，建议在应用层进行二次过滤以确保合规。&lt;/p&gt;
+&lt;h2&gt;六、与其他平台对比&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;平台&lt;/th&gt;
+&lt;th&gt;模型&lt;/th&gt;
+&lt;th&gt;中文能力&lt;/th&gt;
+&lt;th&gt;长文本&lt;/th&gt;
+&lt;th&gt;多模态&lt;/th&gt;
+&lt;th&gt;免费额度&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;讯飞&lt;/td&gt;
+&lt;td&gt;GLM-4.7&lt;/td&gt;
+&lt;td&gt;★★★★★&lt;/td&gt;
+&lt;td&gt;32K&lt;/td&gt;
+&lt;td&gt;否&lt;/td&gt;
+&lt;td&gt;10万次/日&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;讯飞&lt;/td&gt;
+&lt;td&gt;MiniMax-M2.1&lt;/td&gt;
+&lt;td&gt;★★★★☆&lt;/td&gt;
+&lt;td&gt;128K&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;td&gt;10万次/日&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;百度&lt;/td&gt;
+&lt;td&gt;文心一言 4.0&lt;/td&gt;
+&lt;td&gt;★★★★☆&lt;/td&gt;
+&lt;td&gt;16K&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;td&gt;5万次/日&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;阿里&lt;/td&gt;
+&lt;td&gt;通义千问 Plus&lt;/td&gt;
+&lt;td&gt;★★★★☆&lt;/td&gt;
+&lt;td&gt;30K&lt;/td&gt;
+&lt;td&gt;是&lt;/td&gt;
+&lt;td&gt;20万次/月&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;智谱&lt;/td&gt;
+&lt;td&gt;GLM-4&lt;/td&gt;
+&lt;td&gt;★★★★★&lt;/td&gt;
+&lt;td&gt;128K&lt;/td&gt;
+&lt;td&gt;否&lt;/td&gt;
+&lt;td&gt;付费&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;从对比可以看出，讯飞此次开放的两款模型在中文能力和免费额度上都具备明显优势，特别是 GLM-4.7 的中文理解和 MiniMax-M2.1 的长文本处理能力，在同类产品中处于领先地位。&lt;/p&gt;
+&lt;h2&gt;七、未来展望&lt;/h2&gt;
+&lt;p&gt;随着更多 AI 厂商加入免费开放的行列，大模型的使用成本将持续下降，这将催生更多创新应用场景。预计未来一年内，我们将看到 AI 能力被集成到各类软件和服务中，成为像水电一样的基础设施。&lt;/p&gt;
+&lt;p&gt;同时，模型能力也将持续进化。多模态理解、推理能力、工具使用等方向是当前的技术热点。讯飞已透露正在研发下一代模型，预计将在逻辑推理和科学计算方面实现突破。&lt;/p&gt;
+&lt;h2&gt;八、给开发者的建议&lt;/h2&gt;
+&lt;p&gt;对于个人开发者，现在正是尝试和学习的最佳时机。建议选择一个感兴趣的方向（如内容创作、数据分析、自动化办公），深入了解该领域的痛点和需求，然后基于免费 API 开发原型产品。通过实践积累经验，建立自己的技术护城河。&lt;/p&gt;
+&lt;p&gt;对于企业用户，建议评估现有业务中 AI 可以降本增效的环节，选择合适的应用场景进行试点。同时关注模型的更新迭代，制定长期的技术路线图。需要注意的是，免费政策可能存在调整风险，对于关键业务应准备备用方案。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;随着 AI 技术的普及，未来的竞争将不再是&quot;谁有 AI&quot;，而是&quot;谁会用 AI&quot;。讯飞开放 GLM-4.7 和 MiniMax-M2.1 免费使用，为广大开发者和企业提供了一个零门槛的入场机会。抓住这个机会，用 AI 赋能产品和服务，在这场技术变革中抢占先机。&lt;/p&gt;
 </content:encoded></item><item><title>Obsidian+AI：让笔记变成智能知识库</title><link>https://dqtx.cc/posts/aihacks/obsidian-ai/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/obsidian-ai/</guid><description>这几天，在github发现Obsidian重磅插件，直接把 AI 功能深度集成到核心里了！今天我要分享的 Obsidian+AI 组合，一次性解决这些痛点！</description><pubDate>Wed, 04 Feb 2026 04:54:28 GMT</pubDate><content:encoded>&lt;p&gt;这几天，在gihub发现Obsidian重磅插件，直接把 AI 功能深度集成到核心里了！网上都在夸赞，确实&lt;strong&gt;牛批&lt;/strong&gt;！今天我要分享的 Obsidian+AI 组合，&lt;em&gt;一次性解决这些痛点&lt;/em&gt;！简单说，你的笔记不再是一个个&lt;strong&gt;死文档*，而是变成了能理解、能推理、能自动化的&lt;/strong&gt;AI 上下文层**。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260113215058651.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;一.准备工作&lt;/h2&gt;
@@ -1922,47 +2059,6 @@ $ARGUMENTS
 &lt;li&gt;&lt;strong&gt;个性化设置&lt;/strong&gt;：自定义激活快捷键、默认语言、输入模式等基础配置；&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;即时使用&lt;/strong&gt;：在任意文本输入框按下快捷键，启动语音输入，转写文本自动优化呈现，支持后续编辑调整。&lt;/li&gt;
 &lt;/ol&gt;
-</content:encoded></item><item><title>Typora + PicList + Gitee 图床完整配置教程</title><link>https://dqtx.cc/posts/technical/typora--piclist--gitee-%E5%9B%BE%E5%BA%8A%E5%AE%8C%E6%95%B4%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/typora--piclist--gitee-%E5%9B%BE%E5%BA%8A%E5%AE%8C%E6%95%B4%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;如果你经常写 Markdown 文档，那么 &lt;strong&gt;Typora&lt;/strong&gt; 是一款非常好用的编辑器。而在图片管理方面，推荐搭配免费的图床工具 &lt;strong&gt;PicList&lt;/strong&gt;，它支持一键上传图片到各类图床。我自己的方案是：&lt;strong&gt;Typora + PicList + Gitee&lt;/strong&gt;，写作体验非常流畅。&lt;/p&gt;
-&lt;h2&gt;Typora设置&lt;/h2&gt;
-&lt;p&gt;打开 &lt;strong&gt;Typora&lt;/strong&gt;，依次进入 &lt;code&gt;文件 → 偏好设置 → 图像&lt;/code&gt;，在上传服务中选择 &lt;strong&gt;PicList&lt;/strong&gt;。
-不过因为我们还没有安装 PicList，所以接下来需要先安装软件&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20250823223254969.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;安装PicList&lt;/h2&gt;
-&lt;p&gt;有两种方式可以安装：&lt;/p&gt;
-&lt;p&gt;1.&lt;strong&gt;命令行安装&lt;/strong&gt;（推荐）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;winget install Kuingsmile.PicList
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;2. 安装包安装&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;下载安装包后直接运行即可：
-下载地址：&lt;/p&gt;
-&lt;h2&gt;安装插件（Gitee 图床支持）&lt;/h2&gt;
-&lt;p&gt;PicList 默认没有内置 Gitee 图床，所以需要单独安装插件。打开 PicList，点击左侧 **插件，搜索 &lt;code&gt;gitee&lt;/code&gt; 并安装。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20250823222935347.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;图床设置&lt;/h2&gt;
-&lt;p&gt;为了让界面更简洁，建议把用不到的图床隐藏，只保留 Gitee。&lt;/p&gt;
-&lt;p&gt;操作方法：
-进入 &lt;strong&gt;设置 → 上传&lt;/strong&gt;，往下找到 &lt;strong&gt;“请选择显示在菜单的图床”&lt;/strong&gt;，取消勾选不需要的选项，只留下 Gitee。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20250825203516467.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;然后，点击 &lt;strong&gt;图床 → gitee → 配置&lt;/strong&gt;，会看到以下参数需要填写：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;配置名&lt;/strong&gt;：随便起个名字，方便区分&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;repo&lt;/strong&gt;：仓库名（如 &lt;code&gt;用户名/仓库名&lt;/code&gt;）&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;branch&lt;/strong&gt;：&lt;code&gt;master&lt;/code&gt; 或主分支名&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;token&lt;/strong&gt;：Gitee 生成的私人令牌&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;path&lt;/strong&gt;：存放图片的目录（例如 &lt;code&gt;image&lt;/code&gt;）&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;customPath&lt;/strong&gt;：可选，自定义路径规则&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20250825203600014.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;参数获取（以 Gitee 为例）&lt;/h2&gt;
-&lt;p&gt;打开 &lt;a href=&quot;https://gitee.com/&quot;&gt;Gitee 官网&lt;/a&gt; 注册并登录账号&lt;/p&gt;
-&lt;p&gt;点击右上角 &lt;strong&gt;+号 → 新建仓库&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;勾选 “设置模板” 与 “选择分支模型”&lt;/p&gt;
-&lt;p&gt;按照下图示例完成仓库创建&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://mmbiz.qpic.cn/mmbiz_png/gz2sdHyQbaa1ZQyJicMI8k2NbjBib4XlyyU2Q3Ple8gn264DP8CqEPGsPyALibHm3VPulNEUGDkNv0KiazPicmKbmLA/640?wx_fmt=png&amp;amp;from=appmsg&amp;amp;tp=wxpic&amp;amp;wxfrom=5&amp;amp;wx_lazy=1&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;之后点击个人头像，点设置-私人令牌，生成新令牌&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://mmbiz.qpic.cn/mmbiz_png/gz2sdHyQbaa1ZQyJicMI8k2NbjBib4XlyyJscbYZGRrw3unMhtcLjFuHf7vzJYZ5761IkGjUrRoP4Z8pTzBnWbfw/640?wx_fmt=png&amp;amp;from=appmsg&amp;amp;tp=wxpic&amp;amp;wxfrom=5&amp;amp;wx_lazy=1&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;这样，Typora + PicList + Gitee 的图床方案就配置好了，之后写 Markdown 时插入的图片会自动上传到 Gitee，并返回在线链接，非常省心。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20250826173904610.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 </content:encoded></item><item><title>干货教程：我的博客发布工作流</title><link>https://dqtx.cc/posts/technical/gongzuoliu/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/gongzuoliu/</guid><description>分享我的无服务器博客发布流程：使用 GitHub 托管 + EdgeOne 自动部署，配合 Typora 和脚本实现高效的文章发布工作流。</description><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260204103206520.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;今天想跟大家分享一下我的博客发布工作流。我的博客没有服务器，只有一个域名通过 GitHub 进行托管，配合 EdgeOne 实现自动构建部署。整个过程非常高效，下面就来详细介绍！&lt;/p&gt;
 &lt;h2&gt;创建文章&lt;/h2&gt;
@@ -2067,9 +2163,8 @@ npm run dev
 &lt;p&gt;&lt;strong&gt;大强远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </content:encoded></item><item><title>Windows7终极版</title><link>https://dqtx.cc/posts/software/windows7%E7%BB%88%E6%9E%81%E7%89%88/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/windows7%E7%BB%88%E6%9E%81%E7%89%88/</guid><description>对很多人来说，Windows 7 是刻在电脑里的青春 —— 当年抱着主机装系统、通宵跑老游戏的日子，都和这个系统绑在一起。但从 2020 年官方停更，到 202...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;h2&gt;一、引言&lt;/h2&gt;
 &lt;p&gt;对很多人来说，Windows 7 是刻在电脑里的青春 —— 当年抱着主机装系统、通宵跑老游戏的日子，都和这个系统绑在一起。但从 2020 年官方停更，到 2023 年最后一个安全补丁，Win7 早该彻底 “躺平” 了。&lt;/p&gt;
-&lt;p&gt;可 2026 年的今天，有个开发者偏要给它 “续上一口气”：一个叫 BobPony 的大神，把 Win7 重新打包成了 “史上终极版”，不仅能装在新电脑上，还解决了老 Win7 的所有硬件痛点。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260201221806923.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;二、这个 “终极 Win7” 到底改了啥？&lt;/h2&gt;
+&lt;p&gt;可 2026 年的今天，有个开发者偏要给它 &quot;续上一口气&quot;：一个叫 BobPony 的大神，把 Win7 重新打包成了 &quot;史上终极版&quot;，不仅能装在新电脑上，还解决了老 Win7 的所有硬件痛点。&lt;/p&gt;
+&lt;h2&gt;二、这个 &quot;终极 Win7&quot; 到底改了啥？&lt;/h2&gt;
 &lt;p&gt;BobPony 做的这个镜像叫《The most ULTIMATE Windows 7 x64 ever》，核心就一个目标：&lt;strong&gt;让 Win7 适配 2026 年的硬件&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;它解决了老 Win7 的所有 “现代难题”：&lt;/p&gt;
 &lt;p&gt;✅ 整合了所有历史安全补丁（不用手动装几百个更新）&lt;/p&gt;
