@@ -1,6 +1,6 @@
 ---
 title: GitHub + EdgeOne 搭建个人博客的过程
-published: 2026-02-06
+published: 2026-02-08
 tags: [博客, Astro, EdgeOne, GitHub, 部署]
 category: Technical
 draft: false
@@ -228,7 +228,38 @@ window.swup.hooks.on('visit:start', (visit) => {
 });
 ```
 
-### 坑 3：深色模式颜色不和谐
+### 坑 3：页面加载时颜色闪烁
+
+**现象**：刷新网页时会闪一下另一种配色，然后才变成正确的颜色。
+
+**原因**：CSS 样式加载有延迟，导致使用了默认样式。
+
+**解决方案**：在 `<head>` 中添加内联样式
+
+修改 `src/layouts/Layout.astro`：
+
+```html
+<head>
+  <!-- 其他 head 内容 -->
+
+  <!-- 内联渐变样式，防止闪烁 -->
+  <style is:inline>
+    .navbar-title-gradient,
+    .navbar-title-gradient-icon,
+    .gradient-text,
+    .hacker-icon,
+    .category-title,
+    .decoration-title {
+        background: linear-gradient(135deg, #0ea5e9, #8b5cf6) !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        background-clip: text !important;
+    }
+  </style>
+</head>
+```
+
+### 坑 4：深色模式颜色不和谐
 
 **现象**：深色模式下，某些元素的颜色显得突兀。
 
@@ -252,7 +283,31 @@ color: var(--primary);
 }
 ```
 
-### 坑 4：图片加载延迟
+### 坑 5：Svelte 组件编译错误
+
+**现象**：搜索组件在开发服务器中无法正常显示。
+
+**原因**：`<style>` 标签缺少 `lang` 属性，导致 Svelte 编译器无法正确解析。
+
+**解决方案**：为 `<style>` 标签添加 `lang="css"` 属性
+
+```svelte
+<!-- ❌ 错误：缺少 lang 属性 -->
+<style>
+  .search-panel {
+    background-color: var(--float-panel-bg-opaque);
+  }
+</style>
+
+<!-- ✅ 正确：添加 lang 属性 -->
+<style lang="css">
+  .search-panel {
+    background-color: var(--float-panel-bg-opaque);
+  }
+</style>
+```
+
+### 坑 6：图片加载延迟
 
 **现象**：打开网站时，左侧二维码和封面图片有明显延迟。
 
@@ -275,7 +330,7 @@ color: var(--primary);
 />
 ```
 
-### 坑 5：分类对齐问题
+### 坑 7：分类对齐问题
 
 **现象**：文章分类的名称和数字对齐不统一。
 
@@ -299,7 +354,7 @@ color: var(--primary);
 
 使用 `flex: 1` 让名称占据剩余空间并居中，数字徽章自然靠右。
 
-### 坑 6：文章导入时图片 URL 错误
+### 坑 8：文章导入时图片 URL 错误
 
 **现象**：批量导入文章后，有些封面图显示无效。
 
@@ -320,7 +375,7 @@ if (url.match(/^https?:\/\//) || url.match(/^\//)) {
 }
 ```
 
-### 坑 7：EdgeOne 构建时 import.meta.glob 不工作
+### 坑 9：EdgeOne 构建时 import.meta.glob 不工作
 
 **现象**：本地开发正常，但 EdgeOne 构建后数据不显示。
 
@@ -351,9 +406,108 @@ const sponsors = [
 
 **经验教训**：在 EdgeOne 等云端构建环境中，尽量避免使用动态导入，对于静态数据直接内联更可靠。
 
-## 五、特色功能实现
+### 坑 10：浮动按钮挡住大纲
 
-### 5.1 自动提取封面和摘要
+**现象**：文章页面的评论/回到顶部按钮挡住了右侧大纲的部分区域。
+
+**原因**：按钮位置设置过高。
+
+**解决方案**：调整浮动按钮的 `bottom` 值
+
+修改 `src/components/control/BackToTop.astro`：
+
+```stylus
+.back-to-top-btn
+  // 从 bottom: 10rem 改为 bottom: 6rem（向下移动 4rem）
+
+#go-to-comments-btn
+  // 从 bottom: 14.5rem 改为 bottom: 10.5rem（向下移动 4rem）
+```
+
+## 五、配色系统设计
+
+### 设计理念
+
+博客采用**冷紫蓝系**作为唯一签名色，打造冷静编辑部的视觉氛围。
+
+**设计原则**：
+1. **背景作为舞台** - 更深的背景，更浅的卡片
+2. **标题作为判断** - 更强的视觉层次
+3. **极端色彩克制** - 最少的颜色，创造可记忆的身份
+
+### 配色方案
+
+**主题配置**（`src/config.ts`）：
+
+```typescript
+themeColor: {
+  hue: 268,        // 冷紫蓝系
+  fixed: true,
+}
+```
+
+**颜色应用**：
+
+| 元素 | 颜色 | 说明 |
+|------|------|------|
+| 背景色 | `oklch(0.12 0.01 268)` | 深色纯色背景 |
+| 主题渐变 | `#0ea5e9 → #8b5cf6` | 蓝紫渐变，用于标题和图标 |
+| 分类悬停 | `#b7f605` + 黑字 | 亮绿色点缀，唯一暖色 |
+
+### 渐变元素
+
+使用蓝紫渐变的元素：
+- 导航栏网站名称和图标
+- 分类标题（"文章分类"）
+- 公众号标题
+- Hacker 风格装饰图标
+
+**内联样式**（防止 FOUC 闪烁）：
+
+```html
+<style is:inline>
+.navbar-title-gradient,
+.navbar-title-gradient-icon,
+.gradient-text,
+.hacker-icon,
+.category-title,
+.decoration-title {
+    background: linear-gradient(135deg, #0ea5e9, #8b5cf6) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+</style>
+```
+
+## 六、特色功能实现
+
+### 6.1 评论/回到顶部浮动按钮
+
+右下角浮动按钮，提供快捷导航：
+
+**功能特性**：
+- 默认显示"评论"按钮，点击跳转到评论区
+- 点击后切换为"回到顶部"按钮
+- 位置下移避免挡住大纲
+
+**修改文件**：`src/components/control/BackToTop.astro`
+
+### 6.2 表格样式优化
+
+表格采用表头浅色、数据行深色的配色方案：
+
+**样式配置**（`src/styles/markdown-extend.styl`）：
+
+```stylus
+thead th
+  background: var(--btn-plain-bg-hover)  // 表头：浅色
+
+tbody tr
+  background: var(--btn-regular-bg)      // 数据行：深色
+```
+
+### 6.3 自动提取封面和摘要
 
 无需手动填写，系统自动处理：
 
@@ -372,15 +526,15 @@ category: Technical
 ```
 
 - **封面**：自动提取第一张图片
-- **摘要**：自动提取第一段文字
+- **摘要**：自动提取第一段文字（文章页隐藏，避免重复）
 
-### 5.2 微信二维码弹窗
+### 6.4 微信二维码弹窗
 
 点击微信图标弹出霓虹灯风格弹窗，支持一键复制微信号。
 
 修改 `src/layouts/MainGridLayout.astro` 添加弹窗 HTML 和 JavaScript。
 
-### 5.3 Giscus 评论区
+### 6.5 Giscus 评论区
 
 基于 GitHub Discussions 的评论系统，无需数据库。
 
@@ -402,7 +556,7 @@ category: Technical
 ></div>
 ```
 
-### 5.4 文章分类功能
+### 6.6 文章分类功能
 
 自动统计每个分类的文章数量，点击查看分类文章。
 
@@ -414,7 +568,7 @@ category: Technical
 | Technical | 教程, 部署, 搭建, 安装, 完整指南 |
 | AIHacks | Claude, ChatGPT, GPT, 提示词, LLM |
 
-## 六、常用命令
+## 七、常用命令
 
 ```bash
 # 创建新文章
@@ -436,7 +590,7 @@ node scripts/import-posts.cjs
 node scripts/update-categories.cjs
 ```
 
-## 七、性能优化建议
+## 八、性能优化建议
 
 ### 7.1 图片优化
 
@@ -456,7 +610,7 @@ node scripts/update-categories.cjs
 
 Astro 默认进行代码分割和 tree-shaking，无需额外配置。
 
-## 八、总结
+## 九、总结
 
 ### 时间分配
 
