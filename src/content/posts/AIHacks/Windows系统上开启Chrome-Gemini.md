@@ -6,7 +6,7 @@ tags: ["效率工具"]
 draft: false
 lang: zh_CN
 
-category: Technical
+category: AIHacks
 ---
 
 仅针对对美区，chrome语言必须始终银英语
