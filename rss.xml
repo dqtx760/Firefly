@@ -2062,8 +2062,8 @@ $ARGUMENTS
 &lt;li&gt;&lt;strong&gt;个性化设置&lt;/strong&gt;：自定义激活快捷键、默认语言、输入模式等基础配置；&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;即时使用&lt;/strong&gt;：在任意文本输入框按下快捷键，启动语音输入，转写文本自动优化呈现，支持后续编辑调整。&lt;/li&gt;
 &lt;/ol&gt;
-</content:encoded></item><item><title>干货教程：我的博客发布工作流</title><link>https://dqtx.cc/posts/technical/gongzuoliu/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/gongzuoliu/</guid><description>分享我的无服务器博客发布流程：使用 GitHub 托管 + EdgeOne 自动部署，配合 Typora 和脚本实现高效的文章发布工作流。</description><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260204103206520.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;今天想跟大家分享一下我的博客发布工作流。我的博客没有服务器，只有一个域名通过 GitHub 进行托管，配合 EdgeOne 实现自动构建部署。整个过程非常高效，下面就来详细介绍！&lt;/p&gt;
+</content:encoded></item><item><title>干货教程：我的博客发布工作流</title><link>https://dqtx.cc/posts/technical/gongzuoliu/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/gongzuoliu/</guid><description>分享我的无服务器博客发布流程：使用 GitHub 托管 + EdgeOne 自动部署，配合 Typora 和脚本实现高效的文章发布工作流。</description><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天想跟大家分享一下我的博客发布工作流。我的博客没有服务器，只有一个域名通过 GitHub 进行托管，配合 EdgeOne 实现自动构建部署。整个过程非常高效，下面就来详细介绍！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260208222439485.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;创建文章&lt;/h2&gt;
 &lt;h3&gt;1. 新建 Markdown 文件&lt;/h3&gt;
 &lt;p&gt;打开 Typora，点击「文件」→「新建文本」（或按 &lt;code&gt;Ctrl+N&lt;/code&gt;），文件名建议使用英文。&lt;/p&gt;
@@ -2078,6 +2078,7 @@ draft: false
 ---
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;strong&gt;提示：&lt;/strong&gt; 可以设置微信输入法的常用语，快速插入这个模板，省时省力。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;填写注意事项：&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;根据需要修改以下字段：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;title&lt;/code&gt;：文章标题&lt;/li&gt;
@@ -2085,49 +2086,190 @@ draft: false
 &lt;li&gt;&lt;code&gt;tags&lt;/code&gt;：文章标签&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;category&lt;/code&gt;：文章分类&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;draft&lt;/code&gt;：是否为草稿（&lt;code&gt;true&lt;/code&gt;/&lt;code&gt;false&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pinned&lt;/code&gt;：是否置顶（&lt;code&gt;true&lt;/code&gt;/&lt;code&gt;false&lt;/code&gt;，置顶文章会显示在分类页面最上方）&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;自动封面与描述&lt;/h2&gt;
-&lt;p&gt;博客脚本会自动处理封面图和描述：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;封面图&lt;/strong&gt;：文章中插入的第一张图片会自动作为文章封面&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;描述&lt;/strong&gt;：文章开头的第一段文字会自动作为文章描述&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;写文章时，先写好开头段落，然后插入第一张图片即可。&lt;/p&gt;
-&lt;h2&gt;运行脚本&lt;/h2&gt;
-&lt;p&gt;写完文章后，运行以下命令给文章添加 frontmatter：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;cd D:\project2026\fuwari
-npm run add-frontmatter
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;这个脚本会自动扫描所有文章，给没有 frontmatter 的文章添加模板。&lt;/p&gt;
-&lt;h2&gt;本地预览&lt;/h2&gt;
-&lt;p&gt;写完文章后，先在本地预览效果：&lt;/p&gt;
+&lt;h3&gt;3. 本地预览&lt;/h3&gt;
+&lt;p&gt;模板插入后，如果需要预览文章效果，有两种方式：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;方式一：使用脚本预览（推荐）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在命令行中执行：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;cd D:\project2026\fuwari
 npm run dev
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;然后访问 &lt;a href=&quot;http://localhost:4321/&quot;&gt;http://localhost:4321/&lt;/a&gt; 查看效果。&lt;/p&gt;
-&lt;h2&gt;发布上线&lt;/h2&gt;
-&lt;p&gt;预览确认无误后，通过 GitHub Desktop 推送到 GitHub。&lt;/p&gt;
-&lt;p&gt;EdgeOne 会自动检测到推送，触发自动构建。大约 1 分钟后，文章就会自动发布到博客了！&lt;/p&gt;
-&lt;h2&gt;进阶：一键启动脚本&lt;/h2&gt;
-&lt;p&gt;为了更高效，我写了一个 BAT 脚本，写完文章后双击即可完成所有操作。&lt;/p&gt;
-&lt;h3&gt;使用流程&lt;/h3&gt;
+&lt;p&gt;然后访问 &lt;a href=&quot;http://localhost:4321&quot;&gt;http://localhost:4321&lt;/a&gt; 查看效果。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;方式二：使用 BAT 脚本&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;双击「启动博客并添加模板.bat」，输入 &lt;code&gt;2&lt;/code&gt; 选择启动构建预览，脚本会自动打开浏览器。&lt;/p&gt;
+&lt;h3&gt;4. 提交并推送&lt;/h3&gt;
+&lt;p&gt;预览确认无误后，有两种方式提交并推送：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;方式一：使用 GitHub Desktop（推荐）&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;Typora 写文章&lt;/li&gt;
-&lt;li&gt;双击「启动博客并添加模板.bat」&lt;/li&gt;
-&lt;li&gt;填写文章的 frontmatter&lt;/li&gt;
-&lt;li&gt;刷新浏览器查看效果&lt;/li&gt;
+&lt;li&gt;打开 GitHub Desktop&lt;/li&gt;
+&lt;li&gt;你会看到修改的文件或新增的文章&lt;/li&gt;
+&lt;li&gt;填写提交说明（如：&lt;code&gt;新增文章：文章标题&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;点击「&lt;strong&gt;Commit to main&lt;/strong&gt;」提交到本地仓库&lt;/li&gt;
+&lt;li&gt;点击「&lt;strong&gt;Push origin&lt;/strong&gt;」推送到 GitHub&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3&gt;脚本功能&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;方式二：使用命令行&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在命令行中依次执行：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cd D:\project2026\fuwari
+git add .
+git commit -m &quot;新增文章：文章标题&quot;
+git push
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;EdgeOne 会自动检测到推送，触发构建。大约 1-2 分钟后，文章就会自动发布到博客了！&lt;/p&gt;
+&lt;h2&gt;一键启动脚本：我的完整工作流&lt;/h2&gt;
+&lt;p&gt;为了更高效，我写了一个 BAT 脚本，让整个发布流程变得超级简单。&lt;/p&gt;
+&lt;h3&gt;完整使用流程&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;步骤 1：Typora 新建文章&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;打开 Typora，点击「文件」→「新建文本」（或按 &lt;code&gt;Ctrl+N&lt;/code&gt;），开始写文章。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;步骤 2：移动文章到对应分类文件夹&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;写完文章后，将文件保存到对应的分类目录：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;✅ 自动检查开发服务器状态（未运行则自动启动）&lt;/li&gt;
-&lt;li&gt;✅ 自动给文章添加 frontmatter 模板&lt;/li&gt;
-&lt;li&gt;✅ 自动打开浏览器预览&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;src/content/posts/Software/&lt;/code&gt; - 软件安利&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;src/content/posts/Technical/&lt;/code&gt; - 技术教程&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;src/content/posts/AIHacks/&lt;/code&gt; - AI 新鲜玩法&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;提示：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;步骤 3：运行脚本生成模板&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;双击「&lt;strong&gt;启动博客并添加模板.bat&lt;/strong&gt;」，会看到菜单：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;========================================
+       博客工作菜单
+========================================
+
+[1] 生成 YAML 模板
+[2] 启动构建预览
+[3] 退出
+
+========================================
+请选择操作 (1-3):
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;输入 &lt;code&gt;1&lt;/code&gt; 并回车&lt;/strong&gt;，脚本会自动：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;第一次运行会自动启动开发服务器（需要等 5 秒）&lt;/li&gt;
-&lt;li&gt;以后运行会自动检测服务器状态，已运行则跳过&lt;/li&gt;
-&lt;li&gt;开发服务器会一直保持运行，无需重复启动&lt;/li&gt;
+&lt;li&gt;✅ 扫描所有文章文件&lt;/li&gt;
+&lt;li&gt;✅ 给没有 frontmatter 的文章自动生成模板&lt;/li&gt;
+&lt;li&gt;✅ 自动填充以下字段：
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;published&lt;/code&gt;: 当天日期&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;tags&lt;/code&gt;: 空数组 &lt;code&gt;[]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;category&lt;/code&gt;: 根据文件夹自动识别（Software/Technical/AIHacks）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;draft: false&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pinned: false&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;你只需要填写：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;title&lt;/code&gt;: 文章标题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;可选修改：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果需要置顶文章：将 &lt;code&gt;pinned: false&lt;/code&gt; 改为 &lt;code&gt;pinned: true&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;添加标签：&lt;code&gt;tags: [标签1, 标签2]&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;手动设置封面：&lt;code&gt;image: 图片URL&lt;/code&gt;（留空则自动提取第一张图）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;步骤 4：本地预览&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;填写完标题后，&lt;strong&gt;在脚本中输入 &lt;code&gt;2&lt;/code&gt; 并回车&lt;/strong&gt;，脚本会：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ 自动启动开发服务器（如果未运行）&lt;/li&gt;
+&lt;li&gt;✅ 自动打开浏览器到 http://localhost:4321/&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在浏览器中查看文章效果，确认无误后关闭预览（按 Ctrl+C）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;步骤 5：提交并推送&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;打开 &lt;strong&gt;GitHub Desktop&lt;/strong&gt;，你会看到：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;修改的文章文件&lt;/li&gt;
+&lt;li&gt;如果是新文章，会显示为新增文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;点击「&lt;strong&gt;Commit to main&lt;/strong&gt;」提交，然后点击「&lt;strong&gt;Push origin&lt;/strong&gt;」推送。&lt;/p&gt;
+&lt;p&gt;EdgeOne 会自动检测到推送，触发构建。大约 1-2 分钟后，文章就会自动发布到博客了！&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;常见问题与注意事项&lt;/h2&gt;
+&lt;p&gt;在写作到推送的过程中，我总结了一些容易踩的坑：&lt;/p&gt;
+&lt;h3&gt;1. 移动文章后忘记更新 category 字段&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;问题&lt;/strong&gt;：将文章从 &lt;code&gt;Technical/&lt;/code&gt; 移动到 &lt;code&gt;AIHacks/&lt;/code&gt; 后，网站上的分类显示还是原来的分类。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：只移动了文件位置，忘记更新 frontmatter 中的 &lt;code&gt;category&lt;/code&gt; 字段。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;移动文件后，记得同时修改文章开头的 &lt;code&gt;category&lt;/code&gt; 字段&lt;/li&gt;
+&lt;li&gt;例如：&lt;code&gt;category: Technical&lt;/code&gt; → &lt;code&gt;category: AIHacks&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;然后再提交推送&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;2. YAML 格式错误&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;问题&lt;/strong&gt;：文章发布后只显示标题，没有封面、摘要、正文。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：YAML frontmatter 格式极其严格，常见错误：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;冒号后没有空格：&lt;code&gt;title:文章标题&lt;/code&gt; ❌&lt;/li&gt;
+&lt;li&gt;使用了错误的日期格式：&lt;code&gt;published: 2026/02/04&lt;/code&gt; ❌&lt;/li&gt;
+&lt;li&gt;标签格式错误：&lt;code&gt;tags: 标签1, 标签2&lt;/code&gt; ❌&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;正确写法&lt;/strong&gt;：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+title: 文章标题           # 冒号后有空格
+published: 2026-02-04     # 使用连字符
+tags: [标签1, 标签2]      # 使用数组格式
+category: Technical
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;3. 图片链接失效&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;问题&lt;/strong&gt;：文章中的图片无法显示。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用了本地路径（如 &lt;code&gt;C:\Images\...&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;图床图片被删除&lt;/li&gt;
+&lt;li&gt;URL 中有特殊字符未编码&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用 PicList 等工具自动上传到图床&lt;/li&gt;
+&lt;li&gt;检查图片 URL 是否有效&lt;/li&gt;
+&lt;li&gt;使用 HTTPS 协议&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;4. GitHub Desktop 推送失败&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;问题&lt;/strong&gt;：推送时提示冲突或错误。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;本地和远程有不同步的更改&lt;/li&gt;
+&lt;li&gt;网络问题&lt;/li&gt;
+&lt;li&gt;文件名包含特殊字符&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;先拉取远程更改（Pull）&lt;/li&gt;
+&lt;li&gt;解决冲突后再推送&lt;/li&gt;
+&lt;li&gt;避免使用中文或特殊字符命名文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;5. 分类显示不正确&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;问题&lt;/strong&gt;：文章在某个分类下显示 0 篇。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;category 字段与实际分类目录不匹配&lt;/li&gt;
+&lt;li&gt;分类名称使用了中文但目录是英文&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;注意事项&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;category 字段值要与目录名一致&lt;/li&gt;
+&lt;li&gt;当前使用英文分类：&lt;code&gt;Software&lt;/code&gt;、&lt;code&gt;Technical&lt;/code&gt;、&lt;code&gt;AIHacks&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;6. 本地预览正常，推送后显示异常&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;问题&lt;/strong&gt;：本地预览没问题，推送到 GitHub 后网站显示异常。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;大小写敏感（Linux 系统区分大小写）&lt;/li&gt;
+&lt;li&gt;缓存问题&lt;/li&gt;
+&lt;li&gt;构建环境差异&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;文件名和路径保持统一的大小写&lt;/li&gt;
+&lt;li&gt;清除浏览器缓存或使用无痕模式查看&lt;/li&gt;
+&lt;li&gt;检查 EdgeOne 构建日志&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;7. 忘记提交图片资源&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;问题&lt;/strong&gt;：文章中的本地图片在网站上不显示。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：图片放在了本地目录，没有推送到 GitHub。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;图片放在 &lt;code&gt;public/&lt;/code&gt; 目录下&lt;/li&gt;
+&lt;li&gt;或使用图床上传，获得外链 URL&lt;/li&gt;
+&lt;li&gt;确保 &lt;code&gt;.gitignore&lt;/code&gt; 没有忽略图片文件&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr /&gt;
 &lt;p&gt;以上就是我的博客发布工作流了。虽然博客没有服务器，但通过 GitHub + EdgeOne 的组合，配合一些小脚本，依然可以实现高效的自动化发布。&lt;/p&gt;
