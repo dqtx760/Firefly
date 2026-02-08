@@ -1,6 +1,6 @@
 ---
 title: Zed安装使用教程
-published: 2026-01-15T11:20:00.000ZZ
+published: 2026-01-15T11:20:00.000Z
 description: Zed 是 Rust 编写、GPU 加速的跨平台开源代码编辑器（Windows/macOS/Linux），主打极速性能、原生 AI 代理协作、实时多人开发，定位...
 tags: ["效率工具","AI","Claude","Windows"]
 draft: false
