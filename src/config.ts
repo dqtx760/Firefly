@@ -26,7 +26,7 @@ export const siteConfig: SiteConfig = {
 	keywords: [],
 	lang: "zh_CN", // 'en', 'zh_CN', 'zh_TW', 'ja', 'ko', 'es', 'th'
 	themeColor: {
-		hue: 268, // 冷紫蓝系 - 唯一签名色
+		hue: 250, // 纯蓝色系 - 天蓝色调
 		fixed: true, // Hide the theme color picker for visitors
 		forceDarkMode: false, // Force dark mode and hide theme switcher
 	},

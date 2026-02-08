@@ -18,11 +18,9 @@ category: Software
 
 
 
-可 2026 年的今天，有个开发者偏要给它 “续上一口气”：一个叫 BobPony 的大神，把 Win7 重新打包成了 “史上终极版”，不仅能装在新电脑上，还解决了老 Win7 的所有硬件痛点。
+可 2026 年的今天，有个开发者偏要给它 "续上一口气"：一个叫 BobPony 的大神，把 Win7 重新打包成了 "史上终极版"，不仅能装在新电脑上，还解决了老 Win7 的所有硬件痛点。
 
-![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260201221806923.webp)
-
-## 二、这个 “终极 Win7” 到底改了啥？
+## 二、这个 "终极 Win7" 到底改了啥？
 
 BobPony 做的这个镜像叫《The most ULTIMATE Windows 7 x64 ever》，核心就一个目标：**让 Win7 适配 2026 年的硬件**。
 
