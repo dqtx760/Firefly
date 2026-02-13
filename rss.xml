@@ -62,417 +62,134 @@
 &lt;li&gt;⛓️ Web3教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867794661334761497#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;🛠️ 技术教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867808112450912266#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>Antigravity安装使用教程</title><link>https://dqtx.cc/posts/aihacks/antigravity%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/antigravity%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid><description>Google Antigravity 是 DeepMind 推出的 AI 编程 IDE（2025-11-18 与 Gemini 3 同步发布），基于 VS Co...</description><pubDate>Wed, 18 Mar 2026 10:45:00 GMT</pubDate><content:encoded>&lt;p&gt;Google Antigravity 是 DeepMind 推出的 AI 编程 IDE（2025-11-18 与 Gemini 3 同步发布），基于 VS Code 内核，核心是 “智能代理（Agentic）” 开发范式，能让 AI 自主规划、执行、验证编程任务，支持多智能体并行协作，适配复杂全栈开发场景&lt;/p&gt;
-&lt;h2&gt;软件下载安装&lt;/h2&gt;
-&lt;p&gt;官方地址https://antigravity.google/&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260124223748577.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;登录授权&lt;/h2&gt;
-&lt;p&gt;很多人往往卡在这里，解决办法&lt;/p&gt;
+</content:encoded></item><item><title>AI大模型GLM4.7，MiniMax-M2.1限时免费渠道</title><link>https://dqtx.cc/posts/aihacks/glm_minimax_free/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/glm_minimax_free/</guid><pubDate>Fri, 13 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;整理了几个免费使用GLM-4.7与MiniMax M2.1大模型的区域免费渠道，2个可以提供免费的API,一个在线平台，还是两个客户端中可以免费用这两个模型&lt;/p&gt;
+&lt;h2&gt;1.英伟达&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.80aj.com/2026/01/06/nvidia-nim-glm4-minimax-guide/&quot;&gt;英伟达NIM平台：免费调用GLM-4.7与MiniMax M2.1指南&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=vSjC6LnMGm4&quot;&gt;GLM-4.7 + MiniMax M2.1 免费 API，媲美直连 Claude Code！&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;访问 &lt;a href=&quot;https://developer.nvidia.com/&quot;&gt;NVIDIA Developer&lt;/a&gt;，用邮箱注册账号。已有账号直接登录。&lt;/p&gt;
+&lt;h2&gt;2.讯飞&lt;/h2&gt;
+&lt;p&gt;https://training.xfyun.cn/modelSquare&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://x.com/cnfinancewatch/status/2020073432772473186&quot;&gt;(6) X 上的 华尔街观察 Xtrader：“讯飞的 GLM-4.7 和 MiniMax-M2.1 都免费用了？” / X&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1.点击模型卡片的API调用按钮，即可获取模型API授权和现金礼品卡。&lt;/p&gt;
+&lt;p&gt;2.获得模型API授权后，即可访问https://maas.xfyun.cn/modelService&lt;/p&gt;
+&lt;p&gt;点击推理服务获取开发配置参数&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260213210334278.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;3.MonkeyCode&lt;/h2&gt;
+&lt;p&gt;免费的在线 AI 开发平台，&lt;strong&gt;GLM-4.7 和 MiniMax-M2.1 这 2 款基础模型可以免费畅玩，&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;首次注册登录会直接获得 &lt;strong&gt;20000 点&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;官网 ： &lt;a href=&quot;https://monkeycode-ai.com/?ic=019c5715-01a8-7e40-a320-4d16498c5f2d&quot;&gt;https://monkeycode-ai.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260213205936106.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;4.OpenCode客户端&lt;/h2&gt;
+&lt;p&gt;下载地址：https://opencode.ai/zh/download&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260213203937089.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;5.zed客户端&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/zed&quot;&gt;详细教程&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260213204154160.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;🌟自用推荐：&lt;/h2&gt;
+&lt;p&gt;自用智谱 GLM Coding，我买的GLM Coding Lite，&lt;a href=&quot;https://www.bigmodel.cn/glm-coding?ic=PUCQNADSPM&quot;&gt;点此购买&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;GLM Coding Lite现在的价格&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;魔法软件开启 TUN&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://link.zhihu.com/?target=https%3A//www.proxifier.com/&quot;&gt;安装 Proxifier&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;连续包年（7折）：411/年&lt;/li&gt;
+&lt;li&gt;连续包季（9折）：132/季&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260124211315751.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260124211331540.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;模式说明&lt;/h2&gt;
+&lt;p&gt;如果觉得这篇教程对你有帮助，别忘了&lt;strong&gt;点赞+收藏+转发&lt;/strong&gt;三连呀！关注我，后续分享更多实用技巧、效率工具干货，下次见～ 👋&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;大强远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+</content:encoded></item><item><title>三步搞定软件汉化</title><link>https://dqtx.cc/posts/technical/hanhua/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/hanhua/</guid><pubDate>Thu, 12 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;还在为英文软件界面发愁吗？下载的中文版广告满天飞，还可能暗藏木马。今天教你用Resource Hacker工具，三步搞定软件汉化，安全又实用！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/hanhua.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;第一步：准备工作&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;安装目标软件（以EditPlus为例）&lt;/li&gt;
+&lt;li&gt;备份主程序：右键软件图标 → 打开文件位置 → 复制.exe文件到安全位置&lt;/li&gt;
+&lt;li&gt;下载Resource Hacker：&lt;a href=&quot;https://www.angusj.com/resourcehacker/&quot;&gt;点此下载&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;第二步：核心汉化操作&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;🎨 菜单汉化&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Planning（规划）&lt;/strong&gt;：&lt;/li&gt;
+&lt;li&gt;打开Resource Hacker，拖入备份的主程序&lt;/li&gt;
+&lt;li&gt;展开资源树，找到1033代码段（英文资源）&lt;/li&gt;
+&lt;li&gt;定位Menu文件夹，选择要修改的菜单项&lt;/li&gt;
+&lt;li&gt;将&quot;File&quot;改为&quot;文件&quot; → 点击编译 → 保存&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Agent 在执行任务之前会先进行规划，适用于深度研究、复杂任务或协作工作；&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;⚡ 批量翻译神技&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Fast（快速）&lt;/strong&gt;：&lt;/li&gt;
+&lt;li&gt;全选菜单文本（Ctrl+A）→ 复制&lt;/li&gt;
+&lt;li&gt;粘贴到AI工具 → 结尾输入&quot;&lt;strong&gt;汉化&lt;/strong&gt;&quot;&lt;/li&gt;
+&lt;li&gt;粘贴翻译结果 → 编译保存&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Agent 将直接执行任务，适用于简单任务，可以更快速地完成任务。&lt;/p&gt;
-&lt;h2&gt;设置语言中文&lt;/h2&gt;
-&lt;p&gt;快捷键 &lt;code&gt;Ctrl+Shift+P(Windows)&lt;/code&gt; 输入&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Configure Display Language
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;更换自己喜欢的主题&lt;/h2&gt;
-&lt;p&gt;快捷键 &lt;code&gt;Ctrl+Shift+P(Windows)&lt;/code&gt; 输入&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Themes: Color Theme
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;点击“首选项:颜色主题”&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://m.okjike.com/originalPosts/691e6c5100c0686ab5271356&quot;&gt;导入 Cursor自带主题&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;常用快捷键&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;快捷键&lt;/th&gt;
-&lt;th&gt;操作&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Ctrl+,&lt;/td&gt;
-&lt;td&gt;打开设置&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Ctrl+L&lt;/td&gt;
-&lt;td&gt;打开 Agent 对话框&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</content:encoded></item><item><title>API封装成Skill最佳实践</title><link>https://dqtx.cc/posts/aihacks/api%E5%B0%81%E8%A3%85%E6%88%90skill%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/api%E5%B0%81%E8%A3%85%E6%88%90skill%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</guid><description>最近被阿里巴巴通义MAI的Z-Image狠狠圈粉，不仅搭载了高效的 Z-Image-Turbo 模型，更关键的是每天能免费生 2000 张图，不管是生成文章视频...</description><pubDate>Wed, 18 Mar 2026 10:45:00 GMT</pubDate><content:encoded>&lt;p&gt;最近被阿里巴巴通义MAI的Z-Image狠狠圈粉，不仅搭载了高效的 &lt;strong&gt;Z-Image-Turbo&lt;/strong&gt; 模型，更关键的是&lt;strong&gt;每天能免费生 2000 张图&lt;/strong&gt;，不管是生成文章视频封面还是异常创作，这个配额都完全够用。&lt;/p&gt;
-&lt;p&gt;恰巧这段时间我正在研究 Claude 的 Skills 功能，于是就萌生了一个想法：&lt;strong&gt;把 Z-Image 的免费生图能力和 Claude Skills 结合起来&lt;/strong&gt;，做一个专属生图 Skill，通过自然语言就可以生图到本地文件夹，既省时间又能充分利用免费配额。带着这个实操需求，我把整个创建过程整理成了这篇文章，希望能给同样喜欢折腾工具、需要生图功能的朋友提供一点参考～&lt;/p&gt;
-&lt;h2&gt;一.创建方法&lt;/h2&gt;
-&lt;p&gt;登录（可用GitHub）魔搭社区，打开下方地址，点击“查看代码范例”进去复制API代码&lt;/p&gt;
-&lt;p&gt;https://modelscope.cn/models/Tongyi-MAI/Z-Image-Turbo&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260114235919010.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;⚠️ 注意事项：API Key 需要先完成账户绑定才能使用图片生成功能&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260115001924596.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;告诉Claude Code&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;根据代码创建Skill：【粘贴代码】
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;（可选）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;帮我配置一下自定义斜杠命令  这样我方便使用，另外默输出尺寸设置为1920x1080，输出默认文件夹为D:\zhishiku\.claude\skills\image
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;项目目录结构&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260115020802212.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;二.如何使用&lt;/h2&gt;
-&lt;h3&gt;自然语言描述&lt;/h3&gt;
-&lt;p&gt;Claude会自动根据你的自然语言调用这个生图skill&lt;/p&gt;
-&lt;p&gt;比如我用它测试生成我过往文章/视频的封面&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;生成3张16:9的文章配图，文章主题是Obsidian+AI，绝杀！你的第二大脑终于觉醒了
- 
-生成文章封面，文章主题是：如何创建一个生图Claude SkillS
-
-练习两年半，我做了个免费 AI编程自学网！吊打付费课，会打字就能学，根据这个主题生成视封面
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;斜杠命令&lt;/h3&gt;
-&lt;p&gt;另外你可以通过命令进行调用，可以让他输出指定的尺寸&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;/image 一只金色的猫
-/gen-image 赛博朋克城市，霓虹灯效果
-/image 可爱的卡通小熊 -o bear.jpg
-/image 描述 -s 2048x1152  
-/image 一个年轻女性在夕阳下的肖像，电影级质感 -s 1920x1080  
-/image 赛博朋克城市，霓虹灯效果 -s 1920x1080 -o city.jpg
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4&gt;核心命令&lt;/h4&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;命令&lt;/th&gt;
-&lt;th&gt;功能说明&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;/image &amp;lt;描述&amp;gt;&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;生成指定描述的图片&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;/gen-image &amp;lt;描述&amp;gt;&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;与 &lt;code&gt;/image&lt;/code&gt; 功能一致，生成指定描述的图片&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h4&gt;可选参数&lt;/h4&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;参数&lt;/th&gt;
-&lt;th&gt;全称&lt;/th&gt;
-&lt;th&gt;功能说明&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;-o&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;--output&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;指定生成图片的输出文件名（含后缀，如 &lt;code&gt;bear.jpg&lt;/code&gt;）&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;-s&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;--size&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;指定生成图片的尺寸&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2&gt;三.写在最后&lt;/h2&gt;
-&lt;p&gt;通过上面的例子可以看出，其实不仅是 API，任何你过往用过的优质提示词，都可以让 Claude 帮你封装成一个个 Skills，Skills 的调用方式更简单，也更有优势：你不用每次都跟 AI 详细说明要怎么做，只要用自然语言表达需求，Claude 就会自动判断并调用合适的 Skills，而且多个 Skills 还可以协同工作，组合出更复杂、更完整的工作流。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;以上，既然看到这里了，如果你觉得内容不错，随手点个赞、在看、转发三连吧！如果想第一时间收到推送，可以给我点个星标⭐～&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;如需要远程技术支持：742112.xyz&lt;/p&gt;
-</content:encoded></item><item><title>Obsidian+AI</title><link>https://dqtx.cc/posts/aihacks/obsidianai/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/obsidianai/</guid><description>这几天，在gihub发现Obsidian重磅插件，直接把 AI 功能深度集成到核心里了！网上都在夸赞，确实牛批！今天我要分享的 Obsidian+AI 组合，一...</description><pubDate>Wed, 18 Mar 2026 10:45:00 GMT</pubDate><content:encoded>&lt;p&gt;这几天，在gihub发现Obsidian重磅插件，直接把 AI 功能深度集成到核心里了！网上都在夸赞，确实&lt;strong&gt;牛批&lt;/strong&gt;！今天我要分享的 Obsidian+AI 组合，&lt;em&gt;一次性解决这些痛点&lt;/em&gt;*！简单说，你的笔记不再是一个个&lt;strong&gt;死文档*，而是变成了能理解、能推理、能自动化的&lt;/strong&gt;AI 上下文层**。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260113215058651.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;一.准备工作&lt;/h2&gt;
-&lt;p&gt;✅已安装 Obsidian&lt;/p&gt;
-&lt;p&gt;✅安装并配置了 Claude Code&lt;/p&gt;
-&lt;h2&gt;二.Obsidian个人配置&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;我的统文件结构&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;📁 你的 Vault
-├── 📄 CLAUDE.md              # AI 配置文件
-├── 📄 claude.json            # Skills 配置
-├── 📁 .claude/
-│   ├── 📁 commands/          # 自定义命令
-│   └── 📁 skills/            # Skills 包
-├── 📁 加工中/                 # 正在编辑的文章
-├── 📁 1️⃣常用工具/            # 常用工具配置
-├── 📁 2️⃣流量策划/            # 流量策划项目
-├── 📁 3️⃣销售转换/            # 销售转换项目
-└── 📁 4️⃣产品交付/            # 产品交付项目
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;1.外观设置&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260113215034732.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;2.主题推荐&lt;/h3&gt;
-&lt;p&gt;设置-外观-主题-管理，搜索：&lt;/p&gt;
-&lt;p&gt;推荐主题&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;💬 对话框汉化&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Primary(推荐）&lt;/li&gt;
-&lt;li&gt;AnuPpuccin&lt;/li&gt;
-&lt;li&gt;Baseline&lt;/li&gt;
-&lt;li&gt;Typora-Vue&lt;/li&gt;
-&lt;li&gt;Zen&lt;/li&gt;
+&lt;li&gt;展开Dialog文件夹，选择目标对话框&lt;/li&gt;
+&lt;li&gt;同样的翻译方法处理设置界面等&lt;/li&gt;
+&lt;li&gt;编译保存即可&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;3.安装必要插件&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;设置&lt;/code&gt;-&lt;code&gt;第三方插件&lt;/code&gt;-&lt;code&gt;关闭安全模式&lt;/code&gt;---社区插件市场，搜索：&lt;/p&gt;
-&lt;h4&gt;Floating Search  ：搜索神器&lt;/h4&gt;
-&lt;blockquote&gt;
-&lt;p&gt;功能：tag: (Find tag) → 快捷键 Ctrl + F
-用途：快速搜索标签和内容&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h4&gt;Git ：Git 同步插件&lt;/h4&gt;
-&lt;blockquote&gt;
-&lt;p&gt;详细教程：点此查看 →https://www.bilibili.com/video/BV1fZCyBYEuT/?spm_id_from=333.1387.favlist.content.click&amp;amp;vd_source=206031f494850e57fd6c92ace02b1bed&lt;/p&gt;
-&lt;p&gt;用途：版本控制、团队协作、备份恢复&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;https://xodnytdcaw.feishu.cn/space/api/box/stream/download/asynccode/?code=NzJiOTJmYjM2NDJkYTY2YmNlMGEwNTM5MTUzMTc1MjNfUDNQaVFUUWE0SVpXc1ZpU0YxTFVzb2NNMG16N3N6QzJfVG9rZW46Qk9XYmJyMVM2b1pVSTZ4TU5yc2NLYmNQbkJnXzE3NjgzMDgwMTI6MTc2ODMxMTYxMl9WNA&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-&lt;h4&gt;图片附件管理插件&lt;/h4&gt;
-&lt;p&gt;Custom Attachment Location：图像附件存储&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;功能：自定义图片存储位置
-用途：整理附件文件夹，避免混乱&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260113215103569.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260113215104746.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h4&gt;公众号发布插件&lt;/h4&gt;
-&lt;p&gt;NoteToMP：一键发布&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;功能：直接发送到公众号草稿箱
-用途：内容创作与发布一体化&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h4&gt;Claudian：AI 集成插件（重点）&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;Claudian&lt;/strong&gt;：Claude Code 侧边栏集成&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;功能：把 Claude Code 整合到 Obsidian 侧边栏
-用途：直接在 Obsidian 中对话，读取当前 Markdown&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260113215058651.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;安装 Claudian 手动教程&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;🖱️ 右键菜单处理&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;定位String Table下的文本资源&lt;/li&gt;
+&lt;li&gt;翻译右键菜单项（如&quot;Extract to&quot;→&quot;解压到&quot;）&lt;/li&gt;
+&lt;li&gt;保存修改&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;第三步：文件替换生效&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;将修改后的.exe文件复制回原安装目录替换原文件&lt;/li&gt;
+&lt;li&gt;右键菜单特殊处理：重命名原文件 → 粘贴修改版 → 注销电脑重新加载资源&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;掌握了这个方法，你就能轻松汉化各种英文软件，告别广告和木马困扰，享受纯净的中文界面。记得操作前一定要备份原文件，安全第一！快去试试吧，让你的软件使用体验更上一层楼&lt;/p&gt;
+</content:encoded></item><item><title>酷9：webview 食用方法</title><link>https://dqtx.cc/posts/technical/ku9js/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/ku9js/</guid><pubDate>Wed, 11 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;KU9（酷 9）是基于 TVBox 开发的高自由度直播空壳软件，其 WebView 功能是突破直播源兼容性的核心 —— 通过嵌入浏览器内核直接渲染网页端直播内容，从根源解决常规 m3u/txt 源频繁失效的痛点。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/KU9.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;配置步骤&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;下载文件&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;前往 &lt;a href=&quot;https://github.com/YishenTu/claudian/releases/latest&quot;&gt;Claudian Release 页面&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;下载三个文件：&lt;code&gt;main.js&lt;/code&gt;、&lt;code&gt;manifest.json&lt;/code&gt;、&lt;code&gt;styles.css&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;创建文件夹&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;路径：&lt;code&gt;/path/to/vault/.obsidian/plugins/claudian/&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.obsidian&lt;/code&gt; 文件夹通常是隐藏的&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;放入文件&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;将下载的三个文件复制到 &lt;code&gt;claudian&lt;/code&gt; 文件夹&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;启用插件&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;重启 Obsidian&lt;/li&gt;
-&lt;li&gt;设置 → 第三方插件 → 找到 &quot;Claudian&quot; 并启用&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h3&gt;下载文件：&lt;a href=&quot;https://pan.quark.cn/s/b77b343ee984&quot;&gt;点此下载&lt;/a&gt;&lt;/h3&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2&gt;三.配置 Claude Skills 系统&lt;/h2&gt;
-&lt;h4&gt;3.1 创建 claude.json 配置文件&lt;/h4&gt;
-&lt;p&gt;在 &lt;code&gt;.claude&lt;/code&gt; 文件夹下创建 &lt;code&gt;claude.json&lt;/code&gt;：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;{
-  &quot;skills&quot;: [
-    &quot;./skills/obsidian-skills/obsidian-markdown&quot;,
-    &quot;./skills/obsidian-skills/json-canvas&quot;,
-    &quot;./skills/obsidian-skills/obsidian-bases&quot;
-  ]
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4&gt;3.2 下载Obsidian Skills 包&lt;/h4&gt;
-&lt;p&gt;在 &lt;code&gt;.claude&lt;/code&gt; 文件夹创建 &lt;code&gt;skills&lt;/code&gt; 文件夹，然后下载：https://github.com/kepano/obsidian-skills&lt;/p&gt;
-&lt;h6&gt;&lt;strong&gt;技能应用场景展示&lt;/strong&gt;：&lt;/h6&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260113212002494.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260113215435163.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;四、 obsidian Skills 使用指南&lt;/h2&gt;
-&lt;h6&gt;&lt;strong&gt;A.基础用法&lt;/strong&gt;&lt;/h6&gt;
-&lt;p&gt;&lt;strong&gt;1️⃣obsidian-markdown&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;创建符合 Obsidian 规范的 Markdown 文件&lt;/p&gt;
-&lt;p&gt;示例 1: 创建项目笔记&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;创建一个名为&quot;项目计划.md&quot;的笔记，包含以下内容：
-- Frontmatter 属性：项目状态为进行中，优先级为高
-- 使用 callout 标注重要截止日期
-- 创建任务清单，包含已完成和待办任务
-- 添加项目架构的 Mermaid 流程图
-- 链接到相关的&quot;团队文档&quot;笔记
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;示例 2: 创建学习笔记&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;创建&quot;JavaScript 学习笔记.md&quot;，包含：
- - 使用 info callout 介绍学习目标
- - 代码高亮示例（JavaScript 和 Python）
- - 使用嵌套列表组织知识点
- - 添加数学公式示例
- - 创建折叠的 FAQ callout
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;2️⃣json-canvas&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;JSON Canvas 是一种开放格式，用于创建无限画布。AI 可以自动生成思维导图、流程图、项目看板等可视化内容。&lt;/p&gt;
-&lt;p&gt;示例 1: 创建思维导图&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt; 创建一个名为&quot;产品开发思维导图.canvas&quot;的文件，主题是&quot;新功能开发&quot;，包含：
- - 中心节点：&quot;新功能开发&quot;（使用青色）
- - 分支节点：需求分析、设计、开发、测试、部署（5个分支）
- - 每个分支下添加 2-3 个子节点，包含具体任务
- - 使用箭头连接所有节点
- - 使用不同颜色区分不同阶段
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;示例 2: 创建项目看板&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;创建&quot;项目看板.canvas&quot;，实现看板视图：
- - 创建 3 个分组：待办、进行中、已完成（使用红、黄、绿色）
- - 每个分组内添加 2-3 个任务卡片
- - 任务内容包含任务名和描述
- - 合理布局，确保美观
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;示例 3: 创建流程图&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;创建&quot;用户注册流程.canvas&quot;：
-- 节点：开始 → 输入信息 → 验证数据 → {数据有效?}
-- 决策节点：Yes → 创建账户 → 发送邮件 → 结束
-- 决策节点：No → 显示错误 → 返回输入
-- 使用箭头和标签标注流程
-- 决策节点使用黄色，开始/结束使用绿色
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;示例 4: 创建研究资料画布&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;创建&quot;AI研究.canvas&quot;画布：
-- 中心节点：AI 研究主题
-- 周围节点链接到相关的笔记文件（使用 file 节点）
-- 添加外部资源链接（使用 link 节点）
-- 将相关内容用 group 节点分组
-- 使用带标签的连线说明关系
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;3️⃣obsidian-bases&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Obsidian Bases 是基于 YAML 的数据视图系统，可以将笔记转换为数据库表格、卡片视图等。AI 可以自动创建配置文件。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;示例 1: 任务管理系统&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;创建&quot;任务管理.base&quot;，实现以下功能：
-- 筛选所有包含 #task 标签的 Markdown 文件
-- 创建公式字段：
-  - days_until_due: 计算距离截止日期的天数
-  - is_overdue: 判断是否过期
-  - priority_label: 根据 priority 字段显示 🟥🟨🩩 图标
-- 表格视图：显示任务名、状态、优先级、截止日期、距离天数
-- 按状态分组排序
-- 添加平均天数统计
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;示例 2: 阅读清单&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;创建&quot;阅读清单.base&quot;：
-- 筛选包含 #book 或 #article 标签的笔记
-- 创建公式：
-  - reading_time: 根据页数估算阅读时间（每页 2 分钟）
-  - status_icon: 根据 status 显示 📖/✅/📚 图标
-  - year_read: 提取完成日期的年份
-- 卡片视图：显示封面、书名、作者、状态图标
-- 表格视图：显示书名、作者、页数、预计时间、状态
-- 排除已放弃的书籍
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;示例 3: 项目进度追踪&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;创建&quot;项目追踪.base&quot;：
-- 筛选&quot;Projects&quot;文件夹下的所有 Markdown 文件
-- 创建公式：
-  - last_updated: 显示相对更新时间（如&quot;3天前&quot;）
-  - link_count: 统计笔记中的链接数量
-  - progress: 根据完成任务的百分比计算进度
-- 表格视图：显示项目名、状态、更新时间、链接数、进度
-- 按状态分组
-- 添加进度条可视化（使用 icon 函数）
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;示例 4: 每日笔记索引&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;创建&quot;日记索引.base&quot;：
-- 筛选&quot;Daily Notes&quot;文件夹下文件名格式为 YYYY-MM-DD 的笔记
-- 创建公式：
-  - word_estimate: 估算字数（文件大小除以 5）
-  - day_of_week: 提取星期几
-  - has_images: 判断是否包含图片
-- 表格视图：显示日期、星期、估算字数、图片数量
-- 限制显示最近 30 天
-- 按修改时间倒序排列
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;示例 4: 附件&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;请根据附件内容生成一个 高颜值Obsidian Canvas，每个主题建立一个分组，设置颜色，注意，每个节点之前的距离不要太靠近，中文输出
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h6&gt;B.高级技巧：组合使用多个 Skills&lt;/h6&gt;
-&lt;p&gt;技巧 1: 生成项目看板&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;为我的项目创建完整的文档系统：
-1. 创建&quot;项目看板.canvas&quot;可视化展示项目结构
-2. 创建&quot;任务管理.base&quot;追踪所有任务
-3. 创建&quot;项目主页.md&quot;作为索引，包含：
-   - 项目概述（使用 callout）
-   - 嵌入项目看板
-   - 嵌入任务管理视图
-   - Mermaid 架构图
-   - 相关文档链接
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;技巧 2: 学习系统&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;创建&quot;主题学习&quot;系统：
-1. 创建&quot;知识地图.canvas&quot;，用思维导图展示知识结构
-2. 创建&quot;学习资源.base&quot;，管理所有学习资料（书籍、文章、视频）
-3. 创建&quot;学习笔记.md&quot;模板，包含：
-   - 学习目标（checklist）
-   - 重要概念（callout 标注）
-   - 代码示例
-   - 笔记总结
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h5&gt;&lt;/h5&gt;
-&lt;p&gt;&lt;strong&gt;附：自定义命令配置&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;项目命令：&lt;code&gt;项目根目录/.claude/commands/&lt;/code&gt; 下，仅当前项目可用。&lt;/p&gt;
-&lt;p&gt;Slash Commands即自定义斜杠命令。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;环境准备
-mkdir -p ~/.claude/commands     #创建命令目录（递归创建，不存在则自动生成）
-touch ~/.claude/commands/search-web.md   # 创建命令文件（以search-web.md为例）
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;编写命令文件（Markdown 格式）&lt;/p&gt;
-&lt;p&gt;每个命令对应一个 &lt;code&gt;.md&lt;/code&gt; 文件，包含元数据与执行逻辑（示例）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;---
-# 元数据（YAML格式，必须放在开头）
-description: &quot;调用搜索工具查询指定关键词的网页信息&quot; # 命令描述
-argument-hint: &quot;搜索关键词（如：Slash Commands 最佳实践）&quot; # 参数提示
-allowed-tools: [&quot;Search&quot;] # 允许调用的工具（如Search、Read、Edit）
----
-# 命令执行逻辑（提示词模板，$ARGUMENTS为参数占位符）
-请使用搜索工具查询以下关键词的最新信息，并整理成结构化摘要：
-$ARGUMENTS
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;在 Claude Code 中输入 &lt;code&gt;/search-web Slash Commands 自定义方法&lt;/code&gt;，自动替换 &lt;code&gt;$ARGUMENTS&lt;/code&gt; 为传入参数。&lt;/p&gt;
-&lt;h2&gt;五.其他推荐工具&lt;/h2&gt;
-&lt;h3&gt;Chrome 插件剪藏工具&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Obsidian Web Clipper&lt;/strong&gt;：网页剪藏神器&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;功能：一键剪藏网页内容到 Obsidian
-用途：收集资料、保存网页、整理收藏
-下载地址：https://chromewebstore.google.com/detail/obsidian-web-clipper/cnjifjpddelmedmihgijeibhnjfabmlf
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;字体推荐&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;中文推荐&lt;/strong&gt;：TsangerJinKai02（闪客金楷）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;特色：优雅的中文显示
-用途：提升阅读体验
-下载：https://github.com/tw93/MiaoYan-NetNewsWire-Theme/blob/main/TsangerJinKai02-W04.ttf
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;英文代码推荐&lt;/strong&gt;：JetBrains Mono&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;特色：专业的代码显示
-用途：编程、技术文档
-下载：https://www.jetbrains.com/lp/mono/
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;六、验证配置&lt;/h2&gt;
-&lt;p&gt;安装完成后，打开 Claudian 插件对话界面，发送测试命令：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;请列出你检测到的本地 skills（json-canvas / obsidian-markdown / obsidian-bases），并在常用工具创建一个测试笔记赵国强.md 包含 [[链接]]、#tag、- [ ] todo。
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;如果返回正确的技能列表并创建了文件，说明配置成功！&lt;/p&gt;
-&lt;p&gt;以上.今天的分享就到这里。Obsidian + AI 的组合，确实让知识管理效率&lt;strong&gt;爆表&lt;/strong&gt;！&lt;/p&gt;
-&lt;p&gt;如果内容对你有所帮助，欢迎一键三连（点赞、在看、转发）。如果你有其他软件需求，也欢迎评论区留言，我们下次再见。&lt;/p&gt;
+&lt;p&gt;包含webview.txt、webview_jscode.js、web.js、epg_data.json4个文件&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;h3&gt;文件导入&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;将这4个文件借助电视上的&lt;strong&gt;应用管家&lt;/strong&gt;文件互传传到电视&lt;/p&gt;
+&lt;p&gt;依次复制文件到&lt;strong&gt;内部储存-酷9&lt;/strong&gt;根目录下对应下文件夹进行粘贴。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;导入文件&lt;/th&gt;
+&lt;th&gt;📂对文件夹&lt;/th&gt;
+&lt;th&gt;作用&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;webview.txt&lt;/td&gt;
+&lt;td&gt;localData&lt;/td&gt;
+&lt;td&gt;播放列表&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;webview_jscode.js&lt;/td&gt;
+&lt;td&gt;webviewJscode&lt;/td&gt;
+&lt;td&gt;支持播放webview://开头的网页直播源&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;web.js&lt;/td&gt;
+&lt;td&gt;js&lt;/td&gt;
+&lt;td&gt;支持播放http//A/ku9/js/web.js?id=开头的网页直播源&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;epg_data.json&lt;/td&gt;
+&lt;td&gt;logo&lt;/td&gt;
+&lt;td&gt;匹配电视台logo，可编辑添加自定义logo&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;软件设置建议&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;显示设置：关闭收藏&lt;/li&gt;
+&lt;li&gt;偏好设置：换台反转/快速退出&lt;/li&gt;
+&lt;li&gt;其他设置：分组类型～传统分组&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;PS,模拟器可以借助MT管理器操作，内部储存--酷9&lt;/p&gt;
 </content:encoded></item><item><title>OpenClaw完整安装指南</title><link>https://dqtx.cc/posts/aihacks/openclaw/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/openclaw/</guid><pubDate>Sun, 08 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近爆火的开源机械爪控制工具库OpenClaw，凭借轻量适配、无缝对接ROS/ROS2的优势，成为机器人抓取项目的刚需选择，但网上热议的大多是功能应用，却鲜有完整的安装配置指南——如果您正被依赖缺失、编译报错、环境不生效、launch文件启动失败等问题卡住，搜遍教程要么简略要么过时，那这篇超详细、可直接复制命令、新手也能照做的OpenClaw安装配置教程，绝对能帮您一步跑通，Ubuntu 20.04/22.04通用，全程无跳步直接抄作业。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260208013915419.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;一、环境准备（必做前置步骤）&lt;/h2&gt;
@@ -543,1016 +260,6 @@ source ~/catkin_ws/devel/setup.bash
 &lt;h2&gt;参考资料&lt;/h2&gt;
 &lt;p&gt;openclaw接入飞书教程&lt;/p&gt;
 &lt;p&gt;https://x.com/0xValkyrie_ai/status/2020330035652227360&lt;/p&gt;
-</content:encoded></item><item><title>md2wechat-skill安装教程</title><link>https://dqtx.cc/posts/aihacks/md2wechat-skill%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/md2wechat-skill%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</guid><pubDate>Sun, 08 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;如果你用Markdown写公众号文章，需要先复制内容到排版工具，再复制公众号很麻烦，既耗时间又难保证格式精美，每次操作都要反复调整，成了不少人的痛点，这几天在GitHub发现了&lt;strong&gt;md2wechat-skill&lt;/strong&gt;，听说能一键转换Markdown为精美排版并自动上传到微信草稿箱，好奇测试了下！&lt;/p&gt;
-&lt;p&gt;我安装踩了不少坑，终于搞定，流程算跑通了，不过吐槽下，我是在Claude中用的Ai模式真的慢，有这时间，我10篇文章都排版好了！不过做个记录，相信随着时间技术成熟，一切都会发生变化！&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/workany_writing_1280x720.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;⚠️ 安装前必读（踩坑预警）&lt;/h2&gt;
-&lt;p&gt;安装过程中遇到的主要问题：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Go 环境问题&lt;/strong&gt; - 需要手动安装 Go 编译环境&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;微信 IP 白名单&lt;/strong&gt; - 必须配置，否则无法上传素材&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;API Key 未配置&lt;/strong&gt; - 默认用 API 模式会 401 报错&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;WebP 图片格式&lt;/strong&gt; - 微信不支持，需要转换&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;AI 模式工作流&lt;/strong&gt; - 需要两步完成，不是一键搞定&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2&gt;一、环境准备&lt;/h2&gt;
-&lt;h3&gt;1. 安装 Go 语言环境&lt;/h3&gt;
-&lt;p&gt;md2wechat-skill 是用 Go 写的，需要先安装 Go。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Windows 安装方式：&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# 推荐：使用 winget 安装
-winget install --id GoLang.Go --source winget
-
-# 或使用 Chocolatey
-choco install golang
-
-# 或从官网下载安装包
-# https://go.dev/dl/
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;&lt;strong&gt;2. 验证安装：&lt;/strong&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;go version
-# 输出：go version go1.25.5 windows/amd64
-&lt;/code&gt;&lt;/pre&gt;
-&lt;hr /&gt;
-&lt;h2&gt;二、获取源码并编译&lt;/h2&gt;
-&lt;h3&gt;1. 克隆或下载项目&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;# 进入 skills 目录
-cd D:\ObsidianVaul\.claude\skills
-
-# 如果已有项目，跳过；否则克隆
-# git clone https://github.com/geekjourneyx/md2wechat-skill.git
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;2. 编译二进制文件&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;cd md2wechat-skill
-
-# 编译 Windows 版本
-go build -o bin/md2wechat-windows-amd64.exe ./cmd/md2wechat
-
-# 或者使用 Makefile（需要 make 命令）
-make build
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;编译成功后会生成：&lt;/strong&gt; &lt;code&gt;bin/md2wechat-windows-amd64.exe&lt;/code&gt;（约 14.8 MB）&lt;/p&gt;
-&lt;p&gt;文件机构&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;md2wechat-skill/
-├── cmd/                    # 命令行工具
-│   └── md2wechat/         # 主程序
-├── internal/              # 核心功能模块
-│   ├── converter/        # 转换器（API/AI）
-│   ├── draft/            # 草稿服务
-│   ├── image/            # 图片处理
-│   ├── wechat/           # 微信 API 封装
-│   └── config/           # 配置管理
-├── docs/                 # 详细文档
-│   ├── USAGE.md          # 使用教程
-│   ├── FAQ.md            # 常见问题
-│   └── TROUBLESHOOTING.md # 故障排查
-├── examples/             # 示例文章
-├── scripts/              # 安装脚本
-└── bin/                  # 编译好的二进制文件
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;三、配置微信 API&lt;/h2&gt;
-&lt;h3&gt;1. 获取 AppID 和 AppSecret&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;访问微信开发者平台&lt;/li&gt;
-&lt;li&gt;登录你的公众号-我的业务与服务-我的业务-公众号&lt;/li&gt;
-&lt;li&gt;找到 &lt;strong&gt;基础信息&lt;/strong&gt; 部分：
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;AppID&lt;/strong&gt;：直接复制&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;开发密钥---AppSecret&lt;/strong&gt;：点击&quot;启用&quot;获取&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3&gt;2. 配置 IP 白名单（⚠️ 必做！）&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;不配置白名单会报错：&lt;/strong&gt; &lt;code&gt;errcode=40164, invalid ip xxx not in whitelist&lt;/code&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;在同一页面找到&lt;strong&gt;开发密钥&lt;/strong&gt;-API IP白名单&lt;/li&gt;
-&lt;li&gt;添加你的公网 IP&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;获取公网 IP：&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;curl ifconfig.me
-# 或
-curl ip.sb
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;添加后等待几分钟生效。&lt;/p&gt;
-&lt;h3&gt;3. 初始化配置&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;cd D:\ObsidianVaul\.claude\skills\md2wechat-skill
-
-# 初始化配置
-.\bin\md2wechat-windows-amd64.exe config init
-
-# 或手动创建配置文件
-# 位置：C:\Users\你的用户名\.config\md2wechat\config.yaml
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;配置文件内容：&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;wechat:
-    appid:        # 你的 AppID
-    secret:  # 你的 AppSecret
-api:
-    convert_mode: ai                # 推荐使用 AI 模式
-    default_theme: autumn-warm      # 默认主题
-    md2wechat_key: your_md2wechat_api_key  # 可选，API 模式需要
-image:
-    compress: true
-    max_width: 1920
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;查看配置：&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;.\bin\md2wechat-windows-amd64.exe config show
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;四、使用方式&lt;/h2&gt;
-&lt;h3&gt;方式一：API 模式（需要 API Key）&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;# 需要先配置 md2wechat.cn 的 API Key
-.\bin\md2wechat-windows-amd64.exe convert article.md --draft --cover cover.jpg
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;⚠️ 问题：&lt;/strong&gt; API Key 需要单独申请，未配置会报 401 错误。&lt;/p&gt;
-&lt;h3&gt;方式二：AI 模式（推荐，无需 API Key）&lt;/h3&gt;
-&lt;p&gt;⚠️注意：此模式进在终端起作用，也就是说在终端可以调用md2wechat-skill将mrkdown推送到微信草稿箱，但在Obsidian插件claudian对话框排版实现不了推送到草稿箱。&lt;/p&gt;
-&lt;p&gt;至于原理可以看这个&lt;/p&gt;
-&lt;p&gt;https://web.okjike.com/u/24236868-c3e9-49ef-ab93-93a60e1a25db/post/6968f2a89f3cd84f65778ba6&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;┌─────────────────────────────────────────────────────────────┐
-│                     AI 模式工作流程                          │
-├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│   1. 你用 Markdown 写文章                                    │
-│              ↓                                               │
-│   2. md2wechat 提取文章结构                                  │
-│              ↓                                               │
-│   3. 构建专业的排版提示词 (Prompt)                           │
-│              ↓                                               │
-│   4. Claude AI 根据提示词生成 HTML                          │
-│              ↓                                               │
-│   5. 返回符合微信规范的 HTML                                 │
-│                                                             │
-└─────────────────────────────────────────────────────────────┘
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;五、常见问题解决&lt;/h2&gt;
-&lt;h3&gt;Q1: IP 不在白名单&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;错误信息：&lt;/strong&gt; &lt;code&gt;errcode=40164, invalid ip xxx not in whitelist&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;解决方法：&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;访问&lt;strong&gt;微信开发平台&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;设置与开发 → 基本配置 → IP 白名单&lt;/li&gt;
-&lt;li&gt;添加你的公网 IP（运行 &lt;code&gt;curl ifconfig.me&lt;/code&gt; 查看）&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3&gt;Q2: API 认证失败 (401)&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;错误信息：&lt;/strong&gt; &lt;code&gt;API returned error code 401: Invalid API Key&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;原因：&lt;/strong&gt; 使用 API 模式但未配置 md2wechat.cn API Key&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;解决方法：&lt;/strong&gt; 改用 AI 模式，配置文件设置 &lt;code&gt;convert_mode: ai&lt;/code&gt;&lt;/p&gt;
-&lt;h3&gt;Q3: 图片格式不支持&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;错误信息：&lt;/strong&gt; &lt;code&gt;errcode=40113, unsupported file type&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;原因：&lt;/strong&gt; 微信只支持 JPG/PNG/GIF，不支持 WebP&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;解决方法：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;手动转换 WebP 为 JPG&lt;/li&gt;
-&lt;li&gt;或替换 markdown 中的图片链接&lt;/li&gt;
-&lt;li&gt;程序会跳过上传失败的图片继续创建草稿&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Q4: 图片上传后 HTML 中没替换&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;原因：&lt;/strong&gt; AI 模式生成的 HTML 中图片 URL 需要是微信托管链接&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;解决方法：&lt;/strong&gt; 等待图片上传完成，程序会自动替换 HTML 中的图片 URL&lt;/p&gt;
-&lt;h3&gt;Q5: 封面图必须指定&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;错误信息：&lt;/strong&gt; &lt;code&gt;创建草稿需要封面图片&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;解决方法：&lt;/strong&gt; 使用 &lt;code&gt;--cover&lt;/code&gt; 参数指定封面图&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;--cover /path/to/cover.jpg
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;六、在 Claudian 中使用&lt;/h2&gt;
-&lt;p&gt;配置完成后，在 Claudian 中直接调用：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;帮我把 article.md 转换为微信公众号格式，使用秋日暖光主题
-article.md转换为微信公众号格式并上传到草稿箱，封面使用公众号后台素材库的ceshi.png
-帮我把当前文件转换为微信公众号格式并上传到草稿箱
-把这篇文章转换为微信公众号格式
-帮我排版并上传到微信草稿箱
-用AI模式和秋日暖光主题转换这篇文章
-
-在Markdown里写 ![](generate: 你的提示词），转换时自动调用豆包 Seedream 模型生成图片。
-帮我在文章开头加个产品概念图”，AI 会根据你的文章内容生成合适的提示词，然后插入图片生成语法
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Claudian 会自动：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;调用 md2wechat 获取提示词&lt;/li&gt;
-&lt;li&gt;使用 Claude AI 生成 HTML&lt;/li&gt;
-&lt;li&gt;上传图片到微信&lt;/li&gt;
-&lt;li&gt;推送到草稿箱&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2&gt;七、主题推荐&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;主题&lt;/th&gt;
-&lt;th&gt;描述&lt;/th&gt;
-&lt;th&gt;适用场景&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;autumn-warm&lt;/td&gt;
-&lt;td&gt;秋日暖光，温暖橙色调&lt;/td&gt;
-&lt;td&gt;故事、生活、情感类&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;spring-fresh&lt;/td&gt;
-&lt;td&gt;春日清新，自然绿色调&lt;/td&gt;
-&lt;td&gt;旅游、自然、户外&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;ocean-calm&lt;/td&gt;
-&lt;td&gt;海洋宁静，专业蓝色调&lt;/td&gt;
-&lt;td&gt;技术文章、商业分析&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;default&lt;/td&gt;
-&lt;td&gt;默认主题，简洁专业&lt;/td&gt;
-&lt;td&gt;通用内容&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2&gt;八、文件位置总结&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;项目目录：D:\ObsidianVaul\.claude\skills\md2wechat-skill
-二进制文件：bin\md2wechat-windows-amd64.exe
-配置文件：C:\Users\你的用户名\.config\md2wechat\config.yaml
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;九、快速测试&lt;/h2&gt;
-&lt;p&gt;测试安装是否成功：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# 进入项目目录
-cd D:\ObsidianVaul\.claude\skills\md2wechat-skill
-
-# 创建测试文章
-echo &quot;# 测试标题
-
-这是一篇测试文章。&quot; &amp;gt; test.md
-
-# 测试草稿推送（需要封面图）
-.\bin\md2wechat-windows-amd64.exe convert \
-  --mode ai \
-  --html &quot;&amp;lt;div style=&apos;padding:20px;&apos;&amp;gt;&amp;lt;h1&amp;gt;测试&amp;lt;/h1&amp;gt;&amp;lt;p&amp;gt;内容&amp;lt;/p&amp;gt;&amp;lt;/div&amp;gt;&quot; \
-  --markdown &quot;$(cat test.md)&quot; \
-  --draft \
-  --cover /path/to/cover.jpg
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;成功后会返回草稿的 media_id 和链接。&lt;/p&gt;
-&lt;h2&gt;写在最后&lt;/h2&gt;
-&lt;p&gt;md2wechat-skill 功能强大，但配置确实有点复杂。按照这个教程一步步来，应该能顺利搞定。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;以上，既然看到这里了，如果你觉得内容不错，随手点个赞、在看、转发三连吧！&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;如果想第一时间收到推送，可以给我点个星标⭐～&lt;/p&gt;
-&lt;p&gt;谢谢你看我的文章，我们，下次再见。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;补充：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;md2wechat 项目地址：https://github.com/geekjourneyx/md2wechat-skill&lt;/li&gt;
-&lt;li&gt;微信开发者平台：https://mp.weixin.qq.com&lt;/li&gt;
-&lt;li&gt;Go 语言下载：https://go.dev/dl/&lt;/li&gt;
-&lt;li&gt;大强远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content:encoded></item><item><title>GitHub + EdgeOne 搭建个人博客的过程</title><link>https://dqtx.cc/posts/technical/github-edgeone-da-jian-bo-ke/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/github-edgeone-da-jian-bo-ke/</guid><pubDate>Sun, 08 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
-&lt;p&gt;想要一个属于自己的博客，但不知道从哪里开始？本文详细记录了从零开始搭建个人博客的全过程，包括踩过的各种坑和解决方案。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2&gt;为什么选择 Fuwari 主题？&lt;/h2&gt;
-&lt;p&gt;在决定搭建博客之前，我对比了多个静态博客生成器：&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;工具&lt;/th&gt;
-&lt;th&gt;优点&lt;/th&gt;
-&lt;th&gt;缺点&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Hexo&lt;/td&gt;
-&lt;td&gt;插件丰富、中文文档多&lt;/td&gt;
-&lt;td&gt;生成速度慢、配置复杂&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Hugo&lt;/td&gt;
-&lt;td&gt;构建极快&lt;/td&gt;
-&lt;td&gt;学习曲线陡峭&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;VuePress&lt;/td&gt;
-&lt;td&gt;Vue 生态友好&lt;/td&gt;
-&lt;td&gt;主要用于文档&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;Astro&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;性能卓越、配置简单&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;相对较新&lt;/strong&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;最终选择了基于 &lt;strong&gt;Astro 5.7+&lt;/strong&gt; 的 &lt;strong&gt;Fuwari&lt;/strong&gt; 主题，原因很简单：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;零配置即可使用&lt;/li&gt;
-&lt;li&gt;完美适配移动端&lt;/li&gt;
-&lt;li&gt;内置深色模式&lt;/li&gt;
-&lt;li&gt;性能评分接近满分&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;一、前期准备&lt;/h2&gt;
-&lt;h3&gt;1.1 所需账号&lt;/h3&gt;
-&lt;p&gt;在开始之前，你需要准备：&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;服务&lt;/th&gt;
-&lt;th&gt;用途&lt;/th&gt;
-&lt;th&gt;是否必需&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;GitHub 账号&lt;/td&gt;
-&lt;td&gt;代码托管&lt;/td&gt;
-&lt;td&gt;必需&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;EdgeOne 账号&lt;/td&gt;
-&lt;td&gt;静态网站部署&lt;/td&gt;
-&lt;td&gt;必需&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Gitee 账号&lt;/td&gt;
-&lt;td&gt;图床（可选）&lt;/td&gt;
-&lt;td&gt;可选&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h3&gt;1.2 环境要求&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;# 检查 Node.js 版本（需要 18.0+）
-node -v
-
-# 推荐：使用 pnpm 作为包管理器
-npm install -g pnpm
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;二、克隆与配置&lt;/h2&gt;
-&lt;h3&gt;2.1 克隆项目&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;# 克隆 Fuwari 项目
-git clone https://github.com/saicaca/fuwari.git my-blog
-cd my-blog
-
-# 安装依赖
-pnpm install
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;2.2 启动开发服务器&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;pnpm dev
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;访问 http://localhost:4321/ 即可看到效果。&lt;/p&gt;
-&lt;h3&gt;2.3 基本配置&lt;/h3&gt;
-&lt;p&gt;编辑 &lt;code&gt;src/config.ts&lt;/code&gt; 文件：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;// 站点基本信息
-export const siteConfig: SiteConfig = {
-  title: &quot;你的博客标题&quot;,
-  subtitle: &quot;副标题描述&quot;,
-  lang: &quot;zh_CN&quot;,
-  url: &quot;https://your-domain.com&quot;,
-  author: &quot;你的名字&quot;,
-};
-
-// 个人信息卡片
-export const profileConfig: ProfileConfig = {
-  name: &quot;你的名字&quot;,
-  bio: &quot;个性签名&quot;,
-  avatar: &quot;/avatar.jpg&quot;,  // 头像放在 public/ 目录
-  email: &quot;your-email@example.com&quot;,
-  socialLinks: {
-    github: &quot;https://github.com/your-username&quot;,
-    // 添加更多社交链接...
-  },
-};
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;三、部署到 EdgeOne&lt;/h2&gt;
-&lt;h3&gt;3.1 为什么选择 EdgeOne？&lt;/h3&gt;
-&lt;p&gt;对比了多个部署平台：&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;平台&lt;/th&gt;
-&lt;th&gt;优点&lt;/th&gt;
-&lt;th&gt;缺点&lt;/th&gt;
-&lt;th&gt;选择&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Vercel&lt;/td&gt;
-&lt;td&gt;体验好、速度快&lt;/td&gt;
-&lt;td&gt;国内访问慢&lt;/td&gt;
-&lt;td&gt;❌&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Netlify&lt;/td&gt;
-&lt;td&gt;功能强大&lt;/td&gt;
-&lt;td&gt;国内访问慢&lt;/td&gt;
-&lt;td&gt;❌&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;EdgeOne&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;国内访问快、免费额度充足&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;需要备案域名&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;✅&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h3&gt;3.2 部署步骤&lt;/h3&gt;
-&lt;h4&gt;步骤 1：创建 GitHub 仓库&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;# 初始化 git 仓库
-git init
-git add .
-git commit -m &quot;Initial commit&quot;
-
-# 推送到 GitHub
-git remote add origin https://github.com/your-username/your-repo.git
-git branch -M main
-git push -u origin main
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4&gt;步骤 2：EdgeOne 配置&lt;/h4&gt;
-&lt;ol&gt;
-&lt;li&gt;登录 &lt;a href=&quot;https://console.cloud.tencent.com/edgeone&quot;&gt;EdgeOne 控制台&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;选择「静态网站」→「新建站点」&lt;/li&gt;
-&lt;li&gt;连接 GitHub 仓库，选择分支：&lt;code&gt;main&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h4&gt;步骤 3：构建设置&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;框架预设: Astro
-根目录: ./
-输出目录: dist
-编译命令: pnpm run build
-安装命令: pnpm install
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4&gt;步骤 4：开始部署&lt;/h4&gt;
-&lt;p&gt;点击「开始部署」，等待 1-2 分钟即可完成。&lt;/p&gt;
-&lt;h2&gt;四、踩过的坑（重点！）&lt;/h2&gt;
-&lt;h3&gt;坑 1：YAML Frontmatter 格式错误&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;现象&lt;/strong&gt;：文章发布后只显示标题，没有封面、摘要、正文。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：YAML 格式极其严格，任何一个空格错误都会导致解析失败。&lt;/p&gt;
-&lt;h4&gt;❌ 错误写法&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;---
-title:文章标题
-published:2026/02/04
-category:软件安利
-tags: 标签1, 标签2
-draft: True
----
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4&gt;✅ 正确写法&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;---
-title: 文章标题           # 冒号后必须有空格
-published: 2026-02-04     # 日期必须用连字符
-category: 技术教程         # 冒号后必须有空格
-tags: [标签1, 标签2]      # 必须用数组格式
-draft: true               # 布尔值必须小写
----
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;YAML 四大黄金规则&lt;/strong&gt;：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;冒号后必须有空格&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;title: 文章标题  # ✅ 正确
-title:文章标题   # ❌ 错误
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;日期必须用连字符&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;published: 2026-02-04  # ✅ 正确
-published: 2026/02/04  # ❌ 错误
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;标签必须用数组格式&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;tags: [Astro, 教程, 前端]  # ✅ 正确
-tags: Astro, 教程, 前端     # ❌ 错误
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;布尔值必须小写&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;draft: true   # ✅ 正确
-draft: True   # ❌ 错误
-draft: TRUE   # ❌ 错误
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3&gt;坑 2：导航栏抖动问题&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;现象&lt;/strong&gt;：点击「归档」「友链」等页面时，顶部导航栏会抖动一下。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：页面切换时 &lt;code&gt;page-height-extend&lt;/code&gt; 元素的显示/隐藏导致高度变化。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;移除 &lt;code&gt;top-row&lt;/code&gt; 的 &lt;code&gt;transition-all&lt;/code&gt; 过渡动画&lt;/li&gt;
-&lt;li&gt;在 Swup 钩子中禁用 &lt;code&gt;onload-animation&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;完全移除 &lt;code&gt;page-height-extend&lt;/code&gt; 逻辑&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;修改 &lt;code&gt;src/layouts/Layout.astro&lt;/code&gt;：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;window.swup.hooks.on(&apos;visit:start&apos;, (visit) =&amp;gt; {
-  // 禁用导航时的动画，防止抖动
-  const animatedElements = document.querySelectorAll(&apos;.onload-animation&apos;);
-  animatedElements.forEach(el =&amp;gt; {
-    el.style.opacity = &apos;1&apos;;
-    el.style.animation = &apos;none&apos;;
-  });
-});
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;坑 3：页面加载时颜色闪烁&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;现象&lt;/strong&gt;：刷新网页时会闪一下另一种配色，然后才变成正确的颜色。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：CSS 样式加载有延迟，导致使用了默认样式。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：在 &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; 中添加内联样式&lt;/p&gt;
-&lt;p&gt;修改 &lt;code&gt;src/layouts/Layout.astro&lt;/code&gt;：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;head&amp;gt;
-  &amp;lt;!-- 其他 head 内容 --&amp;gt;
-
-  &amp;lt;!-- 内联渐变样式，防止闪烁 --&amp;gt;
-  &amp;lt;style is:inline&amp;gt;
-    .navbar-title-gradient,
-    .navbar-title-gradient-icon,
-    .gradient-text,
-    .hacker-icon,
-    .category-title,
-    .decoration-title {
-        background: linear-gradient(135deg, #0ea5e9, #8b5cf6) !important;
-        -webkit-background-clip: text !important;
-        -webkit-text-fill-color: transparent !important;
-        background-clip: text !important;
-    }
-  &amp;lt;/style&amp;gt;
-&amp;lt;/head&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;坑 4：深色模式颜色不和谐&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;现象&lt;/strong&gt;：深色模式下，某些元素的颜色显得突兀。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：使用了固定的颜色值（如 &lt;code&gt;#A8C398&lt;/code&gt;），没有跟随主题色。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：将所有固定颜色改为使用 CSS 变量 &lt;code&gt;var(--primary)&lt;/code&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;/* ❌ 错误：固定颜色 */
-color: #A8C398;
-
-/* ✅ 正确：主题色变量 */
-color: var(--primary);
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;深色模式下使用 oklch 色空间的半透明颜色：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;.dark .decoration-line {
-  border-color: oklch(0.35 0.02 var(--hue));
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;坑 5：Svelte 组件编译错误&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;现象&lt;/strong&gt;：搜索组件在开发服务器中无法正常显示。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：&lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt; 标签缺少 &lt;code&gt;lang&lt;/code&gt; 属性，导致 Svelte 编译器无法正确解析。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：为 &lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt; 标签添加 &lt;code&gt;lang=&quot;css&quot;&lt;/code&gt; 属性&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;!-- ❌ 错误：缺少 lang 属性 --&amp;gt;
-&amp;lt;style&amp;gt;
-  .search-panel {
-    background-color: var(--float-panel-bg-opaque);
-  }
-&amp;lt;/style&amp;gt;
-
-&amp;lt;!-- ✅ 正确：添加 lang 属性 --&amp;gt;
-&amp;lt;style lang=&quot;css&quot;&amp;gt;
-  .search-panel {
-    background-color: var(--float-panel-bg-opaque);
-  }
-&amp;lt;/style&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;坑 6：图片加载延迟&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;现象&lt;/strong&gt;：打开网站时，左侧二维码和封面图片有明显延迟。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：默认使用了 &lt;code&gt;loading=&quot;lazy&quot;&lt;/code&gt; 延迟加载。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;关键图片移除 &lt;code&gt;loading=&quot;lazy&quot;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;添加 &lt;code&gt;loading=&quot;eager&quot;&lt;/code&gt; 和 &lt;code&gt;fetchpriority=&quot;high&quot;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;外部图片下载到本地托管&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;修改 &lt;code&gt;src/components/misc/ImageWrapper.astro&lt;/code&gt;：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;img
-  src={src}
-  alt={alt}
-  loading=&quot;eager&quot;
-  fetchpriority=&quot;high&quot;
-/&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;坑 7：分类对齐问题&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;现象&lt;/strong&gt;：文章分类的名称和数字对齐不统一。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;尝试的方案&lt;/strong&gt;：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;使用固定宽度 &lt;code&gt;width: 80px&lt;/code&gt; → 数字多的时候溢出&lt;/li&gt;
-&lt;li&gt;使用 &lt;code&gt;text-align: left&lt;/code&gt; → 不美观&lt;/li&gt;
-&lt;li&gt;使用 &lt;code&gt;justify-content: center&lt;/code&gt; → 数字没有靠右&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;最终方案&lt;/strong&gt;：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;.category-name {
-  flex: 1;           /* 占据剩余空间 */
-  text-align: center; /* 名称居中 */
-}
-
-.category-count {
-  /* 数字自然靠右 */
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;使用 &lt;code&gt;flex: 1&lt;/code&gt; 让名称占据剩余空间并居中，数字徽章自然靠右。&lt;/p&gt;
-&lt;h3&gt;坑 8：文章导入时图片 URL 错误&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;现象&lt;/strong&gt;：批量导入文章后，有些封面图显示无效。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：正则表达式匹配到了错误的图片 URL，例如：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;image: generate:  # ❌ 这不是有效 URL
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;实际内容是 &lt;code&gt;![image: generate:](https://...)&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：添加 URL 验证&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;// 只接受有效的 URL 格式
-if (url.match(/^https?:\/\//) || url.match(/^\//)) {
-  coverImage = url;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;坑 9：EdgeOne 构建时 import.meta.glob 不工作&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;现象&lt;/strong&gt;：本地开发正常，但 EdgeOne 构建后数据不显示。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：&lt;code&gt;import.meta.glob&lt;/code&gt; 在 EdgeOne 构建环境下无法正确加载 JSON 文件。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;错误代码&lt;/strong&gt;：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;---
-// ❌ 在 EdgeOne 构建时不工作
-const sponsorFiles = import.meta.glob(&apos;../../data/sponsors/*.json&apos;, { eager: true });
-const sponsors = Object.values(sponsorFiles).map(m =&amp;gt; m.default);
----
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：将数据直接内联到文件中&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;---
-// ✅ 直接内联数据
-const sponsors = [
-  { &quot;name&quot;: &quot;赞助者1&quot;, &quot;avatar&quot;: &quot;https://...&quot;, &quot;date&quot;: &quot;2026-01-01&quot; },
-  { &quot;name&quot;: &quot;赞助者2&quot;, &quot;avatar&quot;: &quot;https://...&quot;, &quot;date&quot;: &quot;2026-01-02&quot; },
-  // ...更多数据
-];
----
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;经验教训&lt;/strong&gt;：在 EdgeOne 等云端构建环境中，尽量避免使用动态导入，对于静态数据直接内联更可靠。&lt;/p&gt;
-&lt;h3&gt;坑 10：浮动按钮挡住大纲&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;现象&lt;/strong&gt;：文章页面的评论/回到顶部按钮挡住了右侧大纲的部分区域。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：按钮位置设置过高。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：调整浮动按钮的 &lt;code&gt;bottom&lt;/code&gt; 值&lt;/p&gt;
-&lt;p&gt;修改 &lt;code&gt;src/components/control/BackToTop.astro&lt;/code&gt;：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;.back-to-top-btn
-  // 从 bottom: 10rem 改为 bottom: 6rem（向下移动 4rem）
-
-#go-to-comments-btn
-  // 从 bottom: 14.5rem 改为 bottom: 10.5rem（向下移动 4rem）
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;五、配色系统设计&lt;/h2&gt;
-&lt;h3&gt;设计理念&lt;/h3&gt;
-&lt;p&gt;博客采用&lt;strong&gt;冷紫蓝系&lt;/strong&gt;作为唯一签名色，打造冷静编辑部的视觉氛围。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;设计原则&lt;/strong&gt;：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;背景作为舞台&lt;/strong&gt; - 更深的背景，更浅的卡片&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;标题作为判断&lt;/strong&gt; - 更强的视觉层次&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;极端色彩克制&lt;/strong&gt; - 最少的颜色，创造可记忆的身份&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3&gt;配色方案&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;主题配置&lt;/strong&gt;（&lt;code&gt;src/config.ts&lt;/code&gt;）：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;themeColor: {
-  hue: 268,        // 冷紫蓝系
-  fixed: true,
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;颜色应用&lt;/strong&gt;：&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;元素&lt;/th&gt;
-&lt;th&gt;颜色&lt;/th&gt;
-&lt;th&gt;说明&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;背景色&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;oklch(0.12 0.01 268)&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;深色纯色背景&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;主题渐变&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;#0ea5e9 → #8b5cf6&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;蓝紫渐变，用于标题和图标&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;分类悬停&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;#b7f605&lt;/code&gt; + 黑字&lt;/td&gt;
-&lt;td&gt;亮绿色点缀，唯一暖色&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h3&gt;渐变元素&lt;/h3&gt;
-&lt;p&gt;使用蓝紫渐变的元素：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;导航栏网站名称和图标&lt;/li&gt;
-&lt;li&gt;分类标题（&quot;文章分类&quot;）&lt;/li&gt;
-&lt;li&gt;公众号标题&lt;/li&gt;
-&lt;li&gt;Hacker 风格装饰图标&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;内联样式&lt;/strong&gt;（防止 FOUC 闪烁）：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;style is:inline&amp;gt;
-.navbar-title-gradient,
-.navbar-title-gradient-icon,
-.gradient-text,
-.hacker-icon,
-.category-title,
-.decoration-title {
-    background: linear-gradient(135deg, #0ea5e9, #8b5cf6) !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    background-clip: text !important;
-}
-&amp;lt;/style&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;六、特色功能实现&lt;/h2&gt;
-&lt;h3&gt;6.1 评论/回到顶部浮动按钮&lt;/h3&gt;
-&lt;p&gt;右下角浮动按钮，提供快捷导航：&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;功能特性&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;默认显示&quot;评论&quot;按钮，点击跳转到评论区&lt;/li&gt;
-&lt;li&gt;点击后切换为&quot;回到顶部&quot;按钮&lt;/li&gt;
-&lt;li&gt;位置下移避免挡住大纲&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;修改文件&lt;/strong&gt;：&lt;code&gt;src/components/control/BackToTop.astro&lt;/code&gt;&lt;/p&gt;
-&lt;h3&gt;6.2 表格样式优化&lt;/h3&gt;
-&lt;p&gt;表格采用表头浅色、数据行深色的配色方案：&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;样式配置&lt;/strong&gt;（&lt;code&gt;src/styles/markdown-extend.styl&lt;/code&gt;）：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;thead th
-  background: var(--btn-plain-bg-hover)  // 表头：浅色
-
-tbody tr
-  background: var(--btn-regular-bg)      // 数据行：深色
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;6.3 自动提取封面和摘要&lt;/h3&gt;
-&lt;p&gt;无需手动填写，系统自动处理：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;---
-title: 文章标题
-published: 2026-02-06
-tags: [标签]
-category: Technical
-# 无需填写 image 和 description
----
-
-第一段文字会自动成为摘要...
-
-文章正文...
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;封面&lt;/strong&gt;：自动提取第一张图片&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;摘要&lt;/strong&gt;：自动提取第一段文字（文章页隐藏，避免重复）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;6.4 微信二维码弹窗&lt;/h3&gt;
-&lt;p&gt;点击微信图标弹出霓虹灯风格弹窗，支持一键复制微信号。&lt;/p&gt;
-&lt;p&gt;修改 &lt;code&gt;src/layouts/MainGridLayout.astro&lt;/code&gt; 添加弹窗 HTML 和 JavaScript。&lt;/p&gt;
-&lt;h3&gt;6.5 Giscus 评论区&lt;/h3&gt;
-&lt;p&gt;基于 GitHub Discussions 的评论系统，无需数据库。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;配置步骤&lt;/strong&gt;：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;在 GitHub 仓库启用 Discussions&lt;/li&gt;
-&lt;li&gt;访问 https://giscus.app 获取配置&lt;/li&gt;
-&lt;li&gt;更新 &lt;code&gt;src/pages/posts/[...slug].astro&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;div id=&quot;giscus-container&quot;
-    data-repo=&quot;你的用户名/仓库名&quot;
-    data-repo-id=&quot;R_kgDOxxxxxxxxx&quot;
-    data-category=&quot;Announcements&quot;
-    data-category-id=&quot;DIC_kwDOxxxxxxxxx&quot;
-    data-mapping=&quot;pathname&quot;
-    data-theme=&quot;preferred_color_scheme&quot;
-    data-lang=&quot;zh-CN&quot;
-&amp;gt;&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;6.6 文章分类功能&lt;/h3&gt;
-&lt;p&gt;自动统计每个分类的文章数量，点击查看分类文章。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;分类规则&lt;/strong&gt;：&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;分类&lt;/th&gt;
-&lt;th&gt;关键词&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Software&lt;/td&gt;
-&lt;td&gt;Typora, PicList, 快捷键, 图床, 工具&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Technical&lt;/td&gt;
-&lt;td&gt;教程, 部署, 搭建, 安装, 完整指南&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;AIHacks&lt;/td&gt;
-&lt;td&gt;Claude, ChatGPT, GPT, 提示词, LLM&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2&gt;七、常用命令&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;# 创建新文章
-npm run new-post &quot;文章标题&quot;
-
-# 启动开发服务器
-npm run dev
-
-# 构建生产版本
-npm run build
-
-# 预览构建结果
-npm run preview
-
-# 批量导入文章
-node scripts/import-posts.cjs
-
-# 更新文章分类
-node scripts/update-categories.cjs
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;八、性能优化建议&lt;/h2&gt;
-&lt;h3&gt;7.1 图片优化&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;使用 WebP 格式（体积更小）&lt;/li&gt;
-&lt;li&gt;关键图片添加 &lt;code&gt;fetchpriority=&quot;high&quot;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;非关键图片使用 &lt;code&gt;loading=&quot;lazy&quot;&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;7.2 字体优化&lt;/h3&gt;
-&lt;p&gt;使用 CDN 加载霞鹜文楷字体：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css&quot; /&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;7.3 构建优化&lt;/h3&gt;
-&lt;p&gt;Astro 默认进行代码分割和 tree-shaking，无需额外配置。&lt;/p&gt;
-&lt;h2&gt;九、总结&lt;/h2&gt;
-&lt;h3&gt;时间分配&lt;/h3&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;任务&lt;/th&gt;
-&lt;th&gt;耗时&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;项目配置&lt;/td&gt;
-&lt;td&gt;1 小时&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;部署上线&lt;/td&gt;
-&lt;td&gt;30 分钟&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;修复 YAML 问题&lt;/td&gt;
-&lt;td&gt;2 小时&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;解决导航栏抖动&lt;/td&gt;
-&lt;td&gt;1 小时&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;性能优化&lt;/td&gt;
-&lt;td&gt;1 小时&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;修复构建问题&lt;/td&gt;
-&lt;td&gt;1 小时&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;其他调整&lt;/td&gt;
-&lt;td&gt;2 小时&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;总计&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;约 9 小时&lt;/strong&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h3&gt;经验总结&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;YAML 格式极其严格&lt;/strong&gt;：一个空格错误就会导致整篇文章无法显示&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;使用 CSS 变量&lt;/strong&gt;：避免固定颜色值，让主题自动适配&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;关键资源优先加载&lt;/strong&gt;：首屏图片不要使用 &lt;code&gt;loading=&quot;lazy&quot;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;测试深色模式&lt;/strong&gt;：确保在深色模式下也能正常显示&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;善用 Astro 的自动提取&lt;/strong&gt;：减少手动填写的工作量&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;注意云端构建差异&lt;/strong&gt;：&lt;code&gt;import.meta.glob&lt;/code&gt; 在云端可能不工作，静态数据直接内联更可靠&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3&gt;推荐资源&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Fuwari 主题&lt;/strong&gt;：https://github.com/saicaca/fuwari&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Astro 文档&lt;/strong&gt;：https://docs.astro.build&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;EdgeOne 控制台&lt;/strong&gt;：https://console.cloud.tencent.com/edgeone&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;霞鹜文楷字体&lt;/strong&gt;：https://github.com/lxgw/LxgwWenKai&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;下一步&lt;/h2&gt;
-&lt;p&gt;博客已经上线，接下来可以：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;完善个人信息和社交链接&lt;/li&gt;
-&lt;li&gt;配置自定义域名（需要备案）&lt;/li&gt;
-&lt;li&gt;添加更多文章&lt;/li&gt;
-&lt;li&gt;优化 SEO（搜索引擎优化）&lt;/li&gt;
-&lt;li&gt;集成统计工具（如 Umami）&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;祝你搭建顺利！有任何问题欢迎在评论区留言。&lt;/p&gt;
-</content:encoded></item><item><title>讯飞:GLM-4.7与MiniMax-M2.1免费</title><link>https://dqtx.cc/posts/aihacks/xunfei_glm_minimax_free/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/xunfei_glm_minimax_free/</guid><description>讯飞近日宣布开放 GLM-4.7 和 MiniMax-M2.1 两款大语言模型的免费使用，为开发者提供零门槛的AI接入机会</description><pubDate>Sat, 07 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;讯飞近日宣布开放 GLM-4.7 和 MiniMax-M2.1 两款大语言模型的免费使用，这一举措立即在 AI 开发者社区引发热烈讨论。作为国内领先的 AI 平台，讯飞此次开放的两款模型各具特色：GLM-4.7 以其强大的中文理解和生成能力著称，而 MiniMax-M2.1 则在多模态处理和长文本理解方面表现突出。&lt;/p&gt;
-&lt;h2&gt;一、模型核心能力解析&lt;/h2&gt;
-&lt;p&gt;GLM-4.7 是智谱 AI 与讯飞联合打造的新一代大语言模型，在中文语境下展现出卓越的性能。经过多项权威测试验证，该模型在阅读理解、逻辑推理、创意写作等任务上的表现已接近 GPT-4 水平。特别值得一提的是，GLM-4.7 针对中国文化背景进行了深度优化，能够准确理解成语、典故、网络流行语等中文特有表达，这在处理本土化应用场景时具有天然优势。&lt;/p&gt;
-&lt;p&gt;MiniMax-M2.1 则是讯飞自主研发的多模态大模型，最大亮点在于其 128K 的超长上下文窗口和强大的图文理解能力。这意味着用户可以一次性输入整本书籍、长篇报告或多份文档，模型依然能够保持准确的记忆和连贯的对话。此外，M2.1 在图文结合场景下表现优异，能够理解图片内容并结合文本进行综合分析，非常适合内容审核、智能标注等应用。&lt;/p&gt;
-&lt;h2&gt;二、免费使用的行业意义&lt;/h2&gt;
-&lt;p&gt;此次开放免费使用，短期内看是讯飞抢占市场份额的战略举措，从长远来看则可能重塑国内 AI 应用生态。对于开发者而言，最直接的好处是大幅降低了开发成本和试错门槛。以往使用类似级别的 API，每月动辄数千元的调用费用让许多创业团队望而却步，而现在开发者可以零成本接入顶级模型能力，专注于产品创新而非基础设施投入。&lt;/p&gt;
-&lt;p&gt;从行业竞争格局来看，讯飞的这一动作无疑会对其他 AI 平台形成压力。百度文心一言、阿里通义千问、腾讯混元等平台很可能跟进推出类似政策，最终受益的将是整个开发者群体和终端用户。这种良性竞争将加速 AI 技术的民主化进程，推动更多创新应用落地。&lt;/p&gt;
-&lt;h2&gt;三、快速接入指南&lt;/h2&gt;
-&lt;h3&gt;注册与认证&lt;/h3&gt;
-&lt;p&gt;接入流程十分简洁。首先访问讯飞开放平台（xfyun.cn），完成企业或个人开发者注册。注册后需要进行实名认证，企业用户需上传营业执照，个人用户则需绑定银行卡进行身份验证。认证通常在 1-2 个工作日内完成，通过后即可创建应用并获取 API Key 和 Secret Key。&lt;/p&gt;
-&lt;h3&gt;API 调用示例&lt;/h3&gt;
-&lt;p&gt;以下是一个简单的 Python 调用示例：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;import requests
-import json
-
-# 配置认证信息
-app_id = &quot;your_app_id&quot;
-api_key = &quot;your_api_key&quot;
-api_secret = &quot;your_api_secret&quot;
-
-# 构建请求
-url = &quot;https://spark-api.xf-yun.com/v1/chat/completions&quot;
-headers = {
-    &quot;Authorization&quot;: f&quot;Bearer {api_key}&quot;,
-    &quot;Content-Type&quot;: &quot;application/json&quot;
-}
-
-payload = {
-    &quot;model&quot;: &quot;glm-4.7&quot;,  # 或 &quot;minimax-m2.1&quot;
-    &quot;messages&quot;: [
-        {&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;请介绍一下人工智能的发展历程&quot;}
-    ],
-    &quot;temperature&quot;: 0.7,
-    &quot;max_tokens&quot;: 2000
-}
-
-response = requests.post(url, headers=headers, data=json.dumps(payload))
-print(response.json())
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;免费额度说明&lt;/h3&gt;
-&lt;p&gt;目前免费政策包含每日 10 万次 API 调用额度，单次请求最大支持 4000 tokens 输入和 2000 tokens 输出。对于中小型应用而言，这一额度完全能够满足日常需求。如需更高额度，可申请企业版服务，讯飞为创业公司提供优惠的升级方案。&lt;/p&gt;
-&lt;h2&gt;四、应用场景推荐&lt;/h2&gt;
-&lt;h3&gt;内容创作领域&lt;/h3&gt;
-&lt;p&gt;GLM-4.7 在文案生成、稿件创作方面表现优异。自媒体创作者可以利用其快速生成文章大纲、扩充段落、润色语言，大幅提升写作效率。配合人工审核和精修，可将单篇内容生产时间从数小时压缩至半小时以内。&lt;/p&gt;
-&lt;h3&gt;智能客服系统&lt;/h3&gt;
-&lt;p&gt;MiniMax-M2.1 的长文档理解能力使其成为构建智能客服的理想选择。将产品手册、FAQ 文档、历史对话记录输入模型，即可打造一个具备完整知识库的客服助手，准确回答用户咨询，显著降低人工客服压力。&lt;/p&gt;
-&lt;h3&gt;教育辅导应用&lt;/h3&gt;
-&lt;p&gt;GLM-4.7 的中文理解能力在教育场景下大有可为。无论是作文批改、作业辅导，还是知识点讲解、学习计划制定，该模型都能提供接近真人教师质量的辅助。许多在线教育平台已经开始集成类似能力，为用户提供个性化的学习体验。&lt;/p&gt;
-&lt;h3&gt;代码开发辅助&lt;/h3&gt;
-&lt;p&gt;两款模型都具备较强的代码理解和生成能力。开发者可以用它来生成代码片段、解释复杂逻辑、调试错误、优化算法，甚至进行代码审查。实际测试表明，GLM-4.7 在 Python、Java 等主流编程语言上的表现与专用代码模型相差无几。&lt;/p&gt;
-&lt;h2&gt;五、最佳实践建议&lt;/h2&gt;
-&lt;h3&gt;Prompt 设计技巧&lt;/h3&gt;
-&lt;p&gt;有效的 Prompt 设计是发挥模型能力的关键。建议遵循以下原则：明确指定任务目标和输出格式；提供必要的背景信息和上下文；使用结构化指令（如&quot;请按以下步骤...&quot;）；设定约束条件（如字数限制、风格要求）。对于复杂任务，可以采用&quot;链式提示&quot;策略，将大任务拆解为多个小步骤逐步完成。&lt;/p&gt;
-&lt;h3&gt;性能优化方案&lt;/h3&gt;
-&lt;p&gt;在高并发场景下，建议实现请求队列管理和响应缓存机制。对于常见问题，可以预先构建答案库，避免重复调用 API。同时注意控制单次请求的 token 数量，过长的输入会增加响应延迟和成本。对于需要一致输出的场景（如固定格式的报告生成），可以适当降低 temperature 参数（如设置为 0.3-0.5）。&lt;/p&gt;
-&lt;h3&gt;安全合规考虑&lt;/h3&gt;
-&lt;p&gt;在使用 API 时需要特别注意数据安全和隐私保护。严禁将用户敏感信息直接输入模型，建议对个人数据、商业机密进行脱敏处理。同时要建立内容审核机制，防止模型生成不当或违法违规内容。讯飞平台提供了内容过滤接口，建议在应用层进行二次过滤以确保合规。&lt;/p&gt;
-&lt;h2&gt;六、与其他平台对比&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;平台&lt;/th&gt;
-&lt;th&gt;模型&lt;/th&gt;
-&lt;th&gt;中文能力&lt;/th&gt;
-&lt;th&gt;长文本&lt;/th&gt;
-&lt;th&gt;多模态&lt;/th&gt;
-&lt;th&gt;免费额度&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;讯飞&lt;/td&gt;
-&lt;td&gt;GLM-4.7&lt;/td&gt;
-&lt;td&gt;★★★★★&lt;/td&gt;
-&lt;td&gt;32K&lt;/td&gt;
-&lt;td&gt;否&lt;/td&gt;
-&lt;td&gt;10万次/日&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;讯飞&lt;/td&gt;
-&lt;td&gt;MiniMax-M2.1&lt;/td&gt;
-&lt;td&gt;★★★★☆&lt;/td&gt;
-&lt;td&gt;128K&lt;/td&gt;
-&lt;td&gt;是&lt;/td&gt;
-&lt;td&gt;10万次/日&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;百度&lt;/td&gt;
-&lt;td&gt;文心一言 4.0&lt;/td&gt;
-&lt;td&gt;★★★★☆&lt;/td&gt;
-&lt;td&gt;16K&lt;/td&gt;
-&lt;td&gt;是&lt;/td&gt;
-&lt;td&gt;5万次/日&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;阿里&lt;/td&gt;
-&lt;td&gt;通义千问 Plus&lt;/td&gt;
-&lt;td&gt;★★★★☆&lt;/td&gt;
-&lt;td&gt;30K&lt;/td&gt;
-&lt;td&gt;是&lt;/td&gt;
-&lt;td&gt;20万次/月&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;智谱&lt;/td&gt;
-&lt;td&gt;GLM-4&lt;/td&gt;
-&lt;td&gt;★★★★★&lt;/td&gt;
-&lt;td&gt;128K&lt;/td&gt;
-&lt;td&gt;否&lt;/td&gt;
-&lt;td&gt;付费&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;从对比可以看出，讯飞此次开放的两款模型在中文能力和免费额度上都具备明显优势，特别是 GLM-4.7 的中文理解和 MiniMax-M2.1 的长文本处理能力，在同类产品中处于领先地位。&lt;/p&gt;
-&lt;h2&gt;七、未来展望&lt;/h2&gt;
-&lt;p&gt;随着更多 AI 厂商加入免费开放的行列，大模型的使用成本将持续下降，这将催生更多创新应用场景。预计未来一年内，我们将看到 AI 能力被集成到各类软件和服务中，成为像水电一样的基础设施。&lt;/p&gt;
-&lt;p&gt;同时，模型能力也将持续进化。多模态理解、推理能力、工具使用等方向是当前的技术热点。讯飞已透露正在研发下一代模型，预计将在逻辑推理和科学计算方面实现突破。&lt;/p&gt;
-&lt;h2&gt;八、给开发者的建议&lt;/h2&gt;
-&lt;p&gt;对于个人开发者，现在正是尝试和学习的最佳时机。建议选择一个感兴趣的方向（如内容创作、数据分析、自动化办公），深入了解该领域的痛点和需求，然后基于免费 API 开发原型产品。通过实践积累经验，建立自己的技术护城河。&lt;/p&gt;
-&lt;p&gt;对于企业用户，建议评估现有业务中 AI 可以降本增效的环节，选择合适的应用场景进行试点。同时关注模型的更新迭代，制定长期的技术路线图。需要注意的是，免费政策可能存在调整风险，对于关键业务应准备备用方案。&lt;/p&gt;
-&lt;hr /&gt;
-&lt;p&gt;随着 AI 技术的普及，未来的竞争将不再是&quot;谁有 AI&quot;，而是&quot;谁会用 AI&quot;。讯飞开放 GLM-4.7 和 MiniMax-M2.1 免费使用，为广大开发者和企业提供了一个零门槛的入场机会。抓住这个机会，用 AI 赋能产品和服务，在这场技术变革中抢占先机。&lt;/p&gt;
 </content:encoded></item><item><title>Obsidian+AI：让笔记变成智能知识库</title><link>https://dqtx.cc/posts/aihacks/obsidian-ai/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/obsidian-ai/</guid><description>这几天，在github发现Obsidian重磅插件，直接把 AI 功能深度集成到核心里了！今天我要分享的 Obsidian+AI 组合，一次性解决这些痛点！</description><pubDate>Wed, 04 Feb 2026 04:54:28 GMT</pubDate><content:encoded>&lt;p&gt;这几天，在gihub发现Obsidian重磅插件，直接把 AI 功能深度集成到核心里了！网上都在夸赞，确实&lt;strong&gt;牛批&lt;/strong&gt;！今天我要分享的 Obsidian+AI 组合，&lt;em&gt;一次性解决这些痛点&lt;/em&gt;！简单说，你的笔记不再是一个个&lt;strong&gt;死文档*，而是变成了能理解、能推理、能自动化的&lt;/strong&gt;AI 上下文层**。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260113215058651.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;一.准备工作&lt;/h2&gt;
@@ -2366,7 +1073,7 @@ AI 驱动的高质量 PPT 与视频生成工具，支持智能文档分析、核
 跨平台 UI/UX 专业设计智能工具，集成 57 种 UI 风格、95 套行业配色、56 组字体搭配、24 类图表类型及 98 条 UX 设计规范，支持 React、Next.js、Vue、Tailwind 等 11 种主流技术栈。可作为 Claude Code、Cursor、GitHub Copilot 等 AI 助手的技能插件，通过 CLI 或手动安装快速启用，适用于 SaaS 产品、医疗分析、电商 App 等多场景 UI/UX 设计与开发。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;以上，既然看到这里了，如果你觉得内容不错，随手点个赞、在看、转发三连吧！如果想第一时间收到推送，也可以给我点上关注或星标⭐&lt;/strong&gt;～&lt;/p&gt;
 &lt;p&gt;谢谢你看我的文章，&lt;strong&gt;远程服务：742112.xyz&lt;/strong&gt;&lt;/p&gt;
-</content:encoded></item><item><title>Zed安装使用教程</title><link>https://dqtx.cc/posts/aihacks/zed%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/zed%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid><description>Zed 是 Rust 编写、GPU 加速的跨平台开源代码编辑器（Windows/macOS/Linux），主打极速性能、原生 AI 代理协作、实时多人开发，定位...</description><pubDate>Thu, 15 Jan 2026 11:20:00 GMT</pubDate><content:encoded>&lt;p&gt;Zed 是 Rust 编写、GPU 加速的跨平台开源代码编辑器（Windows/macOS/Linux），主打&lt;strong&gt;极速性能、原生 AI 代理协作、实时多人开发&lt;/strong&gt;，定位为下一代 AI 驱动的 IDE，由 Atom/Tree-sitter 核心团队打造，兼顾个人开发与团队协作Zed&lt;/p&gt;
+</content:encoded></item><item><title>Zed安装使用教程</title><link>https://dqtx.cc/posts/aihacks/zed/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/zed/</guid><description>Zed 是 Rust 编写、GPU 加速的跨平台开源代码编辑器（Windows/macOS/Linux），主打极速性能、原生 AI 代理协作、实时多人开发，定位...</description><pubDate>Thu, 15 Jan 2026 11:20:00 GMT</pubDate><content:encoded>&lt;p&gt;Zed 是 Rust 编写、GPU 加速的跨平台开源代码编辑器（Windows/macOS/Linux），主打&lt;strong&gt;极速性能、原生 AI 代理协作、实时多人开发&lt;/strong&gt;，定位为下一代 AI 驱动的 IDE，由 Atom/Tree-sitter 核心团队打造，兼顾个人开发与团队协作Zed&lt;/p&gt;
 &lt;p&gt;定价：基础编辑器永久免费（无 AI 功能）；Zed Pro 含免费额度，付费版 20 美元 / 月（500 次提示），协作功能全用户免费&lt;/p&gt;
 &lt;h2&gt;下载安装&lt;/h2&gt;
 &lt;p&gt;官方地址：https://zed.dev/&lt;/p&gt;
@@ -2819,6 +1526,674 @@ https://www.passkeys.com/websites-with-passkey-support-sites-directory&lt;/p&gt;
 &lt;li&gt;建议配合密码管理器使用，覆盖不支持的场景&lt;/li&gt;
 &lt;li&gt;多设备备份很重要，别只依赖单一设备&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>md2wechat-skill安装教程</title><link>https://dqtx.cc/posts/aihacks/md2wechat-skill%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/md2wechat-skill%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</guid><pubDate>Sat, 03 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;如果你用Markdown写公众号文章，需要先复制内容到排版工具，再复制公众号很麻烦，既耗时间又难保证格式精美，每次操作都要反复调整，成了不少人的痛点，这几天在GitHub发现了&lt;strong&gt;md2wechat-skill&lt;/strong&gt;，听说能一键转换Markdown为精美排版并自动上传到微信草稿箱，好奇测试了下！&lt;/p&gt;
+&lt;p&gt;我安装踩了不少坑，终于搞定，流程算跑通了，不过吐槽下，我是在Claude中用的Ai模式真的慢，有这时间，我10篇文章都排版好了！不过做个记录，相信随着时间技术成熟，一切都会发生变化！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/workany_writing_1280x720.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;⚠️ 安装前必读（踩坑预警）&lt;/h2&gt;
+&lt;p&gt;安装过程中遇到的主要问题：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Go 环境问题&lt;/strong&gt; - 需要手动安装 Go 编译环境&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;微信 IP 白名单&lt;/strong&gt; - 必须配置，否则无法上传素材&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;API Key 未配置&lt;/strong&gt; - 默认用 API 模式会 401 报错&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;WebP 图片格式&lt;/strong&gt; - 微信不支持，需要转换&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;AI 模式工作流&lt;/strong&gt; - 需要两步完成，不是一键搞定&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;一、环境准备&lt;/h2&gt;
+&lt;h3&gt;1. 安装 Go 语言环境&lt;/h3&gt;
+&lt;p&gt;md2wechat-skill 是用 Go 写的，需要先安装 Go。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Windows 安装方式：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# 推荐：使用 winget 安装
+winget install --id GoLang.Go --source winget
+
+# 或使用 Chocolatey
+choco install golang
+
+# 或从官网下载安装包
+# https://go.dev/dl/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;&lt;strong&gt;2. 验证安装：&lt;/strong&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;go version
+# 输出：go version go1.25.5 windows/amd64
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;h2&gt;二、获取源码并编译&lt;/h2&gt;
+&lt;h3&gt;1. 克隆或下载项目&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;# 进入 skills 目录
+cd D:\ObsidianVaul\.claude\skills
+
+# 如果已有项目，跳过；否则克隆
+# git clone https://github.com/geekjourneyx/md2wechat-skill.git
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;2. 编译二进制文件&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;cd md2wechat-skill
+
+# 编译 Windows 版本
+go build -o bin/md2wechat-windows-amd64.exe ./cmd/md2wechat
+
+# 或者使用 Makefile（需要 make 命令）
+make build
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;编译成功后会生成：&lt;/strong&gt; &lt;code&gt;bin/md2wechat-windows-amd64.exe&lt;/code&gt;（约 14.8 MB）&lt;/p&gt;
+&lt;p&gt;文件机构&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;md2wechat-skill/
+├── cmd/                    # 命令行工具
+│   └── md2wechat/         # 主程序
+├── internal/              # 核心功能模块
+│   ├── converter/        # 转换器（API/AI）
+│   ├── draft/            # 草稿服务
+│   ├── image/            # 图片处理
+│   ├── wechat/           # 微信 API 封装
+│   └── config/           # 配置管理
+├── docs/                 # 详细文档
+│   ├── USAGE.md          # 使用教程
+│   ├── FAQ.md            # 常见问题
+│   └── TROUBLESHOOTING.md # 故障排查
+├── examples/             # 示例文章
+├── scripts/              # 安装脚本
+└── bin/                  # 编译好的二进制文件
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;三、配置微信 API&lt;/h2&gt;
+&lt;h3&gt;1. 获取 AppID 和 AppSecret&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;访问微信开发者平台&lt;/li&gt;
+&lt;li&gt;登录你的公众号-我的业务与服务-我的业务-公众号&lt;/li&gt;
+&lt;li&gt;找到 &lt;strong&gt;基础信息&lt;/strong&gt; 部分：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;AppID&lt;/strong&gt;：直接复制&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;开发密钥---AppSecret&lt;/strong&gt;：点击&quot;启用&quot;获取&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;2. 配置 IP 白名单（⚠️ 必做！）&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;不配置白名单会报错：&lt;/strong&gt; &lt;code&gt;errcode=40164, invalid ip xxx not in whitelist&lt;/code&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在同一页面找到&lt;strong&gt;开发密钥&lt;/strong&gt;-API IP白名单&lt;/li&gt;
+&lt;li&gt;添加你的公网 IP&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;获取公网 IP：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;curl ifconfig.me
+# 或
+curl ip.sb
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;添加后等待几分钟生效。&lt;/p&gt;
+&lt;h3&gt;3. 初始化配置&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;cd D:\ObsidianVaul\.claude\skills\md2wechat-skill
+
+# 初始化配置
+.\bin\md2wechat-windows-amd64.exe config init
+
+# 或手动创建配置文件
+# 位置：C:\Users\你的用户名\.config\md2wechat\config.yaml
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;配置文件内容：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;wechat:
+    appid:        # 你的 AppID
+    secret:  # 你的 AppSecret
+api:
+    convert_mode: ai                # 推荐使用 AI 模式
+    default_theme: autumn-warm      # 默认主题
+    md2wechat_key: your_md2wechat_api_key  # 可选，API 模式需要
+image:
+    compress: true
+    max_width: 1920
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;查看配置：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.\bin\md2wechat-windows-amd64.exe config show
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;四、使用方式&lt;/h2&gt;
+&lt;h3&gt;方式一：API 模式（需要 API Key）&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;# 需要先配置 md2wechat.cn 的 API Key
+.\bin\md2wechat-windows-amd64.exe convert article.md --draft --cover cover.jpg
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;⚠️ 问题：&lt;/strong&gt; API Key 需要单独申请，未配置会报 401 错误。&lt;/p&gt;
+&lt;h3&gt;方式二：AI 模式（推荐，无需 API Key）&lt;/h3&gt;
+&lt;p&gt;⚠️注意：此模式进在终端起作用，也就是说在终端可以调用md2wechat-skill将mrkdown推送到微信草稿箱，但在Obsidian插件claudian对话框排版实现不了推送到草稿箱。&lt;/p&gt;
+&lt;p&gt;至于原理可以看这个&lt;/p&gt;
+&lt;p&gt;https://web.okjike.com/u/24236868-c3e9-49ef-ab93-93a60e1a25db/post/6968f2a89f3cd84f65778ba6&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;┌─────────────────────────────────────────────────────────────┐
+│                     AI 模式工作流程                          │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│   1. 你用 Markdown 写文章                                    │
+│              ↓                                               │
+│   2. md2wechat 提取文章结构                                  │
+│              ↓                                               │
+│   3. 构建专业的排版提示词 (Prompt)                           │
+│              ↓                                               │
+│   4. Claude AI 根据提示词生成 HTML                          │
+│              ↓                                               │
+│   5. 返回符合微信规范的 HTML                                 │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;五、常见问题解决&lt;/h2&gt;
+&lt;h3&gt;Q1: IP 不在白名单&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;错误信息：&lt;/strong&gt; &lt;code&gt;errcode=40164, invalid ip xxx not in whitelist&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方法：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;访问&lt;strong&gt;微信开发平台&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;设置与开发 → 基本配置 → IP 白名单&lt;/li&gt;
+&lt;li&gt;添加你的公网 IP（运行 &lt;code&gt;curl ifconfig.me&lt;/code&gt; 查看）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Q2: API 认证失败 (401)&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;错误信息：&lt;/strong&gt; &lt;code&gt;API returned error code 401: Invalid API Key&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原因：&lt;/strong&gt; 使用 API 模式但未配置 md2wechat.cn API Key&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方法：&lt;/strong&gt; 改用 AI 模式，配置文件设置 &lt;code&gt;convert_mode: ai&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;Q3: 图片格式不支持&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;错误信息：&lt;/strong&gt; &lt;code&gt;errcode=40113, unsupported file type&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原因：&lt;/strong&gt; 微信只支持 JPG/PNG/GIF，不支持 WebP&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方法：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;手动转换 WebP 为 JPG&lt;/li&gt;
+&lt;li&gt;或替换 markdown 中的图片链接&lt;/li&gt;
+&lt;li&gt;程序会跳过上传失败的图片继续创建草稿&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Q4: 图片上传后 HTML 中没替换&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;原因：&lt;/strong&gt; AI 模式生成的 HTML 中图片 URL 需要是微信托管链接&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方法：&lt;/strong&gt; 等待图片上传完成，程序会自动替换 HTML 中的图片 URL&lt;/p&gt;
+&lt;h3&gt;Q5: 封面图必须指定&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;错误信息：&lt;/strong&gt; &lt;code&gt;创建草稿需要封面图片&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方法：&lt;/strong&gt; 使用 &lt;code&gt;--cover&lt;/code&gt; 参数指定封面图&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;--cover /path/to/cover.jpg
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;六、在 Claudian 中使用&lt;/h2&gt;
+&lt;p&gt;配置完成后，在 Claudian 中直接调用：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;帮我把 article.md 转换为微信公众号格式，使用秋日暖光主题
+article.md转换为微信公众号格式并上传到草稿箱，封面使用公众号后台素材库的ceshi.png
+帮我把当前文件转换为微信公众号格式并上传到草稿箱
+把这篇文章转换为微信公众号格式
+帮我排版并上传到微信草稿箱
+用AI模式和秋日暖光主题转换这篇文章
+
+在Markdown里写 ![](generate: 你的提示词），转换时自动调用豆包 Seedream 模型生成图片。
+帮我在文章开头加个产品概念图”，AI 会根据你的文章内容生成合适的提示词，然后插入图片生成语法
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Claudian 会自动：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;调用 md2wechat 获取提示词&lt;/li&gt;
+&lt;li&gt;使用 Claude AI 生成 HTML&lt;/li&gt;
+&lt;li&gt;上传图片到微信&lt;/li&gt;
+&lt;li&gt;推送到草稿箱&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;七、主题推荐&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;主题&lt;/th&gt;
+&lt;th&gt;描述&lt;/th&gt;
+&lt;th&gt;适用场景&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;autumn-warm&lt;/td&gt;
+&lt;td&gt;秋日暖光，温暖橙色调&lt;/td&gt;
+&lt;td&gt;故事、生活、情感类&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;spring-fresh&lt;/td&gt;
+&lt;td&gt;春日清新，自然绿色调&lt;/td&gt;
+&lt;td&gt;旅游、自然、户外&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;ocean-calm&lt;/td&gt;
+&lt;td&gt;海洋宁静，专业蓝色调&lt;/td&gt;
+&lt;td&gt;技术文章、商业分析&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;default&lt;/td&gt;
+&lt;td&gt;默认主题，简洁专业&lt;/td&gt;
+&lt;td&gt;通用内容&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;八、文件位置总结&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;项目目录：D:\ObsidianVaul\.claude\skills\md2wechat-skill
+二进制文件：bin\md2wechat-windows-amd64.exe
+配置文件：C:\Users\你的用户名\.config\md2wechat\config.yaml
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;九、快速测试&lt;/h2&gt;
+&lt;p&gt;测试安装是否成功：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# 进入项目目录
+cd D:\ObsidianVaul\.claude\skills\md2wechat-skill
+
+# 创建测试文章
+echo &quot;# 测试标题
+
+这是一篇测试文章。&quot; &amp;gt; test.md
+
+# 测试草稿推送（需要封面图）
+.\bin\md2wechat-windows-amd64.exe convert \
+  --mode ai \
+  --html &quot;&amp;lt;div style=&apos;padding:20px;&apos;&amp;gt;&amp;lt;h1&amp;gt;测试&amp;lt;/h1&amp;gt;&amp;lt;p&amp;gt;内容&amp;lt;/p&amp;gt;&amp;lt;/div&amp;gt;&quot; \
+  --markdown &quot;$(cat test.md)&quot; \
+  --draft \
+  --cover /path/to/cover.jpg
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;成功后会返回草稿的 media_id 和链接。&lt;/p&gt;
+&lt;h2&gt;写在最后&lt;/h2&gt;
+&lt;p&gt;md2wechat-skill 功能强大，但配置确实有点复杂。按照这个教程一步步来，应该能顺利搞定。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;以上，既然看到这里了，如果你觉得内容不错，随手点个赞、在看、转发三连吧！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;如果想第一时间收到推送，可以给我点个星标⭐～&lt;/p&gt;
+&lt;p&gt;谢谢你看我的文章，我们，下次再见。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;补充：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;md2wechat 项目地址：https://github.com/geekjourneyx/md2wechat-skill&lt;/li&gt;
+&lt;li&gt;微信开发者平台：https://mp.weixin.qq.com&lt;/li&gt;
+&lt;li&gt;Go 语言下载：https://go.dev/dl/&lt;/li&gt;
+&lt;li&gt;大强远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded></item><item><title>API封装成Skill最佳实践</title><link>https://dqtx.cc/posts/aihacks/api%E5%B0%81%E8%A3%85%E6%88%90skill%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/api%E5%B0%81%E8%A3%85%E6%88%90skill%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</guid><description>最近被阿里巴巴通义MAI的Z-Image狠狠圈粉，不仅搭载了高效的 Z-Image-Turbo 模型，更关键的是每天能免费生 2000 张图，不管是生成文章视频...</description><pubDate>Sun, 30 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近被阿里巴巴通义MAI的Z-Image狠狠圈粉，不仅搭载了高效的 &lt;strong&gt;Z-Image-Turbo&lt;/strong&gt; 模型，更关键的是&lt;strong&gt;每天能免费生 2000 张图&lt;/strong&gt;，不管是生成文章视频封面还是异常创作，这个配额都完全够用。&lt;/p&gt;
+&lt;p&gt;恰巧这段时间我正在研究 Claude 的 Skills 功能，于是就萌生了一个想法：&lt;strong&gt;把 Z-Image 的免费生图能力和 Claude Skills 结合起来&lt;/strong&gt;，做一个专属生图 Skill，通过自然语言就可以生图到本地文件夹，既省时间又能充分利用免费配额。带着这个实操需求，我把整个创建过程整理成了这篇文章，希望能给同样喜欢折腾工具、需要生图功能的朋友提供一点参考～&lt;/p&gt;
+&lt;h2&gt;一.创建方法&lt;/h2&gt;
+&lt;p&gt;登录（可用GitHub）魔搭社区，打开下方地址，点击“查看代码范例”进去复制API代码&lt;/p&gt;
+&lt;p&gt;https://modelscope.cn/models/Tongyi-MAI/Z-Image-Turbo&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260114235919010.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;⚠️ 注意事项：API Key 需要先完成账户绑定才能使用图片生成功能&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260115001924596.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;告诉Claude Code&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;根据代码创建Skill：【粘贴代码】
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;（可选）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;帮我配置一下自定义斜杠命令  这样我方便使用，另外默输出尺寸设置为1920x1080，输出默认文件夹为D:\zhishiku\.claude\skills\image
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;项目目录结构&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260115020802212.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;二.如何使用&lt;/h2&gt;
+&lt;h3&gt;自然语言描述&lt;/h3&gt;
+&lt;p&gt;Claude会自动根据你的自然语言调用这个生图skill&lt;/p&gt;
+&lt;p&gt;比如我用它测试生成我过往文章/视频的封面&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;生成3张16:9的文章配图，文章主题是Obsidian+AI，绝杀！你的第二大脑终于觉醒了
+ 
+生成文章封面，文章主题是：如何创建一个生图Claude SkillS
+
+练习两年半，我做了个免费 AI编程自学网！吊打付费课，会打字就能学，根据这个主题生成视封面
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;斜杠命令&lt;/h3&gt;
+&lt;p&gt;另外你可以通过命令进行调用，可以让他输出指定的尺寸&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/image 一只金色的猫
+/gen-image 赛博朋克城市，霓虹灯效果
+/image 可爱的卡通小熊 -o bear.jpg
+/image 描述 -s 2048x1152  
+/image 一个年轻女性在夕阳下的肖像，电影级质感 -s 1920x1080  
+/image 赛博朋克城市，霓虹灯效果 -s 1920x1080 -o city.jpg
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;核心命令&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;命令&lt;/th&gt;
+&lt;th&gt;功能说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;/image &amp;lt;描述&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;生成指定描述的图片&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;/gen-image &amp;lt;描述&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;与 &lt;code&gt;/image&lt;/code&gt; 功能一致，生成指定描述的图片&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4&gt;可选参数&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;参数&lt;/th&gt;
+&lt;th&gt;全称&lt;/th&gt;
+&lt;th&gt;功能说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;-o&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;--output&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;指定生成图片的输出文件名（含后缀，如 &lt;code&gt;bear.jpg&lt;/code&gt;）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;-s&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;--size&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;指定生成图片的尺寸&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;三.写在最后&lt;/h2&gt;
+&lt;p&gt;通过上面的例子可以看出，其实不仅是 API，任何你过往用过的优质提示词，都可以让 Claude 帮你封装成一个个 Skills，Skills 的调用方式更简单，也更有优势：你不用每次都跟 AI 详细说明要怎么做，只要用自然语言表达需求，Claude 就会自动判断并调用合适的 Skills，而且多个 Skills 还可以协同工作，组合出更复杂、更完整的工作流。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;以上，既然看到这里了，如果你觉得内容不错，随手点个赞、在看、转发三连吧！如果想第一时间收到推送，可以给我点个星标⭐～&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;如需要远程技术支持：742112.xyz&lt;/p&gt;
+</content:encoded></item><item><title>Antigravity安装使用教程</title><link>https://dqtx.cc/posts/aihacks/antigravity%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/antigravity%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid><description>Google Antigravity 是 DeepMind 推出的 AI 编程 IDE（2025-11-18 与 Gemini 3 同步发布），基于 VS Co...</description><pubDate>Sat, 29 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Google Antigravity 是 DeepMind 推出的 AI 编程 IDE（2025-11-18 与 Gemini 3 同步发布），基于 VS Code 内核，核心是 “智能代理（Agentic）” 开发范式，能让 AI 自主规划、执行、验证编程任务，支持多智能体并行协作，适配复杂全栈开发场景&lt;/p&gt;
+&lt;h2&gt;软件下载安装&lt;/h2&gt;
+&lt;p&gt;官方地址https://antigravity.google/&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260124223748577.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;登录授权&lt;/h2&gt;
+&lt;p&gt;很多人往往卡在这里，解决办法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;魔法软件开启 TUN&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://link.zhihu.com/?target=https%3A//www.proxifier.com/&quot;&gt;安装 Proxifier&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260124211315751.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260124211331540.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;模式说明&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Planning（规划）&lt;/strong&gt;：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Agent 在执行任务之前会先进行规划，适用于深度研究、复杂任务或协作工作；&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Fast（快速）&lt;/strong&gt;：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Agent 将直接执行任务，适用于简单任务，可以更快速地完成任务。&lt;/p&gt;
+&lt;h2&gt;设置语言中文&lt;/h2&gt;
+&lt;p&gt;快捷键 &lt;code&gt;Ctrl+Shift+P(Windows)&lt;/code&gt; 输入&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Configure Display Language
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;更换自己喜欢的主题&lt;/h2&gt;
+&lt;p&gt;快捷键 &lt;code&gt;Ctrl+Shift+P(Windows)&lt;/code&gt; 输入&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Themes: Color Theme
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;点击“首选项:颜色主题”&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://m.okjike.com/originalPosts/691e6c5100c0686ab5271356&quot;&gt;导入 Cursor自带主题&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;常用快捷键&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;快捷键&lt;/th&gt;
+&lt;th&gt;操作&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+,&lt;/td&gt;
+&lt;td&gt;打开设置&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+L&lt;/td&gt;
+&lt;td&gt;打开 Agent 对话框&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</content:encoded></item><item><title>Obsidian+AI</title><link>https://dqtx.cc/posts/aihacks/obsidianai/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/obsidianai/</guid><description>这几天，在gihub发现Obsidian重磅插件，直接把 AI 功能深度集成到核心里了！网上都在夸赞，确实牛批！今天我要分享的 Obsidian+AI 组合，一...</description><pubDate>Fri, 28 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这几天，在gihub发现Obsidian重磅插件，直接把 AI 功能深度集成到核心里了！网上都在夸赞，确实&lt;strong&gt;牛批&lt;/strong&gt;！今天我要分享的 Obsidian+AI 组合，&lt;em&gt;一次性解决这些痛点&lt;/em&gt;*！简单说，你的笔记不再是一个个&lt;strong&gt;死文档*，而是变成了能理解、能推理、能自动化的&lt;/strong&gt;AI 上下文层**。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260113215058651.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;一.准备工作&lt;/h2&gt;
+&lt;p&gt;✅已安装 Obsidian&lt;/p&gt;
+&lt;p&gt;✅安装并配置了 Claude Code&lt;/p&gt;
+&lt;h2&gt;二.Obsidian个人配置&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;我的统文件结构&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;📁 你的 Vault
+├── 📄 CLAUDE.md              # AI 配置文件
+├── 📄 claude.json            # Skills 配置
+├── 📁 .claude/
+│   ├── 📁 commands/          # 自定义命令
+│   └── 📁 skills/            # Skills 包
+├── 📁 加工中/                 # 正在编辑的文章
+├── 📁 1️⃣常用工具/            # 常用工具配置
+├── 📁 2️⃣流量策划/            # 流量策划项目
+├── 📁 3️⃣销售转换/            # 销售转换项目
+└── 📁 4️⃣产品交付/            # 产品交付项目
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;1.外观设置&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260113215034732.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;2.主题推荐&lt;/h3&gt;
+&lt;p&gt;设置-外观-主题-管理，搜索：&lt;/p&gt;
+&lt;p&gt;推荐主题&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Primary(推荐）&lt;/li&gt;
+&lt;li&gt;AnuPpuccin&lt;/li&gt;
+&lt;li&gt;Baseline&lt;/li&gt;
+&lt;li&gt;Typora-Vue&lt;/li&gt;
+&lt;li&gt;Zen&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;3.安装必要插件&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;设置&lt;/code&gt;-&lt;code&gt;第三方插件&lt;/code&gt;-&lt;code&gt;关闭安全模式&lt;/code&gt;---社区插件市场，搜索：&lt;/p&gt;
+&lt;h4&gt;Floating Search  ：搜索神器&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;功能：tag: (Find tag) → 快捷键 Ctrl + F
+用途：快速搜索标签和内容&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;Git ：Git 同步插件&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;详细教程：点此查看 →https://www.bilibili.com/video/BV1fZCyBYEuT/?spm_id_from=333.1387.favlist.content.click&amp;amp;vd_source=206031f494850e57fd6c92ace02b1bed&lt;/p&gt;
+&lt;p&gt;用途：版本控制、团队协作、备份恢复&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://xodnytdcaw.feishu.cn/space/api/box/stream/download/asynccode/?code=NzJiOTJmYjM2NDJkYTY2YmNlMGEwNTM5MTUzMTc1MjNfUDNQaVFUUWE0SVpXc1ZpU0YxTFVzb2NNMG16N3N6QzJfVG9rZW46Qk9XYmJyMVM2b1pVSTZ4TU5yc2NLYmNQbkJnXzE3NjgzMDgwMTI6MTc2ODMxMTYxMl9WNA&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+&lt;h4&gt;图片附件管理插件&lt;/h4&gt;
+&lt;p&gt;Custom Attachment Location：图像附件存储&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;功能：自定义图片存储位置
+用途：整理附件文件夹，避免混乱&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260113215103569.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260113215104746.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h4&gt;公众号发布插件&lt;/h4&gt;
+&lt;p&gt;NoteToMP：一键发布&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;功能：直接发送到公众号草稿箱
+用途：内容创作与发布一体化&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;Claudian：AI 集成插件（重点）&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Claudian&lt;/strong&gt;：Claude Code 侧边栏集成&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;功能：把 Claude Code 整合到 Obsidian 侧边栏
+用途：直接在 Obsidian 中对话，读取当前 Markdown&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260113215058651.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;安装 Claudian 手动教程&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;下载文件&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;前往 &lt;a href=&quot;https://github.com/YishenTu/claudian/releases/latest&quot;&gt;Claudian Release 页面&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;下载三个文件：&lt;code&gt;main.js&lt;/code&gt;、&lt;code&gt;manifest.json&lt;/code&gt;、&lt;code&gt;styles.css&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;创建文件夹&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;路径：&lt;code&gt;/path/to/vault/.obsidian/plugins/claudian/&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.obsidian&lt;/code&gt; 文件夹通常是隐藏的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;放入文件&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;将下载的三个文件复制到 &lt;code&gt;claudian&lt;/code&gt; 文件夹&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;启用插件&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;重启 Obsidian&lt;/li&gt;
+&lt;li&gt;设置 → 第三方插件 → 找到 &quot;Claudian&quot; 并启用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;三.配置 Claude Skills 系统&lt;/h2&gt;
+&lt;h4&gt;3.1 创建 claude.json 配置文件&lt;/h4&gt;
+&lt;p&gt;在 &lt;code&gt;.claude&lt;/code&gt; 文件夹下创建 &lt;code&gt;claude.json&lt;/code&gt;：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{
+  &quot;skills&quot;: [
+    &quot;./skills/obsidian-skills/obsidian-markdown&quot;,
+    &quot;./skills/obsidian-skills/json-canvas&quot;,
+    &quot;./skills/obsidian-skills/obsidian-bases&quot;
+  ]
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;3.2 下载Obsidian Skills 包&lt;/h4&gt;
+&lt;p&gt;在 &lt;code&gt;.claude&lt;/code&gt; 文件夹创建 &lt;code&gt;skills&lt;/code&gt; 文件夹，然后下载：https://github.com/kepano/obsidian-skills&lt;/p&gt;
+&lt;h6&gt;&lt;strong&gt;技能应用场景展示&lt;/strong&gt;：&lt;/h6&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260113212002494.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260113215435163.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;四、 obsidian Skills 使用指南&lt;/h2&gt;
+&lt;h6&gt;&lt;strong&gt;A.基础用法&lt;/strong&gt;&lt;/h6&gt;
+&lt;p&gt;&lt;strong&gt;1️⃣obsidian-markdown&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;创建符合 Obsidian 规范的 Markdown 文件&lt;/p&gt;
+&lt;p&gt;示例 1: 创建项目笔记&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;创建一个名为&quot;项目计划.md&quot;的笔记，包含以下内容：
+- Frontmatter 属性：项目状态为进行中，优先级为高
+- 使用 callout 标注重要截止日期
+- 创建任务清单，包含已完成和待办任务
+- 添加项目架构的 Mermaid 流程图
+- 链接到相关的&quot;团队文档&quot;笔记
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;示例 2: 创建学习笔记&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;创建&quot;JavaScript 学习笔记.md&quot;，包含：
+ - 使用 info callout 介绍学习目标
+ - 代码高亮示例（JavaScript 和 Python）
+ - 使用嵌套列表组织知识点
+ - 添加数学公式示例
+ - 创建折叠的 FAQ callout
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;2️⃣json-canvas&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;JSON Canvas 是一种开放格式，用于创建无限画布。AI 可以自动生成思维导图、流程图、项目看板等可视化内容。&lt;/p&gt;
+&lt;p&gt;示例 1: 创建思维导图&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; 创建一个名为&quot;产品开发思维导图.canvas&quot;的文件，主题是&quot;新功能开发&quot;，包含：
+ - 中心节点：&quot;新功能开发&quot;（使用青色）
+ - 分支节点：需求分析、设计、开发、测试、部署（5个分支）
+ - 每个分支下添加 2-3 个子节点，包含具体任务
+ - 使用箭头连接所有节点
+ - 使用不同颜色区分不同阶段
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;示例 2: 创建项目看板&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;创建&quot;项目看板.canvas&quot;，实现看板视图：
+ - 创建 3 个分组：待办、进行中、已完成（使用红、黄、绿色）
+ - 每个分组内添加 2-3 个任务卡片
+ - 任务内容包含任务名和描述
+ - 合理布局，确保美观
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;示例 3: 创建流程图&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;创建&quot;用户注册流程.canvas&quot;：
+- 节点：开始 → 输入信息 → 验证数据 → {数据有效?}
+- 决策节点：Yes → 创建账户 → 发送邮件 → 结束
+- 决策节点：No → 显示错误 → 返回输入
+- 使用箭头和标签标注流程
+- 决策节点使用黄色，开始/结束使用绿色
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;示例 4: 创建研究资料画布&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;创建&quot;AI研究.canvas&quot;画布：
+- 中心节点：AI 研究主题
+- 周围节点链接到相关的笔记文件（使用 file 节点）
+- 添加外部资源链接（使用 link 节点）
+- 将相关内容用 group 节点分组
+- 使用带标签的连线说明关系
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;3️⃣obsidian-bases&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Obsidian Bases 是基于 YAML 的数据视图系统，可以将笔记转换为数据库表格、卡片视图等。AI 可以自动创建配置文件。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例 1: 任务管理系统&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;创建&quot;任务管理.base&quot;，实现以下功能：
+- 筛选所有包含 #task 标签的 Markdown 文件
+- 创建公式字段：
+  - days_until_due: 计算距离截止日期的天数
+  - is_overdue: 判断是否过期
+  - priority_label: 根据 priority 字段显示 🟥🟨🩩 图标
+- 表格视图：显示任务名、状态、优先级、截止日期、距离天数
+- 按状态分组排序
+- 添加平均天数统计
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;示例 2: 阅读清单&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;创建&quot;阅读清单.base&quot;：
+- 筛选包含 #book 或 #article 标签的笔记
+- 创建公式：
+  - reading_time: 根据页数估算阅读时间（每页 2 分钟）
+  - status_icon: 根据 status 显示 📖/✅/📚 图标
+  - year_read: 提取完成日期的年份
+- 卡片视图：显示封面、书名、作者、状态图标
+- 表格视图：显示书名、作者、页数、预计时间、状态
+- 排除已放弃的书籍
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;示例 3: 项目进度追踪&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;创建&quot;项目追踪.base&quot;：
+- 筛选&quot;Projects&quot;文件夹下的所有 Markdown 文件
+- 创建公式：
+  - last_updated: 显示相对更新时间（如&quot;3天前&quot;）
+  - link_count: 统计笔记中的链接数量
+  - progress: 根据完成任务的百分比计算进度
+- 表格视图：显示项目名、状态、更新时间、链接数、进度
+- 按状态分组
+- 添加进度条可视化（使用 icon 函数）
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;示例 4: 每日笔记索引&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;创建&quot;日记索引.base&quot;：
+- 筛选&quot;Daily Notes&quot;文件夹下文件名格式为 YYYY-MM-DD 的笔记
+- 创建公式：
+  - word_estimate: 估算字数（文件大小除以 5）
+  - day_of_week: 提取星期几
+  - has_images: 判断是否包含图片
+- 表格视图：显示日期、星期、估算字数、图片数量
+- 限制显示最近 30 天
+- 按修改时间倒序排列
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;示例 4: 附件&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;请根据附件内容生成一个 高颜值Obsidian Canvas，每个主题建立一个分组，设置颜色，注意，每个节点之前的距离不要太靠近，中文输出
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h6&gt;B.高级技巧：组合使用多个 Skills&lt;/h6&gt;
+&lt;p&gt;技巧 1: 生成项目看板&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;为我的项目创建完整的文档系统：
+1. 创建&quot;项目看板.canvas&quot;可视化展示项目结构
+2. 创建&quot;任务管理.base&quot;追踪所有任务
+3. 创建&quot;项目主页.md&quot;作为索引，包含：
+   - 项目概述（使用 callout）
+   - 嵌入项目看板
+   - 嵌入任务管理视图
+   - Mermaid 架构图
+   - 相关文档链接
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;技巧 2: 学习系统&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;创建&quot;主题学习&quot;系统：
+1. 创建&quot;知识地图.canvas&quot;，用思维导图展示知识结构
+2. 创建&quot;学习资源.base&quot;，管理所有学习资料（书籍、文章、视频）
+3. 创建&quot;学习笔记.md&quot;模板，包含：
+   - 学习目标（checklist）
+   - 重要概念（callout 标注）
+   - 代码示例
+   - 笔记总结
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h5&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;附：自定义命令配置&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;项目命令：&lt;code&gt;项目根目录/.claude/commands/&lt;/code&gt; 下，仅当前项目可用。&lt;/p&gt;
+&lt;p&gt;Slash Commands即自定义斜杠命令。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;环境准备
+mkdir -p ~/.claude/commands     #创建命令目录（递归创建，不存在则自动生成）
+touch ~/.claude/commands/search-web.md   # 创建命令文件（以search-web.md为例）
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;编写命令文件（Markdown 格式）&lt;/p&gt;
+&lt;p&gt;每个命令对应一个 &lt;code&gt;.md&lt;/code&gt; 文件，包含元数据与执行逻辑（示例）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+# 元数据（YAML格式，必须放在开头）
+description: &quot;调用搜索工具查询指定关键词的网页信息&quot; # 命令描述
+argument-hint: &quot;搜索关键词（如：Slash Commands 最佳实践）&quot; # 参数提示
+allowed-tools: [&quot;Search&quot;] # 允许调用的工具（如Search、Read、Edit）
+---
+# 命令执行逻辑（提示词模板，$ARGUMENTS为参数占位符）
+请使用搜索工具查询以下关键词的最新信息，并整理成结构化摘要：
+$ARGUMENTS
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;在 Claude Code 中输入 &lt;code&gt;/search-web Slash Commands 自定义方法&lt;/code&gt;，自动替换 &lt;code&gt;$ARGUMENTS&lt;/code&gt; 为传入参数。&lt;/p&gt;
+&lt;h2&gt;五.其他推荐工具&lt;/h2&gt;
+&lt;h3&gt;Chrome 插件剪藏工具&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Obsidian Web Clipper&lt;/strong&gt;：网页剪藏神器&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;功能：一键剪藏网页内容到 Obsidian
+用途：收集资料、保存网页、整理收藏
+下载地址：https://chromewebstore.google.com/detail/obsidian-web-clipper/cnjifjpddelmedmihgijeibhnjfabmlf
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;字体推荐&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;中文推荐&lt;/strong&gt;：TsangerJinKai02（闪客金楷）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;特色：优雅的中文显示
+用途：提升阅读体验
+下载：https://github.com/tw93/MiaoYan-NetNewsWire-Theme/blob/main/TsangerJinKai02-W04.ttf
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;英文代码推荐&lt;/strong&gt;：JetBrains Mono&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;特色：专业的代码显示
+用途：编程、技术文档
+下载：https://www.jetbrains.com/lp/mono/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;六、验证配置&lt;/h2&gt;
+&lt;p&gt;安装完成后，打开 Claudian 插件对话界面，发送测试命令：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;请列出你检测到的本地 skills（json-canvas / obsidian-markdown / obsidian-bases），并在常用工具创建一个测试笔记赵国强.md 包含 [[链接]]、#tag、- [ ] todo。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果返回正确的技能列表并创建了文件，说明配置成功！&lt;/p&gt;
+&lt;p&gt;以上.今天的分享就到这里。Obsidian + AI 的组合，确实让知识管理效率&lt;strong&gt;爆表&lt;/strong&gt;！&lt;/p&gt;
+&lt;p&gt;如果内容对你有所帮助，欢迎一键三连（点赞、在看、转发）。如果你有其他软件需求，也欢迎评论区留言，我们下次再见。&lt;/p&gt;
 </content:encoded></item><item><title>Listary使用参考文档</title><link>https://dqtx.cc/posts/software/listary%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/listary%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83/</guid><description>Listary是一款知名的效率工具，以用户友好，使用方式简单而备受好评。单论文件搜索，Listary 和 Everything 属于同一梯队，在搜索速度和内存占...</description><pubDate>Sat, 22 Nov 2025 09:15:00 GMT</pubDate><content:encoded>&lt;h1&gt;Listary使用参考文档&lt;/h1&gt;
 &lt;p&gt;Listary是一款知名的效率工具，以用户友好，使用方式简单而备受好评。单论文件搜索，Listary 和 Everything 属于同一梯队，在搜索速度和内存占用上秒杀任何其他软件。任何文件，只要你知道他的名称（或者部分名称），就能迅速找到并打开。&lt;/p&gt;
 &lt;h2&gt;本地搜索&lt;/h2&gt;
@@ -3557,6 +2932,638 @@ KV命名空间：img_url
 &lt;p&gt;视频教程：https://www.youtube.com/watch?v=vD6ns5UEETs&lt;/p&gt;
 &lt;h2&gt;拓展：搭建一个在线图床&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://88.dqtx.cc/main.html#/article/%E9%9B%B6%E6%88%90%E6%9C%AC%E6%90%AD%E5%BB%BA%E5%9C%A8%E7%BA%BF%E5%9B%BE%E5%BA%8A&quot;&gt;零成本！100G 免费图床搭建，小白 10 分钟搞定&lt;/a&gt;&lt;/p&gt;
+</content:encoded></item><item><title>GitHub + EdgeOne 搭建个人博客的过程</title><link>https://dqtx.cc/posts/technical/github-edgeone-da-jian-bo-ke/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/github-edgeone-da-jian-bo-ke/</guid><pubDate>Sat, 08 Feb 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;想要一个属于自己的博客，但不知道从哪里开始？本文详细记录了从零开始搭建个人博客的全过程，包括踩过的各种坑和解决方案。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;为什么选择 Fuwari 主题？&lt;/h2&gt;
+&lt;p&gt;在决定搭建博客之前，我对比了多个静态博客生成器：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;工具&lt;/th&gt;
+&lt;th&gt;优点&lt;/th&gt;
+&lt;th&gt;缺点&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Hexo&lt;/td&gt;
+&lt;td&gt;插件丰富、中文文档多&lt;/td&gt;
+&lt;td&gt;生成速度慢、配置复杂&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Hugo&lt;/td&gt;
+&lt;td&gt;构建极快&lt;/td&gt;
+&lt;td&gt;学习曲线陡峭&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;VuePress&lt;/td&gt;
+&lt;td&gt;Vue 生态友好&lt;/td&gt;
+&lt;td&gt;主要用于文档&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Astro&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;性能卓越、配置简单&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;相对较新&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;最终选择了基于 &lt;strong&gt;Astro 5.7+&lt;/strong&gt; 的 &lt;strong&gt;Fuwari&lt;/strong&gt; 主题，原因很简单：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;零配置即可使用&lt;/li&gt;
+&lt;li&gt;完美适配移动端&lt;/li&gt;
+&lt;li&gt;内置深色模式&lt;/li&gt;
+&lt;li&gt;性能评分接近满分&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;一、前期准备&lt;/h2&gt;
+&lt;h3&gt;1.1 所需账号&lt;/h3&gt;
+&lt;p&gt;在开始之前，你需要准备：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;服务&lt;/th&gt;
+&lt;th&gt;用途&lt;/th&gt;
+&lt;th&gt;是否必需&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;GitHub 账号&lt;/td&gt;
+&lt;td&gt;代码托管&lt;/td&gt;
+&lt;td&gt;必需&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;EdgeOne 账号&lt;/td&gt;
+&lt;td&gt;静态网站部署&lt;/td&gt;
+&lt;td&gt;必需&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Gitee 账号&lt;/td&gt;
+&lt;td&gt;图床（可选）&lt;/td&gt;
+&lt;td&gt;可选&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;1.2 环境要求&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;# 检查 Node.js 版本（需要 18.0+）
+node -v
+
+# 推荐：使用 pnpm 作为包管理器
+npm install -g pnpm
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;二、克隆与配置&lt;/h2&gt;
+&lt;h3&gt;2.1 克隆项目&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;# 克隆 Fuwari 项目
+git clone https://github.com/saicaca/fuwari.git my-blog
+cd my-blog
+
+# 安装依赖
+pnpm install
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;2.2 启动开发服务器&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;pnpm dev
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;访问 http://localhost:4321/ 即可看到效果。&lt;/p&gt;
+&lt;h3&gt;2.3 基本配置&lt;/h3&gt;
+&lt;p&gt;编辑 &lt;code&gt;src/config.ts&lt;/code&gt; 文件：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// 站点基本信息
+export const siteConfig: SiteConfig = {
+  title: &quot;你的博客标题&quot;,
+  subtitle: &quot;副标题描述&quot;,
+  lang: &quot;zh_CN&quot;,
+  url: &quot;https://your-domain.com&quot;,
+  author: &quot;你的名字&quot;,
+};
+
+// 个人信息卡片
+export const profileConfig: ProfileConfig = {
+  name: &quot;你的名字&quot;,
+  bio: &quot;个性签名&quot;,
+  avatar: &quot;/avatar.jpg&quot;,  // 头像放在 public/ 目录
+  email: &quot;your-email@example.com&quot;,
+  socialLinks: {
+    github: &quot;https://github.com/your-username&quot;,
+    // 添加更多社交链接...
+  },
+};
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;三、部署到 EdgeOne&lt;/h2&gt;
+&lt;h3&gt;3.1 为什么选择 EdgeOne？&lt;/h3&gt;
+&lt;p&gt;对比了多个部署平台：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;平台&lt;/th&gt;
+&lt;th&gt;优点&lt;/th&gt;
+&lt;th&gt;缺点&lt;/th&gt;
+&lt;th&gt;选择&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Vercel&lt;/td&gt;
+&lt;td&gt;体验好、速度快&lt;/td&gt;
+&lt;td&gt;国内访问慢&lt;/td&gt;
+&lt;td&gt;❌&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Netlify&lt;/td&gt;
+&lt;td&gt;功能强大&lt;/td&gt;
+&lt;td&gt;国内访问慢&lt;/td&gt;
+&lt;td&gt;❌&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;EdgeOne&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;国内访问快、免费额度充足&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;需要备案域名&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;✅&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;3.2 部署步骤&lt;/h3&gt;
+&lt;h4&gt;步骤 1：创建 GitHub 仓库&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;# 初始化 git 仓库
+git init
+git add .
+git commit -m &quot;Initial commit&quot;
+
+# 推送到 GitHub
+git remote add origin https://github.com/your-username/your-repo.git
+git branch -M main
+git push -u origin main
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;步骤 2：EdgeOne 配置&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;登录 &lt;a href=&quot;https://console.cloud.tencent.com/edgeone&quot;&gt;EdgeOne 控制台&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;选择「静态网站」→「新建站点」&lt;/li&gt;
+&lt;li&gt;连接 GitHub 仓库，选择分支：&lt;code&gt;main&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4&gt;步骤 3：构建设置&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;框架预设: Astro
+根目录: ./
+输出目录: dist
+编译命令: pnpm run build
+安装命令: pnpm install
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;步骤 4：开始部署&lt;/h4&gt;
+&lt;p&gt;点击「开始部署」，等待 1-2 分钟即可完成。&lt;/p&gt;
+&lt;h2&gt;四、踩过的坑（重点！）&lt;/h2&gt;
+&lt;h3&gt;坑 1：YAML Frontmatter 格式错误&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;现象&lt;/strong&gt;：文章发布后只显示标题，没有封面、摘要、正文。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：YAML 格式极其严格，任何一个空格错误都会导致解析失败。&lt;/p&gt;
+&lt;h4&gt;❌ 错误写法&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;---
+title:文章标题
+published:2026/02/04
+category:软件安利
+tags: 标签1, 标签2
+draft: True
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;✅ 正确写法&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;---
+title: 文章标题           # 冒号后必须有空格
+published: 2026-02-04     # 日期必须用连字符
+category: 技术教程         # 冒号后必须有空格
+tags: [标签1, 标签2]      # 必须用数组格式
+draft: true               # 布尔值必须小写
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;YAML 四大黄金规则&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;冒号后必须有空格&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;title: 文章标题  # ✅ 正确
+title:文章标题   # ❌ 错误
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;日期必须用连字符&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;published: 2026-02-04  # ✅ 正确
+published: 2026/02/04  # ❌ 错误
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;标签必须用数组格式&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;tags: [Astro, 教程, 前端]  # ✅ 正确
+tags: Astro, 教程, 前端     # ❌ 错误
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;布尔值必须小写&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;draft: true   # ✅ 正确
+draft: True   # ❌ 错误
+draft: TRUE   # ❌ 错误
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;坑 2：导航栏抖动问题&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;现象&lt;/strong&gt;：点击「归档」「友链」等页面时，顶部导航栏会抖动一下。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：页面切换时 &lt;code&gt;page-height-extend&lt;/code&gt; 元素的显示/隐藏导致高度变化。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;移除 &lt;code&gt;top-row&lt;/code&gt; 的 &lt;code&gt;transition-all&lt;/code&gt; 过渡动画&lt;/li&gt;
+&lt;li&gt;在 Swup 钩子中禁用 &lt;code&gt;onload-animation&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;完全移除 &lt;code&gt;page-height-extend&lt;/code&gt; 逻辑&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;修改 &lt;code&gt;src/layouts/Layout.astro&lt;/code&gt;：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;window.swup.hooks.on(&apos;visit:start&apos;, (visit) =&amp;gt; {
+  // 禁用导航时的动画，防止抖动
+  const animatedElements = document.querySelectorAll(&apos;.onload-animation&apos;);
+  animatedElements.forEach(el =&amp;gt; {
+    el.style.opacity = &apos;1&apos;;
+    el.style.animation = &apos;none&apos;;
+  });
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;坑 3：页面加载时颜色闪烁&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;现象&lt;/strong&gt;：刷新网页时会闪一下另一种配色，然后才变成正确的颜色。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：CSS 样式加载有延迟，导致使用了默认样式。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：在 &lt;code&gt;&amp;lt;head&amp;gt;&lt;/code&gt; 中添加内联样式&lt;/p&gt;
+&lt;p&gt;修改 &lt;code&gt;src/layouts/Layout.astro&lt;/code&gt;：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;head&amp;gt;
+  &amp;lt;!-- 其他 head 内容 --&amp;gt;
+
+  &amp;lt;!-- 内联渐变样式，防止闪烁 --&amp;gt;
+  &amp;lt;style is:inline&amp;gt;
+    .navbar-title-gradient,
+    .navbar-title-gradient-icon,
+    .gradient-text,
+    .hacker-icon,
+    .category-title,
+    .decoration-title {
+        background: linear-gradient(135deg, #0ea5e9, #8b5cf6) !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        background-clip: text !important;
+    }
+  &amp;lt;/style&amp;gt;
+&amp;lt;/head&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;坑 4：深色模式颜色不和谐&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;现象&lt;/strong&gt;：深色模式下，某些元素的颜色显得突兀。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：使用了固定的颜色值（如 &lt;code&gt;#A8C398&lt;/code&gt;），没有跟随主题色。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：将所有固定颜色改为使用 CSS 变量 &lt;code&gt;var(--primary)&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/* ❌ 错误：固定颜色 */
+color: #A8C398;
+
+/* ✅ 正确：主题色变量 */
+color: var(--primary);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;深色模式下使用 oklch 色空间的半透明颜色：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.dark .decoration-line {
+  border-color: oklch(0.35 0.02 var(--hue));
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;坑 5：Svelte 组件编译错误&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;现象&lt;/strong&gt;：搜索组件在开发服务器中无法正常显示。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：&lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt; 标签缺少 &lt;code&gt;lang&lt;/code&gt; 属性，导致 Svelte 编译器无法正确解析。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：为 &lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt; 标签添加 &lt;code&gt;lang=&quot;css&quot;&lt;/code&gt; 属性&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;!-- ❌ 错误：缺少 lang 属性 --&amp;gt;
+&amp;lt;style&amp;gt;
+  .search-panel {
+    background-color: var(--float-panel-bg-opaque);
+  }
+&amp;lt;/style&amp;gt;
+
+&amp;lt;!-- ✅ 正确：添加 lang 属性 --&amp;gt;
+&amp;lt;style lang=&quot;css&quot;&amp;gt;
+  .search-panel {
+    background-color: var(--float-panel-bg-opaque);
+  }
+&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;坑 6：图片加载延迟&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;现象&lt;/strong&gt;：打开网站时，左侧二维码和封面图片有明显延迟。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：默认使用了 &lt;code&gt;loading=&quot;lazy&quot;&lt;/code&gt; 延迟加载。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;关键图片移除 &lt;code&gt;loading=&quot;lazy&quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;添加 &lt;code&gt;loading=&quot;eager&quot;&lt;/code&gt; 和 &lt;code&gt;fetchpriority=&quot;high&quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;外部图片下载到本地托管&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;修改 &lt;code&gt;src/components/misc/ImageWrapper.astro&lt;/code&gt;：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;img
+  src={src}
+  alt={alt}
+  loading=&quot;eager&quot;
+  fetchpriority=&quot;high&quot;
+/&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;坑 7：分类对齐问题&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;现象&lt;/strong&gt;：文章分类的名称和数字对齐不统一。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;尝试的方案&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;使用固定宽度 &lt;code&gt;width: 80px&lt;/code&gt; → 数字多的时候溢出&lt;/li&gt;
+&lt;li&gt;使用 &lt;code&gt;text-align: left&lt;/code&gt; → 不美观&lt;/li&gt;
+&lt;li&gt;使用 &lt;code&gt;justify-content: center&lt;/code&gt; → 数字没有靠右&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;最终方案&lt;/strong&gt;：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.category-name {
+  flex: 1;           /* 占据剩余空间 */
+  text-align: center; /* 名称居中 */
+}
+
+.category-count {
+  /* 数字自然靠右 */
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;使用 &lt;code&gt;flex: 1&lt;/code&gt; 让名称占据剩余空间并居中，数字徽章自然靠右。&lt;/p&gt;
+&lt;h3&gt;坑 8：文章导入时图片 URL 错误&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;现象&lt;/strong&gt;：批量导入文章后，有些封面图显示无效。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：正则表达式匹配到了错误的图片 URL，例如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;image: generate:  # ❌ 这不是有效 URL
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;实际内容是 &lt;code&gt;![image: generate:](https://...)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：添加 URL 验证&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// 只接受有效的 URL 格式
+if (url.match(/^https?:\/\//) || url.match(/^\//)) {
+  coverImage = url;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;坑 9：EdgeOne 构建时 import.meta.glob 不工作&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;现象&lt;/strong&gt;：本地开发正常，但 EdgeOne 构建后数据不显示。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：&lt;code&gt;import.meta.glob&lt;/code&gt; 在 EdgeOne 构建环境下无法正确加载 JSON 文件。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;错误代码&lt;/strong&gt;：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+// ❌ 在 EdgeOne 构建时不工作
+const sponsorFiles = import.meta.glob(&apos;../../data/sponsors/*.json&apos;, { eager: true });
+const sponsors = Object.values(sponsorFiles).map(m =&amp;gt; m.default);
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：将数据直接内联到文件中&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+// ✅ 直接内联数据
+const sponsors = [
+  { &quot;name&quot;: &quot;赞助者1&quot;, &quot;avatar&quot;: &quot;https://...&quot;, &quot;date&quot;: &quot;2026-01-01&quot; },
+  { &quot;name&quot;: &quot;赞助者2&quot;, &quot;avatar&quot;: &quot;https://...&quot;, &quot;date&quot;: &quot;2026-01-02&quot; },
+  // ...更多数据
+];
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;经验教训&lt;/strong&gt;：在 EdgeOne 等云端构建环境中，尽量避免使用动态导入，对于静态数据直接内联更可靠。&lt;/p&gt;
+&lt;h3&gt;坑 10：浮动按钮挡住大纲&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;现象&lt;/strong&gt;：文章页面的评论/回到顶部按钮挡住了右侧大纲的部分区域。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：按钮位置设置过高。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;解决方案&lt;/strong&gt;：调整浮动按钮的 &lt;code&gt;bottom&lt;/code&gt; 值&lt;/p&gt;
+&lt;p&gt;修改 &lt;code&gt;src/components/control/BackToTop.astro&lt;/code&gt;：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.back-to-top-btn
+  // 从 bottom: 10rem 改为 bottom: 6rem（向下移动 4rem）
+
+#go-to-comments-btn
+  // 从 bottom: 14.5rem 改为 bottom: 10.5rem（向下移动 4rem）
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;五、配色系统设计&lt;/h2&gt;
+&lt;h3&gt;设计理念&lt;/h3&gt;
+&lt;p&gt;博客采用&lt;strong&gt;冷紫蓝系&lt;/strong&gt;作为唯一签名色，打造冷静编辑部的视觉氛围。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;设计原则&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;背景作为舞台&lt;/strong&gt; - 更深的背景，更浅的卡片&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;标题作为判断&lt;/strong&gt; - 更强的视觉层次&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;极端色彩克制&lt;/strong&gt; - 最少的颜色，创造可记忆的身份&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;配色方案&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;主题配置&lt;/strong&gt;（&lt;code&gt;src/config.ts&lt;/code&gt;）：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;themeColor: {
+  hue: 268,        // 冷紫蓝系
+  fixed: true,
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;颜色应用&lt;/strong&gt;：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;元素&lt;/th&gt;
+&lt;th&gt;颜色&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;背景色&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;oklch(0.12 0.01 268)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;深色纯色背景&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;主题渐变&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;#0ea5e9 → #8b5cf6&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;蓝紫渐变，用于标题和图标&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;分类悬停&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;#b7f605&lt;/code&gt; + 黑字&lt;/td&gt;
+&lt;td&gt;亮绿色点缀，唯一暖色&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;渐变元素&lt;/h3&gt;
+&lt;p&gt;使用蓝紫渐变的元素：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;导航栏网站名称和图标&lt;/li&gt;
+&lt;li&gt;分类标题（&quot;文章分类&quot;）&lt;/li&gt;
+&lt;li&gt;公众号标题&lt;/li&gt;
+&lt;li&gt;Hacker 风格装饰图标&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;内联样式&lt;/strong&gt;（防止 FOUC 闪烁）：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;style is:inline&amp;gt;
+.navbar-title-gradient,
+.navbar-title-gradient-icon,
+.gradient-text,
+.hacker-icon,
+.category-title,
+.decoration-title {
+    background: linear-gradient(135deg, #0ea5e9, #8b5cf6) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;六、特色功能实现&lt;/h2&gt;
+&lt;h3&gt;6.1 评论/回到顶部浮动按钮&lt;/h3&gt;
+&lt;p&gt;右下角浮动按钮，提供快捷导航：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;功能特性&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;默认显示&quot;评论&quot;按钮，点击跳转到评论区&lt;/li&gt;
+&lt;li&gt;点击后切换为&quot;回到顶部&quot;按钮&lt;/li&gt;
+&lt;li&gt;位置下移避免挡住大纲&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;修改文件&lt;/strong&gt;：&lt;code&gt;src/components/control/BackToTop.astro&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;6.2 表格样式优化&lt;/h3&gt;
+&lt;p&gt;表格采用表头浅色、数据行深色的配色方案：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;样式配置&lt;/strong&gt;（&lt;code&gt;src/styles/markdown-extend.styl&lt;/code&gt;）：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;thead th
+  background: var(--btn-plain-bg-hover)  // 表头：浅色
+
+tbody tr
+  background: var(--btn-regular-bg)      // 数据行：深色
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;6.3 自动提取封面和摘要&lt;/h3&gt;
+&lt;p&gt;无需手动填写，系统自动处理：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+title: 文章标题
+published: 2026-02-06
+tags: [标签]
+category: Technical
+# 无需填写 image 和 description
+---
+
+第一段文字会自动成为摘要...
+
+文章正文...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;封面&lt;/strong&gt;：自动提取第一张图片&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;摘要&lt;/strong&gt;：自动提取第一段文字（文章页隐藏，避免重复）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;6.4 微信二维码弹窗&lt;/h3&gt;
+&lt;p&gt;点击微信图标弹出霓虹灯风格弹窗，支持一键复制微信号。&lt;/p&gt;
+&lt;p&gt;修改 &lt;code&gt;src/layouts/MainGridLayout.astro&lt;/code&gt; 添加弹窗 HTML 和 JavaScript。&lt;/p&gt;
+&lt;h3&gt;6.5 Giscus 评论区&lt;/h3&gt;
+&lt;p&gt;基于 GitHub Discussions 的评论系统，无需数据库。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;配置步骤&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在 GitHub 仓库启用 Discussions&lt;/li&gt;
+&lt;li&gt;访问 https://giscus.app 获取配置&lt;/li&gt;
+&lt;li&gt;更新 &lt;code&gt;src/pages/posts/[...slug].astro&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;div id=&quot;giscus-container&quot;
+    data-repo=&quot;你的用户名/仓库名&quot;
+    data-repo-id=&quot;R_kgDOxxxxxxxxx&quot;
+    data-category=&quot;Announcements&quot;
+    data-category-id=&quot;DIC_kwDOxxxxxxxxx&quot;
+    data-mapping=&quot;pathname&quot;
+    data-theme=&quot;preferred_color_scheme&quot;
+    data-lang=&quot;zh-CN&quot;
+&amp;gt;&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;6.6 文章分类功能&lt;/h3&gt;
+&lt;p&gt;自动统计每个分类的文章数量，点击查看分类文章。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;分类规则&lt;/strong&gt;：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;分类&lt;/th&gt;
+&lt;th&gt;关键词&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Software&lt;/td&gt;
+&lt;td&gt;Typora, PicList, 快捷键, 图床, 工具&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Technical&lt;/td&gt;
+&lt;td&gt;教程, 部署, 搭建, 安装, 完整指南&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AIHacks&lt;/td&gt;
+&lt;td&gt;Claude, ChatGPT, GPT, 提示词, LLM&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;七、常用命令&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;# 创建新文章
+npm run new-post &quot;文章标题&quot;
+
+# 启动开发服务器
+npm run dev
+
+# 构建生产版本
+npm run build
+
+# 预览构建结果
+npm run preview
+
+# 批量导入文章
+node scripts/import-posts.cjs
+
+# 更新文章分类
+node scripts/update-categories.cjs
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;八、性能优化建议&lt;/h2&gt;
+&lt;h3&gt;7.1 图片优化&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;使用 WebP 格式（体积更小）&lt;/li&gt;
+&lt;li&gt;关键图片添加 &lt;code&gt;fetchpriority=&quot;high&quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;非关键图片使用 &lt;code&gt;loading=&quot;lazy&quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;7.2 字体优化&lt;/h3&gt;
+&lt;p&gt;使用 CDN 加载霞鹜文楷字体：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css&quot; /&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;7.3 构建优化&lt;/h3&gt;
+&lt;p&gt;Astro 默认进行代码分割和 tree-shaking，无需额外配置。&lt;/p&gt;
+&lt;h2&gt;九、总结&lt;/h2&gt;
+&lt;h3&gt;时间分配&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;任务&lt;/th&gt;
+&lt;th&gt;耗时&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;项目配置&lt;/td&gt;
+&lt;td&gt;1 小时&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;部署上线&lt;/td&gt;
+&lt;td&gt;30 分钟&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;修复 YAML 问题&lt;/td&gt;
+&lt;td&gt;2 小时&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;解决导航栏抖动&lt;/td&gt;
+&lt;td&gt;1 小时&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;性能优化&lt;/td&gt;
+&lt;td&gt;1 小时&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;修复构建问题&lt;/td&gt;
+&lt;td&gt;1 小时&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;其他调整&lt;/td&gt;
+&lt;td&gt;2 小时&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;总计&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;约 9 小时&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;经验总结&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;YAML 格式极其严格&lt;/strong&gt;：一个空格错误就会导致整篇文章无法显示&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;使用 CSS 变量&lt;/strong&gt;：避免固定颜色值，让主题自动适配&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;关键资源优先加载&lt;/strong&gt;：首屏图片不要使用 &lt;code&gt;loading=&quot;lazy&quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;测试深色模式&lt;/strong&gt;：确保在深色模式下也能正常显示&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;善用 Astro 的自动提取&lt;/strong&gt;：减少手动填写的工作量&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;注意云端构建差异&lt;/strong&gt;：&lt;code&gt;import.meta.glob&lt;/code&gt; 在云端可能不工作，静态数据直接内联更可靠&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;推荐资源&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Fuwari 主题&lt;/strong&gt;：https://github.com/saicaca/fuwari&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Astro 文档&lt;/strong&gt;：https://docs.astro.build&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;EdgeOne 控制台&lt;/strong&gt;：https://console.cloud.tencent.com/edgeone&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;霞鹜文楷字体&lt;/strong&gt;：https://github.com/lxgw/LxgwWenKai&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;下一步&lt;/h2&gt;
+&lt;p&gt;博客已经上线，接下来可以：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;完善个人信息和社交链接&lt;/li&gt;
+&lt;li&gt;配置自定义域名（需要备案）&lt;/li&gt;
+&lt;li&gt;添加更多文章&lt;/li&gt;
+&lt;li&gt;优化 SEO（搜索引擎优化）&lt;/li&gt;
+&lt;li&gt;集成统计工具（如 Umami）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;祝你搭建顺利！有任何问题欢迎在评论区留言。&lt;/p&gt;
 </content:encoded></item><item><title>PixPin截图配置指南</title><link>https://dqtx.cc/posts/software/pixpin%E6%88%AA%E5%9B%BE%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/pixpin%E6%88%AA%E5%9B%BE%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/</guid><description>使用PixPin有段时间了，集截图、长截图、贴图、标注、OCR 识别、屏幕录制等功能都有，但是我发现这个软件的快捷键/动作才是王炸，比如我自己配置的 ，截图并复...</description><pubDate>Wed, 15 Jan 2025 14:30:00 GMT</pubDate><content:encoded>&lt;p&gt;使用PixPin有段时间了，集截图、长截图、贴图、标注、OCR 识别、屏幕录制等功能都有，但是我发现这个软件的快捷键/动作才是王炸，比如我自己配置的 ，截图并复制OCR，截图并翻译，下面看下教程！&lt;/p&gt;
 &lt;h2&gt;一.软件下载&lt;/h2&gt;
 &lt;p&gt;官网：https://pixpin.cn/&lt;/p&gt;
