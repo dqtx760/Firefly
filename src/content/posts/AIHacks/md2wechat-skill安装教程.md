@@ -1,6 +1,6 @@
 ---
 title: md2wechat-skill安装教程
-published: 2026-02-08
+published: 2026-01-03
 tags: []
 category: AIHacks
 draft: false
