@@ -2,7 +2,7 @@
 title: OpenClaw完整安装指南
 published: 2026-02-08
 tags: []
-category: Technical
+category: AIHacks
 draft: false
 pinned: false
 ---
