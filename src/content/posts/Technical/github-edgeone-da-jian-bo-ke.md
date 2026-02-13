@@ -1,6 +1,6 @@
 ---
 title: GitHub + EdgeOne 搭建个人博客的过程
-published: 2026-02-08
+published: 2025-02-08
 tags: [博客, Astro, EdgeOne, GitHub, 部署]
 category: Technical
 draft: false
