@@ -62,7 +62,234 @@
 &lt;li&gt;⛓️ Web3教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867794661334761497#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;🛠️ 技术教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867808112450912266#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>AI大模型GLM4.7，MiniMax-M2.1限时免费渠道</title><link>https://dqtx.cc/posts/aihacks/glm_minimax_free/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/glm_minimax_free/</guid><pubDate>Fri, 13 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;整理了几个免费使用GLM-4.7与MiniMax M2.1大模型的区域免费渠道，2个可以提供免费的API,一个在线平台，还是两个客户端中可以免费用这两个模型&lt;/p&gt;
+</content:encoded></item><item><title>Antigravity安装使用教程</title><link>https://dqtx.cc/posts/aihacks/antigravity/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/antigravity/</guid><pubDate>Sun, 15 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Google Antigravity 是 DeepMind 推出的 AI 编程 IDE（2025-11-18 与 Gemini 3 同步发布），基于 VS Code 内核，核心是 “智能代理（Agentic）” 开发范式，能让 AI 自主规划、执行、验证编程任务，支持多智能体并行协作，适配复杂全栈开发场景&lt;/p&gt;
+&lt;h2&gt;软件下载安装&lt;/h2&gt;
+&lt;p&gt;官方地址https://antigravity.google/&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260124223748577.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;登录授权&lt;/h2&gt;
+&lt;p&gt;很多人往往卡在这里，解决办法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;魔法软件开启 TUN&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://link.zhihu.com/?target=https%3A//www.proxifier.com/&quot;&gt;安装 Proxifier&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260124211315751.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260124211331540.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;模式说明&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Planning（规划）&lt;/strong&gt;：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Agent 在执行任务之前会先进行规划，适用于深度研究、复杂任务或协作工作；&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Fast（快速）&lt;/strong&gt;：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Agent 将直接执行任务，适用于简单任务，可以更快速地完成任务。&lt;/p&gt;
+&lt;h2&gt;设置语言中文&lt;/h2&gt;
+&lt;p&gt;快捷键 &lt;code&gt;Ctrl+Shift+P(Windows)&lt;/code&gt; 输入&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Configure Display Language
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;更换自己喜欢的主题&lt;/h2&gt;
+&lt;p&gt;快捷键 &lt;code&gt;Ctrl+Shift+P(Windows)&lt;/code&gt; 输入&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Themes: Color Theme
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;点击“首选项:颜色主题”&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://m.okjike.com/originalPosts/691e6c5100c0686ab5271356&quot;&gt;导入 Cursor自带主题&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;常用快捷键&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;快捷键&lt;/th&gt;
+&lt;th&gt;操作&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+,&lt;/td&gt;
+&lt;td&gt;打开设置&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctrl+L&lt;/td&gt;
+&lt;td&gt;打开 Agent 对话框&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</content:encoded></item><item><title>16个自用Claude Skills</title><link>https://dqtx.cc/posts/aihacks/skills/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/skills/</guid><pubDate>Fri, 13 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Claude Skills 作为 AI 助手的功能拓展核心，能精准对接各类场景化需求，让智能协作更高效、更具针对性。以下是安装的16个自用的实用且强大的 Claude Skills。这些Skills覆盖了工作与创作中的关键场景，从基础的笔记优化、项目管理，到高阶的内容生成、设计开发，均能提供专业化支持。&lt;/p&gt;
+&lt;h2&gt;Skills 目录&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;D:\zhishiku\.claude\skills\&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;⚠️ tempmyskill_temp 目录说明&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;目录路径&lt;/strong&gt;：&lt;code&gt;D:\zhishiku\.claude\skills\tempmyskill_temp\&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;是什么&lt;/strong&gt;：这是一个&lt;strong&gt;临时技能仓库&lt;/strong&gt;，包含 28 个从 GitHub 下载的技能项目，&lt;strong&gt;不是主 skills 的一部分&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;包含内容&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ai-writing-assistant - AI 写作助手&lt;/li&gt;
+&lt;li&gt;mcp-builder - MCP 服务器开发指南&lt;/li&gt;
+&lt;li&gt;skill-creator - Skill 创建工具&lt;/li&gt;
+&lt;li&gt;...还有 25 个其他技能&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;状态&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ 有完整的 SKILL.md 定义&lt;/li&gt;
+&lt;li&gt;❌ 未整合到主 skills 目录&lt;/li&gt;
+&lt;li&gt;⚠️ &lt;strong&gt;需要手动移动有用的 skills 到主目录才能使用&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;已安装 Skills 列表&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;#&lt;/th&gt;
+&lt;th&gt;Skill 名称&lt;/th&gt;
+&lt;th&gt;功能说明&lt;/th&gt;
+&lt;th&gt;使用文档&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;baoyu-article-illustrator&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;文章配图生成&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;baoyu-article-illustrator.md&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;baoyu-url-to-markdown&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;URL 转 Markdown&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;baoyu-url-to-markdown.md&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;image&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;AI 图片生成（通义千问）&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;image.md&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;md2wechat-skill&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Markdown 转微信格式&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;md2wechat-skill.md&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;nano-banana-ppt&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;PPT 生成&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;nano-banana-ppt.md&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;notebooklm&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;NotebookLM 自动化&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;notebooklm-py.md&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;obsidian-skills&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Obsidian 相关技能&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;obsidian-skills.md&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;planning-with-files&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;文件式项目规划&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;planning-with-files.md&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;prompt-skills&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;提示词技能&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;skill-prompt-generator.md&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;ui-skills&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;UI/UX 技能集&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;ui-skills.md&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;ui-ux-pro-max&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;UI/UX 专业设计&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;ui-ux-pro-max-skill.md&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;url-to-markdown&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;URL 转 Markdown（另一版本）&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;url-to-markdown.md&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;youtube-clipper-skill&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;YouTube 视频智能剪辑&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;Youtube-clipper-skill.md&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;14&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;youtube-transcript-cn&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;YouTube 字幕转中文&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;youtube-transcript-cn.md&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;15&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;ai-writing-assistant&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;AI 写作助手（6 种方法）&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;ai-writing-assistant.md&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;mcp-builder&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;MCP 服务器开发指南&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;mcp-builder.md&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;按类别分组&lt;/h2&gt;
+&lt;h3&gt;📝 内容创作&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;baoyu-article-illustrator - 文章配图&lt;/li&gt;
+&lt;li&gt;baoyu-url-to-markdown / url-to-markdown - URL 转 Markdown&lt;/li&gt;
+&lt;li&gt;md2wechat-skill - 微信格式转换&lt;/li&gt;
+&lt;li&gt;ai-writing-assistant - 写作助手&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;🖼️ 图片/视觉&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;image - AI 图片生成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;📹 视频处理&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;youtube-clipper-skill - 视频剪辑&lt;/li&gt;
+&lt;li&gt;youtube-transcript-cn - 字幕提取&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;🛠️ 生产力&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;notebooklm - NotebookLM 自动化&lt;/li&gt;
+&lt;li&gt;planning-with-files - 项目规划&lt;/li&gt;
+&lt;li&gt;prompt-skills - 提示词管理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;🎨 UI/UX&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;ui-skills - UI 技能集&lt;/li&gt;
+&lt;li&gt;ui-ux-pro-max - UI 专业设计&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;🔧 开发工具&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;mcp-builder - MCP 服务器开发指南&lt;/li&gt;
+&lt;li&gt;obsidian-skills - Obsidian 相关&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2&gt;使用方式&lt;/h2&gt;
+&lt;p&gt;在 Claude Code 中直接对话使用，例如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&quot;请用 baoyu-article-illustrator 为这篇文章配图&quot;&lt;/li&gt;
+&lt;li&gt;&quot;请用 image 生成一张猫的图片&quot;&lt;/li&gt;
+&lt;li&gt;&quot;请用 ai-writing-assistant 帮我写一篇技术文章&quot;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2&gt;更新日志&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;2026-02-12: 新增 ai-writing-assistant.md 和 mcp-builder.md&lt;/li&gt;
+&lt;li&gt;2026-02-12: 更新本总览文档，添加双联到使用教程&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;以上，既然看到这里了，如果你觉得内容不错，随手点个赞、在看、转发三连吧！如果想第一时间收到推送，也可以给我点上关注或星标⭐&lt;/strong&gt;～&lt;/p&gt;
+&lt;p&gt;谢谢你看我的文章，&lt;strong&gt;远程服务：742112.xyz&lt;/strong&gt;&lt;/p&gt;
+</content:encoded></item><item><title>GLM4.7/MiniMax-M2.1免费渠道</title><link>https://dqtx.cc/posts/aihacks/glm_minimax_free2/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/glm_minimax_free2/</guid><pubDate>Fri, 13 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;整理了几个免费使用GLM-4.7与MiniMax M2.1大模型的区域免费渠道，2个可以提供免费的API,一个在线平台，还是两个客户端中可以免费用这两个模型。&lt;/p&gt;
 &lt;h2&gt;1.英伟达&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.80aj.com/2026/01/06/nvidia-nim-glm4-minimax-guide/&quot;&gt;英伟达NIM平台：免费调用GLM-4.7与MiniMax M2.1指南&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=vSjC6LnMGm4&quot;&gt;GLM-4.7 + MiniMax M2.1 免费 API，媲美直连 Claude Code！&lt;/a&gt;&lt;/p&gt;
@@ -96,6 +323,72 @@
 &lt;/ul&gt;
 &lt;p&gt;如果觉得这篇教程对你有帮助，别忘了&lt;strong&gt;点赞+收藏+转发&lt;/strong&gt;三连呀！关注我，后续分享更多实用技巧、效率工具干货，下次见～ 👋&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;大强远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+</content:encoded></item><item><title>AntigravityTool使用教程</title><link>https://dqtx.cc/posts/aihacks/antigravitytool%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/antigravitytool%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid><pubDate>Fri, 13 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Antigravity Tool 是一款智能代理项目，用于将Antigravity内的模型转换为不同协议标准 API，支持OpenAI 协议，Anthropic协议，Gemini 协议，本文主要演示供Claude使用。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;协议&lt;/th&gt;
+&lt;th&gt;供给&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;OpenAI 协议&lt;/td&gt;
+&lt;td&gt;OpenCode&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Anthropic 协议&lt;/td&gt;
+&lt;td&gt;Claude Code&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Gemini 协议&lt;/td&gt;
+&lt;td&gt;Cherry Studio&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;安装Antigravity Tools&lt;/h2&gt;
+&lt;p&gt;项目地址https://github.com/lbjlaq/Antigravity-Manager&lt;/p&gt;
+&lt;p&gt;在 Antigravity Tools 桌面软件添加账号，打开浏览器通过谷歌账号登录 Antigravity&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⚠️授权登录不，魔法开启了“TUN模式&quot;或“虚拟网卡模式”
+或者切换魔法新加坡  或使用&lt;a href=&quot;https://zhuanlan.zhihu.com/p/1976637026888619563&quot;&gt;Proxifier 强制代理&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20251227230252709.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;接入Claude Code&lt;/h2&gt;
+&lt;h4&gt;前置准备&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Node.js&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;https://nodejs.org/zh-cn/download&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Git&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;https://git-scm.com/install/windows&lt;/p&gt;
+&lt;h4&gt;安装Claude Code&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;npm install -g @anthropic-ai/claude-code
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;安装完成后，输入下面的命令查看是否安装成功。只要能看到版本号，就表示已经就绪：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;claude --version
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20251227225923134.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h4&gt;配置环境变量&lt;/h4&gt;
+&lt;h4&gt;方法1：命令&lt;/h4&gt;
+&lt;p&gt;启动 Antigravity，并在“API 反代”页面开启服务。
+在bash终端执行：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;export ANTHROPIC_API_KEY=&quot;你的API&quot;
+export ANTHROPIC_BASE_URL=&quot;http://127.0.0.1:8045&quot;
+Claude
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20251227230150665.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h4&gt;方法2：CC Switch&lt;/h4&gt;
+&lt;p&gt;下载地址https://github.com/farion1231/cc-switch/tags&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;打开Antigravity Tools，“API 反代 ”---“启动服务”----多协议支持---Anthropic 协议：拿到base_url，api_key，复制一个模型名称&lt;/p&gt;
+&lt;p&gt;打开CC Switch，Claude---右上方“+”---自定义配置，填写API Key、官网链接/请求地址、主模型&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;写在最后&lt;/h2&gt;
+&lt;p&gt;Antigravity Tools可以添加多个 Google 账号，每个账号都有一定的 Antigravity 模型额度，如果额度不够可点击切换账号，智能切换到额度足够的账号。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;大强远程技术支持：742112.xyz&lt;/strong&gt;&lt;/p&gt;
 </content:encoded></item><item><title>三步搞定软件汉化</title><link>https://dqtx.cc/posts/technical/hanhua/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/hanhua/</guid><pubDate>Thu, 12 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;还在为英文软件界面发愁吗？下载的中文版广告满天飞，还可能暗藏木马。今天教你用Resource Hacker工具，三步搞定软件汉化，安全又实用！&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/hanhua.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;第一步：准备工作&lt;/h2&gt;
@@ -260,287 +553,6 @@ source ~/catkin_ws/devel/setup.bash
 &lt;h2&gt;参考资料&lt;/h2&gt;
 &lt;p&gt;openclaw接入飞书教程&lt;/p&gt;
 &lt;p&gt;https://x.com/0xValkyrie_ai/status/2020330035652227360&lt;/p&gt;
-</content:encoded></item><item><title>Obsidian+AI：让笔记变成智能知识库</title><link>https://dqtx.cc/posts/aihacks/obsidian-ai/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/obsidian-ai/</guid><description>这几天，在github发现Obsidian重磅插件，直接把 AI 功能深度集成到核心里了！今天我要分享的 Obsidian+AI 组合，一次性解决这些痛点！</description><pubDate>Wed, 04 Feb 2026 04:54:28 GMT</pubDate><content:encoded>&lt;p&gt;这几天，在gihub发现Obsidian重磅插件，直接把 AI 功能深度集成到核心里了！网上都在夸赞，确实&lt;strong&gt;牛批&lt;/strong&gt;！今天我要分享的 Obsidian+AI 组合，&lt;em&gt;一次性解决这些痛点&lt;/em&gt;！简单说，你的笔记不再是一个个&lt;strong&gt;死文档*，而是变成了能理解、能推理、能自动化的&lt;/strong&gt;AI 上下文层**。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260113215058651.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;一.准备工作&lt;/h2&gt;
-&lt;p&gt;✅已安装 Obsidian&lt;/p&gt;
-&lt;p&gt;✅安装并配置了 Claude Code&lt;/p&gt;
-&lt;h2&gt;二.Obsidian个人配置&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;我的统文件结构&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;📁 你的 Vault
-├── 📄 CLAUDE.md              # AI 配置文件
-├── 📄 claude.json            # Skills 配置
-├── 📁 .claude/
-│   ├── 📁 commands/          # 自定义命令
-│   └── 📁 skills/            # Skills 包
-├── 📁 加工中/                 # 正在编辑的文章
-├── 📁 1️⃣常用工具/            # 常用工具配置
-├── 📁 2️⃣流量策划/            # 流量策划项目
-├── 📁 3️⃣销售转换/            # 销售转换项目
-└── 📁 4️⃣产品交付/            # 产品交付项目
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;1.外观设置&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260113215034732.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;2.主题推荐&lt;/h3&gt;
-&lt;p&gt;设置-外观-主题-管理，搜索：&lt;/p&gt;
-&lt;p&gt;推荐主题&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Primary(推荐）&lt;/li&gt;
-&lt;li&gt;AnuPpuccin&lt;/li&gt;
-&lt;li&gt;Baseline&lt;/li&gt;
-&lt;li&gt;Typora-Vue&lt;/li&gt;
-&lt;li&gt;Zen&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;3.安装必要插件&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;设置&lt;/code&gt;-&lt;code&gt;第三方插件&lt;/code&gt;-&lt;code&gt;关闭安全模式&lt;/code&gt;---社区插件市场，搜索：&lt;/p&gt;
-&lt;h4&gt;Floating Search  ：搜索神器&lt;/h4&gt;
-&lt;blockquote&gt;
-&lt;p&gt;功能：tag: (Find tag) → 快捷键 Ctrl + F
-用途：快速搜索标签和内容&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h4&gt;Git ：Git 同步插件&lt;/h4&gt;
-&lt;blockquote&gt;
-&lt;p&gt;详细教程：点此查看 →https://www.bilibili.com/video/BV1fZCyBYEuT/?spm_id_from=333.1387.favlist.content.click&amp;amp;vd_source=206031f494850e57fd6c92ace02b1bed&lt;/p&gt;
-&lt;p&gt;用途：版本控制、团队协作、备份恢复&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;https://xodnytdcaw.feishu.cn/space/api/box/stream/download/asynccode/?code=NzJiOTJmYjM2NDJkYTY2YmNlMGEwNTM5MTUzMTc1MjNfUDNQaVFUUWE0SVpXc1ZpU0YxTFVzb2NNMG16N3N6QzJfVG9rZW46Qk9XYmJyMVM2b1pVSTZ4TU5yc2NLYmNQbkJnXzE3NjgzMDgwMTI6MTc2ODMxMTYxMl9WNA&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-&lt;h4&gt;图片附件管理插件&lt;/h4&gt;
-&lt;p&gt;Custom Attachment Location：图像附件存储&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;功能：自定义图片存储位置
-用途：整理附件文件夹，避免混乱&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260113215103569.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260113215104746.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h4&gt;公众号发布插件&lt;/h4&gt;
-&lt;p&gt;NoteToMP：一键发布&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;功能：直接发送到公众号草稿箱
-用途：内容创作与发布一体化&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h4&gt;Claudian：AI 集成插件（重点）&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;Claudian&lt;/strong&gt;：Claude Code 侧边栏集成&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;功能：把 Claude Code 整合到 Obsidian 侧边栏
-用途：直接在 Obsidian 中对话，读取当前 Markdown&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260113215058651.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;安装 Claudian 手动教程&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;下载文件&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;前往 &lt;a href=&quot;https://github.com/YishenTu/claudian/releases/latest&quot;&gt;Claudian Release 页面&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;下载三个文件：&lt;code&gt;main.js&lt;/code&gt;、&lt;code&gt;manifest.json&lt;/code&gt;、&lt;code&gt;styles.css&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;创建文件夹&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;路径：&lt;code&gt;/path/to/vault/.obsidian/plugins/claudian/&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.obsidian&lt;/code&gt; 文件夹通常是隐藏的&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;放入文件&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;将下载的三个文件复制到 &lt;code&gt;claudian&lt;/code&gt; 文件夹&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;启用插件&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;重启 Obsidian&lt;/li&gt;
-&lt;li&gt;设置 → 第三方插件 → 找到 &quot;Claudian&quot; 并启用&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2&gt;三.配置 Claude Skills 系统&lt;/h2&gt;
-&lt;h4&gt;3.1 创建 claude.json 配置文件&lt;/h4&gt;
-&lt;p&gt;在 &lt;code&gt;.claude&lt;/code&gt; 文件夹下创建 &lt;code&gt;claude.json&lt;/code&gt;：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;{
-  &quot;skills&quot;: [
-    &quot;./skills/obsidian-skills/obsidian-markdown&quot;,
-    &quot;./skills/obsidian-skills/json-canvas&quot;,
-    &quot;./skills/obsidian-skills/obsidian-bases&quot;
-  ]
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4&gt;3.2 下载Obsidian Skills 包&lt;/h4&gt;
-&lt;p&gt;在 &lt;code&gt;.claude&lt;/code&gt; 文件夹创建 &lt;code&gt;skills&lt;/code&gt; 文件夹，然后下载：https://github.com/kepano/obsidian-skills&lt;/p&gt;
-&lt;h6&gt;&lt;strong&gt;技能应用场景展示&lt;/strong&gt;：&lt;/h6&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260113212002494.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260113215435163.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;四、 obsidian Skills 使用指南&lt;/h2&gt;
-&lt;h6&gt;&lt;strong&gt;A.基础用法&lt;/strong&gt;&lt;/h6&gt;
-&lt;p&gt;&lt;strong&gt;1️⃣obsidian-markdown&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;创建符合 Obsidian 规范的 Markdown 文件&lt;/p&gt;
-&lt;p&gt;示例 1: 创建项目笔记&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;创建一个名为&quot;项目计划.md&quot;的笔记，包含以下内容：
-- Frontmatter 属性：项目状态为进行中，优先级为高
-- 使用 callout 标注重要截止日期
-- 创建任务清单，包含已完成和待办任务
-- 添加项目架构的 Mermaid 流程图
-- 链接到相关的&quot;团队文档&quot;笔记
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;示例 2: 创建学习笔记&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;创建&quot;JavaScript 学习笔记.md&quot;，包含：
- - 使用 info callout 介绍学习目标
- - 代码高亮示例（JavaScript 和 Python）
- - 使用嵌套列表组织知识点
- - 添加数学公式示例
- - 创建折叠的 FAQ callout
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;2️⃣json-canvas&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;JSON Canvas 是一种开放格式，用于创建无限画布。AI 可以自动生成思维导图、流程图、项目看板等可视化内容。&lt;/p&gt;
-&lt;p&gt;示例 1: 创建思维导图&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt; 创建一个名为&quot;产品开发思维导图.canvas&quot;的文件，主题是&quot;新功能开发&quot;，包含：
- - 中心节点：&quot;新功能开发&quot;（使用青色）
- - 分支节点：需求分析、设计、开发、测试、部署（5个分支）
- - 每个分支下添加 2-3 个子节点，包含具体任务
- - 使用箭头连接所有节点
- - 使用不同颜色区分不同阶段
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;示例 2: 创建项目看板&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;创建&quot;项目看板.canvas&quot;，实现看板视图：
- - 创建 3 个分组：待办、进行中、已完成（使用红、黄、绿色）
- - 每个分组内添加 2-3 个任务卡片
- - 任务内容包含任务名和描述
- - 合理布局，确保美观
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;示例 3: 创建流程图&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;创建&quot;用户注册流程.canvas&quot;：
-- 节点：开始 → 输入信息 → 验证数据 → {数据有效?}
-- 决策节点：Yes → 创建账户 → 发送邮件 → 结束
-- 决策节点：No → 显示错误 → 返回输入
-- 使用箭头和标签标注流程
-- 决策节点使用黄色，开始/结束使用绿色
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;示例 4: 创建研究资料画布&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;创建&quot;AI研究.canvas&quot;画布：
-- 中心节点：AI 研究主题
-- 周围节点链接到相关的笔记文件（使用 file 节点）
-- 添加外部资源链接（使用 link 节点）
-- 将相关内容用 group 节点分组
-- 使用带标签的连线说明关系
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;3️⃣obsidian-bases&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Obsidian Bases 是基于 YAML 的数据视图系统，可以将笔记转换为数据库表格、卡片视图等。AI 可以自动创建配置文件。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;示例 1: 任务管理系统&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;创建&quot;任务管理.base&quot;，实现以下功能：
-- 筛选所有包含 #task 标签的 Markdown 文件
-- 创建公式字段：
-  - days_until_due: 计算距离截止日期的天数
-  - is_overdue: 判断是否过期
-  - priority_label: 根据 priority 字段显示 🟥🟨🩩 图标
-- 表格视图：显示任务名、状态、优先级、截止日期、距离天数
-- 按状态分组排序
-- 添加平均天数统计
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;示例 2: 阅读清单&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;创建&quot;阅读清单.base&quot;：
-- 筛选包含 #book 或 #article 标签的笔记
-- 创建公式：
-  - reading_time: 根据页数估算阅读时间（每页 2 分钟）
-  - status_icon: 根据 status 显示 📖/✅/📚 图标
-  - year_read: 提取完成日期的年份
-- 卡片视图：显示封面、书名、作者、状态图标
-- 表格视图：显示书名、作者、页数、预计时间、状态
-- 排除已放弃的书籍
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;示例 3: 项目进度追踪&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;创建&quot;项目追踪.base&quot;：
-- 筛选&quot;Projects&quot;文件夹下的所有 Markdown 文件
-- 创建公式：
-  - last_updated: 显示相对更新时间（如&quot;3天前&quot;）
-  - link_count: 统计笔记中的链接数量
-  - progress: 根据完成任务的百分比计算进度
-- 表格视图：显示项目名、状态、更新时间、链接数、进度
-- 按状态分组
-- 添加进度条可视化（使用 icon 函数）
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;示例 4: 每日笔记索引&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;创建&quot;日记索引.base&quot;：
-- 筛选&quot;Daily Notes&quot;文件夹下文件名格式为 YYYY-MM-DD 的笔记
-- 创建公式：
-  - word_estimate: 估算字数（文件大小除以 5）
-  - day_of_week: 提取星期几
-  - has_images: 判断是否包含图片
-- 表格视图：显示日期、星期、估算字数、图片数量
-- 限制显示最近 30 天
-- 按修改时间倒序排列
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;示例 4: 附件&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;请根据附件内容生成一个 高颜值Obsidian Canvas，每个主题建立一个分组，设置颜色，注意，每个节点之前的距离不要太靠近，中文输出
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h6&gt;B.高级技巧：组合使用多个 Skills&lt;/h6&gt;
-&lt;p&gt;技巧 1: 生成项目看板&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;为我的项目创建完整的文档系统：
-1. 创建&quot;项目看板.canvas&quot;可视化展示项目结构
-2. 创建&quot;任务管理.base&quot;追踪所有任务
-3. 创建&quot;项目主页.md&quot;作为索引，包含：
-   - 项目概述（使用 callout）
-   - 嵌入项目看板
-   - 嵌入任务管理视图
-   - Mermaid 架构图
-   - 相关文档链接
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;技巧 2: 学习系统&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;创建&quot;主题学习&quot;系统：
-1. 创建&quot;知识地图.canvas&quot;，用思维导图展示知识结构
-2. 创建&quot;学习资源.base&quot;，管理所有学习资料（书籍、文章、视频）
-3. 创建&quot;学习笔记.md&quot;模板，包含：
-   - 学习目标（checklist）
-   - 重要概念（callout 标注）
-   - 代码示例
-   - 笔记总结
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h5&gt;&lt;/h5&gt;
-&lt;p&gt;&lt;strong&gt;附：自定义命令配置&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;项目命令：&lt;code&gt;项目根目录/.claude/commands/&lt;/code&gt; 下，仅当前项目可用。&lt;/p&gt;
-&lt;p&gt;Slash Commands即自定义斜杠命令。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;环境准备
-mkdir -p ~/.claude/commands     #创建命令目录（递归创建，不存在则自动生成）
-touch ~/.claude/commands/search-web.md   # 创建命令文件（以search-web.md为例）
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;编写命令文件（Markdown 格式）&lt;/p&gt;
-&lt;p&gt;每个命令对应一个 &lt;code&gt;.md&lt;/code&gt; 文件，包含元数据与执行逻辑（示例）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;---
-# 元数据（YAML格式，必须放在开头）
-description: &quot;调用搜索工具查询指定关键词的网页信息&quot; # 命令描述
-argument-hint: &quot;搜索关键词（如：Slash Commands 最佳实践）&quot; # 参数提示
-allowed-tools: [&quot;Search&quot;] # 允许调用的工具（如Search、Read、Edit）
----
-# 命令执行逻辑（提示词模板，$ARGUMENTS为参数占位符）
-请使用搜索工具查询以下关键词的最新信息，并整理成结构化摘要：
-$ARGUMENTS
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;在 Claude Code 中输入 &lt;code&gt;/search-web Slash Commands 自定义方法&lt;/code&gt;，自动替换 &lt;code&gt;$ARGUMENTS&lt;/code&gt; 为传入参数。&lt;/p&gt;
-&lt;h2&gt;五.其他推荐工具&lt;/h2&gt;
-&lt;h3&gt;Chrome 插件剪藏工具&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Obsidian Web Clipper&lt;/strong&gt;：网页剪藏神器&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;功能：一键剪藏网页内容到 Obsidian
-用途：收集资料、保存网页、整理收藏
-下载地址：https://chromewebstore.google.com/detail/obsidian-web-clipper/cnjifjpddelmedmihgijeibhnjfabmlf
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;字体推荐&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;中文推荐&lt;/strong&gt;：TsangerJinKai02（闪客金楷）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;特色：优雅的中文显示
-用途：提升阅读体验
-下载：https://github.com/tw93/MiaoYan-NetNewsWire-Theme/blob/main/TsangerJinKai02-W04.ttf
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;英文代码推荐&lt;/strong&gt;：JetBrains Mono&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;特色：专业的代码显示
-用途：编程、技术文档
-下载：https://www.jetbrains.com/lp/mono/
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;六、验证配置&lt;/h2&gt;
-&lt;p&gt;安装完成后，打开 Claudian 插件对话界面，发送测试命令：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;请列出你检测到的本地 skills（json-canvas / obsidian-markdown / obsidian-bases），并在常用工具创建一个测试笔记赵国强.md 包含 [[链接]]、#tag、- [ ] todo。
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;如果返回正确的技能列表并创建了文件，说明配置成功！&lt;/p&gt;
-&lt;p&gt;以上.今天的分享就到这里。Obsidian + AI 的组合，确实让知识管理效率&lt;strong&gt;爆表&lt;/strong&gt;！&lt;/p&gt;
-&lt;p&gt;如果内容对你有所帮助，欢迎一键三连（点赞、在看、转发）。如果你有其他软件需求，也欢迎评论区留言，我们下次再见。&lt;/p&gt;
 </content:encoded></item><item><title>workany：桌面Agent产品</title><link>https://dqtx.cc/posts/aihacks/workany/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/workany/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;WorkAny&lt;/strong&gt; 是一款基于 Claude 3.5 Sonnet 模型构建的智能工作助手平台。它不仅能与你自然对话，更拥有强大的文件处理、代码编写、文档创建等实用能力。简单来说，它就像给 AI 装上了&quot;双手&quot;——不仅能思考，还能真正帮你&lt;strong&gt;动手完成工作&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/workany_coding_1280x720.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;✨ 核心功能一览&lt;/h2&gt;
@@ -1048,31 +1060,6 @@ category: Technical
 &lt;h2&gt;四、结语&lt;/h2&gt;
 &lt;p&gt;这个 “终极 Win7” 更像一份 “情怀礼包”：它不是让你回到过去，而是给老用户留了个 “怀旧入口”，给老设备续了口命。Win7 的时代早就结束了，但那些抱着它通宵打游戏、熬夜写论文的日子，永远是我们和电脑的独家记忆。&lt;/p&gt;
 &lt;p&gt;如果你也想再摸一把 “青春系统”，可以试试这个版本 —— 但记得：别把它当主力，当个玩具就好。&lt;/p&gt;
-</content:encoded></item><item><title>7个优质精选Claude Skills</title><link>https://dqtx.cc/posts/aihacks/7%E4%B8%AA%E4%BC%98%E8%B4%A8%E7%B2%BE%E9%80%89claude-skills/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/7%E4%B8%AA%E4%BC%98%E8%B4%A8%E7%B2%BE%E9%80%89claude-skills/</guid><description>Claude Skills 作为 AI 助手的功能拓展核心，能精准对接各类场景化需求，让智能协作更高效、更具针对性。以下是安装的7个实用且强大的 Claude ...</description><pubDate>Thu, 15 Jan 2026 11:20:00 GMT</pubDate><content:encoded>&lt;p&gt;Claude Skills 作为 AI 助手的功能拓展核心，能精准对接各类场景化需求，让智能协作更高效、更具针对性。以下是安装的7个实用且强大的 Claude Skills。&lt;/p&gt;
-&lt;p&gt;这些Skills覆盖了工作与创作中的关键场景，从基础的笔记优化、项目管理，到高阶的内容生成、设计开发，均能提供专业化支持。&lt;/p&gt;
-&lt;h3&gt;obsidian-skills&lt;/h3&gt;
-&lt;p&gt;https://github.com/obsidian-community/obsidian-skills&lt;br /&gt;
-Obsidian 笔记软件相关技能拓展合集，聚焦 Obsidian 使用技巧、插件配套教程、高效笔记搭建方法等内容（注：网页解析失败，建议检查链接有效性或稍后重试）。&lt;/p&gt;
-&lt;h3&gt;planning-with-files&lt;/h3&gt;
-&lt;p&gt;https://github.com/OthmanAdi/planning-with-files&lt;br /&gt;
-复刻 Manus （Meta 20 亿美元收购的 AI 代理公司）工作模式的 Claude Code 插件，以持久化 Markdown 文件为核心的项目规划工具。通过 &lt;code&gt;task_plan.md&lt;/code&gt;（进度追踪）、&lt;code&gt;findings.md&lt;/code&gt;（研究存储）、&lt;code&gt;progress.md&lt;/code&gt;（会话日志）三文件模式，解决 AI 助手内存易失、目标漂移、错误重复等问题，支持 Hooks 集成、模板自定义，适配多场景复杂任务与跨平台安装使用。&lt;/p&gt;
-&lt;h3&gt;notebooklm-py&lt;/h3&gt;
-&lt;p&gt;https://github.com/teng-lin/notebooklm-py&lt;/p&gt;
-&lt;p&gt;Google NotebookLM 缺少 API。通过 Python 或命令行，即可实现研究工作流程自动化、从文档生成播客以及将 NotebookLM 集成到 AI 代理中。&lt;/p&gt;
-&lt;h3&gt;nano-banana-ppt&lt;/h3&gt;
-&lt;p&gt;https://github.com/op7418/NanoBanana-PPT-Skills&lt;br /&gt;
-AI 驱动的高质量 PPT 与视频生成工具，支持智能文档分析、核心要点提取、PPT 结构规划，内置渐变毛玻璃卡片、矢量插画两种专业风格，可生成 2K/4K 分辨率图片；集成可灵 AI 实现流畅转场视频生成，支持交互式播放、FFmpeg 完整视频合成，兼容 Claude Code Skill 模式，可通过命令行或 AI 助手快速调用。&lt;/p&gt;
-&lt;h3&gt;skill-prompt-generator&lt;/h3&gt;
-&lt;p&gt;https://github.com/huangserva/skill-prompt-generator&lt;/p&gt;
-&lt;p&gt;通过12个专业领域Skills，基于Universal Elements Library（1246+元素）生成高质量AI图像提示词。&lt;/p&gt;
-&lt;h3&gt;ui-skills&lt;/h3&gt;
-&lt;p&gt;https://github.com/ibelick/ui-skills&lt;br /&gt;
-面向 AI 代理的 UI 开发约束规范仓库，提供一套经过实践验证的界面构建准则，旨在解决 AI 生成 UI 时的设计冗余、体验不一致等问题，核心包含界面设计约束规则、适配 AI 开发的交互规范，支持通过安装脚本快速集成，配套官网（www.ui-skills.com）提供详细指南。&lt;/p&gt;
-&lt;h3&gt;ui-ux-pro-max-skill&lt;/h3&gt;
-&lt;p&gt;https://github.com/nextlevelbuilder/ui-ux-pro-max-skill&lt;br /&gt;
-跨平台 UI/UX 专业设计智能工具，集成 57 种 UI 风格、95 套行业配色、56 组字体搭配、24 类图表类型及 98 条 UX 设计规范，支持 React、Next.js、Vue、Tailwind 等 11 种主流技术栈。可作为 Claude Code、Cursor、GitHub Copilot 等 AI 助手的技能插件，通过 CLI 或手动安装快速启用，适用于 SaaS 产品、医疗分析、电商 App 等多场景 UI/UX 设计与开发。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;以上，既然看到这里了，如果你觉得内容不错，随手点个赞、在看、转发三连吧！如果想第一时间收到推送，也可以给我点上关注或星标⭐&lt;/strong&gt;～&lt;/p&gt;
-&lt;p&gt;谢谢你看我的文章，&lt;strong&gt;远程服务：742112.xyz&lt;/strong&gt;&lt;/p&gt;
 </content:encoded></item><item><title>Zed安装使用教程</title><link>https://dqtx.cc/posts/aihacks/zed/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/zed/</guid><description>Zed 是 Rust 编写、GPU 加速的跨平台开源代码编辑器（Windows/macOS/Linux），主打极速性能、原生 AI 代理协作、实时多人开发，定位...</description><pubDate>Thu, 15 Jan 2026 11:20:00 GMT</pubDate><content:encoded>&lt;p&gt;Zed 是 Rust 编写、GPU 加速的跨平台开源代码编辑器（Windows/macOS/Linux），主打&lt;strong&gt;极速性能、原生 AI 代理协作、实时多人开发&lt;/strong&gt;，定位为下一代 AI 驱动的 IDE，由 Atom/Tree-sitter 核心团队打造，兼顾个人开发与团队协作Zed&lt;/p&gt;
 &lt;p&gt;定价：基础编辑器永久免费（无 AI 功能）；Zed Pro 含免费额度，付费版 20 美元 / 月（500 次提示），协作功能全用户免费&lt;/p&gt;
 &lt;h2&gt;下载安装&lt;/h2&gt;
@@ -1085,225 +1072,6 @@ AI 驱动的高质量 PPT 与视频生成工具，支持智能文档分析、核
 &lt;p&gt;3，开始对话&lt;/p&gt;
 &lt;p&gt;Ctrl-Alt-B打开对话框&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260124225337099.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-</content:encoded></item><item><title>AntigravityTool使用教程</title><link>https://dqtx.cc/posts/aihacks/antigravitytool%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/antigravitytool%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid><description>Antigravity Tool 是一款智能代理项目，用于将Antigravity内的模型转换为不同协议标准 API，支持OpenAI 协议，Anthropic...</description><pubDate>Thu, 15 Jan 2026 11:20:00 GMT</pubDate><content:encoded>&lt;p&gt;Antigravity Tool 是一款智能代理项目，用于将Antigravity内的模型转换为不同协议标准 API，支持OpenAI 协议，Anthropic协议，Gemini 协议，本文主要演示供Claude使用。&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;协议&lt;/th&gt;
-&lt;th&gt;供给&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;OpenAI 协议&lt;/td&gt;
-&lt;td&gt;OpenCode&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Anthropic 协议&lt;/td&gt;
-&lt;td&gt;Claude Code&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Gemini 协议&lt;/td&gt;
-&lt;td&gt;Cherry Studio&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2&gt;安装Antigravity Tools&lt;/h2&gt;
-&lt;p&gt;项目地址https://github.com/lbjlaq/Antigravity-Manager&lt;/p&gt;
-&lt;p&gt;在 Antigravity Tools 桌面软件添加账号，打开浏览器通过谷歌账号登录 Antigravity&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;⚠️授权登录不，魔法开启了“TUN模式&quot;或“虚拟网卡模式”
-或者切换魔法新加坡  或使用&lt;a href=&quot;https://zhuanlan.zhihu.com/p/1976637026888619563&quot;&gt;Proxifier 强制代理&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20251227230252709.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;接入Claude Code&lt;/h2&gt;
-&lt;h4&gt;前置准备&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Node.js&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;https://nodejs.org/zh-cn/download&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Git&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;https://git-scm.com/install/windows&lt;/p&gt;
-&lt;h4&gt;安装Claude Code&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;npm install -g @anthropic-ai/claude-code
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;安装完成后，输入下面的命令查看是否安装成功。只要能看到版本号，就表示已经就绪：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;claude --version
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20251227225923134.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h4&gt;配置环境变量&lt;/h4&gt;
-&lt;h4&gt;方法1：命令&lt;/h4&gt;
-&lt;p&gt;启动 Antigravity，并在“API 反代”页面开启服务。
-在bash终端执行：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;export ANTHROPIC_API_KEY=&quot;你的API&quot;
-export ANTHROPIC_BASE_URL=&quot;http://127.0.0.1:8045&quot;
-Claude
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20251227230150665.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h4&gt;方法2：CC Switch&lt;/h4&gt;
-&lt;p&gt;下载地址https://github.com/farion1231/cc-switch/tags&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;打开Antigravity Tools，“API 反代 ”---“启动服务”----多协议支持---Anthropic 协议：拿到base_url，api_key，复制一个模型名称&lt;/p&gt;
-&lt;p&gt;打开CC Switch，Claude---右上方“+”---自定义配置，填写API Key、官网链接/请求地址、主模型&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2&gt;写在最后&lt;/h2&gt;
-&lt;p&gt;Antigravity Tools可以添加多个 Google 账号，每个账号都有一定的 Antigravity 模型额度，如果额度不够可点击切换账号，智能切换到额度足够的账号。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;大强远程技术支持：742112.xyz&lt;/strong&gt;&lt;/p&gt;
-</content:encoded></item><item><title>ClaudeCode安装使用教程</title><link>https://dqtx.cc/posts/aihacks/claudecode%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/claudecode%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid><description>1. Node.js 18 或更高版本 请前往 Node.js 官方网站安装最新 LTS 版本，确保 Claude Code 能正常运行。 https://no...</description><pubDate>Thu, 15 Jan 2026 11:20:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
-&lt;p&gt;这几天，c彻底火了，网上都在夸赞这个由Anthropic出品的命令行AI编码工具。不同于那些花哨的AI插件，Claude Code直接住进你的终端，像个老司机一样帮你写代码、修bug、重构项目。我也测试了一圈下来，确实牛批！免费、不限量、速度快，关键是它真的能理解你的整个项目结构。今天，我就给大家整理一份保姆级教程，让你5分钟上手Claude Code。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260106202139189.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;一.准备工作&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Node.js 18 或更高版本&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;请前往 Node.js 官方网站安装最新 LTS 版本，确保 Claude Code 能正常运行。&lt;/p&gt;
-&lt;p&gt;https://nodejs.org/en/download/&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Git（Windows 用户必需）&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;如果你使用 Windows，请提前安装 &lt;strong&gt;Git for Windows&lt;/strong&gt;，否则后续依赖安装可能失败。&lt;/p&gt;
-&lt;p&gt;https://git-scm.com/install/windows&lt;/p&gt;
-&lt;h2&gt;二.安装Claude Code&lt;/h2&gt;
-&lt;p&gt;安装命令&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;npm install -g @anthropic-ai/claude-code
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;安装完后，输入以下命令查看是否安装成功。能看到版本号，就表示已经就绪：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;claude --version
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;重新打开一个新的终端窗口，进入你的test项目，依次运行如下命令&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;cd test
-claude
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;三.配置Claude Code的API&lt;/h2&gt;
-&lt;p&gt;启动后会要求你授权，我自己是通过接入API的方法使用，你可以订阅智谱GLM Coding Lite，然后将API通过CC-switch进行管理启动，供Claude Code使用，当然你有gemini pro会员，也可以借助Antigravity Tools反代API，通过CC-switch进行管理启动供Claude Code使用。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260106202311293.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;1.购买API key&lt;/h3&gt;
-&lt;p&gt;这里推荐智谱的API，我订阅的GLM Coding Lite，3个月只要48.6&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;优惠购买地址&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;https://www.bigmodel.cn/glm-coding?ic=PUCQNADSPM&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260106202316904.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;2.创建API key&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260106202319858.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;3.配置API key&lt;/h3&gt;
-&lt;p&gt;我自己使用的工具是&lt;strong&gt;CC-switch&lt;/strong&gt;进行AIPI管理启动，供Claude Code使用，顺便提及下CC-switch，不仅可以管理你的多个API，一键切换，还可以，进行MCP 服务器管理、Claude Code 提示词管理、Claude Skills 管理&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;CC-switch开源地址&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;https://github.com/farion1231/cc-switch&lt;/p&gt;
-&lt;h2&gt;四.上手claude Skills&lt;/h2&gt;
-&lt;p&gt;Skills 是给 Claude 装的&quot;专业技能包&quot;。你可以这样理解，一个 Skill 让 Claude 在特定领域变成专家。Skills 是打包好的指令、脚本和资源，Claude 会自动发现并按需加载，让它在特定任务上表现更好。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/svg-1767702815285.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;目前skills支持在Claude.ai、Claude Code以及API中使用，Skills 有两个位置&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;~/.claude/skills/              # 全局 Skills  (所有项目可用)
-project/.claude/skills/        # 项目 skills (仅当前项目，可 git 共享)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;理解CLAUDE.md&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/svg-1767702653032.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;理解Slash Commands&lt;/h3&gt;
-&lt;p&gt;Slash Commands即自定义斜杠命令。&lt;/p&gt;
-&lt;p&gt;比如我创建一个/search-web命令用来搜索资料用&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;具体的配置流程如下&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;mkdir -p ~/.claude/commands
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;touch ~/.claude/commands/search-web.md
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;search-web.md内容&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;---
-allowed-tools: Bash(*)
-description: 使用 Gemini CLI 搜索特定站点并进行 UltraThink 总结
-argument-hint: [搜索关键词]
----
-
-# 任务目标
-在互联网上搜索关于 &quot;$ARGUMENTS&quot; 的内容，并挖掘最靠谱、最能解答疑问的信息。
-
-# 搜索要求
-1. **限定范围**：重点关注以下站点的资料和动态：
-   - anthropic.com
-   - x.com
-   - reddit.com
-   - linux.do
-2. **时效性**：搜索当前月份（!`date &quot;+%Y年%m月&quot;`）的最新消息 [1]。
-3. **执行工具**：必须调用本地的 `gemini cli` 工具，并利用其 `GoogleSearch` 功能执行查询。
-4. **并行处理**：请启动多个并行的子任务（同时调用多次 Bash 工具）分别检索上述不同站点，以加快执行速度。
-5. **总结逻辑**：在给出最终回复前，请开启 **UltraThink (Extended Thinking)** 模式。深度分析各方资料的冲突、真实性和深度，最后提供一份结构严密的总结。
-
-# 搜索指令示例（供你参考执行）
-- `gemini search &quot;site:linux.do $ARGUMENTS&quot;`
-- `gemini search &quot;site:anthropic.com $ARGUMENTS&quot;`
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;使用示例&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;/search-web  Claude Code上手教程
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;六.斜杠命令（Slash Commands）&lt;/h2&gt;
-&lt;h3&gt;&lt;/h3&gt;
-&lt;h3&gt;1. 内置核心命令&lt;/h3&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;命令&lt;/th&gt;
-&lt;th&gt;功能描述&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;/help&lt;/td&gt;
-&lt;td&gt;显示所有可用命令&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;/clear&lt;/td&gt;
-&lt;td&gt;重置对话历史和上下文&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;/init&lt;/td&gt;
-&lt;td&gt;生成 CLAUDE.md 项目配置文件&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;/compact&lt;/td&gt;
-&lt;td&gt;压缩对话内容，保留关键上下文&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;/model&lt;/td&gt;
-&lt;td&gt;切换使用的模型（sonnet/opus/haiku）&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;/context&lt;/td&gt;
-&lt;td&gt;显示当前上下文窗口使用情况&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;/doctor&lt;/td&gt;
-&lt;td&gt;诊断安装问题和 MCP 服务器状态&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;/mcp&lt;/td&gt;
-&lt;td&gt;管理 MCP 服务器配置&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;/hooks&lt;/td&gt;
-&lt;td&gt;查看和管理生命周期钩子&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h3&gt;2. 高级技巧&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;支持使用 $ARGUMENTS 占位符传递参数，例如创建自动修复 GitHub Issue 的命令。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;常见问题&lt;/h2&gt;
-&lt;h3&gt;1.PowerShell运行不了命令&lt;/h3&gt;
-&lt;p&gt;以管理员身份运行 PowerShell，执行：&lt;code&gt;Set-ExecutionPolicy RemoteSigned&lt;/code&gt;（该策略允许运行本地签名脚本、远程可信签名脚本），按提示输入&lt;code&gt;Y&lt;/code&gt;确认。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260106202326621.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;2.启动各种报错&lt;/h3&gt;
-&lt;p&gt;一般是由于win系统下的cmd默认不支持魔法，需要在环境变量进行配置&lt;/p&gt;
-&lt;p&gt;sysdm.cpl进入配置环境变量，&lt;/p&gt;
-&lt;p&gt;系统变量---新建&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;变量名：http_proxy    变量值：http://127.0.0.1:端口号
-变量名：https_proxy   变量值：http://127.0.0.1:端口号
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;七.写在最后&lt;/h2&gt;
-&lt;p&gt;Claude Code确实是目前最好用的AI编程工具之一，它不像其他工具那样花哨，而是专注于真正提升你的编程效率。当然，一些简单的任务基本用不到AI，反而会拖累你的效率，日常可以根据自己的实际情况，是否使用AI辅助。&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;以上，既然看到这里了，如果觉得不错，随手点个赞、在看、转发三连吧，如果想第一时间收到推送，也可以给我个星标⭐～谢谢你看我的文章，我们，下次再见。&lt;/em&gt;&lt;/p&gt;
 </content:encoded></item><item><title>OBS摄像头一键移动插件</title><link>https://dqtx.cc/posts/software/obs%E6%91%84%E5%83%8F%E5%A4%B4%E4%B8%80%E9%94%AE%E7%A7%BB%E5%8A%A8%E6%8F%92%E4%BB%B6/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/obs%E6%91%84%E5%83%8F%E5%A4%B4%E4%B8%80%E9%94%AE%E7%A7%BB%E5%8A%A8%E6%8F%92%E4%BB%B6/</guid><description>想让 OBS 摄像头实现「一键移动+一键复位」的平滑效果？不管是直播过场切换、录课构图调整，还是避免画面遮挡，motion-effect 插件都能轻松搞定！无需复杂操作，3 步就能实现精准位移，让你的...</description><pubDate>Thu, 15 Jan 2026 11:20:00 GMT</pubDate><content:encoded>&lt;p&gt;想让 OBS 摄像头实现「一键移动+一键复位」的平滑效果？不管是直播过场切换、录课构图调整，还是避免画面遮挡，motion-effect 插件都能轻松搞定！无需复杂操作，3 步就能实现精准位移，让你的画面切换更专业～&lt;/p&gt;
 &lt;h2&gt;一、插件简介&lt;/h2&gt;
 &lt;ul&gt;
@@ -1526,6 +1294,159 @@ https://www.passkeys.com/websites-with-passkey-support-sites-directory&lt;/p&gt;
 &lt;li&gt;建议配合密码管理器使用，覆盖不支持的场景&lt;/li&gt;
 &lt;li&gt;多设备备份很重要，别只依赖单一设备&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>ClaudeCode安装使用教程</title><link>https://dqtx.cc/posts/aihacks/claudecode%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/claudecode%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid><description>1. Node.js 18 或更高版本 请前往 Node.js 官方网站安装最新 LTS 版本，确保 Claude Code 能正常运行。 https://no...</description><pubDate>Thu, 15 Jan 2026 11:20:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;这几天，c彻底火了，网上都在夸赞这个由Anthropic出品的命令行AI编码工具。不同于那些花哨的AI插件，Claude Code直接住进你的终端，像个老司机一样帮你写代码、修bug、重构项目。我也测试了一圈下来，确实牛批！免费、不限量、速度快，关键是它真的能理解你的整个项目结构。今天，我就给大家整理一份保姆级教程，让你5分钟上手Claude Code。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260106202139189.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;一.准备工作&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Node.js 18 或更高版本&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;请前往 Node.js 官方网站安装最新 LTS 版本，确保 Claude Code 能正常运行。&lt;/p&gt;
+&lt;p&gt;https://nodejs.org/en/download/&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Git（Windows 用户必需）&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如果你使用 Windows，请提前安装 &lt;strong&gt;Git for Windows&lt;/strong&gt;，否则后续依赖安装可能失败。&lt;/p&gt;
+&lt;p&gt;https://git-scm.com/install/windows&lt;/p&gt;
+&lt;h2&gt;二.安装Claude Code&lt;/h2&gt;
+&lt;p&gt;安装命令&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm install -g @anthropic-ai/claude-code
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;安装完后，输入以下命令查看是否安装成功。能看到版本号，就表示已经就绪：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;claude --version
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;重新打开一个新的终端窗口，进入你的test项目，依次运行如下命令&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cd test
+claude
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;三.配置Claude Code的API&lt;/h2&gt;
+&lt;p&gt;启动后会要求你授权，我自己是通过接入API的方法使用，你可以订阅智谱GLM Coding Lite，然后将API通过CC-switch进行管理启动，供Claude Code使用，当然你有gemini pro会员，也可以借助Antigravity Tools反代API，通过CC-switch进行管理启动供Claude Code使用。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260106202311293.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;1.购买API key&lt;/h3&gt;
+&lt;p&gt;这里推荐智谱的API，我订阅的GLM Coding Lite，3个月只要48.6&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;优惠购买地址&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;https://www.bigmodel.cn/glm-coding?ic=PUCQNADSPM&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260106202316904.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;2.创建API key&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260106202319858.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;3.配置API key&lt;/h3&gt;
+&lt;p&gt;我自己使用的工具是&lt;strong&gt;CC-switch&lt;/strong&gt;进行AIPI管理启动，供Claude Code使用，顺便提及下CC-switch，不仅可以管理你的多个API，一键切换，还可以，进行MCP 服务器管理、Claude Code 提示词管理、Claude Skills 管理&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CC-switch开源地址&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;https://github.com/farion1231/cc-switch&lt;/p&gt;
+&lt;h2&gt;四.上手claude Skills&lt;/h2&gt;
+&lt;p&gt;Skills 是给 Claude 装的&quot;专业技能包&quot;。你可以这样理解，一个 Skill 让 Claude 在特定领域变成专家。Skills 是打包好的指令、脚本和资源，Claude 会自动发现并按需加载，让它在特定任务上表现更好。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/svg-1767702815285.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;目前skills支持在Claude.ai、Claude Code以及API中使用，Skills 有两个位置&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;~/.claude/skills/              # 全局 Skills  (所有项目可用)
+project/.claude/skills/        # 项目 skills (仅当前项目，可 git 共享)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;理解CLAUDE.md&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/svg-1767702653032.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;理解Slash Commands&lt;/h3&gt;
+&lt;p&gt;Slash Commands即自定义斜杠命令。&lt;/p&gt;
+&lt;p&gt;比如我创建一个/search-web命令用来搜索资料用&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;具体的配置流程如下&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mkdir -p ~/.claude/commands
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;touch ~/.claude/commands/search-web.md
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;search-web.md内容&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+allowed-tools: Bash(*)
+description: 使用 Gemini CLI 搜索特定站点并进行 UltraThink 总结
+argument-hint: [搜索关键词]
+---
+
+# 任务目标
+在互联网上搜索关于 &quot;$ARGUMENTS&quot; 的内容，并挖掘最靠谱、最能解答疑问的信息。
+
+# 搜索要求
+1. **限定范围**：重点关注以下站点的资料和动态：
+   - anthropic.com
+   - x.com
+   - reddit.com
+   - linux.do
+2. **时效性**：搜索当前月份（!`date &quot;+%Y年%m月&quot;`）的最新消息 [1]。
+3. **执行工具**：必须调用本地的 `gemini cli` 工具，并利用其 `GoogleSearch` 功能执行查询。
+4. **并行处理**：请启动多个并行的子任务（同时调用多次 Bash 工具）分别检索上述不同站点，以加快执行速度。
+5. **总结逻辑**：在给出最终回复前，请开启 **UltraThink (Extended Thinking)** 模式。深度分析各方资料的冲突、真实性和深度，最后提供一份结构严密的总结。
+
+# 搜索指令示例（供你参考执行）
+- `gemini search &quot;site:linux.do $ARGUMENTS&quot;`
+- `gemini search &quot;site:anthropic.com $ARGUMENTS&quot;`
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;使用示例&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/search-web  Claude Code上手教程
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;六.斜杠命令（Slash Commands）&lt;/h2&gt;
+&lt;h3&gt;&lt;/h3&gt;
+&lt;h3&gt;1. 内置核心命令&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;命令&lt;/th&gt;
+&lt;th&gt;功能描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;/help&lt;/td&gt;
+&lt;td&gt;显示所有可用命令&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/clear&lt;/td&gt;
+&lt;td&gt;重置对话历史和上下文&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/init&lt;/td&gt;
+&lt;td&gt;生成 CLAUDE.md 项目配置文件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/compact&lt;/td&gt;
+&lt;td&gt;压缩对话内容，保留关键上下文&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/model&lt;/td&gt;
+&lt;td&gt;切换使用的模型（sonnet/opus/haiku）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/context&lt;/td&gt;
+&lt;td&gt;显示当前上下文窗口使用情况&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/doctor&lt;/td&gt;
+&lt;td&gt;诊断安装问题和 MCP 服务器状态&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/mcp&lt;/td&gt;
+&lt;td&gt;管理 MCP 服务器配置&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/hooks&lt;/td&gt;
+&lt;td&gt;查看和管理生命周期钩子&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;2. 高级技巧&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;支持使用 $ARGUMENTS 占位符传递参数，例如创建自动修复 GitHub Issue 的命令。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;常见问题&lt;/h2&gt;
+&lt;h3&gt;1.PowerShell运行不了命令&lt;/h3&gt;
+&lt;p&gt;以管理员身份运行 PowerShell，执行：&lt;code&gt;Set-ExecutionPolicy RemoteSigned&lt;/code&gt;（该策略允许运行本地签名脚本、远程可信签名脚本），按提示输入&lt;code&gt;Y&lt;/code&gt;确认。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260106202326621.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;2.启动各种报错&lt;/h3&gt;
+&lt;p&gt;一般是由于win系统下的cmd默认不支持魔法，需要在环境变量进行配置&lt;/p&gt;
+&lt;p&gt;sysdm.cpl进入配置环境变量，&lt;/p&gt;
+&lt;p&gt;系统变量---新建&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;变量名：http_proxy    变量值：http://127.0.0.1:端口号
+变量名：https_proxy   变量值：http://127.0.0.1:端口号
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;七.写在最后&lt;/h2&gt;
+&lt;p&gt;Claude Code确实是目前最好用的AI编程工具之一，它不像其他工具那样花哨，而是专注于真正提升你的编程效率。当然，一些简单的任务基本用不到AI，反而会拖累你的效率，日常可以根据自己的实际情况，是否使用AI辅助。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;以上，既然看到这里了，如果觉得不错，随手点个赞、在看、转发三连吧，如果想第一时间收到推送，也可以给我个星标⭐～谢谢你看我的文章，我们，下次再见。&lt;/em&gt;&lt;/p&gt;
 </content:encoded></item><item><title>md2wechat-skill安装教程</title><link>https://dqtx.cc/posts/aihacks/md2wechat-skill%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/md2wechat-skill%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</guid><pubDate>Sat, 03 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;如果你用Markdown写公众号文章，需要先复制内容到排版工具，再复制公众号很麻烦，既耗时间又难保证格式精美，每次操作都要反复调整，成了不少人的痛点，这几天在GitHub发现了&lt;strong&gt;md2wechat-skill&lt;/strong&gt;，听说能一键转换Markdown为精美排版并自动上传到微信草稿箱，好奇测试了下！&lt;/p&gt;
 &lt;p&gt;我安装踩了不少坑，终于搞定，流程算跑通了，不过吐槽下，我是在Claude中用的Ai模式真的慢，有这时间，我10篇文章都排版好了！不过做个记录，相信随着时间技术成熟，一切都会发生变化！&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/workany_writing_1280x720.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -1863,337 +1784,6 @@ echo &quot;# 测试标题
 &lt;p&gt;通过上面的例子可以看出，其实不仅是 API，任何你过往用过的优质提示词，都可以让 Claude 帮你封装成一个个 Skills，Skills 的调用方式更简单，也更有优势：你不用每次都跟 AI 详细说明要怎么做，只要用自然语言表达需求，Claude 就会自动判断并调用合适的 Skills，而且多个 Skills 还可以协同工作，组合出更复杂、更完整的工作流。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;以上，既然看到这里了，如果你觉得内容不错，随手点个赞、在看、转发三连吧！如果想第一时间收到推送，可以给我点个星标⭐～&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;如需要远程技术支持：742112.xyz&lt;/p&gt;
-</content:encoded></item><item><title>Antigravity安装使用教程</title><link>https://dqtx.cc/posts/aihacks/antigravity%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/antigravity%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid><description>Google Antigravity 是 DeepMind 推出的 AI 编程 IDE（2025-11-18 与 Gemini 3 同步发布），基于 VS Co...</description><pubDate>Sat, 29 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Google Antigravity 是 DeepMind 推出的 AI 编程 IDE（2025-11-18 与 Gemini 3 同步发布），基于 VS Code 内核，核心是 “智能代理（Agentic）” 开发范式，能让 AI 自主规划、执行、验证编程任务，支持多智能体并行协作，适配复杂全栈开发场景&lt;/p&gt;
-&lt;h2&gt;软件下载安装&lt;/h2&gt;
-&lt;p&gt;官方地址https://antigravity.google/&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260124223748577.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;登录授权&lt;/h2&gt;
-&lt;p&gt;很多人往往卡在这里，解决办法&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;魔法软件开启 TUN&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://link.zhihu.com/?target=https%3A//www.proxifier.com/&quot;&gt;安装 Proxifier&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260124211315751.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260124211331540.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;模式说明&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Planning（规划）&lt;/strong&gt;：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Agent 在执行任务之前会先进行规划，适用于深度研究、复杂任务或协作工作；&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Fast（快速）&lt;/strong&gt;：&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Agent 将直接执行任务，适用于简单任务，可以更快速地完成任务。&lt;/p&gt;
-&lt;h2&gt;设置语言中文&lt;/h2&gt;
-&lt;p&gt;快捷键 &lt;code&gt;Ctrl+Shift+P(Windows)&lt;/code&gt; 输入&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Configure Display Language
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;更换自己喜欢的主题&lt;/h2&gt;
-&lt;p&gt;快捷键 &lt;code&gt;Ctrl+Shift+P(Windows)&lt;/code&gt; 输入&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Themes: Color Theme
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;点击“首选项:颜色主题”&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://m.okjike.com/originalPosts/691e6c5100c0686ab5271356&quot;&gt;导入 Cursor自带主题&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;常用快捷键&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;快捷键&lt;/th&gt;
-&lt;th&gt;操作&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Ctrl+,&lt;/td&gt;
-&lt;td&gt;打开设置&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Ctrl+L&lt;/td&gt;
-&lt;td&gt;打开 Agent 对话框&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</content:encoded></item><item><title>Obsidian+AI</title><link>https://dqtx.cc/posts/aihacks/obsidianai/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/obsidianai/</guid><description>这几天，在gihub发现Obsidian重磅插件，直接把 AI 功能深度集成到核心里了！网上都在夸赞，确实牛批！今天我要分享的 Obsidian+AI 组合，一...</description><pubDate>Fri, 28 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这几天，在gihub发现Obsidian重磅插件，直接把 AI 功能深度集成到核心里了！网上都在夸赞，确实&lt;strong&gt;牛批&lt;/strong&gt;！今天我要分享的 Obsidian+AI 组合，&lt;em&gt;一次性解决这些痛点&lt;/em&gt;*！简单说，你的笔记不再是一个个&lt;strong&gt;死文档*，而是变成了能理解、能推理、能自动化的&lt;/strong&gt;AI 上下文层**。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260113215058651.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;一.准备工作&lt;/h2&gt;
-&lt;p&gt;✅已安装 Obsidian&lt;/p&gt;
-&lt;p&gt;✅安装并配置了 Claude Code&lt;/p&gt;
-&lt;h2&gt;二.Obsidian个人配置&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;我的统文件结构&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;📁 你的 Vault
-├── 📄 CLAUDE.md              # AI 配置文件
-├── 📄 claude.json            # Skills 配置
-├── 📁 .claude/
-│   ├── 📁 commands/          # 自定义命令
-│   └── 📁 skills/            # Skills 包
-├── 📁 加工中/                 # 正在编辑的文章
-├── 📁 1️⃣常用工具/            # 常用工具配置
-├── 📁 2️⃣流量策划/            # 流量策划项目
-├── 📁 3️⃣销售转换/            # 销售转换项目
-└── 📁 4️⃣产品交付/            # 产品交付项目
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;1.外观设置&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260113215034732.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;2.主题推荐&lt;/h3&gt;
-&lt;p&gt;设置-外观-主题-管理，搜索：&lt;/p&gt;
-&lt;p&gt;推荐主题&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Primary(推荐）&lt;/li&gt;
-&lt;li&gt;AnuPpuccin&lt;/li&gt;
-&lt;li&gt;Baseline&lt;/li&gt;
-&lt;li&gt;Typora-Vue&lt;/li&gt;
-&lt;li&gt;Zen&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;3.安装必要插件&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;设置&lt;/code&gt;-&lt;code&gt;第三方插件&lt;/code&gt;-&lt;code&gt;关闭安全模式&lt;/code&gt;---社区插件市场，搜索：&lt;/p&gt;
-&lt;h4&gt;Floating Search  ：搜索神器&lt;/h4&gt;
-&lt;blockquote&gt;
-&lt;p&gt;功能：tag: (Find tag) → 快捷键 Ctrl + F
-用途：快速搜索标签和内容&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h4&gt;Git ：Git 同步插件&lt;/h4&gt;
-&lt;blockquote&gt;
-&lt;p&gt;详细教程：点此查看 →https://www.bilibili.com/video/BV1fZCyBYEuT/?spm_id_from=333.1387.favlist.content.click&amp;amp;vd_source=206031f494850e57fd6c92ace02b1bed&lt;/p&gt;
-&lt;p&gt;用途：版本控制、团队协作、备份恢复&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;https://xodnytdcaw.feishu.cn/space/api/box/stream/download/asynccode/?code=NzJiOTJmYjM2NDJkYTY2YmNlMGEwNTM5MTUzMTc1MjNfUDNQaVFUUWE0SVpXc1ZpU0YxTFVzb2NNMG16N3N6QzJfVG9rZW46Qk9XYmJyMVM2b1pVSTZ4TU5yc2NLYmNQbkJnXzE3NjgzMDgwMTI6MTc2ODMxMTYxMl9WNA&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
-&lt;h4&gt;图片附件管理插件&lt;/h4&gt;
-&lt;p&gt;Custom Attachment Location：图像附件存储&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;功能：自定义图片存储位置
-用途：整理附件文件夹，避免混乱&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260113215103569.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260113215104746.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h4&gt;公众号发布插件&lt;/h4&gt;
-&lt;p&gt;NoteToMP：一键发布&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;功能：直接发送到公众号草稿箱
-用途：内容创作与发布一体化&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h4&gt;Claudian：AI 集成插件（重点）&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;Claudian&lt;/strong&gt;：Claude Code 侧边栏集成&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;功能：把 Claude Code 整合到 Obsidian 侧边栏
-用途：直接在 Obsidian 中对话，读取当前 Markdown&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260113215058651.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;安装 Claudian 手动教程&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;下载文件&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;前往 &lt;a href=&quot;https://github.com/YishenTu/claudian/releases/latest&quot;&gt;Claudian Release 页面&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;下载三个文件：&lt;code&gt;main.js&lt;/code&gt;、&lt;code&gt;manifest.json&lt;/code&gt;、&lt;code&gt;styles.css&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;创建文件夹&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;路径：&lt;code&gt;/path/to/vault/.obsidian/plugins/claudian/&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;.obsidian&lt;/code&gt; 文件夹通常是隐藏的&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;放入文件&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;将下载的三个文件复制到 &lt;code&gt;claudian&lt;/code&gt; 文件夹&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;启用插件&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;重启 Obsidian&lt;/li&gt;
-&lt;li&gt;设置 → 第三方插件 → 找到 &quot;Claudian&quot; 并启用&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2&gt;三.配置 Claude Skills 系统&lt;/h2&gt;
-&lt;h4&gt;3.1 创建 claude.json 配置文件&lt;/h4&gt;
-&lt;p&gt;在 &lt;code&gt;.claude&lt;/code&gt; 文件夹下创建 &lt;code&gt;claude.json&lt;/code&gt;：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;{
-  &quot;skills&quot;: [
-    &quot;./skills/obsidian-skills/obsidian-markdown&quot;,
-    &quot;./skills/obsidian-skills/json-canvas&quot;,
-    &quot;./skills/obsidian-skills/obsidian-bases&quot;
-  ]
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4&gt;3.2 下载Obsidian Skills 包&lt;/h4&gt;
-&lt;p&gt;在 &lt;code&gt;.claude&lt;/code&gt; 文件夹创建 &lt;code&gt;skills&lt;/code&gt; 文件夹，然后下载：https://github.com/kepano/obsidian-skills&lt;/p&gt;
-&lt;h6&gt;&lt;strong&gt;技能应用场景展示&lt;/strong&gt;：&lt;/h6&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260113212002494.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260113215435163.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;四、 obsidian Skills 使用指南&lt;/h2&gt;
-&lt;h6&gt;&lt;strong&gt;A.基础用法&lt;/strong&gt;&lt;/h6&gt;
-&lt;p&gt;&lt;strong&gt;1️⃣obsidian-markdown&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;创建符合 Obsidian 规范的 Markdown 文件&lt;/p&gt;
-&lt;p&gt;示例 1: 创建项目笔记&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;创建一个名为&quot;项目计划.md&quot;的笔记，包含以下内容：
-- Frontmatter 属性：项目状态为进行中，优先级为高
-- 使用 callout 标注重要截止日期
-- 创建任务清单，包含已完成和待办任务
-- 添加项目架构的 Mermaid 流程图
-- 链接到相关的&quot;团队文档&quot;笔记
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;示例 2: 创建学习笔记&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;创建&quot;JavaScript 学习笔记.md&quot;，包含：
- - 使用 info callout 介绍学习目标
- - 代码高亮示例（JavaScript 和 Python）
- - 使用嵌套列表组织知识点
- - 添加数学公式示例
- - 创建折叠的 FAQ callout
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;2️⃣json-canvas&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;JSON Canvas 是一种开放格式，用于创建无限画布。AI 可以自动生成思维导图、流程图、项目看板等可视化内容。&lt;/p&gt;
-&lt;p&gt;示例 1: 创建思维导图&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt; 创建一个名为&quot;产品开发思维导图.canvas&quot;的文件，主题是&quot;新功能开发&quot;，包含：
- - 中心节点：&quot;新功能开发&quot;（使用青色）
- - 分支节点：需求分析、设计、开发、测试、部署（5个分支）
- - 每个分支下添加 2-3 个子节点，包含具体任务
- - 使用箭头连接所有节点
- - 使用不同颜色区分不同阶段
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;示例 2: 创建项目看板&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;创建&quot;项目看板.canvas&quot;，实现看板视图：
- - 创建 3 个分组：待办、进行中、已完成（使用红、黄、绿色）
- - 每个分组内添加 2-3 个任务卡片
- - 任务内容包含任务名和描述
- - 合理布局，确保美观
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;示例 3: 创建流程图&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;创建&quot;用户注册流程.canvas&quot;：
-- 节点：开始 → 输入信息 → 验证数据 → {数据有效?}
-- 决策节点：Yes → 创建账户 → 发送邮件 → 结束
-- 决策节点：No → 显示错误 → 返回输入
-- 使用箭头和标签标注流程
-- 决策节点使用黄色，开始/结束使用绿色
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;示例 4: 创建研究资料画布&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;创建&quot;AI研究.canvas&quot;画布：
-- 中心节点：AI 研究主题
-- 周围节点链接到相关的笔记文件（使用 file 节点）
-- 添加外部资源链接（使用 link 节点）
-- 将相关内容用 group 节点分组
-- 使用带标签的连线说明关系
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;3️⃣obsidian-bases&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Obsidian Bases 是基于 YAML 的数据视图系统，可以将笔记转换为数据库表格、卡片视图等。AI 可以自动创建配置文件。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;示例 1: 任务管理系统&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;创建&quot;任务管理.base&quot;，实现以下功能：
-- 筛选所有包含 #task 标签的 Markdown 文件
-- 创建公式字段：
-  - days_until_due: 计算距离截止日期的天数
-  - is_overdue: 判断是否过期
-  - priority_label: 根据 priority 字段显示 🟥🟨🩩 图标
-- 表格视图：显示任务名、状态、优先级、截止日期、距离天数
-- 按状态分组排序
-- 添加平均天数统计
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;示例 2: 阅读清单&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;创建&quot;阅读清单.base&quot;：
-- 筛选包含 #book 或 #article 标签的笔记
-- 创建公式：
-  - reading_time: 根据页数估算阅读时间（每页 2 分钟）
-  - status_icon: 根据 status 显示 📖/✅/📚 图标
-  - year_read: 提取完成日期的年份
-- 卡片视图：显示封面、书名、作者、状态图标
-- 表格视图：显示书名、作者、页数、预计时间、状态
-- 排除已放弃的书籍
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;示例 3: 项目进度追踪&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;创建&quot;项目追踪.base&quot;：
-- 筛选&quot;Projects&quot;文件夹下的所有 Markdown 文件
-- 创建公式：
-  - last_updated: 显示相对更新时间（如&quot;3天前&quot;）
-  - link_count: 统计笔记中的链接数量
-  - progress: 根据完成任务的百分比计算进度
-- 表格视图：显示项目名、状态、更新时间、链接数、进度
-- 按状态分组
-- 添加进度条可视化（使用 icon 函数）
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;示例 4: 每日笔记索引&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;创建&quot;日记索引.base&quot;：
-- 筛选&quot;Daily Notes&quot;文件夹下文件名格式为 YYYY-MM-DD 的笔记
-- 创建公式：
-  - word_estimate: 估算字数（文件大小除以 5）
-  - day_of_week: 提取星期几
-  - has_images: 判断是否包含图片
-- 表格视图：显示日期、星期、估算字数、图片数量
-- 限制显示最近 30 天
-- 按修改时间倒序排列
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;示例 4: 附件&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;请根据附件内容生成一个 高颜值Obsidian Canvas，每个主题建立一个分组，设置颜色，注意，每个节点之前的距离不要太靠近，中文输出
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h6&gt;B.高级技巧：组合使用多个 Skills&lt;/h6&gt;
-&lt;p&gt;技巧 1: 生成项目看板&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;为我的项目创建完整的文档系统：
-1. 创建&quot;项目看板.canvas&quot;可视化展示项目结构
-2. 创建&quot;任务管理.base&quot;追踪所有任务
-3. 创建&quot;项目主页.md&quot;作为索引，包含：
-   - 项目概述（使用 callout）
-   - 嵌入项目看板
-   - 嵌入任务管理视图
-   - Mermaid 架构图
-   - 相关文档链接
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;技巧 2: 学习系统&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;创建&quot;主题学习&quot;系统：
-1. 创建&quot;知识地图.canvas&quot;，用思维导图展示知识结构
-2. 创建&quot;学习资源.base&quot;，管理所有学习资料（书籍、文章、视频）
-3. 创建&quot;学习笔记.md&quot;模板，包含：
-   - 学习目标（checklist）
-   - 重要概念（callout 标注）
-   - 代码示例
-   - 笔记总结
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h5&gt;&lt;/h5&gt;
-&lt;p&gt;&lt;strong&gt;附：自定义命令配置&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;项目命令：&lt;code&gt;项目根目录/.claude/commands/&lt;/code&gt; 下，仅当前项目可用。&lt;/p&gt;
-&lt;p&gt;Slash Commands即自定义斜杠命令。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;环境准备
-mkdir -p ~/.claude/commands     #创建命令目录（递归创建，不存在则自动生成）
-touch ~/.claude/commands/search-web.md   # 创建命令文件（以search-web.md为例）
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;编写命令文件（Markdown 格式）&lt;/p&gt;
-&lt;p&gt;每个命令对应一个 &lt;code&gt;.md&lt;/code&gt; 文件，包含元数据与执行逻辑（示例）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;---
-# 元数据（YAML格式，必须放在开头）
-description: &quot;调用搜索工具查询指定关键词的网页信息&quot; # 命令描述
-argument-hint: &quot;搜索关键词（如：Slash Commands 最佳实践）&quot; # 参数提示
-allowed-tools: [&quot;Search&quot;] # 允许调用的工具（如Search、Read、Edit）
----
-# 命令执行逻辑（提示词模板，$ARGUMENTS为参数占位符）
-请使用搜索工具查询以下关键词的最新信息，并整理成结构化摘要：
-$ARGUMENTS
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;在 Claude Code 中输入 &lt;code&gt;/search-web Slash Commands 自定义方法&lt;/code&gt;，自动替换 &lt;code&gt;$ARGUMENTS&lt;/code&gt; 为传入参数。&lt;/p&gt;
-&lt;h2&gt;五.其他推荐工具&lt;/h2&gt;
-&lt;h3&gt;Chrome 插件剪藏工具&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Obsidian Web Clipper&lt;/strong&gt;：网页剪藏神器&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;功能：一键剪藏网页内容到 Obsidian
-用途：收集资料、保存网页、整理收藏
-下载地址：https://chromewebstore.google.com/detail/obsidian-web-clipper/cnjifjpddelmedmihgijeibhnjfabmlf
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;字体推荐&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;中文推荐&lt;/strong&gt;：TsangerJinKai02（闪客金楷）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;特色：优雅的中文显示
-用途：提升阅读体验
-下载：https://github.com/tw93/MiaoYan-NetNewsWire-Theme/blob/main/TsangerJinKai02-W04.ttf
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;英文代码推荐&lt;/strong&gt;：JetBrains Mono&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;特色：专业的代码显示
-用途：编程、技术文档
-下载：https://www.jetbrains.com/lp/mono/
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;六、验证配置&lt;/h2&gt;
-&lt;p&gt;安装完成后，打开 Claudian 插件对话界面，发送测试命令：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;请列出你检测到的本地 skills（json-canvas / obsidian-markdown / obsidian-bases），并在常用工具创建一个测试笔记赵国强.md 包含 [[链接]]、#tag、- [ ] todo。
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;如果返回正确的技能列表并创建了文件，说明配置成功！&lt;/p&gt;
-&lt;p&gt;以上.今天的分享就到这里。Obsidian + AI 的组合，确实让知识管理效率&lt;strong&gt;爆表&lt;/strong&gt;！&lt;/p&gt;
-&lt;p&gt;如果内容对你有所帮助，欢迎一键三连（点赞、在看、转发）。如果你有其他软件需求，也欢迎评论区留言，我们下次再见。&lt;/p&gt;
 </content:encoded></item><item><title>Listary使用参考文档</title><link>https://dqtx.cc/posts/software/listary%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/listary%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83/</guid><description>Listary是一款知名的效率工具，以用户友好，使用方式简单而备受好评。单论文件搜索，Listary 和 Everything 属于同一梯队，在搜索速度和内存占...</description><pubDate>Sat, 22 Nov 2025 09:15:00 GMT</pubDate><content:encoded>&lt;h1&gt;Listary使用参考文档&lt;/h1&gt;
 &lt;p&gt;Listary是一款知名的效率工具，以用户友好，使用方式简单而备受好评。单论文件搜索，Listary 和 Everything 属于同一梯队，在搜索速度和内存占用上秒杀任何其他软件。任何文件，只要你知道他的名称（或者部分名称），就能迅速找到并打开。&lt;/p&gt;
 &lt;h2&gt;本地搜索&lt;/h2&gt;
@@ -2251,6 +1841,167 @@ $ARGUMENTS
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+</content:encoded></item><item><title>Obsidian+Claude：AI超级大脑架构设计</title><link>https://dqtx.cc/posts/aihacks/obsidianai/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/obsidianai/</guid><pubDate>Sat, 25 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;很多人理解思维OS理念，却被Obsidian文件散乱问题困扰，难以高效管理知识与内容。为满足程序员与多平台创作者的创作效率需求，我设计了这套AI超级大脑架构，于是有了这篇文章。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260213215428541.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;一、核心前提：从 “思考库” 到 “内容工厂”&lt;/h2&gt;
+&lt;h3&gt;1.1 核心痛点&lt;/h3&gt;
+&lt;p&gt;懂思维 OS 理念，却陷入文件散乱的管理困境&lt;/p&gt;
+&lt;h3&gt;1.2 核心需求&lt;/h3&gt;
+&lt;p&gt;满足程序员 + 多平台创作者的 “素材→生产→分发” 全链路效率诉求&lt;/p&gt;
+&lt;h3&gt;1.3 核心目标&lt;/h3&gt;
+&lt;p&gt;搭建 “输入→AI 加工→输出” 的闭环创作流水线&lt;/p&gt;
+&lt;h2&gt;二、基础搭建：Claude 驻场 Obsidian（3 步落地）&lt;/h2&gt;
+&lt;h3&gt;2.1 核心插件配置&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Claudian：配置 Opus 模型 + yolo 权限&lt;/li&gt;
+&lt;li&gt;Terminal：支持 Obsidian 内调用命令行，无需切换应用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;2.2 搭建本质&lt;/h3&gt;
+&lt;p&gt;将 Obsidian 升级为 “AI 协作工作台”，实现工具集成与高效协同&lt;/p&gt;
+&lt;h2&gt;三、核心能力：自定义工具箱体系&lt;/h2&gt;
+&lt;h3&gt;3.1 自定义 Skills 管理&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;存储路径：.claude/skills/ 目录统一管理&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;我安装的 16 个 Skills 安装部署&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;#&lt;/th&gt;
+&lt;th&gt;Skill 名称&lt;/th&gt;
+&lt;th&gt;功能说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;baoyu-article-illustrator&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;文章配图生成&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;baoyu-url-to-markdown&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;URL 转 Markdown&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;image&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;AI 图片生成（通义千问）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;md2wechat-skill&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Markdown 转微信格式&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;nano-banana-ppt&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;PPT 生成&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;notebooklm&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;NotebookLM 自动化&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;obsidian-skills&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Obsidian 相关技能&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;planning-with-files&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;文件式项目规划&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;prompt-skills&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;提示词技能&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;ui-skills&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;UI/UX 技能集&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;ui-ux-pro-max&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;UI/UX 专业设计&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;url-to-markdown&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;URL 转 Markdown（另一版本）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;youtube-clipper-skill&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;YouTube 视频智能剪辑&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;14&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;youtube-transcript-cn&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;YouTube 字幕转中文&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;15&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;ai-writing-assistant&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;AI 写作助手（6 种方法）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;mcp-builder&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;MCP 服务器开发指南&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;3.2 辅助插件&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Wechat Converter：公众号排版与一键发布&lt;/li&gt;
+&lt;li&gt;Git 插件：文件备份同步至 GitHub&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;3.3 浏览器配套插件&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Obsidian Web Clipper：网页内容剪藏（直接转为 Markdown 格式）&lt;/li&gt;
+&lt;li&gt;爱贝壳：多平台内容分发工具&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;四、实战演示：30 分钟内容创作流水线&lt;/h2&gt;
+&lt;h3&gt;4.1 步骤 1：素材输入&lt;/h3&gt;
+&lt;p&gt;通过 Obsidian Web Clipper 剪藏网页信息源，直接生成 Markdown 文件存入 Obsidian&lt;/p&gt;
+&lt;h3&gt;4.2 步骤 2：AI 初稿生成 + 人工微调&lt;/h3&gt;
+&lt;p&gt;依据记忆文件 CLAUDE.md 触发 AI 撰写初稿，配合人工进行内容优化&lt;/p&gt;
+&lt;h3&gt;4.3 步骤 3：内容配图&lt;/h3&gt;
+&lt;p&gt;调用 “baoyu-article-illustrator” Skill 完成文章配图自动生成&lt;/p&gt;
+&lt;h3&gt;4.4 步骤 4：平台分发&lt;/h3&gt;
+&lt;p&gt;通过 Wechat Converter 插件一键推送到公众号平台，再通过爱贝壳一键内容分发多平台&lt;/p&gt;
+&lt;h2&gt;五、系统灵魂：CLAUDE.md 四大核心编码&lt;/h2&gt;
+&lt;h3&gt;5.1 编码 1：身份定义&lt;/h3&gt;
+&lt;p&gt;明确自身标签 + 能力短板，为 AI 决策提供适配依据&lt;/p&gt;
+&lt;h3&gt;5.2 编码 2：Skills 手册&lt;/h3&gt;
+&lt;p&gt;包含 Skill 启动触发条件 + 场景对应关系（如公众号封面生成 / 文章配图等）&lt;/p&gt;
+&lt;h3&gt;5.3 编码 3：工作流模板&lt;/h3&gt;
+&lt;p&gt;提供分平台完整创作发布步骤，标准化流程执行&lt;/p&gt;
+&lt;h3&gt;5.4 编码 4：迭代规则&lt;/h3&gt;
+&lt;p&gt;记录流程错误、优化方向的活文档，支持系统持续迭代&lt;/p&gt;
+&lt;h2&gt;六、总结：核心要素与起步指南&lt;/h2&gt;
+&lt;h3&gt;6.1 核心三要素&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;容器：Obsidian（承载内容与工具集成）&lt;/li&gt;
+&lt;li&gt;智能：Claude Code + Claudian（AI 核心能力支撑）&lt;/li&gt;
+&lt;li&gt;双手：Skills（自定义功能扩展）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;6.2 起步三步法&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;安装核心插件（Claudian、Terminal 等）&lt;/li&gt;
+&lt;li&gt;编写 10 行极简版 CLAUDE.md（完成基础配置）&lt;/li&gt;
+&lt;li&gt;测试 “网页转 Markdown” Skill（验证基础流程）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;6.3 核心价值&lt;/h3&gt;
+&lt;p&gt;让思考方式、工作流程显性化 + 高效化，实现创作全链路提效&lt;/p&gt;
 </content:encoded></item><item><title>OpenList挂载阿里云盘</title><link>https://dqtx.cc/posts/technical/openlist-ali/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/openlist-ali/</guid><pubDate>Wed, 22 Oct 2025 14:20:00 GMT</pubDate><content:encoded>&lt;p&gt;很多人使用 OpenList 搭建网盘聚合时，希望接入阿里云盘，实现文件集中管理与在线播放。本文将手把手教你如何在 OpenList 中添加阿里云盘存储，从获取 Token 到配置参数，简单几步即可完成接入。&lt;/p&gt;
 &lt;h2&gt;教程步骤&lt;/h2&gt;
 &lt;ol&gt;
@@ -2294,7 +2045,7 @@ $ARGUMENTS
 &lt;/ol&gt;
 &lt;p&gt;填写完成后，滑到页面底部点击 &lt;strong&gt;保存&lt;/strong&gt; 即可。&lt;/p&gt;
 &lt;p&gt;✅至此，阿里云盘已成功接入 OpenList，可在前台正常浏览、预览与播放文件。&lt;/p&gt;
-</content:encoded></item><item><title>零成本搭建在线图床</title><link>https://dqtx.cc/posts/aihacks/%E9%9B%B6%E6%88%90%E6%9C%AC%E6%90%AD%E5%BB%BA%E5%9C%A8%E7%BA%BF%E5%9B%BE%E5%BA%8A/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E9%9B%B6%E6%88%90%E6%9C%AC%E6%90%AD%E5%BB%BA%E5%9C%A8%E7%BA%BF%E5%9B%BE%E5%BA%8A/</guid><description>90%的博主都不知道！免费100G图床竟比付费的还稳定～ 写文章、做分享时，你是不是也总被图床问题折磨？免费的容量小得可怜，付费的一年要花几百块，更糟的是还常遇...</description><pubDate>Thu, 18 Sep 2025 10:45:00 GMT</pubDate><content:encoded>&lt;p&gt;90%的博主都不知道！免费100G图床竟比付费的还稳定～ 写文章、做分享时，你是不是也总被图床问题折磨？免费的容量小得可怜，付费的一年要花几百块，更糟的是还常遇到文件失效、大文件传不了的坑，辛苦写的内容全白费！今天就分享一个零成本神方案——用GitHub 4k+星标的开源项目CloudFlare-ImgBed搭配HuggingFace，10分钟快速搭建100G免费图床，无需实名认证、支持大文件自动分片上传，不用额外买服务器，稳定又省心，自媒体、学生、打工人都能用～&lt;/p&gt;
+</content:encoded></item><item><title>零成本搭建在线图床</title><link>https://dqtx.cc/posts/technical/%E9%9B%B6%E6%88%90%E6%9C%AC%E6%90%AD%E5%BB%BA%E5%9C%A8%E7%BA%BF%E5%9B%BE%E5%BA%8A/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E9%9B%B6%E6%88%90%E6%9C%AC%E6%90%AD%E5%BB%BA%E5%9C%A8%E7%BA%BF%E5%9B%BE%E5%BA%8A/</guid><description>90%的博主都不知道！免费100G图床竟比付费的还稳定～ 写文章、做分享时，你是不是也总被图床问题折磨？免费的容量小得可怜，付费的一年要花几百块，更糟的是还常遇...</description><pubDate>Thu, 18 Sep 2025 10:45:00 GMT</pubDate><content:encoded>&lt;p&gt;90%的博主都不知道！免费100G图床竟比付费的还稳定～ 写文章、做分享时，你是不是也总被图床问题折磨？免费的容量小得可怜，付费的一年要花几百块，更糟的是还常遇到文件失效、大文件传不了的坑，辛苦写的内容全白费！今天就分享一个零成本神方案——用GitHub 4k+星标的开源项目CloudFlare-ImgBed搭配HuggingFace，10分钟快速搭建100G免费图床，无需实名认证、支持大文件自动分片上传，不用额外买服务器，稳定又省心，自媒体、学生、打工人都能用～&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260122014636902.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;一、工具介绍：CloudFlare-ImgBed&lt;/h2&gt;
 &lt;p&gt;这是一个 GitHub 星标 4k + 的开源项目，基于 Cloudflare Pages 构建，核心优势：&lt;/p&gt;
@@ -3594,7 +3345,7 @@ node scripts/update-categories.cjs
 &lt;/blockquote&gt;
 &lt;p&gt;如果觉得这篇教程对你有帮助，别忘了&lt;strong&gt;点赞+收藏+转发&lt;/strong&gt;三连呀！关注我，后续分享更多OBS 实用技巧、效率工具干货，下次见～ 👋&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;大强远程技术支持：742112.xyz&lt;/strong&gt;&lt;/p&gt;
-</content:encoded></item><item><title>AutoHotkey打包exe完全指南！</title><link>https://dqtx.cc/posts/aihacks/autohotkey%E6%89%93%E5%8C%85exe%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/autohotkey%E6%89%93%E5%8C%85exe%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/</guid><description>AutoHotkey（AHK）是一种强大的自动化脚本语言，能够帮助用户简化日常计算机操作。将AHK脚本转换为可执行文件（.exe）不仅可以分发和使用，还能保护脚...</description><pubDate>Fri, 15 Nov 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;AutoHotkey（AHK）是一种强大的自动化脚本语言，能够帮助用户简化日常计算机操作。将AHK脚本转换为可执行文件（.exe）不仅可以分发和使用，还能保护脚本代码不被轻易查看。本文将详细介绍如何使用AutoHotkey将代码转换为EXE文件的完整流程。&lt;/p&gt;
+</content:encoded></item><item><title>AutoHotkey打包exe完全指南！</title><link>https://dqtx.cc/posts/technical/autohotkey%E6%89%93%E5%8C%85exe%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/autohotkey%E6%89%93%E5%8C%85exe%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/</guid><description>AutoHotkey（AHK）是一种强大的自动化脚本语言，能够帮助用户简化日常计算机操作。将AHK脚本转换为可执行文件（.exe）不仅可以分发和使用，还能保护脚...</description><pubDate>Fri, 15 Nov 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;AutoHotkey（AHK）是一种强大的自动化脚本语言，能够帮助用户简化日常计算机操作。将AHK脚本转换为可执行文件（.exe）不仅可以分发和使用，还能保护脚本代码不被轻易查看。本文将详细介绍如何使用AutoHotkey将代码转换为EXE文件的完整流程。&lt;/p&gt;
 &lt;h2&gt;&lt;strong&gt;一、安装AutoHotkey&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;在开始转换之前，首先需要安装AutoHotkey软件。&lt;/p&gt;
 &lt;ol&gt;
