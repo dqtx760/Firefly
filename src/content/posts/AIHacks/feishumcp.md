@@ -7,11 +7,13 @@ draft: false
 pinned: false
 ---
 
-**飞书MCP**是飞书文档集成AI能力的扩展功能，通过配置企业自建应用实现文档自动化处理、数据抓取与消息推送等高级功能。用户反馈其为"AI+飞书文档的强大组合"，配置完成后可显著提升工作效率。
+平时用飞书文档做笔记、整理资料、写方案的朋友，一定要试试这个**超好用的**组合 ——Claude + 飞书 MCP\**。**它就像给飞书文档装了个**智能外挂**，不用复杂操作，**你只要在 Claude 里说一句话，内容就能自动同步、推送到飞书文档**，，还能直接生成、写入多维表格。
 
 
 
-#### 
+配置好以后，写文档、做总结、搞自动化效率直接翻倍，真正实现**AI 帮你打工**。今天就把完整配置教程分享给大家，看完就能上手。
+
+
 
 ## 一.准备阶段
 
@@ -47,7 +49,6 @@ http://localhost:3000/callback
 
 1. **安装依赖**：确保已安装Node.js环境
 2. **登录认证**：执行命令行工具登录`openapi mcp`，替换`your fid`和`app secret`
-3. **集成Cloud Code**：通过`cloud mcp add`命令添加MCP配置，格式示例：
 
 ```
 npx -y @larksuiteoapi/lark-mcp login -a <your_app_id> -s <your_app_secret>
@@ -92,7 +93,7 @@ claude mcp list
 ```
 帮我创建一个飞书文档，标题是“如何建立自己的人生清单”。
 
-帮我总结一下这篇文档的内容，列出行动清单。
+帮我总结一下这篇文档的内容，列出避坑要点清单。
 https://xodnytdcaw.feishu.cn/wiki/TTedwAniUiXTm9kYwb6cDJL0nsf?fromScene=spaceOverview
 
 帮我爬取一下秋芝2046最新的20篇小红书笔记，整理的多维表格
