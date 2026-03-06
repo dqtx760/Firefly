@@ -62,6 +62,279 @@
 &lt;li&gt;⛓️ Web3教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867794661334761497#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;🛠️ 技术教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867808112450912266#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>Claude配置飞书MCP教程</title><link>https://dqtx.cc/posts/aihacks/feishumcp/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/feishumcp/</guid><pubDate>Fri, 06 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;飞书MCP&lt;/strong&gt;是飞书文档集成AI能力的扩展功能，通过配置企业自建应用实现文档自动化处理、数据抓取与消息推送等高级功能。用户反馈其为&quot;AI+飞书文档的强大组合&quot;，配置完成后可显著提升工作效率。&lt;/p&gt;
+&lt;h4&gt;&lt;/h4&gt;
+&lt;h2&gt;一.准备阶段&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;访问飞书开发者后台&lt;/strong&gt;：通过&lt;code&gt;open.feishu.cn&lt;/code&gt;进入企业自建应用创建界面&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;创建应用&lt;/strong&gt;：输入应用名称（如&quot;飞书MCP Demo&quot;）并完成基础信息配置&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;添加机器人能力&lt;/strong&gt;：在应用管理界面中启用&quot;机器人&quot;功能模块&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;二.权限配置&lt;/h2&gt;
+&lt;p&gt;权限管理-开通权限&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;应用身份权限&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;用户权限身份权限&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;云文档&lt;/li&gt;
+&lt;li&gt;消息与群组&lt;/li&gt;
+&lt;li&gt;多维表格&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;三.应用发布与认证&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;创建应用版本：填写版本号（如v1.0.0），保存-申请线上发布&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;审批：&lt;a href=&quot;https://xodnytdcaw.feishu.cn/admin/appCenter/audit/7613811822572129487&quot;&gt;点此通过审核&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;获取凭证信息：审批通过后在&quot;凭证与基础信息&quot;中获取App ID和App Secret&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;安全设置配置：添加重定向URL&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;http://localhost:3000/callback
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;四.本地环境配置&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;安装依赖&lt;/strong&gt;：确保已安装Node.js环境&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;登录认证&lt;/strong&gt;：执行命令行工具登录&lt;code&gt;openapi mcp&lt;/code&gt;，替换&lt;code&gt;your fid&lt;/code&gt;和&lt;code&gt;app secret&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;集成Cloud Code&lt;/strong&gt;：通过&lt;code&gt;cloud mcp add&lt;/code&gt;命令添加MCP配置，格式示例：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;npx -y @larksuiteoapi/lark-mcp login -a &amp;lt;your_app_id&amp;gt; -s &amp;lt;your_app_secret&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260306075245649.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;五.Claude中集成&lt;/h2&gt;
+&lt;p&gt;告诉Claude：帮执行这个命令&lt;/p&gt;
+&lt;p&gt;⚠️App ID与App Secret换你自己的&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;claude mcp add-json --scope=user lark-mcp &apos;{
+      &quot;command&quot;: &quot;npx&quot;,
+      &quot;args&quot;: [
+        &quot;-y&quot;,
+        &quot;@larksuiteoapi/lark-mcp&quot;,
+        &quot;mcp&quot;,
+        &quot;-a&quot;,
+        &quot;&amp;lt;your_app_id&amp;gt;&quot;,
+        &quot;-s&quot;,
+        &quot;&amp;lt;your_app_secret&amp;gt;&quot;,
+        &quot;--oauth&quot;
+      ]
+    }&apos;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;验证&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;claude mcp list
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;六.案例&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;帮我创建一个飞书文档，标题是“如何建立自己的人生清单”。
+
+帮我总结一下这篇文档的内容，列出行动清单。
+https://xodnytdcaw.feishu.cn/wiki/TTedwAniUiXTm9kYwb6cDJL0nsf?fromScene=spaceOverview
+
+帮我爬取一下秋芝2046最新的20篇小红书笔记，整理的多维表格
+
+帮我在大强会员群里发一条消息，内容是“家人们早上好”
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果&lt;/p&gt;
+</content:encoded></item><item><title>Terminal 安装与美化配置指南</title><link>https://dqtx.cc/posts/software/terminal-/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/terminal-/</guid><pubDate>Sun, 15 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;运维工作中高频的命令行操作，向来因 Windows 原生命令提示符、PowerShell 的功能局限受掣肘。而 Windows Terminal 的推出完美解决这一痛点，它的多标签页设计是核心亮点：可以同时打开多个独立会话，像 Claude、OpenCode 这类工具都能在不同标签页中并行运行，无需频繁切换窗口；同时还能无缝集成 Command Prompt、PowerShell、WSL 等各类环境，大幅提升运维终端操作效率，是运维人员打造高效、美观、多功能终端环境的优质选择&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260306070237226.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;一、下载与安装&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;下载地址：https://github.com/microsoft/terminal/releases&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;解压文件到指定安装目录（示例）：&lt;code&gt;D:\software\terminal-1.23.20211.0&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;（可选）将解压目录添加到&lt;strong&gt;系统环境变量&lt;/strong&gt;，实现全局快速调用&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;双击目录内的 &lt;code&gt;WindowsTerminal.exe&lt;/code&gt;，即可启动程序&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260306064800835.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;二、核心配置（JSON 文件）&lt;/h2&gt;
+&lt;p&gt;打开 Windows Terminal，点击界面中的「设置」，选择「打开 JSON 文件」；&lt;/p&gt;
+&lt;p&gt;将原有配置内容全部替换为以下代码（其中背景图&lt;code&gt;meinv.png&lt;/code&gt;可添加&lt;code&gt;dqtx33&lt;/code&gt;领取，需自行修改背景图文件路径）：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{
+    &quot;$help&quot;: &quot;https://aka.ms/terminal-documentation&quot;,
+    &quot;$schema&quot;: &quot;https://aka.ms/terminal-profiles-schema&quot;,
+    &quot;actions&quot;: [],
+    &quot;copyFormatting&quot;: &quot;none&quot;,
+    &quot;copyOnSelect&quot;: false,
+    &quot;defaultProfile&quot;: &quot;{61c54bbd-c2c6-5271-96e7-009a87ff44bf}&quot;,
+    &quot;keybindings&quot;: 
+    [
+        {
+            &quot;id&quot;: &quot;Terminal.CopyToClipboard&quot;,
+            &quot;keys&quot;: &quot;ctrl+c&quot;
+        },
+        {
+            &quot;id&quot;: &quot;Terminal.PasteFromClipboard&quot;,
+            &quot;keys&quot;: &quot;ctrl+v&quot;
+        },
+        {
+            &quot;id&quot;: &quot;Terminal.DuplicatePaneAuto&quot;,
+            &quot;keys&quot;: &quot;alt+shift+d&quot;
+        }
+    ],
+    &quot;newTabMenu&quot;: 
+    [
+        {
+            &quot;type&quot;: &quot;remainingProfiles&quot;
+        }
+    ],
+    &quot;profiles&quot;: 
+    {
+        &quot;defaults&quot;: {
+            &quot;useAcrylic&quot;: true,
+            &quot;acrylicOpacity&quot;: 0.2,
+            &quot;backgroundImage&quot;: &quot;D:/web3/meinv.png&quot;,
+            &quot;backgroundImageOpacity&quot;: 0.4,
+            &quot;fontFace&quot;: &quot;AdwaitaMono Nerd Font&quot;,
+            &quot;fontSize&quot;: 14
+        },
+        &quot;list&quot;: 
+        [
+            {
+                &quot;commandline&quot;: &quot;%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe&quot;,
+                &quot;guid&quot;: &quot;{61c54bbd-c2c6-5271-96e7-009a87ff44bf}&quot;,
+                &quot;hidden&quot;: false,
+                &quot;name&quot;: &quot;Windows PowerShell&quot;
+            },
+            {
+                &quot;commandline&quot;: &quot;%SystemRoot%\\System32\\cmd.exe&quot;,
+                &quot;guid&quot;: &quot;{0caa0dad-35be-5f56-a8ff-afceeeaa6101}&quot;,
+                &quot;hidden&quot;: false,
+                &quot;name&quot;: &quot;\u547d\u4ee4\u63d0\u793a\u7b26&quot;
+            },
+            {
+                &quot;guid&quot;: &quot;{b453ae62-4e3d-5e58-b989-0a998ec441b8}&quot;,
+                &quot;hidden&quot;: false,
+                &quot;name&quot;: &quot;Azure Cloud Shell&quot;,
+                &quot;source&quot;: &quot;Windows.Terminal.Azure&quot;
+            }
+        ]
+    },
+    &quot;schemes&quot;: [],
+    &quot;themes&quot;: []
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;三、集成右键菜单（快速打开）&lt;/h2&gt;
+&lt;p&gt;将 Windows Terminal 添加到鼠标右键菜单，可实现任意目录下一键打开终端，大幅提升操作便捷性，步骤如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;新建文本文档，粘贴以下注册表内容 &lt;strong&gt;（需将路径修改为你的 Terminal 实际安装路径）&lt;/strong&gt;：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\WindowsTerminal]
+@=&quot;在此处打开Terminal&quot;
+&quot;Icon&quot;=&quot;D:\\software\\terminal-1.23.20211.0\\WindowsTerminal.exe,0&quot;
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\WindowsTerminal\command]
+@=&quot;D:\\software\\terminal-1.23.20211.0\\WindowsTerminal.exe -d .&quot;
+
+[HKEY_CLASSES_ROOT\Directory\shell\WindowsTerminal]
+@=&quot;在此处打开Terminal&quot;
+&quot;Icon&quot;=&quot;D:\\software\\terminal-1.23.20211.0\\WindowsTerminal.exe,0&quot;
+
+[HKEY_CLASSES_ROOT\Directory\shell\WindowsTerminal\command]
+@=&quot;D:\\software\\terminal-1.23.20211.0\\WindowsTerminal.exe -d \&quot;%1\&quot;&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;点击文本文档「另存为」，编码选择&lt;strong&gt;ANSI&lt;/strong&gt;，文件后缀修改为&lt;code&gt;.reg&lt;/code&gt;；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;双击保存后的 reg 文件，依次点击「是」「确定」，完成注册表导入即可生效。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;四、配置美化主题（Oh My Posh）&lt;/h2&gt;
+&lt;h3&gt;1. 下载安装&lt;/h3&gt;
+&lt;p&gt;下载地址：&lt;a href=&quot;https://github.com/JanDeDobbeleer/oh-my-posh/releases&quot;&gt;Oh My Posh 官方发布页&lt;/a&gt;，根据自身系统选择对应安装包完成安装。&lt;/p&gt;
+&lt;h3&gt;2. 配置系统变量&lt;/h3&gt;
+&lt;p&gt;将 Oh My Posh 的 bin 目录路径（示例：&lt;code&gt;C:\Users\Administrator\AppData\Local\Programs\oh-my-posh\bin&lt;/code&gt;）添加到系统环境变量，确保全局可调用。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;h3&gt;配置主题生效&lt;/h3&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;按下&lt;code&gt;win+R&lt;/code&gt;，输入&lt;code&gt;wt&lt;/code&gt;打开 Windows Terminal；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在终端中输入以下命令，创建并编辑 PowerShell 配置文件：&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;notepad $PROFILE
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;在打开的记事本中，粘贴以下配置代码，保存并关闭文件：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;oh-my-posh init pwsh --config $env:POSH_THEMES_PATH\M365Princess.omp.json | Invoke-Expression
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;重启 Windows Terminal，主题即可生效。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;五、常见问题&lt;/h2&gt;
+&lt;h3&gt;如何隐藏cmd/ PowerShell启动提示信息&lt;/h3&gt;
+&lt;p&gt;在Terminal设置-配置文件，分别在命令提示符/PowerShel&lt;/p&gt;
+&lt;p&gt;命令行输入下面命令，可隐藏默认的启动提示信息，让终端界面更简洁。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;powershell.exe -nologo
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260306070410108.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;如何安装专属字体（AdwaitaMono Nerd Font）&lt;/h3&gt;
+&lt;p&gt;终端配置中需用到 AdwaitaMono Nerd Font 字体，下载地址：&lt;a href=&quot;https://www.nerdfonts.com/font-downloads?utm_source=chatgpt.com&quot;&gt;Nerd Fonts 官方下载页&lt;/a&gt;，下载后解压安装即可。&lt;/p&gt;
+&lt;p&gt;如果觉得这篇教程对你有帮助，别忘了&lt;strong&gt;点赞+收藏+转发&lt;/strong&gt;三连呀！关注我，后续分享更多实用技巧、效率工具干货，下次见～ 👋&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;大强远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260306064028188.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+</content:encoded></item><item><title>Happy：给Claude一双翅膀</title><link>https://dqtx.cc/posts/aihacks/cc-happy/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/cc-happy/</guid><pubDate>Sat, 14 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;我之前用AI编程一直特别拧巴：Claude Code明明能自己干活，可我必须守在电脑前，它每走一步都要等我确认才能继续。直到我用上了 Happy，它直接把电脑上的 Claude Code 实时映射到手机，不把代码文件上传云端，数据全程端到端加密，不用经过第三方服务器，既能随时随地查看和控制，安全感也拉满，彻底摆脱了必须坐在电脑前的束缚。&lt;/p&gt;
+&lt;h2&gt;什么是Happy&lt;/h2&gt;
+&lt;p&gt;一个让你用手机远程控制和实时查看电脑上Claude或Codex编程过程的工具。它通过将电脑上的 Claude Code 或 Codex 实时映射到手机，解决了需要守在电脑前被动等待的痛点，它让用户从“必须坐在电脑前等待指令”的束缚中解放出来，可以随时随地了解 AI 的工作进展并能随时介入，实现了“无需一直盯着，但一切尽在掌握”的流畅协作体验。&lt;/p&gt;
+&lt;p&gt;项目地址&lt;/p&gt;
+&lt;p&gt;https://github.com/slopus/happy&lt;/p&gt;
+&lt;h2&gt;&lt;strong&gt;先说几点个人体验心得&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;实时状态同步，手机与电脑看到的是同一个对话框，你也可以直接在手机端控制&lt;/li&gt;
+&lt;li&gt;手机端支持语音输入&lt;/li&gt;
+&lt;li&gt;默认模式是逐步确认可以设置yelo模式让它全自动跑&lt;/li&gt;
+&lt;li&gt;电脑上开多个终端窗口跑不同的Claude实例，手机同时跟它们对话互不干扰。&lt;/li&gt;
+&lt;li&gt;一个App切换多个的电脑AI对话任务，对话历史可以追溯&lt;/li&gt;
+&lt;li&gt;电脑端与手机端不需要同一局域网也可以用&lt;/li&gt;
+&lt;li&gt;支持消息推送通知&lt;/li&gt;
+&lt;li&gt;支持斜杠命令&lt;/li&gt;
+&lt;li&gt;支持Claude Code、Codex&lt;/li&gt;
+&lt;li&gt;⚠️注意：电脑必须保持开机、不能休眠&lt;/li&gt;
+&lt;li&gt;⚠️手机远程控制时，会提示“已切换到local模式”（本地模式），此时左下角可以设置权限模式为yelo模式，此时电脑编&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;&lt;strong&gt;三步搞定使用，5 分钟上手&lt;/strong&gt;&lt;/h2&gt;
+&lt;h3&gt;第一步：电脑端安装&lt;/h3&gt;
+&lt;p&gt;PowerShell运行如下安装命令&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm install -g happy-coder
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260306063507065.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;安装完成后，以后启动 Claude Code 时，把&lt;code&gt;claude&lt;/code&gt;命令换成&lt;code&gt;happy&lt;/code&gt;就行了。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;happy      # 启动Claude
+# 或者
+happy codex  # 启动Codex
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;输入&lt;code&gt;happy&lt;/code&gt;启动后，会让你选择使用移动 APP 还是网页浏览器。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260306063604724.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;第二步：APP 使用&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;iOS 用户去美区 App Store 搜索 “Happy”，Android 用户去 Google Play 下载。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;选择 APP 连接，终端会显示一个二维码与URL，扫码或者粘贴url即可&lt;/p&gt;
+&lt;p&gt;链接后手机会显示终端链接成功，此时你就能在手机上看到电脑端运行的 Claude Code 实例了&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260306063629727.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;点开当前对话框，左下角设置点开，有个权限模式、模型选择，你可以选择自己舒服的模式，比如选择YOlo模式就是绕过所有权限，Claude会全自动跑，如果默认每一步都需要你的确认，模型的一般会选择Opus&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;第三步：网页使用&lt;/h3&gt;
+&lt;p&gt;也可以直接用浏览器访问 Web 版，不用下载 App。选择浏览器访问后，终端会出现一个链URL，在其他任何设备的浏览器上打开（比如 pad、手机、其他电脑），选择接受连接即可。连接成功后，终端会自动进入 claudecode 界面，手机端则显示已连接终端，还能显示项目文件夹，点击进入操作。启动会话后，能看到连接的设备、项目文件，还可以选择权限模式，比如接受编辑、计划模式、Yolo 模式。&lt;/p&gt;
+&lt;p&gt;如果觉得这篇教程对你有帮助，别忘了&lt;strong&gt;点赞+收藏+转发&lt;/strong&gt;三连呀！关注我，后续分享更多实用技巧、效率工具干货，下次见～ 👋&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;大强远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260306064028188.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 </content:encoded></item><item><title>16个自用Claude Skills</title><link>https://dqtx.cc/posts/aihacks/skills/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/skills/</guid><pubDate>Fri, 13 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Claude Skills 作为 AI 助手的功能拓展核心，能精准对接各类场景化需求，让智能协作更高效、更具针对性。以下是安装的16个自用的实用且强大的 Claude Skills。这些Skills覆盖了工作与创作中的关键场景，从基础的笔记优化、项目管理，到高阶的内容生成、设计开发，均能提供专业化支持。&lt;/p&gt;
 &lt;h2&gt;Skills 目录&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;D:\zhishiku\.claude\skills\&lt;/code&gt;&lt;/p&gt;
@@ -1016,6 +1289,159 @@ category: Technical
 &lt;a href=&quot;https://github.com/TGX-Android/Telegram-X/releases&quot;&gt;telegramx&lt;/a&gt; &lt;a href=&quot;https://github.com/forkgram/TelegramAndroid/releases&quot;&gt;第三方客户端&lt;/a&gt; &lt;a href=&quot;https://www.apkmirror.com/uploads/?devcategory=telegram-fz-llc&quot;&gt;飞机旧版&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;3、卡bug，可以邮箱验证优先邮箱验证。遇到付费解密强制重启app，多试几次有概率可以跳过。&lt;/p&gt;
 &lt;/blockquote&gt;
+</content:encoded></item><item><title>ClaudeCode安装使用教程</title><link>https://dqtx.cc/posts/aihacks/claudecode%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/claudecode%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid><description>1. Node.js 18 或更高版本 请前往 Node.js 官方网站安装最新 LTS 版本，确保 Claude Code 能正常运行。 https://no...</description><pubDate>Thu, 15 Jan 2026 11:20:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;这几天，c彻底火了，网上都在夸赞这个由Anthropic出品的命令行AI编码工具。不同于那些花哨的AI插件，Claude Code直接住进你的终端，像个老司机一样帮你写代码、修bug、重构项目。我也测试了一圈下来，确实牛批！免费、不限量、速度快，关键是它真的能理解你的整个项目结构。今天，我就给大家整理一份保姆级教程，让你5分钟上手Claude Code。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260106202139189.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;一.准备工作&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Node.js 18 或更高版本&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;请前往 Node.js 官方网站安装最新 LTS 版本，确保 Claude Code 能正常运行。&lt;/p&gt;
+&lt;p&gt;https://nodejs.org/en/download/&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Git（Windows 用户必需）&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如果你使用 Windows，请提前安装 &lt;strong&gt;Git for Windows&lt;/strong&gt;，否则后续依赖安装可能失败。&lt;/p&gt;
+&lt;p&gt;https://git-scm.com/install/windows&lt;/p&gt;
+&lt;h2&gt;二.安装Claude Code&lt;/h2&gt;
+&lt;p&gt;安装命令&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm install -g @anthropic-ai/claude-code
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;安装完后，输入以下命令查看是否安装成功。能看到版本号，就表示已经就绪：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;claude --version
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;重新打开一个新的终端窗口，进入你的test项目，依次运行如下命令&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cd test
+claude
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;三.配置Claude Code的API&lt;/h2&gt;
+&lt;p&gt;启动后会要求你授权，我自己是通过接入API的方法使用，你可以订阅智谱GLM Coding Lite，然后将API通过CC-switch进行管理启动，供Claude Code使用，当然你有gemini pro会员，也可以借助Antigravity Tools反代API，通过CC-switch进行管理启动供Claude Code使用。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260106202311293.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;1.购买API key&lt;/h3&gt;
+&lt;p&gt;这里推荐智谱的API，我订阅的GLM Coding Lite，3个月只要48.6&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;优惠购买地址&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;https://www.bigmodel.cn/glm-coding?ic=PUCQNADSPM&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260106202316904.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;2.创建API key&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260106202319858.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;3.配置API key&lt;/h3&gt;
+&lt;p&gt;我自己使用的工具是&lt;strong&gt;CC-switch&lt;/strong&gt;进行AIPI管理启动，供Claude Code使用，顺便提及下CC-switch，不仅可以管理你的多个API，一键切换，还可以，进行MCP 服务器管理、Claude Code 提示词管理、Claude Skills 管理&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CC-switch开源地址&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;https://github.com/farion1231/cc-switch&lt;/p&gt;
+&lt;h2&gt;四.上手claude Skills&lt;/h2&gt;
+&lt;p&gt;Skills 是给 Claude 装的&quot;专业技能包&quot;。你可以这样理解，一个 Skill 让 Claude 在特定领域变成专家。Skills 是打包好的指令、脚本和资源，Claude 会自动发现并按需加载，让它在特定任务上表现更好。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/svg-1767702815285.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;目前skills支持在Claude.ai、Claude Code以及API中使用，Skills 有两个位置&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;~/.claude/skills/              # 全局 Skills  (所有项目可用)
+project/.claude/skills/        # 项目 skills (仅当前项目，可 git 共享)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;理解CLAUDE.md&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/svg-1767702653032.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;理解Slash Commands&lt;/h3&gt;
+&lt;p&gt;Slash Commands即自定义斜杠命令。&lt;/p&gt;
+&lt;p&gt;比如我创建一个/search-web命令用来搜索资料用&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;具体的配置流程如下&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mkdir -p ~/.claude/commands
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;touch ~/.claude/commands/search-web.md
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;search-web.md内容&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+allowed-tools: Bash(*)
+description: 使用 Gemini CLI 搜索特定站点并进行 UltraThink 总结
+argument-hint: [搜索关键词]
+---
+
+# 任务目标
+在互联网上搜索关于 &quot;$ARGUMENTS&quot; 的内容，并挖掘最靠谱、最能解答疑问的信息。
+
+# 搜索要求
+1. **限定范围**：重点关注以下站点的资料和动态：
+   - anthropic.com
+   - x.com
+   - reddit.com
+   - linux.do
+2. **时效性**：搜索当前月份（!`date &quot;+%Y年%m月&quot;`）的最新消息 [1]。
+3. **执行工具**：必须调用本地的 `gemini cli` 工具，并利用其 `GoogleSearch` 功能执行查询。
+4. **并行处理**：请启动多个并行的子任务（同时调用多次 Bash 工具）分别检索上述不同站点，以加快执行速度。
+5. **总结逻辑**：在给出最终回复前，请开启 **UltraThink (Extended Thinking)** 模式。深度分析各方资料的冲突、真实性和深度，最后提供一份结构严密的总结。
+
+# 搜索指令示例（供你参考执行）
+- `gemini search &quot;site:linux.do $ARGUMENTS&quot;`
+- `gemini search &quot;site:anthropic.com $ARGUMENTS&quot;`
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;使用示例&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/search-web  Claude Code上手教程
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;六.斜杠命令（Slash Commands）&lt;/h2&gt;
+&lt;h3&gt;&lt;/h3&gt;
+&lt;h3&gt;1. 内置核心命令&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;命令&lt;/th&gt;
+&lt;th&gt;功能描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;/help&lt;/td&gt;
+&lt;td&gt;显示所有可用命令&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/clear&lt;/td&gt;
+&lt;td&gt;重置对话历史和上下文&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/init&lt;/td&gt;
+&lt;td&gt;生成 CLAUDE.md 项目配置文件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/compact&lt;/td&gt;
+&lt;td&gt;压缩对话内容，保留关键上下文&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/model&lt;/td&gt;
+&lt;td&gt;切换使用的模型（sonnet/opus/haiku）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/context&lt;/td&gt;
+&lt;td&gt;显示当前上下文窗口使用情况&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/doctor&lt;/td&gt;
+&lt;td&gt;诊断安装问题和 MCP 服务器状态&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/mcp&lt;/td&gt;
+&lt;td&gt;管理 MCP 服务器配置&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;/hooks&lt;/td&gt;
+&lt;td&gt;查看和管理生命周期钩子&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;2. 高级技巧&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;支持使用 $ARGUMENTS 占位符传递参数，例如创建自动修复 GitHub Issue 的命令。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;常见问题&lt;/h2&gt;
+&lt;h3&gt;1.PowerShell运行不了命令&lt;/h3&gt;
+&lt;p&gt;以管理员身份运行 PowerShell，执行：&lt;code&gt;Set-ExecutionPolicy RemoteSigned&lt;/code&gt;（该策略允许运行本地签名脚本、远程可信签名脚本），按提示输入&lt;code&gt;Y&lt;/code&gt;确认。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260106202326621.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;2.启动各种报错&lt;/h3&gt;
+&lt;p&gt;一般是由于win系统下的cmd默认不支持魔法，需要在环境变量进行配置&lt;/p&gt;
+&lt;p&gt;sysdm.cpl进入配置环境变量，&lt;/p&gt;
+&lt;p&gt;系统变量---新建&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;变量名：http_proxy    变量值：http://127.0.0.1:端口号
+变量名：https_proxy   变量值：http://127.0.0.1:端口号
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;七.写在最后&lt;/h2&gt;
+&lt;p&gt;Claude Code确实是目前最好用的AI编程工具之一，它不像其他工具那样花哨，而是专注于真正提升你的编程效率。当然，一些简单的任务基本用不到AI，反而会拖累你的效率，日常可以根据自己的实际情况，是否使用AI辅助。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;以上，既然看到这里了，如果觉得不错，随手点个赞、在看、转发三连吧，如果想第一时间收到推送，也可以给我个星标⭐～谢谢你看我的文章，我们，下次再见。&lt;/em&gt;&lt;/p&gt;
 </content:encoded></item><item><title>Passkeys通行密钥</title><link>https://dqtx.cc/posts/technical/passkeys%E9%80%9A%E8%A1%8C%E5%AF%86%E9%92%A5/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/passkeys%E9%80%9A%E8%A1%8C%E5%AF%86%E9%92%A5/</guid><description>你是否厌倦了记密码？设个简单的不安全，设个复杂的记不住？每次登录还要翻找密码本、或者点那该死的&apos;忘记密码&apos;？这几天测试了一圈Passkeys（通行密钥），我只能...</description><pubDate>Thu, 15 Jan 2026 11:20:00 GMT</pubDate><content:encoded>&lt;p&gt;你是否厌倦了记密码？设个简单的不安全，设个复杂的记不住？每次登录还要翻找密码本、或者点那该死的&quot;忘记密码&quot;？这几天测试了一圈&lt;strong&gt;Passkeys（通行密钥）&lt;/strong&gt;，我只能说：**真TM牛逼！**以后再也不用记密码了，指纹一按、Face ID 一扫，直接登录，速度那叫一个快！今天就给大家分享这个让密码彻底淘汰的神仙技术。&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h2&gt;一、什么是 Passkeys？&lt;/h2&gt;
@@ -1178,159 +1604,6 @@ https://www.passkeys.com/websites-with-passkey-support-sites-directory&lt;/p&gt;
 &lt;li&gt;建议配合密码管理器使用，覆盖不支持的场景&lt;/li&gt;
 &lt;li&gt;多设备备份很重要，别只依赖单一设备&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>ClaudeCode安装使用教程</title><link>https://dqtx.cc/posts/aihacks/claudecode%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/claudecode%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid><description>1. Node.js 18 或更高版本 请前往 Node.js 官方网站安装最新 LTS 版本，确保 Claude Code 能正常运行。 https://no...</description><pubDate>Thu, 15 Jan 2026 11:20:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
-&lt;p&gt;这几天，c彻底火了，网上都在夸赞这个由Anthropic出品的命令行AI编码工具。不同于那些花哨的AI插件，Claude Code直接住进你的终端，像个老司机一样帮你写代码、修bug、重构项目。我也测试了一圈下来，确实牛批！免费、不限量、速度快，关键是它真的能理解你的整个项目结构。今天，我就给大家整理一份保姆级教程，让你5分钟上手Claude Code。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260106202139189.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;一.准备工作&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Node.js 18 或更高版本&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;请前往 Node.js 官方网站安装最新 LTS 版本，确保 Claude Code 能正常运行。&lt;/p&gt;
-&lt;p&gt;https://nodejs.org/en/download/&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Git（Windows 用户必需）&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;如果你使用 Windows，请提前安装 &lt;strong&gt;Git for Windows&lt;/strong&gt;，否则后续依赖安装可能失败。&lt;/p&gt;
-&lt;p&gt;https://git-scm.com/install/windows&lt;/p&gt;
-&lt;h2&gt;二.安装Claude Code&lt;/h2&gt;
-&lt;p&gt;安装命令&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;npm install -g @anthropic-ai/claude-code
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;安装完后，输入以下命令查看是否安装成功。能看到版本号，就表示已经就绪：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;claude --version
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;重新打开一个新的终端窗口，进入你的test项目，依次运行如下命令&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;cd test
-claude
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;三.配置Claude Code的API&lt;/h2&gt;
-&lt;p&gt;启动后会要求你授权，我自己是通过接入API的方法使用，你可以订阅智谱GLM Coding Lite，然后将API通过CC-switch进行管理启动，供Claude Code使用，当然你有gemini pro会员，也可以借助Antigravity Tools反代API，通过CC-switch进行管理启动供Claude Code使用。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260106202311293.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;1.购买API key&lt;/h3&gt;
-&lt;p&gt;这里推荐智谱的API，我订阅的GLM Coding Lite，3个月只要48.6&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;优惠购买地址&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;https://www.bigmodel.cn/glm-coding?ic=PUCQNADSPM&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260106202316904.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;2.创建API key&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260106202319858.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;3.配置API key&lt;/h3&gt;
-&lt;p&gt;我自己使用的工具是&lt;strong&gt;CC-switch&lt;/strong&gt;进行AIPI管理启动，供Claude Code使用，顺便提及下CC-switch，不仅可以管理你的多个API，一键切换，还可以，进行MCP 服务器管理、Claude Code 提示词管理、Claude Skills 管理&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;CC-switch开源地址&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;https://github.com/farion1231/cc-switch&lt;/p&gt;
-&lt;h2&gt;四.上手claude Skills&lt;/h2&gt;
-&lt;p&gt;Skills 是给 Claude 装的&quot;专业技能包&quot;。你可以这样理解，一个 Skill 让 Claude 在特定领域变成专家。Skills 是打包好的指令、脚本和资源，Claude 会自动发现并按需加载，让它在特定任务上表现更好。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/svg-1767702815285.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;目前skills支持在Claude.ai、Claude Code以及API中使用，Skills 有两个位置&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;~/.claude/skills/              # 全局 Skills  (所有项目可用)
-project/.claude/skills/        # 项目 skills (仅当前项目，可 git 共享)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;理解CLAUDE.md&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/svg-1767702653032.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;理解Slash Commands&lt;/h3&gt;
-&lt;p&gt;Slash Commands即自定义斜杠命令。&lt;/p&gt;
-&lt;p&gt;比如我创建一个/search-web命令用来搜索资料用&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;具体的配置流程如下&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;mkdir -p ~/.claude/commands
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;touch ~/.claude/commands/search-web.md
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;search-web.md内容&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;---
-allowed-tools: Bash(*)
-description: 使用 Gemini CLI 搜索特定站点并进行 UltraThink 总结
-argument-hint: [搜索关键词]
----
-
-# 任务目标
-在互联网上搜索关于 &quot;$ARGUMENTS&quot; 的内容，并挖掘最靠谱、最能解答疑问的信息。
-
-# 搜索要求
-1. **限定范围**：重点关注以下站点的资料和动态：
-   - anthropic.com
-   - x.com
-   - reddit.com
-   - linux.do
-2. **时效性**：搜索当前月份（!`date &quot;+%Y年%m月&quot;`）的最新消息 [1]。
-3. **执行工具**：必须调用本地的 `gemini cli` 工具，并利用其 `GoogleSearch` 功能执行查询。
-4. **并行处理**：请启动多个并行的子任务（同时调用多次 Bash 工具）分别检索上述不同站点，以加快执行速度。
-5. **总结逻辑**：在给出最终回复前，请开启 **UltraThink (Extended Thinking)** 模式。深度分析各方资料的冲突、真实性和深度，最后提供一份结构严密的总结。
-
-# 搜索指令示例（供你参考执行）
-- `gemini search &quot;site:linux.do $ARGUMENTS&quot;`
-- `gemini search &quot;site:anthropic.com $ARGUMENTS&quot;`
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;使用示例&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;/search-web  Claude Code上手教程
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;六.斜杠命令（Slash Commands）&lt;/h2&gt;
-&lt;h3&gt;&lt;/h3&gt;
-&lt;h3&gt;1. 内置核心命令&lt;/h3&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;命令&lt;/th&gt;
-&lt;th&gt;功能描述&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;/help&lt;/td&gt;
-&lt;td&gt;显示所有可用命令&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;/clear&lt;/td&gt;
-&lt;td&gt;重置对话历史和上下文&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;/init&lt;/td&gt;
-&lt;td&gt;生成 CLAUDE.md 项目配置文件&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;/compact&lt;/td&gt;
-&lt;td&gt;压缩对话内容，保留关键上下文&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;/model&lt;/td&gt;
-&lt;td&gt;切换使用的模型（sonnet/opus/haiku）&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;/context&lt;/td&gt;
-&lt;td&gt;显示当前上下文窗口使用情况&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;/doctor&lt;/td&gt;
-&lt;td&gt;诊断安装问题和 MCP 服务器状态&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;/mcp&lt;/td&gt;
-&lt;td&gt;管理 MCP 服务器配置&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;/hooks&lt;/td&gt;
-&lt;td&gt;查看和管理生命周期钩子&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h3&gt;2. 高级技巧&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;支持使用 $ARGUMENTS 占位符传递参数，例如创建自动修复 GitHub Issue 的命令。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;常见问题&lt;/h2&gt;
-&lt;h3&gt;1.PowerShell运行不了命令&lt;/h3&gt;
-&lt;p&gt;以管理员身份运行 PowerShell，执行：&lt;code&gt;Set-ExecutionPolicy RemoteSigned&lt;/code&gt;（该策略允许运行本地签名脚本、远程可信签名脚本），按提示输入&lt;code&gt;Y&lt;/code&gt;确认。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260106202326621.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;2.启动各种报错&lt;/h3&gt;
-&lt;p&gt;一般是由于win系统下的cmd默认不支持魔法，需要在环境变量进行配置&lt;/p&gt;
-&lt;p&gt;sysdm.cpl进入配置环境变量，&lt;/p&gt;
-&lt;p&gt;系统变量---新建&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;变量名：http_proxy    变量值：http://127.0.0.1:端口号
-变量名：https_proxy   变量值：http://127.0.0.1:端口号
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;七.写在最后&lt;/h2&gt;
-&lt;p&gt;Claude Code确实是目前最好用的AI编程工具之一，它不像其他工具那样花哨，而是专注于真正提升你的编程效率。当然，一些简单的任务基本用不到AI，反而会拖累你的效率，日常可以根据自己的实际情况，是否使用AI辅助。&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;以上，既然看到这里了，如果觉得不错，随手点个赞、在看、转发三连吧，如果想第一时间收到推送，也可以给我个星标⭐～谢谢你看我的文章，我们，下次再见。&lt;/em&gt;&lt;/p&gt;
 </content:encoded></item><item><title>md2wechat-skill安装教程</title><link>https://dqtx.cc/posts/aihacks/md2wechat-skill%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/md2wechat-skill%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</guid><pubDate>Sat, 03 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;如果你用Markdown写公众号文章，需要先复制内容到排版工具，再复制公众号很麻烦，既耗时间又难保证格式精美，每次操作都要反复调整，成了不少人的痛点，这几天在GitHub发现了&lt;strong&gt;md2wechat-skill&lt;/strong&gt;，听说能一键转换Markdown为精美排版并自动上传到微信草稿箱，好奇测试了下！&lt;/p&gt;
 &lt;p&gt;我安装踩了不少坑，终于搞定，流程算跑通了，不过吐槽下，我是在Claude中用的Ai模式真的慢，有这时间，我10篇文章都排版好了！不过做个记录，相信随着时间技术成熟，一切都会发生变化！&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/workany_writing_1280x720.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
