@@ -42,6 +42,7 @@
 		"diff": "^8.0.3",
 		"katex": "^0.16.22",
 		"overlayscrollbars": "^2.11.1",
+		"puppeteer": "^24.38.0",
 		"rehype-autolink-headings": "^7.1.0",
 		"rehype-components": "^0.3.0",
 		"rehype-external-links": "^3.0.0",
