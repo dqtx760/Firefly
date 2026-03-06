@@ -62,8 +62,8 @@
 &lt;li&gt;⛓️ Web3教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867794661334761497#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;🛠️ 技术教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867808112450912266#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>Claude配置飞书MCP教程</title><link>https://dqtx.cc/posts/aihacks/feishumcp/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/feishumcp/</guid><pubDate>Fri, 06 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;飞书MCP&lt;/strong&gt;是飞书文档集成AI能力的扩展功能，通过配置企业自建应用实现文档自动化处理、数据抓取与消息推送等高级功能。用户反馈其为&quot;AI+飞书文档的强大组合&quot;，配置完成后可显著提升工作效率。&lt;/p&gt;
-&lt;h4&gt;&lt;/h4&gt;
+</content:encoded></item><item><title>Claude配置飞书MCP教程</title><link>https://dqtx.cc/posts/aihacks/feishumcp/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/feishumcp/</guid><pubDate>Fri, 06 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;平时用飞书文档做笔记、整理资料、写方案的朋友，一定要试试这个&lt;strong&gt;超好用的&lt;/strong&gt;组合 ——Claude + 飞书 MCP**。&lt;strong&gt;它就像给飞书文档装了个&lt;/strong&gt;智能外挂**，不用复杂操作，&lt;strong&gt;你只要在 Claude 里说一句话，内容就能自动同步、推送到飞书文档&lt;/strong&gt;，，还能直接生成、写入多维表格。&lt;/p&gt;
+&lt;p&gt;配置好以后，写文档、做总结、搞自动化效率直接翻倍，真正实现&lt;strong&gt;AI 帮你打工&lt;/strong&gt;。今天就把完整配置教程分享给大家，看完就能上手。&lt;/p&gt;
 &lt;h2&gt;一.准备阶段&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;访问飞书开发者后台&lt;/strong&gt;：通过&lt;code&gt;open.feishu.cn&lt;/code&gt;进入企业自建应用创建界面&lt;/li&gt;
@@ -100,7 +100,6 @@
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;安装依赖&lt;/strong&gt;：确保已安装Node.js环境&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;登录认证&lt;/strong&gt;：执行命令行工具登录&lt;code&gt;openapi mcp&lt;/code&gt;，替换&lt;code&gt;your fid&lt;/code&gt;和&lt;code&gt;app secret&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;集成Cloud Code&lt;/strong&gt;：通过&lt;code&gt;cloud mcp add&lt;/code&gt;命令添加MCP配置，格式示例：&lt;/li&gt;
 &lt;/ol&gt;
 &lt;pre&gt;&lt;code&gt;npx -y @larksuiteoapi/lark-mcp login -a &amp;lt;your_app_id&amp;gt; -s &amp;lt;your_app_secret&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
@@ -128,7 +127,7 @@
 &lt;h2&gt;六.案例&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;帮我创建一个飞书文档，标题是“如何建立自己的人生清单”。
 
-帮我总结一下这篇文档的内容，列出行动清单。
+帮我总结一下这篇文档的内容，列出避坑要点清单。
 https://xodnytdcaw.feishu.cn/wiki/TTedwAniUiXTm9kYwb6cDJL0nsf?fromScene=spaceOverview
 
 帮我爬取一下秋芝2046最新的20篇小红书笔记，整理的多维表格
