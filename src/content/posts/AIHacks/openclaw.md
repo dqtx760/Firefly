@@ -11,7 +11,12 @@ pinned: false
 
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260208013915419.webp)
 
+**官网网站**：https://openclaw.ai/
+
+
+
 ## 一、环境准备（必做前置步骤）
+
 推荐系统：Ubuntu 20.04 LTS（搭配ROS Noetic）、Ubuntu 22.04 LTS（搭配ROS2 Humble），打开终端依次执行以下命令安装基础编译工具与依赖库：
 ```bash
 sudo apt update && sudo apt upgrade -y

@@ -1,3 +1,12 @@
+---
+title:
+published: 2026-03-07
+tags: []
+category: AIHacks
+draft: false
+pinned: false
+---
+
 # 🚀 终于找到了！让飞书文档秒变智能的终极玩法！
 
 平时用飞书做笔记、写方案的宝子们注意啦！🔥 今天给大家分享一个超实用的AI效率神器——Claude + 飞书MCP组合拳！
