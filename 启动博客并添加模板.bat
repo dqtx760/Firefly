@@ -44,7 +44,8 @@ echo.
 echo 预览地址: http://localhost:4321
 echo 按 Ctrl+C 可停止预览
 echo.
-pnpm run dev
+start http://localhost:4321
+npm run dev
 goto menu
 
 :exit

@@ -32,7 +32,6 @@ import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
 export default defineConfig({
 	image: {
 		service: passthroughImageService(),
-		domains: ['gitee.com', 'sb-eo-r2.2x.nz', 'pub-d433ca7edaa74994b3d7c40a7fd7d9ac.r2.dev'],
 	},
 	site: "https://dqtx.cc",
 	base: "/",
