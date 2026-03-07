@@ -1,5 +1,5 @@
 ---
-title:
+title: "Chrome DevTools MCP：AI助手的浏览器控制新武器"
 published: 2026-03-07
 tags: []
 category: Technical
