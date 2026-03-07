@@ -34,7 +34,8 @@ const fetchPriority = isExternal ? "auto" : (aboveFold ? "high" : "auto");
 // biome-ignore lint/suspicious/noImplicitAnyLet: <explanation>
 let img;
 if (isLocal) {
-	const files = import.meta.glob<ImageMetadata>("../../**", {
+	// 只匹配图片文件，大幅提升glob速度
+	const files = import.meta.glob<ImageMetadata>("../../**/*.{jpg,jpeg,png,gif,avif,webp,svg}", {
 		import: "default",
 	});
 	let normalizedPath = path
