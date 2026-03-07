@@ -34,9 +34,15 @@ pinned: false
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
     "actions": [],
+    "alwaysOnTop": false,
+    "alwaysShowNotificationIcon": true,
+    "centerOnLaunch": true,
     "copyFormatting": "none",
     "copyOnSelect": false,
-    "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+    "defaultProfile": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+    "initialCols": 90,
+    "initialPosition": "100,50",
+    "initialRows": 26,
     "keybindings": 
     [
         {
@@ -52,6 +58,8 @@ pinned: false
             "keys": "alt+shift+d"
         }
     ],
+    "language": "zh-Hans",
+    "launchMode": "default",
     "newTabMenu": 
     [
         {
@@ -60,24 +68,38 @@ pinned: false
     ],
     "profiles": 
     {
-        "defaults": {
-            "useAcrylic": true,
-            "acrylicOpacity": 0.2,
+        "defaults": 
+        {
             "backgroundImage": "D:/web3/meinv.png",
-            "backgroundImageOpacity": 0.4,
-            "fontFace": "AdwaitaMono Nerd Font",
-            "fontSize": 14
+            "backgroundImageOpacity": 0.45,
+            "colorScheme": "One Half Light",
+            "font": 
+            {
+                "face": "AdwaitaMono Nerd Font Propo",
+                "size": 13
+            },
+            "foreground": "#DCDFE4",
+            "intenseTextStyle": "bold",
+            "opacity": 35,
+            "useAcrylic": true
         },
         "list": 
         [
             {
-                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                "commandline": "powershell.exe -nologo",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
                 "name": "Windows PowerShell"
             },
             {
-                "commandline": "%SystemRoot%\\System32\\cmd.exe",
+                "colorScheme": "Solarized Dark",
+                "commandline": "powershell.exe -nologo",
+                "experimental.retroTerminalEffect": false,
+                "font": 
+                {
+                    "cellHeight": "1.1",
+                    "size": 13
+                },
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
                 "name": "\u547d\u4ee4\u63d0\u793a\u7b26"
@@ -174,11 +196,27 @@ powershell.exe -nologo
 
 
 
-如果觉得这篇教程对你有帮助，别忘了**点赞+收藏+转发**三连呀！关注我，后续分享更多实用技巧、效率工具干货，下次见～ 👋
+以上，既然看到这里了，**如果觉得教程对你有帮助**，随手<u>点个赞、收藏、转发</u>三连吧！有任何问题，欢迎在**留言区**评论，我会逐一回复。👏👏
 
 
 
-**大强远程技术支持：[742112.xyz](https://www.742112.xyz/)**
+**🛠️ 大远程技术支持**
+
+如果你在安装、配置或使用中遇到任何问题，不想自己折腾
+
+随时可以找我提供 **1 对 1 远程技术支持**：
+
+- 软件安装 / 激活 / 配置
+- 系统重装 / 优化
+- 疑难报错排查
+- 网盘挂载 / 客户端编译
+
+👉 远程客户端下载 / 服务说明：[742112.xyz](742112.xyz)
+
+
+
+🚀 **关于的知识星球**
+
+为了帮你节省更多时间，我把私藏的软件安装包、激活工具、效率工作流和独家教程，都整理进了我的知识星球「<u>大强・效率空间站</u>」：68元/年，承包你一整年的效率提升。👇 微信扫码：
 
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260306064028188.webp)
-
