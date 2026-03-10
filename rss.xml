@@ -62,6 +62,106 @@
 &lt;li&gt;⛓️ Web3教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867794661334761497#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;🛠️ 技术教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867808112450912266#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>Chrome官方MCP：chrome-devtools-mcp</title><link>https://dqtx.cc/posts/aihacks/chrome-devtools-mcp/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/chrome-devtools-mcp/</guid><pubDate>Tue, 10 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;前端开发中的网页性能分析、重复交互操作、多场景调试，向来是耗时又繁琐的工作。而Chrome DevTools MCP的出现，打通了AI助手与Chrome浏览器的通信链路，让开发者仅凭自然语言指令，就能实现浏览器自动化控制、性能诊断、页面调试等操作，直接把前端开发与调试效率拉满。&lt;/p&gt;
+&lt;p&gt;项目地址：https://github.com/ChromeDevTools/chrome-devtools-mcp&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/IMG_0472.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;一、快速上手：三步配置，即刻使用&lt;/h2&gt;
+&lt;h3&gt;1. 环境准备&lt;/h3&gt;
+&lt;p&gt;搭建Chrome DevTools MCP环境，仅需两个基础条件，确保版本匹配即可：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Node.js v20.19 及以上版本&lt;/li&gt;
+&lt;li&gt;最新稳定版 Chrome 浏览器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;2. 全局安装&lt;/h3&gt;
+&lt;p&gt;执行下方命令，完成Chrome DevTools MCP的全局安装：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm install -g chrome-devtools-mcp
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;3. 客户端核心配置&lt;/h3&gt;
+&lt;p&gt;在你的MCP客户端配置文件中，添加如下基础配置，即可完成初始化：&lt;/p&gt;
+&lt;p&gt;自己不懂可以借助CC Switch，也可以让Claude配置&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{
+  &quot;mcpServers&quot;: {
+    &quot;chrome-devtools&quot;: {
+      &quot;command&quot;: &quot;npx&quot;,
+      &quot;args&quot;: [&quot;-y&quot;, &quot;chrome-devtools-mcp@latest&quot;]
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;二、关键优化：保留登录状态，告别重复操作&lt;/h2&gt;
+&lt;p&gt;默认配置下，Chrome DevTools MCP会使用临时Profile，每次操作都需要重新登录各类网站，十分繁琐。这里提供两种实用配置方案，轻松保留登录状态，复用浏览器环境。&lt;/p&gt;
+&lt;h3&gt;方案1：指定专属用户数据目录&lt;/h3&gt;
+&lt;p&gt;直接在配置中设置固定的用户数据目录，让Chrome将登录信息、配置都保存在该目录，永久保留：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{
+  &quot;mcpServers&quot;: {
+    &quot;chrome-devtools&quot;: {
+      &quot;command&quot;: &quot;npx&quot;,
+      &quot;args&quot;: [
+        &quot;-y&quot;,
+        &quot;chrome-devtools-mcp@latest&quot;,
+        &quot;--user-data-dir=%USERPROFILE%\\.chrome-mcp-profile&quot;,
+        &quot;--isolated=false&quot;
+      ]
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;方案2：连接本地正在运行的Chrome实例（推荐）&lt;/h3&gt;
+&lt;p&gt;直接复用你本地已打开的Chrome，所有登录状态、已开标签页一键复用，无需额外配置目录，步骤如下：&lt;/p&gt;
+&lt;h4&gt;步骤1：开启Chrome远程调试&lt;/h4&gt;
+&lt;p&gt;先完全关闭所有Chrome进程，右键点击Chrome快捷方式→「属性」，在「目标」末尾添加远程调试参数：
+原目标：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&quot;C:\Program Files\Google\Chrome\Application\chrome.exe&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;修改后：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&quot;C:\Program Files\Google\Chrome\Application\chrome.exe&quot; --remote-debugging-port=9222
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;步骤2：配置MCP连接本地Chrome&lt;/h4&gt;
+&lt;p&gt;在MCP客户端配置文件中，添加调试地址配置，指向本地9222端口：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{
+  &quot;mcpServers&quot;: {
+    &quot;chrome-devtools&quot;: {
+      &quot;command&quot;: &quot;chrome-devtools-mcp&quot;,
+      &quot;env&quot;: {
+        &quot;DEBUGGER_ADDRESS&quot;: &quot;localhost:9222&quot;
+      }
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;配置完成后重启MCP服务，后续调用Chrome相关功能，都会直接连接本地运行的Chrome实例。&lt;/p&gt;
+&lt;h3&gt;极简备用方案：启动专用Chrome&lt;/h3&gt;
+&lt;p&gt;也可通过命令行启动专属Chrome实例，手动登录后永久保留状态，适用于需要单独隔离开发环境的场景：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# macOS
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --user-data-dir=&quot;$HOME/.chrome-mcp&quot; --remote-debugging-port=9222
+
+# Windows
+&quot;C:\Program Files\Google\Chrome\Application\chrome.exe&quot; --user-data-dir=&quot;%USERPROFILE%\.chrome-mcp&quot; --remote-debugging-port=9222
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;在该Chrome中登录小红书、微信、各类开发平台后，配置MCP即可直接复用登录状态。&lt;/p&gt;
+&lt;h2&gt;三、能力全开：AI操控浏览器，能做这些事&lt;/h2&gt;
+&lt;p&gt;Chrome DevTools MCP赋予AI完整的Chrome操控能力，从性能分析到页面爬取，从自动化发布到跨平台信息获取，自然语言一句话就能实现，以下是开发者高频实用场景：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;性能分析&lt;/strong&gt;：&lt;code&gt;帮我分析D:\project2026\fuwari这个项目的LCP指标&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;内容转换与发布&lt;/strong&gt;：&lt;code&gt;把D:\project2026\fuwari\src\content\posts\AIHacks\feishumcp.md转换成小红书笔记，并用chrome-devtools-mcp发布&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;资源下载&lt;/strong&gt;：&lt;code&gt;调用chrome-devtools-mcp下载https://www.xiaoyuzhoufm.com/episode/6622f0cec3e09d8f3737b1dc的音频链接&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;页面信息爬取&lt;/strong&gt;：&lt;code&gt;把https://mp.weixin.qq.com/s/aCnFwCJ-I-bwaZ5SMFWgbw页面的文字、图片、代码块全部扒下来，隐藏作者与平台信息&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;文档学习与项目修改&lt;/strong&gt;：&lt;code&gt;用Chrome DevTools查看https://custom.rokid.com的官方JSAR文档，并对项目进行对应修改&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;平台信息汇总&lt;/strong&gt;：&lt;code&gt;打开bilibili搜索影视飓风，总结该账号最近一个月的视频链接&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;电商/社交自动化&lt;/strong&gt;：小红书自动发帖、自动登录平台并上架商品&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;海外平台信息获取&lt;/strong&gt;：&lt;code&gt;去油管找到第一个关于Anthropic的视频，跳过广告并总结视频内容&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;简单来说，只要是人工能在Chrome中完成的操作，通过Chrome DevTools MCP，AI都能替你实现，彻底解放双手。&lt;/p&gt;
+&lt;h2&gt;四、核心价值：前端开发的效率革命&lt;/h2&gt;
+&lt;p&gt;Chrome DevTools MCP的核心，是将原本需要人工一步步操作的&lt;strong&gt;复杂前端调试、自动化测试、性能分析工作&lt;/strong&gt;，简化为自然语言指令，让AI成为你的专属浏览器操作助手：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;无需编写复杂的自动化脚本，一句话实现浏览器交互；&lt;/li&gt;
+&lt;li&gt;直接复用本地Chrome环境，登录状态、配置信息不丢失；&lt;/li&gt;
+&lt;li&gt;打通AI与Chrome DevTools的全能力，性能分析、网络调试、页面操作一站式完成；&lt;/li&gt;
+&lt;li&gt;支持多MCP客户端适配，Claude Code、CherryStudio等主流AI开发工具均可无缝集成。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;从重复的页面操作到专业的性能诊断，Chrome DevTools MCP让AI成为前端开发者的「左膀右臂」，把开发者从繁琐的机械工作中解放出来，更专注于核心的开发与创意工作。&lt;/p&gt;
+&lt;p&gt;这就是Chrome官方推出的MCP插件，一个让AI真正接管浏览器，重构前端开发效率的实用工具，现在就配置起来，体验AI操控浏览器的便捷吧！&lt;/p&gt;
 </content:encoded></item><item><title>CodePilot接入飞书指南</title><link>https://dqtx.cc/posts/aihacks/codepilot/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/codepilot/</guid><pubDate>Sat, 07 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;CodePilot 是一款功能强大的 Claude 第三方客户端，近期上线的飞书桥接功能，实现了 Claude 能力与飞书生态的深度打通。完成接入配置后，你可以直接在飞书内使用 Claude 完成以下场景的工作：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;无需切换客户端，在飞书聊天窗口直接与 Claude 对话咨询问题&lt;/li&gt;
@@ -543,6 +643,26 @@ https://xodnytdcaw.feishu.cn/wiki/TTedwAniUiXTm9kYwb6cDJL0nsf?fromScene=spaceOve
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260306070410108.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;如何安装专属字体（AdwaitaMono Nerd Font）&lt;/h3&gt;
 &lt;p&gt;终端配置中需用到 AdwaitaMono Nerd Font 字体，下载地址：&lt;a href=&quot;https://www.nerdfonts.com/font-downloads?utm_source=chatgpt.com&quot;&gt;Nerd Fonts 官方下载页&lt;/a&gt;，下载后解压安装即可。&lt;/p&gt;
+&lt;h3&gt;代码自动补全&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;打开 Windows Terminal&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;输入这 2 条命令（复制粘贴）：&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;Install-Module PSReadLine -Force -SkipPublisherCheck
+notepad $PROFILE
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;在打开的文件里粘贴这段：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;Set-PSReadLineOption -PredictionSource History
+Set-PSReadLineOption -PredictionViewStyle InlineView
+Set-PSReadLineOption -EditMode Windows
+Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;以上，既然看到这里了，&lt;strong&gt;如果觉得教程对你有帮助&lt;/strong&gt;，随手&amp;lt;u&amp;gt;点个赞、收藏、转发&amp;lt;/u&amp;gt;三连吧！有任何问题，欢迎在&lt;strong&gt;留言区&lt;/strong&gt;评论，我会逐一回复。👏👏&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;🛠️ 大远程技术支持&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;如果你在安装、配置或使用中遇到任何问题，不想自己折腾&lt;/p&gt;
@@ -1499,66 +1619,6 @@ category: Technical
 &lt;p&gt;3，开始对话&lt;/p&gt;
 &lt;p&gt;Ctrl-Alt-B打开对话框&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260124225337099.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-</content:encoded></item><item><title>OBS摄像头一键移动插件</title><link>https://dqtx.cc/posts/software/obs%E6%91%84%E5%83%8F%E5%A4%B4%E4%B8%80%E9%94%AE%E7%A7%BB%E5%8A%A8%E6%8F%92%E4%BB%B6/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/obs%E6%91%84%E5%83%8F%E5%A4%B4%E4%B8%80%E9%94%AE%E7%A7%BB%E5%8A%A8%E6%8F%92%E4%BB%B6/</guid><description>想让 OBS 摄像头实现「一键移动+一键复位」的平滑效果？不管是直播过场切换、录课构图调整，还是避免画面遮挡，motion-effect 插件都能轻松搞定！无需复杂操作，3 步就能实现精准位移，让你的...</description><pubDate>Thu, 15 Jan 2026 11:20:00 GMT</pubDate><content:encoded>&lt;p&gt;想让 OBS 摄像头实现「一键移动+一键复位」的平滑效果？不管是直播过场切换、录课构图调整，还是避免画面遮挡，motion-effect 插件都能轻松搞定！无需复杂操作，3 步就能实现精准位移，让你的画面切换更专业～&lt;/p&gt;
-&lt;h2&gt;一、插件简介&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;开发者：CatxFish（免费开源）&lt;/li&gt;
-&lt;li&gt;核心功能：画面平滑运动控制（平移、旋转、变焦等），支持往返触发&lt;/li&gt;
-&lt;li&gt;适配设备：绝大多数普通 USB 摄像头、部分 PTZ 摄像头&lt;/li&gt;
-&lt;li&gt;兼容系统：Windows、macOS、Linux&lt;/li&gt;
-&lt;li&gt;项目地址：https://github.com/CatxFish/motion-effect&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;二、安装步骤&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;下载对应系统安装包，解压后将文件放入 obs-studio 主文件夹&lt;/li&gt;
-&lt;li&gt;重启 OBS 完成生效&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2&gt;三、前置准备&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;场景名：教程（可自定义）&lt;/li&gt;
-&lt;li&gt;源：摄像头、显示器（按需添加）&lt;/li&gt;
-&lt;li&gt;目标效果：按快捷键 → 摄像头右下移动；再按快捷键 → 摄像头左上返回&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;四、配置流程&lt;/h2&gt;
-&lt;h3&gt;1. 记录初始坐标&lt;/h3&gt;
-&lt;p&gt;右键「源→摄像头」→ 变换→编辑变换，记录初始坐标（示例：1725, 489）&lt;/p&gt;
-&lt;h3&gt;2. 添加运动滤镜&lt;/h3&gt;
-&lt;p&gt;选中场景「教程」→ 右键→滤镜→效果滤镜→左下角「+」→ 选择「Motion」&lt;br /&gt;
-命名滤镜（自定义），核心参数配置：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Trigger Behavior 设为「Hotkey (Round trip)」（往返模式）&lt;/li&gt;
-&lt;li&gt;填写记录的初始坐标与目标坐标（示例目标：1735, 539）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260117005310134.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;3. 绑定快捷键&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;OBS 顶部→设置→快捷键&lt;/li&gt;
-&lt;li&gt;找到对应滤镜，为「Forward」和「Backward」绑定同一快捷键（示例：Alt+K）&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260117005511984.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;五、效果说明&lt;/h2&gt;
-&lt;p&gt;&lt;img alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;以上就是 motion-effect 插件的核心配置流程，全程聚焦「快速部署+实用效果」，无需多余步骤！插件轻量开源，兼容主流系统与摄像头，如需调整移动距离、速度或拓展多档位，直接修改坐标与参数即可。&lt;/p&gt;
-&lt;p&gt;✨ &lt;strong&gt;互动时间&lt;/strong&gt;&lt;br /&gt;
-你平时用 OBS 做直播/录课时，还遇到过哪些画面调整的难题？欢迎在评论区留言分享，我会一一解答～&lt;/p&gt;
-&lt;p&gt;如果觉得这篇教程对你有帮助，别忘了&lt;strong&gt;点赞+收藏+转发&lt;/strong&gt;三连呀！关注我，后续分享更多OBS 实用技巧、效率工具干货，下次见～ 👋&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;大强远程技术支持：742112.xyz&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;+86新注册电报，绕过sms收费
-1、换IP，建议，美 日 新 节点，不建议香港节点。
-2、换客户端，telegramx，或者这两个。
-[telegramx](https://github.com/TGX-Android/Telegram-X/releases) [第三方客户端](https://github.com/forkgram/TelegramAndroid/releases) [飞机旧版](https://www.apkmirror.com/uploads/?devcategory=telegram-fz-llc) 
-
-3、卡bug，可以邮箱验证优先邮箱验证。
-
-遇到付费解密强制重启app，多试几次有概率可以跳过。
-&lt;/code&gt;&lt;/pre&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;+86新注册电报，绕过sms收费&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;1、换IP，建议，美 日 新 节点，不建议香港节点。
-2、换客户端，telegramx，或者这两个。
-&lt;a href=&quot;https://github.com/TGX-Android/Telegram-X/releases&quot;&gt;telegramx&lt;/a&gt; &lt;a href=&quot;https://github.com/forkgram/TelegramAndroid/releases&quot;&gt;第三方客户端&lt;/a&gt; &lt;a href=&quot;https://www.apkmirror.com/uploads/?devcategory=telegram-fz-llc&quot;&gt;飞机旧版&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;3、卡bug，可以邮箱验证优先邮箱验证。遇到付费解密强制重启app，多试几次有概率可以跳过。&lt;/p&gt;
-&lt;/blockquote&gt;
 </content:encoded></item><item><title>ClaudeCode安装使用教程</title><link>https://dqtx.cc/posts/aihacks/claudecode%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/claudecode%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid><description>1. Node.js 18 或更高版本 请前往 Node.js 官方网站安装最新 LTS 版本，确保 Claude Code 能正常运行。 https://no...</description><pubDate>Thu, 15 Jan 2026 11:20:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;这几天，c彻底火了，网上都在夸赞这个由Anthropic出品的命令行AI编码工具。不同于那些花哨的AI插件，Claude Code直接住进你的终端，像个老司机一样帮你写代码、修bug、重构项目。我也测试了一圈下来，确实牛批！免费、不限量、速度快，关键是它真的能理解你的整个项目结构。今天，我就给大家整理一份保姆级教程，让你5分钟上手Claude Code。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1712,6 +1772,66 @@ argument-hint: [搜索关键词]
 &lt;h2&gt;七.写在最后&lt;/h2&gt;
 &lt;p&gt;Claude Code确实是目前最好用的AI编程工具之一，它不像其他工具那样花哨，而是专注于真正提升你的编程效率。当然，一些简单的任务基本用不到AI，反而会拖累你的效率，日常可以根据自己的实际情况，是否使用AI辅助。&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;以上，既然看到这里了，如果觉得不错，随手点个赞、在看、转发三连吧，如果想第一时间收到推送，也可以给我个星标⭐～谢谢你看我的文章，我们，下次再见。&lt;/em&gt;&lt;/p&gt;
+</content:encoded></item><item><title>OBS摄像头一键移动插件</title><link>https://dqtx.cc/posts/software/obs%E6%91%84%E5%83%8F%E5%A4%B4%E4%B8%80%E9%94%AE%E7%A7%BB%E5%8A%A8%E6%8F%92%E4%BB%B6/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/obs%E6%91%84%E5%83%8F%E5%A4%B4%E4%B8%80%E9%94%AE%E7%A7%BB%E5%8A%A8%E6%8F%92%E4%BB%B6/</guid><description>想让 OBS 摄像头实现「一键移动+一键复位」的平滑效果？不管是直播过场切换、录课构图调整，还是避免画面遮挡，motion-effect 插件都能轻松搞定！无需复杂操作，3 步就能实现精准位移，让你的...</description><pubDate>Thu, 15 Jan 2026 11:20:00 GMT</pubDate><content:encoded>&lt;p&gt;想让 OBS 摄像头实现「一键移动+一键复位」的平滑效果？不管是直播过场切换、录课构图调整，还是避免画面遮挡，motion-effect 插件都能轻松搞定！无需复杂操作，3 步就能实现精准位移，让你的画面切换更专业～&lt;/p&gt;
+&lt;h2&gt;一、插件简介&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;开发者：CatxFish（免费开源）&lt;/li&gt;
+&lt;li&gt;核心功能：画面平滑运动控制（平移、旋转、变焦等），支持往返触发&lt;/li&gt;
+&lt;li&gt;适配设备：绝大多数普通 USB 摄像头、部分 PTZ 摄像头&lt;/li&gt;
+&lt;li&gt;兼容系统：Windows、macOS、Linux&lt;/li&gt;
+&lt;li&gt;项目地址：https://github.com/CatxFish/motion-effect&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;二、安装步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;下载对应系统安装包，解压后将文件放入 obs-studio 主文件夹&lt;/li&gt;
+&lt;li&gt;重启 OBS 完成生效&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;三、前置准备&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;场景名：教程（可自定义）&lt;/li&gt;
+&lt;li&gt;源：摄像头、显示器（按需添加）&lt;/li&gt;
+&lt;li&gt;目标效果：按快捷键 → 摄像头右下移动；再按快捷键 → 摄像头左上返回&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;四、配置流程&lt;/h2&gt;
+&lt;h3&gt;1. 记录初始坐标&lt;/h3&gt;
+&lt;p&gt;右键「源→摄像头」→ 变换→编辑变换，记录初始坐标（示例：1725, 489）&lt;/p&gt;
+&lt;h3&gt;2. 添加运动滤镜&lt;/h3&gt;
+&lt;p&gt;选中场景「教程」→ 右键→滤镜→效果滤镜→左下角「+」→ 选择「Motion」&lt;br /&gt;
+命名滤镜（自定义），核心参数配置：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Trigger Behavior 设为「Hotkey (Round trip)」（往返模式）&lt;/li&gt;
+&lt;li&gt;填写记录的初始坐标与目标坐标（示例目标：1735, 539）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260117005310134.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;3. 绑定快捷键&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;OBS 顶部→设置→快捷键&lt;/li&gt;
+&lt;li&gt;找到对应滤镜，为「Forward」和「Backward」绑定同一快捷键（示例：Alt+K）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260117005511984.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;五、效果说明&lt;/h2&gt;
+&lt;p&gt;&lt;img alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;以上就是 motion-effect 插件的核心配置流程，全程聚焦「快速部署+实用效果」，无需多余步骤！插件轻量开源，兼容主流系统与摄像头，如需调整移动距离、速度或拓展多档位，直接修改坐标与参数即可。&lt;/p&gt;
+&lt;p&gt;✨ &lt;strong&gt;互动时间&lt;/strong&gt;&lt;br /&gt;
+你平时用 OBS 做直播/录课时，还遇到过哪些画面调整的难题？欢迎在评论区留言分享，我会一一解答～&lt;/p&gt;
+&lt;p&gt;如果觉得这篇教程对你有帮助，别忘了&lt;strong&gt;点赞+收藏+转发&lt;/strong&gt;三连呀！关注我，后续分享更多OBS 实用技巧、效率工具干货，下次见～ 👋&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;大强远程技术支持：742112.xyz&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;+86新注册电报，绕过sms收费
+1、换IP，建议，美 日 新 节点，不建议香港节点。
+2、换客户端，telegramx，或者这两个。
+[telegramx](https://github.com/TGX-Android/Telegram-X/releases) [第三方客户端](https://github.com/forkgram/TelegramAndroid/releases) [飞机旧版](https://www.apkmirror.com/uploads/?devcategory=telegram-fz-llc) 
+
+3、卡bug，可以邮箱验证优先邮箱验证。
+
+遇到付费解密强制重启app，多试几次有概率可以跳过。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;+86新注册电报，绕过sms收费&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1、换IP，建议，美 日 新 节点，不建议香港节点。
+2、换客户端，telegramx，或者这两个。
+&lt;a href=&quot;https://github.com/TGX-Android/Telegram-X/releases&quot;&gt;telegramx&lt;/a&gt; &lt;a href=&quot;https://github.com/forkgram/TelegramAndroid/releases&quot;&gt;第三方客户端&lt;/a&gt; &lt;a href=&quot;https://www.apkmirror.com/uploads/?devcategory=telegram-fz-llc&quot;&gt;飞机旧版&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;3、卡bug，可以邮箱验证优先邮箱验证。遇到付费解密强制重启app，多试几次有概率可以跳过。&lt;/p&gt;
+&lt;/blockquote&gt;
 </content:encoded></item><item><title>Passkeys通行密钥</title><link>https://dqtx.cc/posts/technical/passkeys%E9%80%9A%E8%A1%8C%E5%AF%86%E9%92%A5/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/passkeys%E9%80%9A%E8%A1%8C%E5%AF%86%E9%92%A5/</guid><description>你是否厌倦了记密码？设个简单的不安全，设个复杂的记不住？每次登录还要翻找密码本、或者点那该死的&apos;忘记密码&apos;？这几天测试了一圈Passkeys（通行密钥），我只能...</description><pubDate>Thu, 15 Jan 2026 11:20:00 GMT</pubDate><content:encoded>&lt;p&gt;你是否厌倦了记密码？设个简单的不安全，设个复杂的记不住？每次登录还要翻找密码本、或者点那该死的&quot;忘记密码&quot;？这几天测试了一圈&lt;strong&gt;Passkeys（通行密钥）&lt;/strong&gt;，我只能说：**真TM牛逼！**以后再也不用记密码了，指纹一按、Face ID 一扫，直接登录，速度那叫一个快！今天就给大家分享这个让密码彻底淘汰的神仙技术。&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h2&gt;一、什么是 Passkeys？&lt;/h2&gt;
