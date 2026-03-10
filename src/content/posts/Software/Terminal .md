@@ -196,6 +196,28 @@ powershell.exe -nologo
 
 
 
+### 代码自动补全
+
+1. 打开 Windows Terminal
+
+2. 输入这 2 条命令（复制粘贴）：
+
+```
+Install-Module PSReadLine -Force -SkipPublisherCheck
+notepad $PROFILE
+```
+
+3. 在打开的文件里粘贴这段：
+
+```
+Set-PSReadLineOption -PredictionSource History
+Set-PSReadLineOption -PredictionViewStyle InlineView
+Set-PSReadLineOption -EditMode Windows
+Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
+```
+
+
+
 以上，既然看到这里了，**如果觉得教程对你有帮助**，随手<u>点个赞、收藏、转发</u>三连吧！有任何问题，欢迎在**留言区**评论，我会逐一回复。👏👏
 
 
