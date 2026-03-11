@@ -15,7 +15,7 @@ pinned: false
 
 **项目地址**：https://github.com/youzaiAGI/agent-skills-hub
 
-![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Generated_Image_kgv50bkgv50bkgv5.webp)
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/hub.webp)
 
 ## 它解决了什么问题
 
