@@ -13,7 +13,7 @@ pinned: false
 
 项目地址：https://github.com/ChromeDevTools/chrome-devtools-mcp
 
-![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/IMG_0472.webp)
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260311185030784.webp)
 
 ## 一、快速上手：三步配置，即刻使用
 ### 1. 环境准备
