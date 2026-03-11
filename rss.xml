@@ -62,6 +62,79 @@
 &lt;li&gt;⛓️ Web3教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867794661334761497#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;🛠️ 技术教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867808112450912266#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>Agent Skills Hub详解</title><link>https://dqtx.cc/posts/aihacks/agent-skills-hub/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/agent-skills-hub/</guid><pubDate>Wed, 11 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;相信有很多小伙伴跟我一样，手头同时在用好几个 AI Agent——Claude Code、Codex、Cursor、Windsurf……每个 Agent 都有自己的 Skill 目录，装了一堆技能包。时间一长就会遇到一个头疼的问题：同一个 Skill 要在不同 Agent 里各装一遍，版本还不一定一致，管理起来非常混乱。&lt;/p&gt;
+&lt;p&gt;我一直在想，有没有一种方式能像管理代码依赖一样，统一管理所有 Agent 的技能包？最近我在 GitHub 上发现了 agent-skills-hub 这个项目，完美解决了我的痛点。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;项目地址&lt;/strong&gt;：https://github.com/youzaiAGI/agent-skills-hub&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/hub.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;它解决了什么问题&lt;/h2&gt;
+&lt;p&gt;简单来说，agent-skills-hub 提供了一个&quot;中央仓库&quot;的概念。所有 Skill 统一安装到 &lt;code&gt;~/.skill-hub&lt;/code&gt; 这个目录，然后通过同步命令一键分发到各个 Agent 的技能目录中。这样做的好处显而易见：只需要维护一份技能包，所有 Agent 共享同一套 Skill，再也不用重复安装了。&lt;/p&gt;
+&lt;p&gt;目前它支持 18+ 个 AI Agent，包括 Claude Code、Codex、Cursor、Windsurf、Gemini、Trae、GitHub Copilot 等主流工具，覆盖面非常广。&lt;/p&gt;
+&lt;h2&gt;安装方式&lt;/h2&gt;
+&lt;p&gt;安装方式很简单，直接用 pip：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pip install agent-skills-hub
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;安装完成后，可以用以下命令验证：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;skill --version
+# 输出: Agent Skills Hub v1.6.10
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;当然，你也可以直接把项目地址丢给 Claude，让它帮你安装：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;https://github.com/youzaiAGI/agent-skills-hub
+帮我安装这个项目
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;日常使用&lt;/h2&gt;
+&lt;p&gt;安装好之后，日常使用主要就两步：装技能、同步技能。&lt;/p&gt;
+&lt;h3&gt;安装新技能到中央仓库&lt;/h3&gt;
+&lt;p&gt;每次发现一个好用的 Skill，我都会先装到 &lt;code&gt;~/.skill-hub&lt;/code&gt; 这个中央仓库里。比如我想安装 Anthropic 官方的 skill-creator：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;skill install skill-creator@anthropics/skills
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;或者你也可以让 Claude 帮你操作，把 Skill 的 GitHub 地址丢给它就行：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;https://github.com/anthropics/skills/tree/main/skills/skill-creator
+帮我安装这个 skill 到 ~/.skill-hub
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;同步到各个 Agent&lt;/h3&gt;
+&lt;p&gt;技能装好后，需要同步到你实际使用的 Agent 中。agent-skills-hub 提供了 &lt;code&gt;skill sync&lt;/code&gt; 命令来完成这件事：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# 同步到 Claude Code（全局）
+skill sync ClaudeCode skill-creator@anthropics/skills -g
+
+# 同步到 Cursor（项目级）
+skill sync Cursor skill-creator@anthropics/skills -p
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果你想一次性把所有技能都同步过去，也可以先导出技能列表，再批量同步：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# 导出当前已安装的技能列表
+skill list &amp;gt; skills.txt
+
+# 批量同步到指定 Agent
+skill sync ClaudeCode skills.txt -g
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这个体验就像 Python 的 &lt;code&gt;pip install -r requirements.txt&lt;/code&gt; 一样丝滑。&lt;/p&gt;
+&lt;h3&gt;交互式搜索和管理&lt;/h3&gt;
+&lt;p&gt;除了命令行，agent-skills-hub 还提供了交互式的 TUI 界面，可以搜索、浏览和安装技能：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# 打开交互式搜索
+skill search
+
+# 打开技能管理界面
+skill manage
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;在搜索界面里可以用方向键浏览，按回车查看详情并安装，非常直观。&lt;/p&gt;
+&lt;h2&gt;我的实际工作流&lt;/h2&gt;
+&lt;p&gt;分享一下我个人的使用习惯，供大家参考。&lt;/p&gt;
+&lt;p&gt;我主要用 Claude Code 和 Codex 两个 Agent，每次安装新 Skill 时，我会这样告诉 Claude：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;https://github.com/xxx/xxx
+帮我安装这个 skill 到 C:\Users\Administrator\.skill-hub
+
+安装完后使用 skill sync 命令，将技能同步到 ~\.claude\skills\ 和 ~\.codex\skills\ 目录
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这样一句话就搞定了安装和同步，两个 Agent 立刻就能用上新技能。&lt;/p&gt;
+&lt;h2&gt;写在最后&lt;/h2&gt;
+&lt;p&gt;agent-skills-hub 解决的虽然是一个小问题，但对于同时使用多个 AI Agent 的开发者来说，确实能省下不少重复劳动。如果你也有类似的困扰，不妨试试看。&lt;/p&gt;
+&lt;p&gt;以上，既然看到这里了，&lt;strong&gt;如果觉得教程对你有帮助&lt;/strong&gt;，随手&amp;lt;u&amp;gt;点个赞、收藏、转发&amp;lt;/u&amp;gt;三连吧！有任何问题，欢迎在&lt;strong&gt;留言区&lt;/strong&gt;评论，我会逐一回复。👏👏&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;✅大远程技术支持&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;如果你在安装、配置或使用中遇到任何问题，不想自己折腾&lt;/p&gt;
+&lt;p&gt;随时可以找我提供 &lt;strong&gt;1 对 1 远程技术支持&lt;/strong&gt;：&lt;a href=&quot;742112.xyz&quot;&gt;742112.xyz&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;✅&lt;strong&gt;关于的知识星球&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我做了一个轻量社群，把私藏的精品软件，技术教程，AI智能体学习笔记&lt;/p&gt;
+&lt;p&gt;都整理进了进去，68元/年，感兴趣的可以扫码自行学习！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260306064028188.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 </content:encoded></item><item><title>用Claude搞定UI配色与排版指南</title><link>https://dqtx.cc/posts/aihacks/ui-ux-pro-max-skill/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/ui-ux-pro-max-skill/</guid><pubDate>Wed, 11 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;作为一个后端转全栈的开发者，我之前最大的痛点就是做UI：配色不协调、排版乱、组件间距不对，花几个小时做出来的界面还被产品吐槽像上个世纪的产物。直到最近挖到了这个Claude的神级技能ui-ux-pro-max，我直接把之前存的几十个UI设计素材库全删了。&lt;/p&gt;
 &lt;p&gt;项目地址：https://github.com/nextlevelbuilder/ui-ux-pro-max-skill&lt;/p&gt;
 &lt;p&gt;官方案例库：https://ui-ux-pro-max-skill.nextlevelbuilder.io/#styles&lt;/p&gt;
