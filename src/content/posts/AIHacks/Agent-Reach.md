@@ -2,10 +2,12 @@
 title: 给AI装上“眼睛”：Agent-Reach使用真实体验
 published: 2026-03-12
 tags: []
-category: 
+category: AIHacks
 draft: false
 pinned: false
 ---
+
+
 
 ## 引言
 
