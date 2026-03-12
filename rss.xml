@@ -62,7 +62,7 @@
 &lt;li&gt;⛓️ Web3教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867794661334761497#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;🛠️ 技术教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867808112450912266#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>给AI装上“眼睛”：Agent-Reach使用真实体验</title><link>https://dqtx.cc/posts/aihacks/agent-reach/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/agent-reach/</guid><pubDate>Thu, 12 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;引言&lt;/h2&gt;
+</content:encoded></item><item><title>给AI装上“眼睛”：Agent-Reach真实体验</title><link>https://dqtx.cc/posts/aihacks/agent-reach/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/agent-reach/</guid><pubDate>Thu, 12 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;引言&lt;/h2&gt;
 &lt;p&gt;平时做AI开发或者找技术资料的时候，你是不是也经常遇到这种情况：想做一个OpenClaw的落地项目，得先开B站刷教程找实操步骤，开GitHub找相关的开源仓库和issue，开微信搜一搜翻公众号的踩坑经验，开推特看看海外开发者的最新玩法，来回切换七八个网站，半小时过去了还没整理好有用的信息。遇到需要翻墙的平台还得折腾代理，搜到的内容要么是HTML垃圾代码，要么是需要登录才能看，好不容易找到的信息还散落在各个平台，整理起来又要花半天时间。大多数人都以为跨平台找资料就是这么麻烦，只能自己慢慢折腾，但其实用Agent Reach，你只需要一句话，就能让AI帮你搞定14个主流内容平台的搜索和内容提取，10秒就能出结果，至少能帮你省90%的找资料时间。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;项目地址&lt;/strong&gt;https://github.com/Panniantong/Agent-Reach&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/diaoy.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
