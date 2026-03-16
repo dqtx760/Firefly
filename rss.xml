@@ -62,6 +62,57 @@
 &lt;li&gt;⛓️ Web3教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867794661334761497#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;🛠️ 技术教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867808112450912266#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>最新passwall安装教程</title><link>https://dqtx.cc/posts/technical/passwall/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/passwall/</guid><pubDate>Mon, 16 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;网传passwall删库跑路，实则是换库而已。目前passwall2还是可以用之前的方式升级安装，但也可以用下面的方式升级。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/passw.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;一、登录软路由后台&lt;/h2&gt;
+&lt;p&gt;如果你软路由有终端，也可以直接在终端登录，效果一样。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;方式1：软路由后台终端&lt;/li&gt;
+&lt;li&gt;方式2：电脑本地终端（ssh root@192.168.5.2）&lt;/li&gt;
+&lt;li&gt;方式3：ssh工具&lt;a href=&quot;https://github.com/RipplePiam/MobaXterm-Chinese-Simplified/releases&quot;&gt;MobaXterm汉化版&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;二、添加opkg key&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;wget -O passwall.pub https://master.dl.sourceforge.net/project/openwrt-passwall-build/passwall.pub
+opkg-key add passwall.pub
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;三、添加opkg repository&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;read release arch &amp;lt;&amp;lt; EOF
+$(. /etc/openwrt_release ; echo ${DISTRIB_RELEASE%.*} $DISTRIB_ARCH)
+EOF
+for feed in passwall_luci passwall_packages passwall2; do
+  echo &quot;src/gz $feed https://master.dl.sourceforge.net/project/openwrt-passwall-build/releases/packages-$release/$arch/$feed&quot; &amp;gt;&amp;gt; /etc/opkg/customfeeds.conf
+done
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;四、安装最新的passwall&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;opkg update
+opkg install luci-app-passwall
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;如果是安装passwall2，执行以下代码&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;opkg update
+opkg install luci-app-passwall2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;五、安装中文包&lt;/h2&gt;
+&lt;p&gt;如果你打开是英文版的，可继续执行如下代码，安装中文包&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;opkg install luci-i18n-passwall-zh-cn
+opkg install luci-i18n-passwall2-zh-cn
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;PS.如果你之前passwall的版本太老，或是不能正常使用，可重启软路由或者执行下面的代码&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/etc/init.d/uhttpd restart
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;&lt;strong&gt;相关来源&lt;/strong&gt;&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;passwall最新的github地址： &lt;a href=&quot;https://github.com/Openwrt-Passwall/openwrt-passwall&quot;&gt; 点此查看&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;passwall2的github地址： &lt;a href=&quot;https://github.com/Openwrt-Passwall/openwrt-passwall2/releases&quot;&gt;点此查看&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;官方安装教程：&lt;a href=&quot;https://github.com/moetayuko/openwrt-passwall-build&quot;&gt;点此查看&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
 </content:encoded></item><item><title>给AI装上“眼睛”：Agent-Reach真实体验</title><link>https://dqtx.cc/posts/aihacks/agent-reach/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/agent-reach/</guid><pubDate>Thu, 12 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;引言&lt;/h2&gt;
 &lt;p&gt;平时做AI开发或者找技术资料的时候，你是不是也经常遇到这种情况：想做一个OpenClaw的落地项目，得先开B站刷教程找实操步骤，开GitHub找相关的开源仓库和issue，开微信搜一搜翻公众号的踩坑经验，开推特看看海外开发者的最新玩法，来回切换七八个网站，半小时过去了还没整理好有用的信息。遇到需要翻墙的平台还得折腾代理，搜到的内容要么是HTML垃圾代码，要么是需要登录才能看，好不容易找到的信息还散落在各个平台，整理起来又要花半天时间。大多数人都以为跨平台找资料就是这么麻烦，只能自己慢慢折腾，但其实用Agent Reach，你只需要一句话，就能让AI帮你搞定14个主流内容平台的搜索和内容提取，10秒就能出结果，至少能帮你省90%的找资料时间。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;项目地址&lt;/strong&gt;https://github.com/Panniantong/Agent-Reach&lt;/p&gt;
