@@ -62,6 +62,142 @@
 &lt;li&gt;⛓️ Web3教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867794661334761497#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;🛠️ 技术教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867808112450912266#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>PassWall2双栈无忧配置指南</title><link>https://dqtx.cc/posts/technical/pass/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/pass/</guid><pubDate>Tue, 17 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;在OpenWrt 路由器上部署科学上网工具时，许多用户都希望实现一套“最省心”的方案：既能彻底杜绝 DNS 泄露与污染，又能完美兼容 IPv4/IPv6 双栈环境，同时自带可靠的去广告功能，PassWall2 正是目前最接近这一理想状态的插件之一。它基于 Xray/Sing-box 核心，内置强大的分流引擎和 DNS 处理能力，经过合理配置后，能在不关闭 IPv6、不强制禁用 AAAA 记录的前提下，实现干净、稳定、高效的上网体验。&lt;/p&gt;
+&lt;p&gt;本文将详细分享一套经过实践验证的 PassWall2 配置流程，按照此方案配置完成后，你将获得：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;无 DNS 泄露、无明显污染&lt;/li&gt;
+&lt;li&gt;IPv4 与 IPv6 真正双栈共存&lt;/li&gt;
+&lt;li&gt;内置高效广告屏蔽&lt;/li&gt;
+&lt;li&gt;全程无需额外插件辅助&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Generated_Image_fehtoyfehtoyfeht.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;规则管理&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;删除默认的所有规则，然后添加Reject规则、Direct规则、Proxy规则&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;geosite:category-ads-all 去广告&lt;/li&gt;
+&lt;li&gt;xn–ngstr-lra8j.com       谷歌商店&lt;/li&gt;
+&lt;li&gt;geosite:private            内网地址&lt;/li&gt;
+&lt;li&gt;geosite:cn                  国内域名&lt;/li&gt;
+&lt;li&gt;geoip:private              内网IP&lt;/li&gt;
+&lt;li&gt;geoip:cn                    国内IP&lt;/li&gt;
+&lt;li&gt;geosite:geolocation-!cn  国外域名&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Reject规则&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;域名：geosite:category-ads-all
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Direct规则&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;域名：
+xn-ngstr-lra8j.com
+geosite:private
+geosite:cn
+
+Ip
+geoip:private
+geoip:cn
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Proxy规则&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;域名：geosite:geolocation-!cn
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;高级设置&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;1.如果不使用UDP代理，就把UDP不转发端口改成-所有，即可
+2.设置TCP转发端口为：仅网页 ，也就是仅允许代理80、443这两个端口
+3.TCP代理方式可以改成TPROXY，也可以默认REDIRECT（勾选IPv6透明代理(TProxy)后，会自动变更为TPROXY）
+4.如果你的节点支持IPv4/IPv6互通或者有IPv6的出口IP，可以勾选IPv6透明代理(TProxy)，反之不勾选&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/PixPin_2026-03-17_12-54-47.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;基本设置&lt;/h2&gt;
+&lt;h3&gt;DNS&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260317130009116.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;主要&lt;/h3&gt;
+&lt;p&gt;节点选择-Xray 分流，有个编辑点击，进入进行如下设置&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/PixPin_2026-03-17_13-13-17.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;上述都配置完成后，就能够解决DNS泄露、污染问题和去广告，并且支持双栈IPv4+IPv6，不需要再去套任何插件和关闭或禁止解析 IPv6 DNS 记录等。&lt;/p&gt;
+&lt;h2&gt;常见问题&lt;/h2&gt;
+&lt;p&gt;passwall2更新节点后，我的分流选项消失了&lt;/p&gt;
+&lt;p&gt;分流节点可能更新时被删了；在passwall中，节点列表&amp;gt;添加&amp;gt;类型：xray/sing-box&amp;gt;传输协议：分流，后面依据个人用途选择后添加即可&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;来源&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;https://mtom.top/archives/&lt;/p&gt;
+&lt;p&gt;https://macin.top/posts/9fc528b9/index.html&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/Openwrt-Passwall/openwrt-passwall2/discussions/234&quot;&gt;关于passwall2更新节点后分流消失的问题&lt;/a&gt;&lt;/p&gt;
+</content:encoded></item><item><title>360T7刷FanchmWrt教程</title><link>https://dqtx.cc/posts/technical/fanchmwrt/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/fanchmwrt/</guid><pubDate>Mon, 16 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;FanchmWrt是一款完全开源的家庭防火墙系统，基于官方 OpenWrt 同源开发（代码已全开源，GitHub 可查），但它在内核层做了大量针对家用场景的深度优化，内置了许多原本只有企业级软路由或专业防火墙才有的功能。简单来说，它把 OpenWrt 的极致可玩性 + 企业级网络管控能力，塞进了一套对普通家庭用户更友好的界面和体验。&lt;/p&gt;
+&lt;p&gt;FanchmWrt官网：www.fanchmwrt.com/&lt;/p&gt;
+&lt;p&gt;最近闲来无事，给自己的 360T7从现有OpenWrt直接刷了 FanchmWrt，实际体验非常不错——配置简单、功能齐全、稳定性高。下面分享完整刷机步骤（以 Breed 不死 Uboot 方式为主，最安全、零变砖风险）。&lt;/p&gt;
+&lt;p&gt;（以 Breed 不死 Uboot 方式为主，最安全、零变砖风险）。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Generated_Image_qp609cqp609cqp60.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;一、准备工作&lt;/h2&gt;
+&lt;h3&gt;1. 下载对应固件&lt;/h3&gt;
+&lt;p&gt;访问 http://download.ttcoder.cn/&lt;/p&gt;
+&lt;p&gt;找到360T7对应的&lt;strong&gt;supgrade.itb&lt;/strong&gt;格式固件下载&lt;/p&gt;
+&lt;p&gt;三个文件的区别和选择建议（按OpenWrt通用命名规则）&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;文件名结尾&lt;/th&gt;
+&lt;th&gt;用途&lt;/th&gt;
+&lt;th&gt;适合你的场景吗&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;factory.bin&lt;/td&gt;
+&lt;td&gt;工厂固件，专门用来从路由器官方原版系统第一次刷入第三方固件时使用&lt;/td&gt;
+&lt;td&gt;❌ 你已经是OpenWrt系统，不需要&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;sysupgrade.bin&lt;/td&gt;
+&lt;td&gt;系统升级固件，用来在现有OpenWrt/第三方固件基础上直接升级，或者在Breed不死uboot中刷入&lt;/td&gt;
+&lt;td&gt;✅ 你现在就下这个！&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;initramfs-kernel.bin&lt;/td&gt;
+&lt;td&gt;临时测试固件，刷入后不会保存配置，重启就还原，一般用来救砖或者临时测试系统用&lt;/td&gt;
+&lt;td&gt;❌ 正常刷机不需要&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;二、刷机方法&lt;/h2&gt;
+&lt;h3&gt;Breed不死uboot刷入（最安全，变砖风险为0）&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;  适合已经刷了Breed不死uboot的用户&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;拔掉进入路由器的网线&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;路由器关机状态下按住reset键不松开，插上电源，等待10秒后松开reset键&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;电脑浏览器访问192.168.1.1进入Breed后台&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;选择「固件更新」→「固件」，上传下载好的FanchmWrt固件&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol&gt;
+&lt;li&gt;点击「更新」，等待2-3分钟重启完成即可&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;三、初始配置&lt;/h2&gt;
+&lt;p&gt;进入http://192.168.1.1/cgi-bin/luci/&lt;/p&gt;
+&lt;p&gt;账号 root  密码password&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;路由器密码：Ip+/cgi-bin/luci/admin/system/admin&lt;/p&gt;
+&lt;p&gt;主题模式：Ip+/cgi-bin/luci/admin/fwx_advance/system&lt;/p&gt;
+&lt;p&gt;高级设置：Ip+cgi-bin/luci/admin/status/overview&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;旁路由配置参考&lt;/strong&gt;：https://op.dqtx.cc/&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;最新passwall安装&lt;/strong&gt;：https://www.dqtx.cc/posts/technical/passwall/&lt;/p&gt;
+&lt;p&gt;以上，如刷机过程中遇到任何问题欢迎评论区留言&lt;/p&gt;
+&lt;p&gt;大强远程技术支持→&lt;a href=&quot;742112.xyz&quot;&gt;742112.xyz&lt;/a&gt;&lt;/p&gt;
 </content:encoded></item><item><title>最新passwall安装教程</title><link>https://dqtx.cc/posts/technical/passwall/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/passwall/</guid><pubDate>Mon, 16 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;网传passwall删库跑路，实则是换库而已。目前passwall2还是可以用之前的方式升级安装，但也可以用下面的方式升级。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/passw.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;一、登录软路由后台&lt;/h2&gt;
