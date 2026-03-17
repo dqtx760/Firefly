@@ -55,7 +55,7 @@ const { remarkPluginFrontmatter } = await entry.render();
         <PostMetadata published={published} updated={updated} hideUpdateDate={true} hidePublishedDate={true} class="mb-2 md:mb-4"></PostMetadata>
 
         <!-- word count, read time and page views -->
-        <div class="text-sm text-black/30 dark:text-white/30 flex gap-4 transition">
+        <div class="text-sm text-black/50 dark:text-white/50 flex gap-4 transition">
             <div>{formatDateToYYYYMMDD(published)}</div>
             <div>|</div>
             <div>{remarkPluginFrontmatter.words} 字</div>

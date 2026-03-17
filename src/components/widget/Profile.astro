@@ -20,7 +20,7 @@ for (const post of posts) {
         <img src={config.avatar} alt="Profile Image of the Author" class="w-full h-full object-cover transition duration-500" />
     </div>
     <div class="px-2 text-center">
-        <div class="font-bold text-xl mb-1 transition text-black" style="color: black !important;">{config.name}</div>
+        <div class="font-bold text-xl mb-1 transition text-black dark:text-white">{config.name}</div>
         <div class="h-px w-8 mx-auto mb-3 transition bg-[oklch(0.58_0.16_268)]"></div>
         <div class="text-center mb-2.5 transition text-black dark:text-neutral-400">{config.bio}</div>
         <div class="flex flex-wrap gap-2 justify-center mb-1">
@@ -42,14 +42,14 @@ for (const post of posts) {
         <!-- 全站文章与字数统计 -->
         <div class="grid grid-cols-2 mt-3 pt-3 border-t border-neutral-300 dark:border-neutral-700">
             <div class="text-center">
-                <div class="text-xs mb-1 flex items-center justify-center gap-1">
+                <div class="text-xs mb-1 flex items-center justify-center gap-1 text-neutral-600 dark:text-neutral-400">
                     <Icon name="material-symbols:article-outline" class="text-base"></Icon>
                     <span class="text-xs">文章数</span>
                 </div>
                 <div class="font-bold text-lg text-neutral-700 dark:text-neutral-300">{totalPosts}</div>
             </div>
             <div class="text-center border-l border-neutral-300 dark:border-neutral-700">
-                <div class="text-xs mb-1 flex items-center justify-center gap-1">
+                <div class="text-xs mb-1 flex items-center justify-center gap-1 text-neutral-600 dark:text-neutral-400">
                     <Icon name="material-symbols:format-list-numbered" class="text-base"></Icon>
                     <span class="text-xs">总字数</span>
                 </div>
