@@ -1,0 +1,105 @@
+---
+title: PassWall2双栈无忧配置指南
+published: 2026-03-17
+tags: []
+category: Technical
+draft: false
+pinned: false
+---
+
+
+
+在OpenWrt 路由器上部署科学上网工具时，许多用户都希望实现一套“最省心”的方案：既能彻底杜绝 DNS 泄露与污染，又能完美兼容 IPv4/IPv6 双栈环境，同时自带可靠的去广告功能，PassWall2 正是目前最接近这一理想状态的插件之一。它基于 Xray/Sing-box 核心，内置强大的分流引擎和 DNS 处理能力，经过合理配置后，能在不关闭 IPv6、不强制禁用 AAAA 记录的前提下，实现干净、稳定、高效的上网体验。
+
+
+
+本文将详细分享一套经过实践验证的 PassWall2 配置流程，按照此方案配置完成后，你将获得：
+
+- 无 DNS 泄露、无明显污染
+- IPv4 与 IPv6 真正双栈共存
+- 内置高效广告屏蔽
+- 全程无需额外插件辅助
+
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Generated_Image_fehtoyfehtoyfeht.webp)
+
+## 规则管理
+
+> 删除默认的所有规则，然后添加Reject规则、Direct规则、Proxy规则
+>
+- geosite:category-ads-all 去广告
+- xn–ngstr-lra8j.com       谷歌商店
+- geosite:private            内网地址
+- geosite:cn                  国内域名
+- geoip:private              内网IP
+- geoip:cn                    国内IP
+- geosite:geolocation-!cn  国外域名
+
+
+1. **Reject规则**
+
+```
+域名：geosite:category-ads-all
+```
+
+
+
+2. **Direct规则**
+
+```
+域名：
+xn-ngstr-lra8j.com
+geosite:private
+geosite:cn
+
+Ip
+geoip:private
+geoip:cn
+```
+
+3. **Proxy规则**
+
+```
+域名：geosite:geolocation-!cn
+```
+
+## 高级设置
+
+> 1.如果不使用UDP代理，就把UDP不转发端口改成-所有，即可
+> 2.设置TCP转发端口为：仅网页 ，也就是仅允许代理80、443这两个端口
+> 3.TCP代理方式可以改成TPROXY，也可以默认REDIRECT（勾选IPv6透明代理(TProxy)后，会自动变更为TPROXY）
+> 4.如果你的节点支持IPv4/IPv6互通或者有IPv6的出口IP，可以勾选IPv6透明代理(TProxy)，反之不勾选
+
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/PixPin_2026-03-17_12-54-47.webp)
+
+## 基本设置
+
+### DNS
+
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260317130009116.webp)
+
+### 主要
+
+节点选择-Xray 分流，有个编辑点击，进入进行如下设置
+
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/PixPin_2026-03-17_13-13-17.webp)
+
+
+
+上述都配置完成后，就能够解决DNS泄露、污染问题和去广告，并且支持双栈IPv4+IPv6，不需要再去套任何插件和关闭或禁止解析 IPv6 DNS 记录等。
+
+## 常见问题
+
+passwall2更新节点后，我的分流选项消失了
+
+分流节点可能更新时被删了；在passwall中，节点列表>添加>类型：xray/sing-box>传输协议：分流，后面依据个人用途选择后添加即可
+
+
+
+**来源**：
+
+https://mtom.top/archives/
+
+https://macin.top/posts/9fc528b9/index.html
+
+[关于passwall2更新节点后分流消失的问题](https://github.com/Openwrt-Passwall/openwrt-passwall2/discussions/234)
+
