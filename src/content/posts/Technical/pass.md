@@ -26,13 +26,14 @@ pinned: false
 
 > 删除默认的所有规则，然后添加Reject规则、Direct规则、Proxy规则
 >
-- geosite:category-ads-all 去广告
-- xn–ngstr-lra8j.com       谷歌商店
-- geosite:private            内网地址
-- geosite:cn                  国内域名
-- geoip:private              内网IP
-- geoip:cn                    国内IP
-- geosite:geolocation-!cn  国外域名
+> - geosite:category-ads-all  去广告
+> - xn–ngstr-lra8j.com        谷歌商店
+> - geosite:private             内网地址
+> - geosite:cn                   国内域名
+> - geoip:private               内网IP
+> - geoip:cn                     国内IP
+> - geosite:geolocation-!cn   国外域名
+
 
 
 1. **Reject规则**
@@ -59,7 +60,15 @@ geoip:cn
 3. **Proxy规则**
 
 ```
-域名：geosite:geolocation-!cn
+域名：
+geosite:geolocation-!cn
+ai.google.dev
+aistudio.google.com
+makersuite.google.com
+bard.google.com
+gemini.google.com
+labs.google.com
+notebooklm.google.com
 ```
 
 ## 高级设置
@@ -95,11 +104,15 @@ passwall2更新节点后，我的分流选项消失了
 
 
 
-**来源**：
+## 相关来源
 
-https://mtom.top/archives/
+[passwall2完美配置](https://macin.top/posts/9fc528b9/index.html)
 
-https://macin.top/posts/9fc528b9/index.html
+[Pass Wall2解决DNS泄露IPv4+IPv6双栈共存配置](https://mtom.top/archives/Pass-Wall2%E8%A7%A3%E5%86%B3DNS%E6%B3%84%E9%9C%B2IPv4-IPv6%E5%8F%8C%E6%A0%88%E5%85%B1%E5%AD%98%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/?highlight=%E5%8F%8C)
 
 [关于passwall2更新节点后分流消失的问题](https://github.com/Openwrt-Passwall/openwrt-passwall2/discussions/234)
+
+[Geo规则的问题，导致无法正常访问Gemini](https://github.com/Openwrt-Passwall/openwrt-passwall2/issues/965)
+
+
 
