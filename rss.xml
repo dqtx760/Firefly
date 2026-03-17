@@ -74,16 +74,16 @@
 &lt;h2&gt;规则管理&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;删除默认的所有规则，然后添加Reject规则、Direct规则、Proxy规则&lt;/p&gt;
-&lt;/blockquote&gt;
 &lt;ul&gt;
-&lt;li&gt;geosite:category-ads-all 去广告&lt;/li&gt;
-&lt;li&gt;xn–ngstr-lra8j.com       谷歌商店&lt;/li&gt;
-&lt;li&gt;geosite:private            内网地址&lt;/li&gt;
-&lt;li&gt;geosite:cn                  国内域名&lt;/li&gt;
-&lt;li&gt;geoip:private              内网IP&lt;/li&gt;
-&lt;li&gt;geoip:cn                    国内IP&lt;/li&gt;
-&lt;li&gt;geosite:geolocation-!cn  国外域名&lt;/li&gt;
+&lt;li&gt;geosite:category-ads-all  去广告&lt;/li&gt;
+&lt;li&gt;xn–ngstr-lra8j.com        谷歌商店&lt;/li&gt;
+&lt;li&gt;geosite:private             内网地址&lt;/li&gt;
+&lt;li&gt;geosite:cn                   国内域名&lt;/li&gt;
+&lt;li&gt;geoip:private               内网IP&lt;/li&gt;
+&lt;li&gt;geoip:cn                     国内IP&lt;/li&gt;
+&lt;li&gt;geosite:geolocation-!cn   国外域名&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/blockquote&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Reject规则&lt;/strong&gt;&lt;/li&gt;
 &lt;/ol&gt;
@@ -104,7 +104,15 @@ geoip:cn
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Proxy规则&lt;/strong&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;域名：geosite:geolocation-!cn
+&lt;pre&gt;&lt;code&gt;域名：
+geosite:geolocation-!cn
+ai.google.dev
+aistudio.google.com
+makersuite.google.com
+bard.google.com
+gemini.google.com
+labs.google.com
+notebooklm.google.com
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;高级设置&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -124,10 +132,11 @@ geoip:cn
 &lt;h2&gt;常见问题&lt;/h2&gt;
 &lt;p&gt;passwall2更新节点后，我的分流选项消失了&lt;/p&gt;
 &lt;p&gt;分流节点可能更新时被删了；在passwall中，节点列表&amp;gt;添加&amp;gt;类型：xray/sing-box&amp;gt;传输协议：分流，后面依据个人用途选择后添加即可&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;来源&lt;/strong&gt;：&lt;/p&gt;
-&lt;p&gt;https://mtom.top/archives/&lt;/p&gt;
-&lt;p&gt;https://macin.top/posts/9fc528b9/index.html&lt;/p&gt;
+&lt;h2&gt;相关来源&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://macin.top/posts/9fc528b9/index.html&quot;&gt;passwall2完美配置&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://mtom.top/archives/Pass-Wall2%E8%A7%A3%E5%86%B3DNS%E6%B3%84%E9%9C%B2IPv4-IPv6%E5%8F%8C%E6%A0%88%E5%85%B1%E5%AD%98%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/?highlight=%E5%8F%8C&quot;&gt;Pass Wall2解决DNS泄露IPv4+IPv6双栈共存配置&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/Openwrt-Passwall/openwrt-passwall2/discussions/234&quot;&gt;关于passwall2更新节点后分流消失的问题&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/Openwrt-Passwall/openwrt-passwall2/issues/965&quot;&gt;Geo规则的问题，导致无法正常访问Gemini&lt;/a&gt;&lt;/p&gt;
 </content:encoded></item><item><title>360T7刷FanchmWrt教程</title><link>https://dqtx.cc/posts/technical/fanchmwrt/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/fanchmwrt/</guid><pubDate>Mon, 16 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;FanchmWrt是一款完全开源的家庭防火墙系统，基于官方 OpenWrt 同源开发（代码已全开源，GitHub 可查），但它在内核层做了大量针对家用场景的深度优化，内置了许多原本只有企业级软路由或专业防火墙才有的功能。简单来说，它把 OpenWrt 的极致可玩性 + 企业级网络管控能力，塞进了一套对普通家庭用户更友好的界面和体验。&lt;/p&gt;
 &lt;p&gt;FanchmWrt官网：www.fanchmwrt.com/&lt;/p&gt;
 &lt;p&gt;最近闲来无事，给自己的 360T7从现有OpenWrt直接刷了 FanchmWrt，实际体验非常不错——配置简单、功能齐全、稳定性高。下面分享完整刷机步骤（以 Breed 不死 Uboot 方式为主，最安全、零变砖风险）。&lt;/p&gt;
