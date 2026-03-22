@@ -81,6 +81,8 @@ GiffGaff是一家英国的虚拟移动运营商，其背后是英国三大运营
 
 ## 参考资料
 
+[(3) GiffGaff：大陆用户门槛最低的海外手机卡！无需KYC实名认证｜每年6元保号｜从0到1实操教程｜海外保号神卡｜英国GiffGaff - YouTube](https://www.youtube.com/watch?v=iSaaXBIR1Fo&list=PLJLx2O5xmeyskq8L5HrnSnllmHWccGGXD)
+
 [(4) X 上的 Jason：“实操教程｜2026英国giffgaff卡激活保号详细教程” / X](https://x.com/EvanWritesX/status/2027679579767464044)
 
 

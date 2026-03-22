@@ -1,5 +1,5 @@
 ---
-title: Claude隐藏命令/快捷键
+title: Claude code隐藏命令/快捷键
 published: 2026-03-22
 tags: []
 category: AIHacks
