@@ -62,6 +62,95 @@
 &lt;li&gt;⛓️ Web3教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867794661334761497#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;🛠️ 技术教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867808112450912266#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>Claude隐藏命令/快捷键</title><link>https://dqtx.cc/posts/aihacks/cc/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/cc/</guid><pubDate>Sun, 22 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Generated_Image_n0y67n0y67n0y67n.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;claude --dangerously-skip-permissions 最高权限启动Claude Code&lt;/li&gt;
+&lt;li&gt;/btw---并行插问，不污染上下文&lt;/li&gt;
+&lt;li&gt;/rewind---代码/对话单独回退（双击Esc等效）&lt;/li&gt;
+&lt;li&gt;/insights---生成使用报告，给出优化建议&lt;/li&gt;
+&lt;li&gt;/model opusplan---智能切换模型，节省Pro额度&lt;/li&gt;
+&lt;li&gt;/simplify---三维度并行代码审查&lt;/li&gt;
+&lt;li&gt;/branch---对话分叉，新建独立会话&lt;/li&gt;
+&lt;li&gt;/loop---定时重复执行任务&lt;/li&gt;
+&lt;li&gt;/remote-control---手机远程操控会话（/rc简写）&lt;/li&gt;
+&lt;li&gt;/export---导出对话为Markdown文件&lt;/li&gt;
+&lt;li&gt;快捷键---Ctrl+V贴截图、Ctrl+J换行、Ctrl+R搜历史、Ctrl+U删整行&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;PS.Terminal里Claude Code 用 Ctrl+V 贴不了截图&lt;/p&gt;
+&lt;p&gt;用Alt+V替代 Ctrl+V即可&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;以上，既然看到这里了，如果觉得教程对你有帮助，随手点个赞、收藏、转发三连吧！有任何问题，欢迎在留言区评论，我会逐一回复。👏👏&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;✅大远程技术支持&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;如果你在安装、配置或使用中遇到任何问题，不想自己折腾，随时可以找我提供 &lt;strong&gt;1 对 1 远程技术支持&lt;/strong&gt;：&lt;a href=&quot;742112.xyz&quot;&gt;742112.xyz&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;✅关于知识星球&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我做了一个轻量社群，把私藏的精品软件，技术教程，AI智能体学习笔记 都整理进了进去，68元/年，感兴趣的可👇 微信扫码：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/51111118145244T4.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+</content:encoded></item><item><title>GiffGaff从0到1实操与保号指南</title><link>https://dqtx.cc/posts/technical/giffgaff/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/giffgaff/</guid><pubDate>Sat, 21 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;对于身在大陆的用户而言，拥有一张海外手机卡是注册海外软件、打通跨境出海的第一步。然而，常见的方案如Club SIM必须要求实名（KYC）认证，而Google Voice等虚拟号码则容易被App识别并屏蔽，甚至导致封号。相比之下，&lt;strong&gt;英国的GiffGaff手机卡凭借极低的门槛和保号成本，成为了备受推荐的“海外保号神卡”。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;以下是关于GiffGaff手机卡的全面介绍、操作指南及注意事项：&lt;/p&gt;
+&lt;h3&gt;一、 GiffGaff 是什么？&lt;/h3&gt;
+&lt;p&gt;GiffGaff是一家英国的虚拟移动运营商，其背后是英国三大运营商之一的O2全资子公司。它没有实体营业厅和电话客服，主要依靠社区用户互助来降低运营成本，从而为用户提供更便宜的价格。由于背靠大企业，其稳定性和安全性非常有保障，基本没有“跑路”的风险。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Generated_Image_1cwlcp1cwlcp1cwl.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;二、 GiffGaff 的优缺点分析&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;优点：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;无需实名认证：&lt;/strong&gt; 对大陆用户而言几乎是零门槛，只需插入手机卡、下载App输入激活码即可使用。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;保号成本极低：&lt;/strong&gt; 算下来每年保号成本不到6元人民币，极其划算。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;支持实体卡：&lt;/strong&gt; 在不借助eSIM设备的情况下也能轻松使用。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;缺点：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;eSIM激活麻烦：&lt;/strong&gt; 需要额外准备支持eSIM的外版手机。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;取消大陆邮寄：&lt;/strong&gt; 目前官方不再向中国大陆地区直邮，无法享受官方推荐的5英镑话费奖励。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;冻结机制：&lt;/strong&gt; 激活后需定期使用，否则号码会被冻结。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;三、 购买与激活流程&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;购买实体卡：&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;由于官方取消了大陆邮寄，可以通过淘宝或京东搜索“GiffGaff”，购买&lt;strong&gt;未激活的白卡&lt;/strong&gt;（切勿购买已激活的卡以保障长期稳定使用）。  闲鱼最近15元就可以搞一个  需要找我&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;下载App与注册：&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;收到卡后，在Apple Store或Google Play下载“GiffGaff” App，使用邮箱注册账号并设置密码。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;输入激活码：&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;进入App主页，点击“activate your sim card”，输入实体卡上的激活码（Activation code）。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;选择套餐与充值&lt;/strong&gt;：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如果仅用于保号和接收短信，&lt;strong&gt;不需要购买任何套餐，直接选择最下方按钮进行充值即可，最低充值额度为10英镑&lt;/strong&gt;。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;填写支付信息&lt;/strong&gt;：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;付款时，国家可选择USA美国，并使用美国地址生成器填入地址信息。支付方式可使用Visa或Mastercard信用卡；如果没有国际信用卡，&lt;strong&gt;可以使用Bybit等加密货币虚拟卡进行支付&lt;/strong&gt;。&lt;/p&gt;
+&lt;h3&gt;四、 资费说明与低成本保号策略&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;资费说明：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;月租与接收短信：免费&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;发送短信：0.3英镑/条。&lt;/li&gt;
+&lt;li&gt;接打电話：1英镑/分钟。&lt;/li&gt;
+&lt;li&gt;使用流量：0.2英镑/MB。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;保号规则与策略：&lt;/strong&gt; 官方规定，&lt;strong&gt;如果手机号在6个月内没有任何操作，SIM卡会被暂停使用&lt;/strong&gt;。这些操作包括：至少拨打一次电话、发送一次短信、使用一次流量或充值一次。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;最低成本保号法：每半年发送一条短信（花费0.3英镑），一年成本仅为0.6英镑（不到6元人民币）&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;GiffGaff会在注销前一个月和前五天发送邮件提醒，但为了稳妥起见，建议在激活首日发送一条短信测试，并设置好半年后的备忘录提醒。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;五、 关键注意事项&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;防偷跑流量：激活手机卡后的第一时间，务必关闭该卡的移动数据&lt;/strong&gt;。因为流量费高达0.2英镑/MB，极易在后台耗光账户余额。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;收不到验证码怎么办：&lt;/strong&gt; 输入手机号时注意去掉英国区号“+44”后面的第一个“0”；如果依然收不到，尝试将IP节点切换至美国、日本或新加坡等地区。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;避免联系国内号码：&lt;/strong&gt; 尽量不要用GiffGaff卡与国内“+86”手机号通信。一方面国内运营商容易屏蔽海外来电，另一方面频繁接收海外短信容易触发国内的“反诈”系统，引发不必要的麻烦。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;拥有这样一张长期稳定的海外手机卡后，你就可以放心绑定Google、YouTube、Twitter（推特）、Telegram（电报）等海外平台，彻底解决跨国注册验证的痛点。&lt;/p&gt;
+&lt;h2&gt;参考资料&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://x.com/EvanWritesX/status/2027679579767464044&quot;&gt;(4) X 上的 Jason：“实操教程｜2026英国giffgaff卡激活保号详细教程” / X&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;以上，既然看到这里了，如果觉得教程对你有帮助，随手点个赞、收藏、转发三连吧！有任何问题，欢迎在留言区评论，我会逐一回复。👏👏&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;✅大远程技术支持&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;如果你在安装、配置或使用中遇到任何问题，不想自己折腾，随时可以找我提供 &lt;strong&gt;1 对 1 远程技术支持&lt;/strong&gt;：&lt;a href=&quot;742112.xyz&quot;&gt;742112.xyz&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;✅关于知识星球&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我做了一个轻量社群，把私藏的精品软件，技术教程，AI智能体学习笔记 都整理进了进去，68元/年，感兴趣的可👇 微信扫码：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/51111118145244T4.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 </content:encoded></item><item><title>PassWall2双栈无忧配置指南</title><link>https://dqtx.cc/posts/technical/pass/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/pass/</guid><pubDate>Tue, 17 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;在OpenWrt 路由器上部署科学上网工具时，许多用户都希望实现一套“最省心”的方案：既能彻底杜绝 DNS 泄露与污染，又能完美兼容 IPv4/IPv6 双栈环境，同时自带可靠的去广告功能，PassWall2 正是目前最接近这一理想状态的插件之一。它基于 Xray/Sing-box 核心，内置强大的分流引擎和 DNS 处理能力，经过合理配置后，能在不关闭 IPv6、不强制禁用 AAAA 记录的前提下，实现干净、稳定、高效的上网体验。&lt;/p&gt;
 &lt;p&gt;本文将详细分享一套经过实践验证的 PassWall2 配置流程，按照此方案配置完成后，你将获得：&lt;/p&gt;
 &lt;ul&gt;
@@ -106,13 +195,6 @@ geoip:cn
 &lt;/ol&gt;
 &lt;pre&gt;&lt;code&gt;域名：
 geosite:geolocation-!cn
-ai.google.dev
-aistudio.google.com
-makersuite.google.com
-bard.google.com
-gemini.google.com
-labs.google.com
-notebooklm.google.com
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;高级设置&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -124,14 +206,30 @@ notebooklm.google.com
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/PixPin_2026-03-17_12-54-47.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;基本设置&lt;/h2&gt;
 &lt;h3&gt;DNS&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;走分流模式的话：
+1.“远程 DNS 协议”建议选择 DoH
+2.“远程 DNS DoH”选择 CloudFlare
+3.“远程 DNS EDNS Client Subnet”选择你节点地区的一个 IP （比如新加坡）到这里选一个 ip ，对应新加坡{https://public-dns.info/nameserver/sg.html}填进去，比如 58.185.92.216 。
+4.“远程 DNS 出站”选择远程
+5.“FakeDNS”不要勾选，否则可能导致 DNS leak
+6.“远程查询策略”，看你的线路，如果不想远程查询 ipv6 ，那选择 UseIPv4 就行了，损失是你可能没法解析外部网站的 ipv6 了
+7.“域名重写”，默认就好，除非你有特殊需求
+8.“直连 DNS 解析结果写入到 IPSet”默认就好，除非有问题再改
+设置好保存，建议执行一次“清空 IPSet”。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260317130009116.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;主要&lt;/h3&gt;
 &lt;p&gt;节点选择-Xray 分流，有个编辑点击，进入进行如下设置&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/PixPin_2026-03-17_13-13-17.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;上述都配置完成后，就能够解决DNS泄露、污染问题和去广告，并且支持双栈IPv4+IPv6，不需要再去套任何插件和关闭或禁止解析 IPv6 DNS 记录等。&lt;/p&gt;
 &lt;h2&gt;常见问题&lt;/h2&gt;
-&lt;p&gt;passwall2更新节点后，我的分流选项消失了&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;passwall2更新节点后，我的分流选项消失了&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;p&gt;分流节点可能更新时被删了；在passwall中，节点列表&amp;gt;添加&amp;gt;类型：xray/sing-box&amp;gt;传输协议：分流，后面依据个人用途选择后添加即可&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. 电脑打开油管正常，手机能打开youtube网站/APP，但是看不了视频怎么回事&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;高级设置里，TCP转发端口，确保开启了 &lt;strong&gt;UDP 转发&lt;/strong&gt;&lt;/p&gt;
 &lt;h2&gt;相关来源&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://macin.top/posts/9fc528b9/index.html&quot;&gt;passwall2完美配置&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://mtom.top/archives/Pass-Wall2%E8%A7%A3%E5%86%B3DNS%E6%B3%84%E9%9C%B2IPv4-IPv6%E5%8F%8C%E6%A0%88%E5%85%B1%E5%AD%98%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/?highlight=%E5%8F%8C&quot;&gt;Pass Wall2解决DNS泄露IPv4+IPv6双栈共存配置&lt;/a&gt;&lt;/p&gt;
