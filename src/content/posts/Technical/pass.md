@@ -62,13 +62,6 @@ geoip:cn
 ```
 域名：
 geosite:geolocation-!cn
-ai.google.dev
-aistudio.google.com
-makersuite.google.com
-bard.google.com
-gemini.google.com
-labs.google.com
-notebooklm.google.com
 ```
 
 ## 高级设置
@@ -84,6 +77,17 @@ notebooklm.google.com
 
 ### DNS
 
+> 走分流模式的话：
+> 1.“远程 DNS 协议”建议选择 DoH
+> 2.“远程 DNS DoH”选择 CloudFlare
+> 3.“远程 DNS EDNS Client Subnet”选择你节点地区的一个 IP （比如新加坡）到这里选一个 ip ，对应新加坡{https://public-dns.info/nameserver/sg.html}填进去，比如 58.185.92.216 。
+> 4.“远程 DNS 出站”选择远程
+> 5.“FakeDNS”不要勾选，否则可能导致 DNS leak
+> 6.“远程查询策略”，看你的线路，如果不想远程查询 ipv6 ，那选择 UseIPv4 就行了，损失是你可能没法解析外部网站的 ipv6 了
+> 7.“域名重写”，默认就好，除非你有特殊需求
+> 8.“直连 DNS 解析结果写入到 IPSet”默认就好，除非有问题再改
+> 设置好保存，建议执行一次“清空 IPSet”。
+
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260317130009116.webp)
 
 ### 主要
@@ -98,9 +102,17 @@ notebooklm.google.com
 
 ## 常见问题
 
-passwall2更新节点后，我的分流选项消失了
+1. **passwall2更新节点后，我的分流选项消失了**
 
 分流节点可能更新时被删了；在passwall中，节点列表>添加>类型：xray/sing-box>传输协议：分流，后面依据个人用途选择后添加即可
+
+
+
+**2. 电脑打开油管正常，手机能打开youtube网站/APP，但是看不了视频怎么回事**
+
+高级设置里，TCP转发端口，确保开启了 **UDP 转发**
+
+
 
 
 
