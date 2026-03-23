@@ -2,7 +2,7 @@
 title: 让 Claude 跑在微信里是种什么体验？
 published: 2026-03-23
 tags: []
-category: 
+category: AIHacks
 draft: false
 pinned: false
 ---
