@@ -213,6 +213,167 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;写在最后&lt;/h2&gt;
 &lt;p&gt;当NotebookLM 把 1 小时的学习压缩到 15 分钟，把 3 天的调研缩短到 1 小时，效率差距已不再是努力程度，而是工具选择。从学生到科研人员，从产品经理到内容创作者，这款被《巴伦周刊》称为 “生成式 AI 杀手级应用” 的工具，正在重构知识工作的底层逻辑。现在登录 Google 账号即可免费体验，你的 10 倍效率革命，从上传第一份文档开始。&lt;/p&gt;
+</content:encoded></item><item><title>让 Claude 跑在微信里是种什么体验？</title><link>https://dqtx.cc/posts/aihacks/weixin/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/weixin/</guid><pubDate>Mon, 23 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你是否经常在外，想要问 Claude 问题却不方便打开终端？或者想在手机上随时调用 Claude？今天给大家分享一个绝杀方案——给 Claude Code 装上微信插件，直接在微信里和 Claude 聊天，爆赞！&lt;/p&gt;
+&lt;p&gt;这个插件来自 Github 开源项目 &lt;code&gt;m1heng/claude-plugin-weixin&lt;/code&gt;，利用微信 iLink Bot API，通过长轮询方式接收消息，&lt;strong&gt;不需要公网IP，不需要域名，不需要配置webhook&lt;/strong&gt;，本地就能跑，简直无敌。&lt;/p&gt;
+&lt;p&gt;项目地址https://github.com/m1heng/claude-plugin-weixin&lt;/p&gt;
+&lt;p&gt;https://github.com/cyhhao/vibe-remote  （另外一个类似 更优秀）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/clean_Gemini_Generated_Image_9kld2h9kld2h9kld.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;准备工作&lt;/h2&gt;
+&lt;p&gt;首先确认你已经安装好了这些东西：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Claude Code v2.1.80+（必须是最新版）&lt;/li&gt;
+&lt;li&gt;Bun 运行环境（安装看这里：https://bun.sh/）&lt;/li&gt;
+&lt;li&gt;能正常访问 GitHub 的网络（懂的都懂）&lt;/li&gt;
+&lt;li&gt;微信APP版本不低于8.0.70&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;安装步骤&lt;/h2&gt;
+&lt;h3&gt;1. 添加插件市场&lt;/h3&gt;
+&lt;p&gt;打开终端，先添加作者的插件市场：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;claude plugin marketplace add m1heng/claude-plugins
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果你和我一样需要代理，可以先给 git 配置代理：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git config --global http.proxy http://127.0.0.1:7890
+git config --global https.proxy http://127.0.0.1:7890
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;2. 安装微信插件&lt;/h3&gt;
+&lt;p&gt;添加完市场后，直接安装：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;claude plugin install weixin@m1heng-plugins
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;等待几分钟，如果看到 &lt;code&gt;Successfully installed&lt;/code&gt; 就搞定了。&lt;/p&gt;
+&lt;h3&gt;3. 扫码登录微信&lt;/h3&gt;
+&lt;p&gt;打开 Claude Code，运行配置命令：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/weixin:configure login
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;终端会弹出一个二维码，&lt;strong&gt;打开微信扫一扫，确认登录&lt;/strong&gt;即可。Credentials 会自动保存，下次不用再扫。&lt;/p&gt;
+&lt;p&gt;⚠️ 注意：这是登录 iLink Bot 服务，不是登录你的微信帐号，请放心使用。&lt;/p&gt;
+&lt;h3&gt;4. 启动 Claude 加载插件&lt;/h3&gt;
+&lt;p&gt;登录完成后，用下面这个命令启动 Claude：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;claude --dangerously-load-development-channels plugin:weixin@m1heng-plugins
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;因为现在还是渠道预览版，非官方插件必须加上这个参数，记住就行。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;5. 配对你的微信&lt;/h3&gt;
+&lt;p&gt;启动之后：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在微信里找到你登录的那个机器人，给它发任意消息&lt;/li&gt;
+&lt;li&gt;机器人会回复你一个&lt;strong&gt;配对码&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;回到 Claude Code，运行：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;/weixin:access pair 你的配对码
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;配对成功之后，你就是授权用户了！&lt;/p&gt;
+&lt;h2&gt;开始使用&lt;/h2&gt;
+&lt;p&gt;现在你可以直接在微信上给机器人发消息，机器人会转发给 Claude Code，Claude 回复完会自动发回你的微信。&lt;/p&gt;
+&lt;p&gt;不管你是在路上，还是在被窝里，掏出手机就能问 Claude，简直不要太爽！&lt;/p&gt;
+&lt;p&gt;几个常用命令记住：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;命令&lt;/th&gt;
+&lt;th&gt;作用&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;/weixin:configure login&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;扫码登录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;/weixin:configure status&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;查看登录状态&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;/weixin:access list&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;查看已配对用户&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;/weixin:access revoke &amp;lt;code&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;撤销授权&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;常见问题&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Q: 一直连接不上GitHub怎么办？&lt;/strong&gt;
+A: 检查代理是否正常，或者手动克隆到 &lt;code&gt;~/.claude/plugins/&lt;/code&gt; 目录。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q: 收不到消息怎么办？&lt;/strong&gt;
+A: 检查 Claude 是否启动，并且确认加载了微信插件。看一下配对码是否正确配对，确认安装了Bun&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q: 支持多人使用吗？&lt;/strong&gt;
+A: 支持，你可以给多个微信号配对，都能使用。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q: 收费吗？&lt;/strong&gt;
+A: 插件本身完全免费，MIT 开源。Claude API 费用走你自己的 Claude Code，微信机器人 iLink 服务请参考官方说明。&lt;/p&gt;
+&lt;h2&gt;写在最后&lt;/h2&gt;
+&lt;p&gt;这个插件真的解决了大问题，以前出门在外想找 Claude 帮个忙特别不方便，现在直接微信里搞定，确实牛批！&lt;/p&gt;
+&lt;p&gt;全程配置下来 5 分钟搞定，不需要复杂的服务器和域名，普通人也能用上。&lt;strong&gt;建议收藏&lt;/strong&gt;，哪天想用了翻出来直接抄作业！&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;如果觉得教程对你有帮助&lt;/strong&gt;，随手&lt;strong&gt;点赞、在看、转发&lt;/strong&gt;三连吧！有任何问题，欢迎在留言区评论，我会逐一回复。👏👏&lt;/p&gt;
+&lt;p&gt;如需远程配置，联系&lt;strong&gt;微信：dqtx33&lt;/strong&gt;  远程客户端下载网址：&lt;a href=&quot;742112.xyz&quot;&gt;742112.xyz&lt;/a&gt;&lt;/p&gt;
+</content:encoded></item><item><title>Rustdesk定制编译工具</title><link>https://dqtx.cc/posts/technical/rustdesk/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/rustdesk/</guid><pubDate>Mon, 23 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;作为一名技术爱好者，偶然在闲鱼上刷到定制化的Rustdesk客户端，简洁的界面和实用的功能让我萌生了自研同款编译工具的想法。虽花费数百元向卖家请教却因对方忙碌无疾而终，但也坚定了我靠技术实现需求的决心——最终借助Codex从命令行版本起步，迭代出可视化网页面板的Rustdesk一键编译工具，现将整个开发过程与成果分享如下。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260323223059574.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;一、成品核心优势&lt;/h2&gt;
+&lt;p&gt;相较于原生Rustdesk，定制编译后的工具在使用体验上做了针对性优化：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;无感连接&lt;/strong&gt;：控制端与客户端建立连接时无感知，无需繁琐确认步骤；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;免安装特性&lt;/strong&gt;：客户端和控制端均为绿色单文件，无需安装即可运行；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;隐私化展示&lt;/strong&gt;：控制端界面隐藏设备ID，仅客户端显示ID，兼顾使用便捷性与设备安全性。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;二、开发环境准备&lt;/h2&gt;
+&lt;p&gt;为保证编译流程的稳定性和兼容性，需提前配置以下开发环境：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;脚本执行环境：PowerShell 7（推荐版本，兼容更多命令）；&lt;/li&gt;
+&lt;li&gt;主开发语言：Python 3.10+（适配第三方库及语法特性）；&lt;/li&gt;
+&lt;li&gt;底层编译依赖：Rust（通过rustup管理版本）、LLVM（clang编译器）；&lt;/li&gt;
+&lt;li&gt;依赖库管理：vcpkg（用于管理C/C++依赖库）；&lt;/li&gt;
+&lt;li&gt;代码拉取工具：Git（获取Rustdesk源码及依赖）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;三、项目结构梳理&lt;/h2&gt;
+&lt;p&gt;整个编译工具的目录结构清晰划分，便于维护和扩展：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;D:\project2026\rustdesk
+├─ tools\one_click_pack.ps1                     # 命令行版一键出包脚本（核心逻辑）
+├─ tools\pack_web_ui.py                         # 可视化网页面板核心代码
+├─ tools\start_pack_web_ui.ps1                  # 网页面板一键启动脚本
+├─ src\ui\index.tis / index.css / ab.tis        # Rustdesk UI定制化改动文件
+├─ libs\portable\generate.py                    # 便携包生成逻辑
+└─ target\release\rustdesk-portable-packer.exe  # 编译后生成的单文件打包器
+
+C:\Users\Administrator\rustdesk-build-platform\storage\artifacts
+├─ vfun-client-complete                         # 客户端打包素材（资源、配置模板等）
+└─ vfun-controller-complete                     # 控制端打包素材
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;四、编译流程解析&lt;/h2&gt;
+&lt;p&gt;整个编译过程实现全自动化，仅需输入核心参数即可生成定制化exe文件，流程如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入客户参数
+   ↓
+one_click_pack.ps1 / 网页面板
+   ↓
+生成 customer.json（client/controller）
+   ↓
+同步 UI 文件到 artifacts
+   ↓
+generate.py 打包
+   ↓
+输出 2 个 exe（客户端 + 控制端）
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;参数输入&lt;/strong&gt;：在命令行/网页面板中填写域名、公钥、品牌名称、访问密码等定制化参数；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;脚本触发&lt;/strong&gt;：执行&lt;code&gt;one_click_pack.ps1&lt;/code&gt;命令行脚本或通过网页面板触发编译；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;配置生成&lt;/strong&gt;：自动生成&lt;code&gt;customer.json&lt;/code&gt;配置文件（区分客户端/控制端参数）；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;资源同步&lt;/strong&gt;：将定制化UI文件同步到打包素材目录&lt;code&gt;artifacts&lt;/code&gt;；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;打包编译&lt;/strong&gt;：调用&lt;code&gt;generate.py&lt;/code&gt;执行便携包打包逻辑；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;成果输出&lt;/strong&gt;：最终生成2个独立exe文件（客户端+控制端）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;快速运行方式&lt;/h3&gt;
+&lt;p&gt;只需执行以下PowerShell命令，即可启动可视化网页面板：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;amp; &apos;D:\project2026\rustdesk\tools\start_pack_web_ui.ps1&apos;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;五、编译成果展示&lt;/h2&gt;
+&lt;p&gt;整个编译流程耗时约4分钟，最终输出按“品牌-类型-时间戳”命名的可执行文件，示例如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;大强同学-控制端-20260323-102318.exe&lt;/li&gt;
+&lt;li&gt;大强同学-客户端-20260323-102318.exe&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;目前该工具仅支持Windows版本的Rustdesk控制端/客户端编译，若有定制编译需求，可添加微信dqtx33交流。&lt;/p&gt;
+&lt;h2&gt;六、写在最后&lt;/h2&gt;
+&lt;p&gt;本次开发从闲鱼灵感出发，基于Python、PowerShell等技术栈实现了Rustdesk定制化编译工具，核心优化了连接体验、免安装和隐私展示三大特性；工具实现了从命令行到网页可视化面板的迭代，编译流程自动化，仅需输入核心参数即可快速生成定制化exe文件；项目结构清晰，依赖环境明确，编译耗时约4分钟，仅支持Windows版本的Rustdesk控制端/客户端编译。&lt;/p&gt;
 </content:encoded></item><item><title>Claude code隐藏命令/快捷键</title><link>https://dqtx.cc/posts/aihacks/cc/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/cc/</guid><pubDate>Sun, 22 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Generated_Image_n0y67n0y67n0y67n.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;claude --dangerously-skip-permissions 最高权限启动Claude Code&lt;/li&gt;
