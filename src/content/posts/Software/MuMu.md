@@ -27,15 +27,41 @@ MuMu模拟器官网：
 114.115.116.117 mumu.nie.netease.com
 ```
 
+或者在文件添加如下代码
+
+C:\Users\Administrator\AppData\Roaming\Netease\MuMuPlayer\data\startupImage\imageManager.json
+
+```
+{
+"status": "PERMANENTLY_DISABLED",
+"disableReason": "DEACTIVATED_BY_ADMIN",
+"disableTimestamp": 9999999999,
+"reEnableAllowed": false,
+"originalData": { /* 保留原始数据但不使用 */ },
+"display": false,
+"enabled": false
+}
+```
+
 ### 2.删除桌面广告
 
 直接替换系统镜像文件:**[点此下载](https://pan.xunlei.com/x/VOfIXk-qqm-IpJmek_9iba1DA1?pwd=2wqi#)**
 
-路径为：
+Listary直接搜索system.vdi就会看到路径，路径为：
 
 ```
 .\nx_device\12.0\vms\MuMuPlayer-12.0-base\system.vdi
 ```
+
+3. ### 禁止自动更新
+
+在系统 Host 文件中添加如下规则
+
+```
+127.0.0.1 mumu.nie.netease.com  #屏蔽mumu更新服务
+```
+
+设置出站规则即可，[参考视频](https://www.bilibili.com/video/BV1St411U7FU/?vd_source=206031f494850e57fd6c92ace02b1bed)
 
 ## 三.使用技巧
 

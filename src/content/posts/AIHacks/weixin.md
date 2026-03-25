@@ -19,6 +19,8 @@ pinned: false
 
 https://github.com/cyhhao/vibe-remote  （另外一个类似 更优秀）
 
+https://github.com/qufei1993/cc-weixin
+
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/clean_Gemini_Generated_Image_9kld2h9kld2h9kld.webp)
 
 ## 准备工作
