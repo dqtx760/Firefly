@@ -62,6 +62,32 @@
 &lt;li&gt;⛓️ Web3教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867794661334761497#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;🛠️ 技术教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867808112450912266#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>迅雷v25.0.3.1096绿色精简版</title><link>https://dqtx.cc/posts/software/xunlei/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/xunlei/</guid><pubDate>Wed, 25 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;迅雷&lt;/strong&gt;Thunder 2025 v25.0.3.1096 去广告&lt;strong&gt;绿色&lt;/strong&gt;精简版，注意是Windows版本，可以直接搜索，分享资料可以复制仅单个URL，但是没有深色模式切换按钮，不过界面确实干净清爽！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260325135455961.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;🔥 核心亮点&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;彻底去广告：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;屏蔽弹窗、横幅、推荐页等 99% 广告，启动无引导弹窗，界面干净无干扰，专注下载本身。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;轻量适配老机：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;剔除 20 + 冗余组件（自动更新、游戏中心等），安装包仅 97MB，内存占用 80-120MB（仅官方 1/3），WinXP 至 Win11 全兼容，老旧电脑启动 2 秒内、流畅不卡顿。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;极速下载不变：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;保留官方核心多通道加速引擎，支持 HTTP/BT/ 磁力 / 云盘等全协议，热门资源可跑满带宽，断点续传稳定靠谱，边下边播功能同步保留。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;绿色无捆绑：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;免安装自解压，不写注册表、无残留，删除文件夹即彻底卸载，无后门、不收集隐私，安全放心。&lt;/p&gt;
+&lt;h2&gt;📁 下载地址&lt;/h2&gt;
+&lt;p&gt;版本： 25.0.3.1096下载地址&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;夸克网盘：&lt;a href=&quot;https://pan.quark.cn/s/fb50f8c3a1f1&quot;&gt;点此下载&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;迅雷云盘：&lt;a href=&quot;https://pan.xunlei.com/s/VOoY_T-blouzc2AEXbZ66ECLA1?pwd=j23f&quot;&gt;点此下载&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;官方版本：&lt;a href=&quot;https://pc.xunlei.com/&quot;&gt;点此下载&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;PS.该版本为绿色精简版，仅供学习交流，建议 24 小时内删除&lt;/p&gt;
+&lt;p&gt;长期使用请支持官方正版。有迅雷会员可解锁更佳加速体验～&lt;/p&gt;
 </content:encoded></item><item><title>NotebookLM封神指南</title><link>https://dqtx.cc/posts/aihacks/notebooklm/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/notebooklm/</guid><pubDate>Mon, 23 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;在众多AI工具中，Google推出的NotebookLM正逐渐成为许多人每天离不开的“超级大脑”。简单来说，它是一个专门帮你消化大量、杂乱资料的私人助理。&lt;/p&gt;
 &lt;p&gt;与ChatGPT等依赖自身数据库或联网搜索的AI不同，NotebookLM最大的杀手锏在于**“零幻觉”**：&lt;/p&gt;
 &lt;p&gt;它只根据你上传的资料来回答问题。无论你丢给它网页、Google文档还是YouTube视频，它都能在几分钟内完成整合，并生成简报、数据表、信息图表甚至播客。&lt;/p&gt;
@@ -217,6 +243,7 @@
 &lt;p&gt;这个插件来自 Github 开源项目 &lt;code&gt;m1heng/claude-plugin-weixin&lt;/code&gt;，利用微信 iLink Bot API，通过长轮询方式接收消息，&lt;strong&gt;不需要公网IP，不需要域名，不需要配置webhook&lt;/strong&gt;，本地就能跑，简直无敌。&lt;/p&gt;
 &lt;p&gt;项目地址https://github.com/m1heng/claude-plugin-weixin&lt;/p&gt;
 &lt;p&gt;https://github.com/cyhhao/vibe-remote  （另外一个类似 更优秀）&lt;/p&gt;
+&lt;p&gt;https://github.com/qufei1993/cc-weixin&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/clean_Gemini_Generated_Image_9kld2h9kld2h9kld.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;准备工作&lt;/h2&gt;
 &lt;p&gt;首先确认你已经安装好了这些东西：&lt;/p&gt;
@@ -4995,7 +5022,7 @@ pyinstaller --onefile --windowed edit_hosts.py
 &lt;p&gt;将AutoHotkey脚本转换为EXE文件是一个简单而强大的功能，它使脚本更加容易分发和使用，同时保护了代码的安全性。通过本文介绍的步骤，您可以轻松完成从脚本脚本到EXE生成的全过程。无论是用于个人自动化还是商业应用，AutoHotkey的EXE编译功能都能满足您的需求。&lt;/p&gt;
 &lt;p&gt;如果觉得这篇教程对你有帮助，别忘了&lt;strong&gt;点赞+收藏+转发&lt;/strong&gt;三连呀！关注我，后续分享更多实用技巧、效率工具干货，下次见～ 👋&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;大强远程技术支持：&lt;a href=&quot;742112.xyz&quot;&gt;742112.xyz&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-</content:encoded></item><item><title>MuMu模拟器</title><link>https://dqtx.cc/posts/software/mumu%E6%A8%A1%E6%8B%9F%E5%99%A8/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/mumu%E6%A8%A1%E6%8B%9F%E5%99%A8/</guid><pubDate>Thu, 22 Aug 2024 14:20:00 GMT</pubDate><content:encoded>&lt;p&gt;MuMu模拟器作为市面上兼容性和稳定性极佳的安卓模拟器，一直是玩手游、刷视频及跑脚本用户的首选。不过默认设置下它会有一些开屏广告、桌面广告，本文将手把手教你：**最新版 MuMu 5.9 下载、广告屏蔽、壁纸自定义、快捷技巧等。**建议收藏转发.&lt;/p&gt;
+</content:encoded></item><item><title>MuMu模拟器</title><link>https://dqtx.cc/posts/software/mumu/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/mumu/</guid><pubDate>Thu, 22 Aug 2024 14:20:00 GMT</pubDate><content:encoded>&lt;p&gt;MuMu模拟器作为市面上兼容性和稳定性极佳的安卓模拟器，一直是玩手游、刷视频及跑脚本用户的首选。不过默认设置下它会有一些开屏广告、桌面广告，本文将手把手教你：**最新版 MuMu 5.9 下载、广告屏蔽、壁纸自定义、快捷技巧等。**建议收藏转发.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20251130144036028.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;一.软件下载&lt;/h2&gt;
 &lt;p&gt;MuMu模拟器官网：
@@ -5005,11 +5032,32 @@ https://mumu.163.com/&lt;/p&gt;
 &lt;p&gt;在系统 Host 文件中添加如下规则👇&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;114.115.116.117 mumu.nie.netease.com
 &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;或者在文件添加如下代码&lt;/p&gt;
+&lt;p&gt;C:\Users\Administrator\AppData\Roaming\Netease\MuMuPlayer\data\startupImage\imageManager.json&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{
+&quot;status&quot;: &quot;PERMANENTLY_DISABLED&quot;,
+&quot;disableReason&quot;: &quot;DEACTIVATED_BY_ADMIN&quot;,
+&quot;disableTimestamp&quot;: 9999999999,
+&quot;reEnableAllowed&quot;: false,
+&quot;originalData&quot;: { /* 保留原始数据但不使用 */ },
+&quot;display&quot;: false,
+&quot;enabled&quot;: false
+}
+&lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;2.删除桌面广告&lt;/h3&gt;
 &lt;p&gt;直接替换系统镜像文件:&lt;strong&gt;&lt;a href=&quot;https://pan.xunlei.com/x/VOfIXk-qqm-IpJmek_9iba1DA1?pwd=2wqi#&quot;&gt;点此下载&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;路径为：&lt;/p&gt;
+&lt;p&gt;Listary直接搜索system.vdi就会看到路径，路径为：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;.\nx_device\12.0\vms\MuMuPlayer-12.0-base\system.vdi
 &lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;h3&gt;禁止自动更新&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;在系统 Host 文件中添加如下规则&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;127.0.0.1 mumu.nie.netease.com  #屏蔽mumu更新服务
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;设置出站规则即可，&lt;a href=&quot;https://www.bilibili.com/video/BV1St411U7FU/?vd_source=206031f494850e57fd6c92ace02b1bed&quot;&gt;参考视频&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;三.使用技巧&lt;/h2&gt;
 &lt;h3&gt;快捷启动&lt;/h3&gt;
 &lt;p&gt;在桌面建立启动直达图标,双击即可直接启动指定的模拟器实例&lt;/p&gt;
