@@ -62,39 +62,45 @@
 &lt;li&gt;⛓️ Web3教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867794661334761497#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;🛠️ 技术教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867808112450912266#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>OpenCLI 安装与配置全攻略</title><link>https://dqtx.cc/posts/aihacks/opencli/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/opencli/</guid><pubDate>Thu, 26 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;在 AI Agent 时代，大模型最缺的是“操作能力”。&lt;a href=&quot;https://github.com/jackwener/opencli&quot;&gt;OpenCLI&lt;/a&gt; 巧妙地解决了这个问题：它通过复用你本地 Chrome 的登录状态，让 AI 能够像调用 API 一样在终端直接查热搜、发动态或抓取数据。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Generated_Image_ioq7uwioq7uwioq7.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;&lt;strong&gt;环境准备&lt;/strong&gt;&lt;/h2&gt;
+</content:encoded></item><item><title>效率神器！MFCMouseEffect</title><link>https://dqtx.cc/posts/software/mfcmouseeffect/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/mfcmouseeffect/</guid><pubDate>Fri, 27 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这是一款能灵活自定义鼠标动作、手势映射的跨平台工具&lt;/p&gt;
+&lt;p&gt;MFCMouseEffect，它不仅能实现鼠标点击、拖尾等炫酷的输入可视化特效，更能通过自动化映射打造专属的鼠标快捷操作体系，把桌面操作效率拉满，Windows 和 Mac 用户都能轻松上手！&lt;/p&gt;
+&lt;p&gt;![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Generated_Image_2lctye2lctye2lct (2).webp)&lt;/p&gt;
+&lt;h2&gt;1.关于软件下载&lt;/h2&gt;
+&lt;p&gt;支持Windows、Mac&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Node.js，版本需≥20.0.0&lt;/li&gt;
-&lt;li&gt;已安装Chrome浏览器&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;github：https://github.com/sqmw/MFCMouseEffect/releases/tag/v1.3.1&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;夸克网盘：https://pan.quark.cn/s/68ccc3badc8f&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;迅雷云盘：https://pan.xunlei.com/s/VOoeiBouKMC8ud2FUetBs7VIA1?pwd=b2ky&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;&lt;strong&gt;安装OpenCLI&lt;/strong&gt;&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;# 全局安装
-npm install -g @jackwener/opencli
-
-# 验证安装是否成功
-opencli --version
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;&lt;strong&gt;配置浏览器桥接&lt;/strong&gt;&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;下载OpenCLI的Chrome扩展并安装&lt;/li&gt;
-&lt;li&gt;运行 opencli doctor检查扩展程序与本地后台服务（Daemon）的连接状态&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2&gt;快速上手&lt;/h2&gt;
-&lt;p&gt;配置完成后，你可以尝试以下命令来确认工具是否正常工作：&lt;/p&gt;
-&lt;p&gt;运行opencli setup，该命令会自动从Chrome浏览器中检测并配置Playwright MCP Bridge扩展的token，完成浏览器连接性验证。&lt;/p&gt;
-&lt;p&gt;完成以上步骤后，即可在终端中使用&lt;code&gt;opencli&lt;/code&gt;命令操作支持的网站或Electron应用，例如：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;opencli bilibili hot --limit 5  # 查看B站热门视频
-opencli zhihu hot -f json       # 查看知乎热榜并以JSON格式输出
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;&lt;strong&gt;集成到 AI Agent&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;如果你正在使用 &lt;a href=&quot;https://github.com/joeseesun/opencli-skill&quot;&gt;Claude Code&lt;/a&gt; 或其他智能体，可以将 OpenCLI 作为“技能”添加。
-只需在 Agent 的系统提示词（如 &lt;code&gt;.cursorrules&lt;/code&gt;）中加入：&lt;/p&gt;
+&lt;p&gt;安装好软件之后呢，软件回进入系统托盘图，点击软件右键-设置，点击后它会自动打开网页，此时你回看到左侧一般、鼠标伴宠、光标特效、&lt;strong&gt;鼠标/键盘指示器&lt;/strong&gt;、&lt;strong&gt;自动化映射&lt;/strong&gt;、插件管理，这六个模块&lt;/p&gt;
+&lt;h2&gt;2.鼠标/键盘指示器&lt;/h2&gt;
+&lt;p&gt;启用指示器&amp;amp;启用键盘指这个两个我都关掉了d&lt;/p&gt;
+&lt;p&gt;​&lt;/p&gt;
+&lt;h2&gt;3.自动化映射&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;自动化映射分为风鼠标动作映射鼠标动作映射手势映射&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;鼠标动作映射&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;就是鼠标左键单右键中键滚轮向上滚轮向下代替一个快捷键&lt;/p&gt;
+&lt;p&gt;我只设置一个中间点击映射快捷键Alt+D（打开豆包）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;手势映射&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;插一嘴：我浏览器用的手势映射插件：FlowMouse&lt;/p&gt;
+&lt;p&gt;你可以理解选中一个文件的处理快捷键，比如高频使用的复制粘贴删除快捷键，我的配置：&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&quot;You have a tool called opencli. Run &lt;code&gt;opencli list&lt;/code&gt; to see available commands to browse the web.&quot;&lt;/p&gt;
+&lt;p&gt;左键拖拽文件拖拽·向上=复制（映射快捷键ctrl+c）&lt;/p&gt;
+&lt;p&gt;左键拖拽文件·向下=粘贴（映射快捷键ctrl+V）&lt;/p&gt;
+&lt;p&gt;左键拖拽文件·W形=删除（映射快捷键Delete）&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;OpenCLI 的安装非常直观，关键在于浏览器插件的桥接。一旦打通，你的终端就不再只是一个冷冰冰的控制台，而是通往整个 Web 世界的万能钥匙。&lt;/p&gt;
+&lt;p&gt;作为一款集&lt;strong&gt;输入反馈、可视化、自动化映射&lt;/strong&gt;于一体的跨平台工具，MFCMouseEffect 远不止快捷键映射这一个亮点，它还支持炫酷的光标特效、可扩展的 WASM 插件、鼠标伴宠等趣味功能。&lt;/p&gt;
+&lt;p&gt;且开源免费、支持自定义扩展，无论是普通用户想提升桌面操作效率，还是开发者想定制专属桌面交互效果，都能满足需求，目前该项目还在持续更新迭代。&lt;/p&gt;
 </content:encoded></item><item><title>Claude联网神器：Web Access</title><link>https://dqtx.cc/posts/aihacks/web-access/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/web-access/</guid><pubDate>Thu, 26 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;前言&lt;/h2&gt;
 &lt;p&gt;过去的 AI 联网超 &quot;死板&quot;：要么用搜索引擎瞎找非公开内容，要么打不开需要登录的动态网页，还得单独给 AI 登各个平台，开多个网页就卡，踩过的坑下次还踩，甚至会跟人抢浏览器控制权，用着特别费劲。&lt;/p&gt;
 &lt;p&gt;最近发现了 &lt;a href=&quot;https://github.com/eze-is/web-access&quot;&gt;Web Access&lt;/a&gt; 这个 Skill，能把 AI Agent 的联网、操作浏览器的能力直接拉满。它用的是&lt;strong&gt;你自己已经登录的 Chrome&lt;/strong&gt;，不管是查信息、扒内容，还是交互操作，都能自动搞定，兼容 Claude Code、OpenClaw 等主流 AI Agent，普通人也能轻松上手。&lt;/p&gt;
@@ -177,6 +183,40 @@ opencli zhihu hot -f json       # 查看知乎热榜并以JSON格式输出
 &lt;/ul&gt;
 &lt;p&gt;PS.该版本为绿色精简版，仅供学习交流，建议 24 小时内删除&lt;/p&gt;
 &lt;p&gt;长期使用请支持官方正版。有迅雷会员可解锁更佳加速体验～&lt;/p&gt;
+</content:encoded></item><item><title>OpenCLI安装与配置全攻略</title><link>https://dqtx.cc/posts/aihacks/opencli/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/opencli/</guid><pubDate>Tue, 24 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;在AI Agent时代，大模型最缺的是“操作能力”。&lt;a href=&quot;https://github.com/jackwener/opencli&quot;&gt;OpenCLI&lt;/a&gt; 巧妙地解决了这个问题：它通过复用你本地 Chrome 的登录状态，让 AI 能够像调用 API 一样在终端直接查热搜、发动态或抓取数据。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Generated_Image_ioq7uwioq7uwioq7.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;&lt;strong&gt;环境准备&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Node.js，版本需≥20.0.0&lt;/li&gt;
+&lt;li&gt;已安装Chrome浏览器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;&lt;strong&gt;安装OpenCLI&lt;/strong&gt;&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;# 全局安装
+npm install -g @jackwener/opencli
+
+# 验证安装是否成功
+opencli --version
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;&lt;strong&gt;配置浏览器桥接&lt;/strong&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;下载OpenCLI的Chrome扩展（&lt;a href=&quot;https://github.com/jackwener/opencli/releases/tag/v1.4.1&quot;&gt;点此下载&lt;/a&gt;）并安装&lt;/li&gt;
+&lt;li&gt;运行 opencli doctor检查扩展程序与本地后台服务（Daemon）的连接状态&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;快速上手&lt;/h2&gt;
+&lt;p&gt;配置完成后，你可以尝试以下命令来确认工具是否正常工作：&lt;/p&gt;
+&lt;p&gt;运行opencli setup，该命令会自动从Chrome浏览器中检测并配置Playwright MCP Bridge扩展的token，完成浏览器连接性验证。&lt;/p&gt;
+&lt;p&gt;完成以上步骤后，即可在终端中使用&lt;code&gt;opencli&lt;/code&gt;命令操作支持的网站或Electron应用，例如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;opencli bilibili hot --limit 5  # 查看B站热门视频
+opencli zhihu hot -f json       # 查看知乎热榜并以JSON格式输出
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;&lt;strong&gt;集成到 AI Agent&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;如果你正在使用 &lt;a href=&quot;https://github.com/joeseesun/opencli-skill&quot;&gt;Claude Code&lt;/a&gt; 或其他智能体，可以将 OpenCLI 作为“技能”添加。
+只需在 Agent 的系统提示词（如 &lt;code&gt;.cursorrules&lt;/code&gt;）中加入：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&quot;You have a tool called opencli. Run &lt;code&gt;opencli list&lt;/code&gt; to see available commands to browse the web.&quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;OpenCLI 的安装非常直观，关键在于浏览器插件的桥接。一旦打通，你的终端就不再只是一个冷冰冰的控制台，而是通往整个 Web 世界的万能钥匙。&lt;/p&gt;
+&lt;p&gt;文章来源：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;  远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/p&gt;
 </content:encoded></item><item><title>NotebookLM封神指南</title><link>https://dqtx.cc/posts/aihacks/notebooklm/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/notebooklm/</guid><pubDate>Mon, 23 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;在众多AI工具中，Google推出的NotebookLM正逐渐成为许多人每天离不开的“超级大脑”。简单来说，它是一个专门帮你消化大量、杂乱资料的私人助理。&lt;/p&gt;
 &lt;p&gt;与ChatGPT等依赖自身数据库或联网搜索的AI不同，NotebookLM最大的杀手锏在于**“零幻觉”**：&lt;/p&gt;
 &lt;p&gt;它只根据你上传的资料来回答问题。无论你丢给它网页、Google文档还是YouTube视频，它都能在几分钟内完成整合，并生成简报、数据表、信息图表甚至播客。&lt;/p&gt;
@@ -328,101 +368,6 @@ opencli zhihu hot -f json       # 查看知乎热榜并以JSON格式输出
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;写在最后&lt;/h2&gt;
 &lt;p&gt;当NotebookLM 把 1 小时的学习压缩到 15 分钟，把 3 天的调研缩短到 1 小时，效率差距已不再是努力程度，而是工具选择。从学生到科研人员，从产品经理到内容创作者，这款被《巴伦周刊》称为 “生成式 AI 杀手级应用” 的工具，正在重构知识工作的底层逻辑。现在登录 Google 账号即可免费体验，你的 10 倍效率革命，从上传第一份文档开始。&lt;/p&gt;
-</content:encoded></item><item><title>让 Claude 跑在微信里是种什么体验？</title><link>https://dqtx.cc/posts/aihacks/weixin/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/weixin/</guid><pubDate>Mon, 23 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你是否经常在外，想要问 Claude 问题却不方便打开终端？或者想在手机上随时调用 Claude？今天给大家分享一个绝杀方案——给 Claude Code 装上微信插件，直接在微信里和 Claude 聊天，爆赞！&lt;/p&gt;
-&lt;p&gt;这个插件来自 Github 开源项目 &lt;code&gt;m1heng/claude-plugin-weixin&lt;/code&gt;，利用微信 iLink Bot API，通过长轮询方式接收消息，&lt;strong&gt;不需要公网IP，不需要域名，不需要配置webhook&lt;/strong&gt;，本地就能跑，简直无敌。&lt;/p&gt;
-&lt;p&gt;项目地址https://github.com/m1heng/claude-plugin-weixin&lt;/p&gt;
-&lt;p&gt;https://github.com/cyhhao/vibe-remote  （另外一个类似 更优秀）&lt;/p&gt;
-&lt;p&gt;https://github.com/qufei1993/cc-weixin&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/clean_Gemini_Generated_Image_9kld2h9kld2h9kld.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;准备工作&lt;/h2&gt;
-&lt;p&gt;首先确认你已经安装好了这些东西：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Claude Code v2.1.80+（必须是最新版）&lt;/li&gt;
-&lt;li&gt;Bun 运行环境（安装看这里：https://bun.sh/）&lt;/li&gt;
-&lt;li&gt;能正常访问 GitHub 的网络（懂的都懂）&lt;/li&gt;
-&lt;li&gt;微信APP版本不低于8.0.70&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;安装步骤&lt;/h2&gt;
-&lt;h3&gt;1. 添加插件市场&lt;/h3&gt;
-&lt;p&gt;打开终端，先添加作者的插件市场：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;claude plugin marketplace add m1heng/claude-plugins
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;如果你和我一样需要代理，可以先给 git 配置代理：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;git config --global http.proxy http://127.0.0.1:7890
-git config --global https.proxy http://127.0.0.1:7890
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;2. 安装微信插件&lt;/h3&gt;
-&lt;p&gt;添加完市场后，直接安装：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;claude plugin install weixin@m1heng-plugins
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;等待几分钟，如果看到 &lt;code&gt;Successfully installed&lt;/code&gt; 就搞定了。&lt;/p&gt;
-&lt;h3&gt;3. 扫码登录微信&lt;/h3&gt;
-&lt;p&gt;打开 Claude Code，运行配置命令：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;/weixin:configure login
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;终端会弹出一个二维码，&lt;strong&gt;打开微信扫一扫，确认登录&lt;/strong&gt;即可。Credentials 会自动保存，下次不用再扫。&lt;/p&gt;
-&lt;p&gt;⚠️ 注意：这是登录 iLink Bot 服务，不是登录你的微信帐号，请放心使用。&lt;/p&gt;
-&lt;h3&gt;4. 启动 Claude 加载插件&lt;/h3&gt;
-&lt;p&gt;登录完成后，用下面这个命令启动 Claude：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;claude --dangerously-load-development-channels plugin:weixin@m1heng-plugins
-&lt;/code&gt;&lt;/pre&gt;
-&lt;blockquote&gt;
-&lt;p&gt;因为现在还是渠道预览版，非官方插件必须加上这个参数，记住就行。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3&gt;5. 配对你的微信&lt;/h3&gt;
-&lt;p&gt;启动之后：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;在微信里找到你登录的那个机器人，给它发任意消息&lt;/li&gt;
-&lt;li&gt;机器人会回复你一个&lt;strong&gt;配对码&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;回到 Claude Code，运行：&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;/weixin:access pair 你的配对码
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;配对成功之后，你就是授权用户了！&lt;/p&gt;
-&lt;h2&gt;开始使用&lt;/h2&gt;
-&lt;p&gt;现在你可以直接在微信上给机器人发消息，机器人会转发给 Claude Code，Claude 回复完会自动发回你的微信。&lt;/p&gt;
-&lt;p&gt;不管你是在路上，还是在被窝里，掏出手机就能问 Claude，简直不要太爽！&lt;/p&gt;
-&lt;p&gt;几个常用命令记住：&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;命令&lt;/th&gt;
-&lt;th&gt;作用&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;/weixin:configure login&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;扫码登录&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;/weixin:configure status&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;查看登录状态&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;/weixin:access list&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;查看已配对用户&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;/weixin:access revoke &amp;lt;code&amp;gt;&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;撤销授权&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2&gt;常见问题&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Q: 一直连接不上GitHub怎么办？&lt;/strong&gt;
-A: 检查代理是否正常，或者手动克隆到 &lt;code&gt;~/.claude/plugins/&lt;/code&gt; 目录。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Q: 收不到消息怎么办？&lt;/strong&gt;
-A: 检查 Claude 是否启动，并且确认加载了微信插件。看一下配对码是否正确配对，确认安装了Bun&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Q: 支持多人使用吗？&lt;/strong&gt;
-A: 支持，你可以给多个微信号配对，都能使用。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Q: 收费吗？&lt;/strong&gt;
-A: 插件本身完全免费，MIT 开源。Claude API 费用走你自己的 Claude Code，微信机器人 iLink 服务请参考官方说明。&lt;/p&gt;
-&lt;h2&gt;写在最后&lt;/h2&gt;
-&lt;p&gt;这个插件真的解决了大问题，以前出门在外想找 Claude 帮个忙特别不方便，现在直接微信里搞定，确实牛批！&lt;/p&gt;
-&lt;p&gt;全程配置下来 5 分钟搞定，不需要复杂的服务器和域名，普通人也能用上。&lt;strong&gt;建议收藏&lt;/strong&gt;，哪天想用了翻出来直接抄作业！&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;如果觉得教程对你有帮助&lt;/strong&gt;，随手&lt;strong&gt;点赞、在看、转发&lt;/strong&gt;三连吧！有任何问题，欢迎在留言区评论，我会逐一回复。👏👏&lt;/p&gt;
-&lt;p&gt;如需远程配置，联系&lt;strong&gt;微信：dqtx33&lt;/strong&gt;  远程客户端下载网址：&lt;a href=&quot;742112.xyz&quot;&gt;742112.xyz&lt;/a&gt;&lt;/p&gt;
 </content:encoded></item><item><title>Rustdesk定制编译工具</title><link>https://dqtx.cc/posts/technical/rustdesk/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/rustdesk/</guid><pubDate>Mon, 23 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;作为一名技术爱好者，偶然在闲鱼上刷到定制化的Rustdesk客户端，简洁的界面和实用的功能让我萌生了自研同款编译工具的想法。虽花费数百元向卖家请教却因对方忙碌无疾而终，但也坚定了我靠技术实现需求的决心——最终借助Codex从命令行版本起步，迭代出可视化网页面板的Rustdesk一键编译工具，现将整个开发过程与成果分享如下。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260323223059574.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;一、成品核心优势&lt;/h2&gt;
@@ -580,6 +525,43 @@ generate.py 打包
 &lt;p&gt;&lt;strong&gt;✅关于知识星球&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;我做了一个轻量社群，把私藏的精品软件，技术教程，AI智能体学习笔记 都整理进了进去，68元/年，感兴趣的可👇 微信扫码：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/51111118145244T4.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+</content:encoded></item><item><title>在微信上指挥Agent种什么体验？</title><link>https://dqtx.cc/posts/aihacks/weix/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/weix/</guid><pubDate>Fri, 20 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;在微信里直接指挥你的AI Agent是一种什么样的体验?&lt;/p&gt;
+&lt;p&gt;最近微信推出了clawBot插件，找个几个微信桥接器Claude项目，最终都失败了，就在刚刷即刻突然看到艾逗笔大佬的&lt;strong&gt;weclaw&lt;/strong&gt;，让我眼前一亮.&lt;/p&gt;
+&lt;p&gt;只需一行命令就可以桥接给微信，安装后自动检测已安装的AI Agent（Claude、Codex、Gemini 等），重要的是这个项目不是逆向实现的桥接服务，无封号风险。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Generated_Image_qb64vqqb64vqqb64.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;1.安装weclaw&lt;/h2&gt;
+&lt;p&gt;下载二进制文件扫码登录&lt;/p&gt;
+&lt;p&gt;https://github.com/fastclaw-ai/weclaw/releases/tag/v0.6.2&lt;/p&gt;
+&lt;p&gt;或一键命令安装&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# 一键安装
+curl -sSL https://raw.githubusercontent.com/fastclaw-ai/weclaw/main/install.sh | sh
+
+# 启动（首次运行会弹出微信扫码登录）
+weclaw start
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;2.开始使用&lt;/h2&gt;
+&lt;p&gt;安装完回自动检测已安装的 AI Agent（Claude、Codex、Gemini 等）&lt;/p&gt;
+&lt;p&gt;weclaw 是基于微信官方接口（不是逆向、不是 hack）实现的桥接服务，无封号风险，可放心接入，无需小号。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260327002112849.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;3.聊天命令()&lt;/h2&gt;
+&lt;p&gt;修改~/.weclaw/config.json配置文件，你可以一次性接入多个 Agent&lt;/p&gt;
+&lt;p&gt;也可以在配置文件中为每个 Agent 自定义触发命令：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{
+  &quot;agents&quot;: {
+    &quot;claude&quot;: {
+      &quot;type&quot;: &quot;acp&quot;,
+      &quot;aliases&quot;: [&quot;ai&quot;, &quot;c&quot;]
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后 &lt;code&gt;/ai 你好&lt;/code&gt; 或 &lt;code&gt;/c 你好&lt;/code&gt; 就会路由到 claude。&lt;/p&gt;
+&lt;p&gt;PS.另外使用&lt;strong&gt;weclaw start&lt;/strong&gt;可以添加更多微信账号。&lt;/p&gt;
+&lt;h2&gt;4.类似的项目&lt;/h2&gt;
+&lt;p&gt;https://github.com/m1heng/claude-plugin-weixin
+https://github.com/cyhhao/vibe-remote
+https://github.com/qufei1993/cc-weixin&lt;/p&gt;
+&lt;p&gt;PS.如需远程配置，联系&lt;strong&gt;微信：dqtx33&lt;/strong&gt;  远程客户端下载网址：&lt;a href=&quot;742112.xyz&quot;&gt;742112.xyz&lt;/a&gt;&lt;/p&gt;
 </content:encoded></item><item><title>PassWall2双栈无忧配置指南</title><link>https://dqtx.cc/posts/technical/pass/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/pass/</guid><pubDate>Tue, 17 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;在OpenWrt 路由器上部署科学上网工具时，许多用户都希望实现一套“最省心”的方案：既能彻底杜绝 DNS 泄露与污染，又能完美兼容 IPv4/IPv6 双栈环境，同时自带可靠的去广告功能，PassWall2 正是目前最接近这一理想状态的插件之一。它基于 Xray/Sing-box 核心，内置强大的分流引擎和 DNS 处理能力，经过合理配置后，能在不关闭 IPv6、不强制禁用 AAAA 记录的前提下，实现干净、稳定、高效的上网体验。&lt;/p&gt;
 &lt;p&gt;本文将详细分享一套经过实践验证的 PassWall2 配置流程，按照此方案配置完成后，你将获得：&lt;/p&gt;
 &lt;ul&gt;
