@@ -1,13 +1,13 @@
 ---
-title: OpenCLI 安装与配置全攻略
-published: 2026-03-26
+title: OpenCLI安装与配置全攻略
+published: 2026-03-24
 tags: []
 category: AIHacks
 draft: false
 pinned: false
 ---
 
-在 AI Agent 时代，大模型最缺的是“操作能力”。[OpenCLI](https://github.com/jackwener/opencli) 巧妙地解决了这个问题：它通过复用你本地 Chrome 的登录状态，让 AI 能够像调用 API 一样在终端直接查热搜、发动态或抓取数据。
+在AI Agent时代，大模型最缺的是“操作能力”。[OpenCLI](https://github.com/jackwener/opencli) 巧妙地解决了这个问题：它通过复用你本地 Chrome 的登录状态，让 AI 能够像调用 API 一样在终端直接查热搜、发动态或抓取数据。
 
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Generated_Image_ioq7uwioq7uwioq7.webp)
 
@@ -28,7 +28,7 @@ opencli --version
 
 ## **配置浏览器桥接** 
 
-1. 下载OpenCLI的Chrome扩展并安装
+1. 下载OpenCLI的Chrome扩展（[点此下载](https://github.com/jackwener/opencli/releases/tag/v1.4.1)）并安装
 2. 运行 opencli doctor检查扩展程序与本地后台服务（Daemon）的连接状态
 
 ## 快速上手
@@ -54,3 +54,8 @@ opencli zhihu hot -f json       # 查看知乎热榜并以JSON格式输出
 > "You have a tool called opencli. Run `opencli list` to see available commands to browse the web."
 
 OpenCLI 的安装非常直观，关键在于浏览器插件的桥接。一旦打通，你的终端就不再只是一个冷冰冰的控制台，而是通往整个 Web 世界的万能钥匙。
+
+
+
+文章来源：[dqtx.cc](https://www.dqtx.cc/)  远程技术支持：[742112.xyz](https://www.742112.xyz/)
+
