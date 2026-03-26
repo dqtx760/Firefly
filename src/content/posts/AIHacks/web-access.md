@@ -1,3 +1,12 @@
+---
+title: Claude联网神器：Web Access
+published: 2026-03-26
+tags: []
+category: AIHacks
+draft: false
+pinned: false
+---
+
 ## 前言
 
 过去的 AI 联网超 "死板"：要么用搜索引擎瞎找非公开内容，要么打不开需要登录的动态网页，还得单独给 AI 登各个平台，开多个网页就卡，踩过的坑下次还踩，甚至会跟人抢浏览器控制权，用着特别费劲。
