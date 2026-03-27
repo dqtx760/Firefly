@@ -1,15 +1,11 @@
 ---
-title: 在微信上指挥Agent种什么体验？
+title: weclaw：微信桥接Agent工具
 published: 2026-03-20
 tags: []
 category: AIHacks
 draft: false
 pinned: false
 ---
-
-在微信里直接指挥你的AI Agent是一种什么样的体验?	
-
-
 
 最近微信推出了clawBot插件，找个几个微信桥接器Claude项目，最终都失败了，就在刚刷即刻突然看到艾逗笔大佬的**weclaw**，让我眼前一亮.
 
@@ -50,9 +46,11 @@ weclaw 是基于微信官方接口（不是逆向、不是 hack）实现的桥�
 
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260327002112849.webp)
 
-## 3.聊天命令()
+## 3.聊天命令(可选)
 
-修改~/.weclaw/config.json配置文件，你可以一次性接入多个 Agent
+~/.weclaw/config.json配置文件，默认使用Claude，你可以将 `default_agent` 的值修改为其他你常用的Agent，一次性接入多个 Agent
+
+
 
 也可以在配置文件中为每个 Agent 自定义触发命令：
 
@@ -73,10 +71,38 @@ weclaw 是基于微信官方接口（不是逆向、不是 hack）实现的桥�
 
 PS.另外使用**weclaw start**可以添加更多微信账号。
 
-## 4.类似的项目
+## 4.常见问题
+
+
+
+A.**运行 `weclaw` 提示 `command not found`**
+请重新执行官方安装脚本或使用 Go安装：
+
+```bash
+go install github.com/fastclaw-ai/weclaw@latest
+```
+安装后确认以下路径已加入系统环境变量 `PATH`：
+- Linux/macOS：`~/.local/bin` Windows：`%USERPROFILE%\go\bin`
+
+
+验证命令：
+
+Linux/macOS：`which weclaw` Windows：`where weclaw`
+能查询到路径后，再执行 `weclaw start`。
+
+
+
+B.**默认使用 Codex 而非 Claude**
+打开配置文件 `~/.weclaw/config.json`，将 `default_agent` 的值修改为 `codex`，保存后重启 `weclaw start` 生效。
+
+
+
+## 5.类似的项目
 
 https://github.com/m1heng/claude-plugin-weixin
+
 https://github.com/cyhhao/vibe-remote 
+
 https://github.com/qufei1993/cc-weixin
 
 
