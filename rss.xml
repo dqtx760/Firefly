@@ -525,8 +525,7 @@ generate.py 打包
 &lt;p&gt;&lt;strong&gt;✅关于知识星球&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;我做了一个轻量社群，把私藏的精品软件，技术教程，AI智能体学习笔记 都整理进了进去，68元/年，感兴趣的可👇 微信扫码：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/51111118145244T4.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-</content:encoded></item><item><title>在微信上指挥Agent种什么体验？</title><link>https://dqtx.cc/posts/aihacks/weix/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/weix/</guid><pubDate>Fri, 20 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;在微信里直接指挥你的AI Agent是一种什么样的体验?&lt;/p&gt;
-&lt;p&gt;最近微信推出了clawBot插件，找个几个微信桥接器Claude项目，最终都失败了，就在刚刷即刻突然看到艾逗笔大佬的&lt;strong&gt;weclaw&lt;/strong&gt;，让我眼前一亮.&lt;/p&gt;
+</content:encoded></item><item><title>weclaw：微信桥接Agent工具</title><link>https://dqtx.cc/posts/aihacks/weix/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/weix/</guid><pubDate>Fri, 20 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近微信推出了clawBot插件，找个几个微信桥接器Claude项目，最终都失败了，就在刚刷即刻突然看到艾逗笔大佬的&lt;strong&gt;weclaw&lt;/strong&gt;，让我眼前一亮.&lt;/p&gt;
 &lt;p&gt;只需一行命令就可以桥接给微信，安装后自动检测已安装的AI Agent（Claude、Codex、Gemini 等），重要的是这个项目不是逆向实现的桥接服务，无封号风险。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Generated_Image_qb64vqqb64vqqb64.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;1.安装weclaw&lt;/h2&gt;
@@ -543,8 +542,8 @@ weclaw start
 &lt;p&gt;安装完回自动检测已安装的 AI Agent（Claude、Codex、Gemini 等）&lt;/p&gt;
 &lt;p&gt;weclaw 是基于微信官方接口（不是逆向、不是 hack）实现的桥接服务，无封号风险，可放心接入，无需小号。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260327002112849.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;3.聊天命令()&lt;/h2&gt;
-&lt;p&gt;修改~/.weclaw/config.json配置文件，你可以一次性接入多个 Agent&lt;/p&gt;
+&lt;h2&gt;3.聊天命令(可选)&lt;/h2&gt;
+&lt;p&gt;~/.weclaw/config.json配置文件，默认使用Claude，你可以将 &lt;code&gt;default_agent&lt;/code&gt; 的值修改为其他你常用的Agent，一次性接入多个 Agent&lt;/p&gt;
 &lt;p&gt;也可以在配置文件中为每个 Agent 自定义触发命令：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;{
   &quot;agents&quot;: {
@@ -557,10 +556,24 @@ weclaw start
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;然后 &lt;code&gt;/ai 你好&lt;/code&gt; 或 &lt;code&gt;/c 你好&lt;/code&gt; 就会路由到 claude。&lt;/p&gt;
 &lt;p&gt;PS.另外使用&lt;strong&gt;weclaw start&lt;/strong&gt;可以添加更多微信账号。&lt;/p&gt;
-&lt;h2&gt;4.类似的项目&lt;/h2&gt;
-&lt;p&gt;https://github.com/m1heng/claude-plugin-weixin
-https://github.com/cyhhao/vibe-remote
-https://github.com/qufei1993/cc-weixin&lt;/p&gt;
+&lt;h2&gt;4.常见问题&lt;/h2&gt;
+&lt;p&gt;A.&lt;strong&gt;运行 &lt;code&gt;weclaw&lt;/code&gt; 提示 &lt;code&gt;command not found&lt;/code&gt;&lt;/strong&gt;
+请重新执行官方安装脚本或使用 Go安装：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;go install github.com/fastclaw-ai/weclaw@latest
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;安装后确认以下路径已加入系统环境变量 &lt;code&gt;PATH&lt;/code&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Linux/macOS：&lt;code&gt;~/.local/bin&lt;/code&gt; Windows：&lt;code&gt;%USERPROFILE%\go\bin&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;验证命令：&lt;/p&gt;
+&lt;p&gt;Linux/macOS：&lt;code&gt;which weclaw&lt;/code&gt; Windows：&lt;code&gt;where weclaw&lt;/code&gt;
+能查询到路径后，再执行 &lt;code&gt;weclaw start&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;B.&lt;strong&gt;默认使用 Codex 而非 Claude&lt;/strong&gt;
+打开配置文件 &lt;code&gt;~/.weclaw/config.json&lt;/code&gt;，将 &lt;code&gt;default_agent&lt;/code&gt; 的值修改为 &lt;code&gt;codex&lt;/code&gt;，保存后重启 &lt;code&gt;weclaw start&lt;/code&gt; 生效。&lt;/p&gt;
+&lt;h2&gt;5.类似的项目&lt;/h2&gt;
+&lt;p&gt;https://github.com/m1heng/claude-plugin-weixin&lt;/p&gt;
+&lt;p&gt;https://github.com/cyhhao/vibe-remote&lt;/p&gt;
+&lt;p&gt;https://github.com/qufei1993/cc-weixin&lt;/p&gt;
 &lt;p&gt;PS.如需远程配置，联系&lt;strong&gt;微信：dqtx33&lt;/strong&gt;  远程客户端下载网址：&lt;a href=&quot;742112.xyz&quot;&gt;742112.xyz&lt;/a&gt;&lt;/p&gt;
 </content:encoded></item><item><title>PassWall2双栈无忧配置指南</title><link>https://dqtx.cc/posts/technical/pass/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/pass/</guid><pubDate>Tue, 17 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;在OpenWrt 路由器上部署科学上网工具时，许多用户都希望实现一套“最省心”的方案：既能彻底杜绝 DNS 泄露与污染，又能完美兼容 IPv4/IPv6 双栈环境，同时自带可靠的去广告功能，PassWall2 正是目前最接近这一理想状态的插件之一。它基于 Xray/Sing-box 核心，内置强大的分流引擎和 DNS 处理能力，经过合理配置后，能在不关闭 IPv6、不强制禁用 AAAA 记录的前提下，实现干净、稳定、高效的上网体验。&lt;/p&gt;
 &lt;p&gt;本文将详细分享一套经过实践验证的 PassWall2 配置流程，按照此方案配置完成后，你将获得：&lt;/p&gt;
