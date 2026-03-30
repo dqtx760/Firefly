@@ -62,45 +62,342 @@
 &lt;li&gt;⛓️ Web3教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867794661334761497#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;🛠️ 技术教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867808112450912266#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>效率神器！MFCMouseEffect</title><link>https://dqtx.cc/posts/software/mfcmouseeffect/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/mfcmouseeffect/</guid><pubDate>Fri, 27 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这是一款能灵活自定义鼠标动作、手势映射的跨平台工具&lt;/p&gt;
-&lt;p&gt;MFCMouseEffect，它不仅能实现鼠标点击、拖尾等炫酷的输入可视化特效，更能通过自动化映射打造专属的鼠标快捷操作体系，把桌面操作效率拉满，Windows 和 Mac 用户都能轻松上手！&lt;/p&gt;
-&lt;p&gt;![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Generated_Image_2lctye2lctye2lct (2).webp)&lt;/p&gt;
-&lt;h2&gt;1.关于软件下载&lt;/h2&gt;
-&lt;p&gt;支持Windows、Mac&lt;/p&gt;
-&lt;ul&gt;
+</content:encoded></item><item><title>Terminal 安装与美化配置指南</title><link>https://dqtx.cc/posts/software/terminal-/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/terminal-/</guid><pubDate>Mon, 30 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;运维工作中高频的命令行操作，向来因 Windows 原生命令提示符、PowerShell 的功能局限受掣肘。而 Windows Terminal 的推出完美解决这一痛点，它的多标签页设计是核心亮点：可以同时打开多个独立会话，像 Claude、OpenCode 这类工具都能在不同标签页中并行运行，无需频繁切换窗口；同时还能无缝集成 Command Prompt、PowerShell、WSL 等各类环境，大幅提升运维终端操作效率，是运维人员打造高效、美观、多功能终端环境的优质选择&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260306070237226.webp&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;一、下载与安装&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;下载地址：https://github.com/microsoft/terminal/releases&lt;/li&gt;
+&lt;li&gt;解压文件到指定安装目录（示例）：&lt;code&gt;D:\software\terminal-1.23.20211.0&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;（可选）将解压目录添加到&lt;strong&gt;系统环境变量&lt;/strong&gt;，实现全局快速调用&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;双击目录内的 &lt;code&gt;WindowsTerminal.exe&lt;/code&gt;，即可启动程序&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260306064800835.webp&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;二、核心配置（JSON 文件）&lt;/h2&gt;
+&lt;p&gt;打开 Windows Terminal，点击界面中的「设置」，选择「打开 JSON 文件」；&lt;/p&gt;
+&lt;p&gt;将原有配置内容全部替换为以下代码（其中背景图&lt;code&gt;meinv.png&lt;/code&gt;可添加&lt;code&gt;dqtx33&lt;/code&gt;领取，需自行修改背景图文件路径）：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{
+    &quot;$help&quot;: &quot;https://aka.ms/terminal-documentation&quot;,
+    &quot;$schema&quot;: &quot;https://aka.ms/terminal-profiles-schema&quot;,
+    &quot;actions&quot;: [],
+    &quot;alwaysOnTop&quot;: false,
+    &quot;alwaysShowNotificationIcon&quot;: true,
+    &quot;centerOnLaunch&quot;: true,
+    &quot;copyFormatting&quot;: &quot;none&quot;,
+    &quot;copyOnSelect&quot;: false,
+    &quot;defaultProfile&quot;: &quot;{0caa0dad-35be-5f56-a8ff-afceeeaa6101}&quot;,
+    &quot;initialCols&quot;: 90,
+    &quot;initialPosition&quot;: &quot;100,50&quot;,
+    &quot;initialRows&quot;: 26,
+    &quot;keybindings&quot;:
+    [
+        {
+            &quot;id&quot;: &quot;Terminal.CopyToClipboard&quot;,
+            &quot;keys&quot;: &quot;ctrl+c&quot;
+        },
+        {
+            &quot;id&quot;: &quot;Terminal.PasteFromClipboard&quot;,
+            &quot;keys&quot;: &quot;ctrl+v&quot;
+        },
+        {
+            &quot;id&quot;: &quot;Terminal.DuplicatePaneAuto&quot;,
+            &quot;keys&quot;: &quot;alt+shift+d&quot;
+        }
+    ],
+    &quot;language&quot;: &quot;zh-Hans&quot;,
+    &quot;launchMode&quot;: &quot;default&quot;,
+    &quot;newTabMenu&quot;:
+    [
+        {
+            &quot;type&quot;: &quot;remainingProfiles&quot;
+        }
+    ],
+    &quot;profiles&quot;:
+    {
+        &quot;defaults&quot;:
+        {
+            &quot;backgroundImage&quot;: &quot;D:/web3/meinv.png&quot;,
+            &quot;backgroundImageOpacity&quot;: 0.45,
+            &quot;colorScheme&quot;: &quot;One Half Light&quot;,
+            &quot;font&quot;:
+            {
+                &quot;face&quot;: &quot;AdwaitaMono Nerd Font Propo&quot;,
+                &quot;size&quot;: 13
+            },
+            &quot;foreground&quot;: &quot;#DCDFE4&quot;,
+            &quot;intenseTextStyle&quot;: &quot;bold&quot;,
+            &quot;opacity&quot;: 35,
+            &quot;useAcrylic&quot;: true
+        },
+        &quot;list&quot;:
+        [
+            {
+                &quot;commandline&quot;: &quot;powershell.exe -nologo&quot;,
+                &quot;guid&quot;: &quot;{61c54bbd-c2c6-5271-96e7-009a87ff44bf}&quot;,
+                &quot;hidden&quot;: false,
+                &quot;name&quot;: &quot;Windows PowerShell&quot;
+            },
+            {
+                &quot;colorScheme&quot;: &quot;Solarized Dark&quot;,
+                &quot;commandline&quot;: &quot;powershell.exe -nologo&quot;,
+                &quot;experimental.retroTerminalEffect&quot;: false,
+                &quot;font&quot;:
+                {
+                    &quot;cellHeight&quot;: &quot;1.1&quot;,
+                    &quot;size&quot;: 13
+                },
+                &quot;guid&quot;: &quot;{0caa0dad-35be-5f56-a8ff-afceeeaa6101}&quot;,
+                &quot;hidden&quot;: false,
+                &quot;name&quot;: &quot;\u547d\u4ee4\u63d0\u793a\u7b26&quot;
+            },
+            {
+                &quot;guid&quot;: &quot;{b453ae62-4e3d-5e58-b989-0a998ec441b8}&quot;,
+                &quot;hidden&quot;: false,
+                &quot;name&quot;: &quot;Azure Cloud Shell&quot;,
+                &quot;source&quot;: &quot;Windows.Terminal.Azure&quot;
+            }
+        ]
+    },
+    &quot;schemes&quot;: [],
+    &quot;themes&quot;: []
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;三、集成右键菜单（快速打开）&lt;/h2&gt;
+&lt;p&gt;将 Windows Terminal 添加到鼠标右键菜单，可实现任意目录下一键打开终端，大幅提升操作便捷性，步骤如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;新建文本文档，粘贴以下注册表内容 &lt;strong&gt;（需将路径修改为你的 Terminal 实际安装路径）&lt;/strong&gt;：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\WindowsTerminal]
+@=&quot;在此处打开Terminal&quot;
+&quot;Icon&quot;=&quot;D:\\software\\terminal-1.23.20211.0\\WindowsTerminal.exe,0&quot;
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\WindowsTerminal\command]
+@=&quot;D:\\software\\terminal-1.23.20211.0\\WindowsTerminal.exe -d .&quot;
+
+[HKEY_CLASSES_ROOT\Directory\shell\WindowsTerminal]
+@=&quot;在此处打开Terminal&quot;
+&quot;Icon&quot;=&quot;D:\\software\\terminal-1.23.20211.0\\WindowsTerminal.exe,0&quot;
+
+[HKEY_CLASSES_ROOT\Directory\shell\WindowsTerminal\command]
+@=&quot;D:\\software\\terminal-1.23.20211.0\\WindowsTerminal.exe -d \&quot;%1\&quot;&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;github：https://github.com/sqmw/MFCMouseEffect/releases/tag/v1.3.1&lt;/p&gt;
+&lt;p&gt;点击文本文档「另存为」，编码选择&lt;strong&gt;ANSI&lt;/strong&gt;，文件后缀修改为&lt;code&gt;.reg&lt;/code&gt;；&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;夸克网盘：https://pan.quark.cn/s/68ccc3badc8f&lt;/p&gt;
+&lt;p&gt;双击保存后的 reg 文件，依次点击「是」「确定」，完成注册表导入即可生效。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;四、配置美化主题（Oh My Posh）&lt;/h2&gt;
+&lt;h3&gt;1. 下载安装&lt;/h3&gt;
+&lt;p&gt;下载地址：&lt;a href=&quot;https://github.com/JanDeDobbeleer/oh-my-posh/releases&quot;&gt;Oh My Posh 官方发布页&lt;/a&gt;，根据自身系统选择对应安装包完成安装。&lt;/p&gt;
+&lt;h3&gt;2. 配置系统变量&lt;/h3&gt;
+&lt;p&gt;将 Oh My Posh 的 bin 目录路径（示例：&lt;code&gt;C:\Users\Administrator\AppData\Local\Programs\oh-my-posh\bin&lt;/code&gt;）添加到系统环境变量，确保全局可调用。&lt;/p&gt;
+&lt;h3&gt;3. 配置主题生效&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;按下&lt;code&gt;win+R&lt;/code&gt;，输入&lt;code&gt;wt&lt;/code&gt;打开 Windows Terminal；&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;迅雷云盘：https://pan.xunlei.com/s/VOoeiBouKMC8ud2FUetBs7VIA1?pwd=b2ky&lt;/p&gt;
+&lt;p&gt;在终端中输入以下命令，创建并编辑 PowerShell 配置文件：&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;安装好软件之后呢，软件回进入系统托盘图，点击软件右键-设置，点击后它会自动打开网页，此时你回看到左侧一般、鼠标伴宠、光标特效、&lt;strong&gt;鼠标/键盘指示器&lt;/strong&gt;、&lt;strong&gt;自动化映射&lt;/strong&gt;、插件管理，这六个模块&lt;/p&gt;
-&lt;h2&gt;2.鼠标/键盘指示器&lt;/h2&gt;
-&lt;p&gt;启用指示器&amp;amp;启用键盘指这个两个我都关掉了d&lt;/p&gt;
-&lt;p&gt;​&lt;/p&gt;
-&lt;h2&gt;3.自动化映射&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;自动化映射分为风鼠标动作映射鼠标动作映射手势映射&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;notepad $PROFILE
+&lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
-&lt;li&gt;鼠标动作映射&lt;/li&gt;
+&lt;li&gt;在打开的记事本中，粘贴以下配置代码，保存并关闭文件：&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;就是鼠标左键单右键中键滚轮向上滚轮向下代替一个快捷键&lt;/p&gt;
-&lt;p&gt;我只设置一个中间点击映射快捷键Alt+D（打开豆包）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;oh-my-posh init pwsh --config $env:POSH_THEMES_PATH\M365Princess.omp.json | Invoke-Expression
+&lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
-&lt;li&gt;手势映射&lt;/li&gt;
+&lt;li&gt;重启 Windows Terminal，主题即可生效。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;插一嘴：我浏览器用的手势映射插件：FlowMouse&lt;/p&gt;
-&lt;p&gt;你可以理解选中一个文件的处理快捷键，比如高频使用的复制粘贴删除快捷键，我的配置：&lt;/p&gt;
+&lt;h2&gt;五、常见问题&lt;/h2&gt;
+&lt;h3&gt;1. 如何隐藏cmd/ PowerShell启动提示信息&lt;/h3&gt;
+&lt;p&gt;在Terminal设置-配置文件，分别在命令提示符/PowerShel&lt;/p&gt;
+&lt;p&gt;命令行输入下面命令，可隐藏默认的启动提示信息，让终端界面更简洁。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;powershell.exe -nologo
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260306070410108.webp&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;2.  如何安装专属字体（AdwaitaMono Nerd Font）&lt;/h3&gt;
+&lt;p&gt;终端配置中需用到 AdwaitaMono Nerd Font 字体，下载地址：&lt;a href=&quot;https://www.nerdfonts.com/font-downloads?utm_source=chatgpt.com&quot;&gt;Nerd Fonts 官方下载页&lt;/a&gt;，下载后解压安装即可。&lt;/p&gt;
+&lt;h3&gt;3. 代码自动补全配置&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;打开 Windows Terminal&lt;/li&gt;
+&lt;li&gt;输入这 2 条命令（复制粘贴）：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;Install-Module PSReadLine -Force -SkipPublisherCheck
+notepad $PROFILE
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;在打开的文件里粘贴这段：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;Set-PSReadLineOption -PredictionSource History
+Set-PSReadLineOption -PredictionViewStyle InlineView
+Set-PSReadLineOption -EditMode Windows
+Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;手动添加 Git Bash 配置&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Windows Terminal → 下拉箭头 →「设置」→「添加新配置文件」→「新建空配置文件」&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;左键拖拽文件拖拽·向上=复制（映射快捷键ctrl+c）&lt;/p&gt;
-&lt;p&gt;左键拖拽文件·向下=粘贴（映射快捷键ctrl+V）&lt;/p&gt;
-&lt;p&gt;左键拖拽文件·W形=删除（映射快捷键Delete）&lt;/p&gt;
+&lt;p&gt;填写：&lt;/p&gt;
+&lt;p&gt;名称：Git Bash&lt;/p&gt;
+&lt;p&gt;命令行：C:\Program Files\Git\bin\bash.exe --login -i&lt;/p&gt;
+&lt;p&gt;起始目录：%USERPROFILE%&lt;/p&gt;
+&lt;p&gt;图标：C:\Program Files\Git\mingw64\share\git\git-for-windows.ico&lt;/p&gt;
+&lt;p&gt;保存，重启终端即可。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;作为一款集&lt;strong&gt;输入反馈、可视化、自动化映射&lt;/strong&gt;于一体的跨平台工具，MFCMouseEffect 远不止快捷键映射这一个亮点，它还支持炫酷的光标特效、可扩展的 WASM 插件、鼠标伴宠等趣味功能。&lt;/p&gt;
-&lt;p&gt;且开源免费、支持自定义扩展，无论是普通用户想提升桌面操作效率，还是开发者想定制专属桌面交互效果，都能满足需求，目前该项目还在持续更新迭代。&lt;/p&gt;
+&lt;p&gt;**PS.**远程服务微信：dqtx33  付费社群：&lt;a href=&quot;https://t.zsxq.com/d4zSX&quot;&gt;点此报名&lt;/a&gt;&lt;/p&gt;
+</content:encoded></item><item><title>Newtype-os完整工作流指南</title><link>https://dqtx.cc/posts/aihacks/newtype-os/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/newtype-os/</guid><pubDate>Sun, 29 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你有没有过这样的经历:&lt;/p&gt;
+&lt;p&gt;想写一篇深度文章，但光是调研就花了一整天？&lt;/p&gt;
+&lt;p&gt;网上资料查了一堆，结果自己先搞乱了？&lt;/p&gt;
+&lt;p&gt;写完之后自己都不想看第二遍，更别说发出来了？&lt;/p&gt;
+&lt;p&gt;我一直觉得，AI 时代最缺的已经不是「能帮你写东西的工具」了，而是&lt;strong&gt;一套完整的工作流&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;直到我发现了 &lt;strong&gt;newtype-os&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://xodnytdcaw.feishu.cn/space/api/box/stream/download/asynccode/?code=NjJhZTJjMGFkM2ZlNjM5MmE4NTQ2YzMyZjhjNWUzMzNfY3NaRHRHMXJaRElyTWFyQkJnc2VQa1FVTTZuOUVjYk5fVG9rZW46RUg2eWJ0dXk5b3hNdEV4UmVBSWN4SGpobmplXzE3NzQ4NTMyMjU6MTc3NDg1NjgyNV9WNA&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;1.它是什么？&lt;/h2&gt;
+&lt;p&gt;简单说，它是一个&lt;strong&gt;多智能体协作系统&lt;/strong&gt;，内置 8 个 AI Agent，相当于给你的终端装了一整个内容团队：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Chief（主编）&lt;/strong&gt;：你只需要跟它说话，它来协调一切&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Deputy（副主编）&lt;/strong&gt;：执行层，调度下面的专家&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Researcher（研究员）&lt;/strong&gt;：帮你调研、找资料&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Fact-Checker（事实核查员）&lt;/strong&gt;：验证信息来源&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Archivist（档案员）&lt;/strong&gt;：从你的知识库里检索内容&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Extractor（提取师）&lt;/strong&gt;：把 PDF、网页、图片转成 Markdown&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Writer（写手）&lt;/strong&gt;：把素材变成初稿&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Editor（编辑）：&lt;/strong&gt; 帮你改稿、润色&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;同时项目深度集成多款 MCP 实用工具，核心亮点是打通微信生态，复用此前拆解的 WeClaw 项目能力，支持移动端远程操控、随时发指令。&lt;/p&gt;
+&lt;p&gt;全程只需和Chief 主编用自然语言提需求，无需手动操作、不用分步对接，系统会自动串联所有 Agent 分工协作，一站式完成从调研、取材、撰稿到精修的全流程创作。&lt;/p&gt;
+&lt;h2&gt;2.能做什么？&lt;/h2&gt;
+&lt;p&gt;举几个具体例子：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;场景 1：写一篇深度文章&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; 我想写一篇关于 AI Agent 架构趋势的文章
+
+Chief：好的，我帮你调研一下最新的动态...
+[自动调用 Researcher 调研]
+[自动调用 Fact-Checker 验证]
+[自动调用 Writer 写作]
+[自动调用 Editor 润色]
+
+完成！生成了完整的文章草稿
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;一条命令，从调研到成稿，全部搞定。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;场景 2：快速查资料&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; 帮我查一下 MCP 协议最近有什么新动态
+
+Chief：[调用 Researcher 搜索] [调用 Fact-Checker 验证]
+找到了 3 篇最新文章，主要内容是...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;场景 3：管理知识库&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; 之前我写的关于 xxx 的笔记在哪？
+
+Chief：[调用 Archivist 搜索你的 Obsidian 笔记]
+找到了，在 xx 文件里，需要我调取出来吗？
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;场景 4：提取网页内容&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; 把这个 PDF 的内容提取出来
+
+Chief：[调用 Extractor]
+已提取完成，保存在 xxx.md
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;场景 5：微信远程控制&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;装好 WeChat 集成后，直接在微信上发消息给机器人， Chief 就会帮你干活。&lt;/p&gt;
+&lt;h2&gt;3.有什么内置技能？&lt;/h2&gt;
+&lt;p&gt;系统还自带了一些「专业技能」：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Super Analyst&lt;/strong&gt;：12 种分析框架（SWOT、波特五力、第一性原理等）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Super Writer&lt;/strong&gt;：6 种写作方法&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Super Fact-Checker&lt;/strong&gt;：系统化事实核查&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Super Editor&lt;/strong&gt;：4 层改稿（结构→段落→句子→词）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Super Obsidian&lt;/strong&gt;：Obsidian 笔记管理&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;需要用的时候，Chief 会自动加载相应的技能。&lt;/p&gt;
+&lt;h2&gt;4.怎么安装？&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;安装命令&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm install -g @newtype-os/cli
+nt        # 启动后直接说话
+nt inut   #初始化配置，注入技能到其他 AI工具
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&quot;https://xodnytdcaw.feishu.cn/space/api/box/stream/download/asynccode/?code=OTU4NjBjMzc5ODM0NzgwOTk2MzVhMmNiNWI4ZDFkMjJfVmdtNDlIeDJ6Q2VFNVRxMXZUcE8zbmJORzVscHFmMENfVG9rZW46Um5KdWJ0Rk1jb0lwa0J4SEk0QWM5VXptbmJjXzE3NzQ4NTMyMjU6MTc3NDg1NjgyNV9WNA&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;附相关命令：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/connect        #连接模型供应商
+/agent-models   #Agent模型分配
+/init-deep      #ai读取仓库所有文章 创建知识文档
+/init-sou       #创建定义Chief性格（表人格）的soul.md文档
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;5.适合谁？&lt;/h2&gt;
+&lt;p&gt;✅ 适合人群&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;频繁写文章、做内容的人&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;需要调研+写作完整流程的&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;用 Obsidian 管理知识的&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;想用微信远程指挥的&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;❌ 不适合人群&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;偶尔写一次的&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;只想要简单问答的&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;不用知识管理工具的&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;只需要基础 AI 聊天的&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;6.我的感受&lt;/h2&gt;
+&lt;p&gt;用了一段时间，最大的感受是：&lt;strong&gt;终于可以把「创作」这件事，真正变成一件只需要动嘴不动手的事。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;以前写一篇文章，要自己查资料、自己整理、自己写、自己改，来来回回折腾好几遍。现在只需要告诉 Chief 要写什么，它会把后面的事情全部安排好。&lt;/p&gt;
+&lt;p&gt;当然，它不是完美的。生成的内容还是需要自己过一遍，核心观点还是需要自己把控。但至少，&lt;strong&gt;那些繁琐的体力活，有人帮你干了。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;PS.大强远程技术支持：742112.xyz&lt;/p&gt;
+&lt;p&gt;我的付费she&apos;q&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/%E6%98%9F%E7%90%83%E4%BC%98%E6%83%A0%E5%88%B8.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 </content:encoded></item><item><title>Claude联网神器：Web Access</title><link>https://dqtx.cc/posts/aihacks/web-access/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/web-access/</guid><pubDate>Thu, 26 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;前言&lt;/h2&gt;
 &lt;p&gt;过去的 AI 联网超 &quot;死板&quot;：要么用搜索引擎瞎找非公开内容，要么打不开需要登录的动态网页，还得单独给 AI 登各个平台，开多个网页就卡，踩过的坑下次还踩，甚至会跟人抢浏览器控制权，用着特别费劲。&lt;/p&gt;
 &lt;p&gt;最近发现了 &lt;a href=&quot;https://github.com/eze-is/web-access&quot;&gt;Web Access&lt;/a&gt; 这个 Skill，能把 AI Agent 的联网、操作浏览器的能力直接拉满。它用的是&lt;strong&gt;你自己已经登录的 Chrome&lt;/strong&gt;，不管是查信息、扒内容，还是交互操作，都能自动搞定，兼容 Claude Code、OpenClaw 等主流 AI Agent，普通人也能轻松上手。&lt;/p&gt;
@@ -570,11 +867,58 @@ weclaw start
 能查询到路径后，再执行 &lt;code&gt;weclaw start&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;B.&lt;strong&gt;默认使用 Codex 而非 Claude&lt;/strong&gt;
 打开配置文件 &lt;code&gt;~/.weclaw/config.json&lt;/code&gt;，将 &lt;code&gt;default_agent&lt;/code&gt; 的值修改为 &lt;code&gt;codex&lt;/code&gt;，保存后重启 &lt;code&gt;weclaw start&lt;/code&gt; 生效。&lt;/p&gt;
+&lt;p&gt;C,排除命令&lt;/p&gt;
+&lt;p&gt;查看详细日志:  tail -100 ~/.weclaw/weclaw.log&lt;/p&gt;
+&lt;p&gt;查看Agent 进程状态:  weclaw status&lt;/p&gt;
+&lt;p&gt;检查系统资源:&lt;/p&gt;
+&lt;p&gt;free -h  # 内存
+dmesg | grep -i kill  # 是否有 OOM kill&lt;/p&gt;
 &lt;h2&gt;5.类似的项目&lt;/h2&gt;
 &lt;p&gt;https://github.com/m1heng/claude-plugin-weixin&lt;/p&gt;
 &lt;p&gt;https://github.com/cyhhao/vibe-remote&lt;/p&gt;
 &lt;p&gt;https://github.com/qufei1993/cc-weixin&lt;/p&gt;
 &lt;p&gt;PS.如需远程配置，联系&lt;strong&gt;微信：dqtx33&lt;/strong&gt;  远程客户端下载网址：&lt;a href=&quot;742112.xyz&quot;&gt;742112.xyz&lt;/a&gt;&lt;/p&gt;
+</content:encoded></item><item><title>效率神器！MFCMouseEffect</title><link>https://dqtx.cc/posts/software/mfcmouseeffect/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/mfcmouseeffect/</guid><pubDate>Thu, 19 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这是一款能灵活自定义鼠标动作、手势映射的跨平台工具&lt;/p&gt;
+&lt;p&gt;MFCMouseEffect，它不仅能实现鼠标点击、拖尾等炫酷的输入可视化特效，更能通过自动化映射打造专属的鼠标快捷操作体系，把桌面操作效率拉满，Windows 和 Mac 用户都能轻松上手！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/shub.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;1.软件下载&lt;/h2&gt;
+&lt;p&gt;支持Windows、Mac&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;github：https://github.com/sqmw/MFCMouseEffect/releases/tag/v1.3.1&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;夸克网盘：https://pan.quark.cn/s/68ccc3badc8f&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;迅雷云盘：https://pan.xunlei.com/s/VOoeiBouKMC8ud2FUetBs7VIA1?pwd=b2ky&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;安装好软件之后呢，软件回进入系统托盘图，点击软件右键-设置，点击后它会自动打开网页，此时你回看到左侧一般、鼠标伴宠、光标特效、&lt;strong&gt;鼠标/键盘指示器&lt;/strong&gt;、&lt;strong&gt;自动化映射&lt;/strong&gt;、插件管理，这六个模块&lt;/p&gt;
+&lt;h2&gt;2.鼠标/键盘指示器&lt;/h2&gt;
+&lt;p&gt;启用指示器&amp;amp;启用键盘指这个两个我都关掉了d&lt;/p&gt;
+&lt;p&gt;​&lt;/p&gt;
+&lt;h2&gt;3.自动化映射&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;自动化映射分为风鼠标动作映射鼠标动作映射手势映射&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;鼠标动作映射&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;就是鼠标左键单右键中键滚轮向上滚轮向下代替一个快捷键&lt;/p&gt;
+&lt;p&gt;我只设置一个中间点击映射快捷键Alt+D（打开豆包）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;手势映射&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;插一嘴：我浏览器用的手势映射插件：FlowMouse&lt;/p&gt;
+&lt;p&gt;你可以理解选中一个文件的处理快捷键，比如高频使用的复制粘贴删除快捷键，我的配置：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;左键拖拽文件拖拽·向上=复制（映射快捷键ctrl+c）&lt;/p&gt;
+&lt;p&gt;左键拖拽文件·向下=粘贴（映射快捷键ctrl+V）&lt;/p&gt;
+&lt;p&gt;左键拖拽文件·W形=删除（映射快捷键Delete）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;作为一款集&lt;strong&gt;输入反馈、可视化、自动化映射&lt;/strong&gt;于一体的跨平台工具，MFCMouseEffect 远不止快捷键映射这一个亮点，它还支持炫酷的光标特效、可扩展的 WASM 插件、鼠标伴宠等趣味功能。&lt;/p&gt;
+&lt;p&gt;且开源免费、支持自定义扩展，无论是普通用户想提升桌面操作效率，还是开发者想定制专属桌面交互效果，都能满足需求，目前该项目还在持续更新迭代。&lt;/p&gt;
+&lt;p&gt;PS.以上就是本期内容，安装使用有任何问题，我提供一对一远程服务，手把手帮你解决，高效上手不踩坑。咱们下期见！&lt;/p&gt;
+&lt;p&gt;大强远程技术支持：742112.xyz&lt;/p&gt;
 </content:encoded></item><item><title>PassWall2双栈无忧配置指南</title><link>https://dqtx.cc/posts/technical/pass/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/pass/</guid><pubDate>Tue, 17 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;在OpenWrt 路由器上部署科学上网工具时，许多用户都希望实现一套“最省心”的方案：既能彻底杜绝 DNS 泄露与污染，又能完美兼容 IPv4/IPv6 双栈环境，同时自带可靠的去广告功能，PassWall2 正是目前最接近这一理想状态的插件之一。它基于 Xray/Sing-box 核心，内置强大的分流引擎和 DNS 处理能力，经过合理配置后，能在不关闭 IPv6、不强制禁用 AAAA 记录的前提下，实现干净、稳定、高效的上网体验。&lt;/p&gt;
 &lt;p&gt;本文将详细分享一套经过实践验证的 PassWall2 配置流程，按照此方案配置完成后，你将获得：&lt;/p&gt;
 &lt;ul&gt;
@@ -1464,211 +1808,6 @@ https://xodnytdcaw.feishu.cn/wiki/TTedwAniUiXTm9kYwb6cDJL0nsf?fromScene=spaceOve
 &lt;p&gt;如果觉得这篇教程对你有帮助，别忘了&lt;strong&gt;点赞+收藏+转发&lt;/strong&gt;三连呀！关注我，后续分享更多实用技巧、效率工具干货，下次见～ 👋&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;大强远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260306064028188.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-</content:encoded></item><item><title>Terminal 安装与美化配置指南</title><link>https://dqtx.cc/posts/software/terminal-/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/terminal-/</guid><pubDate>Sun, 15 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;运维工作中高频的命令行操作，向来因 Windows 原生命令提示符、PowerShell 的功能局限受掣肘。而 Windows Terminal 的推出完美解决这一痛点，它的多标签页设计是核心亮点：可以同时打开多个独立会话，像 Claude、OpenCode 这类工具都能在不同标签页中并行运行，无需频繁切换窗口；同时还能无缝集成 Command Prompt、PowerShell、WSL 等各类环境，大幅提升运维终端操作效率，是运维人员打造高效、美观、多功能终端环境的优质选择&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260306070237226.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;一、下载与安装&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;下载地址：https://github.com/microsoft/terminal/releases&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;解压文件到指定安装目录（示例）：&lt;code&gt;D:\software\terminal-1.23.20211.0&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;（可选）将解压目录添加到&lt;strong&gt;系统环境变量&lt;/strong&gt;，实现全局快速调用&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;双击目录内的 &lt;code&gt;WindowsTerminal.exe&lt;/code&gt;，即可启动程序&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260306064800835.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;二、核心配置（JSON 文件）&lt;/h2&gt;
-&lt;p&gt;打开 Windows Terminal，点击界面中的「设置」，选择「打开 JSON 文件」；&lt;/p&gt;
-&lt;p&gt;将原有配置内容全部替换为以下代码（其中背景图&lt;code&gt;meinv.png&lt;/code&gt;可添加&lt;code&gt;dqtx33&lt;/code&gt;领取，需自行修改背景图文件路径）：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;{
-    &quot;$help&quot;: &quot;https://aka.ms/terminal-documentation&quot;,
-    &quot;$schema&quot;: &quot;https://aka.ms/terminal-profiles-schema&quot;,
-    &quot;actions&quot;: [],
-    &quot;alwaysOnTop&quot;: false,
-    &quot;alwaysShowNotificationIcon&quot;: true,
-    &quot;centerOnLaunch&quot;: true,
-    &quot;copyFormatting&quot;: &quot;none&quot;,
-    &quot;copyOnSelect&quot;: false,
-    &quot;defaultProfile&quot;: &quot;{0caa0dad-35be-5f56-a8ff-afceeeaa6101}&quot;,
-    &quot;initialCols&quot;: 90,
-    &quot;initialPosition&quot;: &quot;100,50&quot;,
-    &quot;initialRows&quot;: 26,
-    &quot;keybindings&quot;: 
-    [
-        {
-            &quot;id&quot;: &quot;Terminal.CopyToClipboard&quot;,
-            &quot;keys&quot;: &quot;ctrl+c&quot;
-        },
-        {
-            &quot;id&quot;: &quot;Terminal.PasteFromClipboard&quot;,
-            &quot;keys&quot;: &quot;ctrl+v&quot;
-        },
-        {
-            &quot;id&quot;: &quot;Terminal.DuplicatePaneAuto&quot;,
-            &quot;keys&quot;: &quot;alt+shift+d&quot;
-        }
-    ],
-    &quot;language&quot;: &quot;zh-Hans&quot;,
-    &quot;launchMode&quot;: &quot;default&quot;,
-    &quot;newTabMenu&quot;: 
-    [
-        {
-            &quot;type&quot;: &quot;remainingProfiles&quot;
-        }
-    ],
-    &quot;profiles&quot;: 
-    {
-        &quot;defaults&quot;: 
-        {
-            &quot;backgroundImage&quot;: &quot;D:/web3/meinv.png&quot;,
-            &quot;backgroundImageOpacity&quot;: 0.45,
-            &quot;colorScheme&quot;: &quot;One Half Light&quot;,
-            &quot;font&quot;: 
-            {
-                &quot;face&quot;: &quot;AdwaitaMono Nerd Font Propo&quot;,
-                &quot;size&quot;: 13
-            },
-            &quot;foreground&quot;: &quot;#DCDFE4&quot;,
-            &quot;intenseTextStyle&quot;: &quot;bold&quot;,
-            &quot;opacity&quot;: 35,
-            &quot;useAcrylic&quot;: true
-        },
-        &quot;list&quot;: 
-        [
-            {
-                &quot;commandline&quot;: &quot;powershell.exe -nologo&quot;,
-                &quot;guid&quot;: &quot;{61c54bbd-c2c6-5271-96e7-009a87ff44bf}&quot;,
-                &quot;hidden&quot;: false,
-                &quot;name&quot;: &quot;Windows PowerShell&quot;
-            },
-            {
-                &quot;colorScheme&quot;: &quot;Solarized Dark&quot;,
-                &quot;commandline&quot;: &quot;powershell.exe -nologo&quot;,
-                &quot;experimental.retroTerminalEffect&quot;: false,
-                &quot;font&quot;: 
-                {
-                    &quot;cellHeight&quot;: &quot;1.1&quot;,
-                    &quot;size&quot;: 13
-                },
-                &quot;guid&quot;: &quot;{0caa0dad-35be-5f56-a8ff-afceeeaa6101}&quot;,
-                &quot;hidden&quot;: false,
-                &quot;name&quot;: &quot;\u547d\u4ee4\u63d0\u793a\u7b26&quot;
-            },
-            {
-                &quot;guid&quot;: &quot;{b453ae62-4e3d-5e58-b989-0a998ec441b8}&quot;,
-                &quot;hidden&quot;: false,
-                &quot;name&quot;: &quot;Azure Cloud Shell&quot;,
-                &quot;source&quot;: &quot;Windows.Terminal.Azure&quot;
-            }
-        ]
-    },
-    &quot;schemes&quot;: [],
-    &quot;themes&quot;: []
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;三、集成右键菜单（快速打开）&lt;/h2&gt;
-&lt;p&gt;将 Windows Terminal 添加到鼠标右键菜单，可实现任意目录下一键打开终端，大幅提升操作便捷性，步骤如下：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;新建文本文档，粘贴以下注册表内容 &lt;strong&gt;（需将路径修改为你的 Terminal 实际安装路径）&lt;/strong&gt;：&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;Windows Registry Editor Version 5.00
-
-[HKEY_CLASSES_ROOT\Directory\Background\shell\WindowsTerminal]
-@=&quot;在此处打开Terminal&quot;
-&quot;Icon&quot;=&quot;D:\\software\\terminal-1.23.20211.0\\WindowsTerminal.exe,0&quot;
-
-[HKEY_CLASSES_ROOT\Directory\Background\shell\WindowsTerminal\command]
-@=&quot;D:\\software\\terminal-1.23.20211.0\\WindowsTerminal.exe -d .&quot;
-
-[HKEY_CLASSES_ROOT\Directory\shell\WindowsTerminal]
-@=&quot;在此处打开Terminal&quot;
-&quot;Icon&quot;=&quot;D:\\software\\terminal-1.23.20211.0\\WindowsTerminal.exe,0&quot;
-
-[HKEY_CLASSES_ROOT\Directory\shell\WindowsTerminal\command]
-@=&quot;D:\\software\\terminal-1.23.20211.0\\WindowsTerminal.exe -d \&quot;%1\&quot;&quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;点击文本文档「另存为」，编码选择&lt;strong&gt;ANSI&lt;/strong&gt;，文件后缀修改为&lt;code&gt;.reg&lt;/code&gt;；&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;双击保存后的 reg 文件，依次点击「是」「确定」，完成注册表导入即可生效。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2&gt;四、配置美化主题（Oh My Posh）&lt;/h2&gt;
-&lt;h3&gt;1. 下载安装&lt;/h3&gt;
-&lt;p&gt;下载地址：&lt;a href=&quot;https://github.com/JanDeDobbeleer/oh-my-posh/releases&quot;&gt;Oh My Posh 官方发布页&lt;/a&gt;，根据自身系统选择对应安装包完成安装。&lt;/p&gt;
-&lt;h3&gt;2. 配置系统变量&lt;/h3&gt;
-&lt;p&gt;将 Oh My Posh 的 bin 目录路径（示例：&lt;code&gt;C:\Users\Administrator\AppData\Local\Programs\oh-my-posh\bin&lt;/code&gt;）添加到系统环境变量，确保全局可调用。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;h3&gt;配置主题生效&lt;/h3&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;按下&lt;code&gt;win+R&lt;/code&gt;，输入&lt;code&gt;wt&lt;/code&gt;打开 Windows Terminal；&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;在终端中输入以下命令，创建并编辑 PowerShell 配置文件：&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;notepad $PROFILE
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol&gt;
-&lt;li&gt;在打开的记事本中，粘贴以下配置代码，保存并关闭文件：&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;oh-my-posh init pwsh --config $env:POSH_THEMES_PATH\M365Princess.omp.json | Invoke-Expression
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol&gt;
-&lt;li&gt;重启 Windows Terminal，主题即可生效。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2&gt;五、常见问题&lt;/h2&gt;
-&lt;h3&gt;如何隐藏cmd/ PowerShell启动提示信息&lt;/h3&gt;
-&lt;p&gt;在Terminal设置-配置文件，分别在命令提示符/PowerShel&lt;/p&gt;
-&lt;p&gt;命令行输入下面命令，可隐藏默认的启动提示信息，让终端界面更简洁。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;powershell.exe -nologo
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260306070410108.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;如何安装专属字体（AdwaitaMono Nerd Font）&lt;/h3&gt;
-&lt;p&gt;终端配置中需用到 AdwaitaMono Nerd Font 字体，下载地址：&lt;a href=&quot;https://www.nerdfonts.com/font-downloads?utm_source=chatgpt.com&quot;&gt;Nerd Fonts 官方下载页&lt;/a&gt;，下载后解压安装即可。&lt;/p&gt;
-&lt;h3&gt;代码自动补全&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;打开 Windows Terminal&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;输入这 2 条命令（复制粘贴）：&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;Install-Module PSReadLine -Force -SkipPublisherCheck
-notepad $PROFILE
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol&gt;
-&lt;li&gt;在打开的文件里粘贴这段：&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;Set-PSReadLineOption -PredictionSource History
-Set-PSReadLineOption -PredictionViewStyle InlineView
-Set-PSReadLineOption -EditMode Windows
-Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;以上，既然看到这里了，&lt;strong&gt;如果觉得教程对你有帮助&lt;/strong&gt;，随手&amp;lt;u&amp;gt;点个赞、收藏、转发&amp;lt;/u&amp;gt;三连吧！有任何问题，欢迎在&lt;strong&gt;留言区&lt;/strong&gt;评论，我会逐一回复。👏👏&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;🛠️ 大远程技术支持&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;如果你在安装、配置或使用中遇到任何问题，不想自己折腾&lt;/p&gt;
-&lt;p&gt;随时可以找我提供 &lt;strong&gt;1 对 1 远程技术支持&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;软件安装 / 激活 / 配置&lt;/li&gt;
-&lt;li&gt;系统重装 / 优化&lt;/li&gt;
-&lt;li&gt;疑难报错排查&lt;/li&gt;
-&lt;li&gt;网盘挂载 / 客户端编译&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;👉 远程客户端下载 / 服务说明：&lt;a href=&quot;742112.xyz&quot;&gt;742112.xyz&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;🚀 &lt;strong&gt;关于的知识星球&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;为了帮你节省更多时间，我把私藏的软件安装包、激活工具、效率工作流和独家教程，都整理进了我的知识星球「&amp;lt;u&amp;gt;大强・效率空间站&amp;lt;/u&amp;gt;」：68元/年，承包你一整年的效率提升。👇 微信扫码：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260306064028188.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 </content:encoded></item><item><title>Happy：给Claude一双翅膀</title><link>https://dqtx.cc/posts/aihacks/cc-happy/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/cc-happy/</guid><pubDate>Sat, 14 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;我之前用AI编程一直特别拧巴：Claude Code明明能自己干活，可我必须守在电脑前，它每走一步都要等我确认才能继续。直到我用上了 Happy，它直接把电脑上的 Claude Code 实时映射到手机，不把代码文件上传云端，数据全程端到端加密，不用经过第三方服务器，既能随时随地查看和控制，安全感也拉满，彻底摆脱了必须坐在电脑前的束缚。&lt;/p&gt;
 &lt;h2&gt;什么是Happy&lt;/h2&gt;
 &lt;p&gt;一个让你用手机远程控制和实时查看电脑上Claude或Codex编程过程的工具。它通过将电脑上的 Claude Code 或 Codex 实时映射到手机，解决了需要守在电脑前被动等待的痛点，它让用户从“必须坐在电脑前等待指令”的束缚中解放出来，可以随时随地了解 AI 的工作进展并能随时介入，实现了“无需一直盯着，但一切尽在掌握”的流畅协作体验。&lt;/p&gt;
@@ -2270,15 +2409,6 @@ source ~/catkin_ws/devel/setup.bash
 &lt;p&gt;下载地址：https://workany.ai/zh&lt;/p&gt;
 &lt;p&gt;如果觉得这篇教程对你有帮助，别忘了&lt;strong&gt;点赞+收藏+转发&lt;/strong&gt;三连呀！关注我，后续分享更多实用技巧、效率工具干货，下次见～ 👋&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;大强远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-</content:encoded></item><item><title>闪电说：端侧AI语音输入法</title><link>https://dqtx.cc/posts/software/%E9%97%AA%E7%94%B5%E8%AF%B4%E7%AB%AF%E4%BE%A7ai%E8%AF%AD%E9%9F%B3%E8%BE%93%E5%85%A5%E6%B3%95/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E9%97%AA%E7%94%B5%E8%AF%B4%E7%AB%AF%E4%BE%A7ai%E8%AF%AD%E9%9F%B3%E8%BE%93%E5%85%A5%E6%B3%95/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;闪电说是由武汉团队打造的&lt;strong&gt;国产 AI 语音输入法&lt;/strong&gt;，前身为代体输入法，以 “端侧本地处理” 为核心特色，实现毫秒级语音转文字体验。它打破传统云端语音输入的延迟与隐私痛点，通过本地 AI 引擎构建 “即说即显、思维同步” 的输入模式，兼容 Windows 和 macOS 全平台，是一款完全免费的系统级输入工具，被观猹平台评为 8.6 分高分产品。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260204111254949.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;上手指南&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;下载安装&lt;/strong&gt;：访问官网（https://shandianshuo.cn），根据系统选择 Windows 或 macOS 版本下载安装；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;权限配置&lt;/strong&gt;：授予麦克风权限，测试音频输入是否正常；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;个性化设置&lt;/strong&gt;：自定义激活快捷键、默认语言、输入模式等基础配置；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;即时使用&lt;/strong&gt;：在任意文本输入框按下快捷键，启动语音输入，转写文本自动优化呈现，支持后续编辑调整。&lt;/li&gt;
-&lt;/ol&gt;
 </content:encoded></item><item><title>Typora + PicList + Gitee 图床完整配置教程</title><link>https://dqtx.cc/posts/technical/typora--piclist--gitee-%E5%9B%BE%E5%BA%8A%E5%AE%8C%E6%95%B4%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/typora--piclist--gitee-%E5%9B%BE%E5%BA%8A%E5%AE%8C%E6%95%B4%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;如果你经常写 Markdown 文档，那么 &lt;strong&gt;Typora&lt;/strong&gt; 是一款非常好用的编辑器。而在图片管理方面，推荐搭配免费的图床工具 &lt;strong&gt;PicList&lt;/strong&gt;，它支持一键上传图片到各类图床。我自己的方案是：&lt;strong&gt;Typora + PicList + Gitee&lt;/strong&gt;，写作体验非常流畅。&lt;/p&gt;
 &lt;h2&gt;Typora设置&lt;/h2&gt;
 &lt;p&gt;打开 &lt;strong&gt;Typora&lt;/strong&gt;，依次进入 &lt;code&gt;文件 → 偏好设置 → 图像&lt;/code&gt;，在上传服务中选择 &lt;strong&gt;PicList&lt;/strong&gt;。
@@ -2532,6 +2662,15 @@ category: Technical
 &lt;hr /&gt;
 &lt;p&gt;以上就是我的博客发布工作流了。虽然博客没有服务器，但通过 GitHub + EdgeOne 的组合，配合一些小脚本，依然可以实现高效的自动化发布。&lt;/p&gt;
 &lt;p&gt;欢迎大家交流讨论，有问题评论区留言！&lt;/p&gt;
+</content:encoded></item><item><title>闪电说：端侧AI语音输入法</title><link>https://dqtx.cc/posts/software/%E9%97%AA%E7%94%B5%E8%AF%B4%E7%AB%AF%E4%BE%A7ai%E8%AF%AD%E9%9F%B3%E8%BE%93%E5%85%A5%E6%B3%95/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E9%97%AA%E7%94%B5%E8%AF%B4%E7%AB%AF%E4%BE%A7ai%E8%AF%AD%E9%9F%B3%E8%BE%93%E5%85%A5%E6%B3%95/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;闪电说是由武汉团队打造的&lt;strong&gt;国产 AI 语音输入法&lt;/strong&gt;，前身为代体输入法，以 “端侧本地处理” 为核心特色，实现毫秒级语音转文字体验。它打破传统云端语音输入的延迟与隐私痛点，通过本地 AI 引擎构建 “即说即显、思维同步” 的输入模式，兼容 Windows 和 macOS 全平台，是一款完全免费的系统级输入工具，被观猹平台评为 8.6 分高分产品。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260204111254949.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;上手指南&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;下载安装&lt;/strong&gt;：访问官网（https://shandianshuo.cn），根据系统选择 Windows 或 macOS 版本下载安装；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;权限配置&lt;/strong&gt;：授予麦克风权限，测试音频输入是否正常；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;个性化设置&lt;/strong&gt;：自定义激活快捷键、默认语言、输入模式等基础配置；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;即时使用&lt;/strong&gt;：在任意文本输入框按下快捷键，启动语音输入，转写文本自动优化呈现，支持后续编辑调整。&lt;/li&gt;
+&lt;/ol&gt;
 </content:encoded></item><item><title>轻松打造家庭影视库，实现4K观影自由</title><link>https://dqtx.cc/posts/technical/%E8%BD%BB%E6%9D%BE%E6%89%93%E9%80%A0%E5%AE%B6%E5%BA%AD%E5%BD%B1%E8%A7%86%E5%BA%93%E5%AE%9E%E7%8E%B04k%E8%A7%82%E5%BD%B1%E8%87%AA%E7%94%B1/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E8%BD%BB%E6%9D%BE%E6%89%93%E9%80%A0%E5%AE%B6%E5%BA%AD%E5%BD%B1%E8%A7%86%E5%BA%93%E5%AE%9E%E7%8E%B04k%E8%A7%82%E5%BD%B1%E8%87%AA%E7%94%B1/</guid><description>如果你想拥有个人家庭影视库，追求 4K 观影体验，但觉得爱优腾会员贵、NAS 设备成本又高，那今天这期视频，我去将手把手教你花小钱，轻松打造自己的家庭影视库，拥...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;p&gt;如果你想拥有个人家庭影视库，追求 4K 观影体验，但觉得爱优腾会员贵、NAS 设备成本又高，那今天这期视频，我去将手把手教你花小钱，轻松打造自己的家庭影视库，拥有海量资源，实现 4K 观影自由！&lt;/p&gt;
 &lt;h2&gt;115 网盘（存影视资源）&lt;/h2&gt;
 &lt;ul&gt;
@@ -2764,66 +2903,6 @@ argument-hint: [搜索关键词]
 &lt;h2&gt;七.写在最后&lt;/h2&gt;
 &lt;p&gt;Claude Code确实是目前最好用的AI编程工具之一，它不像其他工具那样花哨，而是专注于真正提升你的编程效率。当然，一些简单的任务基本用不到AI，反而会拖累你的效率，日常可以根据自己的实际情况，是否使用AI辅助。&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;以上，既然看到这里了，如果觉得不错，随手点个赞、在看、转发三连吧，如果想第一时间收到推送，也可以给我个星标⭐～谢谢你看我的文章，我们，下次再见。&lt;/em&gt;&lt;/p&gt;
-</content:encoded></item><item><title>OBS摄像头一键移动插件</title><link>https://dqtx.cc/posts/software/obs%E6%91%84%E5%83%8F%E5%A4%B4%E4%B8%80%E9%94%AE%E7%A7%BB%E5%8A%A8%E6%8F%92%E4%BB%B6/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/obs%E6%91%84%E5%83%8F%E5%A4%B4%E4%B8%80%E9%94%AE%E7%A7%BB%E5%8A%A8%E6%8F%92%E4%BB%B6/</guid><description>想让 OBS 摄像头实现「一键移动+一键复位」的平滑效果？不管是直播过场切换、录课构图调整，还是避免画面遮挡，motion-effect 插件都能轻松搞定！无需复杂操作，3 步就能实现精准位移，让你的...</description><pubDate>Thu, 15 Jan 2026 11:20:00 GMT</pubDate><content:encoded>&lt;p&gt;想让 OBS 摄像头实现「一键移动+一键复位」的平滑效果？不管是直播过场切换、录课构图调整，还是避免画面遮挡，motion-effect 插件都能轻松搞定！无需复杂操作，3 步就能实现精准位移，让你的画面切换更专业～&lt;/p&gt;
-&lt;h2&gt;一、插件简介&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;开发者：CatxFish（免费开源）&lt;/li&gt;
-&lt;li&gt;核心功能：画面平滑运动控制（平移、旋转、变焦等），支持往返触发&lt;/li&gt;
-&lt;li&gt;适配设备：绝大多数普通 USB 摄像头、部分 PTZ 摄像头&lt;/li&gt;
-&lt;li&gt;兼容系统：Windows、macOS、Linux&lt;/li&gt;
-&lt;li&gt;项目地址：https://github.com/CatxFish/motion-effect&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;二、安装步骤&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;下载对应系统安装包，解压后将文件放入 obs-studio 主文件夹&lt;/li&gt;
-&lt;li&gt;重启 OBS 完成生效&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2&gt;三、前置准备&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;场景名：教程（可自定义）&lt;/li&gt;
-&lt;li&gt;源：摄像头、显示器（按需添加）&lt;/li&gt;
-&lt;li&gt;目标效果：按快捷键 → 摄像头右下移动；再按快捷键 → 摄像头左上返回&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;四、配置流程&lt;/h2&gt;
-&lt;h3&gt;1. 记录初始坐标&lt;/h3&gt;
-&lt;p&gt;右键「源→摄像头」→ 变换→编辑变换，记录初始坐标（示例：1725, 489）&lt;/p&gt;
-&lt;h3&gt;2. 添加运动滤镜&lt;/h3&gt;
-&lt;p&gt;选中场景「教程」→ 右键→滤镜→效果滤镜→左下角「+」→ 选择「Motion」&lt;br /&gt;
-命名滤镜（自定义），核心参数配置：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Trigger Behavior 设为「Hotkey (Round trip)」（往返模式）&lt;/li&gt;
-&lt;li&gt;填写记录的初始坐标与目标坐标（示例目标：1735, 539）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260117005310134.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;3. 绑定快捷键&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;OBS 顶部→设置→快捷键&lt;/li&gt;
-&lt;li&gt;找到对应滤镜，为「Forward」和「Backward」绑定同一快捷键（示例：Alt+K）&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260117005511984.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;五、效果说明&lt;/h2&gt;
-&lt;p&gt;&lt;img alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;以上就是 motion-effect 插件的核心配置流程，全程聚焦「快速部署+实用效果」，无需多余步骤！插件轻量开源，兼容主流系统与摄像头，如需调整移动距离、速度或拓展多档位，直接修改坐标与参数即可。&lt;/p&gt;
-&lt;p&gt;✨ &lt;strong&gt;互动时间&lt;/strong&gt;&lt;br /&gt;
-你平时用 OBS 做直播/录课时，还遇到过哪些画面调整的难题？欢迎在评论区留言分享，我会一一解答～&lt;/p&gt;
-&lt;p&gt;如果觉得这篇教程对你有帮助，别忘了&lt;strong&gt;点赞+收藏+转发&lt;/strong&gt;三连呀！关注我，后续分享更多OBS 实用技巧、效率工具干货，下次见～ 👋&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;大强远程技术支持：742112.xyz&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;+86新注册电报，绕过sms收费
-1、换IP，建议，美 日 新 节点，不建议香港节点。
-2、换客户端，telegramx，或者这两个。
-[telegramx](https://github.com/TGX-Android/Telegram-X/releases) [第三方客户端](https://github.com/forkgram/TelegramAndroid/releases) [飞机旧版](https://www.apkmirror.com/uploads/?devcategory=telegram-fz-llc) 
-
-3、卡bug，可以邮箱验证优先邮箱验证。
-
-遇到付费解密强制重启app，多试几次有概率可以跳过。
-&lt;/code&gt;&lt;/pre&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;+86新注册电报，绕过sms收费&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;1、换IP，建议，美 日 新 节点，不建议香港节点。
-2、换客户端，telegramx，或者这两个。
-&lt;a href=&quot;https://github.com/TGX-Android/Telegram-X/releases&quot;&gt;telegramx&lt;/a&gt; &lt;a href=&quot;https://github.com/forkgram/TelegramAndroid/releases&quot;&gt;第三方客户端&lt;/a&gt; &lt;a href=&quot;https://www.apkmirror.com/uploads/?devcategory=telegram-fz-llc&quot;&gt;飞机旧版&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;3、卡bug，可以邮箱验证优先邮箱验证。遇到付费解密强制重启app，多试几次有概率可以跳过。&lt;/p&gt;
-&lt;/blockquote&gt;
 </content:encoded></item><item><title>Passkeys通行密钥</title><link>https://dqtx.cc/posts/technical/passkeys%E9%80%9A%E8%A1%8C%E5%AF%86%E9%92%A5/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/passkeys%E9%80%9A%E8%A1%8C%E5%AF%86%E9%92%A5/</guid><description>你是否厌倦了记密码？设个简单的不安全，设个复杂的记不住？每次登录还要翻找密码本、或者点那该死的&apos;忘记密码&apos;？这几天测试了一圈Passkeys（通行密钥），我只能...</description><pubDate>Thu, 15 Jan 2026 11:20:00 GMT</pubDate><content:encoded>&lt;p&gt;你是否厌倦了记密码？设个简单的不安全，设个复杂的记不住？每次登录还要翻找密码本、或者点那该死的&quot;忘记密码&quot;？这几天测试了一圈&lt;strong&gt;Passkeys（通行密钥）&lt;/strong&gt;，我只能说：**真TM牛逼！**以后再也不用记密码了，指纹一按、Face ID 一扫，直接登录，速度那叫一个快！今天就给大家分享这个让密码彻底淘汰的神仙技术。&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h2&gt;一、什么是 Passkeys？&lt;/h2&gt;
@@ -2986,6 +3065,66 @@ https://www.passkeys.com/websites-with-passkey-support-sites-directory&lt;/p&gt;
 &lt;li&gt;建议配合密码管理器使用，覆盖不支持的场景&lt;/li&gt;
 &lt;li&gt;多设备备份很重要，别只依赖单一设备&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>OBS摄像头一键移动插件</title><link>https://dqtx.cc/posts/software/obs%E6%91%84%E5%83%8F%E5%A4%B4%E4%B8%80%E9%94%AE%E7%A7%BB%E5%8A%A8%E6%8F%92%E4%BB%B6/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/obs%E6%91%84%E5%83%8F%E5%A4%B4%E4%B8%80%E9%94%AE%E7%A7%BB%E5%8A%A8%E6%8F%92%E4%BB%B6/</guid><description>想让 OBS 摄像头实现「一键移动+一键复位」的平滑效果？不管是直播过场切换、录课构图调整，还是避免画面遮挡，motion-effect 插件都能轻松搞定！无需复杂操作，3 步就能实现精准位移，让你的...</description><pubDate>Thu, 15 Jan 2026 11:20:00 GMT</pubDate><content:encoded>&lt;p&gt;想让 OBS 摄像头实现「一键移动+一键复位」的平滑效果？不管是直播过场切换、录课构图调整，还是避免画面遮挡，motion-effect 插件都能轻松搞定！无需复杂操作，3 步就能实现精准位移，让你的画面切换更专业～&lt;/p&gt;
+&lt;h2&gt;一、插件简介&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;开发者：CatxFish（免费开源）&lt;/li&gt;
+&lt;li&gt;核心功能：画面平滑运动控制（平移、旋转、变焦等），支持往返触发&lt;/li&gt;
+&lt;li&gt;适配设备：绝大多数普通 USB 摄像头、部分 PTZ 摄像头&lt;/li&gt;
+&lt;li&gt;兼容系统：Windows、macOS、Linux&lt;/li&gt;
+&lt;li&gt;项目地址：https://github.com/CatxFish/motion-effect&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;二、安装步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;下载对应系统安装包，解压后将文件放入 obs-studio 主文件夹&lt;/li&gt;
+&lt;li&gt;重启 OBS 完成生效&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;三、前置准备&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;场景名：教程（可自定义）&lt;/li&gt;
+&lt;li&gt;源：摄像头、显示器（按需添加）&lt;/li&gt;
+&lt;li&gt;目标效果：按快捷键 → 摄像头右下移动；再按快捷键 → 摄像头左上返回&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;四、配置流程&lt;/h2&gt;
+&lt;h3&gt;1. 记录初始坐标&lt;/h3&gt;
+&lt;p&gt;右键「源→摄像头」→ 变换→编辑变换，记录初始坐标（示例：1725, 489）&lt;/p&gt;
+&lt;h3&gt;2. 添加运动滤镜&lt;/h3&gt;
+&lt;p&gt;选中场景「教程」→ 右键→滤镜→效果滤镜→左下角「+」→ 选择「Motion」&lt;br /&gt;
+命名滤镜（自定义），核心参数配置：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Trigger Behavior 设为「Hotkey (Round trip)」（往返模式）&lt;/li&gt;
+&lt;li&gt;填写记录的初始坐标与目标坐标（示例目标：1735, 539）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260117005310134.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;3. 绑定快捷键&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;OBS 顶部→设置→快捷键&lt;/li&gt;
+&lt;li&gt;找到对应滤镜，为「Forward」和「Backward」绑定同一快捷键（示例：Alt+K）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260117005511984.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;五、效果说明&lt;/h2&gt;
+&lt;p&gt;&lt;img alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;以上就是 motion-effect 插件的核心配置流程，全程聚焦「快速部署+实用效果」，无需多余步骤！插件轻量开源，兼容主流系统与摄像头，如需调整移动距离、速度或拓展多档位，直接修改坐标与参数即可。&lt;/p&gt;
+&lt;p&gt;✨ &lt;strong&gt;互动时间&lt;/strong&gt;&lt;br /&gt;
+你平时用 OBS 做直播/录课时，还遇到过哪些画面调整的难题？欢迎在评论区留言分享，我会一一解答～&lt;/p&gt;
+&lt;p&gt;如果觉得这篇教程对你有帮助，别忘了&lt;strong&gt;点赞+收藏+转发&lt;/strong&gt;三连呀！关注我，后续分享更多OBS 实用技巧、效率工具干货，下次见～ 👋&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;大强远程技术支持：742112.xyz&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;+86新注册电报，绕过sms收费
+1、换IP，建议，美 日 新 节点，不建议香港节点。
+2、换客户端，telegramx，或者这两个。
+[telegramx](https://github.com/TGX-Android/Telegram-X/releases) [第三方客户端](https://github.com/forkgram/TelegramAndroid/releases) [飞机旧版](https://www.apkmirror.com/uploads/?devcategory=telegram-fz-llc) 
+
+3、卡bug，可以邮箱验证优先邮箱验证。
+
+遇到付费解密强制重启app，多试几次有概率可以跳过。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;+86新注册电报，绕过sms收费&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1、换IP，建议，美 日 新 节点，不建议香港节点。
+2、换客户端，telegramx，或者这两个。
+&lt;a href=&quot;https://github.com/TGX-Android/Telegram-X/releases&quot;&gt;telegramx&lt;/a&gt; &lt;a href=&quot;https://github.com/forkgram/TelegramAndroid/releases&quot;&gt;第三方客户端&lt;/a&gt; &lt;a href=&quot;https://www.apkmirror.com/uploads/?devcategory=telegram-fz-llc&quot;&gt;飞机旧版&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;3、卡bug，可以邮箱验证优先邮箱验证。遇到付费解密强制重启app，多试几次有概率可以跳过。&lt;/p&gt;
+&lt;/blockquote&gt;
 </content:encoded></item><item><title>md2wechat-skill安装教程</title><link>https://dqtx.cc/posts/aihacks/md2wechat-skill%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/md2wechat-skill%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</guid><pubDate>Sat, 03 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;如果你用Markdown写公众号文章，需要先复制内容到排版工具，再复制公众号很麻烦，既耗时间又难保证格式精美，每次操作都要反复调整，成了不少人的痛点，这几天在GitHub发现了&lt;strong&gt;md2wechat-skill&lt;/strong&gt;，听说能一键转换Markdown为精美排版并自动上传到微信草稿箱，好奇测试了下！&lt;/p&gt;
 &lt;p&gt;我安装踩了不少坑，终于搞定，流程算跑通了，不过吐槽下，我是在Claude中用的Ai模式真的慢，有这时间，我10篇文章都排版好了！不过做个记录，相信随着时间技术成熟，一切都会发生变化！&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/workany_writing_1280x720.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
