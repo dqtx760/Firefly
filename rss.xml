@@ -68,7 +68,7 @@
 &lt;p&gt;写完之后自己都不想看第二遍，更别说发出来了？&lt;/p&gt;
 &lt;p&gt;我一直觉得，AI 时代最缺的已经不是「能帮你写东西的工具」了，而是&lt;strong&gt;一套完整的工作流&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;直到我发现了 &lt;strong&gt;newtype-os&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/Newtype-os.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Generated_Image_1zejbk1zejbk1zej.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;1.它是什么？&lt;/h2&gt;
 &lt;p&gt;简单说，它是一个&lt;strong&gt;多智能体协作系统&lt;/strong&gt;，内置 8 个 AI Agent，相当于给你的终端装了一整个内容团队：&lt;/p&gt;
 &lt;ul&gt;
@@ -205,9 +205,15 @@ nt inut   #初始化配置，注入技能到其他 AI工具
 &lt;p&gt;用了一段时间，最大的感受是：&lt;strong&gt;终于可以把「创作」这件事，真正变成一件只需要动嘴不动手的事。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;以前写一篇文章，要自己查资料、自己整理、自己写、自己改，来来回回折腾好几遍。现在只需要告诉 Chief 要写什么，它会把后面的事情全部安排好。&lt;/p&gt;
 &lt;p&gt;当然，它不是完美的。生成的内容还是需要自己过一遍，核心观点还是需要自己把控。但至少，&lt;strong&gt;那些繁琐的体力活，有人帮你干了。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;PS.大强远程技术支持：742112.xyz&lt;/p&gt;
-&lt;p&gt;我的付费she&apos;q&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/%E6%98%9F%E7%90%83%E4%BC%98%E6%83%A0%E5%88%B8.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;PS.&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;远程服务微信：dqtx33&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;付费社群：&lt;a href=&quot;https://t.zsxq.com/d4zSX&quot;&gt;点此加入&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 </content:encoded></item><item><title>Claude联网神器：Web Access</title><link>https://dqtx.cc/posts/aihacks/web-access/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/web-access/</guid><pubDate>Thu, 26 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;前言&lt;/h2&gt;
 &lt;p&gt;过去的 AI 联网超 &quot;死板&quot;：要么用搜索引擎瞎找非公开内容，要么打不开需要登录的动态网页，还得单独给 AI 登各个平台，开多个网页就卡，踩过的坑下次还踩，甚至会跟人抢浏览器控制权，用着特别费劲。&lt;/p&gt;
 &lt;p&gt;最近发现了 &lt;a href=&quot;https://github.com/eze-is/web-access&quot;&gt;Web Access&lt;/a&gt; 这个 Skill，能把 AI Agent 的联网、操作浏览器的能力直接拉满。它用的是&lt;strong&gt;你自己已经登录的 Chrome&lt;/strong&gt;，不管是查信息、扒内容，还是交互操作，都能自动搞定，兼容 Claude Code、OpenClaw 等主流 AI Agent，普通人也能轻松上手。&lt;/p&gt;
