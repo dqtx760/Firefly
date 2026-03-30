@@ -1,6 +1,6 @@
 ---
 title: 效率神器！MFCMouseEffect
-published: 2026-03-27
+published: 2026-03-19
 tags: []
 category: Software
 draft: false
@@ -13,11 +13,11 @@ pinned: false
 
 MFCMouseEffect，它不仅能实现鼠标点击、拖尾等炫酷的输入可视化特效，更能通过自动化映射打造专属的鼠标快捷操作体系，把桌面操作效率拉满，Windows 和 Mac 用户都能轻松上手！
 
-![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/Generated.webp)
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/shub.webp)
 
 
 
-## 1.关于软件下载
+## 1.软件下载
 
 支持Windows、Mac
 
