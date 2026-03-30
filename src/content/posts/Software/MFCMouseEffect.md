@@ -13,7 +13,7 @@ pinned: false
 
 MFCMouseEffect，它不仅能实现鼠标点击、拖尾等炫酷的输入可视化特效，更能通过自动化映射打造专属的鼠标快捷操作体系，把桌面操作效率拉满，Windows 和 Mac 用户都能轻松上手！
 
-![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Generated_Image_2lctye2lctye2lct (2).webp)
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/Generated.webp)
 
 
 
@@ -72,4 +72,14 @@ MFCMouseEffect，它不仅能实现鼠标点击、拖尾等炫酷的输入可视
 
 
 且开源免费、支持自定义扩展，无论是普通用户想提升桌面操作效率，还是开发者想定制专属桌面交互效果，都能满足需求，目前该项目还在持续更新迭代。
+
+
+
+PS.以上就是本期内容，安装使用有任何问题，我提供一对一远程服务，手把手帮你解决，高效上手不踩坑。咱们下期见！
+
+
+
+大强远程技术支持：742112.xyz
+
+
 

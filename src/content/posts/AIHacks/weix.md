@@ -97,6 +97,17 @@ B.**默认使用 Codex 而非 Claude**
 
 
 
+C,排除命令
+
+查看详细日志:  tail -100 ~/.weclaw/weclaw.log
+
+查看Agent 进程状态:  weclaw status
+
+检查系统资源:
+
+free -h  # 内存
+dmesg | grep -i kill  # 是否有 OOM kill
+
 ## 5.类似的项目
 
 https://github.com/m1heng/claude-plugin-weixin
