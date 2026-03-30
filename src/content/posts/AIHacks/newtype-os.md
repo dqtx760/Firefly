@@ -25,7 +25,7 @@ pinned: false
 
 直到我发现了 **newtype-os**。
 
-![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/Newtype-os.webp)
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Generated_Image_1zejbk1zejbk1zej.webp)
 
 
 
@@ -237,8 +237,8 @@ nt inut   #初始化配置，注入技能到其他 AI工具
 
 
 
-PS.大强远程技术支持：742112.xyz
+**PS.**
 
-我的付费she'q
+- 远程服务微信：dqtx33  
 
-![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/星球优惠券.webp)
+- 付费社群：[点此加入](https://t.zsxq.com/d4zSX)
