@@ -239,4 +239,6 @@ nt inut   #初始化配置，注入技能到其他 AI工具
 
 PS.大强远程技术支持：742112.xyz
 
+我的付费she'q
+
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/星球优惠券.webp)
