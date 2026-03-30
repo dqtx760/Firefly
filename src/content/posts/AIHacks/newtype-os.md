@@ -1,6 +1,6 @@
 ---
 title: Newtype-os完整工作流指南
-published: 2026-03-29
+published: 2026-03-30
 tags: []
 category: AIHacks
 draft: false
@@ -25,7 +25,7 @@ pinned: false
 
 直到我发现了 **newtype-os**。
 
-![](https://xodnytdcaw.feishu.cn/space/api/box/stream/download/asynccode/?code=NjJhZTJjMGFkM2ZlNjM5MmE4NTQ2YzMyZjhjNWUzMzNfY3NaRHRHMXJaRElyTWFyQkJnc2VQa1FVTTZuOUVjYk5fVG9rZW46RUg2eWJ0dXk5b3hNdEV4UmVBSWN4SGpobmplXzE3NzQ4NTMyMjU6MTc3NDg1NjgyNV9WNA)
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/Newtype-os.webp)
 
 
 
@@ -178,9 +178,9 @@ nt        # 启动后直接说话
 nt inut   #初始化配置，注入技能到其他 AI工具
 ```
 
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260330163220785.webp)
 
 
-![](https://xodnytdcaw.feishu.cn/space/api/box/stream/download/asynccode/?code=OTU4NjBjMzc5ODM0NzgwOTk2MzVhMmNiNWI4ZDFkMjJfVmdtNDlIeDJ6Q2VFNVRxMXZUcE8zbmJORzVscHFmMENfVG9rZW46Um5KdWJ0Rk1jb0lwa0J4SEk0QWM5VXptbmJjXzE3NzQ4NTMyMjU6MTc3NDg1NjgyNV9WNA)
 
 
 

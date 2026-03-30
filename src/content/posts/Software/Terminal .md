@@ -1,6 +1,6 @@
 ---
 title: Terminal 安装与美化配置指南
-published: 2026-03-30
+published: 2026-02-15
 tags: []
 category: Software
 draft: false
