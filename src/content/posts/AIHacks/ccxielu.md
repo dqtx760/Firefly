@@ -169,14 +169,21 @@ Claude Code源码泄露事件，堪称2026年AI开源史上最戏剧性的一幕
 
 **Source来源**
 
-干净Free Code  
-https://github.com/paoloanzn/free-code
+泄露源码：https://github.com/instructkr/claw-code
 
-修复版（无法启动问题修复）⭐ 推荐  
-https://github.com/NanmiCoder/claude-code-haha
+泄露源码图谱https://github.com/ChinaSiro/claude-code-sourcemap
 
-Rust重写完整版  
-https://github.com/Kuberwastaken/claude-code
+干净Free Code  https://github.com/paoloanzn/free-code
 
-源码目录整理  
-https://github.com/ChinaSiro/claude-code-sourcemap
+Rust重写完整版 https://github.com/Kuberwastaken/claude-code
+
+修复版https://github.com/NanmiCoder/claude-code-haha
+
+Claude code两个可能导致缓存失效的漏洞
+
+https://x.com/altryne/status/2038676458026189225
+
+泄露的 Claude Code 源代码包含 44 个隐藏功能标志和 20 多个未发布的功能。
+
+https://x.com/RoundtableSpace/status/2038960753458438156
+
