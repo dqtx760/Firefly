@@ -1,47 +1,71 @@
 ---
 title: Claude code隐藏命令/快捷键
-published: 2026-03-22
+published: 2026-04-02
 tags: []
 category: AIHacks
 draft: false
 pinned: false
 ---
 
-![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Generated_Image_n0y67n0y67n0y67n.webp)
-
-1. claude --dangerously-skip-permissions 最高权限启动Claude Code
-2. /btw---并行插问，不污染上下文
-3. /rewind---代码/对话单独回退（双击Esc等效）
-4. /insights---生成使用报告，给出优化建议
-5. /model opusplan---智能切换模型，节省Pro额度
-6. /simplify---三维度并行代码审查
-7. /branch---对话分叉，新建独立会话
-8. /loop---定时重复执行任务
-9. /remote-control---手机远程操控会话（/rc简写）
-10. /export---导出对话为Markdown文件
-11. 快捷键---Ctrl+V贴截图、Ctrl+J换行、Ctrl+R搜历史、Ctrl+U删整行
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/PixPin_2026-04-02_23-31-00.webp)
 
 
 
-PS.Terminal里Claude Code 用 Ctrl+V 贴不了截图
+## 终端启动命令（Windows）
+- claude --dangerously-skip-permissions 跳过权限校验启动
+- claude -v  查询版本信息- claude update 更新软件
+- claude mcp servers list 查看MCP服务器
+- claude tools list 查看全部工具
+- claude -c 恢复最近会话
 
-用Alt+V替代 Ctrl+V即可
+## 常用命令
+- /tools 查看可用工具
+- /skills 查看可用技能
+- /context 查看上下文占用
+- /diff 查看代码修改对比
+- /compact 压缩上下文节省Token
+- /clear 清空对话历史
+- /btw 无上下文干扰插问
+- /init 生成项目规范文件
+- /model 切换指定模型
+- /loop---定时重复执行任务
+- /model opusplan 智能切换模型，节省Pro额度
+- /remote-control---手机远程操控会话（/rc简写）
+- /plugin 插件管理
+- /doctor 环境检测诊断
+- /branch 创建分支会话
+- /memory 管理持久记忆
+- /rewind 回退对话代码
+- /export 导出对话为Markdown
+- /insights 生成使用报告
+- /simplify 三维度并行代码审查
+
+## 快捷键
+
+- Ctrl+C 中断生成
+- Ctrl+L 清屏
+- Ctrl+J换行
+- Ctrl+R搜历史
+- Alt+Enter 换行不提交
+- Ctrl+U 删除整行输入
+- Ctrl+A 光标至行首
+- Ctrl+E 光标至行尾
+- Ctrl+G 打开长文本编辑器
+- Alt+P 快速切换模型
+- Ctrl+D 退出会话
+- 双击Esc 对话回退
+
+## 补充
+NO_FLICKER 模式（无闪烁模式）开启方法：[点此查看](https://www.cnblogs.com/dqtx33/p/19814619)
 
 
+Terminal中启动Claude code注意：
+1. ALt+V粘贴截图
+2. 开启无闪烁模式后，右键自动粘贴会用不了 直接禁用即可
+3. 拖动文件是形成不了文件目录
 
-**以上，既然看到这里了，如果觉得教程对你有帮助，随手点个赞、收藏、转发三连吧！有任何问题，欢迎在留言区评论，我会逐一回复。👏👏**
+> 如果你装机使用了管理员用户，你启动Terminal一直是管理员权限，所以，拖动文件是形成不了文件目录，目前木有解决办法，只有创建一个电脑新用户，也就是标准用户。
 
+4. 自动将所选内容复制到剪贴板  
 
-
-**✅大远程技术支持**
-
-如果你在安装、配置或使用中遇到任何问题，不想自己折腾，随时可以找我提供 **1 对 1 远程技术支持**：[742112.xyz](742112.xyz)
-
-
-
- **✅关于知识星球**
-
-我做了一个轻量社群，把私藏的精品软件，技术教程，AI智能体学习笔记 都整理进了进去，68元/年，感兴趣的可👇 微信扫码：
-
-![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/51111118145244T4.webp)
-
+设置-交互,然后开启这个选项即可
