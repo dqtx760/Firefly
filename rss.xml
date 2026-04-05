@@ -62,6 +62,184 @@
 &lt;li&gt;⛓️ Web3教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867794661334761497#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;🛠️ 技术教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867808112450912266#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>Obsidian CLI终端管理笔记指南</title><link>https://dqtx.cc/posts/aihacks/obcli/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/obcli/</guid><pubDate>Sun, 05 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;2026年2月27日，Obsidian 1.12.4正式发布官方CLI。&lt;/p&gt;
+&lt;p&gt;这是Obsidian有史以来最重要的功能更新之一，意味着你的笔记库不再只是一个需要手动点开的应用，而变成了随时可调用的基础设施。&lt;/p&gt;
+&lt;p&gt;无论你是想快速捕获一个想法、批量处理上百篇笔记、还是让AI帮你分析和整理知识库——一切都变得前所未有的简单。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260405214553243.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;什么是Obsidian CLI？&lt;/h2&gt;
+&lt;p&gt;CLI（Command Line Interface）命令行界面，是Obsidian官方提供的终端工具。在此之前，你需要通过第三方脚本直接修改.md文件，但现在——&lt;strong&gt;任何你在Obsidian&lt;/strong&gt; &lt;strong&gt;GUI****里能做的事，都可以从命令行完成&lt;/strong&gt;。&lt;/p&gt;
+&lt;h2&gt;安装步骤（Windows）&lt;/h2&gt;
+&lt;h3&gt;第一步：更新Obsidian&lt;/h3&gt;
+&lt;p&gt;确保安装 &lt;strong&gt;Obsidian v1.12.4 或更高版本&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;检查方法：&lt;code&gt;设置&lt;/code&gt; → &lt;code&gt;关于&lt;/code&gt; → 查看版本号&lt;/p&gt;
+&lt;p&gt;如果版本较旧：&lt;code&gt;帮助&lt;/code&gt; → &lt;code&gt;检查更新&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;第二步：启用CLI&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;打开Obsidian → &lt;code&gt;设置&lt;/code&gt; → &lt;code&gt;关于&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;向下滚动找到 &lt;strong&gt;命令行界面&lt;/strong&gt; 部分&lt;/li&gt;
+&lt;li&gt;开启开关&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Obsidian会自动将CLI二进制文件添加到系统PATH。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⚠️ &lt;strong&gt;重要&lt;/strong&gt;：修改PATH后，&lt;strong&gt;必须打开新的终端窗口&lt;/strong&gt;才能生效！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;第三步：验证安装&lt;/h3&gt;
+&lt;p&gt;打开新的PowerShell终端窗口，运行：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;obsidian version
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;成功输出类似：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Obsidian CLI 1.12.4
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;第四步（如果提示command not found）&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;# 手动添加到当前会话
+$env:PATH += &quot;;$env:LOCALAPPDATA\Programs\Obsidian\&quot;
+
+# 验证
+obsidian version
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;路径通常是：&lt;code&gt;C:\Users\你的用户名\AppData\Local\Programs\Obsidian\obsidian.exe&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;快速上手：5个核心命令&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;h3&gt;浏览笔记库（TUI模式）&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;obsidian
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;启动全屏终端界面，像文件管理器一样浏览笔记，用方向键导航，&lt;code&gt;/&lt;/code&gt;搜索，&lt;code&gt;Enter&lt;/code&gt;打开笔记。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;h3&gt;打开今日日记&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;obsidian daily
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;跳转到今天的日记，不存在则自动创建。&lt;strong&gt;这是使用频率最高的命令&lt;/strong&gt;。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;h3&gt;全文搜索&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;obsidian search query=&quot;PKM&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;搜索整个笔记库内容，结果直接输出到终端。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;h3&gt;快速捕获想法&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;obsidian daily:append content=&quot;突然想到一个绝妙的主意&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;不用打开Obsidian，直接往今日日记追加内容。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;h3&gt;查看笔记库统计&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;obsidian files total
+obsidian tags sort=count
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;看看你的笔记库有多少篇笔记，最常用的标签是什么。&lt;/p&gt;
+&lt;h2&gt;进阶用法&lt;/h2&gt;
+&lt;h3&gt;高级搜索&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;# 按标签搜索
+obsidian search query=&quot;[tag:publish]&quot;
+
+# 按属性搜索
+obsidian search query=&quot;[status:active]&quot;
+
+# 输出JSON给脚本处理
+obsidian search query=&quot;meeting&quot; format=json
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;文件操作&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;# 创建新笔记
+obsidian create name=&quot;新笔记&quot; content=&quot;# 标题`n内容&quot;
+
+# 移动笔记（自动更新链接！）
+obsidian move file=&quot;草稿&quot; to=Archive/2026/
+
+# 设置属性
+obsidian properties:set file=&quot;项目A&quot; status=active type=text
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;任务管理&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;# 查看所有待办
+obsidian tasks
+
+# 创建任务
+obsidian task:create content=&quot;写周报&quot; tags=&quot;work&quot;
+
+# 完成任务
+obsidian task:complete task=任务ID
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Claudian 插件集成 — 在Obsidian内直接用AI&lt;/h2&gt;
+&lt;p&gt;这是最实用的集成方式——通过 &lt;strong&gt;Claudian&lt;/strong&gt; 插件，在Obsidian内部直接调用Claude Code，无需切换窗口。&lt;/p&gt;
+&lt;h3&gt;安装 Claudian 插件&lt;/h3&gt;
+&lt;p&gt;由于这个插件不在社区插件市场，需要手动安装：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;步骤1：下载插件文件&lt;/strong&gt; 访问 GitHub 下载最新版本：https://github.com/ansong/claudian/releases 需要下载：&lt;code&gt;main.js&lt;/code&gt;、&lt;code&gt;manifest.json&lt;/code&gt;、&lt;code&gt;styles.css&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;步骤2：创建插件目录&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;你的笔记库/.obsidian/plugins/claudian/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;把下载的文件放进去。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;步骤3：启用插件&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;重启Obsidian&lt;/li&gt;
+&lt;li&gt;设置 → 第三方插件 → 刷新&lt;/li&gt;
+&lt;li&gt;找到 Claudian 并启用&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Claude Code 实战案例&lt;/h2&gt;
+&lt;h3&gt;案例1：知识库研究员&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; 搜索我笔记库里所有关于&quot;第二大脑&quot;的内容，总结出5个核心要点
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;AI会：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;检索所有相关笔记&lt;/li&gt;
+&lt;li&gt;提取核心观点&lt;/li&gt;
+&lt;li&gt;直接回复你总结&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;案例2：写作助手&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; 把我上周的日记里有价值的内容整理成一篇800字的公众号文章
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;AI会：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;读取你的多篇日记&lt;/li&gt;
+&lt;li&gt;智能筛选有效信息&lt;/li&gt;
+&lt;li&gt;生成可直接发布的文章&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;案例3：任务梳理&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; 列出我笔记库里所有标记为[status:pending]的任务，按优先级排序
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;案例4：批量重命名标签&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; 把所有笔记里的 #会议 标签改成 #例会
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;案例5：信息聚合&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; 搜索最近30天创建的笔记，提取所有链接，生成一个知识图谱总结
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;案例6：内容改写&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; 读取&quot;投资笔记&quot;，把它改写成适合发小红书的版本，保持核心观点但语言更口语化
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;案例7：周报自动生成&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; 读取我本周的日记和工作笔记，生成一份周报，包含：本周完成事项、待办事项、学习收获
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;案例8：碎片整理&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; 扫描Inbox文件夹下所有笔记，把相似主题的整理到一起，生成一个主题索引
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;案例9：深度研究&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; 我想了解&quot;AI笔记&quot;这个主题，先搜索我笔记库里所有相关内容，然后列出我还缺什么角度
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;案例10：数据库查询&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; 搜索所有包含&quot;价格&quot;关键词的笔记，提取其中的数字信息，生成一个对比表格
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;写在最后&lt;/h2&gt;
+&lt;p&gt;在此之前，笔记库是一个你需要手动打开、鼠标点击的应用；现在，它变成了随时可调用的基础设施。&lt;/p&gt;
+&lt;p&gt;你可以坐在终端前，快速捕获想法、搜索内容、移动文件、管理任务，甚至让AI直接帮你读取、分析、重组你的整个知识体系。&lt;/p&gt;
+&lt;p&gt;配合Claudian插件，你甚至不需要离开Obsidian界面，就能调用Claude Code完成写作优化、内容总结、代码生成等任务。&lt;/p&gt;
+&lt;p&gt;整个过程是无缝的、自然的——就像你的第二个大脑终于学会了说话。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;我建议你今天就做两件事：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;第一，打开Obsidian设置，启用CLI；&lt;/p&gt;
+&lt;p&gt;第二，下载 Claudian 插件，体验在笔记里直接用AI的快感。&lt;/p&gt;
+&lt;p&gt;从 &lt;code&gt;obsidian daily&lt;/code&gt; 开始，从一个命令开始，你会发现一个全新的Obsidian。&lt;/p&gt;
 </content:encoded></item><item><title>Claude code隐藏命令/快捷键</title><link>https://dqtx.cc/posts/aihacks/cc/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/cc/</guid><pubDate>Thu, 02 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/PixPin_2026-04-02_23-31-00.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;终端启动命令（Windows）&lt;/h2&gt;
 &lt;ul&gt;
@@ -2578,15 +2756,6 @@ source ~/catkin_ws/devel/setup.bash
 &lt;p&gt;下载地址：https://workany.ai/zh&lt;/p&gt;
 &lt;p&gt;如果觉得这篇教程对你有帮助，别忘了&lt;strong&gt;点赞+收藏+转发&lt;/strong&gt;三连呀！关注我，后续分享更多实用技巧、效率工具干货，下次见～ 👋&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;大强远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-</content:encoded></item><item><title>闪电说：端侧AI语音输入法</title><link>https://dqtx.cc/posts/software/%E9%97%AA%E7%94%B5%E8%AF%B4%E7%AB%AF%E4%BE%A7ai%E8%AF%AD%E9%9F%B3%E8%BE%93%E5%85%A5%E6%B3%95/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E9%97%AA%E7%94%B5%E8%AF%B4%E7%AB%AF%E4%BE%A7ai%E8%AF%AD%E9%9F%B3%E8%BE%93%E5%85%A5%E6%B3%95/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;闪电说是由武汉团队打造的&lt;strong&gt;国产 AI 语音输入法&lt;/strong&gt;，前身为代体输入法，以 “端侧本地处理” 为核心特色，实现毫秒级语音转文字体验。它打破传统云端语音输入的延迟与隐私痛点，通过本地 AI 引擎构建 “即说即显、思维同步” 的输入模式，兼容 Windows 和 macOS 全平台，是一款完全免费的系统级输入工具，被观猹平台评为 8.6 分高分产品。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260204111254949.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;上手指南&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;下载安装&lt;/strong&gt;：访问官网（https://shandianshuo.cn），根据系统选择 Windows 或 macOS 版本下载安装；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;权限配置&lt;/strong&gt;：授予麦克风权限，测试音频输入是否正常；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;个性化设置&lt;/strong&gt;：自定义激活快捷键、默认语言、输入模式等基础配置；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;即时使用&lt;/strong&gt;：在任意文本输入框按下快捷键，启动语音输入，转写文本自动优化呈现，支持后续编辑调整。&lt;/li&gt;
-&lt;/ol&gt;
 </content:encoded></item><item><title>Typora + PicList + Gitee 图床完整配置教程</title><link>https://dqtx.cc/posts/technical/typora--piclist--gitee-%E5%9B%BE%E5%BA%8A%E5%AE%8C%E6%95%B4%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/typora--piclist--gitee-%E5%9B%BE%E5%BA%8A%E5%AE%8C%E6%95%B4%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;如果你经常写 Markdown 文档，那么 &lt;strong&gt;Typora&lt;/strong&gt; 是一款非常好用的编辑器。而在图片管理方面，推荐搭配免费的图床工具 &lt;strong&gt;PicList&lt;/strong&gt;，它支持一键上传图片到各类图床。我自己的方案是：&lt;strong&gt;Typora + PicList + Gitee&lt;/strong&gt;，写作体验非常流畅。&lt;/p&gt;
 &lt;h2&gt;Typora设置&lt;/h2&gt;
 &lt;p&gt;打开 &lt;strong&gt;Typora&lt;/strong&gt;，依次进入 &lt;code&gt;文件 → 偏好设置 → 图像&lt;/code&gt;，在上传服务中选择 &lt;strong&gt;PicList&lt;/strong&gt;。
@@ -2840,6 +3009,15 @@ category: Technical
 &lt;hr /&gt;
 &lt;p&gt;以上就是我的博客发布工作流了。虽然博客没有服务器，但通过 GitHub + EdgeOne 的组合，配合一些小脚本，依然可以实现高效的自动化发布。&lt;/p&gt;
 &lt;p&gt;欢迎大家交流讨论，有问题评论区留言！&lt;/p&gt;
+</content:encoded></item><item><title>闪电说：端侧AI语音输入法</title><link>https://dqtx.cc/posts/software/%E9%97%AA%E7%94%B5%E8%AF%B4%E7%AB%AF%E4%BE%A7ai%E8%AF%AD%E9%9F%B3%E8%BE%93%E5%85%A5%E6%B3%95/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E9%97%AA%E7%94%B5%E8%AF%B4%E7%AB%AF%E4%BE%A7ai%E8%AF%AD%E9%9F%B3%E8%BE%93%E5%85%A5%E6%B3%95/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;闪电说是由武汉团队打造的&lt;strong&gt;国产 AI 语音输入法&lt;/strong&gt;，前身为代体输入法，以 “端侧本地处理” 为核心特色，实现毫秒级语音转文字体验。它打破传统云端语音输入的延迟与隐私痛点，通过本地 AI 引擎构建 “即说即显、思维同步” 的输入模式，兼容 Windows 和 macOS 全平台，是一款完全免费的系统级输入工具，被观猹平台评为 8.6 分高分产品。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260204111254949.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;上手指南&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;下载安装&lt;/strong&gt;：访问官网（https://shandianshuo.cn），根据系统选择 Windows 或 macOS 版本下载安装；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;权限配置&lt;/strong&gt;：授予麦克风权限，测试音频输入是否正常；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;个性化设置&lt;/strong&gt;：自定义激活快捷键、默认语言、输入模式等基础配置；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;即时使用&lt;/strong&gt;：在任意文本输入框按下快捷键，启动语音输入，转写文本自动优化呈现，支持后续编辑调整。&lt;/li&gt;
+&lt;/ol&gt;
 </content:encoded></item><item><title>轻松打造家庭影视库，实现4K观影自由</title><link>https://dqtx.cc/posts/technical/%E8%BD%BB%E6%9D%BE%E6%89%93%E9%80%A0%E5%AE%B6%E5%BA%AD%E5%BD%B1%E8%A7%86%E5%BA%93%E5%AE%9E%E7%8E%B04k%E8%A7%82%E5%BD%B1%E8%87%AA%E7%94%B1/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E8%BD%BB%E6%9D%BE%E6%89%93%E9%80%A0%E5%AE%B6%E5%BA%AD%E5%BD%B1%E8%A7%86%E5%BA%93%E5%AE%9E%E7%8E%B04k%E8%A7%82%E5%BD%B1%E8%87%AA%E7%94%B1/</guid><description>如果你想拥有个人家庭影视库，追求 4K 观影体验，但觉得爱优腾会员贵、NAS 设备成本又高，那今天这期视频，我去将手把手教你花小钱，轻松打造自己的家庭影视库，拥...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;p&gt;如果你想拥有个人家庭影视库，追求 4K 观影体验，但觉得爱优腾会员贵、NAS 设备成本又高，那今天这期视频，我去将手把手教你花小钱，轻松打造自己的家庭影视库，拥有海量资源，实现 4K 观影自由！&lt;/p&gt;
 &lt;h2&gt;115 网盘（存影视资源）&lt;/h2&gt;
 &lt;ul&gt;
@@ -3072,66 +3250,6 @@ argument-hint: [搜索关键词]
 &lt;h2&gt;七.写在最后&lt;/h2&gt;
 &lt;p&gt;Claude Code确实是目前最好用的AI编程工具之一，它不像其他工具那样花哨，而是专注于真正提升你的编程效率。当然，一些简单的任务基本用不到AI，反而会拖累你的效率，日常可以根据自己的实际情况，是否使用AI辅助。&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;以上，既然看到这里了，如果觉得不错，随手点个赞、在看、转发三连吧，如果想第一时间收到推送，也可以给我个星标⭐～谢谢你看我的文章，我们，下次再见。&lt;/em&gt;&lt;/p&gt;
-</content:encoded></item><item><title>OBS摄像头一键移动插件</title><link>https://dqtx.cc/posts/software/obs%E6%91%84%E5%83%8F%E5%A4%B4%E4%B8%80%E9%94%AE%E7%A7%BB%E5%8A%A8%E6%8F%92%E4%BB%B6/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/obs%E6%91%84%E5%83%8F%E5%A4%B4%E4%B8%80%E9%94%AE%E7%A7%BB%E5%8A%A8%E6%8F%92%E4%BB%B6/</guid><description>想让 OBS 摄像头实现「一键移动+一键复位」的平滑效果？不管是直播过场切换、录课构图调整，还是避免画面遮挡，motion-effect 插件都能轻松搞定！无需复杂操作，3 步就能实现精准位移，让你的...</description><pubDate>Thu, 15 Jan 2026 11:20:00 GMT</pubDate><content:encoded>&lt;p&gt;想让 OBS 摄像头实现「一键移动+一键复位」的平滑效果？不管是直播过场切换、录课构图调整，还是避免画面遮挡，motion-effect 插件都能轻松搞定！无需复杂操作，3 步就能实现精准位移，让你的画面切换更专业～&lt;/p&gt;
-&lt;h2&gt;一、插件简介&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;开发者：CatxFish（免费开源）&lt;/li&gt;
-&lt;li&gt;核心功能：画面平滑运动控制（平移、旋转、变焦等），支持往返触发&lt;/li&gt;
-&lt;li&gt;适配设备：绝大多数普通 USB 摄像头、部分 PTZ 摄像头&lt;/li&gt;
-&lt;li&gt;兼容系统：Windows、macOS、Linux&lt;/li&gt;
-&lt;li&gt;项目地址：https://github.com/CatxFish/motion-effect&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;二、安装步骤&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;下载对应系统安装包，解压后将文件放入 obs-studio 主文件夹&lt;/li&gt;
-&lt;li&gt;重启 OBS 完成生效&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2&gt;三、前置准备&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;场景名：教程（可自定义）&lt;/li&gt;
-&lt;li&gt;源：摄像头、显示器（按需添加）&lt;/li&gt;
-&lt;li&gt;目标效果：按快捷键 → 摄像头右下移动；再按快捷键 → 摄像头左上返回&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;四、配置流程&lt;/h2&gt;
-&lt;h3&gt;1. 记录初始坐标&lt;/h3&gt;
-&lt;p&gt;右键「源→摄像头」→ 变换→编辑变换，记录初始坐标（示例：1725, 489）&lt;/p&gt;
-&lt;h3&gt;2. 添加运动滤镜&lt;/h3&gt;
-&lt;p&gt;选中场景「教程」→ 右键→滤镜→效果滤镜→左下角「+」→ 选择「Motion」&lt;br /&gt;
-命名滤镜（自定义），核心参数配置：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Trigger Behavior 设为「Hotkey (Round trip)」（往返模式）&lt;/li&gt;
-&lt;li&gt;填写记录的初始坐标与目标坐标（示例目标：1735, 539）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260117005310134.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;3. 绑定快捷键&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;OBS 顶部→设置→快捷键&lt;/li&gt;
-&lt;li&gt;找到对应滤镜，为「Forward」和「Backward」绑定同一快捷键（示例：Alt+K）&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260117005511984.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;五、效果说明&lt;/h2&gt;
-&lt;p&gt;&lt;img alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;以上就是 motion-effect 插件的核心配置流程，全程聚焦「快速部署+实用效果」，无需多余步骤！插件轻量开源，兼容主流系统与摄像头，如需调整移动距离、速度或拓展多档位，直接修改坐标与参数即可。&lt;/p&gt;
-&lt;p&gt;✨ &lt;strong&gt;互动时间&lt;/strong&gt;&lt;br /&gt;
-你平时用 OBS 做直播/录课时，还遇到过哪些画面调整的难题？欢迎在评论区留言分享，我会一一解答～&lt;/p&gt;
-&lt;p&gt;如果觉得这篇教程对你有帮助，别忘了&lt;strong&gt;点赞+收藏+转发&lt;/strong&gt;三连呀！关注我，后续分享更多OBS 实用技巧、效率工具干货，下次见～ 👋&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;大强远程技术支持：742112.xyz&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;+86新注册电报，绕过sms收费
-1、换IP，建议，美 日 新 节点，不建议香港节点。
-2、换客户端，telegramx，或者这两个。
-[telegramx](https://github.com/TGX-Android/Telegram-X/releases) [第三方客户端](https://github.com/forkgram/TelegramAndroid/releases) [飞机旧版](https://www.apkmirror.com/uploads/?devcategory=telegram-fz-llc) 
-
-3、卡bug，可以邮箱验证优先邮箱验证。
-
-遇到付费解密强制重启app，多试几次有概率可以跳过。
-&lt;/code&gt;&lt;/pre&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;+86新注册电报，绕过sms收费&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;1、换IP，建议，美 日 新 节点，不建议香港节点。
-2、换客户端，telegramx，或者这两个。
-&lt;a href=&quot;https://github.com/TGX-Android/Telegram-X/releases&quot;&gt;telegramx&lt;/a&gt; &lt;a href=&quot;https://github.com/forkgram/TelegramAndroid/releases&quot;&gt;第三方客户端&lt;/a&gt; &lt;a href=&quot;https://www.apkmirror.com/uploads/?devcategory=telegram-fz-llc&quot;&gt;飞机旧版&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;3、卡bug，可以邮箱验证优先邮箱验证。遇到付费解密强制重启app，多试几次有概率可以跳过。&lt;/p&gt;
-&lt;/blockquote&gt;
 </content:encoded></item><item><title>Passkeys通行密钥</title><link>https://dqtx.cc/posts/technical/passkeys%E9%80%9A%E8%A1%8C%E5%AF%86%E9%92%A5/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/passkeys%E9%80%9A%E8%A1%8C%E5%AF%86%E9%92%A5/</guid><description>你是否厌倦了记密码？设个简单的不安全，设个复杂的记不住？每次登录还要翻找密码本、或者点那该死的&apos;忘记密码&apos;？这几天测试了一圈Passkeys（通行密钥），我只能...</description><pubDate>Thu, 15 Jan 2026 11:20:00 GMT</pubDate><content:encoded>&lt;p&gt;你是否厌倦了记密码？设个简单的不安全，设个复杂的记不住？每次登录还要翻找密码本、或者点那该死的&quot;忘记密码&quot;？这几天测试了一圈&lt;strong&gt;Passkeys（通行密钥）&lt;/strong&gt;，我只能说：**真TM牛逼！**以后再也不用记密码了，指纹一按、Face ID 一扫，直接登录，速度那叫一个快！今天就给大家分享这个让密码彻底淘汰的神仙技术。&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h2&gt;一、什么是 Passkeys？&lt;/h2&gt;
@@ -3294,6 +3412,66 @@ https://www.passkeys.com/websites-with-passkey-support-sites-directory&lt;/p&gt;
 &lt;li&gt;建议配合密码管理器使用，覆盖不支持的场景&lt;/li&gt;
 &lt;li&gt;多设备备份很重要，别只依赖单一设备&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>OBS摄像头一键移动插件</title><link>https://dqtx.cc/posts/software/obs%E6%91%84%E5%83%8F%E5%A4%B4%E4%B8%80%E9%94%AE%E7%A7%BB%E5%8A%A8%E6%8F%92%E4%BB%B6/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/obs%E6%91%84%E5%83%8F%E5%A4%B4%E4%B8%80%E9%94%AE%E7%A7%BB%E5%8A%A8%E6%8F%92%E4%BB%B6/</guid><description>想让 OBS 摄像头实现「一键移动+一键复位」的平滑效果？不管是直播过场切换、录课构图调整，还是避免画面遮挡，motion-effect 插件都能轻松搞定！无需复杂操作，3 步就能实现精准位移，让你的...</description><pubDate>Thu, 15 Jan 2026 11:20:00 GMT</pubDate><content:encoded>&lt;p&gt;想让 OBS 摄像头实现「一键移动+一键复位」的平滑效果？不管是直播过场切换、录课构图调整，还是避免画面遮挡，motion-effect 插件都能轻松搞定！无需复杂操作，3 步就能实现精准位移，让你的画面切换更专业～&lt;/p&gt;
+&lt;h2&gt;一、插件简介&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;开发者：CatxFish（免费开源）&lt;/li&gt;
+&lt;li&gt;核心功能：画面平滑运动控制（平移、旋转、变焦等），支持往返触发&lt;/li&gt;
+&lt;li&gt;适配设备：绝大多数普通 USB 摄像头、部分 PTZ 摄像头&lt;/li&gt;
+&lt;li&gt;兼容系统：Windows、macOS、Linux&lt;/li&gt;
+&lt;li&gt;项目地址：https://github.com/CatxFish/motion-effect&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;二、安装步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;下载对应系统安装包，解压后将文件放入 obs-studio 主文件夹&lt;/li&gt;
+&lt;li&gt;重启 OBS 完成生效&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;三、前置准备&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;场景名：教程（可自定义）&lt;/li&gt;
+&lt;li&gt;源：摄像头、显示器（按需添加）&lt;/li&gt;
+&lt;li&gt;目标效果：按快捷键 → 摄像头右下移动；再按快捷键 → 摄像头左上返回&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;四、配置流程&lt;/h2&gt;
+&lt;h3&gt;1. 记录初始坐标&lt;/h3&gt;
+&lt;p&gt;右键「源→摄像头」→ 变换→编辑变换，记录初始坐标（示例：1725, 489）&lt;/p&gt;
+&lt;h3&gt;2. 添加运动滤镜&lt;/h3&gt;
+&lt;p&gt;选中场景「教程」→ 右键→滤镜→效果滤镜→左下角「+」→ 选择「Motion」&lt;br /&gt;
+命名滤镜（自定义），核心参数配置：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Trigger Behavior 设为「Hotkey (Round trip)」（往返模式）&lt;/li&gt;
+&lt;li&gt;填写记录的初始坐标与目标坐标（示例目标：1735, 539）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260117005310134.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;3. 绑定快捷键&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;OBS 顶部→设置→快捷键&lt;/li&gt;
+&lt;li&gt;找到对应滤镜，为「Forward」和「Backward」绑定同一快捷键（示例：Alt+K）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260117005511984.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;五、效果说明&lt;/h2&gt;
+&lt;p&gt;&lt;img alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;以上就是 motion-effect 插件的核心配置流程，全程聚焦「快速部署+实用效果」，无需多余步骤！插件轻量开源，兼容主流系统与摄像头，如需调整移动距离、速度或拓展多档位，直接修改坐标与参数即可。&lt;/p&gt;
+&lt;p&gt;✨ &lt;strong&gt;互动时间&lt;/strong&gt;&lt;br /&gt;
+你平时用 OBS 做直播/录课时，还遇到过哪些画面调整的难题？欢迎在评论区留言分享，我会一一解答～&lt;/p&gt;
+&lt;p&gt;如果觉得这篇教程对你有帮助，别忘了&lt;strong&gt;点赞+收藏+转发&lt;/strong&gt;三连呀！关注我，后续分享更多OBS 实用技巧、效率工具干货，下次见～ 👋&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;大强远程技术支持：742112.xyz&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;+86新注册电报，绕过sms收费
+1、换IP，建议，美 日 新 节点，不建议香港节点。
+2、换客户端，telegramx，或者这两个。
+[telegramx](https://github.com/TGX-Android/Telegram-X/releases) [第三方客户端](https://github.com/forkgram/TelegramAndroid/releases) [飞机旧版](https://www.apkmirror.com/uploads/?devcategory=telegram-fz-llc) 
+
+3、卡bug，可以邮箱验证优先邮箱验证。
+
+遇到付费解密强制重启app，多试几次有概率可以跳过。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;+86新注册电报，绕过sms收费&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1、换IP，建议，美 日 新 节点，不建议香港节点。
+2、换客户端，telegramx，或者这两个。
+&lt;a href=&quot;https://github.com/TGX-Android/Telegram-X/releases&quot;&gt;telegramx&lt;/a&gt; &lt;a href=&quot;https://github.com/forkgram/TelegramAndroid/releases&quot;&gt;第三方客户端&lt;/a&gt; &lt;a href=&quot;https://www.apkmirror.com/uploads/?devcategory=telegram-fz-llc&quot;&gt;飞机旧版&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;3、卡bug，可以邮箱验证优先邮箱验证。遇到付费解密强制重启app，多试几次有概率可以跳过。&lt;/p&gt;
+&lt;/blockquote&gt;
 </content:encoded></item><item><title>md2wechat-skill安装教程</title><link>https://dqtx.cc/posts/aihacks/md2wechat-skill%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/md2wechat-skill%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</guid><pubDate>Sat, 03 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;如果你用Markdown写公众号文章，需要先复制内容到排版工具，再复制公众号很麻烦，既耗时间又难保证格式精美，每次操作都要反复调整，成了不少人的痛点，这几天在GitHub发现了&lt;strong&gt;md2wechat-skill&lt;/strong&gt;，听说能一键转换Markdown为精美排版并自动上传到微信草稿箱，好奇测试了下！&lt;/p&gt;
 &lt;p&gt;我安装踩了不少坑，终于搞定，流程算跑通了，不过吐槽下，我是在Claude中用的Ai模式真的慢，有这时间，我10篇文章都排版好了！不过做个记录，相信随着时间技术成熟，一切都会发生变化！&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/workany_writing_1280x720.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
