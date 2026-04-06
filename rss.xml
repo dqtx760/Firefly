@@ -2263,6 +2263,11 @@ Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
 &lt;p&gt;图标：C:\Program Files\Git\mingw64\share\git\git-for-windows.ico&lt;/p&gt;
 &lt;p&gt;保存，重启终端即可。&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;启动窗口大小哪里调&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;设置-启动-启动大小  &lt;strong&gt;注意不是调启动参数&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我2k分辨率  设置150  40&lt;/p&gt;
 &lt;p&gt;**PS.**远程服务微信：dqtx33  付费社群：&lt;a href=&quot;https://t.zsxq.com/d4zSX&quot;&gt;点此报名&lt;/a&gt;&lt;/p&gt;
 </content:encoded></item><item><title>Happy：给Claude一双翅膀</title><link>https://dqtx.cc/posts/aihacks/cc-happy/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/cc-happy/</guid><pubDate>Sat, 14 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;我之前用AI编程一直特别拧巴：Claude Code明明能自己干活，可我必须守在电脑前，它每走一步都要等我确认才能继续。直到我用上了 Happy，它直接把电脑上的 Claude Code 实时映射到手机，不把代码文件上传云端，数据全程端到端加密，不用经过第三方服务器，既能随时随地查看和控制，安全感也拉满，彻底摆脱了必须坐在电脑前的束缚。&lt;/p&gt;
 &lt;h2&gt;什么是Happy&lt;/h2&gt;
