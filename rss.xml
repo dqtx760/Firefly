@@ -62,6 +62,43 @@
 &lt;li&gt;⛓️ Web3教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867794661334761497#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;🛠️ 技术教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867808112450912266#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>Obsidian日记半自动化</title><link>https://dqtx.cc/posts/software/daily/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/daily/</guid><pubDate>Thu, 09 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;在 Obsidian 打造高效日记自动化，核心插件是基础，模板是骨架，辅助插件是关键。&lt;/p&gt;
+&lt;p&gt;本文聚焦 Calendar、Templater、Dataview 三大插件，带你从 0 到 1 搭建模板、配置自动调用，实现日记一键生成、结构统一。&lt;/p&gt;
+&lt;p&gt;额外分享两款实用工具，拉满创建效率与体验，一站式打通 Obsidian 日记工作流闭环，让记录更轻松、复盘更高效。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260408235725942.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;1.开启核心插件：日记 &amp;amp; 模板&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;首先在 Obsidian 内置核心插件中，开启两个关键功能：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1.打开 Obsidian → 点击左下角设置 → 进入「核心插件」&lt;/p&gt;
+&lt;p&gt;2.开启 &lt;strong&gt;日记&lt;/strong&gt; 和 &lt;strong&gt;模板&lt;/strong&gt; 两个选项&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;设置模板路径&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260409115138831.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;设置日记相关路径&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;注意⚠️：新存放位置/日记模板位置→复制基于库的相对路径&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260409115155521.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;2.安装插件Calendar&amp;amp;Template&lt;/h2&gt;
+&lt;p&gt;Calendar这个插件可以实现点击日历中的任意日期，自动在指定文件夹创建对应日期的笔记（自动套用模板）无需复杂的设置，&lt;/p&gt;
+&lt;p&gt;不过还需要配合Template插件来用。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;安装Template&lt;/strong&gt;，设置如下&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260408234649216.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;绑定文件夹对应不同的模板&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260408234731402.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;3.安装插件Dataview&lt;/h2&gt;
+&lt;p&gt;Dataview是 Obsidian 里的“智能检索 + 数据统计工具”&lt;/p&gt;
+&lt;p&gt;它不用你手动整理、汇总，只需要写几句简单的查询语句，比如我在我日记的模板结尾这样写：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;今日新建&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;table without id
+  file.folder as &quot;分类&quot;,
+  file.link as &quot;笔记&quot;
+where file.mday = date(&quot;{{date}}&quot;)
+sort file.folder, file.name asc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;今日修改&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;list
+where file.mday = date(&quot;{{date}}&quot;)
+sort file.mtime asc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;以上。Obsidian 日记自动化的核心配置就全部完成了！&lt;/p&gt;
+&lt;p&gt;通过核心插件与3个增强插件的组合，我们实现了：一键新建日记、模板自动套用、内容动态汇总、复盘数据化」的完整工作流。&lt;/p&gt;
 </content:encoded></item><item><title>秘塔回响语音输入法</title><link>https://dqtx.cc/posts/software/%E7%A7%98%E5%A1%94%E5%9B%9E%E5%93%8D/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E7%A7%98%E5%A1%94%E5%9B%9E%E5%93%8D/</guid><pubDate>Tue, 07 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;大多数人以为，AI语音输入法的功能就是把语音变成文字。&lt;/p&gt;
 &lt;p&gt;但真相是，&lt;strong&gt;最好的AI语音输入法，根本不需要你动手。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;今天只讲一个工具——秘塔科技刚发布的「秘塔回响」。&lt;/p&gt;
