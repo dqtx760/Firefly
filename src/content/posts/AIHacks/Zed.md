@@ -7,11 +7,17 @@ draft: false
 pinned: false
 ---
 
-Zed 是 Rust 编写、GPU 加速的跨平台开源代码编辑器（Windows/macOS/Linux），主打**极速性能、原生 AI 代理协作、实时多人开发**，定位为下一代 AI 驱动的 IDE，由 Atom/Tree-sitter 核心团队打造，兼顾个人开发与团队协作Zed
+近期代码圈掀起热潮，不少深耕VS Code、Sublime的开发者，纷纷转向Zed编辑器。
 
 
 
-定价：基础编辑器永久免费（无 AI 功能）；Zed Pro 含免费额度，付费版 20 美元 / 月（500 次提示），协作功能全用户免费
+起初我并未在意，亲身试用一周便彻底舍弃旧工具，这款编辑器精准拿捏了程序员的核心需求。依托Rust构建，它性能拉满，打开大容量代码库、函数跳转、全局搜索均无延迟，告别卡顿与加载等待，极致丝滑的编写体验，让人用过便难以割舍。
+
+
+
+定价：基础编辑器永久免费（无 AI 功能）；
+
+Zed Pro 含免费额度，付费版 20 美元 / 月（500 次提示），协作功能全用户免费
 
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260409135131089.webp)
 
@@ -23,11 +29,12 @@ https://zed.dev/
 
 汉化版：
 
-https://github.com/x6nux/zed-globalization
-
-https://github.com/tc999/zed-loc
-
-https://github.com/qq602431132/zed-fanyi
+> https://github.com/x6nux/zed-globalization
+>
+> https://github.com/tc999/zed-loc
+>
+> https://github.com/qq602431132/zed-fanyi
+>
 
 
 
@@ -86,3 +93,7 @@ Ctrl + Shift + /打开Agent面板选择opencode进行对话
 
 
 而且社区插件生态虽然不如 VS Code 成熟，但常用的插件基本都有，足够满足日常开发需求，关键是插件加载也快，不会拖慢编辑器速度。
+
+
+
+文章来源：[dqtx.cc](https://www.dqtx.cc/)  远程技术支持：[742112.xyz](https://www.742112.xyz/)
