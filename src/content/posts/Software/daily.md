@@ -1,5 +1,5 @@
 ---
-title: Obsidian日记半自动化
+title: Obsidian日记半自动化流程
 published: 2026-04-09
 tags: []
 category: Software
