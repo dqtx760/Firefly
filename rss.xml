@@ -64,6 +64,7 @@
 &lt;/ul&gt;
 </content:encoded></item><item><title>Zed安装使用教程</title><link>https://dqtx.cc/posts/aihacks/zed/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/zed/</guid><pubDate>Thu, 09 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Zed 是 Rust 编写、GPU 加速的跨平台开源代码编辑器（Windows/macOS/Linux），主打&lt;strong&gt;极速性能、原生 AI 代理协作、实时多人开发&lt;/strong&gt;，定位为下一代 AI 驱动的 IDE，由 Atom/Tree-sitter 核心团队打造，兼顾个人开发与团队协作Zed&lt;/p&gt;
 &lt;p&gt;定价：基础编辑器永久免费（无 AI 功能）；Zed Pro 含免费额度，付费版 20 美元 / 月（500 次提示），协作功能全用户免费&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260409135131089.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;一.下载安装&lt;/h2&gt;
 &lt;p&gt;官方版：&lt;/p&gt;
 &lt;p&gt;https://zed.dev/&lt;/p&gt;
@@ -79,7 +80,6 @@
 &lt;pre&gt;&lt;code&gt;regsvr32 windowsperformancerecordercontrol.DLL
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;二.初始配置&lt;/h2&gt;
-&lt;h3&gt;&lt;/h3&gt;
 &lt;h3&gt;1.&lt;strong&gt;常用快捷键&lt;/strong&gt;&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;打开设置：&lt;code&gt;Ctrl + ,&lt;/code&gt;&lt;/li&gt;
