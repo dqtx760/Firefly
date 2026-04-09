@@ -30,13 +30,13 @@ pinned: false
 
 **设置模板路径**
 
-![img](https://xodnytdcaw.feishu.cn/space/api/box/stream/download/asynccode/?code=Y2RlNjA4ZTM0YzBmMDQzYzc5MjUxNjJiYmVmOGE0MGRfQzlqRVdBTnJONWlhaHdRY2VTa09qT0NHSlBOdmIwdG9fVG9rZW46VWl6TmJvaU9sb015Y1B4VTNNbWNIWkQ5bjdlXzE3NzU2NjIzNTM6MTc3NTY2NTk1M19WNA)
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260409115138831.webp)
 
 **设置日记相关路径**
 
 注意⚠️：新存放位置/日记模板位置→复制基于库的相对路径
 
-![img](https://xodnytdcaw.feishu.cn/space/api/box/stream/download/asynccode/?code=NjBlNWQ0MTIwODA2OWQ3Y2I0YWI0ZmIwY2FmZTgzYzZfM2lqOTRrTElYZVEzYzZuelkzU1RuREdCM011Z2hUakxfVG9rZW46VDhoNmJKVUg0b2xNa1p4YzdBdmNCRzFGbjdmXzE3NzU2NjIzNTM6MTc3NTY2NTk1M19WNA)
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260409115155521.webp)
 
 
 
