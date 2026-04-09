@@ -13,7 +13,7 @@ Zed 是 Rust 编写、GPU 加速的跨平台开源代码编辑器（Windows/macO
 
 定价：基础编辑器永久免费（无 AI 功能）；Zed Pro 含免费额度，付费版 20 美元 / 月（500 次提示），协作功能全用户免费
 
-
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260409135131089.webp)
 
 ## 一.下载安装
 
@@ -47,7 +47,7 @@ regsvr32 windowsperformancerecordercontrol.DLL
 
 ## 二.初始配置
 
-### 
+ 
 
 ### 1.**常用快捷键**
 
