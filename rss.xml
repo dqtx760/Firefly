@@ -62,6 +62,37 @@
 &lt;li&gt;⛓️ Web3教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867794661334761497#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;🛠️ 技术教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867808112450912266#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>装系统3天，败给一个镜像</title><link>https://dqtx.cc/posts/technical/zhuangji/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/zhuangji/</guid><pubDate>Sat, 11 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天想和大家分享一下我最近装系统的糟心经历，前前后后耽误了整整三天时间，最后才找到问题根源，也算是给自己上了一课。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/2026-04-11-23-55.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;第三方镜像连续报错&lt;/h2&gt;
+&lt;p&gt;事情的起因是我想给电脑重装系统，平时我也经常帮身边人装系统，自认为还算有经验，就去远景论坛找系统镜像，看到两款标注为Windows26H1精简优化镜像，就直接下载下来准备安装。&lt;/p&gt;
+&lt;p&gt;先是安装第一款镜像，用PE安装万拔掉U盘，结果报错&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;“ 你的设备遇到问题，需要重启。我们将为你重新启动。
+
+终止代码：MULTIPROCESSOR_CONFIGURATION_NOT_SUPPORTED (Ox3E)”
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;我想着可能是这款镜像不合适，就换了论坛里的另一款，结果再次安装还是失败，还弹出了报错同样的报错，当时我第一时间去全网搜索这个错误代码，翻遍了各种技术论坛、问答平台，居然没有找到任何人遇到过相同的问题，只看到微软官方一个说明，心里顿时就慌了。&lt;/p&gt;
+&lt;p&gt;微软官方参考
+https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/bug-check-0x3e--multiprocessor-configuration-not-supported?redirectedfrom=MSDN&lt;/p&gt;
+&lt;h2&gt;换 PE、怀疑硬件都没用&lt;/h2&gt;
+&lt;p&gt;之后我就开始各种折腾，换了好几个不同的PE工具，反复尝试安装，可结果全都是同样的报错。那时候我完全陷入了误区，一直觉得是电脑本身出了硬件故障，要么就是我用的PE工具不对劲，从来没有往系统镜像本身出问题这方面想。&lt;/p&gt;
+&lt;p&gt;就这样来来回回折腾了三天，电脑系统没装成，还浪费了大量时间和精力，实在是走投无路了。直到今天早上，我抱着试试的心态，在拼多多找了一位远程维修师傅帮忙。&lt;/p&gt;
+&lt;h2&gt;真相大白：原来是镜像不兼容&lt;/h2&gt;
+&lt;p&gt;师傅远程操作之后，很快就把系统装好了，我在一旁看着他的装机方法，才发现他根本没用我找的那些镜像，而是用装机助手自动下载了&lt;strong&gt;微软官方原版系统&lt;/strong&gt;，安装过程十分顺利，一次性就成功了。&lt;/p&gt;
+&lt;p&gt;直到这一刻我才恍然大悟：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原来我一直纠结于PE工具、电脑硬件，却唯独没有怀疑过自己下载的第三方镜像有问题。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;正是因为一直死磕这两款不兼容的镜像，才导致反复安装失败，白白耽误了三天时间。&lt;/p&gt;
+&lt;p&gt;这件事也让我彻底明白了一个道理：&lt;strong&gt;自己装系统的时候，如果遇到安装失败的问题，不要第一时间就认定是PE工具不行，也不要盲目怀疑电脑硬件故障，很有可能是你使用的系统镜像，和电脑硬件不兼容，归根结底就是镜像本身的问题&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;也希望把我的这次踩坑经历分享给大家，以后装系统尽量选择官方原版镜像，别再像我一样，在第三方镜像上浪费时间，走不必要的弯路了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;PS.&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;远程服务微信：dqtx33&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;付费社群：&lt;a href=&quot;https://t.zsxq.com/d4zSX&quot;&gt;点此加入&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 </content:encoded></item><item><title>开源免费，浏览器编辑本地mrkdown</title><link>https://dqtx.cc/posts/software/chajianm/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/chajianm/</guid><pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;平时用 Markdown 写笔记、存文档，总被两个问题困扰：要么打开笨重的专用编辑器占内存，要么拖进浏览器只能看纯文本乱码；尤其是管理 Obsidian 仓库、本地项目文档时，多文件切换来回找路径，效率大打折扣。&lt;/p&gt;
 &lt;p&gt;这款开源的 Chrome Markdown Editor 插件完美解决了这些问题，让浏览器变身轻量本地编辑器，数据不上云、操作零门槛，Obsidian 用户和开发者都能直接冲！&lt;/p&gt;
 &lt;p&gt;项目地址：https://github.com/yishu-ziyu/chrome-md-editor&lt;/p&gt;
@@ -69,7 +100,7 @@
 &lt;h2&gt;3步搞定安装&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;在项目releases下载压缩包,开启右上角的 “开发者模式”。&lt;/p&gt;
+&lt;p&gt;在项目releases下载压缩包&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;打开 Chrome 扩展页（chrome://extensions/）,开启右上角的 “开发者模式”。&lt;/p&gt;
@@ -83,8 +114,15 @@
 &lt;p&gt;&lt;strong&gt;编辑现有文件&lt;/strong&gt;：直接将本地.md 文件&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;选择本地项目目录&lt;/strong&gt;：
 添加后即可在侧边栏浏览该文件夹下的所有.md 文件，点击即可打开编辑，编辑完之后Ctrl+S保存，新建文件编辑完成后，点击保存按钮，选择本地保存路径即可。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/PixPin_2026-04-10_19-29-48.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;如果你是 Obsidian、Logseq 等笔记软件用户，需要快速编辑本地仓库文件；或是开发者经常写技术文档、项目 README，需要实时预览和图表功能；又或是讨厌装臃肿软件，追求浏览器一站式办公的效率党，这款插件绝对值得一试。&lt;/p&gt;
 &lt;p&gt;开源免费、轻量无广告、隐私安全，3 步安装就能让 Chrome 变身全能本地 Markdown 编辑器，赶紧下载体验，让文档编辑更高效！&lt;/p&gt;
+&lt;p&gt;我后续会进行二次开发&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;右侧的预览区增加一个，复制到公众号&lt;/li&gt;
+&lt;li&gt;编辑预览效果的CSS尤其是代码块太丑&lt;/li&gt;
+&lt;li&gt;最左边的文件增加一个新建文件&lt;/li&gt;
+&lt;/ul&gt;
 </content:encoded></item><item><title>Zed安装使用教程</title><link>https://dqtx.cc/posts/aihacks/zed/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/zed/</guid><pubDate>Thu, 09 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;近期代码圈掀起热潮，不少深耕VS Code、Sublime的开发者，纷纷转向Zed编辑器。&lt;/p&gt;
 &lt;p&gt;起初我并未在意，亲身试用一周便彻底舍弃旧工具，这款编辑器精准拿捏了程序员的核心需求。依托Rust构建，它性能拉满，打开大容量代码库、函数跳转、全局搜索均无延迟，告别卡顿与加载等待，极致丝滑的编写体验，让人用过便难以割舍。&lt;/p&gt;
 &lt;p&gt;定价：基础编辑器永久免费（无 AI 功能）；&lt;/p&gt;
