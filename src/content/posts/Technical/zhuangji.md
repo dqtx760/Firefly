@@ -1,5 +1,5 @@
 ---
-title: 装系统3天，败给一个镜像
+title: 记录一次装系统糟心经历！
 published: 2026-04-11
 tags: []
 category: Technical
