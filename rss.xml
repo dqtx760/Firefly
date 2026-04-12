@@ -234,21 +234,24 @@ start &quot;&quot; &quot;%bilibili%&quot;
 &lt;li&gt;在文件夹任意位置&lt;strong&gt;左键双击&lt;/strong&gt;调快捷菜单，一键添加收藏&lt;/li&gt;
 &lt;li&gt;可以自定义手动添加删减左键菜单项&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;设置项目迁移新设备&lt;/h2&gt;
+&lt;h2&gt;设置项迁移新设备&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;你需要手动复制配置文件，配置文件位于
 C:\Users%username%\AppData\Roaming\Listary\UserProfile\Settings\Preferences.json&lt;/p&gt;
-&lt;p&gt;具体步骤如下：
+&lt;p&gt;&lt;strong&gt;具体步骤如下&lt;/strong&gt;：
 1.新设备完全退出 Listary。
 2.再讲将新设备中的 Preferences.json 替换为配置好的Preferences.json 。
 3.重新打开 Listary。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;同类的产品还有&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Everything&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ftp.voidtools.com/zh-cn/downloads/&quot;&gt;Everything&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/Flow-Launcher/Flow.Launcher&quot;&gt;Flow Launcher&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;以上，后续我学到新的东西，会持续更新这篇文章！&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;ps&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;大强同学：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;远程服务:&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 </content:encoded></item><item><title>Dataview与Templater插件联动示例</title><link>https://dqtx.cc/posts/software/dataview/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/dataview/</guid><pubDate>Sun, 12 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;很多 Obsidian 深度用户在积累了上千篇笔记后，都会面临一个共同的痛点：&lt;strong&gt;存入容易，提取困难。&lt;/strong&gt; 知识库逐渐变成了一个只进不出的“数据黑洞”。&lt;/p&gt;
 &lt;p&gt;如果你还在使用基础的文件夹和标签管理笔记，那你就错过了 Obsidian 最强大的黑魔法。&lt;/p&gt;
 &lt;p&gt;今天，我们将结合 Obsidian 生态中的两大超神插件——&lt;strong&gt;Dataview&lt;/strong&gt;（数据查询引擎）和 &lt;strong&gt;Templater&lt;/strong&gt;（动态模板引擎），为你展示 6 个开箱即用的高级自动化脚本。&lt;/p&gt;
