@@ -139,12 +139,12 @@ start "" "%bilibili%"
 
 
 
-## 设置项目迁移新设备
+## 设置项迁移新设备
 
 > 你需要手动复制配置文件，配置文件位于
 > C:\Users\%username%\AppData\Roaming\Listary\UserProfile\Settings\Preferences.json
 >
-> 具体步骤如下：
+> **具体步骤如下**：
 > 1.新设备完全退出 Listary。
 > 2.再讲将新设备中的 Preferences.json 替换为配置好的Preferences.json 。
 > 3.重新打开 Listary。
@@ -153,9 +153,15 @@ start "" "%bilibili%"
 
 **同类的产品还有**
 
--  Everything
+-  [Everything](https://ftp.voidtools.com/zh-cn/downloads/)
 -  [Flow Launcher](https://github.com/Flow-Launcher/Flow.Launcher)
 
 
 
 以上，后续我学到新的东西，会持续更新这篇文章！
+
+*ps*.
+
+***大强同学：[dqtx.cc](https://www.dqtx.cc/)***
+
+***远程服务:[742112.xyz](https://www.742112.xyz/)***
