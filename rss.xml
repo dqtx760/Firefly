@@ -62,7 +62,422 @@
 &lt;li&gt;⛓️ Web3教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867794661334761497#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;🛠️ 技术教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867808112450912266#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>装系统3天，败给一个镜像</title><link>https://dqtx.cc/posts/technical/zhuangji/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/zhuangji/</guid><pubDate>Sat, 11 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天想和大家分享一下我最近装系统的糟心经历，前前后后耽误了整整三天时间，最后才找到问题根源，也算是给自己上了一课。&lt;/p&gt;
+</content:encoded></item><item><title>Listary完全使用指南！</title><link>https://dqtx.cc/posts/software/listary/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/listary/</guid><pubDate>Sun, 12 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Listary是一款知名的效率工具，以用户友好，使用方式简单而备受好评。&lt;/p&gt;
+&lt;p&gt;单论文件搜索，Listary 和 Everything 属于同一梯队，在搜索速度和内存占用上秒杀任何其他软件。&lt;/p&gt;
+&lt;p&gt;任何文件，只要你知道他的名称（或者部分名称），就能迅速找到并打开。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;官方网站&lt;/strong&gt;：https://www.listary.netdownload&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;官方说明文档&lt;/strong&gt;：https://help.listary.com/zh-Hans/search-file&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;升级到Listary Pro优惠通道&lt;/strong&gt;：&lt;a href=&quot;https://lizhi.shop/products/listary-pro?cid=wbm93g4b&quot;&gt;点此购买&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260412214257275.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;热键&lt;/h2&gt;
+&lt;p&gt;Listary的&lt;strong&gt;灵魂功能&lt;/strong&gt;，全局快捷键是效率核心：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;「双击 Ctrl」一键唤起搜索&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;「Ctrl+G」快速切换&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在任何软件的「打开文件」「保存文件」对话框里，按下 Ctrl+G，就能直接呼出 Listary 的快速跳转面板，一键跳转到你最近访问过的文件夹、收藏夹目录、常用项目路径，彻底不用再一层层点目录树找位置。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;文件搜索&lt;/h2&gt;
+&lt;p&gt;Listary 最核心的功能，秒级搜索的核心配置&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;过滤器：仅支持pro用户&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;索引“添加网络驱动器或本地文件夹”仅支持pro用户&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;动作&lt;/h2&gt;
+&lt;p&gt;自定义文件 / 文件夹的快捷操作菜单&lt;/p&gt;
+&lt;p&gt;可以自定义添加动作或删除默认不需要的动作&lt;/p&gt;
+&lt;h2&gt;命令&lt;/h2&gt;
+&lt;p&gt;常用的内置命令&lt;/p&gt;
+&lt;p&gt;mkdir---创建文件夹&lt;/p&gt;
+&lt;p&gt;cmd---打开命令行窗口&lt;/p&gt;
+&lt;p&gt;psh---PowerShell&lt;/p&gt;
+&lt;p&gt;PowerShell
+hosts---编辑 Hosts&lt;/p&gt;
+&lt;h3&gt;&lt;strong&gt;进阶玩法&lt;/strong&gt;示例：&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260412220340147.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;multi_search.bat（ANSI格式）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;@echo off
+chcp 65001 &amp;gt; nul
+:: 接收 Listary 传入的关键词
+set &quot;kw=%~1&quot;
+if &quot;%kw%&quot;==&quot;&quot; (
+    echo 请输入搜索关键词！
+    pause
+    exit /b
+)
+:: 编码关键词（处理中文/特殊字符）
+for /f &quot;delims=&quot; %%a in (&apos;powershell -Command &quot;[System.Web.HttpUtility]::UrlEncode(&apos;%kw%&apos;)&quot;&apos;) do set &quot;encoded_kw=%%a&quot;
+:: 各平台搜索链接（排序：谷歌 → 推特 → GitHub → 油管 → B站）
+set &quot;google=https://www.google.com/search?q=%encoded_kw%&quot;
+set &quot;twitter=https://twitter.com/search?q=%encoded_kw%&quot;
+set &quot;github=https://github.com/search?q=%encoded_kw%&quot;
+set &quot;youtube=https://www.youtube.com/results?search_query=%encoded_kw%&quot;
+set &quot;bilibili=https://search.bilibili.com/all?keyword=%encoded_kw%&quot;
+:: 按排序批量打开
+start &quot;&quot; &quot;%google%&quot;
+start &quot;&quot; &quot;%twitter%&quot;
+start &quot;&quot; &quot;%github%&quot;
+start &quot;&quot; &quot;%youtube%&quot;
+start &quot;&quot; &quot;%bilibili%&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;网络搜索&lt;/h2&gt;
+&lt;p&gt;左键双击-选项-网络搜索，删除你不需要的项目&lt;/p&gt;
+&lt;p&gt;建议保留谷歌/百度/必应（g/b/ing/）这&lt;strong&gt;3&lt;/strong&gt;个&lt;/p&gt;
+&lt;p&gt;再配置添加如下**18*个规则“”&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;项目&lt;/th&gt;
+&lt;th&gt;URL&lt;/th&gt;
+&lt;th&gt;搜索提示&amp;amp;Custom&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;X-sou&lt;/td&gt;
+&lt;td&gt;https://x-sou.com/search?q={query}&amp;amp;tab=tweets&amp;amp;sort=latest&lt;/td&gt;
+&lt;td&gt;Google&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Luxirty Search&lt;/td&gt;
+&lt;td&gt;https://s.ccino.org/search?q={query}&lt;/td&gt;
+&lt;td&gt;Bing&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;GitHub&lt;/td&gt;
+&lt;td&gt;https://github.com/search?q={query}&lt;/td&gt;
+&lt;td&gt;cmd /k gh {query}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;即刻&lt;/td&gt;
+&lt;td&gt;https://web.okjike.com/search?q={query}&lt;/td&gt;
+&lt;td&gt;Baidu&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;推特&lt;/td&gt;
+&lt;td&gt;https://twitter.com/search?q={query}&lt;/td&gt;
+&lt;td&gt;http://suggestqueries.google.com/complete/search?client=witter&amp;amp;ds=yt&amp;amp;client=firefox&amp;amp;q={query}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;小红书&lt;/td&gt;
+&lt;td&gt;https://www.xiaohongshu.com/search_result?keyword={query}&lt;/td&gt;
+&lt;td&gt;https://www.xiaohongshu.com/search_result?keyword={query}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;抖音&lt;/td&gt;
+&lt;td&gt;https://www.douyin.com/search/{query}&lt;/td&gt;
+&lt;td&gt;cmd /k tt {query}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;油管&lt;/td&gt;
+&lt;td&gt;http://youtube.com/results?q={query}&lt;/td&gt;
+&lt;td&gt;http://suggestqueries.google.com/complete/search?client=youtube&amp;amp;ds=yt&amp;amp;client=firefox&amp;amp;q={query}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;B站&lt;/td&gt;
+&lt;td&gt;https://search.bilibili.com/all?keyword={query}&amp;amp;order=click&lt;/td&gt;
+&lt;td&gt;https://search.bilibili.com/all?keyword={query}&amp;amp;tids=36&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;csdn&lt;/td&gt;
+&lt;td&gt;https://so.csdn.net/so/search?q={query}&lt;/td&gt;
+&lt;td&gt;https://www.csdn.net/api/v1/search/suggestion?keyword={query}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;知乎&lt;/td&gt;
+&lt;td&gt;https://www.zhihu.com/search?type=content&amp;amp;q={query}&lt;/td&gt;
+&lt;td&gt;Google&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Kimi&lt;/td&gt;
+&lt;td&gt;https://kimi.moonshot.cn/_prefill_chat?send_immediately=true&amp;amp;prefill_prompt={query}&lt;/td&gt;
+&lt;td&gt;Baidu&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;秘塔AI搜索&lt;/td&gt;
+&lt;td&gt;https://metaso.cn/?q={query}&lt;/td&gt;
+&lt;td&gt;https://suggestqueries.google.com/complete/search?client=chrome&amp;amp;q={query}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Perplexity&lt;/td&gt;
+&lt;td&gt;https://www.perplexity.ai/search?q={query}&lt;/td&gt;
+&lt;td&gt;https://suggestqueries.google.com/complete/search?client=chrome&amp;amp;q={query}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Grok&lt;/td&gt;
+&lt;td&gt;https://grok.com/?q={query}https://www.zhihu.com/search?type=content&amp;amp;q={query}&lt;/td&gt;
+&lt;td&gt;GoogleGoogle&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;X Grok&lt;/td&gt;
+&lt;td&gt;https://x.com/i/grok?text={query}https://web.okjike.com/search?q={query}&lt;/td&gt;
+&lt;td&gt;Google&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Greasy Fork&lt;/td&gt;
+&lt;td&gt;https://greasyfork.org/zh-CN/scripts?q={query}&lt;/td&gt;
+&lt;td&gt;Google&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;chrome商店&lt;/td&gt;
+&lt;td&gt;https://chromewebstore.google.com/search/{query}?hl=zh-CN&lt;/td&gt;
+&lt;td&gt;Google&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;菜单&lt;/h2&gt;
+&lt;p&gt;自定义 Listary 的&lt;strong&gt;做键菜单与快捷菜单&lt;/strong&gt;，深度整合文件管理器&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在文件夹任意位置&lt;strong&gt;左键双击&lt;/strong&gt;调快捷菜单，一键添加收藏&lt;/li&gt;
+&lt;li&gt;可以自定义手动添加删减左键菜单项&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;设置项目迁移新设备&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;你需要手动复制配置文件，配置文件位于
+C:\Users%username%\AppData\Roaming\Listary\UserProfile\Settings\Preferences.json&lt;/p&gt;
+&lt;p&gt;具体步骤如下：
+1.新设备完全退出 Listary。
+2.再讲将新设备中的 Preferences.json 替换为配置好的Preferences.json 。
+3.重新打开 Listary。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;同类的产品还有&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Everything&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Flow-Launcher/Flow.Launcher&quot;&gt;Flow Launcher&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以上，后续我学到新的东西，会持续更新这篇文章！&lt;/p&gt;
+</content:encoded></item><item><title>Dataview与Templater插件联动示例</title><link>https://dqtx.cc/posts/software/dataview/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/dataview/</guid><pubDate>Sun, 12 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;很多 Obsidian 深度用户在积累了上千篇笔记后，都会面临一个共同的痛点：&lt;strong&gt;存入容易，提取困难。&lt;/strong&gt; 知识库逐渐变成了一个只进不出的“数据黑洞”。&lt;/p&gt;
+&lt;p&gt;如果你还在使用基础的文件夹和标签管理笔记，那你就错过了 Obsidian 最强大的黑魔法。&lt;/p&gt;
+&lt;p&gt;今天，我们将结合 Obsidian 生态中的两大超神插件——&lt;strong&gt;Dataview&lt;/strong&gt;（数据查询引擎）和 &lt;strong&gt;Templater&lt;/strong&gt;（动态模板引擎），为你展示 6 个开箱即用的高级自动化脚本。&lt;/p&gt;
+&lt;p&gt;这 6 个案例将把你的 Obsidian 从“静态的纯文本仓库”彻底升级为&lt;strong&gt;带有弹窗交互、自动化整理和数据可视化分析的私人应用程序&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260412210757952.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;🛠️ 食用指南&lt;/h2&gt;
+&lt;p&gt;在开始之前，请确保你已经安装并启用了 &lt;code&gt;Dataview&lt;/code&gt; 和 &lt;code&gt;Templater&lt;/code&gt; 插件，并完成以下核心设置：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Dataview 设置&lt;/strong&gt;：必须开启 &lt;strong&gt;Enable JavaScript Queries&lt;/strong&gt;（启用 JavaScript 查询）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Templater 设置&lt;/strong&gt;：建议绑定一个快捷键（如 &lt;code&gt;Alt+E&lt;/code&gt;）用于一键呼出模板列表。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;将下方的代码分别复制并保存到你的“模板文件夹”中。使用时，在任意笔记中通过 Templater 插入该模板，即可触发极具交互感的弹窗查询！&lt;/p&gt;
+&lt;h2&gt;案例 1：全局搜索器&lt;/h2&gt;
+&lt;p&gt;Obsidian 自带搜索虽好用，但没法把结果固定在笔记里形成动态看板。输入关键词就能扫描整个知识库，精准提取包含关键词的内容，自动汇总成表格。&lt;/p&gt;
+&lt;p&gt;原生搜索做不到的 “结果留存” 它能实现，还能给不同核心项目建专属 “搜索看板笔记”。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```dataviewjs
+// 1. 设置你要搜索的关键词（测试成功后可换回 Templater 标签）
+const prompt = &quot;chrome&quot;;  
+// const prompt = &quot;&amp;lt;% tp.system.prompt(&apos;Query for&apos;) %&amp;gt;&quot;; 
+
+const files = app.vault.getMarkdownFiles();
+const results = [];
+
+// 2. DataviewJS 支持直接 await，使用 for...of 循环最稳定
+for (const file of files) {
+    // 排除当前文件自身（测试成功后可换回 Templater 标签）
+    const isCurrentFile = file.basename === &quot;未命名&quot;;
+    // const isCurrentFile = file.basename === &quot;&amp;lt;% tp.file.title %&amp;gt;&quot;;
+    
+    if (isCurrentFile) continue;
+
+    // 读取文件内容
+    const content = await app.vault.cachedRead(file);
+    
+    // 使用正则匹配包含 prompt 的行
+    const lines = content.split(&quot;\n&quot;).filter(line =&amp;gt; line.match(new RegExp(prompt, &quot;i&quot;)));
+    
+    // 如果有匹配结果，存入数组
+    if (lines.length &amp;gt; 0) {
+        const fileLink = `[[${file.basename}]]`;
+        results.push([fileLink, lines.join(&quot;\n&quot;)]);
+    }
+}
+
+// 3. 渲染标题和表格
+dv.header(1, prompt);
+if (results.length &amp;gt; 0) {
+    dv.table([&quot;File&quot;, &quot;Lines&quot;], results);
+} else {
+    dv.paragraph(&quot;没有找到匹配的结果。&quot;);
+}
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;案例 2：待办聚合器&lt;/h2&gt;
+&lt;p&gt;待办事项散落在日记、项目笔记、会议记录里，根本记不清自己到底留了多少没完成的任务。&lt;/p&gt;
+&lt;p&gt;一键汇总全库所有未打勾的 [ ] 任务，还支持关键词过滤。更方便的是，在生成的表格里直接打勾，原笔记的任务状态会自动同步更新！&lt;/p&gt;
+&lt;p&gt;借助 DataviewJS 的双向绑定属性，完美契合 GTD（搞定一切）的做事理念。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```dataviewjs
+// 1. 弹窗输入任务关键词 (留空直接回车则显示所有未完成任务)
+const keyword = &quot;&amp;lt;% tp.system.prompt(&apos;搜索未完成任务的关键词 (留空则显示所有):&apos;) %&amp;gt;&quot;;
+
+// 2. 获取整个库中所有未完成的任务
+let tasks = dv.pages().file.tasks.where(t =&amp;gt; !t.completed);
+
+// 3. 如果输入了关键词，则进行过滤
+if (keyword) {
+    tasks = tasks.where(t =&amp;gt; t.text.includes(keyword));
+}
+
+// 4. 渲染任务列表
+dv.header(2, keyword ? `🎯 包含 &quot;${keyword}&quot; 的未完成任务` : &quot;🎯 所有未完成任务&quot;);
+
+if (tasks.length &amp;gt; 0) {
+    // 使用 Dataview 原生的任务列表渲染，勾选后会自动同步到原文件！
+    dv.taskList(tasks, false);
+} else {
+    dv.paragraph(&quot;🎉 太棒了！没有找到符合条件的未完成任务。&quot;);
+}
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;案例 3：近期动态板&lt;/h2&gt;
+&lt;p&gt;写周报、隔几天打开软件时，完全想不起来最近一周在 Obsidian 里写了什么。输入天数，就能按时间倒序排列最近修改过的所有笔记，自己的数字足迹一眼看清。&lt;/p&gt;
+&lt;p&gt;结合 luxon 时间库，能精准复盘个人知识产出节奏，是写复盘报告的神器。。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```dataviewjs
+// 1. 弹窗询问天数，默认值为 7
+const daysInput = &quot;&amp;lt;% tp.system.prompt(&apos;查看最近几天修改过的笔记？(输入数字)&apos;, &apos;7&apos;) %&amp;gt;&quot;;
+const days = parseInt(daysInput);
+
+if (isNaN(days)) {
+    dv.paragraph(&quot;⚠️ 请输入有效的数字！&quot;);
+} else {
+    // 2. 计算目标时间线
+    const pastDate = luxon.DateTime.now().minus({ days: days });
+    
+    // 3. 筛选并按修改时间倒序排列
+    const recentPages = dv.pages()
+        .where(p =&amp;gt; p.file.mtime &amp;gt;= pastDate)
+        .sort(p =&amp;gt; p.file.mtime, &apos;desc&apos;);
+
+    // 4. 渲染表格
+    dv.header(2, `📅 最近 ${days} 天修改的笔记`);
+    
+    if (recentPages.length &amp;gt; 0) {
+        dv.table(
+            [&quot;📝 笔记名称&quot;, &quot;🕒 修改时间&quot;, &quot;📁 所在文件夹&quot;], 
+            recentPages.map(p =&amp;gt; [
+                p.file.link, 
+                p.file.mtime.toFormat(&quot;yyyy-MM-dd HH:mm&quot;),
+                p.file.folder || &quot;根目录&quot;
+            ])
+        );
+    } else {
+        dv.paragraph(&quot;这段时间内没有修改过任何笔记。&quot;);
+    }
+}
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;案例 4：低质扫描器&lt;/h2&gt;
+&lt;p&gt;随手建的笔记、只写了标题的占位符、没意义的空文件，就像知识库里的 “电子垃圾”，影响图谱整洁。&lt;/p&gt;
+&lt;p&gt;自动扫描全库，找出所有真实字符数低于你设定阈值的笔记，让你批量处理或补充内容。用 trim() 过滤无意义空格和换行，比系统自带的文件大小排序精准得多，强迫症必备。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```dataviewjs
+// 1. 弹窗询问字数阈值，默认 50 个字符
+const minLengthInput = &quot;&amp;lt;% tp.system.prompt(&apos;查找字符数少于多少的笔记？&apos;, &apos;50&apos;) %&amp;gt;&quot;;
+const minLength = parseInt(minLengthInput);
+
+const files = app.vault.getMarkdownFiles();
+const results = [];
+const currentTitle = &quot;&amp;lt;% tp.file.title %&amp;gt;&quot;;
+
+// 2. 遍历检查文件内容长度
+for (const file of files) {
+    if (file.basename === currentTitle) continue;
+
+    const content = await app.vault.cachedRead(file);
+    // 剔除空白字符后计算真实长度
+    const realLength = content.trim().length;
+    
+    if (realLength &amp;lt; minLength) {
+        results.push([`[[${file.basename}]]`, realLength]);
+    }
+}
+
+// 3. 渲染结果，按字数从少到多排序
+dv.header(2, `🗑️ 字数少于 ${minLength} 的笔记 (共 ${results.length} 篇)`);
+
+if (results.length &amp;gt; 0) {
+    results.sort((a, b) =&amp;gt; a[1] - b[1]);
+    dv.table([&quot;📝 笔记名称&quot;, &quot;📊 实际字符数&quot;], results);
+} else {
+    dv.paragraph(&quot;你的库很干净，没有找到超短笔记！&quot;);
+}
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;案例 5：灵感随机机&lt;/h2&gt;
+&lt;p&gt;写文章、做策划时没头绪，大脑陷入思维定势，想不出新点子。&lt;/p&gt;
+&lt;p&gt;像抽盲盒一样，从知识库中绝对随机抽取指定数量的笔记，让毫不相干的知识点强制碰撞，激发跨界灵感。&lt;/p&gt;
+&lt;p&gt;真正践行卢曼卡片盒笔记法 “发现意外连接” 的核心，让死知识 “活” 起来&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```dataviewjs
+// 1. 弹窗询问抽取几条随机笔记 (默认抽 3 条)
+const countInput = &quot;&amp;lt;% tp.system.prompt(&apos;想要碰撞几个随机灵感？(输入数字)&apos;, &apos;3&apos;) %&amp;gt;&quot;;
+const count = parseInt(countInput);
+
+if (isNaN(count) || count &amp;lt;= 0) {
+    dv.paragraph(&quot;⚠️ 请输入大于 0 的有效数字！&quot;);
+} else {
+    // 2. 获取所有笔记
+    const allPages = dv.pages().array();
+    
+    // 3. 排除当前笔记（避免抽到这个模板本身）
+    const currentTitle = &quot;&amp;lt;% tp.file.title %&amp;gt;&quot;;
+    const validPages = allPages.filter(p =&amp;gt; p.file.name !== currentTitle);
+
+    // 4. 洗牌算法 (Fisher-Yates) 实现真正的随机抽卡
+    for (let i = validPages.length - 1; i &amp;gt; 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [validPages[i], validPages[j]] = [validPages[j], validPages[i]];
+    }
+
+    // 5. 截取前 count 个笔记
+    const randomNotes = validPages.slice(0, count);
+
+    // 6. 渲染结果
+    dv.header(2, `🎲 你的 ${count} 个随机灵感`);
+    dv.list(randomNotes.map(p =&amp;gt; p.file.link));
+    dv.paragraph(&quot;&amp;gt; *试着找出这些笔记之间的隐藏联系，写一段话把它们串起来吧！*&quot;);
+}
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;案例 6：孤岛探测仪&lt;/h2&gt;
+&lt;p&gt;Obsidian 的灵魂是双向链接，但经常只记录不整理的话，很多笔记会变成既没连出去、也没被别人连进来的 “孤儿”。&lt;/p&gt;
+&lt;p&gt;直接读取底层连接图谱数据，一键筛查所有孤岛笔记，还能排除模板、日记等特定文件夹。&lt;/p&gt;
+&lt;p&gt;从宏观视角给知识库 “体检”，促使我们从单纯的知识 “收集者” 变成 “编织者”，最大化知识的复利效应。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```dataviewjs
+// 1. 弹窗确认是否扫描（可以用来做简单的交互确认）
+const confirm = &quot;&amp;lt;% tp.system.prompt(&apos;输入 Y 开始扫描全局孤岛笔记：&apos;, &apos;Y&apos;) %&amp;gt;&quot;;
+
+if (confirm.toUpperCase() === &apos;Y&apos;) {
+    // 2. 筛选条件：既没有出链 (outlinks)，也没有入链 (inlinks)
+    const orphans = dv.pages()
+        .where(p =&amp;gt; p.file.outlinks.length === 0 &amp;amp;&amp;amp; p.file.inlinks.length === 0);
+    
+    // 3. 排除特定文件夹（例如排除模板、日记等本就不需要强链接的文件夹）
+    // 你可以根据自己的习惯修改这里的路径，例如 !p.file.path.includes(&quot;Templates&quot;)
+    const filteredOrphans = orphans.where(p =&amp;gt; !p.file.path.includes(&quot;模板&quot;));
+
+    // 4. 渲染结果
+    dv.header(2, `🏝️ 发现 ${filteredOrphans.length} 篇孤岛笔记`);
+    
+    if (filteredOrphans.length &amp;gt; 0) {
+        dv.table([&quot;笔记名称&quot;, &quot;创建时间&quot;], 
+            filteredOrphans.map(p =&amp;gt; [
+                p.file.link, 
+                p.file.ctime.toFormat(&quot;yyyy-MM-dd&quot;)
+            ])
+        );
+        dv.paragraph(&quot;💡 **建议**：点进去看看，尝试给它们加上标签，或者用 `[[ ]]` 链接到某个相关的主题笔记中。&quot;);
+    } else {
+        dv.paragraph(&quot;🌟 你的知识网非常紧密，没有任何孤岛！&quot;);
+    }
+}
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Obsidian 从来不仅是一个编辑器，它是一个你可以用代码自由定义的 &lt;strong&gt;IDE（集成知识环境）&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;Templater 负责赋予笔记交互的灵魂，DataviewJS 负责榨干数据的价值。&lt;/p&gt;
+&lt;p&gt;快把这些代码搬进你的知识库，去体会那种让数据为你服务、呼之即来的爽快感吧！&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;ps&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;大强同学：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;远程服务:&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+</content:encoded></item><item><title>记录一次装系统糟心经历！</title><link>https://dqtx.cc/posts/technical/zhuangji/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/zhuangji/</guid><pubDate>Sat, 11 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天想和大家分享一下我最近装系统的糟心经历，前前后后耽误了整整三天时间，最后才找到问题根源，也算是给自己上了一课。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/2026-04-11-23-55.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;第三方镜像连续报错&lt;/h2&gt;
 &lt;p&gt;事情的起因是我想给电脑重装系统，平时我也经常帮身边人装系统，自认为还算有经验，就去远景论坛找系统镜像，看到两款标注为Windows26H1精简优化镜像，就直接下载下来准备安装。&lt;/p&gt;
@@ -93,7 +508,7 @@ https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/bug-check-0x
 &lt;p&gt;付费社群：&lt;a href=&quot;https://t.zsxq.com/d4zSX&quot;&gt;点此加入&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>开源免费，浏览器编辑本地mrkdown</title><link>https://dqtx.cc/posts/software/chajianm/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/chajianm/</guid><pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;平时用 Markdown 写笔记、存文档，总被两个问题困扰：要么打开笨重的专用编辑器占内存，要么拖进浏览器只能看纯文本乱码；尤其是管理 Obsidian 仓库、本地项目文档时，多文件切换来回找路径，效率大打折扣。&lt;/p&gt;
+</content:encoded></item><item><title>在chrome上编辑本地md拓展</title><link>https://dqtx.cc/posts/software/chajianm/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/chajianm/</guid><pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;平时用 Markdown 写笔记、存文档，总被两个问题困扰：要么打开笨重的专用编辑器占内存，要么拖进浏览器只能看纯文本乱码；尤其是管理 Obsidian 仓库、本地项目文档时，多文件切换来回找路径，效率大打折扣。&lt;/p&gt;
 &lt;p&gt;这款开源的 Chrome Markdown Editor 插件完美解决了这些问题，让浏览器变身轻量本地编辑器，数据不上云、操作零门槛，Obsidian 用户和开发者都能直接冲！&lt;/p&gt;
 &lt;p&gt;项目地址：https://github.com/yishu-ziyu/chrome-md-editor&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260410181036614.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -4112,63 +4527,6 @@ echo &quot;# 测试标题
 &lt;p&gt;通过上面的例子可以看出，其实不仅是 API，任何你过往用过的优质提示词，都可以让 Claude 帮你封装成一个个 Skills，Skills 的调用方式更简单，也更有优势：你不用每次都跟 AI 详细说明要怎么做，只要用自然语言表达需求，Claude 就会自动判断并调用合适的 Skills，而且多个 Skills 还可以协同工作，组合出更复杂、更完整的工作流。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;以上，既然看到这里了，如果你觉得内容不错，随手点个赞、在看、转发三连吧！如果想第一时间收到推送，可以给我点个星标⭐～&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;如需要远程技术支持：742112.xyz&lt;/p&gt;
-</content:encoded></item><item><title>Listary使用参考文档</title><link>https://dqtx.cc/posts/software/listary%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/listary%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83/</guid><description>Listary是一款知名的效率工具，以用户友好，使用方式简单而备受好评。单论文件搜索，Listary 和 Everything 属于同一梯队，在搜索速度和内存占...</description><pubDate>Sat, 22 Nov 2025 09:15:00 GMT</pubDate><content:encoded>&lt;h1&gt;Listary使用参考文档&lt;/h1&gt;
-&lt;p&gt;Listary是一款知名的效率工具，以用户友好，使用方式简单而备受好评。单论文件搜索，Listary 和 Everything 属于同一梯队，在搜索速度和内存占用上秒杀任何其他软件。任何文件，只要你知道他的名称（或者部分名称），就能迅速找到并打开。&lt;/p&gt;
-&lt;h2&gt;本地搜索&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;双击Ctrl&lt;/strong&gt;搜索软件/命令（如：hosts）&lt;/p&gt;
-&lt;p&gt;在文件夹直接输入文件/文件夹名字快速定位&lt;/p&gt;
-&lt;p&gt;Ctrl+G快速切换&lt;/p&gt;
-&lt;p&gt;PS.安装后，左键双击-选项-常规设置，取消“自动检测更新”&lt;/p&gt;
-&lt;h2&gt;网络搜索&lt;/h2&gt;
-&lt;p&gt;左键双击-选项-网络搜索，删除你不需要的项目，下面是一些常用的社交媒体配置添加规则，用到的谷歌/百度/必应（g/b/ing/）&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;项目&lt;/th&gt;
-&lt;th&gt;关键词&lt;/th&gt;
-&lt;th&gt;URL&lt;/th&gt;
-&lt;th&gt;Custom&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;油管&lt;/td&gt;
-&lt;td&gt;yt&lt;/td&gt;
-&lt;td&gt;http://youtube.com/results?q={query}&lt;/td&gt;
-&lt;td&gt;http://suggestqueries.google.com/complete/search?client=youtube&amp;amp;ds=yt&amp;amp;client=firefox&amp;amp;q={query}&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;推特&lt;/td&gt;
-&lt;td&gt;t&lt;/td&gt;
-&lt;td&gt;https://twitter.com/search?q={query}&lt;/td&gt;
-&lt;td&gt;http://suggestqueries.google.com/complete/search?client=witter&amp;amp;ds=yt&amp;amp;client=firefox&amp;amp;q={query}&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;B站&lt;/td&gt;
-&lt;td&gt;bl&lt;/td&gt;
-&lt;td&gt;https://search.bilibili.com/all?keyword={query}&amp;amp;order=click&lt;/td&gt;
-&lt;td&gt;https://search.bilibili.com/all?keyword={query}&amp;amp;tids=36&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;小红书&lt;/td&gt;
-&lt;td&gt;xhs&lt;/td&gt;
-&lt;td&gt;https://www.xiaohongshu.com/search_result?keyword={query}&lt;/td&gt;
-&lt;td&gt;https://www.xiaohongshu.com/search_result?keyword={query}&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;GitHub&lt;/td&gt;
-&lt;td&gt;git&lt;/td&gt;
-&lt;td&gt;https://github.com/search?q={query}&lt;/td&gt;
-&lt;td&gt;cmd /k gh {query}&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;抖音&lt;/td&gt;
-&lt;td&gt;dy&lt;/td&gt;
-&lt;td&gt;https://www.douyin.com/search/{query}&lt;/td&gt;
-&lt;td&gt;cmd /k tt {query}&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
 </content:encoded></item><item><title>Obsidian+Claude：AI超级大脑架构设计</title><link>https://dqtx.cc/posts/aihacks/obsidianai/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/obsidianai/</guid><pubDate>Sat, 25 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;很多人理解思维OS理念，却被Obsidian文件散乱问题困扰，难以高效管理知识与内容。为满足程序员与多平台创作者的创作效率需求，我设计了这套AI超级大脑架构，于是有了这篇文章。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260213215428541.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;从 “思考库” 到 “内容工厂”&lt;/h2&gt;
