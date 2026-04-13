@@ -95,9 +95,9 @@ xiaban---下班一键关闭+睡眠（配置参考⬇️）
 
 我总共大概添加了覆盖个人高频的场景的所有命令，还有接下来说的一些脚本
 
-*PS.这些东西，确实花了时间的，如果一键导入使用*
+*PS.这些东西，确实花了时间的，我把我的配置打包成自解压文件，你拿到点击下就变成了你的设置*
 
-*可以找我，微信：dqtx33*
+*需要的可以找我，99米。微信：dqtx33*
 
 
 
@@ -109,9 +109,9 @@ xiaban---下班一键关闭+睡眠（配置参考⬇️）
 - 一键清理垃圾
 - 一备份Listary设置.bat
 
-![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260412220340147.webp)
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260413184612222.webp)
 
-multi_search.bat（ANSI格式）
+批量搜索.bat示例（ANSI格式）
 
 ```
 @echo off
@@ -180,15 +180,16 @@ start "" "%bilibili%"
 - 可手动删减左键菜单项
 - 可手动添加以下类型的左键菜单项
 
-文件夹
-
-子菜单
-
-分隔符
-
-自定义命令（如果跟我一样懒惰，把设置的常用自定义命令添加到左键，不要不要添加太多）
-
-命令
+> 文件夹
+>
+> 子菜单
+>
+> 分隔符
+>
+> 自定义命令（如果跟我一样懒惰，把设置的常用自定义命令添加到左键，不要不要添加太多）
+>
+> 命令
+>
 
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260413183546110.webp)
 
