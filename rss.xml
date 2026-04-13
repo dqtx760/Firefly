@@ -93,10 +93,34 @@
 &lt;p&gt;常用的内置命令&lt;/p&gt;
 &lt;p&gt;mkdir---创建文件夹&lt;/p&gt;
 &lt;p&gt;cmd---打开命令行窗口&lt;/p&gt;
-&lt;p&gt;psh---PowerShell&lt;/p&gt;
-&lt;p&gt;PowerShell
+&lt;p&gt;psh---PowerShell
 hosts---编辑 Hosts&lt;/p&gt;
+&lt;p&gt;这些你可以增删、修改关键词&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;比如增加的：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;ip----查看IP配置&lt;/p&gt;
+&lt;p&gt;liantong---网络连通性测试&lt;/p&gt;
+&lt;p&gt;wifi---查看WiFi密码&lt;/p&gt;
+&lt;p&gt;chongqi---重启资源管理器&lt;/p&gt;
+&lt;p&gt;linshi---打开临时文件夹并清理&lt;/p&gt;
+&lt;p&gt;guanbi---一键关闭所有窗口&lt;/p&gt;
+&lt;p&gt;shangban---上班一键打开常用软件/文件&lt;/p&gt;
+&lt;p&gt;xiaban---下班一键关闭+睡眠（配置参考⬇️）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;路径：powershell.exe&lt;/p&gt;
+&lt;p&gt;参数：-NoProfile -Command &quot;Get-Process | Where-Object { $&lt;em&gt;.MainWindowTitle -ne &apos;&apos; -and $&lt;/em&gt;.ProcessName -ne &apos;explorer&apos; -and $_.Id -ne $PID } | Stop-Process -Force; rundll32.exe powrprof.dll,SetSuspendState 0,1,0&quot;&lt;/p&gt;
+&lt;p&gt;静默启动：☑️&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我总共大概添加了覆盖个人高频的场景的所有命令，还有接下来说的一些脚本&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;PS.这些东西，确实花了时间的，如果一键导入使用&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;可以找我，微信：dqtx33&lt;/em&gt;&lt;/p&gt;
 &lt;h3&gt;&lt;strong&gt;进阶玩法&lt;/strong&gt;示例：&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;批量搜索&lt;/li&gt;
+&lt;li&gt;一键打开多个常用的工具&lt;/li&gt;
+&lt;li&gt;一键关闭任务栏所有显示的任务&lt;/li&gt;
+&lt;li&gt;一键清理垃圾&lt;/li&gt;
+&lt;li&gt;一备份Listary设置.bat&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260412220340147.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;multi_search.bat（ANSI格式）&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;@echo off
@@ -232,17 +256,25 @@ start &quot;&quot; &quot;%bilibili%&quot;
 &lt;p&gt;自定义 Listary 的&lt;strong&gt;做键菜单与快捷菜单&lt;/strong&gt;，深度整合文件管理器&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;在文件夹任意位置&lt;strong&gt;左键双击&lt;/strong&gt;调快捷菜单，一键添加收藏&lt;/li&gt;
-&lt;li&gt;可以自定义手动添加删减左键菜单项&lt;/li&gt;
+&lt;li&gt;可手动删减左键菜单项&lt;/li&gt;
+&lt;li&gt;可手动添加以下类型的左键菜单项&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;文件夹&lt;/p&gt;
+&lt;p&gt;子菜单&lt;/p&gt;
+&lt;p&gt;分隔符&lt;/p&gt;
+&lt;p&gt;自定义命令（如果跟我一样懒惰，把设置的常用自定义命令添加到左键，不要不要添加太多）&lt;/p&gt;
+&lt;p&gt;命令&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260413183546110.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;设置项迁移新设备&lt;/h2&gt;
-&lt;blockquote&gt;
 &lt;p&gt;你需要手动复制配置文件，配置文件位于
 C:\Users%username%\AppData\Roaming\Listary\UserProfile\Settings\Preferences.json&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;具体步骤如下&lt;/strong&gt;：
 1.新设备完全退出 Listary。
-2.再讲将新设备中的 Preferences.json 替换为配置好的Preferences.json 。
+2.按 Win + R，输入下面路径后回车&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;%appdata%\Listary\UserProfile\Settings
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;将配置好的Preferences.json粘贴进去替换掉即可
 3.重新打开 Listary。&lt;/p&gt;
-&lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;同类的产品还有&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://ftp.voidtools.com/zh-cn/downloads/&quot;&gt;Everything&lt;/a&gt;&lt;/li&gt;
