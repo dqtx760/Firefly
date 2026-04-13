@@ -111,8 +111,8 @@ hosts---编辑 Hosts&lt;/p&gt;
 &lt;p&gt;静默启动：☑️&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;我总共大概添加了覆盖个人高频的场景的所有命令，还有接下来说的一些脚本&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;PS.这些东西，确实花了时间的，如果一键导入使用&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;可以找我，微信：dqtx33&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;PS.这些东西，确实花了时间的，我把我的配置打包成自解压文件，你拿到点击下就变成了你的设置&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;需要的可以找我，99米。微信：dqtx33&lt;/em&gt;&lt;/p&gt;
 &lt;h3&gt;&lt;strong&gt;进阶玩法&lt;/strong&gt;示例：&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;批量搜索&lt;/li&gt;
@@ -121,8 +121,8 @@ hosts---编辑 Hosts&lt;/p&gt;
 &lt;li&gt;一键清理垃圾&lt;/li&gt;
 &lt;li&gt;一备份Listary设置.bat&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260412220340147.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;multi_search.bat（ANSI格式）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260413184612222.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;批量搜索.bat示例（ANSI格式）&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;@echo off
 chcp 65001 &amp;gt; nul
 :: 接收 Listary 传入的关键词
@@ -259,11 +259,13 @@ start &quot;&quot; &quot;%bilibili%&quot;
 &lt;li&gt;可手动删减左键菜单项&lt;/li&gt;
 &lt;li&gt;可手动添加以下类型的左键菜单项&lt;/li&gt;
 &lt;/ul&gt;
+&lt;blockquote&gt;
 &lt;p&gt;文件夹&lt;/p&gt;
 &lt;p&gt;子菜单&lt;/p&gt;
 &lt;p&gt;分隔符&lt;/p&gt;
 &lt;p&gt;自定义命令（如果跟我一样懒惰，把设置的常用自定义命令添加到左键，不要不要添加太多）&lt;/p&gt;
 &lt;p&gt;命令&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260413183546110.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;设置项迁移新设备&lt;/h2&gt;
 &lt;p&gt;你需要手动复制配置文件，配置文件位于
