@@ -143,7 +143,9 @@ start "" "%bilibili%"
 
 ## 网络搜索
 
-左键双击-选项-网络搜索，删除你不需要的项目
+左键双击-选项-网络搜索，可以增删添加搜索
+
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260413185036625.webp)
 
 建议保留谷歌/百度/必应（g/b/ing/）这**3**个
 
