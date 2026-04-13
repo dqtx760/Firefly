@@ -61,11 +61,53 @@ mkdir---创建文件夹
 cmd---打开命令行窗口
 
 psh---PowerShell
-
-PowerShell
 hosts---编辑 Hosts
 
+这些你可以增删、修改关键词
+
+
+
+**比如增加的：**
+
+ip----查看IP配置
+
+liantong---网络连通性测试
+
+wifi---查看WiFi密码
+
+chongqi---重启资源管理器
+
+linshi---打开临时文件夹并清理
+
+guanbi---一键关闭所有窗口
+
+shangban---上班一键打开常用软件/文件
+
+xiaban---下班一键关闭+睡眠（配置参考⬇️）
+
+> 路径：powershell.exe
+>
+> 参数：-NoProfile -Command "Get-Process | Where-Object { $_.MainWindowTitle -ne '' -and $_.ProcessName -ne 'explorer' -and $_.Id -ne $PID } | Stop-Process -Force; rundll32.exe powrprof.dll,SetSuspendState 0,1,0"
+>
+> 静默启动：☑️
+
+
+
+我总共大概添加了覆盖个人高频的场景的所有命令，还有接下来说的一些脚本
+
+*PS.这些东西，确实花了时间的，如果一键导入使用*
+
+*可以找我，微信：dqtx33*
+
+
+
 ### **进阶玩法**示例：
+
+- 批量搜索
+- 一键打开多个常用的工具
+- 一键关闭任务栏所有显示的任务
+- 一键清理垃圾
+- 一备份Listary设置.bat
 
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260412220340147.webp)
 
@@ -135,19 +177,38 @@ start "" "%bilibili%"
 自定义 Listary 的**做键菜单与快捷菜单**，深度整合文件管理器
 
 - 在文件夹任意位置**左键双击**调快捷菜单，一键添加收藏
-- 可以自定义手动添加删减左键菜单项
+- 可手动删减左键菜单项
+- 可手动添加以下类型的左键菜单项
+
+文件夹
+
+子菜单
+
+分隔符
+
+自定义命令（如果跟我一样懒惰，把设置的常用自定义命令添加到左键，不要不要添加太多）
+
+命令
+
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260413183546110.webp)
 
 
 
 ## 设置项迁移新设备
 
-> 你需要手动复制配置文件，配置文件位于
-> C:\Users\%username%\AppData\Roaming\Listary\UserProfile\Settings\Preferences.json
->
-> **具体步骤如下**：
-> 1.新设备完全退出 Listary。
-> 2.再讲将新设备中的 Preferences.json 替换为配置好的Preferences.json 。
-> 3.重新打开 Listary。
+你需要手动复制配置文件，配置文件位于
+C:\Users\%username%\AppData\Roaming\Listary\UserProfile\Settings\Preferences.json
+
+**具体步骤如下**：
+1.新设备完全退出 Listary。
+2.按 Win + R，输入下面路径后回车
+
+```
+%appdata%\Listary\UserProfile\Settings
+```
+
+将配置好的Preferences.json粘贴进去替换掉即可
+3.重新打开 Listary。
 
 
 
