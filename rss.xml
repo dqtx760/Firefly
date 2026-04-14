@@ -62,13 +62,188 @@
 &lt;li&gt;⛓️ Web3教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867794661334761497#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;🛠️ 技术教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867808112450912266#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>测试</title><link>https://dqtx.cc/posts/software/cehsi/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/cehsi/</guid><pubDate>Tue, 14 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;✅ 已按要求升级 Git 提交功能&lt;/h3&gt;
+&lt;p&gt;我已根据你的需求优化了脚本的 &lt;strong&gt;Git 提交模块&lt;/strong&gt;，现在具备以下特性：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;提交前预览&lt;/strong&gt;：先执行 &lt;code&gt;git status --short&lt;/code&gt;，清晰展示哪些文件被修改/新增/删除&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;智能默认值&lt;/strong&gt;：支持直接回车，自动使用带时间戳的默认提交信息（格式：&lt;code&gt;更新博客内容 2024-04-14 15:30:00&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;自定义输入&lt;/strong&gt;：也可以输入你想要的任意提交信息
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260414124524697.webp&quot; alt=&quot;image-20260414124524697&quot; /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;h3&gt;🚀 升级后的完整脚本（直接复制覆盖）&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;@echo off
+chcp 936 &amp;gt;nul
+cd /d &quot;%~dp0&quot;
+title 博客工作菜单
+
+:menu
+cls
+echo.
+echo ====================================================
+echo                   博客工作菜单
+echo ====================================================
+echo.
+echo  [1] 生成 YAML 文章模板
+echo  [2] 启动本地构建预览 (localhost:4321)
+echo  [3] Git 提交并推送代码
+echo  [4] 退出程序
+echo.
+echo ====================================================
+choice /c 1234 /n /m &quot;请选择操作 [1-4]：&quot;
+
+if errorlevel 4 goto exit
+if errorlevel 3 goto gitpush
+if errorlevel 2 goto preview
+if errorlevel 1 goto template
+goto menu
+
+REM 1. 生成 YAML 文章模板
+:template
+cls
+echo.
+echo ==============================================
+echo          正在生成 YAML 模板...
+echo ==============================================
+echo.
+node scripts/add-frontmatter.cjs
+echo.
+echo ==============================================
+echo      模板生成完成！请在 Typora 中编辑
+echo ==============================================
+echo.
+pause
+goto menu
+
+REM 2. 启动本地构建预览
+:preview
+cls
+echo.
+echo ==============================================
+echo         正在启动本地预览服务
+echo ==============================================
+echo.
+echo  预览地址：http://localhost:4321
+echo  停止预览：按 Ctrl + C
+echo.
+start http://localhost:4321
+npm run dev
+echo.
+pause
+goto menu
+
+REM 3. Git 提交并推送代码 (已升级)
+:gitpush
+cls
+echo.
+echo ==============================================
+echo           Git 提交与推送
+echo ==============================================
+echo.
+echo [1/4] 正在检查文件变更...
+echo.
+git status --short
+echo.
+if errorlevel 1 (
+    echo ⚠️  警告：未检测到 Git 仓库或无文件变更
+    echo.
+    pause
+    goto menu
+)
+
+echo [2/4] 准备提交信息...
+echo.
+REM 获取当前时间并格式化 (兼容 Windows 默认格式)
+for /f &quot;tokens=1-6 delims=/-: &quot; %%a in (&quot;%date% %time%&quot;) do (
+    set &quot;year=%%c&quot;
+    set &quot;month=%%a&quot;
+    set &quot;day=%%b&quot;
+    set &quot;hour=%%d&quot;
+    set &quot;minute=%%e&quot;
+)
+REM 补零处理 (防止个位数时间显示异常)
+if %hour% lss 10 set &quot;hour=0%hour%&quot;
+set &quot;default_msg=更新博客内容 %year%-%month%-%day% %hour%:%minute%&quot;
+
+set &quot;commit_msg=&quot;
+set /p &quot;commit_msg=请输入提交备注 (直接回车使用默认: %default_msg%)：&quot;
+
+if not defined commit_msg (
+    set &quot;commit_msg=%default_msg%&quot;
+)
+
+echo.
+echo [3/4] 正在提交：&quot;%commit_msg%&quot;
+echo.
+git add .
+git commit -m &quot;%commit_msg%&quot;
+
+echo.
+echo [4/4] 正在推送到远程仓库...
+echo.
+git push
+
+echo.
+echo ==============================================
+echo           ✅ Git 提交推送完成！
+echo ==============================================
+echo.
+pause
+goto menu
+
+REM 4. 退出程序
+:exit
+echo.
+echo 再见！
+echo.
+timeout /t 1 /nobreak &amp;gt;nul
+exit
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;h3&gt;📋 新增功能详解&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;变更预览&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;进入 Git 界面后，第一步先执行 &lt;code&gt;git status --short&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;用精简的格式展示：&lt;code&gt;M 文件名&lt;/code&gt; (修改)、&lt;code&gt;A 文件名&lt;/code&gt; (新增)、&lt;code&gt;D 文件名&lt;/code&gt; (删除)&lt;/li&gt;
+&lt;li&gt;如果没有变更或未检测到 Git 仓库，会自动警告并返回主菜单&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;智能默认信息&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;自动获取当前系统时间，格式为 &lt;code&gt;YYYY-MM-DD HH:MM&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;默认提交信息示例：&lt;code&gt;更新博客内容 2024-04-14 15:30&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;时间会自动补零（例如下午3点会显示为 &lt;code&gt;03&lt;/code&gt; 而不是 &lt;code&gt;3&lt;/code&gt;）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;交互流程&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;提示语清晰说明：&lt;code&gt;请输入提交备注 (直接回车使用默认: xxx)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;你可以直接敲回车使用默认值，也可以输入任意自定义内容&lt;/li&gt;
+&lt;li&gt;提交前会再次确认即将提交的信息内容&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;h3&gt;🧪 测试建议&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;先在博客目录里随便修改或新建一个文件&lt;/li&gt;
+&lt;li&gt;运行脚本，选择 &lt;code&gt;[3] Git 提交并推送代码&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;观察是否正确显示了变更文件&lt;/li&gt;
+&lt;li&gt;测试直接回车，看是否使用了带时间戳的默认信息&lt;/li&gt;
+&lt;li&gt;也可以测试输入自定义信息，看是否正常提交&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;需要我再调整时间格式或增加其他 Git 相关功能（如一键拉取、强制覆盖等）吗？&lt;/p&gt;
 </content:encoded></item><item><title>Listary完全使用指南！</title><link>https://dqtx.cc/posts/software/listary/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/listary/</guid><pubDate>Sun, 12 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Listary是一款知名的效率工具，以用户友好，使用方式简单而备受好评。&lt;/p&gt;
 &lt;p&gt;单论文件搜索，Listary 和 Everything 属于同一梯队，在搜索速度和内存占用上秒杀任何其他软件。&lt;/p&gt;
 &lt;p&gt;任何文件，只要你知道他的名称（或者部分名称），就能迅速找到并打开。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;官方网站&lt;/strong&gt;：https://www.listary.netdownload&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;官方说明文档&lt;/strong&gt;：https://help.listary.com/zh-Hans/search-file&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;升级到Listary Pro优惠通道&lt;/strong&gt;：&lt;a href=&quot;https://lizhi.shop/products/listary-pro?cid=wbm93g4b&quot;&gt;点此购买&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260412214257275.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/PixPin_2026-04-13_21-38-23.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;热键&lt;/h2&gt;
 &lt;p&gt;Listary的&lt;strong&gt;灵魂功能&lt;/strong&gt;，全局快捷键是效率核心：&lt;/p&gt;
 &lt;ul&gt;
@@ -86,6 +261,7 @@
 &lt;p&gt;Listary 最核心的功能，秒级搜索的核心配置&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;过滤器：仅支持pro用户&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;索引“添加网络驱动器或本地文件夹”仅支持pro用户&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260412214257275.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;动作&lt;/h2&gt;
 &lt;p&gt;自定义文件 / 文件夹的快捷操作菜单&lt;/p&gt;
 &lt;p&gt;可以自定义添加动作或删除默认不需要的动作&lt;/p&gt;
@@ -110,9 +286,9 @@ hosts---编辑 Hosts&lt;/p&gt;
 &lt;p&gt;参数：-NoProfile -Command &quot;Get-Process | Where-Object { $&lt;em&gt;.MainWindowTitle -ne &apos;&apos; -and $&lt;/em&gt;.ProcessName -ne &apos;explorer&apos; -and $_.Id -ne $PID } | Stop-Process -Force; rundll32.exe powrprof.dll,SetSuspendState 0,1,0&quot;&lt;/p&gt;
 &lt;p&gt;静默启动：☑️&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;我总共大概添加了覆盖个人高频的场景的所有命令，还有接下来说的一些脚本&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;PS.这些东西，确实花了时间的，我把我的配置打包成自解压文件，你拿到点击下就变成了你的设置&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;需要的可以找我，99米。微信：dqtx33&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;我总共大概添加了覆盖个人高频的场景的所有命令，还有接下来说的一些脚本&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;PS.这些东西，确实花了时间的，我把我的配置打包成自解压文件，你拿到点击下就变成了你的设置&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;需要的可以找我，99米。我的号是dqtx33&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;h3&gt;&lt;strong&gt;进阶玩法&lt;/strong&gt;示例：&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;批量搜索&lt;/li&gt;
@@ -254,7 +430,7 @@ start &quot;&quot; &quot;%bilibili%&quot;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h2&gt;菜单&lt;/h2&gt;
-&lt;p&gt;自定义 Listary 的&lt;strong&gt;做键菜单与快捷菜单&lt;/strong&gt;，深度整合文件管理器&lt;/p&gt;
+&lt;p&gt;自定义 Listary 的&lt;strong&gt;左键菜单与快捷菜单&lt;/strong&gt;，深度整合文件管理器&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;在文件夹任意位置&lt;strong&gt;左键双击&lt;/strong&gt;调快捷菜单，一键添加收藏&lt;/li&gt;
 &lt;li&gt;可手动删减左键菜单项&lt;/li&gt;
