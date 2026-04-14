@@ -62,6 +62,69 @@
 &lt;li&gt;⛓️ Web3教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867794661334761497#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;🛠️ 技术教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867808112450912266#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>Qwen Code安装使用教程！</title><link>https://dqtx.cc/posts/aihacks/qwen/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/qwen/</guid><pubDate>Tue, 14 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Qwen Code 是基于 Gemini Code 二次开发的&lt;strong&gt;终端 AI 编程助手&lt;/strong&gt;，完美搭载&lt;strong&gt;通义千问3.6 Plus 最新编程模型&lt;/strong&gt;，支持纯中文交互、代码生成/修复/Git 协作，免费额度完全满足日常开发需求。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;开源地址&lt;/strong&gt;：https://github.com/QwenLM/qwen-code&lt;/p&gt;
+&lt;h2&gt;核心福利说明&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;搭载模型：&lt;strong&gt;Qwen3.6 Plus（最新旗舰级编程模型）&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;免费额度：&lt;strong&gt;每日 2000 次请求&lt;/strong&gt;、每分钟最高 60 次、&lt;strong&gt;无 Token 长度上限&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;特点：命令行全中文注释、操作简单、无需复杂配置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260414155118952.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;一、安装前准备（Windows 必看）&lt;/h2&gt;
+&lt;h3&gt;1. 安装必备环境&lt;/h3&gt;
+&lt;p&gt;Qwen Code 依赖 &lt;strong&gt;Node.js 20.0 及以上版本&lt;/strong&gt;，必须先安装：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;打开官网：https://nodejs.org/&lt;/li&gt;
+&lt;li&gt;下载 &lt;strong&gt;LTS 版本&lt;/strong&gt;（长期稳定版），一路默认安装即可&lt;/li&gt;
+&lt;li&gt;验证是否安装成功：
+按下 &lt;code&gt;Win + R&lt;/code&gt;，输入 &lt;code&gt;cmd&lt;/code&gt; 打开终端，执行命令：&lt;pre&gt;&lt;code&gt;node -v
+npm -v
+&lt;/code&gt;&lt;/pre&gt;
+出现版本号就说明环境就绪。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;2. 关键要求&lt;/h3&gt;
+&lt;p&gt;打开终端时，&lt;strong&gt;必须右键选择「以管理员身份运行」&lt;/strong&gt;（否则无法全局安装）。&lt;/p&gt;
+&lt;h2&gt;二、Windows 全局一键安装（仅这一种方法）&lt;/h2&gt;
+&lt;p&gt;以&lt;strong&gt;管理员身份&lt;/strong&gt;打开 CMD 终端，直接执行下面这一条命令：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm install -g @qwen-code/qwen-code@latest
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;等待安装完成，出现安装成功提示即可。&lt;/p&gt;
+&lt;h3&gt;验证安装是否成功&lt;/h3&gt;
+&lt;p&gt;在终端输入：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;qwen --version
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;显示版本号 = &lt;strong&gt;安装成功&lt;/strong&gt;。&lt;/p&gt;
+&lt;h2&gt;三、首次使用 + 登录授权&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;终端输入命令启动工具：&lt;pre&gt;&lt;code&gt;qwen
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;首次启动会提示选择登录方式，&lt;strong&gt;直接选择「Qwen OAuth」&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;会自动跳转到浏览器，登录你的阿里云/通义千问账号（免费注册）&lt;/li&gt;
+&lt;li&gt;登录完成后，返回终端，自动完成认证，&lt;strong&gt;无需手动配置密钥&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;登录成功后，工具默认使用 &lt;strong&gt;Qwen3.6 Plus 模型&lt;/strong&gt;，直接可用。&lt;/p&gt;
+&lt;h2&gt;四、常用中文指令（直接复制用）&lt;/h2&gt;
+&lt;p&gt;启动工具后，直接输入中文需求即可：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;帮我写一个Python批量重命名文件的脚本
+解释当前项目的代码结构
+修复这个文件的报错
+生成规范的Git提交注释
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;常用命令：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;/help&lt;/code&gt;：查看所有功能&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/quit&lt;/code&gt;：退出工具&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/clear&lt;/code&gt;：清空终端内容&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;五、额度说明&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;每日免费：&lt;strong&gt;2000 次请求&lt;/strong&gt;（个人开发完全够用）&lt;/li&gt;
+&lt;li&gt;频率限制：每分钟最多 60 次（正常使用不会触发）&lt;/li&gt;
+&lt;li&gt;无 Token 上限：长代码、大文件分析都支持&lt;/li&gt;
+&lt;li&gt;模型默认：&lt;strong&gt;Qwen3.6 Plus&lt;/strong&gt;，无需手动切换&lt;/li&gt;
+&lt;/ul&gt;
 </content:encoded></item><item><title>我的博客工作流bat</title><link>https://dqtx.cc/posts/software/cehsi/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/cehsi/</guid><pubDate>Tue, 14 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;优化了下我的博客发布工作流bat脚本&lt;/p&gt;
 &lt;p&gt;这是一个典型的&lt;a href=&quot;https://www.doubao.com/thread/wad1cb0794ccb7f0c&quot;&gt;DevOps 流程&lt;/a&gt;在博客环境中的应用&lt;/p&gt;
 &lt;h2&gt;工作流程&lt;/h2&gt;
