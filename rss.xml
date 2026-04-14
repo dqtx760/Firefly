@@ -62,6 +62,78 @@
 &lt;li&gt;⛓️ Web3教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867794661334761497#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;🛠️ 技术教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867808112450912266#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>Hermes Agent上手指南。</title><link>https://dqtx.cc/posts/aihacks/hermes/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/hermes/</guid><pubDate>Wed, 15 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近叫Hermes Agent的开源项目，短短两个月GitHub星标冲到8万+，被无数开发者称为&quot;OpenClaw的真正对手&quot;。它不是又一个聊天机器人，也不是IDE里的代码助手，而是一个真正会随着你一起成长、越用越聪明的自主AI Agent。&lt;/p&gt;
+&lt;p&gt;项目地址：https://github.com/NousResearch/hermes-agent&lt;/p&gt;
+&lt;p&gt;最近很多养虾的朋友，安装了Hermes Agent&lt;/p&gt;
+&lt;h2&gt;01.安装步骤&lt;/h2&gt;
+&lt;p&gt;支持macOs、Linux、WSL2（Windows子系统），Windows原生不支持，需要先安装 WSL2，再在 WSL2 环境里按本教程操作。可在微软官方文档搜索「安装 WSL」，&lt;/p&gt;
+&lt;p&gt;另外确保git已安装，还有需要准备&lt;strong&gt;大模型 API Key&lt;/strong&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;strong&gt;安装命令&lt;/strong&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;安装完成后，脚本会自动进入引导设置，选择 &lt;strong&gt;Quick setup&lt;/strong&gt; 模式，然后按提示配置模型。推荐选 OpenRouter，进入后可以选免费模型（如 g&lt;em&gt;oogle/gemma-4-31b-it:free&lt;/em&gt;），零成本跑起来先体验。&lt;/p&gt;
+&lt;p&gt;如果之前本地已有 OpenAI 或 Codex 的授权配置，Hermes 会自动读取，不用重复填写。&lt;/p&gt;
+&lt;p&gt;配置最后会询问是否注册为系统服务，选 &lt;strong&gt;Y&lt;/strong&gt; 可以开机自启、后台常驻，省去每次手动启动的麻烦。&lt;/p&gt;
+&lt;p&gt;如果你暂时不想配置聊天平台，选择跳过（Skip），直接在终端里输入：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;hermes
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;能看到对话界面，说明安装成功了，可以直接在命令行里开聊。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://pbs.twimg.com/media/HFYiyvda8AQToWq?format=png&amp;amp;name=900x900&quot; alt=&quot;图像&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;安装后必须的事情&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;让Hermes agent配置 COMFOX及CAMOFOX_URL。
+让Hermes agent编辑写入 ~/.hermes/SOUL.md 
+让Hermes agent帮我配置个exa
+让Hermes agent
+让Hermes agent
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;做一个 终端命令审计插件（Terminal Audit Hook）：在每次 terminal 工具执行完毕后，自动把命令内容、执行结果、时间戳、会话ID 追加到日志文件。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;02. 接入web ui&lt;/h2&gt;
+&lt;p&gt;强烈推荐hermes web ui，区分了 CLI 对话、TG 对话以及最新的微信对话。&lt;/p&gt;
+&lt;p&gt;相较于 CLI 终端对话，它展示内容更加具体。系统新增了定时任务配置、模型添加与实时切换功能，同时集成了官方技能点配置、用户笔记编辑、用户画像管理等能力。&lt;/p&gt;
+&lt;p&gt;此外，还优化了实时响应机制，缩短了消息间隔，并新增回复完成提示音。项目地址：https://github.com/EKKOLearnAI/c&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260414222135731.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;其他类似的web ui项目&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://hermes-agent.nousresearch.com/docs/user-guide/messaging/weixin&quot;&gt;hermes-webui&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/joeynyc/hermes-hudui&quot;&gt;hermes-hudui&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;03.接入飞书&lt;/h2&gt;
+&lt;h2&gt;04.桥接个人微信&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;首先打开终端，输入 hermes update&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;更新好之后输入 hermes gateway setup&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;找到 Weixin 按空格进入设置&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;稍等出现一个二维码或者链接，手机扫码绑定即可&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;之后会有两个选择，都选第一个就行&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;然后我们直接在终端里把安装好的 hermes 喊出来，告诉它：帮我配置好微信的 gateway 服务。它会自动帮你配置好，然后就可以用了&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;参考文档：&lt;a href=&quot;https://hermes-agent.nousresearch.com/docs/user-guide/messaging/weixin&quot;&gt;点此查看&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;PS.担心账号被封禁，绝对值得保持谨慎，并使用小号进行测试！&lt;/p&gt;
+&lt;h2&gt;05.常见问题&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Q：从 OpenClaw 迁移过来，原来的配置还能用吗？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;可以，Hermes 内置了迁移命令：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;hermes claw migrate
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;06.信息来源&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://x.com/VinceZcrikl/status/2043308211886055697&quot;&gt;X 上的 文森.Z：“保姆级 Hermes 生图配置教程 - Telegram &amp;amp; Wechat” / X&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://x.com/LufzzLiz/status/2042237123865297267&quot;&gt;X 上的 岚叔：“上手 Hermes Agent 后建议先尝试的十件事情” / X&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;旧安卓手机变成 Linux 桌面电脑或智能家居服务器，不需要 root&lt;/p&gt;
+&lt;p&gt;https://github.com/mayukh4/linux-android&lt;/p&gt;
+&lt;p&gt;多Agent团队协作才是Hermes Agent的正确打开方式。&lt;/p&gt;
+&lt;p&gt;https://x.com/Saccc_c/status/2044018336673964207&lt;/p&gt;
 </content:encoded></item><item><title>Qwen Code安装使用教程</title><link>https://dqtx.cc/posts/aihacks/qwen/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/qwen/</guid><pubDate>Tue, 14 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Qwen Code 是基于 Gemini Code 二次开发的&lt;strong&gt;终端 AI 编程助手&lt;/strong&gt;，完美搭载&lt;strong&gt;通义千问3.6 Plus 最新编程模型&lt;/strong&gt;，支持纯中文交互、代码生成/修复/Git 协作，&lt;strong&gt;免费&lt;/strong&gt;提供&lt;strong&gt;每日100次请求&lt;/strong&gt;额度完全满足日常开发需求。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;开源地址&lt;/strong&gt;：https://github.com/QwenLM/qwen-code&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260414155118952.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -1399,8 +1471,9 @@ obsidian task:complete task=任务ID
 &lt;p&gt;写完之后自己都不想看第二遍，更别说发出来了？&lt;/p&gt;
 &lt;p&gt;我一直觉得，AI 时代最缺的已经不是「能帮你写东西的工具」了，而是&lt;strong&gt;一套完整的工作流&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;直到我发现了 &lt;strong&gt;newtype-os&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;项目地址&lt;/strong&gt;：https://github.com/newtype-01/newtype-os/blob/main/README.zh-cn.md&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Generated_Image_1zejbk1zejbk1zej.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;1.它是什么？&lt;/h2&gt;
+&lt;h2&gt;01.设计原理&amp;amp;技能&lt;/h2&gt;
 &lt;p&gt;简单说，它是一个&lt;strong&gt;多智能体协作系统&lt;/strong&gt;，内置 8 个 AI Agent，相当于给你的终端装了一整个内容团队：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -1430,41 +1503,7 @@ obsidian task:complete task=任务ID
 &lt;/ul&gt;
 &lt;p&gt;同时项目深度集成多款 MCP 实用工具，核心亮点是打通微信生态，复用此前拆解的 WeClaw 项目能力，支持移动端远程操控、随时发指令。&lt;/p&gt;
 &lt;p&gt;全程只需和Chief 主编用自然语言提需求，无需手动操作、不用分步对接，系统会自动串联所有 Agent 分工协作，一站式完成从调研、取材、撰稿到精修的全流程创作。&lt;/p&gt;
-&lt;h2&gt;2.能做什么？&lt;/h2&gt;
-&lt;p&gt;举几个具体例子：&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;场景 1：写一篇深度文章&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt; 我想写一篇关于 AI Agent 架构趋势的文章
-
-Chief：好的，我帮你调研一下最新的动态...
-[自动调用 Researcher 调研]
-[自动调用 Fact-Checker 验证]
-[自动调用 Writer 写作]
-[自动调用 Editor 润色]
-
-完成！生成了完整的文章草稿
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;一条命令，从调研到成稿，全部搞定。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;场景 2：快速查资料&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt; 帮我查一下 MCP 协议最近有什么新动态
-
-Chief：[调用 Researcher 搜索] [调用 Fact-Checker 验证]
-找到了 3 篇最新文章，主要内容是...
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;场景 3：管理知识库&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt; 之前我写的关于 xxx 的笔记在哪？
-
-Chief：[调用 Archivist 搜索你的 Obsidian 笔记]
-找到了，在 xx 文件里，需要我调取出来吗？
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;场景 4：提取网页内容&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;gt; 把这个 PDF 的内容提取出来
-
-Chief：[调用 Extractor]
-已提取完成，保存在 xxx.md
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;场景 5：微信远程控制&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;装好 WeChat 集成后，直接在微信上发消息给机器人， Chief 就会帮你干活。&lt;/p&gt;
-&lt;h2&gt;3.有什么内置技能？&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;内置技能说明&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;系统还自带了一些「专业技能」：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -1484,67 +1523,92 @@ Chief：[调用 Extractor]
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;需要用的时候，Chief 会自动加载相应的技能。&lt;/p&gt;
-&lt;h2&gt;4.怎么安装？&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;安装命令&lt;/strong&gt;&lt;/p&gt;
+&lt;h2&gt;02.使用场景案例&lt;/h2&gt;
+&lt;p&gt;举几个具体例子：&lt;/p&gt;
+&lt;h3&gt;&lt;strong&gt;场景 1：写一篇深度文章&lt;/strong&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; 我想写一篇关于 AI Agent 架构趋势的文章
+
+Chief：好的，我帮你调研一下最新的动态...
+[自动调用 Researcher 调研]
+[自动调用 Fact-Checker 验证]
+[自动调用 Writer 写作]
+[自动调用 Editor 润色]
+
+完成！生成了完整的文章草稿
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;一条命令，从调研到成稿，全部搞定。&lt;/p&gt;
+&lt;h3&gt;&lt;strong&gt;场景 2：快速查资料&lt;/strong&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; 帮我查一下 MCP 协议最近有什么新动态
+
+Chief：[调用 Researcher 搜索] [调用 Fact-Checker 验证]
+找到了 3 篇最新文章，主要内容是...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;&lt;strong&gt;场景 3：管理知识库&lt;/strong&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; 之前我写的关于 xxx 的笔记在哪？
+
+Chief：[调用 Archivist 搜索你的 Obsidian 笔记]
+找到了，在 xx 文件里，需要我调取出来吗？
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;&lt;strong&gt;场景 4：提取网页内容&lt;/strong&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;&amp;gt; 把这个 PDF 的内容提取出来
+
+Chief：[调用 Extractor]
+已提取完成，保存在 xxx.md
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;&lt;strong&gt;场景 5：桥接个人微信&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;newtype CLI 内置了 &lt;a href=&quot;https://github.com/fastclaw-ai/weclaw&quot;&gt;WeClaw&lt;/a&gt; 集成，通过 &lt;a href=&quot;https://github.com/nicepkg/acp&quot;&gt;ACP（Agent Client Protocol）&lt;/a&gt; 将你的微信与完整 Agent 团队打通。在微信里给自己发一条消息，Chief 就会接手处理——调研、写作、核查，全部在微信完成。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;命令&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;nt wechat setup&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;下载 WeClaw 二进制文件 + 扫码绑定微信&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;nt wechat start&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;启动微信 Agent 桥接（启动前自动检测更新）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;nt wechat stop&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;停止微信 Agent 桥接&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;nt wechat status&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;查看已安装版本和运行状态&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;快速开始：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;nt wechat setup    # 首次：下载 + 扫码登录
+nt wechat start    # 启动桥接守护进程
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;桥接进程在后台运行。微信消息通过 newtype 的 ACP 服务器路由，使用你配置的模型调度 Chief 处理。微信端无需 API Key——使用的是微信官方 &lt;a href=&quot;https://ilinkai.weixin.qq.com/&quot;&gt;iLink API&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;PS.配置文件里，第一行default_agent 设置&quot;newtype就会加载它的技能的工作流！&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;C:\Users\Administrator\.weclaw\config.json
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;03.快速上手步骤&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;安装&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;npm install -g @newtype-os/cli
-nt        # 启动后直接说话
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;安装完后先启动，初始化配置&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;nt        # 启动后直接说话
 nt inut   #初始化配置，注入技能到其他 AI工具
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260330163220785.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;附相关命令：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;相关命令：&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;/connect        #连接模型供应商
 /agent-models   #Agent模型分配
 /init-deep      #ai读取仓库所有文章 创建知识文档
 /init-sou       #创建定义Chief性格（表人格）的soul.md文档
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;5.适合谁？&lt;/h2&gt;
-&lt;p&gt;✅ 适合人群&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;频繁写文章、做内容的人&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;需要调研+写作完整流程的&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;用 Obsidian 管理知识的&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;想用微信远程指挥的&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;❌ 不适合人群&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;偶尔写一次的&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;只想要简单问答的&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;不用知识管理工具的&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;只需要基础 AI 聊天的&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2&gt;6.我的感受&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260330163220785.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;用了一段时间，最大的感受是：&lt;strong&gt;终于可以把「创作」这件事，真正变成一件只需要动嘴不动手的事。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;以前写一篇文章，要自己查资料、自己整理、自己写、自己改，来来回回折腾好几遍。现在只需要告诉 Chief 要写什么，它会把后面的事情全部安排好。&lt;/p&gt;
 &lt;p&gt;当然，它不是完美的。生成的内容还是需要自己过一遍，核心观点还是需要自己把控。但至少，&lt;strong&gt;那些繁琐的体力活，有人帮你干了。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;PS.&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;远程服务微信：dqtx33&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;付费社群：&lt;a href=&quot;https://t.zsxq.com/d4zSX&quot;&gt;点此加入&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
 </content:encoded></item><item><title>Claude联网神器：Web Access</title><link>https://dqtx.cc/posts/aihacks/web-access/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/web-access/</guid><pubDate>Thu, 26 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;前言&lt;/h2&gt;
 &lt;p&gt;过去的 AI 联网超 &quot;死板&quot;：要么用搜索引擎瞎找非公开内容，要么打不开需要登录的动态网页，还得单独给 AI 登各个平台，开多个网页就卡，踩过的坑下次还踩，甚至会跟人抢浏览器控制权，用着特别费劲。&lt;/p&gt;
 &lt;p&gt;最近发现了 &lt;a href=&quot;https://github.com/eze-is/web-access&quot;&gt;Web Access&lt;/a&gt; 这个 Skill，能把 AI Agent 的联网、操作浏览器的能力直接拉满。它用的是&lt;strong&gt;你自己已经登录的 Chrome&lt;/strong&gt;，不管是查信息、扒内容，还是交互操作，都能自动搞定，兼容 Claude Code、OpenClaw 等主流 AI Agent，普通人也能轻松上手。&lt;/p&gt;
