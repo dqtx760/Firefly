@@ -25,11 +25,15 @@ pinned: false
 
 直到我发现了 **newtype-os**。
 
+
+
+**项目地址**：https://github.com/newtype-01/newtype-os/blob/main/README.zh-cn.md
+
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Generated_Image_1zejbk1zejbk1zej.webp)
 
 
 
-## 1.它是什么？
+## 01.设计原理&技能
 
 
 
@@ -63,88 +67,7 @@ pinned: false
 
 
 
-
-
-## 2.能做什么？
-
-
-
-举几个具体例子：
-
-
-
-**场景 1：写一篇深度文章**
-
-
-
-```plain&#x20;text
-> 我想写一篇关于 AI Agent 架构趋势的文章
-
-Chief：好的，我帮你调研一下最新的动态...
-[自动调用 Researcher 调研]
-[自动调用 Fact-Checker 验证]
-[自动调用 Writer 写作]
-[自动调用 Editor 润色]
-
-完成！生成了完整的文章草稿
-```
-
-
-
-一条命令，从调研到成稿，全部搞定。
-
-
-
-**场景 2：快速查资料**
-
-
-
-```plain&#x20;text
-> 帮我查一下 MCP 协议最近有什么新动态
-
-Chief：[调用 Researcher 搜索] [调用 Fact-Checker 验证]
-找到了 3 篇最新文章，主要内容是...
-```
-
-
-
-**场景 3：管理知识库**
-
-
-
-```plain&#x20;text
-> 之前我写的关于 xxx 的笔记在哪？
-
-Chief：[调用 Archivist 搜索你的 Obsidian 笔记]
-找到了，在 xx 文件里，需要我调取出来吗？
-```
-
-
-
-**场景 4：提取网页内容**
-
-
-
-```plain&#x20;text
-> 把这个 PDF 的内容提取出来
-
-Chief：[调用 Extractor]
-已提取完成，保存在 xxx.md
-```
-
-
-
-**场景 5：微信远程控制**
-
-
-
-装好 WeChat 集成后，直接在微信上发消息给机器人， Chief 就会帮你干活。
-
-
-
-## 3.有什么内置技能？
-
-
+**内置技能说明**
 
 系统还自带了一些「专业技能」：
 
@@ -166,25 +89,127 @@ Chief：[调用 Extractor]
 
 
 
-## 4.怎么安装？
+## 02.使用场景案例
 
 
 
-**安装命令**
+举几个具体例子：
+
+
+
+### **场景 1：写一篇深度文章**
+
+
+
+```plain&#x20;text
+> 我想写一篇关于 AI Agent 架构趋势的文章
+
+Chief：好的，我帮你调研一下最新的动态...
+[自动调用 Researcher 调研]
+[自动调用 Fact-Checker 验证]
+[自动调用 Writer 写作]
+[自动调用 Editor 润色]
+
+完成！生成了完整的文章草稿
+```
+
+
+
+一条命令，从调研到成稿，全部搞定。
+
+
+
+### **场景 2：快速查资料**
+
+
+
+```plain&#x20;text
+> 帮我查一下 MCP 协议最近有什么新动态
+
+Chief：[调用 Researcher 搜索] [调用 Fact-Checker 验证]
+找到了 3 篇最新文章，主要内容是...
+```
+
+
+
+### **场景 3：管理知识库**
+
+
+
+```plain&#x20;text
+> 之前我写的关于 xxx 的笔记在哪？
+
+Chief：[调用 Archivist 搜索你的 Obsidian 笔记]
+找到了，在 xx 文件里，需要我调取出来吗？
+```
+
+
+
+### **场景 4：提取网页内容**
+
+
+
+```plain&#x20;text
+> 把这个 PDF 的内容提取出来
+
+Chief：[调用 Extractor]
+已提取完成，保存在 xxx.md
+```
+
+
+
+### **场景 5：桥接个人微信**
+
+
+
+newtype CLI 内置了 [WeClaw](https://github.com/fastclaw-ai/weclaw) 集成，通过 [ACP（Agent Client Protocol）](https://github.com/nicepkg/acp) 将你的微信与完整 Agent 团队打通。在微信里给自己发一条消息，Chief 就会接手处理——调研、写作、核查，全部在微信完成。
+
+
+
+| 命令               | 说明                                      |
+| ------------------ | ----------------------------------------- |
+| `nt wechat setup`  | 下载 WeClaw 二进制文件 + 扫码绑定微信     |
+| `nt wechat start`  | 启动微信 Agent 桥接（启动前自动检测更新） |
+| `nt wechat stop`   | 停止微信 Agent 桥接                       |
+| `nt wechat status` | 查看已安装版本和运行状态                  |
+
+快速开始：
+
+```
+nt wechat setup    # 首次：下载 + 扫码登录
+nt wechat start    # 启动桥接守护进程
+```
+
+
+
+桥接进程在后台运行。微信消息通过 newtype 的 ACP 服务器路由，使用你配置的模型调度 Chief 处理。微信端无需 API Key——使用的是微信官方 [iLink API](https://ilinkai.weixin.qq.com/)。
+
+
+
+PS.配置文件里，第一行default_agent 设置"newtype就会加载它的技能的工作流！
+
+```
+C:\Users\Administrator\.weclaw\config.json
+```
+
+
+
+## 03.快速上手步骤
+
+**安装**
 
 ```bash
 npm install -g @newtype-os/cli
+```
+
+安装完后先启动，初始化配置
+
+```
 nt        # 启动后直接说话
 nt inut   #初始化配置，注入技能到其他 AI工具
 ```
 
-![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260330163220785.webp)
-
-
-
-
-
-**附相关命令：**
+**相关命令：**
 
 ```plain&#x20;text
 /connect        #连接模型供应商
@@ -193,35 +218,9 @@ nt inut   #初始化配置，注入技能到其他 AI工具
 /init-sou       #创建定义Chief性格（表人格）的soul.md文档
 ```
 
-## 5.适合谁？
-
-✅ 适合人群
-
-1. 频繁写文章、做内容的人
-
-2. 需要调研+写作完整流程的
-
-3) 用 Obsidian 管理知识的
-
-4) 想用微信远程指挥的
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260330163220785.webp)
 
 
-
-❌ 不适合人群
-
-1. 偶尔写一次的
-
-2. 只想要简单问答的
-
-3) 不用知识管理工具的
-
-4) 只需要基础 AI 聊天的
-
-
-
-
-
-## 6.我的感受
 
 
 
@@ -234,11 +233,3 @@ nt inut   #初始化配置，注入技能到其他 AI工具
 
 
 当然，它不是完美的。生成的内容还是需要自己过一遍，核心观点还是需要自己把控。但至少，**那些繁琐的体力活，有人帮你干了。**
-
-
-
-**PS.**
-
-- 远程服务微信：dqtx33  
-
-- 付费社群：[点此加入](https://t.zsxq.com/d4zSX)
