@@ -62,16 +62,11 @@
 &lt;li&gt;⛓️ Web3教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867794661334761497#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;🛠️ 技术教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867808112450912266#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>测试</title><link>https://dqtx.cc/posts/software/cehsi/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/cehsi/</guid><pubDate>Tue, 14 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;✅ 已按要求升级 Git 提交功能&lt;/h3&gt;
-&lt;p&gt;我已根据你的需求优化了脚本的 &lt;strong&gt;Git 提交模块&lt;/strong&gt;，现在具备以下特性：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;提交前预览&lt;/strong&gt;：先执行 &lt;code&gt;git status --short&lt;/code&gt;，清晰展示哪些文件被修改/新增/删除&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;智能默认值&lt;/strong&gt;：支持直接回车，自动使用带时间戳的默认提交信息（格式：&lt;code&gt;更新博客内容 2024-04-14 15:30:00&lt;/code&gt;）&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;自定义输入&lt;/strong&gt;：也可以输入你想要的任意提交信息
-&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260414124524697.webp&quot; alt=&quot;image-20260414124524697&quot; /&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr /&gt;
-&lt;h3&gt;🚀 升级后的完整脚本（直接复制覆盖）&lt;/h3&gt;
+</content:encoded></item><item><title>我的博客工作流bat</title><link>https://dqtx.cc/posts/software/cehsi/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/cehsi/</guid><pubDate>Tue, 14 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;优化了下我的博客发布工作流bat脚本&lt;/p&gt;
+&lt;p&gt;这是一个典型的&lt;a href=&quot;https://www.doubao.com/thread/wad1cb0794ccb7f0c&quot;&gt;DevOps 流程&lt;/a&gt;在博客环境中的应用&lt;/p&gt;
+&lt;h2&gt;工作流程&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260414140439305.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;脚本源码&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;@echo off
 chcp 936 &amp;gt;nul
 cd /d &quot;%~dp0&quot;
@@ -81,7 +76,7 @@ title 博客工作菜单
 cls
 echo.
 echo ====================================================
-echo                   博客工作菜单
+echo                   大强博客「dqtx.cc」工作流菜单
 echo ====================================================
 echo.
 echo  [1] 生成 YAML 文章模板
@@ -199,44 +194,13 @@ echo.
 timeout /t 1 /nobreak &amp;gt;nul
 exit
 &lt;/code&gt;&lt;/pre&gt;
-&lt;hr /&gt;
-&lt;h3&gt;📋 新增功能详解&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;变更预览&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;进入 Git 界面后，第一步先执行 &lt;code&gt;git status --short&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;用精简的格式展示：&lt;code&gt;M 文件名&lt;/code&gt; (修改)、&lt;code&gt;A 文件名&lt;/code&gt; (新增)、&lt;code&gt;D 文件名&lt;/code&gt; (删除)&lt;/li&gt;
-&lt;li&gt;如果没有变更或未检测到 Git 仓库，会自动警告并返回主菜单&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;智能默认信息&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;自动获取当前系统时间，格式为 &lt;code&gt;YYYY-MM-DD HH:MM&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;默认提交信息示例：&lt;code&gt;更新博客内容 2024-04-14 15:30&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;时间会自动补零（例如下午3点会显示为 &lt;code&gt;03&lt;/code&gt; 而不是 &lt;code&gt;3&lt;/code&gt;）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;交互流程&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;提示语清晰说明：&lt;code&gt;请输入提交备注 (直接回车使用默认: xxx)&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;你可以直接敲回车使用默认值，也可以输入任意自定义内容&lt;/li&gt;
-&lt;li&gt;提交前会再次确认即将提交的信息内容&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr /&gt;
-&lt;h3&gt;🧪 测试建议&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;先在博客目录里随便修改或新建一个文件&lt;/li&gt;
-&lt;li&gt;运行脚本，选择 &lt;code&gt;[3] Git 提交并推送代码&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;观察是否正确显示了变更文件&lt;/li&gt;
-&lt;li&gt;测试直接回车，看是否使用了带时间戳的默认信息&lt;/li&gt;
-&lt;li&gt;也可以测试输入自定义信息，看是否正常提交&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;需要我再调整时间格式或增加其他 Git 相关功能（如一键拉取、强制覆盖等）吗？&lt;/p&gt;
+&lt;h2&gt;效果预览&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260414141123032.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;快速调出&lt;/h2&gt;
+&lt;p&gt;Listary-命令添加脚本&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260414141249639.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;很多人可能没注意到：在桌面或任意文件夹里，想通过 Listary 搜索、打开文件时，不用先双击 Ctrl，直接敲键盘输入关键词就行，能省下不少操作时间。&lt;/p&gt;
+&lt;p&gt;写完文章，直接敲键盘输入gt，然后回车&lt;/p&gt;
 </content:encoded></item><item><title>Listary完全使用指南！</title><link>https://dqtx.cc/posts/software/listary/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/listary/</guid><pubDate>Sun, 12 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Listary是一款知名的效率工具，以用户友好，使用方式简单而备受好评。&lt;/p&gt;
 &lt;p&gt;单论文件搜索，Listary 和 Everything 属于同一梯队，在搜索速度和内存占用上秒杀任何其他软件。&lt;/p&gt;
 &lt;p&gt;任何文件，只要你知道他的名称（或者部分名称），就能迅速找到并打开。&lt;/p&gt;
