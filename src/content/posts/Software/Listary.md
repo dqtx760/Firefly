@@ -25,7 +25,7 @@ Listary是一款知名的效率工具，以用户友好，使用方式简单而�
 
 **升级到Listary Pro优惠通道**：[点此购买](https://lizhi.shop/products/listary-pro?cid=wbm93g4b)
 
-![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260412214257275.webp)
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/PixPin_2026-04-13_21-38-23.webp)
 
 ## 热键
 
@@ -44,6 +44,8 @@ Listary 最核心的功能，秒级搜索的核心配置
 *过滤器：仅支持pro用户*
 
 *索引“添加网络驱动器或本地文件夹”仅支持pro用户*
+
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260412214257275.webp)
 
 ## 动作
 
@@ -93,11 +95,11 @@ xiaban---下班一键关闭+睡眠（配置参考⬇️）
 
 
 
-我总共大概添加了覆盖个人高频的场景的所有命令，还有接下来说的一些脚本
+**我总共大概添加了覆盖个人高频的场景的所有命令，还有接下来说的一些脚本**
 
-*PS.这些东西，确实花了时间的，我把我的配置打包成自解压文件，你拿到点击下就变成了你的设置*
+***PS.这些东西，确实花了时间的，我把我的配置打包成自解压文件，你拿到点击下就变成了你的设置***
 
-*需要的可以找我，99米。微信：dqtx33*
+***需要的可以找我，99米。我的号是dqtx33***
 
 
 
@@ -176,7 +178,7 @@ start "" "%bilibili%"
 
 ## 菜单
 
-自定义 Listary 的**做键菜单与快捷菜单**，深度整合文件管理器
+自定义 Listary 的**左键菜单与快捷菜单**，深度整合文件管理器
 
 - 在文件夹任意位置**左键双击**调快捷菜单，一键添加收藏
 - 可手动删减左键菜单项

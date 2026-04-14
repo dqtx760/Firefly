@@ -1,53 +1,126 @@
 @echo off
-chcp 65001 >nul
+chcp 936 >nul
 cd /d "%~dp0"
+title ²©¿Í¹¤×÷²Ëµ¥
 
 :menu
 cls
-echo ========================================
-echo        åšå®¢å·¥ä½œèœå•
-echo ========================================
 echo.
-echo [1] ç”Ÿæˆ YAML æ¨¡æ¿
-echo [2] å¯åŠ¨æž„å»ºé¢„è§ˆ
-echo [3] é€€å‡º
+echo ====================================================
+echo                   ²©¿Í¹¤×÷²Ëµ¥
+echo ====================================================
 echo.
-echo ========================================
-choice /c 123 /n /m "è¯·é€‰æ‹©æ“ä½œ (1-3): "
+echo  [1] Éú³É YAML ÎÄÕÂÄ£°å
+echo  [2] Æô¶¯±¾µØ¹¹½¨Ô¤ÀÀ (localhost:4321)
+echo  [3] Git Ìá½»²¢ÍÆËÍ´úÂë
+echo  [4] ÍË³ö³ÌÐò
+echo.
+echo ====================================================
+choice /c 1234 /n /m "ÇëÑ¡Ôñ²Ù×÷ [1-4]£º"
 
-if errorlevel 3 goto exit
+if errorlevel 4 goto exit
+if errorlevel 3 goto gitpush
 if errorlevel 2 goto preview
 if errorlevel 1 goto template
 goto menu
 
+REM 1. Éú³É YAML ÎÄÕÂÄ£°å
 :template
 cls
-echo ========================================
-echo       æ­£åœ¨ç”Ÿæˆ YAML æ¨¡æ¿...
-echo ========================================
+echo.
+echo ==============================================
+echo          ÕýÔÚÉú³É YAML Ä£°å...
+echo ==============================================
 echo.
 node scripts/add-frontmatter.cjs
 echo.
-echo ========================================
-echo æ¨¡æ¿å·²ç”Ÿæˆï¼è¯·åœ¨ Typora ä¸­å¡«å†™æ ‡é¢˜ã€‚
-echo ========================================
+echo ==============================================
+echo      Ä£°åÉú³ÉÍê³É£¡ÇëÔÚ Typora ÖÐ±à¼­
+echo ==============================================
 echo.
 pause
 goto menu
 
+REM 2. Æô¶¯±¾µØ¹¹½¨Ô¤ÀÀ
 :preview
 cls
-echo ========================================
-echo     æ­£åœ¨å¯åŠ¨æž„å»ºé¢„è§ˆ...
-echo ========================================
 echo.
-echo é¢„è§ˆåœ°å€: http://localhost:4321
-echo æŒ‰ Ctrl+C å¯åœæ­¢é¢„è§ˆ
+echo ==============================================
+echo         ÕýÔÚÆô¶¯±¾µØÔ¤ÀÀ·þÎñ
+echo ==============================================
+echo.
+echo  Ô¤ÀÀµØÖ·£ºhttp://localhost:4321
+echo  Í£Ö¹Ô¤ÀÀ£º°´ Ctrl + C
 echo.
 start http://localhost:4321
 npm run dev
+echo.
+pause
 goto menu
 
+REM 3. Git Ìá½»²¢ÍÆËÍ´úÂë (ÒÑÉý¼¶)
+:gitpush
+cls
+echo.
+echo ==============================================
+echo           Git Ìá½»ÓëÍÆËÍ
+echo ==============================================
+echo.
+echo [1/4] ÕýÔÚ¼ì²éÎÄ¼þ±ä¸ü...
+echo.
+git status --short
+echo.
+if errorlevel 1 (
+    echo ??  ¾¯¸æ£ºÎ´¼ì²âµ½ Git ²Ö¿â»òÎÞÎÄ¼þ±ä¸ü
+    echo.
+    pause
+    goto menu
+)
+
+echo [2/4] ×¼±¸Ìá½»ÐÅÏ¢...
+echo.
+REM »ñÈ¡µ±Ç°Ê±¼ä²¢¸ñÊ½»¯ (¼æÈÝ Windows Ä¬ÈÏ¸ñÊ½)
+for /f "tokens=1-6 delims=/-: " %%a in ("%date% %time%") do (
+    set "year=%%c"
+    set "month=%%a"
+    set "day=%%b"
+    set "hour=%%d"
+    set "minute=%%e"
+)
+REM ²¹Áã´¦Àí (·ÀÖ¹¸öÎ»ÊýÊ±¼äÏÔÊ¾Òì³£)
+if %hour% lss 10 set "hour=0%hour%"
+set "default_msg=¸üÐÂ²©¿ÍÄÚÈÝ %year%-%month%-%day% %hour%:%minute%"
+
+set "commit_msg="
+set /p "commit_msg=ÇëÊäÈëÌá½»±¸×¢ (Ö±½Ó»Ø³µÊ¹ÓÃÄ¬ÈÏ: %default_msg%)£º"
+
+if not defined commit_msg (
+    set "commit_msg=%default_msg%"
+)
+
+echo.
+echo [3/4] ÕýÔÚÌá½»£º"%commit_msg%"
+echo.
+git add .
+git commit -m "%commit_msg%"
+
+echo.
+echo [4/4] ÕýÔÚÍÆËÍµ½Ô¶³Ì²Ö¿â...
+echo.
+git push
+
+echo.
+echo ==============================================
+echo           ? Git Ìá½»ÍÆËÍÍê³É£¡
+echo ==============================================
+echo.
+pause
+goto menu
+
+REM 4. ÍË³ö³ÌÐò
 :exit
-echo å†è§ï¼
+echo.
+echo ÔÙ¼û£¡
+echo.
+timeout /t 1 /nobreak >nul
 exit
