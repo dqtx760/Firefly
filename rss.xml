@@ -62,6 +62,56 @@
 &lt;li&gt;⛓️ Web3教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867794661334761497#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;🛠️ 技术教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867808112450912266#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>免费云主机建站指南</title><link>https://dqtx.cc/posts/technical/hongdus/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/hongdus/</guid><pubDate>Thu, 16 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近上网冲浪的时候，偶然发现了红都主机 —— 一个提供永久免费 PHP 虚拟主机的国内服务商!&lt;/p&gt;
+&lt;p&gt;不用花一分钱就能开通稳定的云虚拟主机，对学生党、个人开发者和想做轻量小站的朋友来说太友好了。&lt;/p&gt;
+&lt;p&gt;今天这篇文章，我就从注册激活到网站上线，手把手教大家用红都主机从零搭建一个属于自己的网站，全程零成本，新手也能轻松上手。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260416010122712.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;注册账号&lt;/h2&gt;
+&lt;p&gt;网址：http://hongdus.com/signup.php&lt;/p&gt;
+&lt;p&gt;邮箱建议使用自己的，因为它需要激活才能使用&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260415232321327.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;激活帐户&lt;/h2&gt;
+&lt;p&gt;会给你发送两封邮件：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第一封用于账号激活，你点击激活后&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;会给你展示面板相关信息，然后跳转到二级域名（xxx.hongdus.com/）&lt;/p&gt;
+&lt;p&gt;注意看说明：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如需访问到您的网站，请按照以下步骤操作
+您的首页文件及网站程序需上传至htdocs目录下
+您自行设定的首页文件名，需要添加至控制面板默认首页设置的列表中&lt;/p&gt;
+&lt;p&gt;网页必需存放在htdocs目录下才能被访问，缺省网站的文档按优先顺序为:index.html,index.php.default.php.default.htm,index.htm。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260415230818240.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;第2份邮件，你可能会忽略&lt;/p&gt;
+&lt;p&gt;系统会将&lt;strong&gt;面板相关信息&lt;/strong&gt;发送至你的邮箱。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260416000220616.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;网站文件上传&lt;/h2&gt;
+&lt;p&gt;控制面板地址：http://cpanel.hongdus.com&lt;/p&gt;
+&lt;p&gt;去邮箱复制一下面板用户名与密码，登录的时候可以选择语言&lt;/p&gt;
+&lt;p&gt;⚠️不是你注册时的用户名&amp;amp;密码&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260415231008478.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;进入后台&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260416000412987.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;上传index.html&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;如果你想把给你的一个二级域名变成一个自己的单页网站&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;首先，你需要准备一个单页文件&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;点击文件-文件管理器，进入htdocs目录把里面的所有文件删除&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;然后上传你自己的&lt;strong&gt;index.html&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;注意事项&lt;/h2&gt;
+&lt;p&gt;Web 服务器（Nginx/Apache）默认会自动加载目录下的指定首页文件，常见优先级为：
+index.html → index.php → index.htm 等&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;如果新上传的文件不是index.html（比如你图里的 elon-musk-resume.html），服务器就找不到默认首页，直接返回 403。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2&gt;写在最后&lt;/h2&gt;
+&lt;p&gt;红都主机为个人开发者提供了零成本、易上手的建站解决方案，从注册激活到网站上线全程免费，操作门槛低，适合新手快速搭建个人站点。&lt;/p&gt;
+&lt;p&gt;按照上述流程，仅需 10-30 分钟即可完成从账户开通到网站上线的全流程，后续可根据需求升级功能或绑定自有域名，打造专属个人网站。&lt;/p&gt;
 </content:encoded></item><item><title>Hermes Agent上手指南。</title><link>https://dqtx.cc/posts/aihacks/hermes/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/hermes/</guid><pubDate>Wed, 15 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近叫Hermes Agent的开源项目，短短两个月GitHub星标冲到8万+，被无数开发者称为&quot;OpenClaw的真正对手&quot;。它不是又一个聊天机器人，也不是IDE里的代码助手，而是一个真正会随着你一起成长、越用越聪明的自主AI Agent。&lt;/p&gt;
 &lt;p&gt;项目地址：https://github.com/NousResearch/hermes-agent&lt;/p&gt;
 &lt;p&gt;最近很多养虾的朋友，安装了Hermes Agent&lt;/p&gt;
@@ -168,8 +218,15 @@ npm -v
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;显示版本号 = &lt;strong&gt;安装成功&lt;/strong&gt;。&lt;/p&gt;
 &lt;h2&gt;三、首次使用 + 登录授权&lt;/h2&gt;
-&lt;p&gt;终端输入命令启动工具：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;qwen
+&lt;h3&gt;终端启动&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;# 1. 默认启动（建议模式 - 每次操作需确认）
+qwen 
+
+# 2. 全自动模式（无需确认，自动执行所有操作）
+qwen --approval-mode full-auto 
+
+# 3. 自动编辑模式（自动修改文件，但运行命令前需确认）
+qwen --approval-mode auto-edit
 &lt;/code&gt;&lt;/pre&gt;
 &lt;ol&gt;
 &lt;li&gt;首次启动会提示选择登录方式，&lt;strong&gt;直接选择「Qwen OAuth」&lt;/strong&gt;&lt;/li&gt;
@@ -182,6 +239,35 @@ npm -v
 &lt;pre&gt;&lt;code&gt;/model qwen3.6-plus
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260414203620949.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;配置 API Key&lt;/h3&gt;
+&lt;p&gt;在 settings.json 中配置 API Key 和模型&lt;/p&gt;
+&lt;p&gt;参考：&lt;a href=&quot;https://qwenlm.github.io/qwen-code-docs/zh/users/configuration/model-providers/&quot;&gt;配置说明&lt;/a&gt;   火山API：&lt;a href=&quot;https://volcengine.com/L/RvxTJNv-DhA/&quot;&gt;点此购买&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;配置火山引擎方舟Coding Plan模型MiniMax-M2.5示例&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{
+  &quot;modelProviders&quot;: {
+    &quot;openai&quot;: [
+      {
+        &quot;id&quot;: &quot;minimax-m2.5&quot;,
+        &quot;name&quot;: &quot;MiniMax-M2.5&quot;,
+        &quot;baseUrl&quot;: &quot;https://ark.cn-beijing.volces.com/api/coding/v3&quot;,
+        &quot;description&quot;: &quot;MiniMax-M2.5 via 火山方舟&quot;,
+        &quot;envKey&quot;: &quot;OPENAI_API_KEY&quot;
+      }
+    ]
+  },
+  &quot;env&quot;: {
+    &quot;OPENAI_API_KEY&quot;: &quot;a0d048f5-093c-4df8-83ed-a9ea269371f4&quot;
+  },
+  &quot;security&quot;: {
+    &quot;auth&quot;: {
+      &quot;selectedType&quot;: &quot;openai&quot;
+    }
+  },
+  &quot;model&quot;: {
+    &quot;name&quot;: &quot;minimax-m2.5&quot;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;四、自然语言使用&lt;/h2&gt;
 &lt;p&gt;启动工具后，直接输入中文需求即可：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;帮我写一个Python批量重命名文件的脚本
