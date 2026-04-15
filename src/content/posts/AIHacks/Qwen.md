@@ -50,16 +50,25 @@ qwen --version
 显示版本号 = **安装成功**。
 
 ## 三、首次使用 + 登录授权
-终端输入命令启动工具：
+### 终端启动
 
 ```
-qwen
+# 1. 默认启动（建议模式 - 每次操作需确认）
+qwen 
+
+# 2. 全自动模式（无需确认，自动执行所有操作）
+qwen --approval-mode full-auto 
+
+# 3. 自动编辑模式（自动修改文件，但运行命令前需确认）
+qwen --approval-mode auto-edit
 ```
 1. 首次启动会提示选择登录方式，**直接选择「Qwen OAuth」**
 2. 会自动跳转到浏览器，登录你的通义千问账号（直接用github登录）
 3. 登录完成后，返回终端，自动完成认证，**无需手动配置密钥**
 
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260414202107652.webp)
+
+
 
 **使用 Qwen3.6 Plus 模型**
 
@@ -70,6 +79,43 @@ qwen
 ```
 
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260414203620949.webp)
+
+### 配置 API Key 
+
+在 settings.json 中配置 API Key 和模型                  
+
+参考：[配置说明](https://qwenlm.github.io/qwen-code-docs/zh/users/configuration/model-providers/)   火山API：[点此购买](https://volcengine.com/L/RvxTJNv-DhA/)
+
+配置火山引擎方舟Coding Plan模型MiniMax-M2.5示例
+
+```
+{
+  "modelProviders": {
+    "openai": [
+      {
+        "id": "minimax-m2.5",
+        "name": "MiniMax-M2.5",
+        "baseUrl": "https://ark.cn-beijing.volces.com/api/coding/v3",
+        "description": "MiniMax-M2.5 via 火山方舟",
+        "envKey": "OPENAI_API_KEY"
+      }
+    ]
+  },
+  "env": {
+    "OPENAI_API_KEY": "a0d048f5-093c-4df8-83ed-a9ea269371f4"
+  },
+  "security": {
+    "auth": {
+      "selectedType": "openai"
+    }
+  },
+  "model": {
+    "name": "minimax-m2.5"
+  }
+}
+```
+
+
 
 ## 四、自然语言使用
 
@@ -97,5 +143,4 @@ qwen
 如果你在安装、配置或使用中遇到任何问题，不想自己折腾
 
 随时可以找我提供 **1 对 1 远程技术支持**：[742112.xyz](742112.xyz)
-
 

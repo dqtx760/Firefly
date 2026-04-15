@@ -1,0 +1,104 @@
+---
+title: 免费云主机建站指南
+published: 2026-04-16
+tags: []
+category: Technical
+draft: false
+pinned: false
+---
+
+最近上网冲浪的时候，偶然发现了红都主机 —— 一个提供永久免费 PHP 虚拟主机的国内服务商!
+
+
+
+不用花一分钱就能开通稳定的云虚拟主机，对学生党、个人开发者和想做轻量小站的朋友来说太友好了。
+
+
+
+今天这篇文章，我就从注册激活到网站上线，手把手教大家用红都主机从零搭建一个属于自己的网站，全程零成本，新手也能轻松上手。
+
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260416010122712.webp)
+
+## 注册账号
+
+网址：http://hongdus.com/signup.php
+
+邮箱建议使用自己的，因为它需要激活才能使用
+
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260415232321327.webp)
+
+## 激活帐户
+
+会给你发送两封邮件：
+
+**第一封用于账号激活，你点击激活后**
+
+会给你展示面板相关信息，然后跳转到二级域名（xxx.hongdus.com/）
+
+注意看说明：
+
+> 如需访问到您的网站，请按照以下步骤操作
+> 您的首页文件及网站程序需上传至htdocs目录下
+> 您自行设定的首页文件名，需要添加至控制面板默认首页设置的列表中
+>
+> 网页必需存放在htdocs目录下才能被访问，缺省网站的文档按优先顺序为:index.html,index.php.default.php.default.htm,index.htm。
+
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260415230818240.webp)
+
+第2份邮件，你可能会忽略
+
+系统会将**面板相关信息**发送至你的邮箱。
+
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260416000220616.webp)
+
+
+
+## 网站文件上传
+
+控制面板地址：http://cpanel.hongdus.com
+
+去邮箱复制一下面板用户名与密码，登录的时候可以选择语言
+
+⚠️不是你注册时的用户名&密码
+
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260415231008478.webp)
+
+
+
+进入后台
+
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260416000412987.webp)
+
+
+
+**上传index.html**
+
+如果你想把给你的一个二级域名变成一个自己的单页网站
+
+1. 首先，你需要准备一个单页文件
+
+2. 点击文件-文件管理器，进入htdocs目录把里面的所有文件删除 
+
+3. 然后上传你自己的**index.html**
+
+
+
+## 注意事项
+
+Web 服务器（Nginx/Apache）默认会自动加载目录下的指定首页文件，常见优先级为：
+index.html → index.php → index.htm 等
+
+
+
+**如果新上传的文件不是index.html（比如你图里的 elon-musk-resume.html），服务器就找不到默认首页，直接返回 403。**
+
+
+
+## 写在最后
+
+红都主机为个人开发者提供了零成本、易上手的建站解决方案，从注册激活到网站上线全程免费，操作门槛低，适合新手快速搭建个人站点。
+
+
+
+按照上述流程，仅需 10-30 分钟即可完成从账户开通到网站上线的全流程，后续可根据需求升级功能或绑定自有域名，打造专属个人网站。
+
