@@ -66,11 +66,11 @@
 &lt;p&gt;不用花一分钱就能开通稳定的云虚拟主机，对学生党、个人开发者和想做轻量小站的朋友来说太友好了。&lt;/p&gt;
 &lt;p&gt;今天这篇文章，我就从注册激活到网站上线，手把手教大家用红都主机从零搭建一个属于自己的网站，全程零成本，新手也能轻松上手。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260416010122712.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;注册账号&lt;/h2&gt;
+&lt;h2&gt;01.注册账号&lt;/h2&gt;
 &lt;p&gt;网址：http://hongdus.com/signup.php&lt;/p&gt;
 &lt;p&gt;邮箱建议使用自己的，因为它需要激活才能使用&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260415232321327.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;激活帐户&lt;/h2&gt;
+&lt;h2&gt;02.激活帐户&lt;/h2&gt;
 &lt;p&gt;会给你发送两封邮件：&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;第一封用于账号激活，你点击激活后&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;会给你展示面板相关信息，然后跳转到二级域名（xxx.hongdus.com/）&lt;/p&gt;
@@ -85,7 +85,7 @@
 &lt;p&gt;第2份邮件，你可能会忽略&lt;/p&gt;
 &lt;p&gt;系统会将&lt;strong&gt;面板相关信息&lt;/strong&gt;发送至你的邮箱。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260416000220616.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;网站文件上传&lt;/h2&gt;
+&lt;h2&gt;03.网站文件上传&lt;/h2&gt;
 &lt;p&gt;控制面板地址：http://cpanel.hongdus.com&lt;/p&gt;
 &lt;p&gt;去邮箱复制一下面板用户名与密码，登录的时候可以选择语言&lt;/p&gt;
 &lt;p&gt;⚠️不是你注册时的用户名&amp;amp;密码&lt;/p&gt;
@@ -105,13 +105,13 @@
 &lt;p&gt;然后上传你自己的&lt;strong&gt;index.html&lt;/strong&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2&gt;注意事项&lt;/h2&gt;
+&lt;h2&gt;04.注意事项&lt;/h2&gt;
 &lt;p&gt;Web 服务器（Nginx/Apache）默认会自动加载目录下的指定首页文件，常见优先级为：
 index.html → index.php → index.htm 等&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;如果新上传的文件不是index.html（比如你图里的 elon-musk-resume.html），服务器就找不到默认首页，直接返回 403。&lt;/strong&gt;&lt;/p&gt;
-&lt;h2&gt;写在最后&lt;/h2&gt;
-&lt;p&gt;红都主机为个人开发者提供了零成本、易上手的建站解决方案，从注册激活到网站上线全程免费，操作门槛低，适合新手快速搭建个人站点。&lt;/p&gt;
-&lt;p&gt;按照上述流程，仅需 10-30 分钟即可完成从账户开通到网站上线的全流程，后续可根据需求升级功能或绑定自有域名，打造专属个人网站。&lt;/p&gt;
+&lt;p&gt;以上就是本期全部内容。如果本教程对你有所帮助，欢迎点赞、收藏、转发三连，你的支持是我持续输出优质内容的核心动力。&lt;/p&gt;
+&lt;p&gt;Ps. 实操遇卡点、不想耗费时间反复试错？我可提供1对1专属远程技术支持，直达通道：742112.xyz&lt;/p&gt;
+&lt;p&gt;Ps. 想要学习AI、提升数字化效率、打造全自动工作流，也欢迎加入我的专属社群：https://t.zsxq.com/d4zSX&lt;/p&gt;
 </content:encoded></item><item><title>Hermes Agent上手指南。</title><link>https://dqtx.cc/posts/aihacks/hermes/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/hermes/</guid><pubDate>Wed, 15 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近叫Hermes Agent的开源项目，短短两个月GitHub星标冲到8万+，被无数开发者称为&quot;OpenClaw的真正对手&quot;。它不是又一个聊天机器人，也不是IDE里的代码助手，而是一个真正会随着你一起成长、越用越聪明的自主AI Agent。&lt;/p&gt;
 &lt;p&gt;项目地址：https://github.com/NousResearch/hermes-agent&lt;/p&gt;
 &lt;p&gt;最近很多养虾的朋友，安装了Hermes Agent&lt;/p&gt;
@@ -256,7 +256,7 @@ qwen --approval-mode auto-edit
     ]
   },
   &quot;env&quot;: {
-    &quot;OPENAI_API_KEY&quot;: &quot;a0d048f5-093c-4df8-83ed-a9ea269371f4&quot;
+    &quot;OPENAI_API_KEY&quot;: &quot;your-API&quot;
   },
   &quot;security&quot;: {
     &quot;auth&quot;: {
