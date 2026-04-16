@@ -102,7 +102,7 @@ qwen --approval-mode auto-edit
     ]
   },
   "env": {
-    "OPENAI_API_KEY": "a0d048f5-093c-4df8-83ed-a9ea269371f4"
+    "OPENAI_API_KEY": "your-API"
   },
   "security": {
     "auth": {

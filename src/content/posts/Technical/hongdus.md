@@ -19,7 +19,7 @@ pinned: false
 
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260416010122712.webp)
 
-## 注册账号
+## 01.注册账号
 
 网址：http://hongdus.com/signup.php
 
@@ -27,7 +27,7 @@ pinned: false
 
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260415232321327.webp)
 
-## 激活帐户
+## 02.激活帐户
 
 会给你发送两封邮件：
 
@@ -53,7 +53,7 @@ pinned: false
 
 
 
-## 网站文件上传
+## 03.网站文件上传
 
 控制面板地址：http://cpanel.hongdus.com
 
@@ -83,7 +83,7 @@ pinned: false
 
 
 
-## 注意事项
+## 04.注意事项
 
 Web 服务器（Nginx/Apache）默认会自动加载目录下的指定首页文件，常见优先级为：
 index.html → index.php → index.htm 等
@@ -94,11 +94,13 @@ index.html → index.php → index.htm 等
 
 
 
-## 写在最后
-
-红都主机为个人开发者提供了零成本、易上手的建站解决方案，从注册激活到网站上线全程免费，操作门槛低，适合新手快速搭建个人站点。
+以上就是本期全部内容。如果本教程对你有所帮助，欢迎点赞、收藏、转发三连，你的支持是我持续输出优质内容的核心动力。
 
 
 
-按照上述流程，仅需 10-30 分钟即可完成从账户开通到网站上线的全流程，后续可根据需求升级功能或绑定自有域名，打造专属个人网站。
+Ps. 实操遇卡点、不想耗费时间反复试错？我可提供1对1专属远程技术支持，直达通道：742112.xyz
+
+
+
+Ps. 想要学习AI、提升数字化效率、打造全自动工作流，也欢迎加入我的专属社群：https://t.zsxq.com/d4zSX
 
