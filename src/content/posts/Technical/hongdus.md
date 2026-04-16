@@ -65,21 +65,19 @@ pinned: false
 
 
 
-进入后台
+进入后台,**上传index.html**
 
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260416000412987.webp)
 
 
 
-**上传index.html**
-
 如果你想把给你的一个二级域名变成一个自己的单页网站
 
-1. 首先，你需要准备一个单页文件
+1. 首先，你需要准备**index.html**文件
 
 2. 点击文件-文件管理器，进入htdocs目录把里面的所有文件删除 
 
-3. 然后上传你自己的**index.html**
+3. 然后上传
 
 
 
@@ -95,10 +93,6 @@ index.html → index.php → index.htm 等
 
 
 以上就是本期全部内容。如果本教程对你有所帮助，欢迎点赞、收藏、转发三连，你的支持是我持续输出优质内容的核心动力。
-
-
-
-Ps. 实操遇卡点、不想耗费时间反复试错？我可提供1对1专属远程技术支持，直达通道：742112.xyz
 
 
 
