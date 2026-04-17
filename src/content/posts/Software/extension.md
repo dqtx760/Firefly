@@ -18,7 +18,7 @@ pinned: false
 - [脚本猫](https://chromewebstore.google.com/detail/voyager/iifacdnjakkhjjiengaffnegbndgingi)：油猴脚本管理器
 - [Arclet Copier](https://chromewebstore.google.com/detail/arclet-copier-smart-url-c/mkflehheaokdfopijachhfdbofkppdil)：智能 URL 复制与分享
 - [沉浸式翻译](https://chromewebstore.google.com/detail/immersive-translate-trans/bpoadfkcbjbfhfodiogcnhhhpibjhbnh)：双语对照沉浸式网页翻译插件
-- [Search by image](https://chromewebstore.google.com/detail/search-by-image/cnojnbdhbhnkbcieeekonklommdnndci)：图片一键反向搜索，查找来源与相似图
+- [Search by image](https://chromewebstore.google.com/detail/search-by-image/cnojnbdhbhnkbcieeekonklommdnndci)：图反向搜索来源与相似图
 - [StarTab](https://github.com/dqtx760/StarTab)：高颜值自定义新标签页插件
 - [Quantum](https://chromewebstore.google.com/detail/quantum/poelnmicmdpddbfnkmaokegfknhoooed?hl=zh-CN&utm_source=ext_sidebar)：浏览器标签增强，整理书签需 API
 
@@ -26,13 +26,12 @@ pinned: false
 
 - [Vimium](https://chromewebstore.google.com/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb)：Vim 风格纯键盘浏览操作插件
 - [FlowMouse](https://chromewebstore.google.com/detail/flowmouse-mouse-gestures/fnldhkfidchnjiokpoemdhoejmaojkgp)：实用浏览器鼠标手势扩展
-- [Drag to Search](https://chromewebstore.google.com/detail/drag-to-search/dbmnionmbnbamildjjcpjajngpclaknh)：拖动文字搜索、拖动按钮快速打开网页
+- [NoTab](https://chromewebstore.google.com/detail/notab-link-preview-assist/anfjigoimfhbhkcpggoomegmafgmnada)：在当前页面预览链接 [Pro版本](https://chromewebstore.google.com/detail/voyager/iifacdnjakkhjjiengaffnegbndgingi):19.9/永久（多窗口、快速搜索、翻译）
 - [Blazwitcher](https://chromewebstore.google.com/detail/blazwitcher-%E5%85%A8%E5%B1%80%E6%A8%A1%E7%B3%8A%E6%90%9C%E7%B4%A2/fjgablnemienkegdnbihhemebmmonihg)：标签页全局模糊搜索切换
 - [外链直达](https://chromewebstore.google.com/detail/quickgo-%E5%A4%96%E9%93%BE%E7%9B%B4%E8%BE%BE-%E2%80%94-%E6%97%A0%E6%84%9F%E7%9F%A5%E8%87%AA%E5%8A%A8%E8%B7%B3%E8%BF%87%E4%B9%8E%E3%80%81%E4%B9%A6/homllehcipjgpbpepcojhgcpfdopjhml)：热门网站外链一键快速跳转
 
 
 ## 📸 截图/录屏
-- [GoFullPage](https://chromewebstore.google.com/detail/gofullpage-full-page-scree/fdpohaocaechififmbbbbbknoalclacl)：整页滚动长截图神器
 - [ShotEasy](https://chromewebstore.google.com/detail/shoteasy-light-and-easy-t/nmppkehciohcgcehlnifgeokgioidknh)：区域截图/长截图，自带美化编辑功能
 - [Video Screenshot](https://chromewebstore.google.com/detail/video-screenshot/ppkojackhibeogijphhfnamhemklmial)：油管视频快速截图工具
 - [Cursorful](https://chromewebstore.google.com/detail/cursorful-screen-recorder/eihpmapodnppeemkhkbhikmggfojdkjd)：轻量网页录屏工具
@@ -55,7 +54,11 @@ pinned: false
 - [Instant Data Scraper](https://chromewebstore.google.com/detail/instant-data-scraper/ofaokhiedipichpaobibbnahnkdoiiah)：一键网页数据抓取工具
 - [豆包无水印下载](https://pan.xunlei.com/s/VOqOWbr5dIw7kwRnmHkwx4v0A1?pwd=xkdj)：豆包内容无水印下载工具
 
+## 其他
 
+[Bookmark Save](https://chromewebstore.google.com/detail/bookmark-save-export-twit/lgjolpecipmadohbokoeojckfbcglbod)：导出 Twitter 书签
+
+[即刻导出](https://chromewebstore.google.com/detail/%E5%8D%B3%E5%88%BB%E5%AF%BC%E5%87%BA/bknkpflbkcapjdbcbdoijnjdbkdabjli)：导出即刻动态为本地文件
 
 ## ✅排版提示词
 
@@ -90,6 +93,8 @@ https://www.chajianxw.com/
 https://greasyfork.org/zh-CN
 
 https://zhaoolee.com/ChromeAppHeroes/#/
+
+https://web.okjike.com/topic/5720a2b25f0ba71200ff8a0e/square
 
 https://www.notion.so/chrome-19b351994e40800db8fcd988348f533a
 
