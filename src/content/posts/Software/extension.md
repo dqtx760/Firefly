@@ -18,6 +18,7 @@ pinned: false
 - [脚本猫](https://chromewebstore.google.com/detail/voyager/iifacdnjakkhjjiengaffnegbndgingi)：油猴脚本管理器
 - [Arclet Copier](https://chromewebstore.google.com/detail/arclet-copier-smart-url-c/mkflehheaokdfopijachhfdbofkppdil)：智能 URL 复制与分享
 - [沉浸式翻译](https://chromewebstore.google.com/detail/immersive-translate-trans/bpoadfkcbjbfhfodiogcnhhhpibjhbnh)：双语对照沉浸式网页翻译插件
+- [图片翻译助手](https://chromewebstore.google.com/detail/image-translation-assista/jkhebkocllcbjacmdmkgapgfiiedfgef)：通过右键菜单翻译图片
 - [Search by image](https://chromewebstore.google.com/detail/search-by-image/cnojnbdhbhnkbcieeekonklommdnndci)：图反向搜索来源与相似图
 - [StarTab](https://github.com/dqtx760/StarTab)：高颜值自定义新标签页插件
 - [Quantum](https://chromewebstore.google.com/detail/quantum/poelnmicmdpddbfnkmaokegfknhoooed?hl=zh-CN&utm_source=ext_sidebar)：浏览器标签增强，整理书签需 API
