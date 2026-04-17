@@ -62,6 +62,89 @@
 &lt;li&gt;⛓️ Web3教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867794661334761497#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;🛠️ 技术教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867808112450912266#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>chrome浏览器插件精选</title><link>https://dqtx.cc/posts/software/extension/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/extension/</guid><pubDate>Fri, 17 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天给大家整理并安利一批我自己一直在用、真正能提升效率的 &lt;strong&gt;Chrome 实用插件&lt;/strong&gt;。从浏览器操控、效率增强、截图录屏、翻译广告拦截，到 AI 辅助、内容抓取等，我都按功能分好类，方便大家按需选用。这次一共整理了 &lt;strong&gt;26 款&lt;/strong&gt;，都是日常上网、办公、学习、做内容时高频用到的精品插件，希望能帮到大家。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260417115938098.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;🧩 必备扩展&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/adguard-adblocker/bgnkhhnnamicmpeenaelnjfhikgbkllg&quot;&gt;AdGuard&lt;/a&gt;：强大的广告拦截与隐私防护插件&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/extension-manager/jleckmjhajgeflfhlflgpmdfeckbhobe?hl=zh-CN&quot;&gt;扩展管理器&lt;/a&gt;：一键管理、开关 Chrome 扩展&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/voyager/iifacdnjakkhjjiengaffnegbndgingi&quot;&gt;脚本猫&lt;/a&gt;：油猴脚本管理器&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/arclet-copier-smart-url-c/mkflehheaokdfopijachhfdbofkppdil&quot;&gt;Arclet Copier&lt;/a&gt;：智能 URL 复制与分享&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/immersive-translate-trans/bpoadfkcbjbfhfodiogcnhhhpibjhbnh&quot;&gt;沉浸式翻译&lt;/a&gt;：双语对照沉浸式网页翻译插件&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/search-by-image/cnojnbdhbhnkbcieeekonklommdnndci&quot;&gt;Search by image&lt;/a&gt;：图片一键反向搜索，查找来源与相似图&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dqtx760/StarTab&quot;&gt;StarTab&lt;/a&gt;：高颜值自定义新标签页插件&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/quantum/poelnmicmdpddbfnkmaokegfknhoooed?hl=zh-CN&amp;amp;utm_source=ext_sidebar&quot;&gt;Quantum&lt;/a&gt;：浏览器标签增强，整理书签需 API&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;🔍 效率操控&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb&quot;&gt;Vimium&lt;/a&gt;：Vim 风格纯键盘浏览操作插件&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/flowmouse-mouse-gestures/fnldhkfidchnjiokpoemdhoejmaojkgp&quot;&gt;FlowMouse&lt;/a&gt;：实用浏览器鼠标手势扩展&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/drag-to-search/dbmnionmbnbamildjjcpjajngpclaknh&quot;&gt;Drag to Search&lt;/a&gt;：拖动文字搜索、拖动按钮快速打开网页&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/blazwitcher-%E5%85%A8%E5%B1%80%E6%A8%A1%E7%B3%8A%E6%90%9C%E7%B4%A2/fjgablnemienkegdnbihhemebmmonihg&quot;&gt;Blazwitcher&lt;/a&gt;：标签页全局模糊搜索切换&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/quickgo-%E5%A4%96%E9%93%BE%E7%9B%B4%E8%BE%BE-%E2%80%94-%E6%97%A0%E6%84%9F%E7%9F%A5%E8%87%AA%E5%8A%A8%E8%B7%B3%E8%BF%87%E4%B9%8E%E3%80%81%E4%B9%A6/homllehcipjgpbpepcojhgcpfdopjhml&quot;&gt;外链直达&lt;/a&gt;：热门网站外链一键快速跳转&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;📸 截图/录屏&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/gofullpage-full-page-scree/fdpohaocaechififmbbbbbknoalclacl&quot;&gt;GoFullPage&lt;/a&gt;：整页滚动长截图神器&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/shoteasy-light-and-easy-t/nmppkehciohcgcehlnifgeokgioidknh&quot;&gt;ShotEasy&lt;/a&gt;：区域截图/长截图，自带美化编辑功能&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/video-screenshot/ppkojackhibeogijphhfnamhemklmial&quot;&gt;Video Screenshot&lt;/a&gt;：油管视频快速截图工具&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/cursorful-screen-recorder/eihpmapodnppeemkhkbhikmggfojdkjd&quot;&gt;Cursorful&lt;/a&gt;：轻量网页录屏工具&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;🧠 AI 助手&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/S-Trespassing/claw-in-chrome&quot;&gt;claw-in-chrome&lt;/a&gt;：侧边栏集成式 AI 助手，需 API&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/infogpt/hiimjjenlhpcaokmoecbiifcokfoonii&quot;&gt;InfoGPT&lt;/a&gt;：AI 网页总结与内容提炼插件，需 API&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/voyager/iifacdnjakkhjjiengaffnegbndgingi&quot;&gt;Voyager&lt;/a&gt;：Gemini 网页增强，支持无水印获取内容&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/imagetoprompt-%E9%9C%80api%E7%89%88%EF%BC%89/hogegjhocfgpgfibnhjkflmojflcgecn?hl=zh-CN&amp;amp;utm_source=ext_sidebar&quot;&gt;ImageToPrompt&lt;/a&gt;：图片转 AI 绘画提示词插件需 API&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;📝 内容/文档&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/obsidian-web-clipper/cnjifjpddelmedmihgijeibhnjfabmlf&quot;&gt;Obsidian Web Clipper&lt;/a&gt;：网页剪藏Obsidian&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/oddgijbbpmjcnomkfmcdjiolcciemddf&quot;&gt;SmartClip&lt;/a&gt;：一键剪藏网页内容&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/yishu-ziyu/chrome-md-editor&quot;&gt;Markdown Editor&lt;/a&gt;：浏览器内编辑本地 Markdown 文件&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/cloud-document-converter/ehkomhhcinhikfddnmklbloahaakploh&quot;&gt;Cloud Document Converter&lt;/a&gt;：将网页内容复制为 Markdown&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/easy-scraper-one-click-we/cljbfnedccphacfneigoegkiieckjndh&quot;&gt;Easy Scraper&lt;/a&gt;：一键网页数据抓取工具&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/instant-data-scraper/ofaokhiedipichpaobibbnahnkdoiiah&quot;&gt;Instant Data Scraper&lt;/a&gt;：一键网页数据抓取工具&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://pan.xunlei.com/s/VOqOWbr5dIw7kwRnmHkwx4v0A1?pwd=xkdj&quot;&gt;豆包无水印下载&lt;/a&gt;：豆包内容无水印下载工具&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;✅排版提示词&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;优化下排版  输出示例
+
+- []()
+
+一句话介绍这个软件
+
+- []()
+
+一句话介绍这个软件
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;🌟相关链接&lt;/h2&gt;
+&lt;p&gt;https://crxdl.com/&lt;/p&gt;
+&lt;p&gt;https://www.crxsoso.com/&lt;/p&gt;
+&lt;p&gt;https://crx4.com/&lt;/p&gt;
+&lt;p&gt;https://huajiakeji.com/&lt;/p&gt;
+&lt;p&gt;https://chrome.zzzmh.cn/#/index&lt;/p&gt;
+&lt;p&gt;https://www.chajianxw.com/&lt;/p&gt;
+&lt;p&gt;https://greasyfork.org/zh-CN&lt;/p&gt;
+&lt;p&gt;https://zhaoolee.com/ChromeAppHeroes/#/&lt;/p&gt;
+&lt;p&gt;https://www.notion.so/chrome-19b351994e40800db8fcd988348f533a&lt;/p&gt;
+&lt;p&gt;https://xodnytdcaw.feishu.cn/wiki/HX6vwjSdQi3v8ckZZeLcclIknEf?from=space_search&lt;/p&gt;
+&lt;p&gt;https://xodnytdcaw.feishu.cn/wiki/MD5FwKyfEiH7P8kvPvjcZ0znnIb&lt;/p&gt;
+&lt;p&gt;以上就是本次分享的全部 Chrome 插件推荐。这些插件我会持续使用、测试和补充，后续发现更好用、更实用的工具，也会继续更新这份清单，和大家一起把浏览器用得更顺手、更高效。&lt;/p&gt;
 </content:encoded></item><item><title>免费云主机建站指南</title><link>https://dqtx.cc/posts/technical/hongdus/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/hongdus/</guid><pubDate>Thu, 16 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近上网冲浪的时候，偶然发现了红都主机 —— 一个提供永久免费 PHP 虚拟主机的国内服务商!&lt;/p&gt;
 &lt;p&gt;不用花一分钱就能开通稳定的云虚拟主机，对学生党、个人开发者和想做轻量小站的朋友来说太友好了。&lt;/p&gt;
 &lt;p&gt;今天这篇文章，我就从注册激活到网站上线，手把手教大家用红都主机从零搭建一个属于自己的网站，全程零成本，新手也能轻松上手。&lt;/p&gt;
@@ -90,19 +173,18 @@
 &lt;p&gt;去邮箱复制一下面板用户名与密码，登录的时候可以选择语言&lt;/p&gt;
 &lt;p&gt;⚠️不是你注册时的用户名&amp;amp;密码&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260415231008478.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;进入后台&lt;/p&gt;
+&lt;p&gt;进入后台,&lt;strong&gt;上传index.html&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260416000412987.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;上传index.html&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;如果你想把给你的一个二级域名变成一个自己的单页网站&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;首先，你需要准备一个单页文件&lt;/p&gt;
+&lt;p&gt;首先，你需要准备&lt;strong&gt;index.html&lt;/strong&gt;文件&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;点击文件-文件管理器，进入htdocs目录把里面的所有文件删除&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;然后上传你自己的&lt;strong&gt;index.html&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;然后上传&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2&gt;04.注意事项&lt;/h2&gt;
@@ -110,7 +192,6 @@
 index.html → index.php → index.htm 等&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;如果新上传的文件不是index.html（比如你图里的 elon-musk-resume.html），服务器就找不到默认首页，直接返回 403。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;以上就是本期全部内容。如果本教程对你有所帮助，欢迎点赞、收藏、转发三连，你的支持是我持续输出优质内容的核心动力。&lt;/p&gt;
-&lt;p&gt;Ps. 实操遇卡点、不想耗费时间反复试错？我可提供1对1专属远程技术支持，直达通道：742112.xyz&lt;/p&gt;
 &lt;p&gt;Ps. 想要学习AI、提升数字化效率、打造全自动工作流，也欢迎加入我的专属社群：https://t.zsxq.com/d4zSX&lt;/p&gt;
 </content:encoded></item><item><title>Hermes Agent上手指南。</title><link>https://dqtx.cc/posts/aihacks/hermes/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/hermes/</guid><pubDate>Wed, 15 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近叫Hermes Agent的开源项目，短短两个月GitHub星标冲到8万+，被无数开发者称为&quot;OpenClaw的真正对手&quot;。它不是又一个聊天机器人，也不是IDE里的代码助手，而是一个真正会随着你一起成长、越用越聪明的自主AI Agent。&lt;/p&gt;
 &lt;p&gt;项目地址：https://github.com/NousResearch/hermes-agent&lt;/p&gt;
