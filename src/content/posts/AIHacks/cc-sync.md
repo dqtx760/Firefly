@@ -60,8 +60,6 @@ claude --resume
 bash ~/.claude/sync.sh
 ```
 
-![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260419162129305.webp)
-
 
 ### 04 常用命令
 ```
