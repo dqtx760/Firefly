@@ -1,5 +1,5 @@
 ---
-title: Cc-sync：同步多台电脑CC配置和会话
+title: Cc-sync：多电脑CC配置同步工具
 published: 2026-04-18
 tags:
   - 效率工具
