@@ -62,6 +62,70 @@
 &lt;li&gt;⛓️ Web3教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867794661334761497#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;🛠️ 技术教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867808112450912266#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>Cc-sync：同步多台电脑CC配置和会话</title><link>https://dqtx.cc/posts/aihacks/cc-sync/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/cc-sync/</guid><pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;换电脑后，你最怕什么？不是装机，而是你和 Claude 聊了半天的代码、需求、方案——全没了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;直到我发现 cc-sync，这个问题终于解决了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;GitHub地址&lt;/strong&gt;：&lt;a href=&quot;https://github.com/ikook-wang/cc-sync&quot;&gt;https://github.com/ikook-wang/cc-sync&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260419155321814.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;01 一键安装&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;前置条件&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;已安装Claude code并使用≥1次&lt;/li&gt;
+&lt;li&gt;已安装-Git&lt;/li&gt;
+&lt;li&gt;一个 GitHub 仓库（建议 private）用于存放配置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;运行代码安装：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;curl -fsSL https://raw.githubusercontent.com/ikook-wang/cc-sync/main/install.sh | bash
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;em&gt;安装脚本会交互式引导你完成配置：&lt;/em&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;输入 GitHub 仓库地址&lt;/li&gt;
+&lt;li&gt;设置保留会话数（默认 3）&lt;/li&gt;
+&lt;li&gt;自动配置 &lt;code&gt;.gitignore&lt;/code&gt;、hooks、shell 包装函数&lt;/li&gt;
+&lt;li&gt;完成首次同步
+需同步电脑都运行一次即可装一次，用同一个仓库，就能随时继续。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;02 无缝衔接&lt;/h3&gt;
+&lt;p&gt;跨机器同步 Claude Code 的配置和会话。
+在公司聊了一半，回家笔记本输入恢复会话命令
+在家里聊了一半，出差在酒店的笔记本输入恢复会话命令&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;claude --resume 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;执行这个命令，就是恢复之前会话的意思,直接继续。&lt;strong&gt;像没换过电脑。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;同步内容：设置、命令、技能、最近 N 个会话。
+凭据和缓存不同步，安全起见。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260419160330747.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;03 自动同步&lt;/h3&gt;
+&lt;p&gt;另外,cc-sync 通过三个机制实现自动同步：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;打开 Claude Code，自动拉取最新&lt;/li&gt;
+&lt;li&gt;退出Claude Code，，自动提交推送&lt;/li&gt;
+&lt;li&gt;手动触发命令&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;bash ~/.claude/sync.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260419162129305.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;04 常用命令&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;# 手动同步
+bash ~/.claude/sync.sh
+
+# 详细模式（查看同步过程）
+bash ~/.claude/sync.sh --verbose
+
+# 卸载
+bash ~/.claude/uninstall.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;PS.卸载操作会移除sync.sh、sync.conf、uninstall.sh文件，同时会删除settings.json中的SessionStart hook以及Shell rc文件里的claude包装函数，但不会移除Git仓库和已同步的数据。&lt;/p&gt;
+&lt;h3&gt;05 注意事项&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;建议两台电脑保持相同的用户名和目录结构。&lt;/li&gt;
+&lt;li&gt;编辑 &lt;code&gt;~/.claude/sync.conf&lt;/code&gt; ,配置项 &lt;code&gt;KEEP_SESSIONS=3&lt;/code&gt;每个项目所保留的会话数量。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;换电脑最烦的不是重装软件，而是&lt;strong&gt;丢失上下文&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;你和 Claude 聊了半小时的需求、写的代码片段——换台电脑全没了。&lt;/p&gt;
+&lt;p&gt;cc-sync 让你&lt;strong&gt;永远从上次停下的地方继续&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;工具不帮你做事，但帮你少重复做事。&lt;/strong&gt;&lt;/p&gt;
 </content:encoded></item><item><title>包管理工具UniGetU</title><link>https://dqtx.cc/posts/software/unigetui/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/unigetui/</guid><pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;重装系统最烦的就是一个个装软件？UniGetUI 直接帮你一键搞定。&lt;/p&gt;
 &lt;p&gt;UniGetUI 是一款开源 GUI 包管理工具，专为 Windows 10/11 设计，统一整合 WinGet、Scoop、Chocolatey、pip、npm、.NET Tool、PowerShell Gallery 等常用命令行包管理器，可视化操作更简单。&lt;/p&gt;
 &lt;p&gt;开源地址：https://github.com/Devolutions/UniGetUI&lt;/p&gt;
