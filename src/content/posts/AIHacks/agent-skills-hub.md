@@ -1,145 +1,45 @@
 ---
-title: Agent Skills Hub详解
-published: 2026-03-11
+title: Agent Skills 管理方案
+published: 2026-04-20
 tags: []
 category: AIHacks
 draft: false
 pinned: false
 ---
 
-相信有很多小伙伴跟我一样，手头同时在用好几个 AI Agent——Claude Code、Codex、Cursor、Windsurf……每个 Agent 都有自己的 Skill 目录，装了一堆技能包。时间一长就会遇到一个头疼的问题：同一个 Skill 要在不同 Agent 里各装一遍，版本还不一定一致，管理起来非常混乱。
+相信有很多小伙伴跟我一样，手头同时在用好几个 AI Agent——Claude Code、Codex、Cursor、Windsurf……每个 Agent 都有自己的 Skill 目录，装了一堆技能包。
 
 
 
-我一直在想，有没有一种方式能像管理代码依赖一样，统一管理所有 Agent 的技能包？最近我在 GitHub 上发现了 agent-skills-hub 这个项目，完美解决了我的痛点。
+时间一长就会遇到一个头疼的问题：同一个 Skill 要在不同 Agent 里各装一遍，版本还不一定一致，管理起来非常混乱。从最早手动复制粘贴技能配置，到用脚本管理本地技能库，再到尝试多设备同步——我发现**技能的发现、配置、迁移和同步**，一直是个很痛的问题。
 
-**项目地址**：https://github.com/youzaiAGI/agent-skills-hub
+
+
+我一直在想，有没有一种方式能像管理代码依赖一样，统一管理所有 Agent 的技能包？同时实现在多设备上能够一键迁移跟同步？最近我在 GitHub 上发现了 几个解决方案，完美解决了我的痛点。
+
+
 
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/hub.webp)
 
-## 它解决了什么问题
-
-简单来说，agent-skills-hub 提供了一个"中央仓库"的概念。所有 Skill 统一安装到 `~/.skill-hub` 这个目录，然后通过同步命令一键分发到各个 Agent 的技能目录中。这样做的好处显而易见：只需要维护一份技能包，所有 Agent 共享同一套 Skill，再也不用重复安装了。
-
-目前它支持 18+ 个 AI Agent，包括 Claude Code、Codex、Cursor、Windsurf、Gemini、Trae、GitHub Copilot 等主流工具，覆盖面非常广。
-
-## 安装方式
-
-安装方式很简单，直接用 pip：
-
-```bash
-pip install agent-skills-hub
-```
-
-安装完成后，可以用以下命令验证：
-
-```bash
-skill --version
-# 输出: Agent Skills Hub v1.6.10
-```
-
-当然，你也可以直接把项目地址丢给 Claude，让它帮你安装：
-
-```
-https://github.com/youzaiAGI/agent-skills-hub
-帮我安装这个项目
-```
-
-## 日常使用
-
-安装好之后，日常使用主要就两步：装技能、同步技能。
-
-### 安装新技能到中央仓库
-
-每次发现一个好用的 Skill，我都会先装到 `~/.skill-hub` 这个中央仓库里。比如我想安装 Anthropic 官方的 skill-creator：
-
-```
-skill install skill-creator@anthropics/skills
-```
-
-或者你也可以让 Claude 帮你操作，把 Skill 的 GitHub 地址丢给它就行：
-
-```
-https://github.com/anthropics/skills/tree/main/skills/skill-creator
-帮我安装这个 skill 到 ~/.skill-hub
-```
-
-### 同步到各个 Agent
-
-技能装好后，需要同步到你实际使用的 Agent 中。agent-skills-hub 提供了 `skill sync` 命令来完成这件事：
-
-```bash
-# 同步到 Claude Code（全局）
-skill sync ClaudeCode skill-creator@anthropics/skills -g
-
-# 同步到 Cursor（项目级）
-skill sync Cursor skill-creator@anthropics/skills -p
-```
-
-如果你想一次性把所有技能都同步过去，也可以先导出技能列表，再批量同步：
-
-```bash
-# 导出当前已安装的技能列表
-skill list > skills.txt
-
-# 批量同步到指定 Agent
-skill sync ClaudeCode skills.txt -g
-```
-
-这个体验就像 Python 的 `pip install -r requirements.txt` 一样丝滑。
-
-### 交互式搜索和管理
-
-除了命令行，agent-skills-hub 还提供了交互式的 TUI 界面，可以搜索、浏览和安装技能：
-
-```bash
-# 打开交互式搜索
-skill search
-
-# 打开技能管理界面
-skill manage
-```
-
-在搜索界面里可以用方向键浏览，按回车查看详情并安装，非常直观。
-
-## 我的实际工作流
-
-分享一下我个人的使用习惯，供大家参考。
-
-我主要用 Claude Code 和 Codex 两个 Agent，每次安装新 Skill 时，我会这样告诉 Claude：
-
-```
-https://github.com/xxx/xxx
-帮我安装这个 skill 到 C:\Users\Administrator\.skill-hub
-
-安装完后使用 skill sync 命令，将技能同步到 ~\.claude\skills\ 和 ~\.codex\skills\ 目录
-```
-
-这样一句话就搞定了安装和同步，两个 Agent 立刻就能用上新技能。
-
-## 写在最后
-
-agent-skills-hub 解决的虽然是一个小问题，但对于同时使用多个 AI Agent 的开发者来说，确实能省下不少重复劳动。如果你也有类似的困扰，不妨试试看。
 
 
-
-## 相关链接
-
-多个Agent共用一套SKII
+## 多个Agent共用一套SKII
 
 | 名称                                                         | 来源说明                                                     | 形式     |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | -------- |
-| [youzaiAGI/agent-skills-hub](https://github.com/youzaiAGI/agent-skills-hub) |                                                              | 命令行   |
+| ~~[youzaiAGI/agent-skills-hub](https://github.com/youzaiAGI/agent-skills-hub)~~（已删库） | [点此查看](https://mp.weixin.qq.com/s/5deQW5ZnszBgJ4Ji9i6AKA) | 命令行   |
 | [qufei1993/skills-hub](https://github.com/qufei1993/skills-hub) | [点此查看](https://mp.weixin.qq.com/s/u1RCeiYMFItuzIf1g6J_DQ) | 客户端   |
-| [runkids/skillshare](https://github.com/runkids/skillshare)  | [点此查看](https://mp.weixin.qq.com/s/aPPIWCKgXmiibU7X1A9OIA) | 启动网页 |
-| [Backtthefuture/skillmanager](https://github.com/Backtthefuture/skillmanager) | [点此查看](https://mp.weixin.qq.com/s/xMFZhFC3Dyj7Y4Den7upTQ) | 启动网页 |
+| [runkids/skillshare](https://github.com/runkids/skillshare)（颜值高） | [点此查看](https://mp.weixin.qq.com/s/aPPIWCKgXmiibU7X1A9OIA) | 启动网页 |
+| [Backtthefuture/skillmanager](https://github.com/Backtthefuture/skillmanager)（黄叔） | [点此查看](https://mp.weixin.qq.com/s/xMFZhFC3Dyj7Y4Den7upTQ) | 启动网页 |
 
-多设备共用skill同步
+## 多设备共用skill同步
+
+通过创建符号（软链接）链接方式
 
 https://mp.weixin.qq.com/s/EQoA2Lqf4wk6sf-STZTeLw
 
 
 
-在多台电脑之间无缝同步 Claude Code 配置和会话。
+在多台电脑之间无缝同步Claude Code 配置和会话。命令行工具，*我配置失败*
 
 https://github.com/ikook-wang/cc-sync/blob/main/README_zh-CN.md

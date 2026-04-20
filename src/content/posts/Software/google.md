@@ -1,5 +1,5 @@
 ---
-title: 谷歌最新产品&新功能
+title: 谷歌新产品&功能
 published: 2026-04-20
 tags: []
 category: Software
