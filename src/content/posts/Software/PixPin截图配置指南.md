@@ -57,8 +57,6 @@ category: Software
 
 
 
-**大强远程技术支持：742112.xyz**
-
 
 
 

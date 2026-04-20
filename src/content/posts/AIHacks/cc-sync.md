@@ -24,9 +24,15 @@ pinned: false
 - 已安装-Git
 - 一个 GitHub 仓库（建议 private）用于存放配置
 
-**运行代码安装：**
+**运行代码安装（windows Git Bash）：**
+
 ```bash
+# 方式1: 直接管道（可能不显示交互，但能运行）
 curl -fsSL https://raw.githubusercontent.com/ikook-wang/cc-sync/main/install.sh | bash
+
+# 方式2: 先下载再运行（推荐，能看到交互）
+curl -fsSL -o /tmp/install.sh https://raw.githubusercontent.com/ikook-wang/cc-sync/main/install.sh
+bash /tmp/install.sh
 ```
 *安装脚本会交互式引导你完成配置：*
 1. 输入 GitHub 仓库地址
@@ -64,7 +70,12 @@ bash ~/.claude/sync.sh
 ### 04 常用命令
 ```
 # 手动同步
-bash ~/.claude/sync.sh
+bash ~/.claude/sync.sh --verbose
+git -C ~/.claude commit -m "sync: initial"
+git -C ~/.claude push
+
+#查询推送日志
+cd ~/.claude && git status && git remote -v
 
 # 详细模式（查看同步过程）
 bash ~/.claude/sync.sh --verbose

@@ -2,5 +2,6 @@
   "attachmentFolderPath": "assets/images",
   "newLinkFormat": "relative",
   "useMarkdownLinks": true,
-  "uriCallbacks": false
+  "uriCallbacks": false,
+  "promptDelete": false
 }

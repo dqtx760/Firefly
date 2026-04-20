@@ -25,7 +25,12 @@ pinned: false
 
 ## 二、核心配置（JSON 文件）
 
-打开 Windows Terminal，点击界面中的「设置」，选择「打开 JSON 文件」；
+点击界面中的「设置」，选择「打开 JSON 文件」；
+
+实际文件路径（复制即可用）
+```
+%LOCALAPPDATA%\Microsoft\Windows Terminal\settings.json
+```
 
 将原有配置内容全部替换为以下代码（其中背景图`meinv.png`可添加`dqtx33`领取，需自行修改背景图文件路径）：
 
@@ -175,7 +180,17 @@ oh-my-posh init pwsh --config $env:POSH_THEMES_PATH\M365Princess.omp.json | Invo
 
 - 重启 Windows Terminal，主题即可生效。
 
+### 
 
+### 4.设置启动大小
+
+启动窗口大小可在**设置-启动-启动大小**处调整，
+
+2K分辨率，缩放124%，设置为**100、35**
+
+**启动大小（窗口）&启动参数（位置）**
+
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260419202153089.webp)
 
 ## 五、常见问题
 
@@ -197,15 +212,16 @@ powershell.exe -nologo
 
 ### 3. 代码自动补全配置
 
-1. 打开 Windows Terminal
-2. 输入这 2 条命令（复制粘贴）：
+打开 Windows Terminal
+
+输入这 2 条命令（复制粘贴）：
 
 ```
 Install-Module PSReadLine -Force -SkipPublisherCheck
 notepad $PROFILE
 ```
 
-3. 在打开的文件里粘贴这段：
+在打开的文件里粘贴这段：
 
 ```
 Set-PSReadLineOption -PredictionSource History
@@ -214,7 +230,7 @@ Set-PSReadLineOption -EditMode Windows
 Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
 ```
 
-4. 手动添加 Git Bash 配置
+手动添加 Git Bash 配置
 
 Windows Terminal → 下拉箭头 →「设置」→「添加新配置文件」→「新建空配置文件」
 
@@ -230,15 +246,37 @@ Windows Terminal → 下拉箭头 →「设置」→「添加新配置文件」�
 >
 > 保存，重启终端即可。
 
-5. 启动窗口大小哪里调
+### 4.拖动文件形成目录形成不了文件目录
 
-设置-启动-启动大小  **注意不是调启动参数**
+解决办法：MFCMouseEffect中添加手势映射：左键拖拽向→=复制
 
-我2k分辨率  设置150  40
+操作的时间，左键选中一个文件，向右拖拽在后右键单击
+
+### 5. Ctrl+V 无法在粘贴图片
+
+在 Windows Terminal 中使用 Kimi Code CLI 时，Ctrl+V 快捷键无法粘贴剪贴板中的图片。这是因为 Windows Terminal 默认会拦截 Ctrl+V 用于自身的粘贴操作，导致该快捷键无法传递给 Kimi CLI。
 
 
 
-**PS.**远程服务微信：dqtx33  付费社群：[点此报名](https://t.zsxq.com/d4zSX)
+可以使用 `Alt+V` 粘贴图片。 `M-V`也可以需绑定 [参照](https://github.com/MoonshotAI/kimi-cli/issues/781)
 
+```
+# 同时绑定两个快捷键
+@_kb.add("c-v", eager=True)
+@_kb.add("escape", "v", eager=True)  # Alt+V
+```
 
+### 6. Terminal中启动了Claude code 右键不能自动粘贴
+
+开启  NO_FLICKER 模式（无闪烁模式）会造成这种情况，编辑 Claude Code 的配置文件夹 -/.claude/settings.json，找到
+
+```
+    "CLAUDE_CODE_NO_FLICKER": "1"
+```
+
+改成
+
+```
+    "CLAUDE_CODE_NO_FLICKER": "0"
+```
 

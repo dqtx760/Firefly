@@ -57,10 +57,8 @@ qwen --version
 qwen 
 
 # 2. 全自动模式（无需确认，自动执行所有操作）
-qwen --approval-mode full-auto 
-
-# 3. 自动编辑模式（自动修改文件，但运行命令前需确认）
-qwen --approval-mode auto-edit
+qwen -y
+qwen --approval-mode yolo
 ```
 1. 首次启动会提示选择登录方式，**直接选择「Qwen OAuth」**
 2. 会自动跳转到浏览器，登录你的通义千问账号（直接用github登录）

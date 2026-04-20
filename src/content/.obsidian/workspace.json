@@ -13,26 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/coxp.md",
+                "file": "posts/Software/WezTerm.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "coxp"
-            }
-          },
-          {
-            "id": "553e9c7a468d3d17",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/avatar.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "avatar"
+              "title": "WezTerm"
             }
           }
         ]
@@ -92,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 259.50840759277344
   },
   "right": {
     "id": "5baf836eb86f7a8f",
@@ -103,12 +89,27 @@
         "type": "tabs",
         "children": [
           {
+            "id": "9ce50b84dc315952",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "posts/Software/WezTerm.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "WezTerm 的大纲"
+            }
+          },
+          {
             "id": "c15d774ab5ec43d5",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "posts/warden-worker.md",
+                "file": "posts/Software/WezTerm.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +119,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "warden-worker 的反向链接列表"
+              "title": "WezTerm 的反向链接列表"
             }
           },
           {
@@ -149,31 +150,16 @@
               "icon": "lucide-tags",
               "title": "标签"
             }
-          },
-          {
-            "id": "9ce50b84dc315952",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "posts/warden-worker.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "warden-worker 的大纲"
-            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 317.5
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian42-brat:BRAT": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
@@ -185,19 +171,30 @@
   },
   "active": "f6b5e7abc96521b9",
   "lastOpenFiles": [
+    "01_Raw/00_Clipings/ShareX隐藏的多区域截图技巧.md",
+    "posts/Software/WezTerm.md",
+    "01_Raw/00_Clipings",
+    "01_Raw",
+    "posts/Software/assets/WezTerm/file-20260420152819253.png",
+    "posts/Software/assets/WezTerm",
+    "posts/Software/assets",
+    "posts/AIHacks/Qwen.md",
+    "posts/Software/PixPin截图配置指南.md",
+    "posts/Software/cmd.md",
+    "posts/Software/Terminal .md",
+    "posts/Technical/零成本搭建在线图床.md",
+    "posts/AIHacks/Agent-Reach.md",
+    "assets/images/0f60d87a-df45-42d3-a692-c172982899cc.webp",
+    "assets/images/0cfff651-0590-4700-81f4-79c9e576c38d.webp",
+    "assets/images/0bccb1b9-3fe1-49f0-a255-0805fc0ee35c.webp",
+    "assets/images/0aa77bad-482a-4b65-9a19-4f35acb570ba.webp",
     "assets/images/coxp.svg",
     "assets/images/Mermaid Chart - Create complex, visual diagrams with text.-2026-02-02-214608 1.svg",
     "assets/images/Mermaid Chart - Create complex, visual diagrams with text.-2026-02-02-214608.svg",
     "assets/images/coxp-4.png",
     "assets/images/coxp-3.png",
-    "assets/images/coxp-2.png",
-    "assets/images/coxp-1.png",
     "posts/avatar.md",
     "posts/coxp.md",
-    "assets/images/coxp.png",
-    "assets/images/avatar-2.png",
-    "assets/images/avatar-1.png",
-    "assets/images/avatar.png",
     "[微信头像CDN.md",
     "posts/http-header-host.md",
     "posts/yuanbao.md",
@@ -213,13 +210,6 @@
     "posts/go-proxy-gh.md",
     "posts/giscus-akismet.md",
     "posts/ghedu-free-tech.md",
-    "posts/ghedu-free-name.md",
-    "posts/ghedu-free-me.md",
-    "posts/eopf-github-proxy.md",
-    "posts/mac-gal.md",
-    "posts/self-host-matrix.md",
-    "posts/gal.md",
-    "2024-11-20.md",
-    "posts/fuwari.md"
+    "posts/ghedu-free-name.md"
   ]
 }
