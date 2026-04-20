@@ -121,22 +121,25 @@ https://github.com/xxx/xxx
 
 agent-skills-hub 解决的虽然是一个小问题，但对于同时使用多个 AI Agent 的开发者来说，确实能省下不少重复劳动。如果你也有类似的困扰，不妨试试看。
 
-以上，既然看到这里了，**如果觉得教程对你有帮助**，随手<u>点个赞、收藏、转发</u>三连吧！有任何问题，欢迎在**留言区**评论，我会逐一回复。👏👏
+
+
+## 相关链接
+
+多个Agent共用一套SKII
+
+| 名称                                                         | 来源说明                                                     | 形式     |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | -------- |
+| [youzaiAGI/agent-skills-hub](https://github.com/youzaiAGI/agent-skills-hub) |                                                              | 命令行   |
+| [qufei1993/skills-hub](https://github.com/qufei1993/skills-hub) | [点此查看](https://mp.weixin.qq.com/s/u1RCeiYMFItuzIf1g6J_DQ) | 客户端   |
+| [runkids/skillshare](https://github.com/runkids/skillshare)  | [点此查看](https://mp.weixin.qq.com/s/aPPIWCKgXmiibU7X1A9OIA) | 启动网页 |
+| [Backtthefuture/skillmanager](https://github.com/Backtthefuture/skillmanager) | [点此查看](https://mp.weixin.qq.com/s/xMFZhFC3Dyj7Y4Den7upTQ) | 启动网页 |
+
+多设备共用skill同步
+
+https://mp.weixin.qq.com/s/EQoA2Lqf4wk6sf-STZTeLw
 
 
 
-**✅大远程技术支持**
+在多台电脑之间无缝同步 Claude Code 配置和会话。
 
-如果你在安装、配置或使用中遇到任何问题，不想自己折腾
-
-随时可以找我提供 **1 对 1 远程技术支持**：[742112.xyz](742112.xyz)
-
-
-
-✅**关于的知识星球**
-
-我做了一个轻量社群，把私藏的精品软件，技术教程，AI智能体学习笔记
-
-都整理进了进去，68元/年，感兴趣的可以扫码自行学习！
-
-![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260306064028188.webp)
+https://github.com/ikook-wang/cc-sync/blob/main/README_zh-CN.md

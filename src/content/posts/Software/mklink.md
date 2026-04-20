@@ -58,7 +58,7 @@ cmd /c mklink /D "C:\Users\你的用户名\.claude\skills" "C:\Users\你的用�
 
 
 
-**场景二：项目文件skill与全局skill配置**
+**场景二：项目skill使用全局skill配置**
 
 在Obsidian仓库里创建软链接，指向Claude code读取的全局skill目录：
 
