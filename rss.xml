@@ -62,6 +62,42 @@
 &lt;li&gt;⛓️ Web3教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867794661334761497#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;🛠️ 技术教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867808112450912266#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>Dos命令mklink详解</title><link>https://dqtx.cc/posts/software/mklink/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/mklink/</guid><pubDate>Mon, 20 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你是否遇到过这些问题：想让软件从A目录读取文件，但文件实际存放在B目录？&lt;/p&gt;
+&lt;p&gt;想在多个位置同步同一个文件，又不想每次手动复制？或是想给文件夹创建&quot;替身&quot;，让不同程序都能访问？&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Windows 自带的 mklink 命令，就是解决这些问题的神器。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260420172844734.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;01 先搞懂四种链接的区别&lt;/h3&gt;
+&lt;p&gt;Windows 提供了四种创建链接的方式，各有各的脾气：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;文件软链接（符号链接）&lt;/strong&gt; 是默认模式，用 &lt;code&gt;mklink 链接名 目标文件&lt;/code&gt; 即可创建。它像一个&quot;快捷方式升级版&quot;，让程序能读取别处的文件。&lt;strong&gt;支持跨盘&lt;/strong&gt;，比如在D盘创建一个链接指向C盘的文件。但如果你删掉原文件，这个链接就失效了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260420173406196.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;目录软链接（/D参数）&lt;/strong&gt; 专门用于文件夹，和文件软链接一样支持跨盘，原文件夹删除后链接同样失效。很多工具用它来重定向配置目录，比如让Claude从默认路径读取，实际文件存放在别处。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;硬链接（/H参数）&lt;/strong&gt; 的思路完全不同。它不是指向路径，而是给同一份数据多起几个&quot;名字&quot;。即使删掉原始文件，链接依然能打开内容，因为它指向的是硬盘上的实际数据。&lt;strong&gt;但它只能在同一个盘符内使用&lt;/strong&gt;，且只能用于文件，不能用于文件夹。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;目录联接（/J参数）&lt;/strong&gt; 和目录软链接类似，也是针对文件夹的链接方式。区别在于它属于NTFS的旧功能，&lt;strong&gt;不支持跨盘&lt;/strong&gt;，但兼容性更好，一些老旧程序也能正常识别。&lt;/p&gt;
+&lt;h3&gt;02 实际使用场景&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;场景一：让AI工具读取备份目录&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;想把Claude的全局skills目录指向GitHub备份仓库？可以这样操作：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cmd /c mklink /D &quot;C:\Users\你的用户名\.claude\skills&quot; &quot;C:\Users\你的用户名\claude-skills&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这两个路径指向同一个文件夹，往任意一个里放文件，另一个立刻同步。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;场景二：Obsidian与AI工具共享配置&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在Obsidian仓库里创建软链接，指向AI工具读取的配置目录：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mklink /D &quot;%userprofile%\.claude\skills&quot; &quot;%userprofile%\Documents\Obsidian\.claude\skills&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这样在Obsidian里编辑的内容，AI工具立刻就能看到。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;场景三：知识库多位置同步&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;用硬链接让同一份文档在不同位置都能访问，同时保持内容完全一致：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mklink /h &quot;D:\project2026\zhishiku\AGENTS\知识库规范.md&quot; &quot;D:\project2026\zhishiku\知识库规范.md&quot;
+mklink /h &quot;D:\project2026\zhishiku\CLAUDE\知识库规范.md&quot; &quot;D:\project2026\zhishiku\知识库规范.md&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;修改任意一个文件，其他位置同步更新，而且不怕误删原文件。&lt;/p&gt;
+&lt;h3&gt;03 重要注意事项&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;创建符号链接需要&lt;strong&gt;管理员权限&lt;/strong&gt;，记得以管理员模式运行CMD或PowerShell&lt;/li&gt;
+&lt;li&gt;软链接删除原文件后链接失效，因为链接指向的是路径&lt;/li&gt;
+&lt;li&gt;硬链接删除原文件后依然有效，因为它指向的是数据本身&lt;/li&gt;
+&lt;li&gt;如果你需要跨盘操作，选择软链接；如果只在同盘内使用，硬链接更稳定&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;掌握这四个命令，你就是Windows文件管理的高手了。&lt;/strong&gt;&lt;/p&gt;
 </content:encoded></item><item><title>Cc-sync：多电脑CC配置同步工具</title><link>https://dqtx.cc/posts/aihacks/cc-sync/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/cc-sync/</guid><pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;换电脑后，你最怕什么？不是装机，而是你和 Claude 聊了半天的代码、需求、方案——全没了。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -75,8 +111,13 @@
 &lt;li&gt;已安装-Git&lt;/li&gt;
 &lt;li&gt;一个 GitHub 仓库（建议 private）用于存放配置&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;运行代码安装：&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;curl -fsSL https://raw.githubusercontent.com/ikook-wang/cc-sync/main/install.sh | bash
+&lt;p&gt;&lt;strong&gt;运行代码安装（windows Git Bash）：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# 方式1: 直接管道（可能不显示交互，但能运行）
+curl -fsSL https://raw.githubusercontent.com/ikook-wang/cc-sync/main/install.sh | bash
+
+# 方式2: 先下载再运行（推荐，能看到交互）
+curl -fsSL -o /tmp/install.sh https://raw.githubusercontent.com/ikook-wang/cc-sync/main/install.sh
+bash /tmp/install.sh
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;em&gt;安装脚本会交互式引导你完成配置：&lt;/em&gt;&lt;/p&gt;
 &lt;ol&gt;
@@ -107,7 +148,12 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;04 常用命令&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;# 手动同步
-bash ~/.claude/sync.sh
+bash ~/.claude/sync.sh --verbose
+git -C ~/.claude commit -m &quot;sync: initial&quot;
+git -C ~/.claude push
+
+#查询推送日志
+cd ~/.claude &amp;amp;&amp;amp; git status &amp;amp;&amp;amp; git remote -v
 
 # 详细模式（查看同步过程）
 bash ~/.claude/sync.sh --verbose
@@ -477,10 +523,8 @@ npm -v
 qwen 
 
 # 2. 全自动模式（无需确认，自动执行所有操作）
-qwen --approval-mode full-auto 
-
-# 3. 自动编辑模式（自动修改文件，但运行命令前需确认）
-qwen --approval-mode auto-edit
+qwen -y
+qwen --approval-mode yolo
 &lt;/code&gt;&lt;/pre&gt;
 &lt;ol&gt;
 &lt;li&gt;首次启动会提示选择登录方式，&lt;strong&gt;直接选择「Qwen OAuth」&lt;/strong&gt;&lt;/li&gt;
@@ -1369,53 +1413,11 @@ winget install Starship.Starship
 &lt;h3&gt;1. WezTerm 配置：默认启动 Nushell&lt;/h3&gt;
 &lt;p&gt;新建：C:\Users\你的用户名.wezterm.lua
 自用配置文件：&lt;a href=&quot;https://github.com/dqtx760/cfg/blob/main/WezTerm/.wezterm.lua&quot;&gt;点此查看&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;关键说明&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;快捷键&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;需要安装 &lt;code&gt;CaskaydiaCove Nerd Font&lt;/code&gt; 字体才能正常显示图标
 下面的是我自定义的一些快捷键&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;快捷键&lt;/th&gt;
-&lt;th&gt;功能&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Ctrl+Shift+V&lt;/td&gt;
-&lt;td&gt;粘贴&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;Ctrl + t&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;新建标签&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;Ctrl + 数字&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;切换标签&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;Alt + Shift + →&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;左右分屏&lt;/strong&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;Alt + Shift + ↓&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;上下分屏&lt;/strong&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;Ctrl + 方向键&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;在分屏之间切换&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;Ctrl + W&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;关闭当前分屏&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;Alt + W&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;关闭整个标签&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
 &lt;h3&gt;2. Nushell 配置：自动加载 Starship&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -1432,16 +1434,180 @@ winget install Starship.Starship
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;自用配置文件：&lt;a href=&quot;https://github.com/dqtx760/cfg/blob/main/WezTerm/starship.toml&quot;&gt;点此查看&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;三、最终效果&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260406171739845.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;四、常见问题&lt;/h2&gt;
-&lt;h3&gt;WezTerm 里 codex、gemini正常启动，Claude Code 启动没有响应&lt;/h3&gt;
-&lt;p&gt;打开你的 wezterm.lua，找到这一行：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;config.default_prog = { &apos;nu&apos; }
+&lt;h3&gt;配置说明&lt;/h3&gt;
+&lt;p&gt;这是一个高度自定义的 WezTerm 终端配置文件，专门针对日常开发、AI 聊天（如 Qwen Code）和美观体验进行了优化。
+&lt;img src=&quot;assets/WezTerm/file-20260420152819253.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260406171739845.webp&quot; alt=&quot;image.png&quot; /&gt;
+&lt;strong&gt;主要特点：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用 OneHalfDark 配色方案，文字颜色为柔和灰色（#D4D4D4），长时间阅读更护眼。&lt;/li&gt;
+&lt;li&gt;隐藏系统标题栏，仅保留可调整大小的边框，窗口顶部保留 30px 透明区域用于视觉美观。&lt;/li&gt;
+&lt;li&gt;背景使用自定义图片（D:/data/images/meinv.png），并设置了适当的透明度和亮度。&lt;/li&gt;
+&lt;li&gt;默认启动 NuShell，并提供 NuShell、PowerShell、Cmd 的快速启动菜单。&lt;/li&gt;
+&lt;li&gt;字体使用 CaskaydiaCove Nerd Font，大小为 14，适合编程和阅读。&lt;/li&gt;
+&lt;li&gt;启动时窗口自动居中显示，初始大小为 120 列 × 40 行，关闭窗口时不提示确认。&lt;/li&gt;
+&lt;li&gt;该终端工具启动时将自动打开4个标签页并分别运行对应智能体：标签1执行&lt;code&gt;qwen -y&lt;/code&gt;，标签2执行&lt;code&gt;claude --dangerously-skip-permissions&lt;/code&gt;，标签3启动&lt;code&gt;gemini&lt;/code&gt;，标签5为普通Shell。&lt;/li&gt;
+&lt;li&gt;4 个标签页都有清晰标题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;鼠标操作优化：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;右键：智能处理，有选中文字时自动复制并清除选中，无选中时直接粘贴。&lt;/li&gt;
+&lt;li&gt;普通左键点击和拖拽：用于正常选中文字。&lt;/li&gt;
+&lt;li&gt;Shift + 左键拖拽：安全选中文字模式，推荐在 Qwen Code 等 AI 聊天工具中使用，可有效避免选中时打断输出（Request cancelled）或自动跳回底部的问题。&lt;/li&gt;
+&lt;li&gt;Ctrl + 左键拖拽：用于拖动整个窗口，无需按住其他额外按键即可移动窗口。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;快捷键：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;支持 Ctrl + t 新建标签页、Ctrl + w 关闭当前面板、Alt + w 关闭当前标签页。&lt;/li&gt;
+&lt;li&gt;支持 Alt + Shift + 方向键进行面板分割，Ctrl + 方向键切换面板。&lt;/li&gt;
+&lt;li&gt;支持 Ctrl + 1~8 快速切换标签页。&lt;/li&gt;
+&lt;li&gt;Ctrl + u 清空当前行。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;其他设置：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;启用 HTTP 代理（127.0.0.1:7890），便于终端内工具走代理。&lt;/li&gt;
+&lt;li&gt;设置 bypass_mouse_reporting_modifiers 为 SHIFT，进一步提升在支持鼠标报告的程序中的兼容性。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;此配置兼顾了美观、实用性和 AI 聊天场景下的稳定性，适合需要高自定义终端的用户使用。&lt;/p&gt;
+&lt;h3&gt;快捷键总览&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;快捷键&lt;/th&gt;
+&lt;th&gt;功能说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Ctrl + t&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;新建标签页 (SpawnTab)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Ctrl + w&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;关闭整个窗口 (CloseCurrentPane)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Alt + w&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;关闭当前标签页 (CloseCurrentTab)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Ctrl + u&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;清空当前行 (Send Ctrl+U)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Alt + Shift + →&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;水平分割面板 (SplitHorizontal)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Alt + Shift + ↓&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;垂直分割面板 (SplitVertical)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Ctrl + ←&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;切换到左侧面板&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Ctrl + →&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;切换到右侧面板&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Ctrl + ↑&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;切换到上方面板&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Ctrl + ↓&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;切换到下方面板&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Ctrl + 1&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;切换到标签页 1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Ctrl + 2&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;切换到标签页 2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Ctrl + 3&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;切换到标签页 3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Ctrl + 4&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;切换到标签页 4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Ctrl + 5&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;切换到标签页 5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Ctrl + 6&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;切换到标签页 6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Ctrl + 7&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;切换到标签页 7&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Ctrl + 8&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;切换到标签页 8&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;鼠标快捷键&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;操作&lt;/th&gt;
+&lt;th&gt;功能说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;右键单击&lt;/td&gt;
+&lt;td&gt;有选中文字 → 复制并清除选中&amp;lt;br&amp;gt;无选中 → 粘贴&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;左键点击 + 拖拽&lt;/td&gt;
+&lt;td&gt;正常选中文字&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Shift + 左键拖拽&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;安全选中文字（推荐用于 Qwen 聊天，避免打断输出）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Ctrl + 左键拖拽&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;拖动窗口&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;提示&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在 Qwen Code 等 AI 聊天界面中，强烈推荐使用 &lt;code&gt;Shift + 左键拖拽&lt;/code&gt; 来选中历史文字，可大幅减少 “Request cancelled” 问题。&lt;/li&gt;
+&lt;li&gt;需要移动窗口时请使用 &lt;code&gt;Ctrl + 左键拖拽&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;四、常见问题（Q&amp;amp;A）&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Q1：右键为什么有时候复制，有时候粘贴？&lt;/strong&gt;&lt;br /&gt;
+A1：右键采用了智能逻辑。如果当前有选中文字，右键会自动复制并清除选中；如果没有选中文字，右键则直接粘贴剪贴板内容。这样使用更方便。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q2：在 Qwen Code 等 AI 聊天时，选中文字经常出现 “Request cancelled” 怎么办？&lt;/strong&gt;&lt;br /&gt;
+A2：这是因为程序开启了鼠标报告模式。解决方法是按住 &lt;strong&gt;Shift&lt;/strong&gt; 键，再用左键拖拽选中文字。这样可以绕过鼠标报告，避免打断 AI 输出。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q3：如何拖动窗口？&lt;/strong&gt;&lt;br /&gt;
+A3：按住 &lt;strong&gt;Ctrl&lt;/strong&gt; 键 + 左键拖拽 即可移动窗口。普通左键拖拽用于选中文字，不会触发窗口移动。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q4：为什么我直接左键选中文字还是会打断 AI 输出？&lt;/strong&gt;&lt;br /&gt;
+A4：因为 AI 聊天工具会捕获鼠标事件。推荐始终使用 &lt;strong&gt;Shift + 左键拖拽&lt;/strong&gt; 来安全选中历史内容。如果问题依然严重，可以临时按住 Shift 滚动鼠标查看历史。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q5：如何快速切换标签页？&lt;/strong&gt;&lt;br /&gt;
+A5：使用快捷键 &lt;code&gt;Ctrl + 1&lt;/code&gt; 到 &lt;code&gt;Ctrl + 8&lt;/code&gt; 可以快速切换到对应的标签页。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q6：背景图片不显示或太亮/太暗怎么办？&lt;/strong&gt;&lt;br /&gt;
+A6：检查图片路径是否正确（当前路径为 D:/data/images/meinv.png）。可以调整 background 中的 opacity 值（当前为 0.85），数值越小&lt;em&gt;背景越透明&lt;/em&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q7：配置修改后没有生效怎么办？&lt;/strong&gt;&lt;br /&gt;
+A7：按快捷键 &lt;code&gt;Ctrl + Shift + R&lt;/code&gt; 重新加载配置。如果仍然无效，请完全关闭 WezTerm 后再重新打开。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q8：如何恢复默认设置？&lt;/strong&gt;&lt;br /&gt;
+A8：删除或重命名 &lt;code&gt;wezterm.lua&lt;/code&gt; 文件，然后重启 WezTerm 即可使用默认配置。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q8：codex、gemini正常启动，Claude Code 启动没有响应&lt;/strong&gt;
+打开wezterm.lua，找到这一行：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;config.default_prog = { &apos;nu&apos; }  
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;直接替换成：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;config.default_prog = { &apos;powershell.exe&apos;, &apos;-NoLogo&apos; }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;以上，配置文件会持续更新&lt;/p&gt;
 </content:encoded></item><item><title>Obsidian CLI终端管理笔记指南</title><link>https://dqtx.cc/posts/aihacks/obcli/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/obcli/</guid><pubDate>Sun, 05 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;2026年2月27日，Obsidian 1.12.4正式发布官方CLI。&lt;/p&gt;
 &lt;p&gt;这是Obsidian有史以来最重要的功能更新之一，意味着你的笔记库不再只是一个需要手动点开的应用，而变成了随时可调用的基础设施。&lt;/p&gt;
 &lt;p&gt;无论你是想快速捕获一个想法、批量处理上百篇笔记、还是让AI帮你分析和整理知识库——一切都变得前所未有的简单。&lt;/p&gt;
@@ -3348,7 +3514,10 @@ https://xodnytdcaw.feishu.cn/wiki/TTedwAniUiXTm9kYwb6cDJL0nsf?fromScene=spaceOve
 &lt;p&gt;双击目录内的 &lt;code&gt;WindowsTerminal.exe&lt;/code&gt;，即可启动程序&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260306064800835.webp&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;二、核心配置（JSON 文件）&lt;/h2&gt;
-&lt;p&gt;打开 Windows Terminal，点击界面中的「设置」，选择「打开 JSON 文件」；&lt;/p&gt;
+&lt;p&gt;点击界面中的「设置」，选择「打开 JSON 文件」；&lt;/p&gt;
+&lt;p&gt;实际文件路径（复制即可用）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;%LOCALAPPDATA%\Microsoft\Windows Terminal\settings.json
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;将原有配置内容全部替换为以下代码（其中背景图&lt;code&gt;meinv.png&lt;/code&gt;可添加&lt;code&gt;dqtx33&lt;/code&gt;领取，需自行修改背景图文件路径）：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;{
     &quot;$help&quot;: &quot;https://aka.ms/terminal-documentation&quot;,
@@ -3489,6 +3658,12 @@ https://xodnytdcaw.feishu.cn/wiki/TTedwAniUiXTm9kYwb6cDJL0nsf?fromScene=spaceOve
 &lt;ul&gt;
 &lt;li&gt;重启 Windows Terminal，主题即可生效。&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h3&gt;&lt;/h3&gt;
+&lt;h3&gt;4.设置启动大小&lt;/h3&gt;
+&lt;p&gt;启动窗口大小可在&lt;strong&gt;设置-启动-启动大小&lt;/strong&gt;处调整，&lt;/p&gt;
+&lt;p&gt;2K分辨率，缩放124%，设置为&lt;strong&gt;100、35&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;启动大小（窗口）&amp;amp;启动参数（位置）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260419202153089.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;五、常见问题&lt;/h2&gt;
 &lt;h3&gt;1. 如何隐藏cmd/ PowerShell启动提示信息&lt;/h3&gt;
 &lt;p&gt;在Terminal设置-配置文件，分别在命令提示符/PowerShel&lt;/p&gt;
@@ -3499,24 +3674,18 @@ https://xodnytdcaw.feishu.cn/wiki/TTedwAniUiXTm9kYwb6cDJL0nsf?fromScene=spaceOve
 &lt;h3&gt;2.  如何安装专属字体（AdwaitaMono Nerd Font）&lt;/h3&gt;
 &lt;p&gt;终端配置中需用到 AdwaitaMono Nerd Font 字体，下载地址：&lt;a href=&quot;https://www.nerdfonts.com/font-downloads?utm_source=chatgpt.com&quot;&gt;Nerd Fonts 官方下载页&lt;/a&gt;，下载后解压安装即可。&lt;/p&gt;
 &lt;h3&gt;3. 代码自动补全配置&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;打开 Windows Terminal&lt;/li&gt;
-&lt;li&gt;输入这 2 条命令（复制粘贴）：&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;打开 Windows Terminal&lt;/p&gt;
+&lt;p&gt;输入这 2 条命令（复制粘贴）：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;Install-Module PSReadLine -Force -SkipPublisherCheck
 notepad $PROFILE
 &lt;/code&gt;&lt;/pre&gt;
-&lt;ol&gt;
-&lt;li&gt;在打开的文件里粘贴这段：&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;在打开的文件里粘贴这段：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;Set-PSReadLineOption -PredictionSource History
 Set-PSReadLineOption -PredictionViewStyle InlineView
 Set-PSReadLineOption -EditMode Windows
 Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
 &lt;/code&gt;&lt;/pre&gt;
-&lt;ol&gt;
-&lt;li&gt;手动添加 Git Bash 配置&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;手动添加 Git Bash 配置&lt;/p&gt;
 &lt;p&gt;Windows Terminal → 下拉箭头 →「设置」→「添加新配置文件」→「新建空配置文件」&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;填写：&lt;/p&gt;
@@ -3526,12 +3695,23 @@ Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
 &lt;p&gt;图标：C:\Program Files\Git\mingw64\share\git\git-for-windows.ico&lt;/p&gt;
 &lt;p&gt;保存，重启终端即可。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;启动窗口大小哪里调&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;设置-启动-启动大小  &lt;strong&gt;注意不是调启动参数&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;我2k分辨率  设置150  40&lt;/p&gt;
-&lt;p&gt;**PS.**远程服务微信：dqtx33  付费社群：&lt;a href=&quot;https://t.zsxq.com/d4zSX&quot;&gt;点此报名&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;4.拖动文件形成目录形成不了文件目录&lt;/h3&gt;
+&lt;p&gt;解决办法：MFCMouseEffect中添加手势映射：左键拖拽向→=复制&lt;/p&gt;
+&lt;p&gt;操作的时间，左键选中一个文件，向右拖拽在后右键单击&lt;/p&gt;
+&lt;h3&gt;5. Ctrl+V 无法在粘贴图片&lt;/h3&gt;
+&lt;p&gt;在 Windows Terminal 中使用 Kimi Code CLI 时，Ctrl+V 快捷键无法粘贴剪贴板中的图片。这是因为 Windows Terminal 默认会拦截 Ctrl+V 用于自身的粘贴操作，导致该快捷键无法传递给 Kimi CLI。&lt;/p&gt;
+&lt;p&gt;可以使用 &lt;code&gt;Alt+V&lt;/code&gt; 粘贴图片。 &lt;code&gt;M-V&lt;/code&gt;也可以需绑定 &lt;a href=&quot;https://github.com/MoonshotAI/kimi-cli/issues/781&quot;&gt;参照&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# 同时绑定两个快捷键
+@_kb.add(&quot;c-v&quot;, eager=True)
+@_kb.add(&quot;escape&quot;, &quot;v&quot;, eager=True)  # Alt+V
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;6. Terminal中启动了Claude code 右键不能自动粘贴&lt;/h3&gt;
+&lt;p&gt;开启  NO_FLICKER 模式（无闪烁模式）会造成这种情况，编辑 Claude Code 的配置文件夹 -/.claude/settings.json，找到&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    &quot;CLAUDE_CODE_NO_FLICKER&quot;: &quot;1&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;改成&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    &quot;CLAUDE_CODE_NO_FLICKER&quot;: &quot;0&quot;
+&lt;/code&gt;&lt;/pre&gt;
 </content:encoded></item><item><title>Happy：给Claude一双翅膀</title><link>https://dqtx.cc/posts/aihacks/cc-happy/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/cc-happy/</guid><pubDate>Sat, 14 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;我之前用AI编程一直特别拧巴：Claude Code明明能自己干活，可我必须守在电脑前，它每走一步都要等我确认才能继续。直到我用上了 Happy，它直接把电脑上的 Claude Code 实时映射到手机，不把代码文件上传云端，数据全程端到端加密，不用经过第三方服务器，既能随时随地查看和控制，安全感也拉满，彻底摆脱了必须坐在电脑前的束缚。&lt;/p&gt;
 &lt;h2&gt;什么是Happy&lt;/h2&gt;
 &lt;p&gt;一个让你用手机远程控制和实时查看电脑上Claude或Codex编程过程的工具。它通过将电脑上的 Claude Code 或 Codex 实时映射到手机，解决了需要守在电脑前被动等待的痛点，它让用户从“必须坐在电脑前等待指令”的束缚中解放出来，可以随时随地了解 AI 的工作进展并能随时介入，实现了“无需一直盯着，但一切尽在掌握”的流畅协作体验。&lt;/p&gt;
@@ -6771,7 +6951,6 @@ node scripts/update-categories.cjs
 &lt;p&gt;夸克网盘链接：https://pan.quark.cn/s/a85dc83604bc&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;如果觉得这篇教程对你有帮助，别忘了&lt;strong&gt;点赞+收藏+转发&lt;/strong&gt;三连呀！关注我，后续分享更多OBS 实用技巧、效率工具干货，下次见～ 👋&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;大强远程技术支持：742112.xyz&lt;/strong&gt;&lt;/p&gt;
 </content:encoded></item><item><title>AutoHotkey打包exe完全指南！</title><link>https://dqtx.cc/posts/technical/autohotkey%E6%89%93%E5%8C%85exe%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/autohotkey%E6%89%93%E5%8C%85exe%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/</guid><description>AutoHotkey（AHK）是一种强大的自动化脚本语言，能够帮助用户简化日常计算机操作。将AHK脚本转换为可执行文件（.exe）不仅可以分发和使用，还能保护脚...</description><pubDate>Fri, 15 Nov 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;AutoHotkey（AHK）是一种强大的自动化脚本语言，能够帮助用户简化日常计算机操作。将AHK脚本转换为可执行文件（.exe）不仅可以分发和使用，还能保护脚本代码不被轻易查看。本文将详细介绍如何使用AutoHotkey将代码转换为EXE文件的完整流程。&lt;/p&gt;
 &lt;h2&gt;&lt;strong&gt;一、安装AutoHotkey&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;在开始转换之前，首先需要安装AutoHotkey软件。&lt;/p&gt;
