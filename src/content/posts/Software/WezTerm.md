@@ -94,7 +94,10 @@ starship preset pastel-powerline -o ~/.config/starship.toml
 ### 配置说明
 
 这是一个高度自定义的 WezTerm 终端配置文件，专门针对日常开发、AI 聊天（如 Qwen Code）和美观体验进行了优化。
-![](assets/WezTerm/file-20260420152819253.png)
+
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260420182653671.webp)
+
+![](D:\project2026\fuwari\src\content\posts\Software\assets\WezTerm\file-20260420152819253.png)
 
 ![image.png](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260406171739845.webp)
 **主要特点：**
