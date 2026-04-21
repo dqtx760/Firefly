@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/Software/OB-Index.md",
+                "file": "测试.md",
                 "mode": "preview",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "OB-Index"
+              "title": "测试"
             }
           }
         ]
@@ -94,13 +94,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/Software/OB-Index.md",
+                "file": "测试.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "OB-Index 的大纲"
+              "title": "测试 的大纲"
             }
           },
           {
@@ -176,7 +176,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 530.5
+    "width": 530.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -189,19 +190,22 @@
       "command-palette:打开命令面板": false,
       "bases:新建数据库": false,
       "obsidian-git:Open Git source control": false,
-      "wechat-converter:微信公众号转换器": false
+      "wechat-converter:微信公众号转换器": false,
+      "share-to-notionnext:同步到 NotionNext": false
     }
   },
-  "active": "1bf89f7c7a74d6fb",
+  "active": "f6b5e7abc96521b9",
   "lastOpenFiles": [
-    "posts/Software/秘塔回响.md",
+    "Template/元数据.md",
+    "测试.md",
+    "Template",
     "posts/Software/OB-Index.md",
+    "posts/Software/秘塔回响.md",
     "assets/images/Obsidian-To-NotionNext.ppt.html",
     "assets/images",
     "assets",
     "新建 文本文档.txt",
     "未命名.base",
-    "未命名.md",
     "posts/Technical/未命名.md",
     "posts/Technical/assets/未命名/file-20260421191844731.png",
     "posts/Technical/assets/未命名",
@@ -215,7 +219,6 @@
     "01_Raw/00_Clipings",
     "01_Raw",
     "posts/Software/assets/WezTerm/file-20260420152819253.png",
-    "posts/Software/assets/WezTerm",
     "posts/AIHacks/Qwen.md",
     "posts/Software/PixPin截图配置指南.md",
     "posts/Software/cmd.md",
@@ -238,7 +241,6 @@
     "posts/cookie-consent.md",
     "posts/privacy-policy.md",
     "posts/warden-worker.md",
-    "posts/del-git-commit.md",
-    "posts/vercel-github.md"
+    "posts/del-git-commit.md"
   ]
 }
