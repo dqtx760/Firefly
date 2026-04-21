@@ -62,7 +62,151 @@
 &lt;li&gt;⛓️ Web3教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867794661334761497#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;🛠️ 技术教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867808112450912266#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>谷歌最新产品&amp;新功能</title><link>https://dqtx.cc/posts/software/google/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/google/</guid><pubDate>Mon, 20 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这篇文章将在后续的时间里会持续更新谷歌最新推出的一些新产品，不限于各种新品或原本产品的新功能。&lt;/p&gt;
+</content:encoded></item><item><title>Obsidian 同步 Notion 神插件</title><link>https://dqtx.cc/posts/software/ob-index/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/ob-index/</guid><pubDate>Tue, 21 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;我最近发现了一个超好用的 Obsidian 神器，叫 Share to NotionNext！&lt;/p&gt;
+&lt;p&gt;可以直接把Obsidian里的Markdown同步到Notion数据库，还能自动生成NotionNext博客，告别复制粘贴、排版错乱，一篇文章秒发博客。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260421200259532.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;01.前置准备&lt;/h3&gt;
+&lt;h4&gt;设置 Notion API&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;创建API集成：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;https://www.notion.so/my-integrations&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;复制API Token&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;创建Notion 数据库&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;创建数据库，参考👇&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260421153612198.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;数据库页面右上角点击 &lt;code&gt;...&lt;/code&gt;→集成，选择你设置的集成名称&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;从浏览器链接中复制 32 位数据库 ID（&lt;code&gt;?v=&lt;/code&gt; 前部分）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;02.安装&amp;amp;配置&lt;/h3&gt;
+&lt;h4&gt;安装插件&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;打开 Obsidian&lt;/li&gt;
+&lt;li&gt;进入 &lt;strong&gt;设置 → 社区插件 → 浏览&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;搜索 &lt;strong&gt;&quot;Share to NotionNext&quot;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;点击安装，然后启用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;配置插件&lt;/h4&gt;
+&lt;p&gt;Obsidian设置，第三方插件中找到 &lt;strong&gt;Obsidian to NotionNext&lt;/strong&gt;，填入以下信息：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260421155557890.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;自动同步Frontmatter键名：category&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;说明：用于指定一个 Obsidian 笔记属性名，作为插件维护「同步记录」的专用字段。插件会在笔记首次同步到指定 Notion 数据库时，将目标数据库的标识自动追加到该字段中，并同步生成对应数据库的页面 ID 与访问链接属性；&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;添加新激据库-&quot;+&quot;&lt;/li&gt;
+&lt;li&gt;填写参数：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;数据库全名：&lt;/p&gt;
+&lt;p&gt;数据库简称：&lt;/p&gt;
+&lt;p&gt;Lotion API令牌：&lt;/p&gt;
+&lt;p&gt;数据库ID：&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;自定义属性→Add New Property（本人配置参考）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;标题属性→title→Title
+自定义属性1→tags→Multi-Select
+自定义属性2→category→Multi-Select
+自定义属性3→date→Date
+自定义属性4→Source→URL
+自定义属性5→status→Multi-Select&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;03.使用方式&lt;/h3&gt;
+&lt;h4&gt;创建模版&lt;/h4&gt;
+&lt;p&gt;建议在Obsidian的模板文件夹创建模板，示例：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+title: 文章标题
+category:
+  - Software
+  - Technical
+  - AIHacks
+tags:
+status:
+  - draft
+  - published
+date:
+Source:
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;笔记插入元数据&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;创建笔记→Alt+E调出模板，或用&lt;a href=&quot;https://mp.weixin.qq.com/s/kPjIpHmzciWY8_3ettEVsg&quot;&gt;Template&lt;/a&gt;自动化&lt;/li&gt;
+&lt;li&gt;写完笔记→点击功能区&lt;strong&gt;Notion图标&lt;/strong&gt;「同步到 NotionNext」&lt;/li&gt;
+&lt;li&gt;实现一键同步Notion&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;注意事项&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;确保 Notion 数据库字段名称与插件要求一致&lt;/li&gt;
+&lt;li&gt;API Token 不要泄露给他人&lt;/li&gt;
+&lt;li&gt;首次使用建议先测试单篇笔记同步&lt;/li&gt;
+&lt;li&gt;更新插件时注意检查是否有 Breaking Changes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h3&gt;04.参考资料&lt;/h3&gt;
+&lt;p&gt;→github仓库：
+https://github.com/jxpeng98/obsidian-to-NotionNext&lt;/p&gt;
+&lt;p&gt;→抖音视频教程
+https://v.douyin.com/4K4Njgxq0Oc/&lt;/p&gt;
+&lt;p&gt;→模板自动化插件指南：
+https://mp.weixin.qq.com/s/kPjIpHmzciWY8_3ettEVsg&lt;/p&gt;
+&lt;p&gt;→NotionNext帮助手册：
+https://docs.tangly1024.com/about&lt;/p&gt;
+</content:encoded></item><item><title>Agent Skills 管理方案</title><link>https://dqtx.cc/posts/aihacks/agent-skills-hub/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/agent-skills-hub/</guid><pubDate>Mon, 20 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;相信有很多小伙伴跟我一样，手头同时在用好几个 AI Agent——Claude Code、Codex、Cursor、Windsurf……每个 Agent 都有自己的 Skill 目录，装了一堆技能包。&lt;/p&gt;
+&lt;p&gt;时间一长就会遇到一个头疼的问题：同一个 Skill 要在不同 Agent 里各装一遍，版本还不一定一致，管理起来非常混乱。从最早手动复制粘贴技能配置，到用脚本管理本地技能库，再到尝试多设备同步——我发现&lt;strong&gt;技能的发现、配置、迁移和同步&lt;/strong&gt;，一直是个很痛的问题。&lt;/p&gt;
+&lt;p&gt;我一直在想，有没有一种方式能像管理代码依赖一样，统一管理所有 Agent 的技能包？同时实现在多设备上能够一键迁移跟同步？最近我在 GitHub 上发现了 几个解决方案，完美解决了我的痛点。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/hub.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;多个Agent共用一套SKII&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;来源说明&lt;/th&gt;
+&lt;th&gt;形式&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;s&gt;&lt;a href=&quot;https://github.com/youzaiAGI/agent-skills-hub&quot;&gt;youzaiAGI/agent-skills-hub&lt;/a&gt;&lt;/s&gt;（已删库）&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/5deQW5ZnszBgJ4Ji9i6AKA&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;命令行&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/qufei1993/skills-hub&quot;&gt;qufei1993/skills-hub&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/u1RCeiYMFItuzIf1g6J_DQ&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;客户端&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/runkids/skillshare&quot;&gt;runkids/skillshare&lt;/a&gt;（颜值高）&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/aPPIWCKgXmiibU7X1A9OIA&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;启动网页&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/Backtthefuture/skillmanager&quot;&gt;Backtthefuture/skillmanager&lt;/a&gt;（黄叔）&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/xMFZhFC3Dyj7Y4Den7upTQ&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;启动网页&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;多设备共用skill同步&lt;/h2&gt;
+&lt;p&gt;通过创建符号（软链接）链接方式&lt;/p&gt;
+&lt;p&gt;https://mp.weixin.qq.com/s/EQoA2Lqf4wk6sf-STZTeLw&lt;/p&gt;
+&lt;p&gt;在多台电脑之间无缝同步Claude Code 配置和会话。命令行工具，&lt;em&gt;我配置失败&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;https://github.com/ikook-wang/cc-sync/blob/main/README_zh-CN.md&lt;/p&gt;
+</content:encoded></item><item><title>谷歌新产品&amp;功能</title><link>https://dqtx.cc/posts/software/google/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/google/</guid><pubDate>Mon, 20 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这篇文章将在后续的时间里会持续更新谷歌最新推出的一些新产品，不限于各种新品或原本产品的新功能。&lt;/p&gt;
 &lt;h2&gt;安装Google App&lt;/h2&gt;
 &lt;p&gt;Windows 版下载： &lt;strong&gt;&lt;a href=&quot;https://search.google/google-app/desktop/&quot;&gt;点击前往&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;内置的AI模型是Google最新最强的Gemini 3模型，同时内置了AI生图功能，使用的是 Google 最强的Nano Banana 2 模型，可以自由切换需要的功能！&lt;/p&gt;
@@ -134,7 +278,7 @@ mklink /h &quot;D:\project2026\zhishiku\QWEN\知识库规范.md&quot; &quot;D:\p
 &lt;li&gt;如果你需要跨盘操作，选择软链接；如果只在同盘内使用，硬链接更稳定&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;掌握这四个命令，你就是Windows文件管理的高手了。&lt;/strong&gt;&lt;/p&gt;
-</content:encoded></item><item><title>Cc-sync：多电脑CC配置同步工具</title><link>https://dqtx.cc/posts/aihacks/cc-sync/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/cc-sync/</guid><pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+</content:encoded></item><item><title>Cc-sync：多电脑CC配置同步</title><link>https://dqtx.cc/posts/aihacks/cc-sync/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/cc-sync/</guid><pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;换电脑后，你最怕什么？不是装机，而是你和 Claude 聊了半天的代码、需求、方案——全没了。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;直到我发现 cc-sync，这个问题终于解决了。&lt;/p&gt;
@@ -232,7 +376,7 @@ bash ~/.claude/uninstall.sh
 &lt;p&gt;换新设备后，同样在备份设置中，直接从云端还原即可。&lt;/p&gt;
 &lt;p&gt;以上就是本期全部内容。如果本教程对你有帮助，欢迎点赞、收藏、转发三连，你的支持是我持续更新的动力。&lt;/p&gt;
 &lt;p&gt;Ps. 想要学习AI、提升数字化效率、打造全自动工作流，也欢迎加入我的专属社群：https://t.zsxq.com/d4zSX&lt;/p&gt;
-</content:encoded></item><item><title>我用AI管知识库后，再也回不去了</title><link>https://dqtx.cc/posts/software/%E6%88%91%E7%94%A8ai%E7%AE%A1%E7%9F%A5%E8%AF%86%E5%BA%93%E5%90%8E%E5%86%8D%E4%B9%9F%E5%9B%9E%E4%B8%8D%E5%8E%BB%E4%BA%86/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E6%88%91%E7%94%A8ai%E7%AE%A1%E7%9F%A5%E8%AF%86%E5%BA%93%E5%90%8E%E5%86%8D%E4%B9%9F%E5%9B%9E%E4%B8%8D%E5%8E%BB%E4%BA%86/</guid><pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+</content:encoded></item><item><title>Karpathy Wiki方法论实践</title><link>https://dqtx.cc/posts/software/qwen-ob/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/qwen-ob/</guid><pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;告别一盘散沙的笔记，AI让知识真正&quot;活&quot;起来。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;你有没有这种感觉？&lt;/p&gt;
@@ -279,11 +423,43 @@ AI 维护的知识库，包括摘要、概念页面、关联链接。AI 编写�
 &lt;h3&gt;04 实际操作中，AI 帮我做三件事&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Ingest（摄入）&lt;/strong&gt;
 我丢给 AI 一篇文章，AI 提取核心要点，自动分类、创建页面、更新索引。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;根据我剪藏的这个资料，生成 02_Wiki/ 下的结构化知识条目，并根据主题归入对应的分类目录；若知识库中没有匹配的分类，请自动创建新分类。条目需保持独立、标题清晰，内容要严谨准确，格式符合 Wiki 规范
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;strong&gt;Query（查询）&lt;/strong&gt;
 直接问 AI 问题，AI 从 Wiki 里综合答案。有价值的答案，还会存回 Wiki 成为新页面。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;查询 02_Wiki/ 下的结构化知识条目，找下飞书的相关的chrome浏览器插件，输出新的条目，并根据主题归入对应的分类目录；若知识库中没有匹配的分类，请自动创建新分类。条目需保持独立、标题清晰，内容要严谨准确，格式符合 Wiki 规范
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;直接提取Wiki里的内容，撰写发章或项目说明&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;抽选02_Wiki/下有关rustdesk编译内容，写成一篇完整的README.md存入 03_Output/。后续我将作为的开源项目说明文档。
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;strong&gt;Lint（检查）&lt;/strong&gt;
 定期让 AI 做&quot;健康检查&quot;，找矛盾、过时内容、孤立页面，保持知识库干净。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/03-ai-tasks.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;你是专业Wiki知识库AI管理员，核心职责为定期对知识库开展标准化健康检查（Lint），保障知识库结构规范、链接完整、内容统一。
+
+## 检查任务清单
+### 1. 缺失链接检查
+遍历`02_Wiki/index.md`内所有`[[页面名]]`格式链接，逐一核验对应`.md`文件是否存在于`02_Wiki/`目录下。
+
+### 2. 孤立页面检查
+扫描`02_Wiki/`目录下全部`.md`文件（排除`index.md`与`log.md`），筛选出未被其他页面通过`[[链接]]`引用的孤立页面。
+
+### 3. 双向链接检查
+核验页面双向引用关系：若A页面链接至B页面，建议B页面同步链接回A页面（非强制，为优化建议）。
+
+### 4. Front Matter规范检查
+针对`02_Wiki/`目录下非特殊文件（排除`index.md`、`log.md`，以及`快捷键&amp;amp;命令/`、`提示词/`目录内文件），核验是否包含完整且规范的YAML Front Matter字段：
+- Source
+- created
+- updated
+- wiki_type
+- tags（需不少于3个标签）
+
+### 5. 内容一致性检查
+核查同一知识点在不同页面中的表述，确保内容统一、无矛盾冲突。
+
+### 6. 索引完整性检查
+确认`02_Wiki/index.md`已覆盖Wiki知识库内所有核心分类与页面，无关键内容遗漏。
+&lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;05 为什么 AI 不会放弃&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;维护知识库最累的，不是阅读和思考，而是&lt;strong&gt;记账&lt;/strong&gt;。
@@ -305,13 +481,11 @@ AI 维护的知识库，包括摘要、概念页面、关联链接。AI 编写�
 &lt;li&gt;每次读到好文章，丢给 AI 让它帮你沉淀&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;不需要完美的方法论，先跑起来最重要。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260420223310925.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;如果你想了解更多，可以看看这个 👇&lt;/p&gt;
-&lt;p&gt;这是 Karpathy 大神提出的原版概念（强烈建议阅读英文原文）：
-&lt;a href=&quot;https://github.com/karpathy/llm-wiki&quot;&gt;LLM Wiki&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;人类的工作是筛选来源、提出好问题、思考意义。
-其他一切，交给 AI。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;这是 Karpathy 大神提出的原版概念：&lt;a href=&quot;https://github.com/karpathy/llm-wiki&quot;&gt;LLM Wiki&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;人类的工作是筛选来源、提出好问题、思考意义。&lt;/strong&gt;
+&lt;strong&gt;其他一切，交给 AI。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;你有自己的知识管理方法吗？评论区聊聊 👇&lt;/em&gt;&lt;/p&gt;
 </content:encoded></item><item><title>chrome浏览器插件精选</title><link>https://dqtx.cc/posts/software/extension/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/extension/</guid><pubDate>Fri, 17 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天给大家整理并安利一批我自己一直在用、真正能提升效率的 &lt;strong&gt;Chrome 实用插件&lt;/strong&gt;。从浏览器操控、效率增强、截图录屏、翻译广告拦截，到 AI 辅助、内容抓取等，我都按功能分好类，方便大家按需选用。这次一共整理了 &lt;strong&gt;26 款&lt;/strong&gt;，都是日常上网、办公、学习、做内容时高频用到的精品插件，希望能帮到大家。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260417115938098.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -2972,108 +3146,6 @@ opkg install luci-i18n-passwall2-zh-cn
 &lt;p&gt;🚀 &lt;strong&gt;关于的知识星球&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;为了帮你节省更多时间，我把私藏的软件安装包、激活工具、效率工作流和独家教程，都整理进了我的知识星球「&amp;lt;u&amp;gt;大强・效率空间站&amp;lt;/u&amp;gt;」：68元/年，承包你一整年的效率提升。👇 微信扫码：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260306064028188.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-</content:encoded></item><item><title>Agent Skills Hub详解</title><link>https://dqtx.cc/posts/aihacks/agent-skills-hub/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/agent-skills-hub/</guid><pubDate>Wed, 11 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;相信有很多小伙伴跟我一样，手头同时在用好几个 AI Agent——Claude Code、Codex、Cursor、Windsurf……每个 Agent 都有自己的 Skill 目录，装了一堆技能包。时间一长就会遇到一个头疼的问题：同一个 Skill 要在不同 Agent 里各装一遍，版本还不一定一致，管理起来非常混乱。&lt;/p&gt;
-&lt;p&gt;我一直在想，有没有一种方式能像管理代码依赖一样，统一管理所有 Agent 的技能包？最近我在 GitHub 上发现了 agent-skills-hub 这个项目，完美解决了我的痛点。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;项目地址&lt;/strong&gt;：https://github.com/youzaiAGI/agent-skills-hub&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/hub.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;它解决了什么问题&lt;/h2&gt;
-&lt;p&gt;简单来说，agent-skills-hub 提供了一个&quot;中央仓库&quot;的概念。所有 Skill 统一安装到 &lt;code&gt;~/.skill-hub&lt;/code&gt; 这个目录，然后通过同步命令一键分发到各个 Agent 的技能目录中。这样做的好处显而易见：只需要维护一份技能包，所有 Agent 共享同一套 Skill，再也不用重复安装了。&lt;/p&gt;
-&lt;p&gt;目前它支持 18+ 个 AI Agent，包括 Claude Code、Codex、Cursor、Windsurf、Gemini、Trae、GitHub Copilot 等主流工具，覆盖面非常广。&lt;/p&gt;
-&lt;h2&gt;安装方式&lt;/h2&gt;
-&lt;p&gt;安装方式很简单，直接用 pip：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;pip install agent-skills-hub
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;安装完成后，可以用以下命令验证：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;skill --version
-# 输出: Agent Skills Hub v1.6.10
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;当然，你也可以直接把项目地址丢给 Claude，让它帮你安装：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;https://github.com/youzaiAGI/agent-skills-hub
-帮我安装这个项目
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;日常使用&lt;/h2&gt;
-&lt;p&gt;安装好之后，日常使用主要就两步：装技能、同步技能。&lt;/p&gt;
-&lt;h3&gt;安装新技能到中央仓库&lt;/h3&gt;
-&lt;p&gt;每次发现一个好用的 Skill，我都会先装到 &lt;code&gt;~/.skill-hub&lt;/code&gt; 这个中央仓库里。比如我想安装 Anthropic 官方的 skill-creator：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;skill install skill-creator@anthropics/skills
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;或者你也可以让 Claude 帮你操作，把 Skill 的 GitHub 地址丢给它就行：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;https://github.com/anthropics/skills/tree/main/skills/skill-creator
-帮我安装这个 skill 到 ~/.skill-hub
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;同步到各个 Agent&lt;/h3&gt;
-&lt;p&gt;技能装好后，需要同步到你实际使用的 Agent 中。agent-skills-hub 提供了 &lt;code&gt;skill sync&lt;/code&gt; 命令来完成这件事：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# 同步到 Claude Code（全局）
-skill sync ClaudeCode skill-creator@anthropics/skills -g
-
-# 同步到 Cursor（项目级）
-skill sync Cursor skill-creator@anthropics/skills -p
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;如果你想一次性把所有技能都同步过去，也可以先导出技能列表，再批量同步：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# 导出当前已安装的技能列表
-skill list &amp;gt; skills.txt
-
-# 批量同步到指定 Agent
-skill sync ClaudeCode skills.txt -g
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;这个体验就像 Python 的 &lt;code&gt;pip install -r requirements.txt&lt;/code&gt; 一样丝滑。&lt;/p&gt;
-&lt;h3&gt;交互式搜索和管理&lt;/h3&gt;
-&lt;p&gt;除了命令行，agent-skills-hub 还提供了交互式的 TUI 界面，可以搜索、浏览和安装技能：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# 打开交互式搜索
-skill search
-
-# 打开技能管理界面
-skill manage
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;在搜索界面里可以用方向键浏览，按回车查看详情并安装，非常直观。&lt;/p&gt;
-&lt;h2&gt;我的实际工作流&lt;/h2&gt;
-&lt;p&gt;分享一下我个人的使用习惯，供大家参考。&lt;/p&gt;
-&lt;p&gt;我主要用 Claude Code 和 Codex 两个 Agent，每次安装新 Skill 时，我会这样告诉 Claude：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;https://github.com/xxx/xxx
-帮我安装这个 skill 到 C:\Users\Administrator\.skill-hub
-
-安装完后使用 skill sync 命令，将技能同步到 ~\.claude\skills\ 和 ~\.codex\skills\ 目录
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;这样一句话就搞定了安装和同步，两个 Agent 立刻就能用上新技能。&lt;/p&gt;
-&lt;h2&gt;写在最后&lt;/h2&gt;
-&lt;p&gt;agent-skills-hub 解决的虽然是一个小问题，但对于同时使用多个 AI Agent 的开发者来说，确实能省下不少重复劳动。如果你也有类似的困扰，不妨试试看。&lt;/p&gt;
-&lt;h2&gt;相关链接&lt;/h2&gt;
-&lt;p&gt;多个Agent共用一套SKII&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;名称&lt;/th&gt;
-&lt;th&gt;来源说明&lt;/th&gt;
-&lt;th&gt;形式&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&quot;https://github.com/youzaiAGI/agent-skills-hub&quot;&gt;youzaiAGI/agent-skills-hub&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;命令行&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&quot;https://github.com/qufei1993/skills-hub&quot;&gt;qufei1993/skills-hub&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/u1RCeiYMFItuzIf1g6J_DQ&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;客户端&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&quot;https://github.com/runkids/skillshare&quot;&gt;runkids/skillshare&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/aPPIWCKgXmiibU7X1A9OIA&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;启动网页&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&quot;https://github.com/Backtthefuture/skillmanager&quot;&gt;Backtthefuture/skillmanager&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/xMFZhFC3Dyj7Y4Den7upTQ&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;启动网页&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;多设备共用skill同步&lt;/p&gt;
-&lt;p&gt;https://mp.weixin.qq.com/s/EQoA2Lqf4wk6sf-STZTeLw&lt;/p&gt;
-&lt;p&gt;在多台电脑之间无缝同步 Claude Code 配置和会话。&lt;/p&gt;
-&lt;p&gt;https://github.com/ikook-wang/cc-sync/blob/main/README_zh-CN.md&lt;/p&gt;
 </content:encoded></item><item><title>用Claude搞定UI配色与排版指南</title><link>https://dqtx.cc/posts/aihacks/ui-ux-pro-max-skill/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/ui-ux-pro-max-skill/</guid><pubDate>Wed, 11 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;作为一个后端转全栈的开发者，我之前最大的痛点就是做UI：配色不协调、排版乱、组件间距不对，花几个小时做出来的界面还被产品吐槽像上个世纪的产物。直到最近挖到了这个Claude的神级技能ui-ux-pro-max，我直接把之前存的几十个UI设计素材库全删了。&lt;/p&gt;
 &lt;p&gt;项目地址：https://github.com/nextlevelbuilder/ui-ux-pro-max-skill&lt;/p&gt;
 &lt;p&gt;官方案例库：https://ui-ux-pro-max-skill.nextlevelbuilder.io/#styles&lt;/p&gt;
