@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/Learning/测试.md",
+                "file": "posts/Software/测试.md",
                 "mode": "preview",
                 "source": true
               },
@@ -197,7 +197,7 @@
   "active": "1bf89f7c7a74d6fb",
   "lastOpenFiles": [
     "00_模板/发布.md",
-    "posts/Learning/测试.md",
+    "posts/Software/测试.md",
     "posts/Learning",
     "00_模板/元数据.md",
     "测试.md",
