@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/AIHacks/未命名.md",
+                "file": "posts/Software/测试.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "未命名"
+              "title": "测试"
             }
           }
         ]
@@ -114,16 +114,6 @@
             }
           },
           {
-            "id": "144f93c280d1a729",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
-            }
-          },
-          {
             "id": "c15d774ab5ec43d5",
             "type": "leaf",
             "state": {
@@ -196,8 +186,9 @@
   },
   "active": "f6b5e7abc96521b9",
   "lastOpenFiles": [
-    "posts/但是离开吗.md",
+    "posts/Software/测试.md",
     "posts/AIHacks/未命名.md",
+    "posts/但是离开吗.md",
     "就开始打开.md",
     "posts/Software/测试.md",
     "00_模板/发布.md",
@@ -240,7 +231,6 @@
     "posts/coxp.md",
     "[微信头像CDN.md",
     "posts/http-header-host.md",
-    "posts/yuanbao.md",
-    "2026-01-09.md"
+    "posts/yuanbao.md"
   ]
 }
