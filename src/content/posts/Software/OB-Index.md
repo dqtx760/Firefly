@@ -1,41 +1,52 @@
-你是不是平时都用 Obsidian 写 Markdown，写起来丝滑顺畅，但*想同步到 Notion、再用 NotionNext 发博客客，简直要半条命？复制粘贴、排版错乱、属性对不上，折腾半天还容易漏内容。 
+---
+title: Obsidian 同步 Notion 神插件
+published: 2026-04-21
+tags: []
+category: Software
+draft: false
+pinned: false
+---
+
+我最近发现了一个超好用的 Obsidian 神器，叫 Share to NotionNext！
+
+可以直接把Obsidian里的Markdown同步到Notion数据库，还能自动生成NotionNext博客，告别复制粘贴、排版错乱，一篇文章秒发博客。
+
+![image.png](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260421200259532.webp)
 
 
+### 01.前置准备
 
-我最近挖到的宝藏 Obsidian 神器——Share to NotionNext，直接把 Obsidian 里的 Markdown 一键同步到 Notion 数据库，还能自动生成 NotionNext 博客链接，从此告别手动搬运，一篇文章秒发博客！
+ #### 设置 Notion API
 
+- 创建API集成：
 
+> https://www.notion.so/my-integrations
 
-### 📋 前置准备
-
-1. #### 设置 Notion API
-
-- [点此](https://www.notion.so/my-integrations)创建API集成
 - 复制API Token
 
 
-2. ####  设置Notion 数据库
+#### 创建Notion 数据库
 
 - 创建数据库，参考👇
 
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260421153612198.webp)
 
-- 数据库页面右上角点击 `...`-集成，选择你设置的集成名称
+- 数据库页面右上角点击 `...`→集成，选择你设置的集成名称
 
 - 从浏览器链接中复制 32 位数据库 ID（`?v=` 前部分）
 
 
 
-## 📦 安装&配置
+### 02.安装&配置
 
-### 安装插件
+#### 安装插件
 
 - 打开 Obsidian
 - 进入 **设置 → 社区插件 → 浏览**
 - 搜索 **"Share to NotionNext"**
 - 点击安装，然后启用
 
-### 配置插件
+#### 配置插件
 
 Obsidian设置，第三方插件中找到 **Obsidian to NotionNext**，填入以下信息：
 
@@ -60,18 +71,14 @@ Obsidian设置，第三方插件中找到 **Obsidian to NotionNext**，填入以
 
 > 标题属性→title→Title
 > 自定义属性1→tags→Multi-Select
->
 > 自定义属性2→category→Multi-Select
->
 > 自定义属性3→date→Date
->
 > 自定义属性4→Source→URL
->
 > 自定义属性5→status→Multi-Select
 
-## 📝 使用方式
+### 03.使用方式
 
-### 创建模版
+#### 创建模版
 
 建议在Obsidian的模板文件夹创建模板，示例：
 
@@ -93,14 +100,14 @@ Source:
 
 
 
-### 笔记插入元数据
+#### 笔记插入元数据
 
 
 - 创建笔记→Alt+E调出模板，或用[Template](https://mp.weixin.qq.com/s/kPjIpHmzciWY8_3ettEVsg)自动化
 - 写完笔记→点击功能区**Notion图标**「同步到 NotionNext」
 - 实现一键同步Notion
 
-## ⚠️ 注意事项
+#### 注意事项
 
 - 确保 Notion 数据库字段名称与插件要求一致
 - API Token 不要泄露给他人
@@ -110,15 +117,19 @@ Source:
 ---
 
 
-## 📚参考材料
+### 04.参考资料
 
-→github仓库：https://github.com/jxpeng98/obsidian-to-NotionNext
+→github仓库：
+https://github.com/jxpeng98/obsidian-to-NotionNext
 
-→抖音视频教程 https://v.douyin.com/4K4Njgxq0Oc/
+→抖音视频教程 
+https://v.douyin.com/4K4Njgxq0Oc/
 
-→模板自动化插件指南：https://mp.weixin.qq.com/s/kPjIpHmzciWY8_3ettEVsg
+→模板自动化插件指南：
+https://mp.weixin.qq.com/s/kPjIpHmzciWY8_3ettEVsg
 
-→NotionNext帮助手册：https://docs.tangly1024.com/about
+→NotionNext帮助手册：
+https://docs.tangly1024.com/about
 
 
 

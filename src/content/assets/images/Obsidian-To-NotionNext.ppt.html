@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obsidian 一键同步到 NotionNext 博客</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ===========================================
+           CSS CUSTOM PROPERTIES (THEME - Swiss Modern)
+           =========================================== */
+        :root {
+            --bg-primary: #ffffff;
+            --bg-secondary: #f5f5f5;
+            --text-primary: #1a1a1a;
+            --text-secondary: #666666;
+            --accent: #ff3300;
+            --accent-light: #fff5f3;
+            --border-color: #e0e0e0;
+            
+            --font-display: 'Archivo', sans-serif;
+            --font-body: 'Nunito', sans-serif;
+            
+            --slide-padding: clamp(1.5rem, 4vw, 4rem);
+            --content-gap: clamp(1rem, 2vw, 2rem);
+            
+            --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+            --duration-normal: 0.6s;
+        }
+
+        /* ===========================================
+           BASE STYLES
+           =========================================== */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        /* --- PASTE viewport-base.css CONTENTS HERE --- */
+        html, body {
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        html {
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+        }
+
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            height: 100dvh;
+            overflow: hidden;
+            scroll-snap-align: start;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            background: var(--bg-primary);
+        }
+
+        .slide-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-height: 100%;
+            overflow: hidden;
+            padding: var(--slide-padding);
+        }
+
+        :root {
+            --title-size: clamp(1.5rem, 5vw, 4rem);
+            --h2-size: clamp(1.25rem, 3.5vw, 2.5rem);
+            --h3-size: clamp(1rem, 2.5vw, 1.75rem);
+            --body-size: clamp(0.75rem, 1.5vw, 1.125rem);
+            --small-size: clamp(0.65rem, 1vw, 0.875rem);
+            --slide-padding: clamp(1rem, 4vw, 4rem);
+            --content-gap: clamp(0.5rem, 2vw, 2rem);
+            --element-gap: clamp(0.25rem, 1vw, 1rem);
+        }
+
+        .card, .container, .content-box {
+            max-width: min(90vw, 1000px);
+            max-height: min(80vh, 700px);
+        }
+
+        .feature-list, .bullet-list {
+            gap: clamp(0.4rem, 1vh, 1rem);
+        }
+
+        .feature-list li, .bullet-list li {
+            font-size: var(--body-size);
+            line-height: 1.4;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+            gap: clamp(0.5rem, 1.5vw, 1rem);
+        }
+
+        img, .image-container {
+            max-width: 100%;
+            max-height: min(50vh, 400px);
+            object-fit: contain;
+        }
+
+        @media (max-height: 700px) {
+            :root {
+                --slide-padding: clamp(0.75rem, 3vw, 2rem);
+                --content-gap: clamp(0.4rem, 1.5vw, 1rem);
+                --title-size: clamp(1.25rem, 4.5vw, 2.5rem);
+                --h2-size: clamp(1rem, 3vw, 1.75rem);
+            }
+        }
+
+        @media (max-height: 600px) {
+            :root {
+                --slide-padding: clamp(0.5rem, 2.5vw, 1.5rem);
+                --content-gap: clamp(0.3rem, 1vw, 0.75rem);
+                --title-size: clamp(1.1rem, 4vw, 2rem);
+                --body-size: clamp(0.7rem, 1.2vw, 0.95rem);
+            }
+            .nav-dots, .keyboard-hint, .decorative { display: none; }
+        }
+
+        @media (max-height: 500px) {
+            :root {
+                --slide-padding: clamp(0.4rem, 2vw, 1rem);
+                --title-size: clamp(1rem, 3.5vw, 1.5rem);
+                --h2-size: clamp(0.9rem, 2.5vw, 1.25rem);
+                --body-size: clamp(0.65rem, 1vw, 0.85rem);
+            }
+        }
+
+        @media (max-width: 600px) {
+            :root { --title-size: clamp(1.25rem, 7vw, 2.5rem); }
+            .grid { grid-template-columns: 1fr; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.2s !important;
+            }
+            html { scroll-behavior: auto; }
+        }
+
+        /* ===========================================
+           ANIMATIONS
+           =========================================== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity var(--duration-normal) var(--ease-out-expo),
+                        transform var(--duration-normal) var(--ease-out-expo);
+        }
+
+        .slide.visible .reveal {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal:nth-child(1) { transition-delay: 0.1s; }
+        .reveal:nth-child(2) { transition-delay: 0.2s; }
+        .reveal:nth-child(3) { transition-delay: 0.3s; }
+        .reveal:nth-child(4) { transition-delay: 0.4s; }
+        .reveal:nth-child(5) { transition-delay: 0.5s; }
+        .reveal:nth-child(6) { transition-delay: 0.6s; }
+
+        /* ===========================================
+           SWISS MODERN STYLES
+           =========================================== */
+        body {
+            font-family: var(--font-body);
+            color: var(--text-primary);
+            background: var(--bg-primary);
+        }
+
+        .slide {
+            background: var(--bg-primary);
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-display);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        h1 {
+            font-size: var(--title-size);
+            color: var(--text-primary);
+        }
+
+        h2 {
+            font-size: var(--h2-size);
+            margin-bottom: var(--content-gap);
+            color: var(--text-primary);
+        }
+
+        h3 {
+            font-size: var(--h3-size);
+            margin-bottom: var(--element-gap);
+        }
+
+        p, li {
+            font-size: var(--body-size);
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+
+        /* Accent box */
+        .accent-box {
+            background: var(--accent);
+            color: white;
+            padding: 0.3em 0.8em;
+            display: inline-block;
+            font-size: var(--small-size);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: var(--element-gap);
+        }
+
+        /* Number badge */
+        .number-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: clamp(2rem, 5vw, 3rem);
+            height: clamp(2rem, 5vw, 3rem);
+            background: var(--text-primary);
+            color: var(--bg-primary);
+            font-family: var(--font-display);
+            font-size: clamp(0.875rem, 2vw, 1.25rem);
+            font-weight: 800;
+            margin-bottom: var(--content-gap);
+        }
+
+        /* Grid layout */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--content-gap);
+            align-items: start;
+        }
+
+        @media (max-width: 768px) {
+            .two-col { grid-template-columns: 1fr; }
+        }
+
+        /* Step list */
+        .step-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: var(--element-gap);
+        }
+
+        .step-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--element-gap);
+            padding: var(--element-gap);
+            background: var(--bg-secondary);
+            border-left: 3px solid var(--accent);
+        }
+
+        .step-num {
+            font-family: var(--font-display);
+            font-weight: 800;
+            color: var(--accent);
+            font-size: var(--body-size);
+            flex-shrink: 0;
+        }
+
+        /* Code block style */
+        .code-block {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            padding: var(--element-gap);
+            font-family: 'Monaco', 'Consolas', monospace;
+            font-size: var(--small-size);
+            overflow-x: auto;
+            white-space: pre;
+        }
+
+        /* Grid of cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--content-gap);
+        }
+
+        @media (max-width: 900px) {
+            .card-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 600px) {
+            .card-grid { grid-template-columns: 1fr; }
+        }
+
+        .card {
+            background: var(--bg-secondary);
+            padding: var(--content-gap);
+            border-top: 3px solid var(--accent);
+        }
+
+        .card h3 {
+            font-size: var(--body-size);
+            margin-bottom: 0.5em;
+        }
+
+        .card p {
+            font-size: var(--small-size);
+        }
+
+        /* Warning box */
+        .warning-box {
+            background: var(--accent-light);
+            border: 1px solid var(--accent);
+            padding: var(--element-gap);
+            font-size: var(--small-size);
+            color: var(--text-primary);
+        }
+
+        /* Title slide special */
+        .title-slide {
+            background: var(--bg-primary);
+            position: relative;
+        }
+
+        .title-slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 30vw;
+            height: 100%;
+            background: var(--accent);
+            clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+            opacity: 0.1;
+        }
+
+        .title-slide h1 {
+            max-width: 80%;
+        }
+
+        .title-slide .subtitle {
+            font-size: var(--body-size);
+            color: var(--text-secondary);
+            margin-top: var(--element-gap);
+            font-weight: 400;
+        }
+
+        .title-slide .tagline {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 0.5em 1em;
+            font-weight: 700;
+            font-size: var(--small-size);
+            margin-top: var(--content-gap);
+        }
+
+        /* Content slide header */
+        .slide-header {
+            display: flex;
+            align-items: center;
+            gap: var(--element-gap);
+            margin-bottom: var(--content-gap);
+        }
+
+        /* Link style */
+        .link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .link:hover {
+            text-decoration: underline;
+        }
+
+        /* Progress bar */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: var(--accent);
+            z-index: 1000;
+            transition: width 0.3s ease;
+        }
+
+        /* Navigation dots */
+        .nav-dots {
+            position: fixed;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            z-index: 1000;
+        }
+
+        .nav-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--border-color);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .nav-dot.active {
+            background: var(--accent);
+            transform: scale(1.3);
+        }
+
+        .nav-dot:hover {
+            background: var(--text-secondary);
+        }
+
+        /* Keyboard hint */
+        .keyboard-hint {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: var(--small-size);
+            color: var(--text-secondary);
+            opacity: 0.6;
+        }
+
+        kbd {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            padding: 0.2em 0.5em;
+            border-radius: 3px;
+            font-family: var(--font-body);
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+    <nav class="nav-dots" id="navDots"></nav>
+
+    <!-- Slide 1: Title -->
+    <section class="slide title-slide" data-slide="0">
+        <div class="slide-content">
+            <span class="accent-box reveal">Obsidian 插件</span>
+            <h1 class="reveal">Obsidian 一键同步到<br>NotionNext 博客</h1>
+            <p class="subtitle reveal">告别手动复制粘贴，让写作更丝滑</p>
+            <span class="tagline reveal">Share to NotionNext 插件教程</span>
+        </div>
+    </section>
+
+    <!-- Slide 2: 痛点 -->
+    <section class="slide" data-slide="1">
+        <div class="slide-content">
+            <div class="slide-header reveal">
+                <span class="number-badge">01</span>
+                <h2>痛点分析</h2>
+            </div>
+            <div class="card-grid">
+                <div class="card reveal">
+                    <h3>✍️ 写作体验</h3>
+                    <p>Obsidian 写 Markdown 丝滑顺畅，沉浸式写作体验极佳</p>
+                </div>
+                <div class="card reveal">
+                    <h3>🚀 发布困难</h3>
+                    <p>想同步到 NotionNext 发博客，需要复制粘贴、排版错乱</p>
+                </div>
+                <div class="card reveal">
+                    <h3>😫 手动搬运</h3>
+                    <p>属性对不上、容易漏内容，折腾半天还容易出错</p>
+                </div>
+            </div>
+            <p class="reveal" style="margin-top: var(--content-gap); text-align: center; font-weight: 600;">
+                👉 一键同步，告别手动搬运！
+            </p>
+        </div>
+    </section>
+
+    <!-- Slide 3: 前置准备 - API -->
+    <section class="slide" data-slide="2">
+        <div class="slide-content">
+            <div class="slide-header reveal">
+                <span class="number-badge">02</span>
+                <h2>前置准备：Notion API</h2>
+            </div>
+            <ul class="step-list reveal">
+                <li>
+                    <span class="step-num">01</span>
+                    <div>
+                        <strong>创建 API 集成</strong>
+                        <p>访问 <a href="https://www.notion.so/my-integrations" class="link" target="_blank">notion.so/my-integrations</a> 创建新的集成</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="step-num">02</span>
+                    <div>
+                        <strong>复制 API Token</strong>
+                        <p>创建成功后，复制生成的 Secret Token（妥善保管，不要泄露）</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Slide 4: 前置准备 - 数据库 -->
+    <section class="slide" data-slide="3">
+        <div class="slide-content">
+            <div class="slide-header reveal">
+                <span class="number-badge">03</span>
+                <h2>前置准备：Notion 数据库</h2>
+            </div>
+            <ul class="step-list reveal">
+                <li>
+                    <span class="step-num">01</span>
+                    <div>
+                        <strong>创建数据库</strong>
+                        <p>在 Notion 中创建一个空白数据库</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="step-num">02</span>
+                    <div>
+                        <strong>连接集成</strong>
+                        <p>数据库右上角点击 <kbd>...</kbd> → <kbd>集成</kbd> → 选择你的集成</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="step-num">03</span>
+                    <div>
+                        <strong>获取数据库 ID</strong>
+                        <p>从浏览器链接中复制数据库 ID（<code>?v=</code> 前面的 32 位字符）</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Slide 5: 安装插件 -->
+    <section class="slide" data-slide="4">
+        <div class="slide-content">
+            <div class="slide-header reveal">
+                <span class="number-badge">04</span>
+                <h2>安装插件</h2>
+            </div>
+            <div class="two-col">
+                <div>
+                    <ol class="step-list reveal">
+                        <li>
+                            <span class="step-num">1</span>
+                            <div>打开 <strong>Obsidian</strong></div>
+                        </li>
+                        <li>
+                            <span class="step-num">2</span>
+                            <div>进入 <strong>设置 → 社区插件 → 浏览</strong></div>
+                        </li>
+                        <li>
+                            <span class="step-num">3</span>
+                            <div>搜索 <strong>"Share to NotionNext"</strong></div>
+                        </li>
+                        <li>
+                            <span class="step-num">4</span>
+                            <div>点击安装，然后<strong>启用</strong></div>
+                        </li>
+                    </ol>
+                </div>
+                <div class="reveal" style="background: var(--bg-secondary); padding: var(--content-gap);">
+                    <p><strong>💡 提示</strong></p>
+                    <p style="margin-top: 0.5rem;">插件市场加载慢时可尝试开启代理</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 6: 配置插件 -->
+    <section class="slide" data-slide="5">
+        <div class="slide-content">
+            <div class="slide-header reveal">
+                <span class="number-badge">05</span>
+                <h2>配置插件</h2>
+            </div>
+            <div class="reveal">
+                <p>在 Obsidian 设置 → 第三方插件 中找到 <strong>"Obsidian to NotionNext"</strong>，填入：</p>
+            </div>
+            <div class="card-grid reveal" style="margin-top: var(--content-gap);">
+                <div class="card">
+                    <h3>API 令牌</h3>
+                    <p>Notion API 的 Secret Token</p>
+                </div>
+                <div class="card">
+                    <h3>数据库 ID</h3>
+                    <p>复制的 32 位数据库 ID</p>
+                </div>
+                <div class="card">
+                    <h3>同步字段</h3>
+                    <p>category（用于记录同步状态）</p>
+                </div>
+            </div>
+            <div class="warning-box reveal" style="margin-top: var(--content-gap);">
+                <strong>⚠️ 自定义属性参考：</strong><br>
+                title、tags、category、date、Source、status（全部为 Multi-Select 或 Date 类型）
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 7: 创建模板 -->
+    <section class="slide" data-slide="6">
+        <div class="slide-content">
+            <div class="slide-header reveal">
+                <span class="number-badge">06</span>
+                <h2>创建模板</h2>
+            </div>
+            <div class="reveal">
+                <p>在 Obsidian 模板文件夹创建模板文件：</p>
+            </div>
+            <div class="code-block reveal" style="margin-top: var(--element-gap);">
+---
+title: 文章标题
+category:
+  - Software
+  - Technical
+tags:
+status:
+  - draft
+  - published
+date:
+Source:
+---</div>
+            <p class="reveal" style="margin-top: var(--content-gap);">
+                <strong>使用：</strong>创建笔记 → <kbd>Alt+E</kbd> 调出模板，或使用 Template 插件自动化
+            </p>
+        </div>
+    </section>
+
+    <!-- Slide 8: 使用方式 -->
+    <section class="slide" data-slide="7">
+        <div class="slide-content">
+            <div class="slide-header reveal">
+                <span class="number-badge">07</span>
+                <h2>使用方式</h2>
+            </div>
+            <ol class="step-list reveal">
+                <li>
+                    <span class="step-num">01</span>
+                    <div>
+                        <strong>用模板创建笔记</strong>
+                        <p>使用 <kbd>Alt+E</kbd> 或 Template 插件快速创建</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="step-num">02</span>
+                    <div>
+                        <strong>写完笔记</strong>
+                        <p>在功能区找到 <strong>Notion 图标</strong></p>
+                    </div>
+                </li>
+                <li>
+                    <span class="step-num">03</span>
+                    <div>
+                        <strong>点击同步</strong>
+                        <p>点击「同步到 NotionNext」按钮</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="step-num">04</span>
+                    <div>
+                        <strong>完成！</strong>
+                        <p>笔记已同步到 Notion 数据库，生成博客链接</p>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- Slide 9: 注意事项 -->
+    <section class="slide" data-slide="8">
+        <div class="slide-content">
+            <div class="slide-header reveal">
+                <span class="number-badge">08</span>
+                <h2>注意事项</h2>
+            </div>
+            <ul class="step-list reveal">
+                <li>
+                    <span class="step-num">✓</span>
+                    <div>
+                        <strong>字段一致性</strong>
+                        <p>确保 Notion 数据库字段名称与插件要求一致</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="step-num">✓</span>
+                    <div>
+                        <strong>保护隐私</strong>
+                        <p>API Token 不要泄露给他人</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="step-num">✓</span>
+                    <div>
+                        <strong>先测试</strong>
+                        <p>首次使用建议先测试单篇笔记同步</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="step-num">✓</span>
+                    <div>
+                        <strong>关注更新</strong>
+                        <p>更新插件时注意检查是否有 Breaking Changes</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Slide 10: 参考资料 -->
+    <section class="slide" data-slide="9">
+        <div class="slide-content">
+            <div class="slide-header reveal">
+                <span class="number-badge">09</span>
+                <h2>参考资料</h2>
+            </div>
+            <ul class="step-list reveal">
+                <li>
+                    <span class="step-num">📦</span>
+                    <div>
+                        <strong>GitHub 仓库</strong>
+                        <p><a href="https://github.com/jxpeng98/obsidian-to-NotionNext" class="link" target="_blank">github.com/jxpeng98/obsidian-to-NotionNext</a></p>
+                    </div>
+                </li>
+                <li>
+                    <span class="step-num">📺</span>
+                    <div>
+                        <strong>抖音视频教程</strong>
+                        <p><a href="https://v.douyin.com/4K4Njgxq0Oc/" class="link" target="_blank">v.douyin.com/4K4Njgxq0Oc</a></p>
+                    </div>
+                </li>
+                <li>
+                    <span class="step-num">📝</span>
+                    <div>
+                        <strong>Template 插件指南</strong>
+                        <p><a href="https://mp.weixin.qq.com/s/kPjIpHmzciWY8_3ettEVsg" class="link" target="_blank">mp.weixin.qq.com</a></p>
+                    </div>
+                </li>
+                <li>
+                    <span class="step-num">🚀</span>
+                    <div>
+                        <strong>NotionNext 项目</strong>
+                        <p><a href="https://github.com/tangly1024/NotionNext" class="link" target="_blank">github.com/tangly1024/NotionNext</a></p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Slide 11: 结束 -->
+    <section class="slide" data-slide="10">
+        <div class="slide-content" style="text-align: center;">
+            <h1 class="reveal">开始使用吧！ 🚀</h1>
+            <p class="reveal" style="margin-top: var(--content-gap); max-width: 600px; margin-left: auto; margin-right: auto;">
+                一键同步 Obsidian 笔记到 NotionNext 博客<br>
+                告别手动复制粘贴，让写作和发布都丝滑顺畅
+            </p>
+            <p class="reveal" style="margin-top: var(--content-gap); font-size: var(--small-size); color: var(--text-secondary);">
+                样式：Swiss Modern · 10 页
+            </p>
+        </div>
+    </section>
+
+    <div class="keyboard-hint">
+        <kbd>←</kbd> <kbd>→</kbd> 或 <kbd>Space</kbd> 翻页
+    </div>
+
+    <script>
+        /* ===========================================
+           SLIDE PRESENTATION CONTROLLER
+           =========================================== */
+        class SlidePresentation {
+            constructor() {
+                this.slides = document.querySelectorAll('.slide');
+                this.currentSlide = 0;
+                this.init();
+            }
+
+            init() {
+                this.setupIntersectionObserver();
+                this.setupKeyboardNav();
+                this.setupTouchNav();
+                this.setupProgressBar();
+                this.setupNavDots();
+                this.updateSlide(0);
+            }
+
+            setupIntersectionObserver() {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            const slideIndex = parseInt(entry.target.dataset.slide);
+                            this.updateSlide(slideIndex);
+                        }
+                    });
+                }, { threshold: 0.5 });
+
+                this.slides.forEach(slide => observer.observe(slide));
+            }
+
+            setupKeyboardNav() {
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+                        e.preventDefault();
+                        this.nextSlide();
+                    } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+                        e.preventDefault();
+                        this.prevSlide();
+                    } else if (e.key === 'Home') {
+                        e.preventDefault();
+                        this.goToSlide(0);
+                    } else if (e.key === 'End') {
+                        e.preventDefault();
+                        this.goToSlide(this.slides.length - 1);
+                    }
+                });
+            }
+
+            setupTouchNav() {
+                let touchStartY = 0;
+                let touchEndY = 0;
+
+                document.addEventListener('touchstart', (e) => {
+                    touchStartY = e.changedTouches[0].screenY;
+                }, { passive: true });
+
+                document.addEventListener('touchend', (e) => {
+                    touchEndY = e.changedTouches[0].screenY;
+                    const diff = touchStartY - touchEndY;
+                    if (Math.abs(diff) > 50) {
+                        if (diff > 0) this.nextSlide();
+                        else this.prevSlide();
+                    }
+                }, { passive: true });
+            }
+
+            setupProgressBar() {
+                this.progressBar = document.getElementById('progressBar');
+            }
+
+            setupNavDots() {
+                const navDots = document.getElementById('navDots');
+                this.slides.forEach((_, index) => {
+                    const dot = document.createElement('div');
+                    dot.className = 'nav-dot';
+                    dot.addEventListener('click', () => this.goToSlide(index));
+                    navDots.appendChild(dot);
+                });
+            }
+
+            updateSlide(index) {
+                this.currentSlide = index;
+                
+                // Update progress bar
+                const progress = ((index + 1) / this.slides.length) * 100;
+                this.progressBar.style.width = progress + '%';
+
+                // Update nav dots
+                document.querySelectorAll('.nav-dot').forEach((dot, i) => {
+                    dot.classList.toggle('active', i === index);
+                });
+
+                // Scroll to slide
+                this.slides[index].scrollIntoView({ behavior: 'smooth' });
+            }
+
+            nextSlide() {
+                if (this.currentSlide < this.slides.length - 1) {
+                    this.goToSlide(this.currentSlide + 1);
+                }
+            }
+
+            prevSlide() {
+                if (this.currentSlide > 0) {
+                    this.goToSlide(this.currentSlide - 1);
+                }
+            }
+
+            goToSlide(index) {
+                this.slides[index].scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Initialize
+        new SlidePresentation();
+    </script>
+</body>
+</html>

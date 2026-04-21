@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/OB-Index.md",
-                "mode": "source",
+                "file": "posts/Software/OB-Index.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -89,6 +89,31 @@
         "type": "tabs",
         "children": [
           {
+            "id": "9ce50b84dc315952",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "posts/Software/OB-Index.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "OB-Index 的大纲"
+            }
+          },
+          {
+            "id": "11d820b163f2b1e4",
+            "type": "leaf",
+            "state": {
+              "type": "apple-style-converter",
+              "state": {},
+              "icon": "wand",
+              "title": "微信公众号转换器"
+            }
+          },
+          {
             "id": "144f93c280d1a729",
             "type": "leaf",
             "state": {
@@ -96,21 +121,6 @@
               "state": {},
               "icon": "git-pull-request",
               "title": "Source Control"
-            }
-          },
-          {
-            "id": "9ce50b84dc315952",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "posts/OB-Index.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "OB-Index 的大纲"
             }
           },
           {
@@ -160,23 +170,13 @@
               "icon": "lucide-tags",
               "title": "标签"
             }
-          },
-          {
-            "id": "0359fe4582873182",
-            "type": "leaf",
-            "state": {
-              "type": "apple-style-converter",
-              "state": {},
-              "icon": "wand",
-              "title": "微信公众号转换器"
-            }
           }
         ],
         "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 565.5
+    "width": 530.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -192,8 +192,13 @@
       "wechat-converter:微信公众号转换器": false
     }
   },
-  "active": "9ce50b84dc315952",
+  "active": "1bf89f7c7a74d6fb",
   "lastOpenFiles": [
+    "posts/Software/秘塔回响.md",
+    "posts/Software/OB-Index.md",
+    "assets/images/Obsidian-To-NotionNext.ppt.html",
+    "assets/images",
+    "assets",
     "新建 文本文档.txt",
     "未命名.base",
     "未命名.md",
@@ -205,14 +210,12 @@
     "assets/images/0c99399a-5d25-4372-9f9b-79767c32d150.webp",
     "assets/images/0bccb1b9-3fe1-49f0-a255-0805fc0ee35c.webp",
     "assets/images/0aa77bad-482a-4b65-9a19-4f35acb570ba.webp",
-    "posts/OB-Index.md",
     "posts/Software/WezTerm.md",
     "01_Raw/00_Clipings/ShareX隐藏的多区域截图技巧.md",
     "01_Raw/00_Clipings",
     "01_Raw",
     "posts/Software/assets/WezTerm/file-20260420152819253.png",
     "posts/Software/assets/WezTerm",
-    "posts/Software/assets",
     "posts/AIHacks/Qwen.md",
     "posts/Software/PixPin截图配置指南.md",
     "posts/Software/cmd.md",
