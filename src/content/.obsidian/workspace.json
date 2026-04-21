@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/Software/WezTerm.md",
+                "file": "posts/OB-Index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "WezTerm"
+              "title": "OB-Index"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 259.50840759277344
+    "width": 200
   },
   "right": {
     "id": "5baf836eb86f7a8f",
@@ -89,18 +89,28 @@
         "type": "tabs",
         "children": [
           {
+            "id": "144f93c280d1a729",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          },
+          {
             "id": "9ce50b84dc315952",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "posts/Software/WezTerm.md",
+                "file": "posts/OB-Index.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "WezTerm 的大纲"
+              "title": "OB-Index 的大纲"
             }
           },
           {
@@ -150,12 +160,23 @@
               "icon": "lucide-tags",
               "title": "标签"
             }
+          },
+          {
+            "id": "0359fe4582873182",
+            "type": "leaf",
+            "state": {
+              "type": "apple-style-converter",
+              "state": {},
+              "icon": "wand",
+              "title": "微信公众号转换器"
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 317.5
+    "width": 565.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -166,13 +187,27 @@
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "bases:新建数据库": false
+      "bases:新建数据库": false,
+      "obsidian-git:Open Git source control": false,
+      "wechat-converter:微信公众号转换器": false
     }
   },
-  "active": "f6b5e7abc96521b9",
+  "active": "0359fe4582873182",
   "lastOpenFiles": [
-    "01_Raw/00_Clipings/ShareX隐藏的多区域截图技巧.md",
+    "新建 文本文档.txt",
+    "未命名.base",
+    "未命名.md",
+    "posts/Technical/未命名.md",
+    "posts/Technical/assets/未命名/file-20260421191844731.png",
+    "posts/Technical/assets/未命名",
+    "posts/Technical/assets",
+    "assets/images/0e22eab8db6ed2441f3d3be0b10d51944867df0a.webp",
+    "assets/images/0c99399a-5d25-4372-9f9b-79767c32d150.webp",
+    "assets/images/0bccb1b9-3fe1-49f0-a255-0805fc0ee35c.webp",
+    "assets/images/0aa77bad-482a-4b65-9a19-4f35acb570ba.webp",
+    "posts/OB-Index.md",
     "posts/Software/WezTerm.md",
+    "01_Raw/00_Clipings/ShareX隐藏的多区域截图技巧.md",
     "01_Raw/00_Clipings",
     "01_Raw",
     "posts/Software/assets/WezTerm/file-20260420152819253.png",
@@ -186,13 +221,8 @@
     "posts/AIHacks/Agent-Reach.md",
     "assets/images/0f60d87a-df45-42d3-a692-c172982899cc.webp",
     "assets/images/0cfff651-0590-4700-81f4-79c9e576c38d.webp",
-    "assets/images/0bccb1b9-3fe1-49f0-a255-0805fc0ee35c.webp",
-    "assets/images/0aa77bad-482a-4b65-9a19-4f35acb570ba.webp",
     "assets/images/coxp.svg",
     "assets/images/Mermaid Chart - Create complex, visual diagrams with text.-2026-02-02-214608 1.svg",
-    "assets/images/Mermaid Chart - Create complex, visual diagrams with text.-2026-02-02-214608.svg",
-    "assets/images/coxp-4.png",
-    "assets/images/coxp-3.png",
     "posts/avatar.md",
     "posts/coxp.md",
     "[微信头像CDN.md",
@@ -206,10 +236,6 @@
     "posts/privacy-policy.md",
     "posts/warden-worker.md",
     "posts/del-git-commit.md",
-    "posts/vercel-github.md",
-    "posts/go-proxy-gh.md",
-    "posts/giscus-akismet.md",
-    "posts/ghedu-free-tech.md",
-    "posts/ghedu-free-name.md"
+    "posts/vercel-github.md"
   ]
 }

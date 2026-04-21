@@ -1,0 +1,32 @@
+{
+  "uploadByClipSwitch": true,
+  "uploader": "PicGo",
+  "uploadServer": "http://127.0.0.1:36677/upload",
+  "deleteServer": "http://127.0.0.1:36677/delete",
+  "imageSizeSuffix": "",
+  "picgoCorePath": "",
+  "workOnNetWork": false,
+  "fixPath": false,
+  "applyImage": true,
+  "newWorkBlackDomains": "",
+  "deleteSource": false,
+  "imageDesc": "origin",
+  "remoteServerMode": false,
+  "uploadedImages": [
+    {
+      "isEncrypted": 1,
+      "EncryptedData": "6509fc59d7bf72f7c2dbae98aca23e80:061b8b10f391e765083e00fe55f0bc8fc5957ff3e00625083d153ffa9e3a8c998e4d566812d91b04ae53d5614eb242bce970589335fb5db5f9cb5030810dac1652cf69de1ec68d4e023fdb4a63de57e3d8b7035fab4e8e888498aba7d5aa30065851796b53d7b9ecabbd565d542280d37b8d3c0fe64eac0da03ffbb7f47d4318a3a24630396350b387cf2bf1a526860f8bae1cfdccedb16ac90421d8ff29c8e6370082c76e610cd9f466b4b6c37b6ac73372756969c65f94d89dfc11fbda696ef3e449bae774be159cbf98e0499e9dea0bb20d692498d4e4f4a4ea4d26ab3e85c424472abf77430de354ebac02d90834395547572e84ba3d05b84864e6b47e74ed5a7d9e9a8338563e1a4abe9d4f5a2cb2408782df81d5e7533bebf7223409f1a77d72ddb72d04cef8b07b2c115c1ddbb6d8d0a86084a3d42825f63fee2956fc96e0e1b5759f8e6deb5c127f17d4c2e9589d41d51f324576a8477ef8863535abeb0485ae1d77d6083896243f2ea14cc4b49f025a5770036eeccb02be144a10a7119cc408fdb5385107a1455de86590fa515b1f35d1053a5b516b7339dd60d2da1932e57f20e119f01924694487ad5ea81497a8fd4638193b81b55ae2bf9d60354a8e70561d225c57b135fef7ffa0febd6cde23b0f8706a666fe9069b66b8fa364a0956155b93f4fef7d4cf90e96776e6cfac831f63a5afb4229503c3c26ddadd43dfbd0a8452fac73fa709b44a73eca580a2353227d1ead3be731b097060c202511b30c037e52d5b01432b771b301c1cd7792335ff8d8435e977d6ab3d1a5f025e531e22aea90ef41c453dd6bf93478a569b9a07e46ad89bbe11ff525b05f5fdfa1b8fef9298432105b5114dd426566053c3d9fbb222137a3c11421d0f01eea4a9f629598cbcc8112775a7bd022dfbb9801149bfdef62f5bbaf08e9c57137d34ff3ff4a5ac31330de8de7d5f1adbc7572a87a9df86fe11aabb908f77ccf8b0a401827d55c3c6c9754b23d294f0b2908e7183ed0ccd74fc7d4148859322d8d94f41e98a614b755615b4b4080f38f3e61879780aa4010a692524d8dc718e3db721",
+      "fileName": "20260421192429478.webp",
+      "width": 697,
+      "height": 392,
+      "extname": ".webp",
+      "imgUrl": "https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260421192429478.webp",
+      "sha": "03a1a9d42d2c7187762c61c85d7ca22d479a79b3",
+      "type": "gitee",
+      "shortUrl": "https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260421192429478.webp",
+      "id": "d8dd7373-7d9e-4e03-a8bf-6fd0d10e996f",
+      "createdAt": 1776770670500,
+      "updatedAt": 1776770670500
+    }
+  ]
+}
