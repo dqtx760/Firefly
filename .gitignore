@@ -37,4 +37,7 @@ ori
 # local img
 # src/content/img/
 
+# Obsidian 本地配置（包含敏感信息）
+src/content/.obsidian/
+
 .git
