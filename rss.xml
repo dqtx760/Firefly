@@ -165,7 +165,92 @@ https://v.douyin.com/4K4Njgxq0Oc/&lt;/p&gt;
 https://mp.weixin.qq.com/s/kPjIpHmzciWY8_3ettEVsg&lt;/p&gt;
 &lt;p&gt;→NotionNext帮助手册：
 https://docs.tangly1024.com/about&lt;/p&gt;
-</content:encoded></item><item><title>但是说的都是</title><link>https://dqtx.cc/posts/software/%E6%B5%8B%E8%AF%95/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E6%B5%8B%E8%AF%95/</guid><pubDate>Tue, 21 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;地方了看见&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260421221817237.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+</content:encoded></item><item><title>Vercel部署NotionNext</title><link>https://dqtx.cc/posts/software/vercel%E9%83%A8%E7%BD%B2notionnext/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/vercel%E9%83%A8%E7%BD%B2notionnext/</guid><pubDate>Tue, 21 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;项目地址
+https://github.com/tangly1024/NotionNext
+https://github.com/dqtx760/NotionNext
+https://github.com/dqtx760/NotionNext/tree/main/themes&lt;/p&gt;
+&lt;p&gt;我的成果
+https://notion-next-eta-coral-54.vercel.app/?theme=movie
+https://notion-next-eta-coral-54.vercel.app/?theme=plog
+https://notion-next-eta-coral-54.vercel.app/?theme=next
+https://notion-next-eta-coral-54.vercel.app/?theme=fukasawa
+https://notion-next-eta-coral-54.vercel.app/?theme=typography
+https://notion-next-eta-coral-54.vercel.app/?theme=example&lt;/p&gt;
+&lt;p&gt;https://notion-next-eta-coral-54.vercel.app/?theme=medium
+https://notion-next-eta-coral-54.vercel.app/?theme=nobelium
+https://notion-next-eta-coral-54.vercel.app/&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;[x] commerce&lt;/li&gt;
+&lt;li&gt;[x] example&lt;/li&gt;
+&lt;li&gt;[x] fukasawa&lt;/li&gt;
+&lt;li&gt;[x] game&lt;/li&gt;
+&lt;li&gt;[x] gitbook&lt;/li&gt;
+&lt;li&gt;[ ] heo&lt;/li&gt;
+&lt;li&gt;[ ] hex0&lt;/li&gt;
+&lt;li&gt;[ ] landing&lt;/li&gt;
+&lt;li&gt;[x] magzine&lt;/li&gt;
+&lt;li&gt;[ ] matery&lt;/li&gt;
+&lt;li&gt;[x] medium&lt;/li&gt;
+&lt;li&gt;[x] movie&lt;/li&gt;
+&lt;li&gt;[ ] nav&lt;/li&gt;
+&lt;li&gt;[x] next&lt;/li&gt;
+&lt;li&gt;[x] nobelium&lt;/li&gt;
+&lt;li&gt;[ ] photo&lt;/li&gt;
+&lt;li&gt;[x] plog&lt;/li&gt;
+&lt;li&gt;[ ] proxio&lt;/li&gt;
+&lt;li&gt;[ ] simple&lt;/li&gt;
+&lt;li&gt;[ ] starter&lt;/li&gt;
+&lt;li&gt;[ ] typography&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;未来目标
+https://blog.zhheo.com/
+https://meuicat.com/&lt;/p&gt;
+&lt;p&gt;参考资料
+&lt;a href=&quot;https://butterfly.zhheo.com/&quot;&gt;Butterfly 主题美化教程&lt;/a&gt;
+&lt;a href=&quot;https://www.igeekbb.com/2023/07/28/notion2hexo/&quot;&gt;从 NotionNext 转战 Hexo 博客记录 - Geek&lt;/a&gt;
+&lt;a href=&quot;https://meuicat.com/posts/25b0b30e.html&quot;&gt;Butterfly的魔改教程：右键菜单 | 爱吃肉的猫&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Vercel部署NotionNext
+https://docs.tangly1024.com/article/vercel-deploy-notion-next&lt;/p&gt;
+&lt;p&gt;视频
+https://www.youtube.com/watch?v=zWlPyDQCkrk
+https://www.youtube.com/watch?v=AbI70b9KfXE&lt;/p&gt;
+&lt;p&gt;模板
+https://tanghh.notion.site/02ab3b8678004aa69e9e415905ef32a5&lt;/p&gt;
+&lt;h2&gt;修改默认主题&lt;/h2&gt;
+&lt;p&gt;主题功能说明
+https://docs.tangly1024.com/article/notion-next-themes&lt;/p&gt;
+&lt;p&gt;HEO主题配置指南:https://docs.tangly1024.com/article/notionnext-heo
+HEO主题魔改版:https://github.com/RHZHZ/NotionNextHeoPro&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;方法1：改动github中的源代码：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;THEME: process.env.NEXT_PUBLIC_THEME || &apos;hexo&apos;, // 锁定默认主题为hexo
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;方法2 ， 在vercel后台添加环境变量: &lt;code&gt;NEXT_PUBLIC_THEME&lt;/code&gt;
+&lt;code&gt;NEXT_PUBLIC_THEME&lt;/code&gt; →&lt;code&gt;hexo&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;方法3： 使用Notion_config，在您的notion笔记中配置默认主题&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;主题demo&lt;/h1&gt;
+&lt;p&gt;demo
+https://blog.zhheo.com/
+https://meuicat.com/
+https://www.rhzhz.cn/
+https://preview.tangly1024.com/en?theme=typography
+https://preview.tangly1024.com/?theme=next&lt;/p&gt;
+&lt;p&gt;相册博客主题
+https://github.com/zhheo/TimePlus&lt;/p&gt;
+&lt;h2&gt;参考材料&lt;/h2&gt;
+&lt;p&gt;https://mp.weixin.qq.com/s/shKDa1REpWX1L-DuGkL_dg
+https://mp.weixin.qq.com/s/gjfZ4ix-0RTLFODmgfO2xg&lt;/p&gt;
+&lt;p&gt;字段说明，
+https://notion-next-eta-coral-54.vercel.app/about?theme=gitbook&lt;/p&gt;
+&lt;p&gt;如何切换主题
+https://www.bilibili.com/video/BV18M4m1d7jU/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=206031f494850e57fd6c92ace02b1bed&lt;/p&gt;
 </content:encoded></item><item><title>Agent Skills 管理方案</title><link>https://dqtx.cc/posts/aihacks/agent-skills-hub/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/agent-skills-hub/</guid><pubDate>Mon, 20 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;相信有很多小伙伴跟我一样，手头同时在用好几个 AI Agent——Claude Code、Codex、Cursor、Windsurf……每个 Agent 都有自己的 Skill 目录，装了一堆技能包。&lt;/p&gt;
 &lt;p&gt;时间一长就会遇到一个头疼的问题：同一个 Skill 要在不同 Agent 里各装一遍，版本还不一定一致，管理起来非常混乱。从最早手动复制粘贴技能配置，到用脚本管理本地技能库，再到尝试多设备同步——我发现&lt;strong&gt;技能的发现、配置、迁移和同步&lt;/strong&gt;，一直是个很痛的问题。&lt;/p&gt;
 &lt;p&gt;我一直在想，有没有一种方式能像管理代码依赖一样，统一管理所有 Agent 的技能包？同时实现在多设备上能够一键迁移跟同步？最近我在 GitHub 上发现了 几个解决方案，完美解决了我的痛点。&lt;/p&gt;
