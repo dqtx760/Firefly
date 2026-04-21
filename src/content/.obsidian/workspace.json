@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "测试.md",
+                "file": "posts/Learning/测试.md",
                 "mode": "preview",
                 "source": true
               },
@@ -194,11 +194,16 @@
       "share-to-notionnext:同步到 NotionNext": false
     }
   },
-  "active": "f6b5e7abc96521b9",
+  "active": "1bf89f7c7a74d6fb",
   "lastOpenFiles": [
-    "Template/元数据.md",
+    "00_模板/发布.md",
+    "posts/Learning/测试.md",
+    "posts/Learning",
+    "00_模板/元数据.md",
     "测试.md",
-    "Template",
+    "posts/Technical/zhuangji.md",
+    "posts/Technical/轻松打造家庭影视库，实现4K观影自由.md",
+    "00_模板",
     "posts/Software/OB-Index.md",
     "posts/Software/秘塔回响.md",
     "assets/images/Obsidian-To-NotionNext.ppt.html",
@@ -217,7 +222,6 @@
     "posts/Software/WezTerm.md",
     "01_Raw/00_Clipings/ShareX隐藏的多区域截图技巧.md",
     "01_Raw/00_Clipings",
-    "01_Raw",
     "posts/Software/assets/WezTerm/file-20260420152819253.png",
     "posts/AIHacks/Qwen.md",
     "posts/Software/PixPin截图配置指南.md",
@@ -237,10 +241,6 @@
     "2026-01-09.md",
     "posts/cf-fastip.md",
     "posts/pin copy.md",
-    "posts/fenliu.md",
-    "posts/cookie-consent.md",
-    "posts/privacy-policy.md",
-    "posts/warden-worker.md",
-    "posts/del-git-commit.md"
+    "posts/fenliu.md"
   ]
 }
