@@ -8,13 +8,13 @@
 
 ### 📋 前置准备
 
-1. ### 设置 Notion API
+1. #### 设置 Notion API
 
 - [点此](https://www.notion.so/my-integrations)创建API集成
 - 复制API Token
 
 
-2. ###  设置Notion 数据库
+1. ####  设置Notion 数据库
 
 - 创建数据库，参考👇
 
