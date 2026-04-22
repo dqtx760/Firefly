@@ -22,8 +22,20 @@ function extractFirstImage(content) {
 	return '';
 }
 
+// 从文章内容中提取第一张图片（忽略 frontmatter）
+function extractFirstImageIgnoreFrontmatter(content) {
+	// 找到 frontmatter 结束的位置
+	const match = content.match(/^---\n[\s\S]*?\n---\n([\s\S]*)$/m);
+	if (match && match[1]) {
+		const bodyContent = match[1];
+		return extractFirstImage(bodyContent);
+	}
+	// 如果没有 frontmatter，直接提取
+	return extractFirstImage(content);
+}
+
 // 检查文章内容是否为空（frontmatter 之后的内容）
-function hasContent(content) {
+function hasPostContent(content) {
 	// 找到 frontmatter 结束后的内容
 	const match = content.match(/^---[\s\S]*?---\n([\s\S]*)$/m);
 	if (match && match[1]) {
@@ -65,108 +77,93 @@ ${imageLine}---
 `;
 }
 
-// 递归获取所有 markdown 文件
-function getAllMarkdownFiles(dir, fileList = []) {
-    const files = fs.readdirSync(dir);
-
-    files.forEach(file => {
-        const filePath = path.join(dir, file);
-        const stat = fs.statSync(filePath);
-
-        if (stat.isDirectory()) {
-            // 递归扫描子目录
-            getAllMarkdownFiles(filePath, fileList);
-        } else if (file.endsWith('.md')) {
-            fileList.push(filePath);
-        }
-    });
-
-    return fileList;
+// 获取所有 md 文件
+function getAllFiles(dir, files = []) {
+	fs.readdirSync(dir).forEach(f => {
+		const p = path.join(dir, f);
+		if (fs.statSync(p).isDirectory()) {
+			getAllFiles(p, files);
+		} else if (f.endsWith('.md')) {
+			files.push(p);
+		}
+	});
+	return files;
 }
 
-// 获取所有 markdown 文件
-const files = getAllMarkdownFiles(postsDir);
+// 主逻辑
+console.log('检查文章文件...\n');
 
-console.log(`检查 ${files.length} 个文章文件...\n`);
-
+const files = getAllFiles(postsDir);
 let modifiedCount = 0;
 
 files.forEach(filePath => {
-    const relativePath = path.relative(postsDir, filePath);
-    let content = fs.readFileSync(filePath, 'utf-8');
+	const relativePath = path.relative(postsDir, filePath);
+	let content = fs.readFileSync(filePath, 'utf-8');
 
-    // 检查是否已有 frontmatter
-    const hasFrontmatter = content.trimStart().startsWith('---');
-    
-    // 检查是否已有 image 字段
-    const hasImage = /^image:\s*/m.test(content);
-    
-    // 检查文章是否有内容
-    const hasPostContent = hasContent(content);
+	// 检查是否已有 frontmatter
+	const hasFrontmatter = content.trimStart().startsWith('---');
 
-    if (!hasFrontmatter) {
-        // 完全没有 frontmatter，全部添加
-        const folderName = path.basename(path.dirname(filePath));
-        
-        let imageUrl = '';
-        
-        if (hasPostContent) {
-            // 文章有内容，提取封面图
-            imageUrl = extractFirstImage(content);
-        }
-        
-        const frontmatter = generateFrontmatter(folderName, imageUrl);
-        const newContent = frontmatter + '\n' + content;
-        fs.writeFileSync(filePath, newContent, 'utf-8');
+	// 检查是否已有 image 字段
+	const hasImage = /^image:\s*\S/m.test(content);
 
-        let info = '';
-        if (folderName === 'Technical' || folderName === 'Software' || folderName === 'AIHacks' || folderName === 'Workflow' || folderName === 'Xenia') {
-            info = `[分类: ${folderName}]`;
-        } else {
-            info = '[未识别分类，请手动填写]';
-        }
-        
-        if (imageUrl) {
-            console.log(`✅ ${relativePath} - 已添加 frontmatter ${info} [已提取封面图]`);
-        } else {
-            console.log(`✅ ${relativePath} - 已添加 frontmatter ${info} [无图片，请手动填写]`);
-        }
-        modifiedCount++;
-    } else if (!hasImage) {
-        // 已有 frontmatter 但没有 image 字段，补充 image 字段
-        const imageUrl = hasPostContent ? extractFirstImage(content) : '';
-        
-        // 直接在 pinned: false 后面添加 image 字段
-        if (content.includes('pinned: false')) {
-            if (imageUrl) {
-                content = content.replace('pinned: false', 'pinned: false\nimage: ' + imageUrl);
-                fs.writeFileSync(filePath, content, 'utf-8');
-                console.log(`✅ ${relativePath} - 已补充封面图`);
-            } else {
-                content = content.replace('pinned: false', 'pinned: false\nimage: ');
-                fs.writeFileSync(filePath, content, 'utf-8');
-                console.log(`✅ ${relativePath} - 已添加 image 字段 [无图片，请手动填写]`);
-            }
-        } else if (content.includes('pinned: true')) {
-            if (imageUrl) {
-                content = content.replace('pinned: true', 'pinned: true\nimage: ' + imageUrl);
-                fs.writeFileSync(filePath, content, 'utf-8');
-                console.log(`✅ ${relativePath} - 已补充封面图`);
-            } else {
-                content = content.replace('pinned: true', 'pinned: true\nimage: ');
-                fs.writeFileSync(filePath, content, 'utf-8');
-                console.log(`✅ ${relativePath} - 已添加 image 字段 [无图片，请手动填写]`);
-            }
-        } else {
-            // 兜底：在最后一行之前添加
-            content = content.replace(/\n$/, '\nimage: \n');
-            fs.writeFileSync(filePath, content, 'utf-8');
-            console.log(`✅ ${relativePath} - 已添加 image 字段 [无图片，请手动填写]`);
-        }
-        modifiedCount++;
-    } else {
-        console.log(`⏭️  ${relativePath} - 已有 frontmatter 和 image，跳过`);
-    }
+	// 提取文章正文中的第一张图片（忽略 frontmatter）
+	const imageUrl = extractFirstImageIgnoreFrontmatter(content);
+
+	if (!hasFrontmatter) {
+		// 完全没有 frontmatter，全部添加
+		const folderName = path.basename(path.dirname(filePath));
+		const frontmatter = generateFrontmatter(folderName, imageUrl);
+		const newContent = frontmatter + '\n' + content;
+		fs.writeFileSync(filePath, newContent, 'utf-8');
+
+		let info = '';
+		if (folderName === 'Technical' || folderName === 'Software' || folderName === 'AIHacks' || folderName === 'Workflow' || folderName === 'Xenia') {
+			info = `[分类: ${folderName}]`;
+		} else {
+			info = '[未识别分类，请手动填写]';
+		}
+
+		if (imageUrl) {
+			console.log(`✅ ${relativePath} - 已添加 frontmatter ${info} [已提取封面图]`);
+		} else {
+			console.log(`✅ ${relativePath} - 已添加 frontmatter ${info} [无图片，请手动填写]`);
+		}
+		console.log(`   ↳ 请在 Typora 中按 Ctrl+S 保存，然后关闭文件重新打开查看`);
+		modifiedCount++;
+	} else if (!hasImage) {
+		// 已有 frontmatter 但没有 image 字段，补充 image 字段
+		
+		if (imageUrl) {
+			// 有图片，添加到 pinned: false 后面
+			if (content.includes('pinned: false')) {
+				content = content.replace('pinned: false', 'pinned: false\nimage: ' + imageUrl);
+			} else if (content.includes('pinned: true')) {
+				content = content.replace('pinned: true', 'pinned: true\nimage: ' + imageUrl);
+			} else {
+				// 兜底：在 --- 后面添加
+				content = content.replace(/^---\n/, '---\nimage: ' + imageUrl + '\n');
+			}
+			fs.writeFileSync(filePath, content, 'utf-8');
+			console.log(`✅ ${relativePath} - 已补充封面图 ${imageUrl}`);
+		} else {
+			// 无图片，添加空的 image 字段
+			if (content.includes('pinned: false')) {
+				content = content.replace('pinned: false', 'pinned: false\nimage: ');
+			} else if (content.includes('pinned: true')) {
+				content = content.replace('pinned: true', 'pinned: true\nimage: ');
+			} else {
+				// 兜底：在 --- 后面添加
+				content = content.replace(/^---\n/, '---\nimage: \n');
+			}
+			fs.writeFileSync(filePath, content, 'utf-8');
+			console.log(`✅ ${relativePath} - 已添加 image 字段 [无图片，请手动填写]`);
+		}
+		console.log(`   ↳ 请在 Typora 中按 Ctrl+S 保存，然后关闭文件重新打开查看`);
+		modifiedCount++;
+	} else {
+		console.log(`⏭️  ${relativePath} - 已有 frontmatter 和 image，跳过`);
+	}
 });
 
 console.log(`\n完成！共修改了 ${modifiedCount} 个文件`);
+console.log('Error: (none)');
