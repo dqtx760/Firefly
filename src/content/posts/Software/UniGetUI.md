@@ -1,4 +1,4 @@
-﻿---
+---
 title: 包管理工具UniGetU
 published: 2026-04-18
 tags:

@@ -9,7 +9,6 @@ draft: false
 pinned: false
 image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260421233006929.webp
 ---
-
 今天在推送 `fuwari` 博客仓库到 GitHub 时，遭遇了一个意料之外但又在情理之中的拦截。GitHub 直接拒绝了我的推送，提示发现了「Secret（密钥）」泄露。经过排查和修复，两个仓库的 API Token 泄露风险已解除。写下这篇文章，既是复盘，也是给有类似经历的朋友一个参考。
 ![image.png](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260421233006929.webp)
 
@@ -104,9 +103,8 @@ git push --force
 
 ## 附：两个仓库的修复记录
 
-| 仓库 | 问题 | 修复方式 |
-|------|------|----------|
-| fuwari | `.obsidian/plugins/share-to-notionnext/data.json` 包含 API Token，被 Push Protection 拦截 | 使用 `git filter-repo` 清理历史 + 修改 `.gitignore` |
-| zhishiku | 同样包含 API Token（但未被拦截） | 修改 `.gitignore` 忽略整个 `.obsidian/` 目录 |
+![image.png](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260422222241120.webp)
 
 修复完成后，两个仓库都安全了，以后再也不用担心 API Token 泄露的问题。
+
+文章来源：[dqtx.cc](https://www.dqtx.cc/)  远程技术支持：[742112.xyz](https://www.742112.xyz/)
