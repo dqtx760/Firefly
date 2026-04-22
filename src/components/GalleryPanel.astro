@@ -34,9 +34,10 @@ const postsWithCover = posts.filter(post => post.data.image || post.data.cover);
                     )}
                     <div class="card-overlay"></div>
                 </div>
-                <div class="card-title">
+                <!-- 隐藏标题，图片本身已包含标题信息 -->
+                <!-- <div class="card-title">
                     {post.data.title}
-                </div>
+                </div> -->
             </a>
         ))}
     </div>

@@ -1,7 +1,7 @@
 # Derek Zhao Blog
 
 > [!NOTE]
-> 基于 [Fuwari](https://github.com/saicaca/fuwari) 深度二次开发的个人博客项目，集成 Typora + PicList + GitHub Desktop + Gitee 图床工作流，专为技术博客打造。
+> 基于 [Fuwari](https://github.com/saicaca/fuwari) 深度二次开发的个人博客项目，集成 Obsidian + PicList + Gitee 图床工作流，专为技术博客打造。
 
 一个基于 Astro 5.7+ 构建的现代化个人博客主题，专注于技术分享与实践。
 
@@ -19,10 +19,11 @@
 - 🎨 **霞鹜文楷字体** - 优雅的中文手写风格
 
 ### 内容管理
-- 🏷️ **标签系统** - 灵活的文章标签
-- 📂 **分类管理** - Software / Technical / AIHacks
-- 🖼️ **自动封面** - 首张图片自动作为封面
-- 📄 **自动摘要** - 开头段落自动作为描述
+- 🏷️ **标签系统** - 灵活的文章标签，支持标签云展示
+- 📂 **分类管理** - Software / Technical / AIHacks / Workflow / Xenia
+- 🖼️ **画廊展示** - 全新画廊页面，封面图网格展示
+- 🖼️ **自动封面** - 首张图片自动作为封面（BAT 脚本自动提取）
+- 📄 **智能摘要** - 开头段落自动作为描述（文章页隐藏）
 
 ### 交互功能
 - 💬 **Giscus 评论** - GitHub Discussions 驱动的评论系统
@@ -32,13 +33,12 @@
 - 💜 **冷紫蓝渐变** - 独特的视觉标识系统
 - 🔝 **浮动按钮** - 评论/回到顶部快捷操作
 - 📊 **表格样式** - 表头浅色/数据行深色
-- 🔍 **内置搜索** - 快速查找文章（已修复）
 
-### 内容管理
-- 🏷️ **标签系统** - 灵活的文章标签
-- 📂 **分类管理** - Software / Technical / AIHacks
-- 🖼️ **自动封面** - 首张图片自动作为封面
-- 📄 **智能摘要** - 开头段落自动作为描述（文章页隐藏）
+### 新增功能（2026-04）
+- 🏷️ **3D 标签云** - 侧边栏 3D 旋转星球标签云
+- 🖼️ **画廊页面** - `/gallery/` 封面图网格展示
+- 📅 **归档增强** - 年份+月份分组，显示每月发文量
+- 📱 **移动端优化** - 侧边栏移动端隐藏
 
 ### SEO 优化
 - 📈 **SEO 友好** - 自动生成 sitemap
@@ -322,9 +322,18 @@ themeColor: {
 
 ---
 
-## 🔧 开发脚本
+## 🔧 工作流
 
-### 添加 Frontmatter 模板
+### 使用 BAT 脚本（推荐）
+
+运行 `博客升级版bat.bat`，可选择：
+
+1. **移动文章并打开封面生成** - 从知识库移动文章到博客，自动提取封面图
+2. **生成文章 YAML 模板** - 为没有 frontmatter 的文章自动添加模板
+3. **启动本地构建预览** - 运行 `pnpm dev`
+4. **Git 提交并推送代码** - 自动提交并推送到 GitHub
+
+### 手动脚本
 
 ```bash
 npm run add-frontmatter
@@ -334,19 +343,9 @@ npm run add-frontmatter
 - title（从文件名或内容提取）
 - published（当前日期）
 - tags（根据内容关键词）
-- category（根据内容关键词）
+- category（根据文件夹名称）
 - draft（设置为 false）
-
-### 按分类组织文章
-
-```bash
-npm run organize-posts
-```
-
-根据文章的 frontmatter category 字段，将文章移动到对应的分类目录：
-- `软件安利` → `src/content/posts/软件安利/`
-- `技术教程` → `src/content/posts/技术教程/`
-- `AI新鲜玩法` → `src/content/posts/AI新鲜玩法/`
+- image（自动提取文章第一张图片）
 
 ---
 
@@ -360,7 +359,7 @@ title: 文章标题
 published: 2026-02-04
 description: 文章描述（可选，留空则自动提取第一段）
 tags: [标签1, 标签2, 标签3]
-category: 软件安利
+category: Software
 draft: false
 image: https://图片URL（可选，留空则自动提取第一张）
 ---
@@ -386,9 +385,11 @@ image: https://图片URL（可选，留空则自动提取第一张）
 
 | 分类 | 适用内容 | 示例 |
 |------|----------|------|
-| **软件安利** | 软件推荐、工具介绍 | Typora 配置、快捷键、浏览器插件 |
-| **技术教程** | 技术教程、部署指南 | AList 部署、内网穿透、网站搭建 |
-| **AI新鲜玩法** | AI 相关内容 | ChatGPT 提示词、Claude 使用技巧 |
+| **Software** | 软件推荐、工具介绍 | 浏览器插件、效率工具 |
+| **Technical** | 技术教程、部署指南 | 服务器部署、内网穿透 |
+| **AIHacks** | AI 相关内容 | ChatGPT、Claude 使用技巧 |
+| **Workflow** | 工作流、自动化 | 脚本、效率方法 |
+| **Xenia** | 碎碎念、日常 | 生活记录、随想 |
 
 ### ⚠️ 重要注意事项
 
@@ -449,4 +450,4 @@ category: 软件安利
 
 ---
 
-*最后更新: 2026-02-08*
+*最后更新: 2026-04-22*
