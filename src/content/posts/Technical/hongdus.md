@@ -1,10 +1,12 @@
----
+﻿---
 title: 免费云主机建站指南
 published: 2026-04-16
-tags: []
+tags:
+  - 网站搭建
 category: Technical
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260416010122712.webp
 ---
 
 最近上网冲浪的时候，偶然发现了红都主机 —— 一个提供永久免费 PHP 虚拟主机的国内服务商!

@@ -1,10 +1,12 @@
----
+﻿---
 title: OpenClaw完整安装指南
 published: 2026-02-08
-tags: []
+tags:
+  - Agent
 category: AIHacks
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260208013915419.webp
 ---
 
 最近爆火的开源机械爪控制工具库OpenClaw，凭借轻量适配、无缝对接ROS/ROS2的优势，成为机器人抓取项目的刚需选择，但网上热议的大多是功能应用，却鲜有完整的安装配置指南——如果您正被依赖缺失、编译报错、环境不生效、launch文件启动失败等问题卡住，搜遍教程要么简略要么过时，那这篇超详细、可直接复制命令、新手也能照做的OpenClaw安装配置教程，绝对能帮您一步跑通，Ubuntu 20.04/22.04通用，全程无跳步直接抄作业。

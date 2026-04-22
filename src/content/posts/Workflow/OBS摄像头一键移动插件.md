@@ -2,10 +2,12 @@
 title: OBS摄像头一键移动插件
 published: 2026-01-15T11:20:00.000Z
 description: 想让 OBS 摄像头实现「一键移动+一键复位」的平滑效果？不管是直播过场切换、录课构图调整，还是避免画面遮挡，motion-effect 插件都能轻松搞定！无需复杂操作，3 步就能实现精准位移，让你的...
-tags: ["OBS","直播","录课","效率工具"]
+tags:
+  - OBS
 draft: false
 lang: zh_CN
-category: Software
+category: Workflow
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260117005310134.webp
 ---
 
 想让 OBS 摄像头实现「一键移动+一键复位」的平滑效果？不管是直播过场切换、录课构图调整，还是避免画面遮挡，motion-effect 插件都能轻松搞定！无需复杂操作，3 步就能实现精准位移，让你的画面切换更专业～

@@ -1,10 +1,14 @@
----
+﻿---
 title: 记录一次装系统糟心经历！
 published: 2026-04-11
-tags: []
+tags:
+  - 经验复盘
+  - Windows
+  - 技术教程
 category: Technical
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/2026-04-11-23-55.webp
 ---
 
 今天想和大家分享一下我最近装系统的糟心经历，前前后后耽误了整整三天时间，最后才找到问题根源，也算是给自己上了一课。 
@@ -66,10 +70,3 @@ https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/bug-check-0x
 
 也希望把我的这次踩坑经历分享给大家，以后装系统尽量选择官方原版镜像，别再像我一样，在第三方镜像上浪费时间，走不必要的弯路了。 
 
-
-
-**PS.**
-
-- 远程服务微信：dqtx33  
-
-- 付费社群：[点此加入](https://t.zsxq.com/d4zSX)

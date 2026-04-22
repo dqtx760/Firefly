@@ -1,10 +1,17 @@
 ---
 title: Qwen Code安装使用教程
 published: 2026-04-14
-tags: []
+tags:
+  - Agent
+  - Qwen
+  - Claude
+  - 编程助手
+  - AI工具
+  - 命令行工具
 category: AIHacks
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260414155118952.webp
 ---
 
 Qwen Code 是基于 Gemini Code 二次开发的**终端 AI 编程助手**，完美搭载**通义千问3.6 Plus 最新编程模型**，支持纯中文交互、代码生成/修复/Git 协作，**免费**提供**每日100次请求**额度完全满足日常开发需求。
@@ -129,6 +136,60 @@ qwen --approval-mode yolo
 - `/help`：查看所有功能
 - `/quit`：退出工具
 - `/clear`：清空终端内容
+- `/model`：切换 AI 模型
+- `/compress`：压缩上下文，减少 Token 消耗
+- `/search`：搜索文件内容
+- `/read`：读取指定文件
+- `/edit`：编辑当前文件
+- `/write`：写入或创建新文件
+- `/bash`：执行终端命令
+- `/review`：代码审查
+- `/test`：运行测试
+
+
+
+## 五、多子 Agent 并行处理
+
+Qwen Code 支持调用多个**子 Agent（子程序）**并行工作，大幅提升任务处理效率。
+
+### 如何调用多个子 Agent
+
+在任务提示词中明确指示即可：
+
+```
+请同时调用 3 个子 Agent，分别处理以下任务：
+1. Agent A: 读取 src/pages 目录下的所有 .astro 文件
+2. Agent B: 扫描 src/components 目录，找出所有用到某个组件的地方
+3. Agent C: 分析 src/content 目录下的所有文章，统计标签使用情况
+
+注意：需要配合 todo_write 来管理跟踪这些并行任务。
+```
+
+### 配合 todo_write 管理任务
+
+```javascript
+// 同时启动多个任务时，用 todo_write 跟踪进度
+{
+  "todos": [
+    { "id": "1", "content": "任务A：读取文件", "status": "in_progress" },
+    { "id": "2", "content": "任务B：扫描组件", "status": "in_progress" },
+    { "id": "3", "content": "任务C：统计分析", "status": "in_progress" }
+  ]
+}
+```
+
+### 使用场景
+
+- ✅ 批量处理多个文件
+- ✅ 并行执行独立的搜索任务
+- ✅ 同时分析不同模块的代码
+- ✅ 大规模代码重构前的多点扫描
+
+### 注意事项
+
+- ⚠️ 同时调用的 Agent 越多，消耗资源越大
+- ⚠️ 建议控制在 3-5 个并行任务
+- ✅ 复杂任务拆分为多个子任务，效率更高
 
 
 

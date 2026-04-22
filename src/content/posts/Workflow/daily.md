@@ -1,10 +1,13 @@
----
+﻿---
 title: Obsidian日记半自动化流程
 published: 2026-04-08
-tags: []
-category: Software
+tags:
+  - Obsidian插件
+  - Obsidian
+category: Workflow
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260408235725942.webp
 ---
 
 在 Obsidian 打造高效日记自动化，核心插件是基础，模板是骨架，辅助插件是关键。

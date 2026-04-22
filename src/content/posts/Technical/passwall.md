@@ -1,10 +1,12 @@
----
+﻿---
 title: 最新passwall安装教程
 published: 2026-03-16
-tags: []
+tags:
+  - Openwrt
 category: Technical
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/passw.webp
 ---
 
 网传passwall删库跑路，实则是换库而已。目前passwall2还是可以用之前的方式升级安装，但也可以用下面的方式升级。

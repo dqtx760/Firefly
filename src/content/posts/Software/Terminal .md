@@ -1,10 +1,12 @@
----
+﻿---
 title: Terminal 安装与美化配置指南
 published: 2026-02-15
-tags: []
+tags:
+  - 终端
 category: Software
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260419202153089.webp
 ---
 
 运维工作中高频的命令行操作，向来因 Windows 原生命令提示符、PowerShell 的功能局限受掣肘。而 Windows Terminal 的推出完美解决这一痛点，它的多标签页设计是核心亮点：可以同时打开多个独立会话，像 Claude、OpenCode 这类工具都能在不同标签页中并行运行，无需频繁切换窗口；同时还能无缝集成 Command Prompt、PowerShell、WSL 等各类环境，大幅提升运维终端操作效率，是运维人员打造高效、美观、多功能终端环境的优质选择

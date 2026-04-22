@@ -1,10 +1,13 @@
----
+﻿---
 title: Obsidian CLI终端管理笔记指南
 published: 2026-04-05
-tags: []
+tags:
+  - cli
+  - Obsidian
 category: AIHacks
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260405214553243.webp
 ---
 
 2026年2月27日，Obsidian 1.12.4正式发布官方CLI。

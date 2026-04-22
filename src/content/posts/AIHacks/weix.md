@@ -1,10 +1,13 @@
----
+﻿---
 title: weclaw：微信桥接Agent工具
 published: 2026-03-20
-tags: []
+tags:
+  - 命令行工具
+  - AI
 category: AIHacks
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Generated_Image_qb64vqqb64vqqb64.webp
 ---
 
 最近微信推出了clawBot插件，找个几个微信桥接器Claude项目，最终都失败了，就在刚刷即刻突然看到艾逗笔大佬的**weclaw**，让我眼前一亮.

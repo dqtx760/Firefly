@@ -1,9 +1,12 @@
----
+﻿---
 title: Typora + PicList + Gitee 图床完整配置教程
 published: 2026-02-04
-tags: [教程]
+tags:
+  - 工作流
+  - 技术教程
 category: Technical
 draft: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20250823223254969.webp
 ---
 
 如果你经常写 Markdown 文档，那么 **Typora** 是一款非常好用的编辑器。而在图片管理方面，推荐搭配免费的图床工具 **PicList**，它支持一键上传图片到各类图床。我自己的方案是：**Typora + PicList + Gitee**，写作体验非常流畅。

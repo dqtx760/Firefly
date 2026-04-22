@@ -1,10 +1,12 @@
----
+﻿---
 title: Hermes Agent上手指南。
 published: 2026-04-15
-tags: []
+tags:
+  - Agent
 category: AIHacks
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260414222135731.webp
 ---
 
 最近叫Hermes Agent的开源项目，短短两个月GitHub星标冲到8万+，被无数开发者称为"OpenClaw的真正对手"。它不是又一个聊天机器人，也不是IDE里的代码助手，而是一个真正会随着你一起成长、越用越聪明的自主AI Agent。

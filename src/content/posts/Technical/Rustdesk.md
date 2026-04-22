@@ -1,10 +1,13 @@
----
+﻿---
 title: Rustdesk定制编译工具
 published: 2026-03-23
-tags: []
+tags:
+  - 工作流
+  - 技术教程
 category: Technical
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260323223059574.webp
 ---
 
 作为一名技术爱好者，偶然在闲鱼上刷到定制化的Rustdesk客户端，简洁的界面和实用的功能让我萌生了自研同款编译工具的想法。虽花费数百元向卖家请教却因对方忙碌无疾而终，但也坚定了我靠技术实现需求的决心——最终借助Codex从命令行版本起步，迭代出可视化网页面板的Rustdesk一键编译工具，现将整个开发过程与成果分享如下。

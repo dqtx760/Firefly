@@ -1,10 +1,12 @@
----
+﻿---
 title: 用Claude搞定UI配色与排版指南
 published: 2026-03-11
-tags: []
+tags:
+  - skill
 category: AIHacks
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Generated_Image_xup9zzxup9zzxup9.webp
 ---
 
 

@@ -1,10 +1,12 @@
----
+﻿---
 title: chrome浏览器插件精选
 published: 2026-04-17
-tags: []
-category: Software
+tags:
+  - chrome插件
+category: Workflow
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260417115938098.webp
 ---
 
 今天给大家整理并安利一批我自己一直在用、真正能提升效率的 **Chrome 实用插件**。从浏览器操控、效率增强、截图录屏、翻译广告拦截，到 AI 辅助、内容抓取等，我都按功能分好类，方便大家按需选用。这次一共整理了 **26 款**，都是日常上网、办公、学习、做内容时高频用到的精品插件，希望能帮到大家。

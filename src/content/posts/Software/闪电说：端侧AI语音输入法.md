@@ -1,9 +1,12 @@
----
+﻿---
 title: 闪电说：端侧AI语音输入法
 published: 2026-02-04
-tags: [软件，语音输入法]
+tags:
+  - 软件推荐
+  - 语音输入法
 category: Software
 draft: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260204111254949.webp
 ---
 
 闪电说是由武汉团队打造的**国产 AI 语音输入法**，前身为代体输入法，以 “端侧本地处理” 为核心特色，实现毫秒级语音转文字体验。它打破传统云端语音输入的延迟与隐私痛点，通过本地 AI 引擎构建 “即说即显、思维同步” 的输入模式，兼容 Windows 和 macOS 全平台，是一款完全免费的系统级输入工具，被观猹平台评为 8.6 分高分产品。

@@ -2,10 +2,11 @@
 title: ClaudeCode安装使用教程
 published: 2026-01-15T11:20:00.000Z
 description: 1. Node.js 18 或更高版本 请前往 Node.js 官方网站安装最新 LTS 版本，确保 Claude Code 能正常运行。 https://no...
-tags: ["效率工具","AI","Claude","Windows"]
+tags:
+  - Claude
+  - Agent
 draft: false
 lang: zh_CN
-
 image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260106202139189.webp
 category: AIHacks
 ---

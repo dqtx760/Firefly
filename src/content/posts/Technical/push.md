@@ -1,10 +1,13 @@
 ---
 title: 我push博客时泄露了API
 published: 2026-04-21
-tags: []
-category: Other
+tags:
+  - 经验复盘
+  - 博客
+category: Technical
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260421233006929.webp
 ---
 
 今天在推送 `fuwari` 博客仓库到 GitHub 时，遭遇了一个意料之外但又在情理之中的拦截。GitHub 直接拒绝了我的推送，提示发现了「Secret（密钥）」泄露。经过排查和修复，两个仓库的 API Token 泄露风险已解除。写下这篇文章，既是复盘，也是给有类似经历的朋友一个参考。

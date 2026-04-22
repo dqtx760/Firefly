@@ -2,8 +2,11 @@
 /**
  * 文章分类组件
  * 显示所有分类及其文章数量
+ * 自动检测 content/posts 下的文件夹作为分类
  */
 import { getCollection } from "astro:content";
+import fs from "node:fs";
+import path from "node:path";
 
 // 获取所有文章并统计分类
 const allPosts = await getCollection("posts", ({ data }) => {
@@ -17,23 +20,36 @@ for (const post of allPosts) {
     categoryCount.set(category, (categoryCount.get(category) || 0) + 1);
 }
 
-// 自定义分类排序顺序（使用英文名称，因为文章用的是英文）
-const categoryOrder = ["Software", "Technical", "AIHacks"];
+// 自动检测 content/posts 下的文件夹作为分类
+const postsDir = path.join(process.cwd(), "src/content/posts");
+let validCategories: Set<string>;
 
-// 只显示指定的3个分类
-const validCategories = new Set(["Software", "Technical", "AIHacks"]);
+if (fs.existsSync(postsDir)) {
+    const folders = fs.readdirSync(postsDir, { withFileTypes: true })
+        .filter(dirent => dirent.isDirectory())
+        .map(dirent => dirent.name);
+    validCategories = new Set(folders);
+} else {
+    validCategories = new Set(["Software", "Technical", "AIHacks", "Other"]);
+}
 
-// 转换为数组并按自定义顺序排序
+// 自定义分类排序顺序
+const customOrder = ["Software", "Technical", "AIHacks", "Other"];
+
+// 转换为数组并排序
 const categories = Array.from(categoryCount.entries())
-    .filter(([name]) => validCategories.has(name)) // 只显示指定的分类
+    .filter(([name]) => validCategories.has(name))
     .map(([name, count]) => ({
         name,
         count
     }))
     .sort((a, b) => {
-        const aIndex = categoryOrder.indexOf(a.name);
-        const bIndex = categoryOrder.indexOf(b.name);
-        return aIndex - bIndex;
+        const aIndex = customOrder.indexOf(a.name);
+        const bIndex = customOrder.indexOf(b.name);
+        if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex;
+        if (aIndex !== -1) return -1;
+        if (bIndex !== -1) return 1;
+        return a.name.localeCompare(b.name);
     });
 ---
 

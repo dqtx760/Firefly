@@ -1,10 +1,14 @@
----
+﻿---
 title: Obsidian+Claude：AI超级大脑架构设计
 published: 2025-10-25
-tags: []
-category: AIHacks
+tags:
+  - 工作流
+  - Obsidian
+  - Claudecode
+category: Workflow
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260213215428541.webp
 ---
 
 很多人理解思维OS理念，却被Obsidian文件散乱问题困扰，难以高效管理知识与内容。为满足程序员与多平台创作者的创作效率需求，我设计了这套AI超级大脑架构，于是有了这篇文章。

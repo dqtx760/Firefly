@@ -1,10 +1,12 @@
----
+﻿---
 title: 酷9：webview 食用方法
 published: 2026-02-11
-tags: []
+tags:
+  - 技术教程
 category: Technical
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/KU9.webp
 ---
 
 KU9（酷 9）是基于 TVBox 开发的高自由度直播空壳软件，其 WebView 功能是突破直播源兼容性的核心 —— 通过嵌入浏览器内核直接渲染网页端直播内容，从根源解决常规 m3u/txt 源频繁失效的痛点。

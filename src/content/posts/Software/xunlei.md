@@ -1,10 +1,12 @@
----
+﻿---
 title: 迅雷v25.0.3.1096绿色精简版
 published: 2026-03-25
-tags: []
+tags:
+  - 软件推荐
 category: Software
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260325135455961.webp
 ---
 
 **迅雷**Thunder 2025 v25.0.3.1096 去广告**绿色**精简版，注意是Windows版本，可以直接搜索，分享资料可以复制仅单个URL，但是没有深色模式切换按钮，不过界面确实干净清爽！

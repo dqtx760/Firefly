@@ -1,10 +1,13 @@
----
+﻿---
 title: Obsidian 同步 Notion 神插件
 published: 2026-04-21
-tags: []
-category: Software
+tags:
+  - Obsidian插件
+  - 工作流
+category: Workflow
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260421153612198.webp
 ---
 
 我最近发现了一个超好用的 Obsidian 神器，叫 Share to NotionNext！

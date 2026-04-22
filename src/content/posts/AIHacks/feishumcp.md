@@ -1,10 +1,13 @@
----
+﻿---
 title: Claude配置飞书MCP教程
 published: 2026-03-06
-tags: []
+tags:
+  - MCP
+  - Claudecode
 category: AIHacks
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260306075245649.webp
 ---
 
 平时用飞书文档做笔记、整理资料、写方案的朋友，一定要试试这个**超好用的**组合 ——Claude + 飞书 MCP\**。**它就像给飞书文档装了个**智能外挂**，不用复杂操作，**你只要在 Claude 里说一句话，内容就能自动同步、推送到飞书文档**，，还能直接生成、写入多维表格。

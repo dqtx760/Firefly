@@ -13,6 +13,7 @@ interface Props {
 	hidePublishedDate?: boolean;
 	slug?: string;
 	category?: string;
+	tags?: string[];
 }
 const {
 	published,
@@ -21,6 +22,7 @@ const {
 	hidePublishedDate = false,
 	slug,
 	category,
+	tags = [],
 } = Astro.props;
 const className = Astro.props.class;
 
@@ -83,6 +85,7 @@ const categoryUrl = category ? categoryEnglishName.get(category) || category : n
         </>
     )}
 </div>
+
 
 {slug && (
     <script define:vars={{ slug, umamiConfig }}>

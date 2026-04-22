@@ -1,10 +1,12 @@
 ---
 title: 给AI装上“眼睛”：Agent-Reach真实体验
 published: 2026-03-12
-tags: []
+tags:
+  - skill
 category: AIHacks
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/diaoy.webp
 ---
 
 

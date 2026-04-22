@@ -1,10 +1,13 @@
----
+﻿---
 title: 我的博客工作流bat
 published: 2026-04-14
-tags: []
-category: Software
+tags:
+  - 工作流
+  - 博客
+category: Workflow
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260414140439305.webp
 ---
 
 优化了下我的博客发布工作流bat脚本

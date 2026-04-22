@@ -4,10 +4,11 @@ published: 2026-04-18
 tags:
   - 方法论
   - 知识管理
-  - LLM
-category: Software
+  - Obsidian
+category: Workflow
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/01-rag-vs-wiki.webp
 ---
 
 > 告别一盘散沙的笔记，AI让知识真正"活"起来。

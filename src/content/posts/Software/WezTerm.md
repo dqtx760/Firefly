@@ -1,10 +1,12 @@
----
+﻿---
 title: WezTerm终端配置指南
 published: 2026-04-06
-tags: []
+tags:
+  - 终端
 category: Software
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260406201347691.webp
 ---
 
 今天分享一套**颜值高、速度快、功能强**的终端组合：

@@ -1,10 +1,13 @@
----
+﻿---
 title: Zed安装使用教程
 published: 2026-04-09
-tags: []
+tags:
+  - Agent
+  - AI
 category: AIHacks
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260409135131089.webp
 ---
 
 近期代码圈掀起热潮，不少深耕VS Code、Sublime的开发者，纷纷转向Zed编辑器。

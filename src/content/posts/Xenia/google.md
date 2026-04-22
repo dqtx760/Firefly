@@ -1,10 +1,12 @@
----
+﻿---
 title: 谷歌新产品&功能
 published: 2026-04-20
-tags: []
-category: Software
+tags:
+  - google
+category: Xenia
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260420211847140.webp
 ---
 
 这篇文章将在后续的时间里会持续更新谷歌最新推出的一些新产品，不限于各种新品或原本产品的新功能。

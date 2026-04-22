@@ -1,11 +1,13 @@
----
+﻿---
 title: Dos命令mklink详解
 published: 2026-04-20
 tags:
   - Windows
-  - 命令行
-  - 文件管理
-category: Software
+  - DOS命令
+  - 技术教程
+  - 工作流
+category: Workflow
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260420172844734.webp
 ---
 
 你是否遇到过这些问题：想让软件从A目录读取文件，但文件实际存放在B目录？

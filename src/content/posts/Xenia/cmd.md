@@ -1,10 +1,12 @@
 ---
 title: Dos常用命令汇总
 published: 2024-05-18T10:30:00.000Z
-tags: []
-category: Software
+tags:
+  - DOS命令
+category: Xenia
 draft: false
 pinned: false
+image: 
 ---
 
 

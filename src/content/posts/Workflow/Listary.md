@@ -1,10 +1,14 @@
----
+﻿---
 title: Listary完全使用指南！
 published: 2026-04-12
-tags: []
-category: Software
+tags:
+  - 工作流
+  - 软件推荐
+  - 技术教程
+category: Workflow
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/PixPin_2026-04-13_21-38-23.webp
 ---
 
 Listary是一款知名的效率工具，以用户友好，使用方式简单而备受好评。

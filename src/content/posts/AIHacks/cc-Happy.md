@@ -1,10 +1,13 @@
----
+﻿---
 title: Happy：给Claude一双翅膀
 published: 2026-02-14
-tags: []
+tags:
+  - Claudecode
+  - 命令行工具
 category: AIHacks
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260306063507065.webp
 ---
 
 我之前用AI编程一直特别拧巴：Claude Code明明能自己干活，可我必须守在电脑前，它每走一步都要等我确认才能继续。直到我用上了 Happy，它直接把电脑上的 Claude Code 实时映射到手机，不把代码文件上传云端，数据全程端到端加密，不用经过第三方服务器，既能随时随地查看和控制，安全感也拉满，彻底摆脱了必须坐在电脑前的束缚。

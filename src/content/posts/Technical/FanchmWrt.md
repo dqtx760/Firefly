@@ -1,10 +1,13 @@
----
+﻿---
 title: 360T7刷FanchmWrt教程
 published: 2026-03-16
-tags: []
+tags:
+  - Openwrt
+  - 技术教程
 category: Technical
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Generated_Image_qp609cqp609cqp60.webp
 ---
 
 FanchmWrt是一款完全开源的家庭防火墙系统，基于官方 OpenWrt 同源开发（代码已全开源，GitHub 可查），但它在内核层做了大量针对家用场景的深度优化，内置了许多原本只有企业级软路由或专业防火墙才有的功能。简单来说，它把 OpenWrt 的极致可玩性 + 企业级网络管控能力，塞进了一套对普通家庭用户更友好的界面和体验。

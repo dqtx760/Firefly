@@ -1,10 +1,14 @@
----
+﻿---
 title: Claude联网神器：Web Access
 published: 2026-03-26
-tags: []
+tags:
+  - skill
+  - Agent
+  - AI
 category: AIHacks
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Generated_Image_f1to39f1to39f1to.webp
 ---
 
 ## 前言

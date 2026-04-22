@@ -1,10 +1,12 @@
----
+﻿---
 title: CodePilot接入飞书指南
 published: 2026-03-07
-tags: []
+tags:
+  - Claudecode
 category: AIHacks
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260307140824884.webp
 ---
 
 CodePilot 是一款功能强大的 Claude 第三方客户端，近期上线的飞书桥接功能，实现了 Claude 能力与飞书生态的深度打通。完成接入配置后，你可以直接在飞书内使用 Claude 完成以下场景的工作：

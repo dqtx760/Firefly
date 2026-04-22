@@ -1,10 +1,16 @@
----
+﻿---
 title: NotebookLM封神指南
 published: 2026-03-23
-tags: []
-category: AIHacks
+tags:
+  - AI
+  - chrome插件
+  - skill
+  - 工作流
+  - 软件推荐
+category: Workflow
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260323071304352.webp
 ---
 
 

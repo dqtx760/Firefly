@@ -1,10 +1,12 @@
----
+﻿---
 title: Chrome官方MCP：chrome-devtools-mcp
 published: 2026-03-10
-tags: []
+tags:
+  - MCP
 category: AIHacks
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260311185030784.webp
 ---
 
 前端开发中的网页性能分析、重复交互操作、多场景调试，向来是耗时又繁琐的工作。而Chrome DevTools MCP的出现，打通了AI助手与Chrome浏览器的通信链路，让开发者仅凭自然语言指令，就能实现浏览器自动化控制、性能诊断、页面调试等操作，直接把前端开发与调试效率拉满。

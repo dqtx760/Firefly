@@ -2,12 +2,13 @@
 title: AutoHotkey打包exe完全指南！
 published: 2024-11-15
 description: AutoHotkey（AHK）是一种强大的自动化脚本语言，能够帮助用户简化日常计算机操作。将AHK脚本转换为可执行文件（.exe）不仅可以分发和使用，还能保护脚...
-tags: ["效率工具","AI","Claude","Windows"]
+tags:
+  - Windows
+  - 软件打包
 draft: false
 lang: zh_CN
-
 image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260121211236120.webp
-category: Technical
+category: Workflow
 ---
 
 AutoHotkey（AHK）是一种强大的自动化脚本语言，能够帮助用户简化日常计算机操作。将AHK脚本转换为可执行文件（.exe）不仅可以分发和使用，还能保护脚本代码不被轻易查看。本文将详细介绍如何使用AutoHotkey将代码转换为EXE文件的完整流程。

@@ -1,9 +1,11 @@
----
+﻿---
 title: OpenList挂载豆包云盘
 published: 2025-09-18T10:30:00.000Z
-tags: []
+tags:
+  - openlsit
 category: Technical
 draft: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20251130152350228.webp
 ---
 
 本篇文章将教你如何把**豆包网盘**接入 OpenList，通过 WebDAV 方式实现挂载与访问。只需按照以下步骤操作，即可实现豆包网盘文件管理、本地读取与在线播放。

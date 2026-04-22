@@ -1,10 +1,12 @@
----
+﻿---
 title: Claude Code泄露后，程序员们疯了!
 published: 2026-04-01
-tags: []
+tags:
+  - Claudecode
 category: AIHacks
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Generated_Image_4nfm254nfm254nfm.webp
 ---
 
 就在昨天（2026年3月31日），一场波及整个AI编程圈的“核弹级”事件突然引爆——Anthropic旗下最神秘的AI编程助手Claude Code的**完整源码**，疑似通过npm source map意外泄露！

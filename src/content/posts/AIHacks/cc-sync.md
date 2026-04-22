@@ -1,12 +1,14 @@
----
+﻿---
 title: Cc-sync：多电脑CC配置同步
 published: 2026-04-18
 tags:
-  - 效率工具
   - Claudecode
+  - 命令行工具
+  - AI
 category: AIHacks
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260419155321814.webp
 ---
 
 > 换电脑后，你最怕什么？不是装机，而是你和 Claude 聊了半天的代码、需求、方案——全没了。

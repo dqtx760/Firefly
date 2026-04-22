@@ -1,9 +1,12 @@
----
+﻿---
 title: workany：桌面Agent产品
 published: 2026-02-04
-tags: []
+tags:
+  - Agent
+  - AI
 category: AIHacks
 draft: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/workany_coding_1280x720.webp
 ---
 
 **WorkAny** 是一款基于 Claude 3.5 Sonnet 模型构建的智能工作助手平台。它不仅能与你自然对话，更拥有强大的文件处理、代码编写、文档创建等实用能力。简单来说，它就像给 AI 装上了"双手"——不仅能思考，还能真正帮你**动手完成工作**。

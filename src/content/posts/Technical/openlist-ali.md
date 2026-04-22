@@ -1,10 +1,12 @@
----
+﻿---
 title: OpenList挂载阿里云盘
 published: 2025-10-22T14:20:00.000Z
-tags: []
+tags:
+  - openlsit
 category: Technical
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20251013222806220.webp
 ---
 
 很多人使用 OpenList 搭建网盘聚合时，希望接入阿里云盘，实现文件集中管理与在线播放。本文将手把手教你如何在 OpenList 中添加阿里云盘存储，从获取 Token 到配置参数，简单几步即可完成接入。

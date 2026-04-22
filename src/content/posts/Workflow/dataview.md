@@ -1,10 +1,12 @@
----
+﻿---
 title: Dataview与Templater插件联动示例
 published: 2026-04-12
-tags: []
-category: Software
+tags:
+  - Obsidian插件
+category: Workflow
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260412210757952.webp
 ---
 
 很多 Obsidian 深度用户在积累了上千篇笔记后，都会面临一个共同的痛点：**存入容易，提取困难。** 知识库逐渐变成了一个只进不出的“数据黑洞”。

@@ -1,10 +1,11 @@
----
+﻿---
 title: 个人说明书
 published: 2024-11-30T16:45:00.000Z
 tags: []
 category: Software 
 draft: false
 pinned: true
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260208022750247.webp
 ---
 
 科技内容创作者，专注人工智能，web3领域，社交媒体每天内容输出分发

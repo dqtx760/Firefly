@@ -1,10 +1,12 @@
----
+﻿---
 title: Agent Skills 管理方案
 published: 2026-04-20
-tags: []
+tags:
+  - AI
 category: AIHacks
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/hub.webp
 ---
 
 相信有很多小伙伴跟我一样，手头同时在用好几个 AI Agent——Claude Code、Codex、Cursor、Windsurf……每个 Agent 都有自己的 Skill 目录，装了一堆技能包。

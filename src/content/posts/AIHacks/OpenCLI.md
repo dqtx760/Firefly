@@ -1,10 +1,12 @@
----
+﻿---
 title: OpenCLI安装与配置全攻略
 published: 2026-03-24
-tags: []
+tags:
+  - cli
 category: AIHacks
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Generated_Image_ioq7uwioq7uwioq7.webp
 ---
 
 在AI Agent时代，大模型最缺的是“操作能力”。[OpenCLI](https://github.com/jackwener/opencli) 巧妙地解决了这个问题：它通过复用你本地 Chrome 的登录状态，让 AI 能够像调用 API 一样在终端直接查热搜、发动态或抓取数据。

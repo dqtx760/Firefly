@@ -1,10 +1,13 @@
----
+﻿---
 title: GLM4.7/MiniMax-M2.1免费渠道
 published: 2026-02-13
-tags: []
+tags:
+  - API
+  - Claudecode
 category: AIHacks
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260213210334278.webp
 ---
 
 整理了几个免费使用GLM-4.7与MiniMax M2.1大模型的区域免费渠道，2个可以提供免费的API,一个在线平台，还是两个客户端中可以免费用这两个模型。

@@ -1,10 +1,12 @@
----
+﻿---
 title: PassWall2双栈无忧配置指南
 published: 2026-03-17
-tags: []
+tags:
+  - Openwrt
 category: Technical
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Generated_Image_fehtoyfehtoyfeht.webp
 ---
 
 

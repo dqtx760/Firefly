@@ -2,10 +2,10 @@
 title: Windows7终极版
 published: 2026-02-03T21:22:43.322Z
 description: 对很多人来说，Windows 7 是刻在电脑里的青春 —— 当年抱着主机装系统、通宵跑老游戏的日子，都和这个系统绑在一起。但从 2020 年官方停更，到 202...
-tags: ["效率工具","Windows"]
+tags:
+  - Windows
 draft: false
 lang: zh_CN
-
 image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260201221806923.webp
 category: Software
 ---

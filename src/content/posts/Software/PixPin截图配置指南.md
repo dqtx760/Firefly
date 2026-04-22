@@ -2,10 +2,11 @@
 title: PixPin截图配置指南
 published: 2025-01-15T14:30:00.000Z
 description: 使用PixPin有段时间了，集截图、长截图、贴图、标注、OCR 识别、屏幕录制等功能都有，但是我发现这个软件的快捷键/动作才是王炸，比如我自己配置的 ，截图并复...
-tags: ["效率工具"]
+tags:
+  - 效率工具
+  - 软件推荐
 draft: false
 lang: zh_CN
-
 image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260129212236710.webp
 category: Software
 ---

@@ -1,25 +1,21 @@
 ---
 /**
  * 图片装饰组件
- * 显示装饰性图片
+ * 显示装饰性图片，hover时切换
  */
 interface Props {
     src?: string;
-    title?: string;
+    src2?: string;
 }
 
-const { src = "/gzh-qrcode.webp", title = "微信公众号" } = Astro.props;
+const src1 = "https://gitee.com/da-qiang-classmate/typora/raw/master/image/weix1.webp";
+const src2 = "https://gitee.com/da-qiang-classmate/typora/raw/master/image/weix2.webp";
 ---
 
 <div class="image-decoration-wrapper">
-    <div class="image-decoration-header">
-        <div class="decoration-line"></div>
-        <span class="hacker-icon gradient-icon">⚡</span>
-        <span class="decoration-title gradient-title">{title}</span>
-        <div class="decoration-line"></div>
-    </div>
     <div class="image-decoration">
-        <img src={src} alt="装饰图片" class="image-decoration-img" />
+        <img src={src1} alt="装饰图片" class="image-decoration-img img-primary" />
+        <img src={src2} alt="装饰图片" class="image-decoration-img img-hover" />
     </div>
 </div>
 
@@ -84,28 +80,34 @@ const { src = "/gzh-qrcode.webp", title = "微信公众号" } = Astro.props;
     }
 
     .image-decoration {
+        position: relative;
         width: 100%;
-        padding: 4px;
         overflow: hidden;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-        background: oklch(0.98 0.005 var(--hue));
-        border: 1px solid rgb(0, 0, 0, 0.05);
-    }
-
-    .dark .image-decoration {
-        background: oklch(0.23 0.015 var(--hue) / 0.75);
-        border: 1px solid rgb(255, 255, 255, 0.1);
+        border-radius: 12px;
     }
 
     .image-decoration-img {
         width: 100%;
         height: auto;
         display: block;
-        transition: transform 0.3s ease;
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    .image-decoration:hover .image-decoration-img {
-        transform: scale(1.02);
+    .img-hover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    .image-decoration:hover .img-primary {
+        opacity: 0;
+        transform: scale(1.05);
+    }
+
+    .image-decoration:hover .img-hover {
+        opacity: 1;
+        transform: scale(1);
     }
 </style>

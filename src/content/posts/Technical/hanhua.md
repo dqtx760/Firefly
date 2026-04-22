@@ -1,10 +1,13 @@
----
+﻿---
 title: 三步搞定软件汉化
 published: 2026-02-12
-tags: []
+tags:
+  - 软件汉化
+  - 技术教程
 category: Technical
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/hanhua.webp
 ---
 
 

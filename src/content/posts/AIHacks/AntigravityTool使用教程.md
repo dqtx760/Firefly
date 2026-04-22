@@ -1,10 +1,12 @@
----
+﻿---
 title: AntigravityTool使用教程
 published: 2025-02-13
-tags: []
+tags:
+  - AI
 category: AIHacks
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20251227230252709.webp
 ---
 
 Antigravity Tool 是一款智能代理项目，用于将Antigravity内的模型转换为不同协议标准 API，支持OpenAI 协议，Anthropic协议，Gemini 协议，本文主要演示供Claude使用。

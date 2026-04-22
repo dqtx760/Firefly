@@ -1,10 +1,12 @@
----
+﻿---
 title: 效率神器！MFCMouseEffect
 published: 2026-03-19
-tags: []
+tags:
+  - 软件推荐
 category: Software
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/shub.webp
 ---
 
 这是一款能灵活自定义鼠标动作、手势映射的跨平台工具

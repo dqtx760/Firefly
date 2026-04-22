@@ -2,12 +2,13 @@
 title: Typora图床完整配置教程
 published: 2025-03-10T16:20:00.000Z
 description: 如果你经常写 Markdown 文档，那么 Typora 是一款非常好用的编辑器。而在图片管理方面，推荐搭配免费的图床工具 PicList，它支持一键上传图片到...
-tags: ["效率工具","Typora"]
+tags:
+  - 技术教程
+  - 工作流
 draft: false
 lang: zh_CN
-
 image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20250823223254969.webp
-category: Software
+category: Workflow
 ---
 
 ## Typora + PicList + Gitee 图床完整配置教程

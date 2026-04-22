@@ -2,12 +2,14 @@
 title: API封装成Skill最佳实践
 published: 2025-11-30
 description: 最近被阿里巴巴通义MAI的Z-Image狠狠圈粉，不仅搭载了高效的 Z-Image-Turbo 模型，更关键的是每天能免费生 2000 张图，不管是生成文章视频...
-tags: ["效率工具","AI","Claude"]
+tags:
+  - 效率工具
+  - Claude
+  - API
 draft: false
 lang: zh_CN
-
 image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260114235919010.webp
-category: AIHacks
+category: Workflow
 ---
 
 最近被阿里巴巴通义MAI的Z-Image狠狠圈粉，不仅搭载了高效的 **Z-Image-Turbo** 模型，更关键的是**每天能免费生 2000 张图**，不管是生成文章视频封面还是异常创作，这个配额都完全够用。

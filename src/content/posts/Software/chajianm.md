@@ -1,10 +1,12 @@
----
+﻿---
 title: 在chrome上编辑本地md拓展
 published: 2026-04-10
-tags: []
+tags:
+  - chrome插件
 category: Software
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260410181036614.webp
 ---
 
 平时用 Markdown 写笔记、存文档，总被两个问题困扰：要么打开笨重的专用编辑器占内存，要么拖进浏览器只能看纯文本乱码；尤其是管理 Obsidian 仓库、本地项目文档时，多文件切换来回找路径，效率大打折扣。

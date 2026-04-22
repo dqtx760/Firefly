@@ -1,10 +1,12 @@
----
+﻿---
 title: Claude code隐藏命令/快捷键
 published: 2026-04-02
-tags: []
+tags:
+  - Claudecode
 category: AIHacks
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/PixPin_2026-04-02_23-31-00.webp
 ---
 
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/PixPin_2026-04-02_23-31-00.webp)

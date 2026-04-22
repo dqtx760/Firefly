@@ -1,10 +1,12 @@
----
+﻿---
 title: 包管理工具UniGetU
 published: 2026-04-18
-tags: []
+tags:
+  - 软件推荐
 category: Software
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260417214231839.webp
 ---
 
 

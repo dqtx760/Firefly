@@ -1,8 +1,11 @@
 ---
 title: GitHub + EdgeOne 搭建个人博客的过程
 published: 2025-02-08
-tags: [博客, Astro, EdgeOne, GitHub, 部署]
-category: Technical
+tags:
+  - 博客
+  - 网站搭建
+  - 经验复盘
+category: Workflow
 draft: false
 image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260206033446484.webp
 ---
