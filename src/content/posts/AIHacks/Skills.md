@@ -6,11 +6,13 @@ tags:
 category: AIHacks
 draft: false
 pinned: false
-image: 
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260422191135966.webp
 ---
 
 Claude Skills 作为 AI 助手的功能拓展核心，能精准对接各类场景化需求，让智能协作更高效、更具针对性。以下是安装的16个自用的实用且强大的 Claude Skills。这些Skills覆盖了工作与创作中的关键场景，从基础的笔记优化、项目管理，到高阶的内容生成、设计开发，均能提供专业化支持。
 
+
+![image.png](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260422191135966.webp)
 
 
 ## Skills 目录
