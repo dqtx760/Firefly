@@ -62,6 +62,51 @@
 &lt;li&gt;⛓️ Web3教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867794661334761497#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;🛠️ 技术教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867808112450912266#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>英伟达免费 API 申请流程</title><link>https://dqtx.cc/posts/aihacks/nvidia%E5%85%8D%E8%B4%B9api%E7%9A%84%E7%94%B3%E8%AF%B7%E6%B5%81%E7%A8%8B/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/nvidia%E5%85%8D%E8%B4%B9api%E7%9A%84%E7%94%B3%E8%AF%B7%E6%B5%81%E7%A8%8B/</guid><pubDate>Thu, 23 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;英伟达免费 API 一年（12个月）使用权，可以直接调用 GLM 5.1、Gemma 4、MiniMax 等 193 款主流大模型，这羊毛必须薅！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260423232339562.webp&quot; alt=&quot;yingwen&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;01.访问官方网站&lt;/h2&gt;
+&lt;p&gt;打开浏览器，访问 &lt;a href=&quot;https://build.nvidia.com/&quot;&gt;https://build.nvidia.com/&lt;/a&gt;，点击注册账号。&lt;/p&gt;
+&lt;h2&gt;02.账号登录与验证&lt;/h2&gt;
+&lt;p&gt;按照页面提示完成注册。验证环节支持 &lt;strong&gt;+86 手机号&lt;/strong&gt; 接收验证码，非常方便。&lt;/p&gt;
+&lt;h2&gt;03.创建 API Key&lt;/h2&gt;
+&lt;p&gt;访问 &lt;a href=&quot;https://build.nvidia.com/settings/api-keys&quot;&gt;API Keys 管理页面&lt;/a&gt;，创建新的密钥。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⚠️ &lt;strong&gt;注意&lt;/strong&gt;：Expiration（有效期）请选择 &lt;strong&gt;Never Expire&lt;/strong&gt;（永不过期），避免后续麻烦。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;04：接入 AI 工具&lt;/h2&gt;
+&lt;p&gt;创建好 API Key 后，就可以接入各种 AI 客户端或 Agent 软件了。&lt;/p&gt;
+&lt;h3&gt;客户端推荐&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://cherry-ai.com/&quot;&gt;Cherry Studio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://chatwise.app/&quot;&gt;ChatWise&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Agent 软件&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Qwen Code&lt;/li&gt;
+&lt;li&gt;Claude Code&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;接口配置&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;API Base URL: https://integrate.api.nvidia.com/v1/chat/completions
+
+# 可用模型示例
+- z-ai/glm-4.7
+- z-ai/glm-5.1
+- minimaxai/minimax-m2.7
+- google/gemma-4-27b-it
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⚠️ &lt;strong&gt;热门模型高峰时期使用可能会有卡顿&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;实用建议&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;当成备用/开发测试用&lt;/strong&gt;：写代码、生成长文本、Agent 实验很香。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;错峰使用&lt;/strong&gt;：国内凌晨或上午通常会快很多。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;多备几个模型&lt;/strong&gt;：在客户端里把 GLM + MiniMax + Nemotron 都加进去，哪个快用哪个。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;客户端优化&lt;/strong&gt;：OpenClaw / Cherry Studio / Hermes 等支持自动 fallback 的工具最好，能自动跳过卡住的模型。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;参考资料&lt;/strong&gt;：&lt;a href=&quot;https://mp.weixin.qq.com/s/XWS97jr_PwcbbmKkZVqbyw&quot;&gt;点此查看&lt;/a&gt;&lt;/p&gt;
 </content:encoded></item><item><title>我push博客时泄露了API</title><link>https://dqtx.cc/posts/technical/push/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/push/</guid><pubDate>Tue, 21 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天在推送 &lt;code&gt;fuwari&lt;/code&gt; 博客仓库到 GitHub 时，遭遇了一个意料之外但又在情理之中的拦截。GitHub 直接拒绝了我的推送，提示发现了「Secret（密钥）」泄露。经过排查和修复，两个仓库的 API Token 泄露风险已解除。写下这篇文章，既是复盘，也是给有类似经历的朋友一个参考。
 &lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260421233006929.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;事件回顾&lt;/h2&gt;
@@ -233,7 +278,7 @@ https://v.douyin.com/4K4Njgxq0Oc/&lt;/p&gt;
 https://mp.weixin.qq.com/s/kPjIpHmzciWY8_3ettEVsg&lt;/p&gt;
 &lt;p&gt;→NotionNext帮助手册：
 https://docs.tangly1024.com/about&lt;/p&gt;
-</content:encoded></item><item><title>Agent Skills 管理方案</title><link>https://dqtx.cc/posts/aihacks/agent-skills-hub/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/agent-skills-hub/</guid><pubDate>Mon, 20 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;相信有很多小伙伴跟我一样，手头同时在用好几个 AI Agent——Claude Code、Codex、Cursor、Windsurf……每个 Agent 都有自己的 Skill 目录，装了一堆技能包。&lt;/p&gt;
+</content:encoded></item><item><title>Agent Skills 管理方案</title><link>https://dqtx.cc/posts/aihacks/skills-manage/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/skills-manage/</guid><pubDate>Mon, 20 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;相信有很多小伙伴跟我一样，手头同时在用好几个 AI Agent——Claude Code、Codex、Cursor、Windsurf……每个 Agent 都有自己的 Skill 目录，装了一堆技能包。&lt;/p&gt;
 &lt;p&gt;时间一长就会遇到一个头疼的问题：同一个 Skill 要在不同 Agent 里各装一遍，版本还不一定一致，管理起来非常混乱。从最早手动复制粘贴技能配置，到用脚本管理本地技能库，再到尝试多设备同步——我发现&lt;strong&gt;技能的发现、配置、迁移和同步&lt;/strong&gt;，一直是个很痛的问题。&lt;/p&gt;
 &lt;p&gt;我一直在想，有没有一种方式能像管理代码依赖一样，统一管理所有 Agent 的技能包？同时实现在多设备上能够一键迁移跟同步？最近我在 GitHub 上发现了 几个解决方案，完美解决了我的痛点。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/hub.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -266,6 +311,16 @@ https://docs.tangly1024.com/about&lt;/p&gt;
 &lt;td&gt;&lt;a href=&quot;https://github.com/Backtthefuture/skillmanager&quot;&gt;Backtthefuture/skillmanager&lt;/a&gt;（黄叔）&lt;/td&gt;
 &lt;td&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/xMFZhFC3Dyj7Y4Den7upTQ&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;启动网页&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/iamzhihuix/skills-manage&quot;&gt;iamzhihuix/skills-manage&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://x.com/gkxspace/status/2046938571395760307&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;客户端&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/shanliuling/skills-link&quot;&gt;shanliuling/skills-link&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;命令行&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -444,13 +499,14 @@ bash ~/.claude/uninstall.sh
 &lt;p&gt;换新设备后，同样在备份设置中，直接从云端还原即可。&lt;/p&gt;
 &lt;p&gt;以上就是本期全部内容。如果本教程对你有帮助，欢迎点赞、收藏、转发三连，你的支持是我持续更新的动力。&lt;/p&gt;
 &lt;p&gt;Ps. 想要学习AI、提升数字化效率、打造全自动工作流，也欢迎加入我的专属社群：https://t.zsxq.com/d4zSX&lt;/p&gt;
-</content:encoded></item><item><title>Karpathy Wiki方法论实践</title><link>https://dqtx.cc/posts/workflow/qwen-ob/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/qwen-ob/</guid><pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+</content:encoded></item><item><title>Karpathy Wiki方法论实践</title><link>https://dqtx.cc/posts/workflow/karpathy/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/karpathy/</guid><pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;告别一盘散沙的笔记，AI让知识真正&quot;活&quot;起来。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;你有没有这种感觉？&lt;/p&gt;
 &lt;p&gt;读了一堆文章、看了很多视频，收藏夹里堆满了&quot;以后再看&quot;——然后就没有然后了。&lt;/p&gt;
 &lt;p&gt;知识像沙子一样，抓得越紧，漏得越快。&lt;/p&gt;
 &lt;p&gt;我以前就是这样。直到我发现了 Karpathy 大神提出的 &lt;strong&gt;LLM Wiki&lt;/strong&gt; 概念，我的知识管理系统才算真正&quot;活&quot;了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260423102642174.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;01 先说结论&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;不是 RAG 不好，而是它不够&quot;累加&quot;。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;大多数人对 AI + 知识库的认知是 RAG：&lt;/p&gt;
@@ -865,6 +921,7 @@ qwen --approval-mode yolo
 &lt;li&gt;&lt;code&gt;/bash&lt;/code&gt;：执行终端命令&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;/review&lt;/code&gt;：代码审查&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;/test&lt;/code&gt;：运行测试&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/insight&lt;/code&gt;：从聊天记录中生成个性化&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;五、多子 Agent 并行处理&lt;/h2&gt;
 &lt;p&gt;Qwen Code 支持调用多个**子 Agent（子程序）**并行工作，大幅提升任务处理效率。&lt;/p&gt;
