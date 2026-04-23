@@ -1,4 +1,4 @@
-﻿---
+---
 title: OpenClaw完整安装指南
 published: 2026-02-08
 tags:

@@ -145,7 +145,7 @@ qwen --approval-mode yolo
 - `/bash`：执行终端命令
 - `/review`：代码审查
 - `/test`：运行测试
-
+- `/insight`：从聊天记录中生成个性化
 
 
 ## 五、多子 Agent 并行处理

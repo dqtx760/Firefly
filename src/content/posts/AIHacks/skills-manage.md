@@ -1,4 +1,4 @@
-﻿---
+---
 title: Agent Skills 管理方案
 published: 2026-04-20
 tags:
@@ -27,12 +27,14 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/hub.webp
 
 ## 多个Agent共用一套SKII
 
-| 名称                                                         | 来源说明                                                     | 形式     |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | -------- |
-| ~~[youzaiAGI/agent-skills-hub](https://github.com/youzaiAGI/agent-skills-hub)~~（已删库） | [点此查看](https://mp.weixin.qq.com/s/5deQW5ZnszBgJ4Ji9i6AKA) | 命令行   |
-| [qufei1993/skills-hub](https://github.com/qufei1993/skills-hub) | [点此查看](https://mp.weixin.qq.com/s/u1RCeiYMFItuzIf1g6J_DQ) | 客户端   |
-| [runkids/skillshare](https://github.com/runkids/skillshare)（颜值高） | [点此查看](https://mp.weixin.qq.com/s/aPPIWCKgXmiibU7X1A9OIA) | 启动网页 |
-| [Backtthefuture/skillmanager](https://github.com/Backtthefuture/skillmanager)（黄叔） | [点此查看](https://mp.weixin.qq.com/s/xMFZhFC3Dyj7Y4Den7upTQ) | 启动网页 |
+| 名称                                                                                   | 来源说明                                                      | 形式   |
+| ------------------------------------------------------------------------------------ | --------------------------------------------------------- | ---- |
+| ~~[youzaiAGI/agent-skills-hub](https://github.com/youzaiAGI/agent-skills-hub)~~（已删库） | [点此查看](https://mp.weixin.qq.com/s/5deQW5ZnszBgJ4Ji9i6AKA) | 命令行  |
+| [qufei1993/skills-hub](https://github.com/qufei1993/skills-hub)                      | [点此查看](https://mp.weixin.qq.com/s/u1RCeiYMFItuzIf1g6J_DQ) | 客户端  |
+| [runkids/skillshare](https://github.com/runkids/skillshare)（颜值高）                     | [点此查看](https://mp.weixin.qq.com/s/aPPIWCKgXmiibU7X1A9OIA) | 启动网页 |
+| [Backtthefuture/skillmanager](https://github.com/Backtthefuture/skillmanager)（黄叔）    | [点此查看](https://mp.weixin.qq.com/s/xMFZhFC3Dyj7Y4Den7upTQ) | 启动网页 |
+| [iamzhihuix/skills-manage](https://github.com/iamzhihuix/skills-manage)              | [点此查看](https://x.com/gkxspace/status/2046938571395760307) | 客户端  |
+| [shanliuling/skills-link](https://github.com/shanliuling/skills-link)                |                                                           | 命令行  |
 
 ## 多设备共用skill同步
 

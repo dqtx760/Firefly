@@ -8,7 +8,7 @@ tags:
 category: Workflow
 draft: false
 pinned: false
-image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/01-rag-vs-wiki.webp
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260423102642174.webp
 ---
 
 > 告别一盘散沙的笔记，AI让知识真正"活"起来。
@@ -21,7 +21,7 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/01-rag-vs-wi
 
 我以前就是这样。直到我发现了 Karpathy 大神提出的 **LLM Wiki** 概念，我的知识管理系统才算真正"活"了。
 
-
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260423102642174.webp)
 
 ### 01 先说结论
 
