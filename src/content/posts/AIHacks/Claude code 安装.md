@@ -1,13 +1,62 @@
 ---
-title: Claude code接入国产API
+title: Claude code 安装教程
 published: 2026-04-24
-tags: []
+tags:
+  - Claudecode
 category: AIHacks
 draft: false
-pinned: true
+pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260424220034771.webp
 ---
+这篇文章是我整理的远程安装CC全套SOP文档，今天免费公开分享给大家。不止会手把手教你顺利安装CC，同时还会顺带讲解Obsidian相关配置，全程带大家实操学会 Cloud Code 的完整使用方法，一站式搞定部署与实操，新手也能直接跟着操作，方便大家直接上手使用。
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260424220034771.webp)
 
-## 创建API key
+## 一.安装Claude code
+
+### Node.js([安装包](https://nodejs.org/en/download/))
+```
+winget install OpenJS.NodeJS.LTS
+```
+
+### Git([安装包](https://git-scm.com/install/windows))
+```
+winget install Git.Git
+```
+
+### Claude Code
+```Plain
+npm install -g @anthropic-ai/claude-code
+```
+
+### 启动命令
+```
+Claude
+```
+
+```
+Claude code
+```
+
+## 二.安装Obsidian
+###  [Obsidian安装包]( https://github.com/obsidianmd/obsidian-releases/releases/download/v1.12.7/Obsidian-1.12.7.exe)
+```
+winget install Git.Git
+```
+
+### -拉取仓库模板
+```
+
+```
+
+###  Claudian出现报错
+```
+Claude code我的终端使用正常， 但在Obsidian的插件中Claudian对话异常,帮我排除下原因
+```
+
+
+## 三.配置API
+
+#### 1. 获取API key
 
 | Api供应商                                                         | Key创建入口                                                                               | 使用说明                                                                                                                                                                    |
 | -------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -16,11 +65,15 @@ pinned: true
 | [MiniMax](https://platform.minimaxi.com/subscribe/coding-plan) | [点此获取](https://platform.minimaxi.com/user-center/basic-information/interface-key)     | [点此查看](https://platform.minimaxi.com/docs/guides/text-ai-coding-tools#%E5%9C%A8-claude-code-%E4%B8%AD%E4%BD%BF%E7%94%A8-minimax-m2%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89) |
 | [Kimi K2](https://www.kimi.com/code)                           | 点此获取                                                                                  | [点此查看](https://www.kimi.com/code/docs/third-party-tools/other-coding-agents.html)                                                                                       |
 | [OpenRouter](https://openrouter.ai/)                           | [点此获取](https://openrouter.ai/workspaces/default/keys)                                 | 点此查看                                                                                                                                                                    |
+#### 2. 配置API
 
-## 配置settings.json
+#### 借助→[CC Switch](https://github.1zyq1.com/farion1231/cc-switch/releases/download/v3.14.1/CC-Switch-v3.14.1-Windows.msi)
+####  手动配置
+```
 ~/.claude/settings.json
+```
 
-### 智谱
+智谱
 ```
 {
   "env": {
@@ -36,7 +89,7 @@ pinned: true
 }
 ```
 
-### 火山
+火山
 ```
 ```JSON
 {
@@ -48,7 +101,7 @@ pinned: true
 }
 ```
 
-## MiniMax
+MiniMax
 ```JSON
 {
   "env": {
@@ -66,7 +119,7 @@ pinned: true
 ```
 
 
-### Kimi K2
+Kimi K2
 
 ```
 $env:ENABLE_TOOL_SEARCH="false"
@@ -74,7 +127,7 @@ $env:ANTHROPIC_BASE_URL="https://api.kimi.com/coding/"
 $env:ANTHROPIC_API_KEY="你的API Key"
 ```
 
-### openrouter
+openrouter
 
 ```
   
@@ -89,7 +142,20 @@ $env:ANTHROPIC_API_KEY="你的API Key"
   },
 ```
 
-## ~/.claude.json
+## 四.参考资料
+### Claude code命令&快捷键:[点此查看](https://www.dqtx.cc/posts/aihacks/cc/)
+### Agent Skills 管理方案:[点此查看](https://www.dqtx.cc/posts/aihacks/skills-manage/)
+### Claude code skill推荐:[点此查看](https://www.notion.so/skill-347351994e408091a13be04d19c62d1e)
+### Claude code MCP:点此查看
+### 有些有用的cli工具:点此查看
+
+
+
+## 五.常见问题
+
+### ~/.claude.json
 ```
   "hasCompletedOnboarding": true
 ```
+
+### 启动需要信任该文件

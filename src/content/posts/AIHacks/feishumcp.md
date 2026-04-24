@@ -1,4 +1,4 @@
-﻿---
+---
 title: Claude配置飞书MCP教程
 published: 2026-03-06
 tags:

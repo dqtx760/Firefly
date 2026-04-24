@@ -1,4 +1,4 @@
-﻿---
+---
 title: Claude code隐藏命令/快捷键
 published: 2026-04-02
 tags:

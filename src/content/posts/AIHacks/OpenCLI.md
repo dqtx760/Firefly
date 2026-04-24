@@ -1,4 +1,4 @@
-﻿---
+---
 title: OpenCLI安装与配置全攻略
 published: 2026-03-24
 tags:
