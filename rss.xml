@@ -1,4 +1,102 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Derek Zhao Blog</title><description>技术分享与实践</description><link>https://dqtx.cc/</link><language>zh_CN</language><item><title>个人说明书</title><link>https://dqtx.cc/posts/software/jiaqun/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/jiaqun/</guid><pubDate>Sat, 30 Nov 2024 16:45:00 GMT</pubDate><content:encoded>&lt;p&gt;科技内容创作者，专注人工智能，web3领域，社交媒体每天内容输出分发&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Derek Zhao Blog</title><description>技术分享与实践</description><link>https://dqtx.cc/</link><language>zh_CN</language><item><title>Claude code接入国产API</title><link>https://dqtx.cc/posts/aihacks/claude-code-%E6%8E%A5%E5%85%A5api/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/claude-code-%E6%8E%A5%E5%85%A5api/</guid><pubDate>Fri, 24 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;创建API key&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Api供应商&lt;/th&gt;
+&lt;th&gt;Key创建入口&lt;/th&gt;
+&lt;th&gt;使用说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://www.bigmodel.cn/glm-coding?ic=PUCQNADSPM&quot;&gt;智谱&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://bigmodel.cn/usercenter/proj-mgmt/apikeys&quot;&gt;点此获取&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://docs.bigmodel.cn/cn/guide/develop/claude&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://volcengine.com/L/HKZkyHHHJ0k/&quot;&gt;火山&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://console.volcengine.com/ark/region:ark+cn-beijing/apikey?apikey=%7B%7D&quot;&gt;点此获取&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://www.volcengine.com/docs/82379/1928261?lang=zh&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://platform.minimaxi.com/subscribe/coding-plan&quot;&gt;MiniMax&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://platform.minimaxi.com/user-center/basic-information/interface-key&quot;&gt;点此获取&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://platform.minimaxi.com/docs/guides/text-ai-coding-tools#%E5%9C%A8-claude-code-%E4%B8%AD%E4%BD%BF%E7%94%A8-minimax-m2%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://www.kimi.com/code&quot;&gt;Kimi K2&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;点此获取&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://www.kimi.com/code/docs/third-party-tools/other-coding-agents.html&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://openrouter.ai/&quot;&gt;OpenRouter&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://openrouter.ai/workspaces/default/keys&quot;&gt;点此获取&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;点此查看&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;配置settings.json&lt;/h2&gt;
+&lt;p&gt;~/.claude/settings.json&lt;/p&gt;
+&lt;h3&gt;智谱&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;{
+  &quot;env&quot;: {
+    &quot;ANTHROPIC_AUTH_TOKEN&quot;: &quot;yourkey here&quot;,
+    &quot;API_TIMEOUT_MS&quot;: &quot;3000000&quot;,
+    &quot;ANTHROPIC_BASE_URL&quot;: &quot;https://open.bigmodel.cn/api/anthropic&quot;,
+    &quot;MCP_TOOL_TIMEOUT&quot;: &quot;30000&quot;
+  },
+  &quot;permissions&quot;: {
+    &quot;defaultMode&quot;: &quot;bypassPermissions&quot;
+  },
+  &quot;alwaysThinkingEnabled&quot;: false
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;火山&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;```JSON
+{
+    &quot;env&quot;: {
+        &quot;ANTHROPIC_AUTH_TOKEN&quot;: &quot;&amp;lt;ARK_API_KEY&amp;gt;&quot;,
+        &quot;ANTHROPIC_BASE_URL&quot;: &quot;https://ark.cn-beijing.volces.com/api/coding&quot;,
+        &quot;ANTHROPIC_MODEL&quot;: &quot;ark-code-latest&quot;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;MiniMax&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;{
+  &quot;env&quot;: {
+    &quot;ANTHROPIC_BASE_URL&quot;: &quot;https://api.minimaxi.com/anthropic&quot;,
+    &quot;ANTHROPIC_AUTH_TOKEN&quot;: &quot;&quot;,
+    &quot;API_TIMEOUT_MS&quot;: &quot;3000000&quot;,
+    &quot;CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC&quot;: 1,
+    &quot;ANTHROPIC_MODEL&quot;: &quot;MiniMax-M2.7&quot;,
+    &quot;ANTHROPIC_DEFAULT_SONNET_MODEL&quot;: &quot;MiniMax-M2.7&quot;,
+    &quot;ANTHROPIC_DEFAULT_OPUS_MODEL&quot;: &quot;MiniMax-M2.7&quot;,
+    &quot;ANTHROPIC_DEFAULT_HAIKU_MODEL&quot;: &quot;MiniMax-M2.7&quot;
+  },
+  &quot;includeCoAuthoredBy&quot;: false
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Kimi K2&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;$env:ENABLE_TOOL_SEARCH=&quot;false&quot;
+$env:ANTHROPIC_BASE_URL=&quot;https://api.kimi.com/coding/&quot;
+$env:ANTHROPIC_API_KEY=&quot;你的API Key&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;openrouter&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;  
+&quot;env&quot;: {
+    &quot;ANTHROPIC_BASE_URL&quot;: &quot;https://openrouter.ai/api&quot;,
+    &quot;ANTHROPIC_AUTH_TOKEN&quot;: &quot;sk-or-v1-xxxxx&quot;,
+    &quot;ANTHROPIC_API_KEY&quot;: &quot;&quot;,
+    &quot;ANTHROPIC_DEFAULT_OPUS_MODEL&quot;: &quot;openrouter/free&quot;,
+    &quot;ANTHROPIC_DEFAULT_SONNET_MODEL&quot;: &quot;openrouter/free&quot;,
+    &quot;ANTHROPIC_DEFAULT_HAIKU_MODEL&quot;: &quot;openrouter/free&quot;,
+    &quot;CLAUDE_CODE_SUBAGENT_MODEL&quot;: &quot;openrouter/free&quot;
+  },
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;~/.claude.json&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;  &quot;hasCompletedOnboarding&quot;: true
+&lt;/code&gt;&lt;/pre&gt;
+</content:encoded></item><item><title>个人说明书</title><link>https://dqtx.cc/posts/software/jiaqun/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/jiaqun/</guid><pubDate>Sat, 30 Nov 2024 16:45:00 GMT</pubDate><content:encoded>&lt;p&gt;科技内容创作者，专注人工智能，web3领域，社交媒体每天内容输出分发&lt;/p&gt;
 &lt;p&gt;有几个社区，微信群，知识星球，迅雷群，TG 群，Discord 群。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260208022750247.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;我的网站↓&lt;/h2&gt;
@@ -278,6 +376,7 @@ MODEL=&quot;nvidia_nim/moonshotai/kimi-k2-thinking&quot;  # Kimi K2
 &lt;h2&gt;参考资料&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/A-FwkXui7Wby2zIjAw4sJg&quot;&gt;NVIDIA免费API的申请流程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/WjG8-UV8sGBCR26_MFgzTg&quot;&gt;零成本接管 Nvidia 算力的本地部署方案&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </content:encoded></item><item><title>英伟达免费 API 申请流程</title><link>https://dqtx.cc/posts/aihacks/nvidia%E5%85%8D%E8%B4%B9api%E7%9A%84%E7%94%B3%E8%AF%B7%E6%B5%81%E7%A8%8B/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/nvidia%E5%85%8D%E8%B4%B9api%E7%9A%84%E7%94%B3%E8%AF%B7%E6%B5%81%E7%A8%8B/</guid><pubDate>Thu, 23 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;英伟达免费 API 一年（12个月）使用权，可以直接调用 GLM 5.1、Gemma 4、MiniMax 等 193 款主流大模型，这羊毛必须薅！&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260423232339562.webp&quot; alt=&quot;yingwen&quot; /&gt;&lt;/p&gt;
