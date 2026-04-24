@@ -77,17 +77,17 @@
 &lt;h3&gt;启动命令&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;Claude
 &lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;Claude code
+&lt;pre&gt;&lt;code&gt;claude --dangerously-skip-permissions
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;二.安装Obsidian&lt;/h2&gt;
 &lt;h3&gt;&lt;a href=&quot;https://github.com/obsidianmd/obsidian-releases/releases/download/v1.12.7/Obsidian-1.12.7.exe&quot;&gt;Obsidian安装包&lt;/a&gt;&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;winget install Git.Git
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;-拉取仓库模板&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;
+&lt;h3&gt;拉取仓库模板&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;get clone https://github.com/dqtx760/obsidian-vault-template
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;Claudian出现报错&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;Claude code我的终端使用正常， 但在Obsidian的插件中Claudian对话异常,帮我排除下原因
+&lt;pre&gt;&lt;code&gt;Claude code在终端使用正常， 但在Obsidian的插件中Claudian对话异常,帮我排除下原因
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;三.配置API&lt;/h2&gt;
 &lt;h4&gt;1. 获取API key&lt;/h4&gt;
@@ -199,7 +199,7 @@ $env:ANTHROPIC_API_KEY=&quot;你的API Key&quot;
 &lt;pre&gt;&lt;code&gt;  &quot;hasCompletedOnboarding&quot;: true
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;启动需要信任该文件&lt;/h3&gt;
-</content:encoded></item><item><title>免费使用 Claude Code 新思路 - free-claude-code 代理使用指南</title><link>https://dqtx.cc/posts/aihacks/free-claude-code%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/free-claude-code%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</guid><pubDate>Fri, 24 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;如果你正在寻找免费使用 Claude Code 的方法，那么 &lt;strong&gt;free-claude-code&lt;/strong&gt; 这个开源项目绝对值得关注。它能让 Claude Code 完美对接 NVIDIA NIM、OpenRouter、DeepSeek 等多种免费或低成本的大模型服务，同时保留 Claude Code 原生的工程能力。&lt;/p&gt;
+</content:encoded></item><item><title>free-claude-code 代理使用指南</title><link>https://dqtx.cc/posts/aihacks/free-claude-code%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/free-claude-code%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</guid><pubDate>Fri, 24 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;如果你正在寻找免费使用 Claude Code 的方法，那么 &lt;strong&gt;free-claude-code&lt;/strong&gt; 这个开源项目绝对值得关注。它能让 Claude Code 完美对接 NVIDIA NIM、OpenRouter、DeepSeek 等多种免费或低成本的大模型服务，同时保留 Claude Code 原生的工程能力。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260424141510353.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;为什么选择 free-claude-code？&lt;/h2&gt;
 &lt;p&gt;作为 Claude Code 用户，我们都知道它强大的工程能力：上下文管理、记忆系统、Skill 封装、工具调用、Subagent 控制等。但官方 API 价格不菲，国内使用还有各种限制。&lt;/p&gt;
@@ -6952,6 +6952,146 @@ function extractFirstImageIgnoreFrontmatter(content) {
 备选方案：  
 - %windir%\Resources\
 &lt;/code&gt;&lt;/pre&gt;
+</content:encoded></item><item><title>2026 必装10个高实用MCP清单</title><link>https://dqtx.cc/posts/xenia/2026-%E5%BF%85%E8%A3%8510%E4%B8%AA%E9%AB%98%E5%AE%9E%E7%94%A8mcp%E6%B8%85%E5%8D%95/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/2026-%E5%BF%85%E8%A3%8510%E4%B8%AA%E9%AB%98%E5%AE%9E%E7%94%A8mcp%E6%B8%85%E5%8D%95/</guid><pubDate>Thu, 24 Apr 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;随着 MCP（Model Context Protocol）生态快速普及，AI 工具不再局限于纯文本对话。&lt;/p&gt;
+&lt;p&gt;通过挂载各类 MCP 服务，可让 Claude、Cursor、TRAE 等工具打通本地文件、代码仓库、浏览器、实时搜索、数据库、设计稿等全链路能力，彻底告别手动复制粘贴、信息滞后、答案幻觉等痛点。&lt;/p&gt;
+&lt;p&gt;下面整理社区装机率最高、实用性拉满的10个必装MCP，兼顾日常开发、内容创作、数据处理、自动化办公等多元需求，附核心作用、安装价值与完整可直接复制的配置代码，一键落地部署。&lt;/p&gt;
+&lt;h2&gt;一、十大核心MCP详细介绍&lt;/h2&gt;
+&lt;h3&gt;1. Filesystem MCP（官方）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;作用：读写本地文件、搜索、创建/移动目录、执行命令。&lt;/li&gt;
+&lt;li&gt;必装理由：所有本地工作流的基础，安全可控（可按目录授权）。&lt;/li&gt;
+&lt;li&gt;项目地址：
+https://github.com/modelcontextprotocol/servers&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;2. GitHub MCP Server（官方）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;作用：读代码库、管理 PR/Issue、审查代码、搜索仓库、跑 Actions。&lt;/li&gt;
+&lt;li&gt;必装理由：AI 真正理解你的代码库，无需手动复制文件到对话。&lt;/li&gt;
+&lt;li&gt;项目地址：
+https://github.com/github/github-mcp-server&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;3. Context7 MCP&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;作用：实时拉取最新官方文档、API 参考、代码示例，注入上下文。&lt;/li&gt;
+&lt;li&gt;必装理由：根治AI瞎编API问题，适配React、Next、Python、Go等主流技术栈。&lt;/li&gt;
+&lt;li&gt;项目地址：
+https://github.com/upstash/context7&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;4. Playwright MCP（浏览器自动化）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;作用：操控浏览器、点击填表、截图、爬虫、前端测试、JS渲染页面抓取。&lt;/li&gt;
+&lt;li&gt;必装理由：AI可模拟真人上网，完成调研、测试、数据采集等自动化工作。&lt;/li&gt;
+&lt;li&gt;项目地址：
+https://github.com/microsoft/playwright-mcp&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;5. Firecrawl MCP（网页抓取）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;作用：任意网站转干净Markdown结构化数据，去广告、抗反爬、支持JS渲染。&lt;/li&gt;
+&lt;li&gt;必装理由：资料研究、内容提取、私有知识库构建的核心工具。&lt;/li&gt;
+&lt;li&gt;项目地址：
+https://github.com/mendableai/firecrawl&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;6. Tavily MCP（AI原生搜索）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;作用：专为大模型设计的搜索引擎，返回结构化、LLM友好结果。&lt;/li&gt;
+&lt;li&gt;必装理由：无广告、结果精简，解决大模型知识库滞后问题，适合实时调研。&lt;/li&gt;
+&lt;li&gt;项目地址:
+https://github.com/tavily-ai/tavily-mcp&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;7. PostgreSQL MCP（数据库）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;作用：安全连接PostgreSQL，执行查询、查看表结构、生成报表、数据分析。&lt;/li&gt;
+&lt;li&gt;必装理由：后端开发与数据分析刚需，AI直连数据库，简化数据排查与统计。&lt;/li&gt;
+&lt;li&gt;项目地址：
+https://github.com/modelcontextprotocol/servers/tree/main/postgres&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;8. Memory Bank（Claude-Mem）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;作用：跨会话永久记忆，留存项目结构、技术栈、使用偏好、历史关键内容。&lt;/li&gt;
+&lt;li&gt;必装理由：解决AI失忆问题，长期项目对话无缝衔接，大幅提升协作效率。&lt;/li&gt;
+&lt;li&gt;项目地址：
+https://github.com/anthropics/claude-mem&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;9. Figma MCP（设计转代码）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;作用：读取Figma设计稿、解析组件样式与布局，快速生成前端代码。&lt;/li&gt;
+&lt;li&gt;必装理由：前端开发神器，打通设计到代码流程，降低UI还原成本。&lt;/li&gt;
+&lt;li&gt;项目地址：
+https://github.com/glips/figma-context-mcp&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;10. Sequential Thinking MCP&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;作用：强制AI分步思考、拆解复杂问题、链式推理，有效减少幻觉。&lt;/li&gt;
+&lt;li&gt;必装理由：架构设计、算法开发、故障排查等复杂场景必备，逻辑更严谨。&lt;/li&gt;
+&lt;li&gt;项目地址：
+https://github.com/modelcontextprotocol/servers/tree/main/sequential-thinking&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;二、完整MCP配置文件&lt;/h2&gt;
+&lt;p&gt;适配 Cursor、Claude 桌面端、TRAE 等客户端，直接写入 mcp.json 即可使用。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{
+  &quot;mcpServers&quot;: {
+    &quot;filesystem&quot;: {
+      &quot;command&quot;: &quot;npx&quot;,
+      &quot;args&quot;: [&quot;-y&quot;, &quot;@modelcontextprotocol/server-filesystem&quot;],
+      &quot;env&quot;: {}
+    },
+    &quot;github&quot;: {
+      &quot;command&quot;: &quot;npx&quot;,
+      &quot;args&quot;: [&quot;-y&quot;, &quot;@modelcontextprotocol/server-github&quot;],
+      &quot;env&quot;: {
+        &quot;GITHUB_TOKEN&quot;: &quot;你的gh token&quot;
+      }
+    },
+    &quot;context7&quot;: {
+      &quot;command&quot;: &quot;npx&quot;,
+      &quot;args&quot;: [&quot;-y&quot;, &quot;context7-mcp&quot;],
+      &quot;env&quot;: {}
+    },
+    &quot;playwright&quot;: {
+      &quot;command&quot;: &quot;npx&quot;,
+      &quot;args&quot;: [&quot;-y&quot;, &quot;@playwright/mcp&quot;],
+      &quot;env&quot;: {}
+    },
+    &quot;firecrawl&quot;: {
+      &quot;command&quot;: &quot;npx&quot;,
+      &quot;args&quot;: [&quot;-y&quot;, &quot;firecrawl-mcp&quot;],
+      &quot;env&quot;: {
+        &quot;FIRECRAWL_API_KEY&quot;: &quot;你的key&quot;
+      }
+    },
+    &quot;tavily&quot;: {
+      &quot;command&quot;: &quot;npx&quot;,
+      &quot;args&quot;: [&quot;-y&quot;, &quot;tavily-mcp&quot;],
+      &quot;env&quot;: {
+        &quot;TAVILY_API_KEY&quot;: &quot;你的key&quot;
+      }
+    },
+    &quot;postgres&quot;: {
+      &quot;command&quot;: &quot;npx&quot;,
+      &quot;args&quot;: [&quot;-y&quot;, &quot;@modelcontextprotocol/server-postgres&quot;],
+      &quot;env&quot;: {
+        &quot;DATABASE_URL&quot;: &quot;postgresql://user:pwd@localhost:5432/db&quot;
+      }
+    },
+    &quot;memory-bank&quot;: {
+      &quot;command&quot;: &quot;npx&quot;,
+      &quot;args&quot;: [&quot;-y&quot;, &quot;@anthropics/mcp-memory-bank&quot;],
+      &quot;env&quot;: {}
+    },
+    &quot;figma&quot;: {
+      &quot;command&quot;: &quot;npx&quot;,
+      &quot;args&quot;: [&quot;-y&quot;, &quot;figma-mcp-server&quot;],
+      &quot;env&quot;: {
+        &quot;FIGMA_ACCESS_TOKEN&quot;: &quot;你的key&quot;
+      }
+    },
+    &quot;sequential-thinking&quot;: {
+      &quot;command&quot;: &quot;npx&quot;,
+      &quot;args&quot;: [&quot;-y&quot;, &quot;@modelcontextprotocol/server-sequential-thinking&quot;],
+      &quot;env&quot;: {}
+    }
+  }
+}&lt;/code&gt;&lt;/pre&gt;
 </content:encoded></item><item><title>Typora快捷键</title><link>https://dqtx.cc/posts/xenia/typora%E5%BF%AB%E6%8D%B7%E9%94%AE/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/typora%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid><description>--- YAML Front Matter：一种在文本文件（常见于 Markdown、HTML 等）开头添加的元数据格式，核心用于存储文件的额外信息（如标题、日...</description><pubDate>Sat, 05 Apr 2025 11:45:00 GMT</pubDate><content:encoded>&lt;h2&gt;Typora快捷键&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
