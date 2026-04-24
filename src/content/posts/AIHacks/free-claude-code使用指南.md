@@ -1,5 +1,5 @@
 ---
-title: 免费使用 Claude Code 新思路 - free-claude-code 代理使用指南
+title: free-claude-code 代理使用指南
 published: 2026-04-24
 tags:
   - NVIDIA

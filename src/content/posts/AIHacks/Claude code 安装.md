@@ -34,7 +34,7 @@ Claude
 ```
 
 ```
-Claude code
+claude --dangerously-skip-permissions
 ```
 
 ## 二.安装Obsidian
@@ -43,14 +43,14 @@ Claude code
 winget install Git.Git
 ```
 
-### -拉取仓库模板
+### 拉取仓库模板
 ```
-
+get clone https://github.com/dqtx760/obsidian-vault-template
 ```
 
 ###  Claudian出现报错
 ```
-Claude code我的终端使用正常， 但在Obsidian的插件中Claudian对话异常,帮我排除下原因
+Claude code在终端使用正常， 但在Obsidian的插件中Claudian对话异常,帮我排除下原因
 ```
 
 
