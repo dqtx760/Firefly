@@ -1,102 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Derek Zhao Blog</title><description>技术分享与实践</description><link>https://dqtx.cc/</link><language>zh_CN</language><item><title>Claude code接入国产API</title><link>https://dqtx.cc/posts/aihacks/claude-code-%E6%8E%A5%E5%85%A5api/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/claude-code-%E6%8E%A5%E5%85%A5api/</guid><pubDate>Fri, 24 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;创建API key&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Api供应商&lt;/th&gt;
-&lt;th&gt;Key创建入口&lt;/th&gt;
-&lt;th&gt;使用说明&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&quot;https://www.bigmodel.cn/glm-coding?ic=PUCQNADSPM&quot;&gt;智谱&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&quot;https://bigmodel.cn/usercenter/proj-mgmt/apikeys&quot;&gt;点此获取&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&quot;https://docs.bigmodel.cn/cn/guide/develop/claude&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&quot;https://volcengine.com/L/HKZkyHHHJ0k/&quot;&gt;火山&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&quot;https://console.volcengine.com/ark/region:ark+cn-beijing/apikey?apikey=%7B%7D&quot;&gt;点此获取&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&quot;https://www.volcengine.com/docs/82379/1928261?lang=zh&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&quot;https://platform.minimaxi.com/subscribe/coding-plan&quot;&gt;MiniMax&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&quot;https://platform.minimaxi.com/user-center/basic-information/interface-key&quot;&gt;点此获取&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&quot;https://platform.minimaxi.com/docs/guides/text-ai-coding-tools#%E5%9C%A8-claude-code-%E4%B8%AD%E4%BD%BF%E7%94%A8-minimax-m2%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&quot;https://www.kimi.com/code&quot;&gt;Kimi K2&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;点此获取&lt;/td&gt;
-&lt;td&gt;&lt;a href=&quot;https://www.kimi.com/code/docs/third-party-tools/other-coding-agents.html&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&quot;https://openrouter.ai/&quot;&gt;OpenRouter&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&quot;https://openrouter.ai/workspaces/default/keys&quot;&gt;点此获取&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;点此查看&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2&gt;配置settings.json&lt;/h2&gt;
-&lt;p&gt;~/.claude/settings.json&lt;/p&gt;
-&lt;h3&gt;智谱&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;{
-  &quot;env&quot;: {
-    &quot;ANTHROPIC_AUTH_TOKEN&quot;: &quot;yourkey here&quot;,
-    &quot;API_TIMEOUT_MS&quot;: &quot;3000000&quot;,
-    &quot;ANTHROPIC_BASE_URL&quot;: &quot;https://open.bigmodel.cn/api/anthropic&quot;,
-    &quot;MCP_TOOL_TIMEOUT&quot;: &quot;30000&quot;
-  },
-  &quot;permissions&quot;: {
-    &quot;defaultMode&quot;: &quot;bypassPermissions&quot;
-  },
-  &quot;alwaysThinkingEnabled&quot;: false
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;火山&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;```JSON
-{
-    &quot;env&quot;: {
-        &quot;ANTHROPIC_AUTH_TOKEN&quot;: &quot;&amp;lt;ARK_API_KEY&amp;gt;&quot;,
-        &quot;ANTHROPIC_BASE_URL&quot;: &quot;https://ark.cn-beijing.volces.com/api/coding&quot;,
-        &quot;ANTHROPIC_MODEL&quot;: &quot;ark-code-latest&quot;
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;MiniMax&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;{
-  &quot;env&quot;: {
-    &quot;ANTHROPIC_BASE_URL&quot;: &quot;https://api.minimaxi.com/anthropic&quot;,
-    &quot;ANTHROPIC_AUTH_TOKEN&quot;: &quot;&quot;,
-    &quot;API_TIMEOUT_MS&quot;: &quot;3000000&quot;,
-    &quot;CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC&quot;: 1,
-    &quot;ANTHROPIC_MODEL&quot;: &quot;MiniMax-M2.7&quot;,
-    &quot;ANTHROPIC_DEFAULT_SONNET_MODEL&quot;: &quot;MiniMax-M2.7&quot;,
-    &quot;ANTHROPIC_DEFAULT_OPUS_MODEL&quot;: &quot;MiniMax-M2.7&quot;,
-    &quot;ANTHROPIC_DEFAULT_HAIKU_MODEL&quot;: &quot;MiniMax-M2.7&quot;
-  },
-  &quot;includeCoAuthoredBy&quot;: false
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;Kimi K2&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;$env:ENABLE_TOOL_SEARCH=&quot;false&quot;
-$env:ANTHROPIC_BASE_URL=&quot;https://api.kimi.com/coding/&quot;
-$env:ANTHROPIC_API_KEY=&quot;你的API Key&quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;openrouter&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;  
-&quot;env&quot;: {
-    &quot;ANTHROPIC_BASE_URL&quot;: &quot;https://openrouter.ai/api&quot;,
-    &quot;ANTHROPIC_AUTH_TOKEN&quot;: &quot;sk-or-v1-xxxxx&quot;,
-    &quot;ANTHROPIC_API_KEY&quot;: &quot;&quot;,
-    &quot;ANTHROPIC_DEFAULT_OPUS_MODEL&quot;: &quot;openrouter/free&quot;,
-    &quot;ANTHROPIC_DEFAULT_SONNET_MODEL&quot;: &quot;openrouter/free&quot;,
-    &quot;ANTHROPIC_DEFAULT_HAIKU_MODEL&quot;: &quot;openrouter/free&quot;,
-    &quot;CLAUDE_CODE_SUBAGENT_MODEL&quot;: &quot;openrouter/free&quot;
-  },
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;~/.claude.json&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;  &quot;hasCompletedOnboarding&quot;: true
-&lt;/code&gt;&lt;/pre&gt;
-</content:encoded></item><item><title>个人说明书</title><link>https://dqtx.cc/posts/software/jiaqun/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/jiaqun/</guid><pubDate>Sat, 30 Nov 2024 16:45:00 GMT</pubDate><content:encoded>&lt;p&gt;科技内容创作者，专注人工智能，web3领域，社交媒体每天内容输出分发&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Derek Zhao Blog</title><description>技术分享与实践</description><link>https://dqtx.cc/</link><language>zh_CN</language><item><title>个人说明书</title><link>https://dqtx.cc/posts/software/jiaqun/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/jiaqun/</guid><pubDate>Sat, 30 Nov 2024 16:45:00 GMT</pubDate><content:encoded>&lt;p&gt;科技内容创作者，专注人工智能，web3领域，社交媒体每天内容输出分发&lt;/p&gt;
 &lt;p&gt;有几个社区，微信群，知识星球，迅雷群，TG 群，Discord 群。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260208022750247.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;我的网站↓&lt;/h2&gt;
@@ -160,6 +62,143 @@ $env:ANTHROPIC_API_KEY=&quot;你的API Key&quot;
 &lt;li&gt;⛓️ Web3教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867794661334761497#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;🛠️ 技术教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867808112450912266#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>Claude code 安装教程</title><link>https://dqtx.cc/posts/aihacks/claude-code-%E5%AE%89%E8%A3%85/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/claude-code-%E5%AE%89%E8%A3%85/</guid><pubDate>Fri, 24 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这篇文章是我整理的远程安装CC全套SOP文档，今天免费公开分享给大家。不止会手把手教你顺利安装CC，同时还会顺带讲解Obsidian相关配置，全程带大家实操学会 Cloud Code 的完整使用方法，一站式搞定部署与实操，新手也能直接跟着操作，方便大家直接上手使用。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260424220034771.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;一.安装Claude code&lt;/h2&gt;
+&lt;h3&gt;Node.js(&lt;a href=&quot;https://nodejs.org/en/download/&quot;&gt;安装包&lt;/a&gt;)&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;winget install OpenJS.NodeJS.LTS
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Git(&lt;a href=&quot;https://git-scm.com/install/windows&quot;&gt;安装包&lt;/a&gt;)&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;winget install Git.Git
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Claude Code&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;npm install -g @anthropic-ai/claude-code
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;启动命令&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;Claude
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;Claude code
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;二.安装Obsidian&lt;/h2&gt;
+&lt;h3&gt;&lt;a href=&quot;https://github.com/obsidianmd/obsidian-releases/releases/download/v1.12.7/Obsidian-1.12.7.exe&quot;&gt;Obsidian安装包&lt;/a&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;winget install Git.Git
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;-拉取仓库模板&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Claudian出现报错&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;Claude code我的终端使用正常， 但在Obsidian的插件中Claudian对话异常,帮我排除下原因
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;三.配置API&lt;/h2&gt;
+&lt;h4&gt;1. 获取API key&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Api供应商&lt;/th&gt;
+&lt;th&gt;Key创建入口&lt;/th&gt;
+&lt;th&gt;使用说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://www.bigmodel.cn/glm-coding?ic=PUCQNADSPM&quot;&gt;智谱&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://bigmodel.cn/usercenter/proj-mgmt/apikeys&quot;&gt;点此获取&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://docs.bigmodel.cn/cn/guide/develop/claude&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://volcengine.com/L/HKZkyHHHJ0k/&quot;&gt;火山&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://console.volcengine.com/ark/region:ark+cn-beijing/apikey?apikey=%7B%7D&quot;&gt;点此获取&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://www.volcengine.com/docs/82379/1928261?lang=zh&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://platform.minimaxi.com/subscribe/coding-plan&quot;&gt;MiniMax&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://platform.minimaxi.com/user-center/basic-information/interface-key&quot;&gt;点此获取&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://platform.minimaxi.com/docs/guides/text-ai-coding-tools#%E5%9C%A8-claude-code-%E4%B8%AD%E4%BD%BF%E7%94%A8-minimax-m2%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://www.kimi.com/code&quot;&gt;Kimi K2&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;点此获取&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://www.kimi.com/code/docs/third-party-tools/other-coding-agents.html&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://openrouter.ai/&quot;&gt;OpenRouter&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://openrouter.ai/workspaces/default/keys&quot;&gt;点此获取&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;点此查看&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4&gt;2. 配置API&lt;/h4&gt;
+&lt;h4&gt;借助→&lt;a href=&quot;https://github.1zyq1.com/farion1231/cc-switch/releases/download/v3.14.1/CC-Switch-v3.14.1-Windows.msi&quot;&gt;CC Switch&lt;/a&gt;&lt;/h4&gt;
+&lt;h4&gt;手动配置&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;~/.claude/settings.json
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;智谱&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{
+  &quot;env&quot;: {
+    &quot;ANTHROPIC_AUTH_TOKEN&quot;: &quot;yourkey here&quot;,
+    &quot;API_TIMEOUT_MS&quot;: &quot;3000000&quot;,
+    &quot;ANTHROPIC_BASE_URL&quot;: &quot;https://open.bigmodel.cn/api/anthropic&quot;,
+    &quot;MCP_TOOL_TIMEOUT&quot;: &quot;30000&quot;
+  },
+  &quot;permissions&quot;: {
+    &quot;defaultMode&quot;: &quot;bypassPermissions&quot;
+  },
+  &quot;alwaysThinkingEnabled&quot;: false
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;火山&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```JSON
+{
+    &quot;env&quot;: {
+        &quot;ANTHROPIC_AUTH_TOKEN&quot;: &quot;&amp;lt;ARK_API_KEY&amp;gt;&quot;,
+        &quot;ANTHROPIC_BASE_URL&quot;: &quot;https://ark.cn-beijing.volces.com/api/coding&quot;,
+        &quot;ANTHROPIC_MODEL&quot;: &quot;ark-code-latest&quot;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;MiniMax&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{
+  &quot;env&quot;: {
+    &quot;ANTHROPIC_BASE_URL&quot;: &quot;https://api.minimaxi.com/anthropic&quot;,
+    &quot;ANTHROPIC_AUTH_TOKEN&quot;: &quot;&quot;,
+    &quot;API_TIMEOUT_MS&quot;: &quot;3000000&quot;,
+    &quot;CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC&quot;: 1,
+    &quot;ANTHROPIC_MODEL&quot;: &quot;MiniMax-M2.7&quot;,
+    &quot;ANTHROPIC_DEFAULT_SONNET_MODEL&quot;: &quot;MiniMax-M2.7&quot;,
+    &quot;ANTHROPIC_DEFAULT_OPUS_MODEL&quot;: &quot;MiniMax-M2.7&quot;,
+    &quot;ANTHROPIC_DEFAULT_HAIKU_MODEL&quot;: &quot;MiniMax-M2.7&quot;
+  },
+  &quot;includeCoAuthoredBy&quot;: false
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Kimi K2&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$env:ENABLE_TOOL_SEARCH=&quot;false&quot;
+$env:ANTHROPIC_BASE_URL=&quot;https://api.kimi.com/coding/&quot;
+$env:ANTHROPIC_API_KEY=&quot;你的API Key&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;openrouter&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  
+&quot;env&quot;: {
+    &quot;ANTHROPIC_BASE_URL&quot;: &quot;https://openrouter.ai/api&quot;,
+    &quot;ANTHROPIC_AUTH_TOKEN&quot;: &quot;sk-or-v1-xxxxx&quot;,
+    &quot;ANTHROPIC_API_KEY&quot;: &quot;&quot;,
+    &quot;ANTHROPIC_DEFAULT_OPUS_MODEL&quot;: &quot;openrouter/free&quot;,
+    &quot;ANTHROPIC_DEFAULT_SONNET_MODEL&quot;: &quot;openrouter/free&quot;,
+    &quot;ANTHROPIC_DEFAULT_HAIKU_MODEL&quot;: &quot;openrouter/free&quot;,
+    &quot;CLAUDE_CODE_SUBAGENT_MODEL&quot;: &quot;openrouter/free&quot;
+  },
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;四.参考资料&lt;/h2&gt;
+&lt;h3&gt;Claude code命令&amp;amp;快捷键:&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/cc/&quot;&gt;点此查看&lt;/a&gt;&lt;/h3&gt;
+&lt;h3&gt;Agent Skills 管理方案:&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/skills-manage/&quot;&gt;点此查看&lt;/a&gt;&lt;/h3&gt;
+&lt;h3&gt;Claude code skill推荐:&lt;a href=&quot;https://www.notion.so/skill-347351994e408091a13be04d19c62d1e&quot;&gt;点此查看&lt;/a&gt;&lt;/h3&gt;
+&lt;h3&gt;Claude code MCP:点此查看&lt;/h3&gt;
+&lt;h3&gt;有些有用的cli工具:点此查看&lt;/h3&gt;
+&lt;h2&gt;五.常见问题&lt;/h2&gt;
+&lt;h3&gt;~/.claude.json&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;  &quot;hasCompletedOnboarding&quot;: true
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;启动需要信任该文件&lt;/h3&gt;
 </content:encoded></item><item><title>免费使用 Claude Code 新思路 - free-claude-code 代理使用指南</title><link>https://dqtx.cc/posts/aihacks/free-claude-code%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/free-claude-code%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</guid><pubDate>Fri, 24 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;如果你正在寻找免费使用 Claude Code 的方法，那么 &lt;strong&gt;free-claude-code&lt;/strong&gt; 这个开源项目绝对值得关注。它能让 Claude Code 完美对接 NVIDIA NIM、OpenRouter、DeepSeek 等多种免费或低成本的大模型服务，同时保留 Claude Code 原生的工程能力。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260424141510353.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;为什么选择 free-claude-code？&lt;/h2&gt;
@@ -378,6 +417,257 @@ MODEL=&quot;nvidia_nim/moonshotai/kimi-k2-thinking&quot;  # Kimi K2
 &lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/A-FwkXui7Wby2zIjAw4sJg&quot;&gt;NVIDIA免费API的申请流程&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/WjG8-UV8sGBCR26_MFgzTg&quot;&gt;零成本接管 Nvidia 算力的本地部署方案&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>Skills-Link完全使用指南!</title><link>https://dqtx.cc/posts/aihacks/skills-link/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/skills-link/</guid><pubDate>Fri, 24 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你是否也有这样的困扰？在多个 AI 工具里安装了同样的技能（Skills），修改一次要同步多次，麻烦！&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Skills-Link&lt;/strong&gt; 就是来解决这个问题的 —— 让所有 AI 编程工具共享同一个 Skills 文件夹。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260424220829071.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;目录&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;#%E5%89%8D%E7%BD%AE%E6%9D%A1%E4%BB%B6&quot;&gt;前置条件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AE%8C%E6%95%B4%E6%AD%A5%E9%AA%A4&quot;&gt;从零开始完整步骤&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%E4%B8%80%E5%9B%BE%E8%AF%BB%E6%87%82&quot;&gt;一图读懂&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%E6%88%91%E7%9A%84%E5%AE%9E%E9%99%85%E6%83%85%E5%86%B5&quot;&gt;我的实际情况&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%E5%A4%9A%E7%94%B5%E8%84%91%E5%90%8C%E6%AD%A5&quot;&gt;多电脑同步&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98&quot;&gt;常见问题&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;前置条件&lt;/h2&gt;
+&lt;p&gt;在开始之前，你需要准备：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;GitHub 账号&lt;/strong&gt; - 没有的话去 &lt;a href=&quot;https://github.com&quot;&gt;github.com&lt;/a&gt; 注册&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;创建一个 GitHub 仓库&lt;/strong&gt; - 命名为 &lt;code&gt;skills-manage&lt;/code&gt;（可以改成其他名字）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;本地安装 Git&lt;/strong&gt; - Windows 下载 &lt;a href=&quot;https://gitforwindows.org/&quot;&gt;Git for Windows&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;可选&lt;/strong&gt;：如果你想和我一样用软链接方式，需要：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;创建 &lt;code&gt;D:\project2026\skills-manage&lt;/code&gt; 目录&lt;/li&gt;
+&lt;li&gt;在 &lt;code&gt;C:\Users\Administrator\&lt;/code&gt; 创建软链接 &lt;code&gt;.skillshub&lt;/code&gt; 指向它&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;从零开始完整步骤&lt;/h2&gt;
+&lt;h3&gt;第一步：本地创建文件夹&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;# 在 D 盘创建文件夹（名字随意）
+mkdir D:\project2026\skills-manage
+cd D:\project2026\skills-manage
+git init
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;第二步：推送到 GitHub&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;# 关联你的 GitHub 仓库（换成你自己的仓库地址）
+git remote add origin https://github.com/你的用户名/skills-manage.git
+
+# 推送
+git add .
+git commit -m &quot;initial commit&quot;
+git push -u origin main
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;第三步：创建软链接（可选，推荐）&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;# 删除可能存在的旧文件夹（如果有）
+rmdir C:\Users\Administrator\.skillshub
+
+# 创建软链接
+mklink /D C:\Users\Administrator\.skillshub D:\project2026\skills-manage
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：如果不创建软链接，工具会用自己的默认文件夹 &lt;code&gt;C:\Users\Administrator\AISkills&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;第四步：安装 skills-link&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;npm install -g skills-link
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;第五步：初始化配置&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;skills-link setup
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这步会让你选择：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;中央仓储目录（填 &lt;code&gt;.skillshub&lt;/code&gt; 或 &lt;code&gt;D:\project2026\skills-manage&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;语言（选中文）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;第六步：配置文件（关键！）&lt;/h3&gt;
+&lt;p&gt;编辑 &lt;code&gt;C:\Users\Administrator\config.yaml&lt;/code&gt;，确保 masterDir 指向软链接：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;masterDir: C:\Users\Administrator\.skillshub  # 必须是软链接！
+language: zh
+git:
+  enabled: false  # 我建议手动推送，不开自动
+  remote: &quot;&quot;
+  autoPush: false
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;第七步：添加 Skills&lt;/h3&gt;
+&lt;p&gt;把想用的 skills 放到 &lt;code&gt;D:\project2026\skills-manage&lt;/code&gt; 里。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;⚠️ 重要：让 AI 安装 skill 时，一定要指定安装到中央仓库目录！&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# 先 cd 到中央仓库再安装
+cd C:\Users\Administrator\.skillshub
+# 然后再让 AI 安装 skill
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;否则 skill 会安装到 Agent 的本地目录，不会同步到其他工具！&lt;/p&gt;
+&lt;p&gt;然后运行 &lt;code&gt;skills-link&lt;/code&gt;，会分两步：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第一步：导入&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;扫描中央仓库，发现新 skills&lt;/li&gt;
+&lt;li&gt;显示&quot;已导入 xxx&quot;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;第二步：创建链接&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;为各 Agent 的 skills 目录创建软链接&lt;/li&gt;
+&lt;li&gt;这样 Qwen Code、Claude Code 才能看到这个 skill&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;第八步：推送到 GitHub&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;# 方式1：双击运行
+D:\project2026\skills-manage\push.bat
+
+# 方式2：命令行
+cd C:\Users\Administrator\.skillshub
+git add .
+git commit -m &quot;新增 xxx skill&quot;
+git push
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;一图读懂&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;┌─────────────────────────────────────────────────────────────────────┐
+│                         本地电脑                                    │
+│                                                                     │
+│   .qwen/skills ──┐                                                 │
+│   .claude/skills ──┤     ┌──────────────────┐                       │
+│   .codex/skills ──┤     │  .skillshub      │◀─── 软链接           │
+│   .trae/skills ───┼────▶│  (D:\project2026 │                       │
+│   ...            │     │   \skills-manage)│                       │
+│                   │     └──────────────────┘                       │
+│                              │                                      │
+│                              ▼ GitHub                              │
+│                   https://github.com/你的账号/skills-manage         │
+└─────────────────────────────────────────────────────────────────────┘
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;一句话解释&lt;/strong&gt;：所有 AI 工具的 Skills 目录都指向同一个地方，修改一次，所有工具都生效。&lt;/p&gt;
+&lt;h2&gt;我的实际情况&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;目录&lt;/th&gt;
+&lt;th&gt;性质&lt;/th&gt;
+&lt;th&gt;存什么&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;D:\project2026\skills-manage&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;真实目录&lt;/td&gt;
+&lt;td&gt;GitHub 仓库，67 个 Skills&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;C:\Users\Administrator\.skillshub&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;软链接&lt;/td&gt;
+&lt;td&gt;指向上面那个目录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;C:\Users\Administrator\.qwen\skills&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;软链接&lt;/td&gt;
+&lt;td&gt;指向中央仓储&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;C:\Users\Administrator\.claude\skills&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;软链接&lt;/td&gt;
+&lt;td&gt;指向中央仓储&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;软链接就像快捷方式&lt;/strong&gt; —— 不占硬盘空间，指向同一个地方。&lt;/p&gt;
+&lt;h3&gt;验证方法&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;dir /a C:\Users\Administrator\.qwen\skills
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;SYMLINKD&amp;gt;&lt;/code&gt; = 软链接 ✅&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;DIR&amp;gt;&lt;/code&gt; = 本地目录&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;多电脑同步&lt;/h2&gt;
+&lt;p&gt;假设你在公司电脑配置好了，现在要在家里电脑用。&lt;/p&gt;
+&lt;h3&gt;家里电脑操作步骤&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;# 1. 安装 skills-link
+npm install -g skills-link
+
+# 2. 克隆仓库到本地
+git clone https://github.com/dqtx760/skills-manage C:\Users\Administrator\.skillshub
+
+# 3. 创建各 AI 工具的软链接
+skills-link
+# 选择&quot;创建链接&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;或者更简单的方式&lt;/h3&gt;
+&lt;p&gt;如果不需要软链接，直接：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# 1. 安装 skills-link
+npm install -g skills-link
+
+# 2. 初始化
+skills-link setup
+# 中央仓储目录填：D:\project2026\skills-manage
+
+# 3. 拉取代码
+cd D:\project2026\skills-manage
+git pull
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：不同电脑的 Agent 路径可能不同，比如 Qwen 在 &lt;code&gt;C:\Users\Administrator\.qwen\skills&lt;/code&gt;，Claude Code 在 &lt;code&gt;C:\Users\Administrator\.claude\skills&lt;/code&gt;。用 &lt;code&gt;skills-link health&lt;/code&gt; 可以检查链接状态。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;常见问题&lt;/h2&gt;
+&lt;h3&gt;Q1：一定要用软链接吗？&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;不是必须&lt;/strong&gt;，但推荐。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用软链接：所有 Agent 共享 &lt;code&gt;D:\project2026\skills-manage&lt;/code&gt; 这一个文件夹&lt;/li&gt;
+&lt;li&gt;不用软链接：工具会用默认的 &lt;code&gt;C:\Users\Administrator\AISkills&lt;/code&gt; 文件夹&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Q2：config.yaml 里的 masterDir 怎么填？&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;情况&lt;/th&gt;
+&lt;th&gt;masterDir 应该填&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;用软链接&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;C:\Users\Administrator\.skillshub&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;不用软链接&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;D:\project2026\skills-manage&lt;/code&gt;（或其他你指定的目录）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;重要&lt;/strong&gt;：填错了会导致 skills 不同步！&lt;/p&gt;
+&lt;h3&gt;Q3：安装 skill 后其他 Agent 看不到？&lt;/h3&gt;
+&lt;p&gt;这是两个概念没分清：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;步骤&lt;/th&gt;
+&lt;th&gt;做什么&lt;/th&gt;
+&lt;th&gt;目的地&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1. 安装 skill&lt;/td&gt;
+&lt;td&gt;把 skill 文件夹复制进去&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;.skillshub&lt;/code&gt;（中央仓储）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2. 创建链接&lt;/td&gt;
+&lt;td&gt;让各个 AI 工具能访问到这个 skill&lt;/td&gt;
+&lt;td&gt;各 Agent 的 skills 目录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;比如&lt;/strong&gt;：你想用&quot;飞书&quot;这个 skill&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;先把 &lt;code&gt;lark-im&lt;/code&gt; 文件夹复制到 &lt;code&gt;D:\project2026\skills-manage&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;然后运行 &lt;code&gt;skills-link&lt;/code&gt;，选择&quot;创建链接&quot;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这样 Qwen Code 和 Claude Code 才能看到它。&lt;/p&gt;
+&lt;h3&gt;Q4：删除 skill 怎么操作？&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;删除 &lt;code&gt;.skillshub&lt;/code&gt; 里的内容&lt;/li&gt;
+&lt;li&gt;执行 &lt;code&gt;push.bat&lt;/code&gt; 推送&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：不要从 Agent 目录删除，只删了链接，源文件还在。&lt;/p&gt;
+&lt;h3&gt;Q5：另一台电脑同步后看不到 skills？&lt;/h3&gt;
+&lt;p&gt;检查软链接是否创建成功：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;skills-link health
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果有红色的错误信息，运行 &lt;code&gt;skills-link&lt;/code&gt; 重新创建链接。&lt;/p&gt;
 </content:encoded></item><item><title>英伟达免费 API 申请流程</title><link>https://dqtx.cc/posts/aihacks/nvidia%E5%85%8D%E8%B4%B9api%E7%9A%84%E7%94%B3%E8%AF%B7%E6%B5%81%E7%A8%8B/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/nvidia%E5%85%8D%E8%B4%B9api%E7%9A%84%E7%94%B3%E8%AF%B7%E6%B5%81%E7%A8%8B/</guid><pubDate>Thu, 23 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;英伟达免费 API 一年（12个月）使用权，可以直接调用 GLM 5.1、Gemma 4、MiniMax 等 193 款主流大模型，这羊毛必须薅！&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260423232339562.webp&quot; alt=&quot;yingwen&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;01.访问官方网站&lt;/h2&gt;
@@ -5432,7 +5722,6 @@ argument-hint: [搜索关键词]
 &lt;pre&gt;&lt;code&gt;/search-web  Claude Code上手教程
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;六.斜杠命令（Slash Commands）&lt;/h2&gt;
-&lt;h3&gt;&lt;/h3&gt;
 &lt;h3&gt;1. 内置核心命令&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
