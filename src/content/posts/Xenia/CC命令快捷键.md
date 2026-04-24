@@ -3,7 +3,7 @@ title: Claude code隐藏命令/快捷键
 published: 2026-04-02
 tags:
   - Claudecode
-category: AIHacks
+category: Xenia
 draft: false
 pinned: false
 image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/PixPin_2026-04-02_23-31-00.webp

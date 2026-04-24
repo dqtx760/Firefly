@@ -1,4 +1,4 @@
-﻿---
+---
 title: Dos命令mklink详解
 published: 2026-04-20
 tags:

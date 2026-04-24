@@ -1,4 +1,4 @@
-﻿---
+---
 title: WezTerm终端配置指南
 published: 2026-04-06
 tags:

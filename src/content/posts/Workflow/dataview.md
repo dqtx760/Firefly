@@ -1,4 +1,4 @@
-﻿---
+---
 title: Dataview与Templater插件联动示例
 published: 2026-04-12
 tags:

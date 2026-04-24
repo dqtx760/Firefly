@@ -1,4 +1,4 @@
-﻿---
+---
 title: 最新passwall安装教程
 published: 2026-03-16
 tags:

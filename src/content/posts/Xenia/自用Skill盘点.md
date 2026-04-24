@@ -3,7 +3,7 @@ title: 16个自用Claude Skills
 published: 2026-02-13
 tags:
   - skill
-category: AIHacks
+category: Xenia
 draft: false
 pinned: false
 image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260422191135966.webp

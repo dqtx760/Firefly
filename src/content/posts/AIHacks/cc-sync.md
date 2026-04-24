@@ -1,4 +1,4 @@
-﻿---
+---
 title: Cc-sync：多电脑CC配置同步
 published: 2026-04-18
 tags:

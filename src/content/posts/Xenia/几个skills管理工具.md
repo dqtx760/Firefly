@@ -3,7 +3,7 @@ title: Agent Skills 管理方案
 published: 2026-04-20
 tags:
   - AI
-category: AIHacks
+category: Xenia
 draft: false
 pinned: false
 image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/hub.webp

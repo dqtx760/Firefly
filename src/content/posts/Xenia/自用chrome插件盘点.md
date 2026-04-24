@@ -1,9 +1,9 @@
-﻿---
+---
 title: chrome浏览器插件精选
 published: 2026-04-17
 tags:
   - chrome插件
-category: Workflow
+category: Xenia
 draft: false
 pinned: false
 image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260417115938098.webp

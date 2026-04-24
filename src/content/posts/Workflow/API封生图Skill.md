@@ -7,11 +7,9 @@ tags:
   - Claude
   - API
 draft: false
-lang: zh_CN
 image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260114235919010.webp
 category: Workflow
 ---
-
 最近被阿里巴巴通义MAI的Z-Image狠狠圈粉，不仅搭载了高效的 **Z-Image-Turbo** 模型，更关键的是**每天能免费生 2000 张图**，不管是生成文章视频封面还是异常创作，这个配额都完全够用。
 
 
@@ -96,10 +94,5 @@ Claude会自动根据你的自然语言调用这个生图skill
 
 
 **以上，既然看到这里了，如果你觉得内容不错，随手点个赞、在看、转发三连吧！如果想第一时间收到推送，可以给我点个星标⭐～**
-
-
-
-如需要远程技术支持：742112.xyz
-
 
 

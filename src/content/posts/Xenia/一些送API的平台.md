@@ -1,10 +1,10 @@
-﻿---
+---
 title: GLM4.7/MiniMax-M2.1免费渠道
 published: 2026-02-13
 tags:
   - API
   - Claudecode
-category: AIHacks
+category: Xenia
 draft: false
 pinned: false
 image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260213210334278.webp

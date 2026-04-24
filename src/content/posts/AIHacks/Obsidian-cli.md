@@ -1,4 +1,4 @@
-﻿---
+---
 title: Obsidian CLI终端管理笔记指南
 published: 2026-04-05
 tags:
