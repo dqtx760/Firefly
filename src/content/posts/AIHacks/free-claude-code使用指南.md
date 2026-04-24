@@ -191,3 +191,4 @@ NVIDIA NIM 免费层 40 次/分钟，对于日常开发完全够用。复杂任�
 
 ## 参考资料
 - [NVIDIA免费API的申请流程](https://mp.weixin.qq.com/s/A-FwkXui7Wby2zIjAw4sJg)
+- [零成本接管 Nvidia 算力的本地部署方案](https://mp.weixin.qq.com/s/WjG8-UV8sGBCR26_MFgzTg)

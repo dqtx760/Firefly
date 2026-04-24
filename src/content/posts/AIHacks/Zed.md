@@ -1,4 +1,4 @@
-﻿---
+---
 title: Zed安装使用教程
 published: 2026-04-09
 tags:
