@@ -62,6 +62,223 @@
 &lt;li&gt;⛓️ Web3教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867794661334761497#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;🛠️ 技术教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867808112450912266#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>免费使用 Claude Code 新思路 - free-claude-code 代理使用指南</title><link>https://dqtx.cc/posts/aihacks/free-claude-code%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/free-claude-code%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</guid><pubDate>Fri, 24 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;如果你正在寻找免费使用 Claude Code 的方法，那么 &lt;strong&gt;free-claude-code&lt;/strong&gt; 这个开源项目绝对值得关注。它能让 Claude Code 完美对接 NVIDIA NIM、OpenRouter、DeepSeek 等多种免费或低成本的大模型服务，同时保留 Claude Code 原生的工程能力。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260424141510353.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;为什么选择 free-claude-code？&lt;/h2&gt;
+&lt;p&gt;作为 Claude Code 用户，我们都知道它强大的工程能力：上下文管理、记忆系统、Skill 封装、工具调用、Subagent 控制等。但官方 API 价格不菲，国内使用还有各种限制。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;free-claude-code&lt;/strong&gt; 完美解决了这个问题：&lt;/p&gt;
+&lt;p&gt;项目地址：https://github.com/Alishahryar1/free-claude-code&lt;/p&gt;
+&lt;h3&gt;核心优势&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;零成本使用&lt;/strong&gt;：直接调用 NVIDIA NIM 免费接口，每分钟 40 次请求，完全够用&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;完美伪装&lt;/strong&gt;：Claude Code 完全无感，以为还在和 Anthropic 官方通信&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;思考链保留&lt;/strong&gt;：GLM、DeepSeek R1 等模型的思考过程完美显示&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;工具调用救活&lt;/strong&gt;：开源模型不规范的 Tool Call 输出，代理自动解析成 Claude 能识别的格式&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;智能限流&lt;/strong&gt;：内置并发控制和 429 退避，避免免费 API 被限流&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;多 Provider 混搭&lt;/strong&gt;：一个配置同时使用不同提供商的模型&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;支持的模型提供商&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;提供商&lt;/th&gt;
+&lt;th&gt;特点&lt;/th&gt;
+&lt;th&gt;推荐模型&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;NVIDIA NIM&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;免费 40 次/分钟，注册即用&lt;/td&gt;
+&lt;td&gt;GLM-5.1、MiniMax M2.7、Kimi K2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;OpenRouter&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;几百个模型，含免费款&lt;/td&gt;
+&lt;td&gt;deepseek-r1、gpt-oss-120b&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;DeepSeek&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;价格低，稳定&lt;/td&gt;
+&lt;td&gt;deepseek-reasoner、deepseek-chat&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;LM Studio&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;纯本地，数据不出网&lt;/td&gt;
+&lt;td&gt;本地 GGUF 模型&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;llama.cpp&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;完全本地运行&lt;/td&gt;
+&lt;td&gt;本地模型&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;配置步骤（2026 年 4 月实测）&lt;/h2&gt;
+&lt;h3&gt;第一步：准备 NVIDIA API Key&lt;/h3&gt;
+&lt;p&gt;如果没有，先去 &lt;a href=&quot;https://build.nvidia.com/settings/api-keys&quot;&gt;build.nvidia.com&lt;/a&gt; 申请一个 &lt;code&gt;nvapi-&lt;/code&gt; 开头的 Key。&lt;/p&gt;
+&lt;h3&gt;第二步：克隆项目&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/Alishahryar1/free-claude-code.git
+cd free-claude-code
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;第三步：安装依赖&lt;/h3&gt;
+&lt;p&gt;这个项目使用 Python，需要先安装 uv：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pip install uv
+uv sync
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;第四步：配置 .env 文件&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;NVIDIA_NIM_API_KEY=&quot;nvapi-你的Key&quot;
+
+# 模型映射：所有 Claude 模型都映射到这里
+MODEL_OPUS=&quot;nvidia_nim/z-ai/glm-5.1&quot;
+MODEL_SONNET=&quot;nvidia_nim/z-ai/glm-5.1&quot;
+MODEL_HAIKU=&quot;nvidia_nim/z-ai/glm-5.1&quot;
+MODEL=&quot;nvidia_nim/z-ai/glm-5.1&quot;
+
+ENABLE_THINKING=true
+PROVIDER_RATE_LIMIT=40
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;第五步：启动代理&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;uv run uvicorn server:app --host 0.0.0.0 --port 8082
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;第六步：配置 Claude Code&lt;/h3&gt;
+&lt;p&gt;编辑 &lt;code&gt;C:\Users\Administrator\.claude\settings.json&lt;/code&gt;：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{
+  &quot;env&quot;: {
+    &quot;ANTHROPIC_BASE_URL&quot;: &quot;http://localhost:8082&quot;,
+    &quot;ANTHROPIC_AUTH_TOKEN&quot;: &quot;ccnim&quot;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;第七步：运行测试&lt;/h3&gt;
+&lt;p&gt;直接启动 Claude Code：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;claude
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后说 &quot;你好&quot; 测试。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⚠️ &lt;strong&gt;重要&lt;/strong&gt;：不要在 Claude Code 中使用 &lt;code&gt;/model minimaxai/minimax-m2.7&lt;/code&gt;！正确方式是直接说话，代理会自动映射到你在 &lt;code&gt;.env&lt;/code&gt; 中配置的模型。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;可用模型推荐&lt;/h2&gt;
+&lt;p&gt;根据 &lt;code&gt;nvidia_nim_models.json&lt;/code&gt;，以下模型都可以免费使用：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;模型&lt;/th&gt;
+&lt;th&gt;特点&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;z-ai/glm-5.1&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;中文理解强，长上下文&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;z-ai/glm4.7&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;稳定可靠&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;minimaxai/minimax-m2.7&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Coding 速度快&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;minimaxai/minimax-m2.5&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;更轻量&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;moonshotai/kimi-k2-thinking&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;思考能力强&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;stepfun-ai/step-3.5-flash&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;免费额度多&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;常见问题&lt;/h2&gt;
+&lt;h3&gt;Q: free-claude-code 和 CC Switch 有什么区别？&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;对比项&lt;/th&gt;
+&lt;th&gt;CC Switch&lt;/th&gt;
+&lt;th&gt;free-claude-code&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;实现方式&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;工具辅助配置&lt;/td&gt;
+&lt;td&gt;本地代理服务&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;模型映射&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;手动填模型名&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;.env&lt;/code&gt; 统一配置&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;请求转换&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;简单替换&lt;/td&gt;
+&lt;td&gt;完整 Anthropic→OpenAI 转换&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;工具调用&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;不够稳定&lt;/td&gt;
+&lt;td&gt;启发式解析，更稳定&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;调试难度&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;较难排查&lt;/td&gt;
+&lt;td&gt;终端日志清晰&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;配置方式&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;GUI 界面&lt;/td&gt;
+&lt;td&gt;配置文件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;为什么 free-claude-code 成功率更高？&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;模型名称格式统一&lt;/strong&gt;：CC Switch 需要手动填写模型名，容易填错（如大小写、命名空间），free-claude-code 用 &lt;code&gt;.env&lt;/code&gt; 统一配置，格式固定&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;完整的请求转换&lt;/strong&gt;：CC Switch 可能只做了简单的模型名替换，而 free-claude-code 做了完整的 API 格式转换（包括 thinking、tool call 等）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;无残留配置干扰&lt;/strong&gt;：直接修改 &lt;code&gt;settings.json&lt;/code&gt; 比工具更干净，CC Switch 可能有残留配置影响&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;社区验证&lt;/strong&gt;：free-claude-code 是 GitHub 上最受欢迎的 Claude Code 代理方案，文档详细，问题容易排查&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Q: 一定要用批处理脚本吗？&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;不需要！&lt;/strong&gt; 配置好 &lt;code&gt;settings.json&lt;/code&gt; 后，在任意终端运行 &lt;code&gt;claude&lt;/code&gt; 都会自动走代理。&lt;/p&gt;
+&lt;p&gt;如果你不想每次手动启动代理，可以创建一个 &lt;code&gt;启动代理.bat&lt;/code&gt; 双击运行：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;@echo off
+cd /d D:\project2026\free-claude-code
+start &quot;NVIDIA NIM Proxy&quot; cmd /k &quot;.venv\Scripts\uvicorn.exe server:app --host 0.0.0.0 --port 8082&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Q: 为什么还是报错 &quot;model may not exist&quot;？&lt;/h3&gt;
+&lt;p&gt;检查三点：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Claude Code 的 &lt;code&gt;settings.json&lt;/code&gt; 是否正确设置了 &lt;code&gt;ANTHROPIC_BASE_URL&lt;/code&gt; 为 &lt;code&gt;http://localhost:8082&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;代理是否正在运行（端口 8082 是否监听）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;.env&lt;/code&gt; 中的模型名称是否正确（带命名空间，如 &lt;code&gt;z-ai/glm-5.1&lt;/code&gt;）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Q: 免费额度够用吗？&lt;/h3&gt;
+&lt;p&gt;NVIDIA NIM 免费层 40 次/分钟，对于日常开发完全够用。复杂任务建议适当放慢速度。&lt;/p&gt;
+&lt;h3&gt;Q: 可以同时用多个模型吗？&lt;/h3&gt;
+&lt;p&gt;可以！在 &lt;code&gt;.env&lt;/code&gt; 中为 &lt;code&gt;MODEL_OPUS&lt;/code&gt;、&lt;code&gt;MODEL_SONNET&lt;/code&gt;、&lt;code&gt;MODEL_HAIKU&lt;/code&gt; 分别设置不同的模型，实现混合使用。&lt;/p&gt;
+&lt;h3&gt;Q: 切换模型怎么操作？&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;编辑 &lt;code&gt;D:\project2026\free-claude-code\.env&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;修改 &lt;code&gt;MODEL&lt;/code&gt; 的值：&lt;pre&gt;&lt;code&gt;MODEL=&quot;nvidia_nim/z-ai/glm-5.1&quot;      # GLM-5.1
+MODEL=&quot;nvidia_nim/minimaxai/minimax-m2.7&quot;  # MiniMax M2.7
+MODEL=&quot;nvidia_nim/moonshotai/kimi-k2-thinking&quot;  # Kimi K2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;重启代理（双击 &lt;code&gt;启动代理.bat&lt;/code&gt;）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;总结&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;free-claude-code&lt;/strong&gt; 可能是目前国内用户免费使用 Claude Code 最丝滑的方案。它完美保留了 Claude Code 强大的工程能力，同时让我们能白嫖 GLM-5.1、MiniMax M2.7 等优质模型。&lt;/p&gt;
+&lt;p&gt;对于中低复杂度的项目来说，这套方案已经完全够用。省下的订阅费买点啥不香呢？&lt;/p&gt;
+&lt;h2&gt;参考资料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/A-FwkXui7Wby2zIjAw4sJg&quot;&gt;NVIDIA免费API的申请流程&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </content:encoded></item><item><title>英伟达免费 API 申请流程</title><link>https://dqtx.cc/posts/aihacks/nvidia%E5%85%8D%E8%B4%B9api%E7%9A%84%E7%94%B3%E8%AF%B7%E6%B5%81%E7%A8%8B/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/nvidia%E5%85%8D%E8%B4%B9api%E7%9A%84%E7%94%B3%E8%AF%B7%E6%B5%81%E7%A8%8B/</guid><pubDate>Thu, 23 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;英伟达免费 API 一年（12个月）使用权，可以直接调用 GLM 5.1、Gemma 4、MiniMax 等 193 款主流大模型，这羊毛必须薅！&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260423232339562.webp&quot; alt=&quot;yingwen&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;01.访问官方网站&lt;/h2&gt;
@@ -94,7 +311,8 @@
 - minimaxai/minimax-m2.7
 - google/gemma-4-27b-it
 &lt;/code&gt;&lt;/pre&gt;
-&lt;hr /&gt;
+&lt;pre&gt;&lt;code&gt;
+&lt;/code&gt;&lt;/pre&gt;
 &lt;blockquote&gt;
 &lt;p&gt;⚠️ &lt;strong&gt;热门模型高峰时期使用可能会有卡顿&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
