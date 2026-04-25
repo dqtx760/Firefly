@@ -62,143 +62,6 @@
 &lt;li&gt;⛓️ Web3教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867794661334761497#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;🛠️ 技术教程：&lt;a href=&quot;https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI0NjYxNTM3NQ==&amp;amp;action=getalbum&amp;amp;album_id=3867808112450912266#wechat_redirect&quot;&gt;点此直达&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>Claude code 安装教程</title><link>https://dqtx.cc/posts/aihacks/claude-code-%E5%AE%89%E8%A3%85/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/claude-code-%E5%AE%89%E8%A3%85/</guid><pubDate>Fri, 24 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这篇文章是我整理的远程安装CC全套SOP文档，今天免费公开分享给大家。不止会手把手教你顺利安装CC，同时还会顺带讲解Obsidian相关配置，全程带大家实操学会 Cloud Code 的完整使用方法，一站式搞定部署与实操，新手也能直接跟着操作，方便大家直接上手使用。
-&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260424220034771.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;一.安装Claude code&lt;/h2&gt;
-&lt;h3&gt;Node.js(&lt;a href=&quot;https://nodejs.org/en/download/&quot;&gt;安装包&lt;/a&gt;)&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;winget install OpenJS.NodeJS.LTS
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;Git(&lt;a href=&quot;https://git-scm.com/install/windows&quot;&gt;安装包&lt;/a&gt;)&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;winget install Git.Git
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;Claude Code&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;npm install -g @anthropic-ai/claude-code
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;启动命令&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;Claude
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;claude --dangerously-skip-permissions
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;二.安装Obsidian&lt;/h2&gt;
-&lt;h3&gt;&lt;a href=&quot;https://github.com/obsidianmd/obsidian-releases/releases/download/v1.12.7/Obsidian-1.12.7.exe&quot;&gt;Obsidian安装包&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;winget install Git.Git
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;拉取仓库模板&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;get clone https://github.com/dqtx760/obsidian-vault-template
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;Claudian出现报错&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;Claude code在终端使用正常， 但在Obsidian的插件中Claudian对话异常,帮我排除下原因
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;三.配置API&lt;/h2&gt;
-&lt;h4&gt;1. 获取API key&lt;/h4&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Api供应商&lt;/th&gt;
-&lt;th&gt;Key创建入口&lt;/th&gt;
-&lt;th&gt;使用说明&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&quot;https://www.bigmodel.cn/glm-coding?ic=PUCQNADSPM&quot;&gt;智谱&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&quot;https://bigmodel.cn/usercenter/proj-mgmt/apikeys&quot;&gt;点此获取&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&quot;https://docs.bigmodel.cn/cn/guide/develop/claude&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&quot;https://volcengine.com/L/HKZkyHHHJ0k/&quot;&gt;火山&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&quot;https://console.volcengine.com/ark/region:ark+cn-beijing/apikey?apikey=%7B%7D&quot;&gt;点此获取&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&quot;https://www.volcengine.com/docs/82379/1928261?lang=zh&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&quot;https://platform.minimaxi.com/subscribe/coding-plan&quot;&gt;MiniMax&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&quot;https://platform.minimaxi.com/user-center/basic-information/interface-key&quot;&gt;点此获取&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&quot;https://platform.minimaxi.com/docs/guides/text-ai-coding-tools#%E5%9C%A8-claude-code-%E4%B8%AD%E4%BD%BF%E7%94%A8-minimax-m2%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&quot;https://www.kimi.com/code&quot;&gt;Kimi K2&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;点此获取&lt;/td&gt;
-&lt;td&gt;&lt;a href=&quot;https://www.kimi.com/code/docs/third-party-tools/other-coding-agents.html&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&quot;https://openrouter.ai/&quot;&gt;OpenRouter&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&quot;https://openrouter.ai/workspaces/default/keys&quot;&gt;点此获取&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;点此查看&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h4&gt;2. 配置API&lt;/h4&gt;
-&lt;h4&gt;借助→&lt;a href=&quot;https://github.1zyq1.com/farion1231/cc-switch/releases/download/v3.14.1/CC-Switch-v3.14.1-Windows.msi&quot;&gt;CC Switch&lt;/a&gt;&lt;/h4&gt;
-&lt;h4&gt;手动配置&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;~/.claude/settings.json
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;智谱&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;{
-  &quot;env&quot;: {
-    &quot;ANTHROPIC_AUTH_TOKEN&quot;: &quot;yourkey here&quot;,
-    &quot;API_TIMEOUT_MS&quot;: &quot;3000000&quot;,
-    &quot;ANTHROPIC_BASE_URL&quot;: &quot;https://open.bigmodel.cn/api/anthropic&quot;,
-    &quot;MCP_TOOL_TIMEOUT&quot;: &quot;30000&quot;
-  },
-  &quot;permissions&quot;: {
-    &quot;defaultMode&quot;: &quot;bypassPermissions&quot;
-  },
-  &quot;alwaysThinkingEnabled&quot;: false
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;火山&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;```JSON
-{
-    &quot;env&quot;: {
-        &quot;ANTHROPIC_AUTH_TOKEN&quot;: &quot;&amp;lt;ARK_API_KEY&amp;gt;&quot;,
-        &quot;ANTHROPIC_BASE_URL&quot;: &quot;https://ark.cn-beijing.volces.com/api/coding&quot;,
-        &quot;ANTHROPIC_MODEL&quot;: &quot;ark-code-latest&quot;
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;MiniMax&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;{
-  &quot;env&quot;: {
-    &quot;ANTHROPIC_BASE_URL&quot;: &quot;https://api.minimaxi.com/anthropic&quot;,
-    &quot;ANTHROPIC_AUTH_TOKEN&quot;: &quot;&quot;,
-    &quot;API_TIMEOUT_MS&quot;: &quot;3000000&quot;,
-    &quot;CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC&quot;: 1,
-    &quot;ANTHROPIC_MODEL&quot;: &quot;MiniMax-M2.7&quot;,
-    &quot;ANTHROPIC_DEFAULT_SONNET_MODEL&quot;: &quot;MiniMax-M2.7&quot;,
-    &quot;ANTHROPIC_DEFAULT_OPUS_MODEL&quot;: &quot;MiniMax-M2.7&quot;,
-    &quot;ANTHROPIC_DEFAULT_HAIKU_MODEL&quot;: &quot;MiniMax-M2.7&quot;
-  },
-  &quot;includeCoAuthoredBy&quot;: false
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Kimi K2&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$env:ENABLE_TOOL_SEARCH=&quot;false&quot;
-$env:ANTHROPIC_BASE_URL=&quot;https://api.kimi.com/coding/&quot;
-$env:ANTHROPIC_API_KEY=&quot;你的API Key&quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;openrouter&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;  
-&quot;env&quot;: {
-    &quot;ANTHROPIC_BASE_URL&quot;: &quot;https://openrouter.ai/api&quot;,
-    &quot;ANTHROPIC_AUTH_TOKEN&quot;: &quot;sk-or-v1-xxxxx&quot;,
-    &quot;ANTHROPIC_API_KEY&quot;: &quot;&quot;,
-    &quot;ANTHROPIC_DEFAULT_OPUS_MODEL&quot;: &quot;openrouter/free&quot;,
-    &quot;ANTHROPIC_DEFAULT_SONNET_MODEL&quot;: &quot;openrouter/free&quot;,
-    &quot;ANTHROPIC_DEFAULT_HAIKU_MODEL&quot;: &quot;openrouter/free&quot;,
-    &quot;CLAUDE_CODE_SUBAGENT_MODEL&quot;: &quot;openrouter/free&quot;
-  },
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;四.参考资料&lt;/h2&gt;
-&lt;h3&gt;Claude code命令&amp;amp;快捷键:&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/cc/&quot;&gt;点此查看&lt;/a&gt;&lt;/h3&gt;
-&lt;h3&gt;Agent Skills 管理方案:&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/skills-manage/&quot;&gt;点此查看&lt;/a&gt;&lt;/h3&gt;
-&lt;h3&gt;Claude code skill推荐:&lt;a href=&quot;https://www.notion.so/skill-347351994e408091a13be04d19c62d1e&quot;&gt;点此查看&lt;/a&gt;&lt;/h3&gt;
-&lt;h3&gt;Claude code MCP:点此查看&lt;/h3&gt;
-&lt;h3&gt;有些有用的cli工具:点此查看&lt;/h3&gt;
-&lt;h2&gt;五.常见问题&lt;/h2&gt;
-&lt;h3&gt;~/.claude.json&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;  &quot;hasCompletedOnboarding&quot;: true
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;启动需要信任该文件&lt;/h3&gt;
 </content:encoded></item><item><title>free-claude-code 代理使用指南</title><link>https://dqtx.cc/posts/aihacks/free-claude-code/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/free-claude-code/</guid><pubDate>Fri, 24 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;如果你正在寻找免费使用 Claude Code 的方法，那么 &lt;strong&gt;free-claude-code&lt;/strong&gt; 这个开源项目绝对值得关注。它能让 Claude Code 完美对接 NVIDIA NIM、OpenRouter、DeepSeek 等多种免费或低成本的大模型服务，同时保留 Claude Code 原生的工程能力。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260424141510353.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;为什么选择 free-claude-code？&lt;/h2&gt;
@@ -417,14 +280,159 @@ MODEL=&quot;nvidia_nim/moonshotai/kimi-k2-thinking&quot;  # Kimi K2
 &lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/A-FwkXui7Wby2zIjAw4sJg&quot;&gt;NVIDIA免费API的申请流程&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/WjG8-UV8sGBCR26_MFgzTg&quot;&gt;零成本接管 Nvidia 算力的本地部署方案&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>Claude code 安装教程</title><link>https://dqtx.cc/posts/aihacks/claude-code-%E5%AE%89%E8%A3%85/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/claude-code-%E5%AE%89%E8%A3%85/</guid><pubDate>Fri, 24 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这篇文章是我整理的远程安装CC全套SOP文档，今天免费公开分享给大家。不止会手把手教你顺利安装CC，同时还会顺带讲解Obsidian相关配置，全程带大家实操学会 Cloud Code 的完整使用方法，一站式搞定部署与实操，新手也能直接跟着操作，方便大家直接上手使用。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260424220034771.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;一.安装Claude code&lt;/h2&gt;
+&lt;h3&gt;Node.js(&lt;a href=&quot;https://nodejs.org/en/download/&quot;&gt;安装包&lt;/a&gt;)&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;winget install OpenJS.NodeJS.LTS
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Git(&lt;a href=&quot;https://git-scm.com/install/windows&quot;&gt;安装包&lt;/a&gt;)&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;winget install Git.Git
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Claude Code&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;npm install -g @anthropic-ai/claude-code
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;skills-link&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;npm i -g skills-link
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;skills-link
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;https://github.com/dqtx760/skills-manage
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;启动命令&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;Claude
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;claude --dangerously-skip-permissions
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;二.安装Obsidian&lt;/h2&gt;
+&lt;h3&gt;&lt;a href=&quot;https://github.com/obsidianmd/obsidian-releases/releases/download/v1.12.7/Obsidian-1.12.7.exe&quot;&gt;Obsidian安装包&lt;/a&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;winget install Git.Git
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;拉取仓库模板&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;get clone https://github.com/dqtx760/obsidian-vault-template
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Claudian出现报错&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;Claude code在终端使用正常， 但在Obsidian的插件中Claudian对话异常,帮我排除下原因
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;三.配置API&lt;/h2&gt;
+&lt;h4&gt;1. 获取API key&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Api供应商&lt;/th&gt;
+&lt;th&gt;Key创建入口&lt;/th&gt;
+&lt;th&gt;使用说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://www.bigmodel.cn/glm-coding?ic=PUCQNADSPM&quot;&gt;智谱&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://bigmodel.cn/usercenter/proj-mgmt/apikeys&quot;&gt;点此获取&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://docs.bigmodel.cn/cn/guide/develop/claude&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://volcengine.com/L/HKZkyHHHJ0k/&quot;&gt;火山&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://console.volcengine.com/ark/region:ark+cn-beijing/apikey?apikey=%7B%7D&quot;&gt;点此获取&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://www.volcengine.com/docs/82379/1928261?lang=zh&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://platform.minimaxi.com/subscribe/coding-plan&quot;&gt;MiniMax&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://platform.minimaxi.com/user-center/basic-information/interface-key&quot;&gt;点此获取&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://platform.minimaxi.com/docs/guides/text-ai-coding-tools#%E5%9C%A8-claude-code-%E4%B8%AD%E4%BD%BF%E7%94%A8-minimax-m2%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://www.kimi.com/code&quot;&gt;Kimi K2&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;点此获取&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://www.kimi.com/code/docs/third-party-tools/other-coding-agents.html&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://openrouter.ai/&quot;&gt;OpenRouter&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://openrouter.ai/workspaces/default/keys&quot;&gt;点此获取&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;点此查看&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4&gt;2. 配置API&lt;/h4&gt;
+&lt;h4&gt;借助→&lt;a href=&quot;https://github.1zyq1.com/farion1231/cc-switch/releases/download/v3.14.1/CC-Switch-v3.14.1-Windows.msi&quot;&gt;CC Switch&lt;/a&gt;&lt;/h4&gt;
+&lt;h4&gt;手动配置&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;~/.claude/settings.json
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;智谱&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{
+  &quot;env&quot;: {
+    &quot;ANTHROPIC_AUTH_TOKEN&quot;: &quot;yourkey here&quot;,
+    &quot;API_TIMEOUT_MS&quot;: &quot;3000000&quot;,
+    &quot;ANTHROPIC_BASE_URL&quot;: &quot;https://open.bigmodel.cn/api/anthropic&quot;,
+    &quot;MCP_TOOL_TIMEOUT&quot;: &quot;30000&quot;
+  },
+  &quot;permissions&quot;: {
+    &quot;defaultMode&quot;: &quot;bypassPermissions&quot;
+  },
+  &quot;alwaysThinkingEnabled&quot;: false
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;火山&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```JSON
+{
+    &quot;env&quot;: {
+        &quot;ANTHROPIC_AUTH_TOKEN&quot;: &quot;&amp;lt;ARK_API_KEY&amp;gt;&quot;,
+        &quot;ANTHROPIC_BASE_URL&quot;: &quot;https://ark.cn-beijing.volces.com/api/coding&quot;,
+        &quot;ANTHROPIC_MODEL&quot;: &quot;ark-code-latest&quot;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;MiniMax&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{
+  &quot;env&quot;: {
+    &quot;ANTHROPIC_BASE_URL&quot;: &quot;https://api.minimaxi.com/anthropic&quot;,
+    &quot;ANTHROPIC_AUTH_TOKEN&quot;: &quot;&quot;,
+    &quot;API_TIMEOUT_MS&quot;: &quot;3000000&quot;,
+    &quot;CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC&quot;: 1,
+    &quot;ANTHROPIC_MODEL&quot;: &quot;MiniMax-M2.7&quot;,
+    &quot;ANTHROPIC_DEFAULT_SONNET_MODEL&quot;: &quot;MiniMax-M2.7&quot;,
+    &quot;ANTHROPIC_DEFAULT_OPUS_MODEL&quot;: &quot;MiniMax-M2.7&quot;,
+    &quot;ANTHROPIC_DEFAULT_HAIKU_MODEL&quot;: &quot;MiniMax-M2.7&quot;
+  },
+  &quot;includeCoAuthoredBy&quot;: false
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Kimi K2&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$env:ENABLE_TOOL_SEARCH=&quot;false&quot;
+$env:ANTHROPIC_BASE_URL=&quot;https://api.kimi.com/coding/&quot;
+$env:ANTHROPIC_API_KEY=&quot;你的API Key&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;openrouter&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  
+&quot;env&quot;: {
+    &quot;ANTHROPIC_BASE_URL&quot;: &quot;https://openrouter.ai/api&quot;,
+    &quot;ANTHROPIC_AUTH_TOKEN&quot;: &quot;sk-or-v1-xxxxx&quot;,
+    &quot;ANTHROPIC_API_KEY&quot;: &quot;&quot;,
+    &quot;ANTHROPIC_DEFAULT_OPUS_MODEL&quot;: &quot;openrouter/free&quot;,
+    &quot;ANTHROPIC_DEFAULT_SONNET_MODEL&quot;: &quot;openrouter/free&quot;,
+    &quot;ANTHROPIC_DEFAULT_HAIKU_MODEL&quot;: &quot;openrouter/free&quot;,
+    &quot;CLAUDE_CODE_SUBAGENT_MODEL&quot;: &quot;openrouter/free&quot;
+  },
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;四.参考资料&lt;/h2&gt;
+&lt;h3&gt;Claude code命令&amp;amp;快捷键:&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/cc/&quot;&gt;点此查看&lt;/a&gt;&lt;/h3&gt;
+&lt;h3&gt;Agent Skills 管理方案:&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/skills-manage/&quot;&gt;点此查看&lt;/a&gt;&lt;/h3&gt;
+&lt;h3&gt;Claude code skill推荐:&lt;a href=&quot;https://www.notion.so/skill-347351994e408091a13be04d19c62d1e&quot;&gt;点此查看&lt;/a&gt;&lt;/h3&gt;
+&lt;h3&gt;Claude code MCP:&lt;a href=&quot;https://www.dqtx.cc/posts/xenia/mcp%E6%B8%85%E5%8D%95/&quot;&gt;点此查看&lt;/a&gt;&lt;/h3&gt;
+&lt;h3&gt;有些有用的cli工具:点此查看&lt;/h3&gt;
+&lt;h2&gt;五.常见问题&lt;/h2&gt;
+&lt;h3&gt;~/.claude.json&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;  &quot;hasCompletedOnboarding&quot;: true
+&lt;/code&gt;&lt;/pre&gt;
 </content:encoded></item><item><title>Skills-Link完全使用指南!</title><link>https://dqtx.cc/posts/aihacks/skills-link/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/skills-link/</guid><pubDate>Fri, 24 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你是否也有这样的困扰？在多个 AI 工具里安装了同样的技能（Skills），修改一次要同步多次，麻烦！&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Skills-Link&lt;/strong&gt; 就是来解决这个问题的 —— 让所有 AI 编程工具共享同一个 Skills 文件夹。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;相关文档&lt;/strong&gt;
+https://github.com/shanliuling/skills-link/blob/main/README.zh.md
+https://www.npmjs.com/package/skills-link?activeTab=readme&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260424220829071.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;目录&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;#%E5%89%8D%E7%BD%AE%E6%9D%A1%E4%BB%B6&quot;&gt;前置条件&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AE%8C%E6%95%B4%E6%AD%A5%E9%AA%A4&quot;&gt;从零开始完整步骤&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#%E4%B8%80%E5%9B%BE%E8%AF%BB%E6%87%82&quot;&gt;一图读懂&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#%E6%88%91%E7%9A%84%E5%AE%9E%E9%99%85%E6%83%85%E5%86%B5&quot;&gt;我的实际情况&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#%E5%A4%9A%E7%94%B5%E8%84%91%E5%90%8C%E6%AD%A5&quot;&gt;多电脑同步&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98&quot;&gt;常见问题&lt;/a&gt;&lt;/li&gt;
@@ -516,7 +524,8 @@ git add .
 git commit -m &quot;新增 xxx skill&quot;
 git push
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;一图读懂&lt;/h2&gt;
+&lt;h2&gt;我的实际情况&lt;/h2&gt;
+&lt;h3&gt;一图读懂&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;┌─────────────────────────────────────────────────────────────────────┐
 │                         本地电脑                                    │
 │                                                                     │
@@ -532,7 +541,6 @@ git push
 └─────────────────────────────────────────────────────────────────────┘
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;strong&gt;一句话解释&lt;/strong&gt;：所有 AI 工具的 Skills 目录都指向同一个地方，修改一次，所有工具都生效。&lt;/p&gt;
-&lt;h2&gt;我的实际情况&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -572,18 +580,52 @@ git push
 &lt;li&gt;&lt;code&gt;&amp;lt;SYMLINKD&amp;gt;&lt;/code&gt; = 软链接 ✅&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;&amp;lt;DIR&amp;gt;&lt;/code&gt; = 本地目录&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h3&gt;常用命令&lt;/h3&gt;
+&lt;p&gt;交互式启动 — 导入、链接、同步&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;skills-link
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;列出本地 skills（自动去重）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;skills-link list
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;从 Master 目录删除 skills&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;skills-link remove
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;切换启用的应用&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;skills-link app
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;提交并推送到 GitHub&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;skills-link sync
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;文件变更时自动同步&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;skills-link watch
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;检查符号链接状态&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;skills-link health
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;撤销所有操作，恢复初始状态&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;skills-link reset
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;全局卸载&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm uninstall skills-link --global
+&lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;多电脑同步&lt;/h2&gt;
 &lt;p&gt;假设你在公司电脑配置好了，现在要在家里电脑用。&lt;/p&gt;
 &lt;h3&gt;家里电脑操作步骤&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;# 1. 安装 skills-link
-npm install -g skills-link
-
-# 2. 克隆仓库到本地
-git clone https://github.com/dqtx760/skills-manage C:\Users\Administrator\.skillshub
-
-# 3. 创建各 AI 工具的软链接
-skills-link
-# 选择&quot;创建链接&quot;
+&lt;ol&gt;
+&lt;li&gt;安装 skills-link&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;npm install -g skills-link
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;创建各 AI 工具的软链接&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;skills-link
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;中文→中央仓库选择&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;~/AISkills
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;github仓库选择&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;https://github.com/dqtx760/skills-manage 
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;或者更简单的方式&lt;/h3&gt;
 &lt;p&gt;如果不需要软链接，直接：&lt;/p&gt;
@@ -926,7 +968,7 @@ mklink /h &quot;D:\project2026\zhishiku\QWEN\知识库规范.md&quot; &quot;D:\p
 &lt;li&gt;如果你需要跨盘操作，选择软链接；如果只在同盘内使用，硬链接更稳定&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;掌握这四个命令，你就是Windows文件管理的高手了。&lt;/strong&gt;&lt;/p&gt;
-</content:encoded></item><item><title>Agent Skills 管理方案</title><link>https://dqtx.cc/posts/xenia/%E5%87%A0%E4%B8%AAskills%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/%E5%87%A0%E4%B8%AAskills%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/</guid><pubDate>Mon, 20 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;相信有很多小伙伴跟我一样，手头同时在用好几个 AI Agent——Claude Code、Codex、Cursor、Windsurf……每个 Agent 都有自己的 Skill 目录，装了一堆技能包。&lt;/p&gt;
+</content:encoded></item><item><title>Agent Skills 管理方案</title><link>https://dqtx.cc/posts/xenia/skills%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/skills%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/</guid><pubDate>Mon, 20 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;相信有很多小伙伴跟我一样，手头同时在用好几个 AI Agent——Claude Code、Codex、Cursor、Windsurf……每个 Agent 都有自己的 Skill 目录，装了一堆技能包。&lt;/p&gt;
 &lt;p&gt;时间一长就会遇到一个头疼的问题：同一个 Skill 要在不同 Agent 里各装一遍，版本还不一定一致，管理起来非常混乱。从最早手动复制粘贴技能配置，到用脚本管理本地技能库，再到尝试多设备同步——我发现&lt;strong&gt;技能的发现、配置、迁移和同步&lt;/strong&gt;，一直是个很痛的问题。&lt;/p&gt;
 &lt;p&gt;我一直在想，有没有一种方式能像管理代码依赖一样，统一管理所有 Agent 的技能包？同时实现在多设备上能够一键迁移跟同步？最近我在 GitHub 上发现了 几个解决方案，完美解决了我的痛点。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/hub.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -2763,7 +2805,7 @@ obsidian task:complete task=任务ID
 &lt;p&gt;第一，打开Obsidian设置，启用CLI；&lt;/p&gt;
 &lt;p&gt;第二，下载 Claudian 插件，体验在笔记里直接用AI的快感。&lt;/p&gt;
 &lt;p&gt;从 &lt;code&gt;obsidian daily&lt;/code&gt; 开始，从一个命令开始，你会发现一个全新的Obsidian。&lt;/p&gt;
-</content:encoded></item><item><title>Claude code隐藏命令/快捷键</title><link>https://dqtx.cc/posts/xenia/cc%E5%91%BD%E4%BB%A4%E5%BF%AB%E6%8D%B7%E9%94%AE/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/cc%E5%91%BD%E4%BB%A4%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid><pubDate>Thu, 02 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/PixPin_2026-04-02_23-31-00.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+</content:encoded></item><item><title>Claude code命令&amp;快捷键</title><link>https://dqtx.cc/posts/xenia/cc%E5%91%BD%E4%BB%A4%E5%BF%AB%E6%8D%B7%E9%94%AE/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/cc%E5%91%BD%E4%BB%A4%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid><pubDate>Thu, 02 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/PixPin_2026-04-02_23-31-00.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;终端启动命令（Windows）&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;claude --dangerously-skip-permissions 跳过权限校验启动&lt;/li&gt;
@@ -4767,7 +4809,7 @@ happy codex  # 启动Codex
 &lt;p&gt;&lt;strong&gt;如果觉得这篇教程对你有帮助，别忘了点赞+收藏+转发三连呀！关注我，后续分享更多实用技巧、效率工具干货，下次见～ 👋&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;大强远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260306064028188.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-</content:encoded></item><item><title>GLM4.7/MiniMax-M2.1免费渠道</title><link>https://dqtx.cc/posts/xenia/%E4%B8%80%E4%BA%9B%E9%80%81api%E7%9A%84%E5%B9%B3%E5%8F%B0/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/%E4%B8%80%E4%BA%9B%E9%80%81api%E7%9A%84%E5%B9%B3%E5%8F%B0/</guid><pubDate>Fri, 13 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;整理了几个免费使用GLM-4.7与MiniMax M2.1大模型的区域免费渠道，2个可以提供免费的API,一个在线平台，还是两个客户端中可以免费用这两个模型。&lt;/p&gt;
+</content:encoded></item><item><title>一些送API的平台</title><link>https://dqtx.cc/posts/xenia/%E4%B8%80%E4%BA%9B%E9%80%81api%E7%9A%84%E5%B9%B3%E5%8F%B0/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/%E4%B8%80%E4%BA%9B%E9%80%81api%E7%9A%84%E5%B9%B3%E5%8F%B0/</guid><pubDate>Fri, 13 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;整理了几个免费使用GLM-4.7与MiniMax M2.1大模型的区域免费渠道，2个可以提供免费的API,一个在线平台，还是两个客户端中可以免费用这两个模型。&lt;/p&gt;
 &lt;h2&gt;1.英伟达&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.80aj.com/2026/01/06/nvidia-nim-glm4-minimax-guide/&quot;&gt;英伟达NIM平台：免费调用GLM-4.7与MiniMax M2.1指南&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=vSjC6LnMGm4&quot;&gt;GLM-4.7 + MiniMax M2.1 免费 API，媲美直连 Claude Code！&lt;/a&gt;&lt;/p&gt;
@@ -4801,7 +4843,7 @@ happy codex  # 启动Codex
 &lt;/ul&gt;
 &lt;p&gt;如果觉得这篇教程对你有帮助，别忘了&lt;strong&gt;点赞+收藏+转发&lt;/strong&gt;三连呀！关注我，后续分享更多实用技巧、效率工具干货，下次见～ 👋&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;大强远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-</content:encoded></item><item><title>16个自用Claude Skills</title><link>https://dqtx.cc/posts/xenia/%E8%87%AA%E7%94%A8skill%E7%9B%98%E7%82%B9/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/%E8%87%AA%E7%94%A8skill%E7%9B%98%E7%82%B9/</guid><pubDate>Fri, 13 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Claude Skills 作为 AI 助手的功能拓展核心，能精准对接各类场景化需求，让智能协作更高效、更具针对性。以下是安装的16个自用的实用且强大的 Claude Skills。这些Skills覆盖了工作与创作中的关键场景，从基础的笔记优化、项目管理，到高阶的内容生成、设计开发，均能提供专业化支持。&lt;/p&gt;
+</content:encoded></item><item><title>Claude Skills 合集</title><link>https://dqtx.cc/posts/xenia/%E8%87%AA%E7%94%A8skill%E7%9B%98%E7%82%B9/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/%E8%87%AA%E7%94%A8skill%E7%9B%98%E7%82%B9/</guid><pubDate>Fri, 13 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Claude Skills 作为 AI 助手的功能拓展核心，能精准对接各类场景化需求，让智能协作更高效、更具针对性。以下是安装的16个自用的实用且强大的 Claude Skills。这些Skills覆盖了工作与创作中的关键场景，从基础的笔记优化、项目管理，到高阶的内容生成、设计开发，均能提供专业化支持。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260422191135966.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;Skills 目录&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;D:\zhishiku\.claude\skills\&lt;/code&gt;&lt;/p&gt;
@@ -6585,7 +6627,7 @@ function extractFirstImageIgnoreFrontmatter(content) {
 备选方案：  
 - %windir%\Resources\
 &lt;/code&gt;&lt;/pre&gt;
-</content:encoded></item><item><title>2026 必装10个高实用MCP清单</title><link>https://dqtx.cc/posts/xenia/mcp%E6%B8%85%E5%8D%95/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/mcp%E6%B8%85%E5%8D%95/</guid><pubDate>Thu, 24 Apr 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;随着 MCP（Model Context Protocol）生态快速普及，AI 工具不再局限于纯文本对话。&lt;/p&gt;
+</content:encoded></item><item><title>10个MCP清单</title><link>https://dqtx.cc/posts/xenia/mcp%E6%B8%85%E5%8D%95/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/mcp%E6%B8%85%E5%8D%95/</guid><pubDate>Thu, 24 Apr 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;随着 MCP（Model Context Protocol）生态快速普及，AI 工具不再局限于纯文本对话。&lt;/p&gt;
 &lt;p&gt;通过挂载各类 MCP 服务，可让 Claude、Cursor、TRAE 等工具打通本地文件、代码仓库、浏览器、实时搜索、数据库、设计稿等全链路能力，彻底告别手动复制粘贴、信息滞后、答案幻觉等痛点。&lt;/p&gt;
 &lt;p&gt;下面整理社区装机率最高、实用性拉满的10个必装MCP，兼顾日常开发、内容创作、数据处理、自动化办公等多元需求，附核心作用、安装价值与完整可直接复制的配置代码，一键落地部署。&lt;/p&gt;
 &lt;h2&gt;一、十大核心MCP详细介绍&lt;/h2&gt;
