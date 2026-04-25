@@ -5,6 +5,7 @@ tags: []
 category: Xenia
 draft: false
 pinned: false
+image: 
 ---
 
 随着 MCP（Model Context Protocol）生态快速普及，AI 工具不再局限于纯文本对话。
