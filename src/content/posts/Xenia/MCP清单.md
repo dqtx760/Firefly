@@ -1,5 +1,5 @@
 ---
-title: 2026 必装10个高实用MCP清单
+title: 10个MCP清单
 published: 2025-04-24
 tags: []
 category: Xenia

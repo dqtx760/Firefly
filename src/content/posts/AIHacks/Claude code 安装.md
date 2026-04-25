@@ -28,6 +28,19 @@ winget install Git.Git
 npm install -g @anthropic-ai/claude-code
 ```
 
+### skills-link
+
+```
+npm i -g skills-link
+```
+
+```
+skills-link
+```
+
+```
+https://github.com/dqtx760/skills-manage
+```
 ### 启动命令
 ```
 Claude
@@ -146,7 +159,7 @@ openrouter
 ### Claude code命令&快捷键:[点此查看](https://www.dqtx.cc/posts/aihacks/cc/)
 ### Agent Skills 管理方案:[点此查看](https://www.dqtx.cc/posts/aihacks/skills-manage/)
 ### Claude code skill推荐:[点此查看](https://www.notion.so/skill-347351994e408091a13be04d19c62d1e)
-### Claude code MCP:点此查看
+### Claude code MCP:[点此查看](https://www.dqtx.cc/posts/xenia/mcp%E6%B8%85%E5%8D%95/)
 ### 有些有用的cli工具:点此查看
 
 
@@ -158,4 +171,4 @@ openrouter
   "hasCompletedOnboarding": true
 ```
 
-### 启动需要信任该文件
+

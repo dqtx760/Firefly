@@ -14,6 +14,10 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/202604242208
 
 **Skills-Link** 就是来解决这个问题的 —— 让所有 AI 编程工具共享同一个 Skills 文件夹。
 
+**相关文档**
+https://github.com/shanliuling/skills-link/blob/main/README.zh.md
+https://www.npmjs.com/package/skills-link?activeTab=readme
+
 ![image.png](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260424220829071.webp)
 
 
@@ -21,7 +25,6 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/202604242208
 
 - [前置条件](#前置条件)
 - [从零开始完整步骤](#从零开始完整步骤)
-- [一图读懂](#一图读懂)
 - [我的实际情况](#我的实际情况)
 - [多电脑同步](#多电脑同步)
 - [常见问题](#常见问题)
@@ -80,6 +83,7 @@ mklink /D C:\Users\Administrator\.skillshub D:\project2026\skills-manage
 ```bash
 npm install -g skills-link
 ```
+
 
 ### 第五步：初始化配置
 
@@ -142,7 +146,9 @@ git push
 ```
 
 
-## 一图读懂
+## 我的实际情况
+
+### 一图读懂
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
@@ -162,17 +168,15 @@ git push
 
 **一句话解释**：所有 AI 工具的 Skills 目录都指向同一个地方，修改一次，所有工具都生效。
 
-
-## 我的实际情况
-
-| 目录 | 性质 | 存什么 |
-|------|------|--------|
-| `D:\project2026\skills-manage` | 真实目录 | GitHub 仓库，67 个 Skills |
-| `C:\Users\Administrator\.skillshub` | 软链接 | 指向上面那个目录 |
-| `C:\Users\Administrator\.qwen\skills` | 软链接 | 指向中央仓储 |
-| `C:\Users\Administrator\.claude\skills` | 软链接 | 指向中央仓储 |
+| 目录                                      | 性质   | 存什么                   |
+| --------------------------------------- | ---- | --------------------- |
+| `D:\project2026\skills-manage`          | 真实目录 | GitHub 仓库，67 个 Skills |
+| `C:\Users\Administrator\.skillshub`     | 软链接  | 指向上面那个目录              |
+| `C:\Users\Administrator\.qwen\skills`   | 软链接  | 指向中央仓储                |
+| `C:\Users\Administrator\.claude\skills` | 软链接  | 指向中央仓储                |
 
 **软链接就像快捷方式** —— 不占硬盘空间，指向同一个地方。
+
 
 ### 验证方法
 
@@ -183,23 +187,74 @@ dir /a C:\Users\Administrator\.qwen\skills
 - `<SYMLINKD>` = 软链接 ✅
 - `<DIR>` = 本地目录
 
+### 常用命令
 
+交互式启动 — 导入、链接、同步
+```
+skills-link
+```
+
+列出本地 skills（自动去重）
+```
+skills-link list
+```
+
+从 Master 目录删除 skills
+```
+skills-link remove
+```
+
+切换启用的应用
+```
+skills-link app
+```
+
+提交并推送到 GitHub
+```
+skills-link sync
+```
+
+文件变更时自动同步
+```
+skills-link watch
+```
+
+检查符号链接状态
+```
+skills-link health
+```
+
+撤销所有操作，恢复初始状态
+```
+skills-link reset
+```
+
+全局卸载
+```
+npm uninstall skills-link --global
+```
 ## 多电脑同步
 
 假设你在公司电脑配置好了，现在要在家里电脑用。
 
 ### 家里电脑操作步骤
 
-```bash
-# 1. 安装 skills-link
+1. 安装 skills-link
+```
 npm install -g skills-link
+```
 
-# 2. 克隆仓库到本地
-git clone https://github.com/dqtx760/skills-manage C:\Users\Administrator\.skillshub
-
-# 3. 创建各 AI 工具的软链接
+2. 创建各 AI 工具的软链接
+```
 skills-link
-# 选择"创建链接"
+```
+中文→中央仓库选择
+```
+~/AISkills
+```
+github仓库选择
+```
+https://github.com/dqtx760/skills-manage 
 ```
 
 ### 或者更简单的方式

@@ -1,5 +1,5 @@
 ---
-title: 16个自用Claude Skills
+title: Claude Skills 合集
 published: 2026-02-13
 tags:
   - skill

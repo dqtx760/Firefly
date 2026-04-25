@@ -1,5 +1,5 @@
 ---
-title: GLM4.7/MiniMax-M2.1免费渠道
+title: 一些送API的平台
 published: 2026-02-13
 tags:
   - API
