@@ -13,32 +13,32 @@ image:
 
 ## Typora快捷键
 
-| 关键结果           | 语法                                                         |
-| ------------------ | ------------------------------------------------------------ |
-| 源代码模式         | <kbd>Ctrl</kbd>+<kbd>/</kbd>                                 |
-| 引用               | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Q</kbd>                |
-| 超链接             | 复制url，写文字说明 按下<kbd>Ctrl</kbd>+<kbd>K</kbd>         |
-| 给给链接添加文本   | 复制url，按下<kbd>Ctrl</kbd>+<kbd>K</kbd>  写文字说明        |
-| Mermaid            | 英文状态按**三下反引号键**,再按下**空格键**，输入**mer**后，鼠标**点击**mermaid.再按下空格 输入代码 |
-| 代码               | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>K</kbd>                |
-| **行内代码**       | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>`</kbd> （反引号键「数字1左侧」） |
-| **高亮**           | 文字前后加上<mark>  建议添加微信输入法*常用语*    演示：<mark>高亮</mark> |
-| **键盘**           | 文字前后加上</kbd> 建议添加微信输入法*常用语*    或者创建转换智能体 |
-| 目录               | 按下[TOC]+空格+回车，建议在*常用语*添加“[TOC] ”，输入后直接回车得到目录 |
-| 无序               | <kbd>-</kbd>                                                 |
-| 待办               | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd>  [纯语法点此查看](https://blog.csdn.net/2402_82616859/article/details/153197667) |
-| 显示／隐藏侧边栏   | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>L</kbd>                |
-| 切换全屏           | <kbd>F11</kbd>                                               |
-| 减少缩进           | <kbd>Shift</kbd>+<kbd>Tab</kbd>                              |
-| 分割线             | <kbd>---</kbd>                                               |
-| 插入图片           | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd>                |
-| ~~文字删除线~~     | 文字前后加两个<kbd>~~</kbd>波浪号（*中文状态shift+反引号键*） |
-| 使用上一次设置导出 | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>E</kbd>                |
-| 插入表格           | <kbd>Ctrl</kbd>+<kbd>T</kbd>                                 |
-| **下方插入行**     | <kbd>Ctrl</kbd>+<kbd>Enter</kbd>                             |
-| **删除行**         | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Backspace</kbd>*退格键* |
-| 删除列             | 右键 表格--删除列                                            |
-| 移动               | <kbd>Alt</kbd>+上下左右                                      |
+| 关键结果      | 语法                                                                                                                          |
+| --------- | --------------------------------------------------------------------------------------------------------------------------- |
+| 源代码模式     | <kbd>Ctrl</kbd>+<kbd>/</kbd>                                                                                                |
+| 引用        | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Q</kbd>                                                                               |
+| 超链接       | 复制url，写文字说明 按下<kbd>Ctrl</kbd>+<kbd>K</kbd>                                                                                  |
+| 给给链接添加文本  | 复制url，按下<kbd>Ctrl</kbd>+<kbd>K</kbd>  写文字说明                                                                                 |
+| Mermaid   | 英文状态按**三下反引号键**,再按下**空格键**，输入**mer**后，鼠标**点击**mermaid.再按下空格 输入代码                                                            |
+| 代码        | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>K</kbd>                                                                               |
+| **行内代码**  | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>`</kbd> （反引号键「数字1左侧」）                                                             |
+| **高亮**    | 文字前后加上<mark>  建议添加微信输入法*常用语*    演示：<mark>高亮</mark>                                                                          |
+| **键盘**    | 文字前后加上</kbd> 建议添加微信输入法*常用语*    或者创建转换智能体                                                                                    |
+| 目录        | 按下[TOC]+空格+回车，建议在*常用语*添加“[TOC] ”，输入后直接回车得到目录                                                                                |
+| 无序        | <kbd>-</kbd>                                                                                                                |
+| 待办        | <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd>  [纯语法点此查看](https://blog.csdn.net/2402_82616859/article/details/153197667) |
+| 显示／隐藏侧边栏  | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>L</kbd>                                                                               |
+| 切换全屏      | <kbd>F11</kbd>                                                                                                              |
+| 减少缩进      | <kbd>Shift</kbd>+<kbd>Tab</kbd>                                                                                             |
+| 分割线       | <kbd>---</kbd>                                                                                                              |
+| 插入图片      | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>I</kbd>                                                                               |
+| ~~文字删除线~~ | 文字前后加两个<kbd>~~</kbd>波浪号（*中文状态shift+反引号键*）                                                                                   |
+| 使用上一次设置导出 | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>E</kbd>                                                                               |
+| 插入表格      | <kbd>Ctrl</kbd>+<kbd>T</kbd>                                                                                                |
+| **下方插入行** | <kbd>Ctrl</kbd>+<kbd>Enter</kbd>                                                                                            |
+| **删除行**   | <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Backspace</kbd>*退格键*                                                                  |
+| 删除列       | 右键 表格--删除列                                                                                                                  |
+| 移动        | <kbd>Alt</kbd>+上下左右                                                                                                         |
 
 
 

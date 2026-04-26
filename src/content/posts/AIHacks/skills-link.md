@@ -15,7 +15,9 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/202604242208
 **Skills-Link** 就是来解决这个问题的 —— 让所有 AI 编程工具共享同一个 Skills 文件夹。
 
 **相关文档**
+
 https://github.com/shanliuling/skills-link/blob/main/README.zh.md
+
 https://www.npmjs.com/package/skills-link?activeTab=readme
 
 ![image.png](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260424220829071.webp)

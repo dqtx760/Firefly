@@ -61,6 +61,9 @@ winget install Git.Git
 get clone https://github.com/dqtx760/obsidian-vault-template
 ```
 
+```
+get clone https://github.com/iamzhihuix/obsidian-ai-vault-template
+```
 ###  Claudian出现报错
 ```
 Claude code在终端使用正常， 但在Obsidian的插件中Claudian对话异常,帮我排除下原因

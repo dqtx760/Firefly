@@ -15,95 +15,108 @@ Claude Skills 作为 AI 助手的功能拓展核心，能精准对接各类场�
 ![image.png](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260422191135966.webp)
 
 
-## Skills 目录
 
-`D:\zhishiku\.claude\skills\`
+## 我的实际情况
 
+我有2好几台电脑，每个电脑，安装了数十个AI agent，有1000多个skill，所以这些skill的管理如果不借助工具的话，是非常难以管理的。我使用的工具是：[Skills-Link](https://www.dqtx.cc/posts/aihacks/skills-link/)
 
+我的安装的skill已开源github：[点此查看](https://github.com/dqtx760/skills-manage)
 
-**⚠️ tempmyskill_temp 目录说明**
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│                         本地电脑                                    │
+│                                                                     │
+│   .qwen/skills ──┐                                                 │
+│   .claude/skills ──┤     ┌──────────────────┐                       │
+│   .codex/skills ──┤     │  .skillshub      │◀─── 软链接           │
+│   .trae/skills ───┼────▶│  (D:\project2026 │                       │
+│   ...            │     │   \skills-manage)│                       │
+│                   │     └──────────────────┘                       │
+│                              │                                      │
+│                              ▼ GitHub                              │
+│                   https://github.com/dqtx760/skills-manage         │
+└─────────────────────────────────────────────────────────────────────┘
+```
 
-**目录路径**：`D:\zhishiku\.claude\skills\tempmyskill_temp\`
+**一句话解释**：所有 AI 工具的 Skills 目录都指向同一个地方，修改一次，所有工具都生效。
 
-**是什么**：这是一个**临时技能仓库**，包含 28 个从 GitHub 下载的技能项目，**不是主 skills 的一部分**。
+| 目录                                      | 性质   | 存什么                     |
+| --------------------------------------- | ---- | ----------------------- |
+| `D:\project2026\skills-manage`          | 真实目录 | GitHub 仓库，1000 个 Skills |
+| `C:\Users\Administrator\.skillshub`     | 软链接  | 指向上面那个目录                |
+| `C:\Users\Administrator\.qwen\skills`   | 软链接  | 指向中央仓储                  |
+| `C:\Users\Administrator\.claude\skills` | 软链接  | 指向中央仓储                  |
+|                                         |      |                         |
 
-**包含内容**：
-
-- ai-writing-assistant - AI 写作助手
-- mcp-builder - MCP 服务器开发指南
-- skill-creator - Skill 创建工具
-- ...还有 25 个其他技能
-
-**状态**：
-
-- ✅ 有完整的 SKILL.md 定义
-- ❌ 未整合到主 skills 目录
-- ⚠️ **需要手动移动有用的 skills 到主目录才能使用**
-
-
-
-## 已安装 Skills 列表
-
-| #   | Skill 名称                      | 功能说明                 | 使用文档                                                         |
-| --- | ----------------------------- | -------------------- | ------------------------------------------------------------ |
-| 1   | **baoyu-article-illustrator** | 文章配图生成               | [点此查看](baoyu-article-illustrator.md) |
-| 2   | **baoyu-url-to-markdown**     | URL 转 Markdown       | [点此查看](baoyu-url-to-markdown.md)         |
-| 3   | **image**                     | AI 图片生成（通义千问）        | [点此查看](image.md)                                         |
-| 4   | **md2wechat-skill**           | Markdown 转微信格式       | [点此查看](md2wechat-skill.md)                     |
-| 5   | **nano-banana-ppt**           | PPT 生成               | [点此查看](nano-banana-ppt.md)                     |
-| 6   | **notebooklm**                | NotebookLM 自动化       | [点此查看](notebooklm-py.md)                         |
-| 7   | **obsidian-skills**           | Obsidian 相关技能        | [点此查看](obsidian-skills.md)                     |
-| 8   | **planning-with-files**       | 文件式项目规划              | [点此查看](planning-with-files.md)             |
-| 9   | **prompt-skills**             | 提示词技能                | [点此查看](skill-prompt-generator.md)       |
-| 10  | **ui-skills**                 | UI/UX 技能集            | [点此查看](ui-skills.md)                                 |
-| 11  | **ui-ux-pro-max**             | UI/UX 专业设计           | [点此查看](ui-ux-pro-max-skill.md)             |
-| 12  | **url-to-markdown**           | URL 转 Markdown（另一版本） | [点此查看](url-to-markdown.md)                     |
-| 13  | **youtube-clipper-skill**     | YouTube 视频智能剪辑       | [点此查看](Youtube-clipper-skill.md)         |
-| 14  | **youtube-transcript-cn**     | YouTube 字幕转中文        | [点此查看](youtube-transcript-cn.md)         |
-| 15  | **ai-writing-assistant**      | AI 写作助手（6 种方法）       | [点此查看](ai-writing-assistant.md)           |
-| 16  | **mcp-builder**               | MCP 服务器开发指南          | [点此查看](mcp-builder.md)                             |
+**软链接就像快捷方式** —— 不占硬盘空间，指向同一个地方。
 
 
 
-## 按类别分组
+## 我推荐的Skills列表
 
-### 📝 内容创作
-- baoyu-article-illustrator - 文章配图
-- baoyu-url-to-markdown / url-to-markdown - URL 转 Markdown
-- md2wechat-skill - 微信格式转换
-- ai-writing-assistant - 写作助手
+| 功能              | skill开源地址                                                                                                                                                         | 备注    | 使用&效果                                                                                   |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----- | --------------------------------------------------------------------------------------- |
+| PPT Skill       | [alchaincyf/huashu-design](https://github.com/alchaincyf/huashu-design)                                                                                           | 花叔    | [效果示例](https://skill.huasheng.ai/)                                                      |
+| PPT skill       | [zarazhangrui/frontend-slides](https://github.com/zarazhangrui/frontend-slides)                                                                                   | 张咋啦   | [点此查看](https://x.com/zarazhangrui/status/2016337615843434646)                           |
+| PPT skill       | [op7418/guizang-ppt-skill](https://github.com/op7418/guizang-ppt-skill)                                                                                           | 歸藏    | [点此查看](https://x.com/op7418/status/2048245950813282481)                                 |
+| PPT skill       | [helloianneo/ian-handdrawn-ppt](https://github.com/helloianneo/ian-handdrawn-ppt)                                                                                 | 手绘风   | [点此查看](https://x.com/ianneo_ai/status/2048047226782670931)                              |
+| 文章配图            | [baoyu-article-illustrator](https://github.com/JimLiu/baoyu-skills/tree/main/skills/baoyu-article-illustrator)                                                    | 宝玉    | 点此查看                                                                                    |
+| 生成信息卡           | [ljg-card](https://github.com/lijigang/ljg-skills/tree/master/skills/ljg-card)                                                                                    | 李继刚   | [效果示例](https://x.com/berryxia/status/2036963670014779468)                               |
+| 跨平台搜索           | [Agent-Reach](https://github.com/Panniantong/Agent-Reach)                                                                                                         |       |                                                                                         |
+| chrome 自动化      | [Web Access](https://github.com/eze-is/web-access)                                                                                                                | -泽Eze | [点此查看](https://www.dqtx.cc/posts/aihacks/web-access/)                                   |
+| skill 落地页       | [skill-site-generator](https://github.com/eze-is/skill-site-generator)                                                                                            | -泽Eze | [效果示例](https://eze-is.github.io/skill-site-generator/)                                  |
+| 前端设计            | [frontend-design]([https://github.com/anthropics/skills/tree/main/skills/frontend-design](https://github.com/anthropics/skills/tree/main/skills/frontend-design)) |       |                                                                                         |
+| 复刻大厂ui设计        | [VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md)                                                                                     |       | [使用帮助](https://mp.weixin.qq.com/s/n0PNmmeBENxj5h2A3guWfg)                               |
+| 网站审计            | [Website-Audit](https://github.com/MarcinKilarski/Website-Audit)                                                                                                  |       |                                                                                         |
+| 项目规划            | [planning-with-files](https://github.com/OthmanAdi/planning-with-files)                                                                                           |       | 点此查看                                                                                    |
+| X导师.skill       | [alchaincyf/x-mentor-skill](https://github.com/alchaincyf/x-mentor-skill)                                                                                         | 花叔    | 点此查看                                                                                    |
+| 女娲.skill        | [alchaincyf/nuwa-skill](https://github.com/alchaincyf/nuwa-skill)                                                                                                 | 花叔    | 点此查看                                                                                    |
+| 私董会             | [advisory-board](https://github.com/Backtthefuture/huangshu/tree/main/skills/advisory-board)                                                                      | 黄叔    |                                                                                         |
+| Obsidian可视化     | [obsidian-visual-skills](https://github.com/axtonliu/axton-obsidian-visual-skills)                                                                                | Axton | [使用说明](https://github.com/axtonliu/axton-obsidian-visual-skills/blob/main/README_CN.md) |
+| 多Agent协调工作      | [axtonliu/ai-pair](https://github.com/axtonliu/ai-pair)                                                                                                           | Axton | 点此查看                                                                                    |
+| 记忆持久化           | [Claude-mem]([https://github.com/thedotmack/claude-mem](https://github.com/thedotmack/claude-mem))                                                                |       | 点此查看                                                                                    |
+| 帮你创建技能          | [Skill-Creator]([https://claude.com/plugins/skill-creator](https://claude.com/plugins/skill-creator))                                                             |       |                                                                                         |
+| 推送顶尖信息到Telegram | [follow-builders](https://github.com/zarazhangrui/follow-builders/blob/main/README.zh-CN.md)                                                                      | 张咋啦   |                                                                                         |
+| 自动纠正记录          | [self-improving-agent](https://github.com/peterskoett/self-improving-agent)                                                                                       |       |                                                                                         |
+| 去除AI味           | [talk-normal](https://github.com/hexiecs/talk-normal/blob/main/README_CN.md)                                                                                      |       |                                                                                         |
+| 公众号自动化写作        | [wewrite](https://github.com/oaker-io/wewrite)                                                                                                                    |       |                                                                                         |
+| 自媒体写作           | [writing-assistant-skill](https://github.com/Ceeon/writing-assistant-skill)                                                                                       |       |                                                                                         |
 
-### 🖼️ 图片/视觉
-- image - AI 图片生成
+[Notion备份](https://www.notion.so/skill-347351994e408091a13be04d19c62d1e)
 
-### 📹 视频处理
-- youtube-clipper-skill - 视频剪辑
-- youtube-transcript-cn - 字幕提取
+[10个面向前端 /产品/ UI的 Agent Skills](https://x.com/shao__meng/status/2035316234271764654)
 
-### 🛠️ 生产力
-- notebooklm - NotebookLM 自动化
-- planning-with-files - 项目规划
-- prompt-skills - 提示词管理
 
-### 🎨 UI/UX
-- ui-skills - UI 技能集
-- ui-ux-pro-max - UI 专业设计
+## 六个Skill聚合战
 
-### 🔧 开发工具
-- mcp-builder - MCP 服务器开发指南
-- obsidian-skills - Obsidian 相关
+https://mcpmarket.com/zh/tools/skills/leaderboard
 
----
+https://skillhub.cn/#
 
-## 使用方式
+https://skills.pub/zh
+
+https://skillsmp.com/zh
+
+https://skill0.io/zh
+
+https://skills.sh/
+
+https://agentskill.sh/
+
+https://www.aitmpl.com/
+
+https://claudemarketplaces.com/
+
+https://clawhub.ai/skills?sort=downloads  --小龙虾专用
+
+## 自然语言使用示例
 
 在 Claude Code 中直接对话使用，例如：
 
-- "请用 baoyu-article-illustrator 为这篇文章配图"
-- "请用 image 生成一张猫的图片"
-- "请用 ai-writing-assistant 帮我写一篇技术文章"
+- 请用 baoyu-article-illustrator 为这篇文章配图
+- 请用 image 生成一张猫的图片
+- 请用 ai-writing-assistant 帮我写一篇技术文章
 
----
 
 ## 更新日志
 
@@ -111,9 +124,4 @@ Claude Skills 作为 AI 助手的功能拓展核心，能精准对接各类场�
 - 2026-02-12: 更新本总览文档，添加双联到使用教程
 
 
-**以上，既然看到这里了，如果你觉得内容不错，随手点个赞、在看、转发三连吧！如果想第一时间收到推送，也可以给我点上关注或星标⭐**～
-
-
-
-谢谢你看我的文章，**远程服务：742112.xyz**
 
