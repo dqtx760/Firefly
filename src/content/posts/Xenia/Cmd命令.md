@@ -79,3 +79,16 @@ image:
 
 
 [快捷键备忘录](https://hotkeycheatsheet.com/zh) 
+
+
+隐藏启动信息，目标加
+```
+-NoLogo
+```
+
+字体：MS Gothic
+
+背景色RGB
+(0, 55, 60)
+
+![image.png](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260426201826440.webp)

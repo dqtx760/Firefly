@@ -115,15 +115,21 @@ AI 生成 PPT/幻灯片
 
 ## 三.**常用快捷键**
 
-1. 打开设置：`Ctrl + ,`
-2. 打开主题切换面板：`Ctrl + K + Ctrl + T`
-3. 打开扩展插件面板：`Ctrl + Shift + X`
-4. 打开Agent面板：`Ctrl + Shift + /`
-5. 打开文件夹：`Ctrl + O`
-6. 快速打开文件：`Ctrl + P`
-7. 打开命令面板（全能入口）：`Ctrl + Shift + P`
-8. 打开快捷键配置：`Ctrl + K + Ctrl + S`
-9. 新建编辑器窗口：`Ctrl + Shift + N`
-10. 新建对话：`Ctrl + N`
-11. 查看 AI 聊天历史：`Ctrl + Shift + H`
-12. 预览mrkdown：`Ctrl-Shift-V`
+| 功能操作 | 快捷键 |
+| ---- | ---- |
+| 打开设置 | Ctrl + , |
+| 打开主题切换面板 | Ctrl + K + Ctrl + T |
+| 打开扩展插件面板 | Ctrl + Shift + X |
+| 打开Agent面板 | Ctrl + Shift + / |
+| 打开命令面板 | Ctrl + Shift + P |
+| 打开快捷键配置 | Ctrl + K + Ctrl + S |
+| 打开文件夹 | Ctrl + O |
+| 快速打开文件 | Ctrl + P |
+| 查看 AI 聊天历史 | Ctrl + Shift + H |
+| 预览 Markdown | Ctrl + Shift + V |
+| 打开对话线程侧边栏 | Ctrl + Alt + J |
+| 显示/隐藏侧边栏 | Ctrl + B |
+| 打开终端 | Ctrl + ` |
+| 打开 Git 面板 | Ctrl + Shift + G |
+| 新建编辑器窗口 | Ctrl + Shift + N |
+| 新建对话 | Ctrl + N |
