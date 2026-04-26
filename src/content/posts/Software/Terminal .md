@@ -16,16 +16,32 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-202604
 ![img](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260306070237226.webp)
 
 ## 一、下载与安装
+### winget方式
 
-1. 下载地址：https://github.com/microsoft/terminal/releases
-2. 解压文件到指定安装目录（示例）：`D:\software\terminal-1.23.20211.0`
+```
+winget install Microsoft.WindowsTerminal
+```
+
+```
+winget upgrade Microsoft.WindowsTerminal
+```
+
+```
+winget uninstall Microsoft.WindowsTerminal
+```
+### releases方式
+1. 下载地址：[点此查看](https://github.com/microsoft/terminal/releases)
+
+2. 解压文件到指定安装目录（示例）：`
+D:\software\terminal-1.23.20211.0`
+
 3. （可选）将解压目录添加到**系统环境变量**，实现全局快速调用
 
-双击目录内的 `WindowsTerminal.exe`，即可启动程序
+双击目录内的 `Wt.exe`，即可启动程序
 
 ![img](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260306064800835.webp)
 
-## 二、核心配置（JSON 文件）
+## 二、核心配置
 
 点击界面中的「设置」，选择「打开 JSON 文件」；
 
@@ -124,11 +140,14 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-202604
 }
 ```
 
-## 三、集成右键菜单（快速打开）
+## 三、集成右键菜单
 
 将 Windows Terminal 添加到鼠标右键菜单，可实现任意目录下一键打开终端，大幅提升操作便捷性，步骤如下：
 
-1. 新建文本文档，粘贴以下注册表内容 **（需将路径修改为你的 Terminal 实际安装路径）**：
+> 需将路径修改为你的 Terminal 实际安装路径
+> 编码选择**ANSI**
+
+### Terminal右键.reg
 
 ```
 Windows Registry Editor Version 5.00
@@ -148,13 +167,59 @@ Windows Registry Editor Version 5.00
 @="D:\\software\\terminal-1.23.20211.0\\WindowsTerminal.exe -d \"%1\""
 ```
 
-2. 点击文本文档「另存为」，编码选择**ANSI**，文件后缀修改为`.reg`；
+### 附：cmd右键.reg
 
-3. 双击保存后的 reg 文件，依次点击「是」「确定」，完成注册表导入即可生效。
+```
+Windows Registry Editor Version 5.00
 
+; 桌面/文件夹空白右键
+[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenCMD]
+@="打开Cmd"
+"Icon"="cmd.exe,0"
 
+[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenCMD\command]
+@="cmd.exe"
 
-## 四、配置美化主题（Oh My Posh）
+; 文件夹本体右键
+[HKEY_CLASSES_ROOT\Directory\shell\OpenCMD]
+@="打开Cmd"
+"Icon"="cmd.exe,0"
+
+[HKEY_CLASSES_ROOT\Directory\shell\OpenCMD\command]
+@="cmd.exe /k cd /d \"%1\""
+```
+
+### 附：bash右键.reg
+```
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenBash]
+@="打开Bash"
+"Icon"="C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenBash\command]
+@="\"C:\\Program Files\\Git\\git-bash.exe\" --cd=\"%V\""
+
+[HKEY_CLASSES_ROOT\Directory\shell\OpenBash]
+@="打开Bash"
+"Icon"="C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico"
+
+[HKEY_CLASSES_ROOT\Directory\shell\OpenBash\command]
+@="\"C:\\Program Files\\Git\\git-bash.exe\" --cd=\"%1\""
+```
+
+一键删除注册表示例：
+
+```
+Windows Registry Editor Version 5.00
+
+[-HKEY_CLASSES_ROOT\Directory\Background\shell\OpenCMD]
+[-HKEY_CLASSES_ROOT\Directory\shell\OpenCMD]
+```
+
+## 四、美化配置
+
+需要借助Oh My Posh实现，这是是一个用来美化终端界面的工具，它能让你的命令行看起来更漂亮，同时还能显示 Git 状态、系统资源等实用信息。
 
 ### 1. 下载安装
 
@@ -182,7 +247,6 @@ oh-my-posh init pwsh --config $env:POSH_THEMES_PATH\M365Princess.omp.json | Invo
 
 - 重启 Windows Terminal，主题即可生效。
 
-### 
 
 ### 4.设置启动大小
 
@@ -194,9 +258,7 @@ oh-my-posh init pwsh --config $env:POSH_THEMES_PATH\M365Princess.omp.json | Invo
 
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260419202153089.webp)
 
-## 五、常见问题
-
-### 1. 如何隐藏cmd/ PowerShell启动提示信息
+### 隐藏启动提示信息
 
 在Terminal设置-配置文件，分别在命令提示符/PowerShel
 
@@ -208,11 +270,11 @@ powershell.exe -nologo
 
 ![img](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260306070410108.webp)
 
-### 2.  如何安装专属字体（AdwaitaMono Nerd Font）
+### 安装专属字体
 
 终端配置中需用到 AdwaitaMono Nerd Font 字体，下载地址：[Nerd Fonts 官方下载页](https://www.nerdfonts.com/font-downloads?utm_source=chatgpt.com)，下载后解压安装即可。
 
-### 3. 代码自动补全配置
+###  代码自动补全
 
 打开 Windows Terminal
 
@@ -232,7 +294,7 @@ Set-PSReadLineOption -EditMode Windows
 Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
 ```
 
-手动添加 Git Bash 配置
+### 手动添加 Git Bash 配置
 
 Windows Terminal → 下拉箭头 →「设置」→「添加新配置文件」→「新建空配置文件」
 
@@ -248,13 +310,15 @@ Windows Terminal → 下拉箭头 →「设置」→「添加新配置文件」�
 >
 > 保存，重启终端即可。
 
-### 4.拖动文件形成目录形成不了文件目录
+## 五.常见问题
+
+### 拖动文件形成目录形成不了文件目录
 
 解决办法：MFCMouseEffect中添加手势映射：左键拖拽向→=复制
 
 操作的时间，左键选中一个文件，向右拖拽在后右键单击
 
-### 5. Ctrl+V 无法在粘贴图片
+###  Ctrl+V 无法在粘贴图片
 
 在 Windows Terminal 中使用 Kimi Code CLI 时，Ctrl+V 快捷键无法粘贴剪贴板中的图片。这是因为 Windows Terminal 默认会拦截 Ctrl+V 用于自身的粘贴操作，导致该快捷键无法传递给 Kimi CLI。
 
@@ -268,7 +332,7 @@ Windows Terminal → 下拉箭头 →「设置」→「添加新配置文件」�
 @_kb.add("escape", "v", eager=True)  # Alt+V
 ```
 
-### 6. Terminal中启动了Claude code 右键不能自动粘贴
+### 启动Claude code 右键不能自动粘贴
 
 开启  NO_FLICKER 模式（无闪烁模式）会造成这种情况，编辑 Claude Code 的配置文件夹 -/.claude/settings.json，找到
 
