@@ -236,6 +236,8 @@
 &lt;li&gt;&lt;a href=&quot;https://claude.com/product/claude-code&quot;&gt;Claude code&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://qwen.ai/qwencode&quot;&gt;Qwen code&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://openai.com/zh-Hans-CN/codex/&quot;&gt;codex&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://zed.dev/&quot;&gt;Zed&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://opencode.ai/&quot;&gt;Opencode&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://pinchbench.com/&quot;&gt;大模型排行榜&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://relaypulse.top/&quot;&gt;全球大模型稳定性监测&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -742,84 +744,57 @@ $env:ANTHROPIC_API_KEY=&quot;你的API Key&quot;
 https://github.com/shanliuling/skills-link/blob/main/README.zh.md
 https://www.npmjs.com/package/skills-link?activeTab=readme&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260424220829071.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;目录&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;#%E5%89%8D%E7%BD%AE%E6%9D%A1%E4%BB%B6&quot;&gt;前置条件&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%AE%8C%E6%95%B4%E6%AD%A5%E9%AA%A4&quot;&gt;从零开始完整步骤&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#%E6%88%91%E7%9A%84%E5%AE%9E%E9%99%85%E6%83%85%E5%86%B5&quot;&gt;我的实际情况&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#%E5%A4%9A%E7%94%B5%E8%84%91%E5%90%8C%E6%AD%A5&quot;&gt;多电脑同步&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98&quot;&gt;常见问题&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;前置条件&lt;/h2&gt;
-&lt;p&gt;在开始之前，你需要准备：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;GitHub 账号&lt;/strong&gt; - 没有的话去 &lt;a href=&quot;https://github.com&quot;&gt;github.com&lt;/a&gt; 注册&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;创建一个 GitHub 仓库&lt;/strong&gt; - 命名为 &lt;code&gt;skills-manage&lt;/code&gt;（可以改成其他名字）&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;本地安装 Git&lt;/strong&gt; - Windows 下载 &lt;a href=&quot;https://gitforwindows.org/&quot;&gt;Git for Windows&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;可选&lt;/strong&gt;：如果你想和我一样用软链接方式，需要：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;创建 &lt;code&gt;D:\project2026\skills-manage&lt;/code&gt; 目录&lt;/li&gt;
-&lt;li&gt;在 &lt;code&gt;C:\Users\Administrator\&lt;/code&gt; 创建软链接 &lt;code&gt;.skillshub&lt;/code&gt; 指向它&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;从零开始完整步骤&lt;/h2&gt;
-&lt;h3&gt;第一步：本地创建文件夹&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;# 在 D 盘创建文件夹（名字随意）
-mkdir D:\project2026\skills-manage
-cd D:\project2026\skills-manage
-git init
+&lt;h2&gt;快速上手&lt;/h2&gt;
+&lt;h3&gt;安装skills-link&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;npm i -g skills-link
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;第二步：推送到 GitHub&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;# 关联你的 GitHub 仓库（换成你自己的仓库地址）
-git remote add origin https://github.com/你的用户名/skills-manage.git
+&lt;h3&gt;初始化配置&lt;/h3&gt;
+&lt;p&gt;交互式引导命令&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;skills-link
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;PS.默认&lt;code&gt;C:\Users\Administrator\AISkills&lt;/code&gt;做为中央仓库，也可以填写其他自定义路径作为中央仓。工具会自动创建Agent软连接执行同步&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260426004906504.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;配置文件&lt;/h3&gt;
+&lt;p&gt;编辑&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;C:\Users\Administrator\config.yaml
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;中央仓库masterDir 也可以在这里进行后续更换，另外有些skill目前他扫描不到，你需要手动添加后在运行命令比如zed中使用opencode插件skill目录：
+C:\Users\Administrator.config\opencode\skills&lt;br /&gt;
+她是扫描不到的，你就需要手动添加：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;language: zh
+masterDir: ~/AISkills
 
-# 推送
-git add .
-git commit -m &quot;initial commit&quot;
-git push -u origin main
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;第三步：创建软链接（可选，推荐）&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;# 删除可能存在的旧文件夹（如果有）
-rmdir C:\Users\Administrator\.skillshub
-
-# 创建软链接
-mklink /D C:\Users\Administrator\.skillshub D:\project2026\skills-manage
-&lt;/code&gt;&lt;/pre&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：如果不创建软链接，工具会用自己的默认文件夹 &lt;code&gt;C:\Users\Administrator\AISkills&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3&gt;第四步：安装 skills-link&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;npm install -g skills-link
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;第五步：初始化配置&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;skills-link setup
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;这步会让你选择：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;中央仓储目录（填 &lt;code&gt;.skillshub&lt;/code&gt; 或 &lt;code&gt;D:\project2026\skills-manage&lt;/code&gt;）&lt;/li&gt;
-&lt;li&gt;语言（选中文）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;第六步：配置文件（关键！）&lt;/h3&gt;
-&lt;p&gt;编辑 &lt;code&gt;C:\Users\Administrator\config.yaml&lt;/code&gt;，确保 masterDir 指向软链接：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;masterDir: C:\Users\Administrator\.skillshub  # 必须是软链接！
-language: zh
 git:
-  enabled: false  # 我建议手动推送，不开自动
-  remote: &quot;&quot;
-  autoPush: false
+  enabled: true
+  remote: https://github.com/you/skills.git
+  autoPush: true
+
+watch:
+  enabled: false
+  debounceMs: 3000
+
+apps:
+  - name: Claude Code
+    skillsPath: ~/.claude/skills
+    enabled: true
+  - name: Cursor
+    skillsPath: ~/.cursor/skills
+    enabled: true
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;第七步：添加 Skills&lt;/h3&gt;
-&lt;p&gt;把想用的 skills 放到 &lt;code&gt;D:\project2026\skills-manage&lt;/code&gt; 里。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;⚠️ 重要：让 AI 安装 skill 时，一定要指定安装到中央仓库目录！&lt;/strong&gt;&lt;/p&gt;
+&lt;h3&gt;添加新Skills&lt;/h3&gt;
+&lt;p&gt;把想用的 skills 放到 &lt;code&gt;C:\Users\Administrator\AISkills&lt;/code&gt;
+`
+&lt;strong&gt;⚠️ 重要：让 AI 安装 skill 时，一定要指定安装到中央仓库目录！&lt;/strong&gt;
+示例&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;# 先 cd 到中央仓库再安装
-cd C:\Users\Administrator\.skillshub
+cd C:\Users\Administrator\AISkills
 # 然后再让 AI 安装 skill
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;否则 skill 会安装到 Agent 的本地目录，不会同步到其他工具！&lt;/p&gt;
 &lt;p&gt;然后运行 &lt;code&gt;skills-link&lt;/code&gt;，会分两步：&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;第一步：导入&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;扫描中央仓库，发现新 skills&lt;/li&gt;
+&lt;li&gt;扫描中央仓库，发现新 skills，git同步已启用&lt;/li&gt;
 &lt;li&gt;显示&quot;已导入 xxx&quot;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;第二步：创建链接&lt;/strong&gt;&lt;/p&gt;
@@ -827,18 +802,52 @@ cd C:\Users\Administrator\.skillshub
 &lt;li&gt;为各 Agent 的 skills 目录创建软链接&lt;/li&gt;
 &lt;li&gt;这样 Qwen Code、Claude Code 才能看到这个 skill&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;第八步：推送到 GitHub&lt;/h3&gt;
+&lt;h3&gt;推送到 GitHub&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt; skills-link sync
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这里注意：需要配置github用户身份，没有配置你的用户名和邮箱，无法识别提交者身份，所以拒绝提交代码，只需要两行命令就能解决。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git config --global user.name &quot;My Name&quot;
+git config --global user.email &quot;myemail@example.com&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;运行以下命令查看 Git 配置：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git config --list
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260426012834135.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;参考方式&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;# 方式1：双击运行
 D:\project2026\skills-manage\push.bat
 
 # 方式2：命令行
-cd C:\Users\Administrator\.skillshub
+cd C:\Users\Administrator\AISkills
+git init
 git add .
 git commit -m &quot;新增 xxx skill&quot;
 git push
+
+# 方式3：命令行
+skills-link sync
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;多电脑同步&lt;/h2&gt;
+&lt;p&gt;假设你在公司电脑配置好了，现在要在家里电脑用。&lt;/p&gt;
+&lt;h3&gt;安装 skills-link&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;npm install -g skills-link
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;创建各 AI 工具的软链接&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;skills-link
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;中文→中央仓库选择(默认)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;~/AISkills
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;github仓库填写&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;https://github.com/dqtx760/skills-manage 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;会自动拉去仓库skill到中央仓库~/AISkills，然后为应用路径创建软链接，&lt;/p&gt;
+&lt;p&gt;这台电脑想要同步github也可以执行
+⚠️需要配置github用户身份&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;skills-link sync
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;我的实际情况&lt;/h2&gt;
-&lt;h3&gt;一图读懂&lt;/h3&gt;
+&lt;h3&gt;读懂原理&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;┌─────────────────────────────────────────────────────────────────────┐
 │                         本地电脑                                    │
 │                                                                     │
@@ -906,10 +915,10 @@ git push
 &lt;p&gt;切换启用的应用&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;skills-link app
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;提交并推送到 GitHub&lt;/p&gt;
+&lt;p&gt;推送github&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;skills-link sync
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;文件变更时自动同步&lt;/p&gt;
+&lt;p&gt;文件监听&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;skills-link watch
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;检查符号链接状态&lt;/p&gt;
@@ -921,108 +930,6 @@ git push
 &lt;p&gt;全局卸载&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;npm uninstall skills-link --global
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;多电脑同步&lt;/h2&gt;
-&lt;p&gt;假设你在公司电脑配置好了，现在要在家里电脑用。&lt;/p&gt;
-&lt;h3&gt;家里电脑操作步骤&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;安装 skills-link&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;npm install -g skills-link
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol&gt;
-&lt;li&gt;创建各 AI 工具的软链接&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;skills-link
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;中文→中央仓库选择&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;~/AISkills
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;github仓库选择&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;https://github.com/dqtx760/skills-manage 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;或者更简单的方式&lt;/h3&gt;
-&lt;p&gt;如果不需要软链接，直接：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# 1. 安装 skills-link
-npm install -g skills-link
-
-# 2. 初始化
-skills-link setup
-# 中央仓储目录填：D:\project2026\skills-manage
-
-# 3. 拉取代码
-cd D:\project2026\skills-manage
-git pull
-&lt;/code&gt;&lt;/pre&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：不同电脑的 Agent 路径可能不同，比如 Qwen 在 &lt;code&gt;C:\Users\Administrator\.qwen\skills&lt;/code&gt;，Claude Code 在 &lt;code&gt;C:\Users\Administrator\.claude\skills&lt;/code&gt;。用 &lt;code&gt;skills-link health&lt;/code&gt; 可以检查链接状态。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2&gt;常见问题&lt;/h2&gt;
-&lt;h3&gt;Q1：一定要用软链接吗？&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;不是必须&lt;/strong&gt;，但推荐。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;用软链接：所有 Agent 共享 &lt;code&gt;D:\project2026\skills-manage&lt;/code&gt; 这一个文件夹&lt;/li&gt;
-&lt;li&gt;不用软链接：工具会用默认的 &lt;code&gt;C:\Users\Administrator\AISkills&lt;/code&gt; 文件夹&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Q2：config.yaml 里的 masterDir 怎么填？&lt;/h3&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;情况&lt;/th&gt;
-&lt;th&gt;masterDir 应该填&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;用软链接&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;C:\Users\Administrator\.skillshub&lt;/code&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;不用软链接&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;D:\project2026\skills-manage&lt;/code&gt;（或其他你指定的目录）&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;重要&lt;/strong&gt;：填错了会导致 skills 不同步！&lt;/p&gt;
-&lt;h3&gt;Q3：安装 skill 后其他 Agent 看不到？&lt;/h3&gt;
-&lt;p&gt;这是两个概念没分清：&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;步骤&lt;/th&gt;
-&lt;th&gt;做什么&lt;/th&gt;
-&lt;th&gt;目的地&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;1. 安装 skill&lt;/td&gt;
-&lt;td&gt;把 skill 文件夹复制进去&lt;/td&gt;
-&lt;td&gt;&lt;code&gt;.skillshub&lt;/code&gt;（中央仓储）&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;2. 创建链接&lt;/td&gt;
-&lt;td&gt;让各个 AI 工具能访问到这个 skill&lt;/td&gt;
-&lt;td&gt;各 Agent 的 skills 目录&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;比如&lt;/strong&gt;：你想用&quot;飞书&quot;这个 skill&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;先把 &lt;code&gt;lark-im&lt;/code&gt; 文件夹复制到 &lt;code&gt;D:\project2026\skills-manage&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;然后运行 &lt;code&gt;skills-link&lt;/code&gt;，选择&quot;创建链接&quot;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;这样 Qwen Code 和 Claude Code 才能看到它。&lt;/p&gt;
-&lt;h3&gt;Q4：删除 skill 怎么操作？&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;删除 &lt;code&gt;.skillshub&lt;/code&gt; 里的内容&lt;/li&gt;
-&lt;li&gt;执行 &lt;code&gt;push.bat&lt;/code&gt; 推送&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：不要从 Agent 目录删除，只删了链接，源文件还在。&lt;/p&gt;
-&lt;h3&gt;Q5：另一台电脑同步后看不到 skills？&lt;/h3&gt;
-&lt;p&gt;检查软链接是否创建成功：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;skills-link health
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;如果有红色的错误信息，运行 &lt;code&gt;skills-link&lt;/code&gt; 重新创建链接。&lt;/p&gt;
 </content:encoded></item><item><title>英伟达免费 API 申请流程</title><link>https://dqtx.cc/posts/aihacks/nvidia-api%E7%94%B3%E8%AF%B7/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/nvidia-api%E7%94%B3%E8%AF%B7/</guid><pubDate>Thu, 23 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;英伟达免费 API 一年（12个月）使用权，可以直接调用 GLM 5.1、Gemma 4、MiniMax 等 193 款主流大模型，这羊毛必须薅！&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260423232339562.webp&quot; alt=&quot;yingwen&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;01.访问官方网站&lt;/h2&gt;
@@ -2062,6 +1969,232 @@ exit
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260414141249639.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;很多人可能没注意到：在桌面或任意文件夹里，想通过 Listary 搜索、打开文件时，不用先双击 Ctrl，直接敲键盘输入关键词就行，能省下不少操作时间。&lt;/p&gt;
 &lt;p&gt;写完文章，直接敲键盘输入gt，然后回车&lt;/p&gt;
+</content:encoded></item><item><title>Listary完全使用指南！</title><link>https://dqtx.cc/posts/workflow/listary%E8%BF%9B%E9%98%B6/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/listary%E8%BF%9B%E9%98%B6/</guid><pubDate>Sun, 12 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Listary是一款知名的效率工具，以用户友好，使用方式简单而备受好评。&lt;/p&gt;
+&lt;p&gt;单论文件搜索，Listary 和 Everything 属于同一梯队，在搜索速度和内存占用上秒杀任何其他软件。&lt;/p&gt;
+&lt;p&gt;任何文件，只要你知道他的名称（或者部分名称），就能迅速找到并打开。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;官方网站&lt;/strong&gt;：https://www.listary.netdownload&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;官方说明文档&lt;/strong&gt;：https://help.listary.com/zh-Hans/search-file&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;升级到Listary Pro优惠通道&lt;/strong&gt;：&lt;a href=&quot;https://lizhi.shop/products/listary-pro?cid=wbm93g4b&quot;&gt;点此购买&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/PixPin_2026-04-13_21-38-23.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;热键&lt;/h2&gt;
+&lt;p&gt;Listary的&lt;strong&gt;灵魂功能&lt;/strong&gt;，全局快捷键是效率核心：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;「双击 Ctrl」一键唤起搜索&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;「Ctrl+G」快速切换&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在任何软件的「打开文件」「保存文件」对话框里，按下 Ctrl+G，就能直接呼出 Listary 的快速跳转面板，一键跳转到你最近访问过的文件夹、收藏夹目录、常用项目路径，彻底不用再一层层点目录树找位置。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;文件搜索&lt;/h2&gt;
+&lt;p&gt;Listary 最核心的功能，秒级搜索的核心配置&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;过滤器：仅支持pro用户&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;索引“添加网络驱动器或本地文件夹”仅支持pro用户&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260412214257275.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;动作&lt;/h2&gt;
+&lt;p&gt;自定义文件 / 文件夹的快捷操作菜单&lt;/p&gt;
+&lt;p&gt;可以自定义添加动作或删除默认不需要的动作&lt;/p&gt;
+&lt;h2&gt;命令&lt;/h2&gt;
+&lt;p&gt;常用的内置命令&lt;/p&gt;
+&lt;p&gt;mkdir---创建文件夹&lt;/p&gt;
+&lt;p&gt;cmd---打开命令行窗口&lt;/p&gt;
+&lt;p&gt;psh---PowerShell
+hosts---编辑 Hosts&lt;/p&gt;
+&lt;p&gt;这些你可以增删、修改关键词&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;比如增加的：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;ip----查看IP配置&lt;/p&gt;
+&lt;p&gt;liantong---网络连通性测试&lt;/p&gt;
+&lt;p&gt;wifi---查看WiFi密码&lt;/p&gt;
+&lt;p&gt;chongqi---重启资源管理器&lt;/p&gt;
+&lt;p&gt;linshi---打开临时文件夹并清理&lt;/p&gt;
+&lt;p&gt;guanbi---一键关闭所有窗口&lt;/p&gt;
+&lt;p&gt;shangban---上班一键打开常用软件/文件&lt;/p&gt;
+&lt;p&gt;xiaban---下班一键关闭+睡眠（配置参考⬇️）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;路径：powershell.exe&lt;/p&gt;
+&lt;p&gt;参数：-NoProfile -Command &quot;Get-Process | Where-Object { $&lt;em&gt;.MainWindowTitle -ne &apos;&apos; -and $&lt;/em&gt;.ProcessName -ne &apos;explorer&apos; -and $_.Id -ne $PID } | Stop-Process -Force; rundll32.exe powrprof.dll,SetSuspendState 0,1,0&quot;&lt;/p&gt;
+&lt;p&gt;静默启动：☑️&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;我总共大概添加了覆盖个人高频的场景的所有命令，还有接下来说的一些脚本&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;PS.这些东西，确实花了时间的，我把我的配置打包成自解压文件，你拿到点击下就变成了你的设置&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;需要的可以找我，99米。我的号是dqtx33&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;strong&gt;进阶玩法&lt;/strong&gt;示例：&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;批量搜索&lt;/li&gt;
+&lt;li&gt;一键打开多个常用的工具&lt;/li&gt;
+&lt;li&gt;一键关闭任务栏所有显示的任务&lt;/li&gt;
+&lt;li&gt;一键清理垃圾&lt;/li&gt;
+&lt;li&gt;一备份Listary设置.bat&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260413184612222.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;批量搜索.bat示例（ANSI格式）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;@echo off
+chcp 65001 &amp;gt; nul
+:: 接收 Listary 传入的关键词
+set &quot;kw=%~1&quot;
+if &quot;%kw%&quot;==&quot;&quot; (
+    echo 请输入搜索关键词！
+    pause
+    exit /b
+)
+:: 编码关键词（处理中文/特殊字符）
+for /f &quot;delims=&quot; %%a in (&apos;powershell -Command &quot;[System.Web.HttpUtility]::UrlEncode(&apos;%kw%&apos;)&quot;&apos;) do set &quot;encoded_kw=%%a&quot;
+:: 各平台搜索链接（排序：谷歌 → 推特 → GitHub → 油管 → B站）
+set &quot;google=https://www.google.com/search?q=%encoded_kw%&quot;
+set &quot;twitter=https://twitter.com/search?q=%encoded_kw%&quot;
+set &quot;github=https://github.com/search?q=%encoded_kw%&quot;
+set &quot;youtube=https://www.youtube.com/results?search_query=%encoded_kw%&quot;
+set &quot;bilibili=https://search.bilibili.com/all?keyword=%encoded_kw%&quot;
+:: 按排序批量打开
+start &quot;&quot; &quot;%google%&quot;
+start &quot;&quot; &quot;%twitter%&quot;
+start &quot;&quot; &quot;%github%&quot;
+start &quot;&quot; &quot;%youtube%&quot;
+start &quot;&quot; &quot;%bilibili%&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;网络搜索&lt;/h2&gt;
+&lt;p&gt;左键双击-选项-网络搜索，可以增删添加搜索&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260413185036625.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;建议保留谷歌/百度/必应（g/b/ing/）这&lt;strong&gt;3&lt;/strong&gt;个&lt;/p&gt;
+&lt;p&gt;再配置添加如下**18*个规则“”&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;项目&lt;/th&gt;
+&lt;th&gt;URL&lt;/th&gt;
+&lt;th&gt;搜索提示&amp;amp;Custom&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;X-sou&lt;/td&gt;
+&lt;td&gt;https://x-sou.com/search?q={query}&amp;amp;tab=tweets&amp;amp;sort=latest&lt;/td&gt;
+&lt;td&gt;Google&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Luxirty Search&lt;/td&gt;
+&lt;td&gt;https://s.ccino.org/search?q={query}&lt;/td&gt;
+&lt;td&gt;Bing&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;GitHub&lt;/td&gt;
+&lt;td&gt;https://github.com/search?q={query}&lt;/td&gt;
+&lt;td&gt;cmd /k gh {query}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;即刻&lt;/td&gt;
+&lt;td&gt;https://web.okjike.com/search?q={query}&lt;/td&gt;
+&lt;td&gt;Baidu&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;推特&lt;/td&gt;
+&lt;td&gt;https://twitter.com/search?q={query}&lt;/td&gt;
+&lt;td&gt;http://suggestqueries.google.com/complete/search?client=witter&amp;amp;ds=yt&amp;amp;client=firefox&amp;amp;q={query}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;小红书&lt;/td&gt;
+&lt;td&gt;https://www.xiaohongshu.com/search_result?keyword={query}&lt;/td&gt;
+&lt;td&gt;https://www.xiaohongshu.com/search_result?keyword={query}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;抖音&lt;/td&gt;
+&lt;td&gt;https://www.douyin.com/search/{query}&lt;/td&gt;
+&lt;td&gt;cmd /k tt {query}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;油管&lt;/td&gt;
+&lt;td&gt;http://youtube.com/results?q={query}&lt;/td&gt;
+&lt;td&gt;http://suggestqueries.google.com/complete/search?client=youtube&amp;amp;ds=yt&amp;amp;client=firefox&amp;amp;q={query}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;B站&lt;/td&gt;
+&lt;td&gt;https://search.bilibili.com/all?keyword={query}&amp;amp;order=click&lt;/td&gt;
+&lt;td&gt;https://search.bilibili.com/all?keyword={query}&amp;amp;tids=36&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;csdn&lt;/td&gt;
+&lt;td&gt;https://so.csdn.net/so/search?q={query}&lt;/td&gt;
+&lt;td&gt;https://www.csdn.net/api/v1/search/suggestion?keyword={query}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;知乎&lt;/td&gt;
+&lt;td&gt;https://www.zhihu.com/search?type=content&amp;amp;q={query}&lt;/td&gt;
+&lt;td&gt;Google&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Kimi&lt;/td&gt;
+&lt;td&gt;https://kimi.moonshot.cn/_prefill_chat?send_immediately=true&amp;amp;prefill_prompt={query}&lt;/td&gt;
+&lt;td&gt;Baidu&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;秘塔AI搜索&lt;/td&gt;
+&lt;td&gt;https://metaso.cn/?q={query}&lt;/td&gt;
+&lt;td&gt;https://suggestqueries.google.com/complete/search?client=chrome&amp;amp;q={query}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Perplexity&lt;/td&gt;
+&lt;td&gt;https://www.perplexity.ai/search?q={query}&lt;/td&gt;
+&lt;td&gt;https://suggestqueries.google.com/complete/search?client=chrome&amp;amp;q={query}&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Grok&lt;/td&gt;
+&lt;td&gt;https://grok.com/?q={query}https://www.zhihu.com/search?type=content&amp;amp;q={query}&lt;/td&gt;
+&lt;td&gt;GoogleGoogle&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;X Grok&lt;/td&gt;
+&lt;td&gt;https://x.com/i/grok?text={query}https://web.okjike.com/search?q={query}&lt;/td&gt;
+&lt;td&gt;Google&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Greasy Fork&lt;/td&gt;
+&lt;td&gt;https://greasyfork.org/zh-CN/scripts?q={query}&lt;/td&gt;
+&lt;td&gt;Google&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;chrome商店&lt;/td&gt;
+&lt;td&gt;https://chromewebstore.google.com/search/{query}?hl=zh-CN&lt;/td&gt;
+&lt;td&gt;Google&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;菜单&lt;/h2&gt;
+&lt;p&gt;自定义 Listary 的&lt;strong&gt;左键菜单与快捷菜单&lt;/strong&gt;，深度整合文件管理器&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在文件夹任意位置&lt;strong&gt;左键双击&lt;/strong&gt;调快捷菜单，一键添加收藏&lt;/li&gt;
+&lt;li&gt;可手动删减左键菜单项&lt;/li&gt;
+&lt;li&gt;可手动添加以下类型的左键菜单项&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;文件夹&lt;/p&gt;
+&lt;p&gt;子菜单&lt;/p&gt;
+&lt;p&gt;分隔符&lt;/p&gt;
+&lt;p&gt;自定义命令（如果跟我一样懒惰，把设置的常用自定义命令添加到左键，不要不要添加太多）&lt;/p&gt;
+&lt;p&gt;命令&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260413183546110.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;设置项迁移新设备&lt;/h2&gt;
+&lt;p&gt;你需要手动复制配置文件，配置文件位于
+C:\Users%username%\AppData\Roaming\Listary\UserProfile\Settings\Preferences.json&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;具体步骤如下&lt;/strong&gt;：
+1.新设备完全退出 Listary。
+2.按 Win + R，输入下面路径后回车&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;%appdata%\Listary\UserProfile\Settings
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;将配置好的Preferences.json粘贴进去替换掉即可
+3.重新打开 Listary。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;同类的产品还有&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://ftp.voidtools.com/zh-cn/downloads/&quot;&gt;Everything&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Flow-Launcher/Flow.Launcher&quot;&gt;Flow Launcher&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以上，后续我学到新的东西，会持续更新这篇文章！&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;ps&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;大强同学：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;远程服务:&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 </content:encoded></item><item><title>Dataview与Templater插件联动示例</title><link>https://dqtx.cc/posts/workflow/dataview/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/dataview/</guid><pubDate>Sun, 12 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;很多 Obsidian 深度用户在积累了上千篇笔记后，都会面临一个共同的痛点：&lt;strong&gt;存入容易，提取困难。&lt;/strong&gt; 知识库逐渐变成了一个只进不出的“数据黑洞”。&lt;/p&gt;
 &lt;p&gt;如果你还在使用基础的文件夹和标签管理笔记，那你就错过了 Obsidian 最强大的黑魔法。&lt;/p&gt;
 &lt;p&gt;今天，我们将结合 Obsidian 生态中的两大超神插件——&lt;strong&gt;Dataview&lt;/strong&gt;（数据查询引擎）和 &lt;strong&gt;Templater&lt;/strong&gt;（动态模板引擎），为你展示 6 个开箱即用的高级自动化脚本。&lt;/p&gt;
@@ -2290,232 +2423,6 @@ if (confirm.toUpperCase() === &apos;Y&apos;) {
 &lt;p&gt;&lt;em&gt;ps&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;大强同学：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;远程服务:&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-</content:encoded></item><item><title>Listary完全使用指南！</title><link>https://dqtx.cc/posts/workflow/listary%E8%BF%9B%E9%98%B6/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/listary%E8%BF%9B%E9%98%B6/</guid><pubDate>Sun, 12 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Listary是一款知名的效率工具，以用户友好，使用方式简单而备受好评。&lt;/p&gt;
-&lt;p&gt;单论文件搜索，Listary 和 Everything 属于同一梯队，在搜索速度和内存占用上秒杀任何其他软件。&lt;/p&gt;
-&lt;p&gt;任何文件，只要你知道他的名称（或者部分名称），就能迅速找到并打开。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;官方网站&lt;/strong&gt;：https://www.listary.netdownload&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;官方说明文档&lt;/strong&gt;：https://help.listary.com/zh-Hans/search-file&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;升级到Listary Pro优惠通道&lt;/strong&gt;：&lt;a href=&quot;https://lizhi.shop/products/listary-pro?cid=wbm93g4b&quot;&gt;点此购买&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/PixPin_2026-04-13_21-38-23.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;热键&lt;/h2&gt;
-&lt;p&gt;Listary的&lt;strong&gt;灵魂功能&lt;/strong&gt;，全局快捷键是效率核心：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;「双击 Ctrl」一键唤起搜索&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;「Ctrl+G」快速切换&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;在任何软件的「打开文件」「保存文件」对话框里，按下 Ctrl+G，就能直接呼出 Listary 的快速跳转面板，一键跳转到你最近访问过的文件夹、收藏夹目录、常用项目路径，彻底不用再一层层点目录树找位置。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2&gt;文件搜索&lt;/h2&gt;
-&lt;p&gt;Listary 最核心的功能，秒级搜索的核心配置&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;过滤器：仅支持pro用户&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;索引“添加网络驱动器或本地文件夹”仅支持pro用户&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260412214257275.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;动作&lt;/h2&gt;
-&lt;p&gt;自定义文件 / 文件夹的快捷操作菜单&lt;/p&gt;
-&lt;p&gt;可以自定义添加动作或删除默认不需要的动作&lt;/p&gt;
-&lt;h2&gt;命令&lt;/h2&gt;
-&lt;p&gt;常用的内置命令&lt;/p&gt;
-&lt;p&gt;mkdir---创建文件夹&lt;/p&gt;
-&lt;p&gt;cmd---打开命令行窗口&lt;/p&gt;
-&lt;p&gt;psh---PowerShell
-hosts---编辑 Hosts&lt;/p&gt;
-&lt;p&gt;这些你可以增删、修改关键词&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;比如增加的：&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;ip----查看IP配置&lt;/p&gt;
-&lt;p&gt;liantong---网络连通性测试&lt;/p&gt;
-&lt;p&gt;wifi---查看WiFi密码&lt;/p&gt;
-&lt;p&gt;chongqi---重启资源管理器&lt;/p&gt;
-&lt;p&gt;linshi---打开临时文件夹并清理&lt;/p&gt;
-&lt;p&gt;guanbi---一键关闭所有窗口&lt;/p&gt;
-&lt;p&gt;shangban---上班一键打开常用软件/文件&lt;/p&gt;
-&lt;p&gt;xiaban---下班一键关闭+睡眠（配置参考⬇️）&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;路径：powershell.exe&lt;/p&gt;
-&lt;p&gt;参数：-NoProfile -Command &quot;Get-Process | Where-Object { $&lt;em&gt;.MainWindowTitle -ne &apos;&apos; -and $&lt;/em&gt;.ProcessName -ne &apos;explorer&apos; -and $_.Id -ne $PID } | Stop-Process -Force; rundll32.exe powrprof.dll,SetSuspendState 0,1,0&quot;&lt;/p&gt;
-&lt;p&gt;静默启动：☑️&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;我总共大概添加了覆盖个人高频的场景的所有命令，还有接下来说的一些脚本&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;PS.这些东西，确实花了时间的，我把我的配置打包成自解压文件，你拿到点击下就变成了你的设置&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;需要的可以找我，99米。我的号是dqtx33&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;h3&gt;&lt;strong&gt;进阶玩法&lt;/strong&gt;示例：&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;批量搜索&lt;/li&gt;
-&lt;li&gt;一键打开多个常用的工具&lt;/li&gt;
-&lt;li&gt;一键关闭任务栏所有显示的任务&lt;/li&gt;
-&lt;li&gt;一键清理垃圾&lt;/li&gt;
-&lt;li&gt;一备份Listary设置.bat&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260413184612222.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;批量搜索.bat示例（ANSI格式）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;@echo off
-chcp 65001 &amp;gt; nul
-:: 接收 Listary 传入的关键词
-set &quot;kw=%~1&quot;
-if &quot;%kw%&quot;==&quot;&quot; (
-    echo 请输入搜索关键词！
-    pause
-    exit /b
-)
-:: 编码关键词（处理中文/特殊字符）
-for /f &quot;delims=&quot; %%a in (&apos;powershell -Command &quot;[System.Web.HttpUtility]::UrlEncode(&apos;%kw%&apos;)&quot;&apos;) do set &quot;encoded_kw=%%a&quot;
-:: 各平台搜索链接（排序：谷歌 → 推特 → GitHub → 油管 → B站）
-set &quot;google=https://www.google.com/search?q=%encoded_kw%&quot;
-set &quot;twitter=https://twitter.com/search?q=%encoded_kw%&quot;
-set &quot;github=https://github.com/search?q=%encoded_kw%&quot;
-set &quot;youtube=https://www.youtube.com/results?search_query=%encoded_kw%&quot;
-set &quot;bilibili=https://search.bilibili.com/all?keyword=%encoded_kw%&quot;
-:: 按排序批量打开
-start &quot;&quot; &quot;%google%&quot;
-start &quot;&quot; &quot;%twitter%&quot;
-start &quot;&quot; &quot;%github%&quot;
-start &quot;&quot; &quot;%youtube%&quot;
-start &quot;&quot; &quot;%bilibili%&quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;网络搜索&lt;/h2&gt;
-&lt;p&gt;左键双击-选项-网络搜索，可以增删添加搜索&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260413185036625.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;建议保留谷歌/百度/必应（g/b/ing/）这&lt;strong&gt;3&lt;/strong&gt;个&lt;/p&gt;
-&lt;p&gt;再配置添加如下**18*个规则“”&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;项目&lt;/th&gt;
-&lt;th&gt;URL&lt;/th&gt;
-&lt;th&gt;搜索提示&amp;amp;Custom&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;X-sou&lt;/td&gt;
-&lt;td&gt;https://x-sou.com/search?q={query}&amp;amp;tab=tweets&amp;amp;sort=latest&lt;/td&gt;
-&lt;td&gt;Google&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Luxirty Search&lt;/td&gt;
-&lt;td&gt;https://s.ccino.org/search?q={query}&lt;/td&gt;
-&lt;td&gt;Bing&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;GitHub&lt;/td&gt;
-&lt;td&gt;https://github.com/search?q={query}&lt;/td&gt;
-&lt;td&gt;cmd /k gh {query}&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;即刻&lt;/td&gt;
-&lt;td&gt;https://web.okjike.com/search?q={query}&lt;/td&gt;
-&lt;td&gt;Baidu&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;推特&lt;/td&gt;
-&lt;td&gt;https://twitter.com/search?q={query}&lt;/td&gt;
-&lt;td&gt;http://suggestqueries.google.com/complete/search?client=witter&amp;amp;ds=yt&amp;amp;client=firefox&amp;amp;q={query}&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;小红书&lt;/td&gt;
-&lt;td&gt;https://www.xiaohongshu.com/search_result?keyword={query}&lt;/td&gt;
-&lt;td&gt;https://www.xiaohongshu.com/search_result?keyword={query}&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;抖音&lt;/td&gt;
-&lt;td&gt;https://www.douyin.com/search/{query}&lt;/td&gt;
-&lt;td&gt;cmd /k tt {query}&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;油管&lt;/td&gt;
-&lt;td&gt;http://youtube.com/results?q={query}&lt;/td&gt;
-&lt;td&gt;http://suggestqueries.google.com/complete/search?client=youtube&amp;amp;ds=yt&amp;amp;client=firefox&amp;amp;q={query}&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;B站&lt;/td&gt;
-&lt;td&gt;https://search.bilibili.com/all?keyword={query}&amp;amp;order=click&lt;/td&gt;
-&lt;td&gt;https://search.bilibili.com/all?keyword={query}&amp;amp;tids=36&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;csdn&lt;/td&gt;
-&lt;td&gt;https://so.csdn.net/so/search?q={query}&lt;/td&gt;
-&lt;td&gt;https://www.csdn.net/api/v1/search/suggestion?keyword={query}&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;知乎&lt;/td&gt;
-&lt;td&gt;https://www.zhihu.com/search?type=content&amp;amp;q={query}&lt;/td&gt;
-&lt;td&gt;Google&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Kimi&lt;/td&gt;
-&lt;td&gt;https://kimi.moonshot.cn/_prefill_chat?send_immediately=true&amp;amp;prefill_prompt={query}&lt;/td&gt;
-&lt;td&gt;Baidu&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;秘塔AI搜索&lt;/td&gt;
-&lt;td&gt;https://metaso.cn/?q={query}&lt;/td&gt;
-&lt;td&gt;https://suggestqueries.google.com/complete/search?client=chrome&amp;amp;q={query}&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Perplexity&lt;/td&gt;
-&lt;td&gt;https://www.perplexity.ai/search?q={query}&lt;/td&gt;
-&lt;td&gt;https://suggestqueries.google.com/complete/search?client=chrome&amp;amp;q={query}&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Grok&lt;/td&gt;
-&lt;td&gt;https://grok.com/?q={query}https://www.zhihu.com/search?type=content&amp;amp;q={query}&lt;/td&gt;
-&lt;td&gt;GoogleGoogle&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;X Grok&lt;/td&gt;
-&lt;td&gt;https://x.com/i/grok?text={query}https://web.okjike.com/search?q={query}&lt;/td&gt;
-&lt;td&gt;Google&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Greasy Fork&lt;/td&gt;
-&lt;td&gt;https://greasyfork.org/zh-CN/scripts?q={query}&lt;/td&gt;
-&lt;td&gt;Google&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;chrome商店&lt;/td&gt;
-&lt;td&gt;https://chromewebstore.google.com/search/{query}?hl=zh-CN&lt;/td&gt;
-&lt;td&gt;Google&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2&gt;菜单&lt;/h2&gt;
-&lt;p&gt;自定义 Listary 的&lt;strong&gt;左键菜单与快捷菜单&lt;/strong&gt;，深度整合文件管理器&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;在文件夹任意位置&lt;strong&gt;左键双击&lt;/strong&gt;调快捷菜单，一键添加收藏&lt;/li&gt;
-&lt;li&gt;可手动删减左键菜单项&lt;/li&gt;
-&lt;li&gt;可手动添加以下类型的左键菜单项&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;文件夹&lt;/p&gt;
-&lt;p&gt;子菜单&lt;/p&gt;
-&lt;p&gt;分隔符&lt;/p&gt;
-&lt;p&gt;自定义命令（如果跟我一样懒惰，把设置的常用自定义命令添加到左键，不要不要添加太多）&lt;/p&gt;
-&lt;p&gt;命令&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260413183546110.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;设置项迁移新设备&lt;/h2&gt;
-&lt;p&gt;你需要手动复制配置文件，配置文件位于
-C:\Users%username%\AppData\Roaming\Listary\UserProfile\Settings\Preferences.json&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;具体步骤如下&lt;/strong&gt;：
-1.新设备完全退出 Listary。
-2.按 Win + R，输入下面路径后回车&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;%appdata%\Listary\UserProfile\Settings
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;将配置好的Preferences.json粘贴进去替换掉即可
-3.重新打开 Listary。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;同类的产品还有&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://ftp.voidtools.com/zh-cn/downloads/&quot;&gt;Everything&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/Flow-Launcher/Flow.Launcher&quot;&gt;Flow Launcher&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;以上，后续我学到新的东西，会持续更新这篇文章！&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;ps&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;大强同学：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;远程服务:&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 </content:encoded></item><item><title>记录一次装系统糟心经历！</title><link>https://dqtx.cc/posts/technical/%E8%A3%85%E7%B3%BB%E7%BB%9F%E5%BC%82%E5%B8%B8/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E8%A3%85%E7%B3%BB%E7%BB%9F%E5%BC%82%E5%B8%B8/</guid><pubDate>Sat, 11 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天想和大家分享一下我最近装系统的糟心经历，前前后后耽误了整整三天时间，最后才找到问题根源，也算是给自己上了一课。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/2026-04-11-23-55.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;第三方镜像连续报错&lt;/h2&gt;
@@ -2574,9 +2481,9 @@ https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/bug-check-0x
 &lt;p&gt;Zed Pro 含免费额度，付费版 20 美元 / 月（500 次提示），协作功能全用户免费&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260409135131089.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;一.下载安装&lt;/h2&gt;
-&lt;p&gt;官方版：&lt;/p&gt;
+&lt;h3&gt;官方版&lt;/h3&gt;
 &lt;p&gt;https://zed.dev/&lt;/p&gt;
-&lt;p&gt;汉化版：&lt;/p&gt;
+&lt;h3&gt;汉化版&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;https://github.com/x6nux/zed-globalization&lt;/p&gt;
 &lt;p&gt;https://github.com/tc999/zed-loc&lt;/p&gt;
@@ -2589,23 +2496,11 @@ https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/bug-check-0x
 &lt;p&gt;执行注册命令&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;regsvr32 windowsperformancerecordercontrol.DLL
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;二.初始配置&lt;/h2&gt;
-&lt;h3&gt;1.&lt;strong&gt;常用快捷键&lt;/strong&gt;&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;打开设置：&lt;code&gt;Ctrl + ,&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;打开主题切换面板：&lt;code&gt;Ctrl + K + Ctrl + T&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;打开扩展插件面板：&lt;code&gt;Ctrl + Shift + X&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;打开Agent面板：&lt;code&gt;Ctrl + Shift + /&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;打开文件夹：&lt;code&gt;Ctrl + O&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;快速打开文件：&lt;code&gt;Ctrl + P&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;打开命令面板（全能入口）：&lt;code&gt;Ctrl + Shift + P&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;打开快捷键配置：&lt;code&gt;Ctrl + K + Ctrl + S&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;新建编辑器窗口：&lt;code&gt;Ctrl + Shift + N&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;新建对话：&lt;code&gt;Ctrl + N&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;查看 AI 聊天历史：&lt;code&gt;Ctrl + Shift + H&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3&gt;2.&lt;strong&gt;安装使用opencode插件&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;Ctrl + Shift + X打开扩展插件面板，搜索安装&lt;strong&gt;opencode&lt;/strong&gt;&lt;/p&gt;
+&lt;h2&gt;二.安装插件&lt;/h2&gt;
+&lt;h3&gt;opencode插件&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;p&gt;Ctrl + Shift + X打开扩展插件面板，&lt;/p&gt;
+&lt;p&gt;搜索安装&lt;strong&gt;opencode&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Ctrl + Shift + /打开Agent面板选择opencode进行对话&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;OpenCode插件提供的免费模型清单&lt;/strong&gt;&lt;/p&gt;
@@ -2621,9 +2516,51 @@ https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/bug-check-0x
 &lt;li&gt;OpenCode Zen/MiniMax M2.5 Free（首选，对标 Claude Opus）&lt;/li&gt;
 &lt;/ol&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;很多人担心换编辑器要重新适应，Zed 这点也很友好。它支持导入 VS Code 的快捷键配置，不用重新记一堆新快捷键，上手零成本。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260425225520823.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;h4&gt;skill目录&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;C:\Users\Administrator\.config\opencode\skills\
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;&lt;strong&gt;其他插件&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Markdown Oxide
+Obsidian 风格的知识管理语言服务器
+内置Markdown 预览：Windows打开预览→&lt;code&gt;Ctrl-Shift-V&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;GitHub MCP Server
+在 Agent Panel 中操作 GitHub（创建 PR、review、issue 等）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Context7 MCP Serveri
+为 AI 助手提供最新的官方文档和代码示例
+如：帮我用 React hooks，use context7&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;2slides MCP Server
+AI 生成 PPT/幻灯片&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Weave MCP Server
+多 Agent 协同开发，实体级别合并冲突检测&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;而且社区插件生态虽然不如 VS Code 成熟，但常用的插件基本都有，足够满足日常开发需求，关键是插件加载也快，不会拖慢编辑器速度。&lt;/p&gt;
-&lt;p&gt;文章来源：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;  远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;三.&lt;strong&gt;常用快捷键&lt;/strong&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;打开设置：&lt;code&gt;Ctrl + ,&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;打开主题切换面板：&lt;code&gt;Ctrl + K + Ctrl + T&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;打开扩展插件面板：&lt;code&gt;Ctrl + Shift + X&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;打开Agent面板：&lt;code&gt;Ctrl + Shift + /&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;打开文件夹：&lt;code&gt;Ctrl + O&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;快速打开文件：&lt;code&gt;Ctrl + P&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;打开命令面板（全能入口）：&lt;code&gt;Ctrl + Shift + P&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;打开快捷键配置：&lt;code&gt;Ctrl + K + Ctrl + S&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;新建编辑器窗口：&lt;code&gt;Ctrl + Shift + N&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;新建对话：&lt;code&gt;Ctrl + N&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;查看 AI 聊天历史：&lt;code&gt;Ctrl + Shift + H&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;预览mrkdown：&lt;code&gt;Ctrl-Shift-V&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
 </content:encoded></item><item><title>Obsidian日记半自动化流程</title><link>https://dqtx.cc/posts/workflow/ob%E6%97%A5%E8%AE%B0%E4%B8%8E%E6%A8%A1%E6%9D%BF/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/ob%E6%97%A5%E8%AE%B0%E4%B8%8E%E6%A8%A1%E6%9D%BF/</guid><pubDate>Wed, 08 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;在 Obsidian 打造高效日记自动化，核心插件是基础，模板是骨架，辅助插件是关键。&lt;/p&gt;
 &lt;p&gt;本文聚焦 Calendar、Templater、Dataview 三大插件，带你从 0 到 1 搭建模板、配置自动调用，实现日记一键生成、结构统一。&lt;/p&gt;
 &lt;p&gt;额外分享两款实用工具，拉满创建效率与体验，一站式打通 Obsidian 日记工作流闭环，让记录更轻松、复盘更高效。&lt;/p&gt;
@@ -2701,12 +2638,25 @@ sort file.mtime asc
 &lt;p&gt;💬 外贸人：中文口述秒出英文邮件，沟通效率提升10倍&lt;/p&gt;
 &lt;p&gt;💬 内容创作者：一篇中文稿，一键生成多语言版本&lt;/p&gt;
 &lt;p&gt;💬 长辈用户：说方言也能顺畅使用，零学习成本&lt;/p&gt;
+&lt;h3&gt;4.隐藏技巧&lt;/h3&gt;
+&lt;p&gt;秘塔回响的隐藏技巧总结：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;末尾提问&lt;/strong&gt;：在一段文字末尾或@一个文件，双击 &lt;code&gt;Alt&lt;/code&gt;，可直接对该段文字内容进行提问，系统会自动识别上下文。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;划词提问&lt;/strong&gt;：在网页上遇到不懂的内容时，先划词选中或全选，再双击 &lt;code&gt;Alt&lt;/code&gt;，系统即可理解并回答你的疑问。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;其他技巧&lt;/strong&gt;：在写文档时，直接选中一段文字，说“帮我排版一下”，它就会自动帮你完成排版。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 &lt;p&gt;秘塔回响早已超越传统输入法的定义。&lt;/p&gt;
 &lt;p&gt;它是搜索工具、翻译工具、智能助手，三位一体。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;通过语音交互的极简方式，把原本需要三步、五步的操作，压缩成一步。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;其实，就是每一个不想把时间浪费在重复操作上的人。&lt;/p&gt;
 &lt;p&gt;「好工具的本质，不是让你学会更多操作，而是让你少操作。」&lt;/p&gt;
-&lt;p&gt;下载地址：https://metaso.cn/echo&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;下载地址&lt;/strong&gt;：https://metaso.cn/echo&lt;/p&gt;
 &lt;p&gt;用一次你就会明白，什么叫「回不去」。&lt;/p&gt;
 </content:encoded></item><item><title>WezTerm终端配置指南</title><link>https://dqtx.cc/posts/software/wezterm/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/wezterm/</guid><pubDate>Mon, 06 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天分享一套&lt;strong&gt;颜值高、速度快、功能强&lt;/strong&gt;的终端组合：&lt;/p&gt;
 &lt;ul&gt;
