@@ -26,11 +26,11 @@ Zed Pro 含免费额度，付费版 20 美元 / 月（500 次提示），协作�
 
 ## 一.下载安装
 
-官方版：
+### 官方版
 
 https://zed.dev/
 
-汉化版：
+### 汉化版
 
 > https://github.com/x6nux/zed-globalization
 >
@@ -55,27 +55,17 @@ ps.如报错如下DLL错误
 regsvr32 windowsperformancerecordercontrol.DLL
 ```
 
-## 二.初始配置
 
- 
+## 二.安装插件
 
-### 1.**常用快捷键**
+### opencode插件
 
-1. 打开设置：`Ctrl + ,`
-2. 打开主题切换面板：`Ctrl + K + Ctrl + T`
-3. 打开扩展插件面板：`Ctrl + Shift + X`
-4. 打开Agent面板：`Ctrl + Shift + /`
-5. 打开文件夹：`Ctrl + O`
-6. 快速打开文件：`Ctrl + P`
-7. 打开命令面板（全能入口）：`Ctrl + Shift + P`
-8. 打开快捷键配置：`Ctrl + K + Ctrl + S`
-9. 新建编辑器窗口：`Ctrl + Shift + N`
-10. 新建对话：`Ctrl + N`
-11. 查看 AI 聊天历史：`Ctrl + Shift + H`
 
-### 2.**安装使用opencode插件**
+****
 
-Ctrl + Shift + X打开扩展插件面板，搜索安装**opencode**
+Ctrl + Shift + X打开扩展插件面板，
+
+搜索安装**opencode**
 
 Ctrl + Shift + /打开Agent面板选择opencode进行对话
 
@@ -91,12 +81,49 @@ Ctrl + Shift + /打开Agent面板选择opencode进行对话
 > 8. OpenCode Zen/Nemotron 3 Super Free (high)
 > 9. OpenCode Zen/MiniMax M2.5 Free（首选，对标 Claude Opus）
 
-很多人担心换编辑器要重新适应，Zed 这点也很友好。它支持导入 VS Code 的快捷键配置，不用重新记一堆新快捷键，上手零成本。
+
+![image.png](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260425225520823.webp)
+
+#### skill目录
+
+```
+C:\Users\Administrator\.config\opencode\skills\
+```
 
 
+### **其他插件**
+
+- Markdown Oxide
+Obsidian 风格的知识管理语言服务器
+内置Markdown 预览：Windows打开预览→`Ctrl-Shift-V`
+
+- GitHub MCP Server
+在 Agent Panel 中操作 GitHub（创建 PR、review、issue 等）
+
+- Context7 MCP Serveri
+为 AI 助手提供最新的官方文档和代码示例
+如：帮我用 React hooks，use context7
+
+- 2slides MCP Server
+AI 生成 PPT/幻灯片
+
+- Weave MCP Server
+多 Agent 协同开发，实体级别合并冲突检测
 
 而且社区插件生态虽然不如 VS Code 成熟，但常用的插件基本都有，足够满足日常开发需求，关键是插件加载也快，不会拖慢编辑器速度。
 
 
+## 三.**常用快捷键**
 
-文章来源：[dqtx.cc](https://www.dqtx.cc/)  远程技术支持：[742112.xyz](https://www.742112.xyz/)
+1. 打开设置：`Ctrl + ,`
+2. 打开主题切换面板：`Ctrl + K + Ctrl + T`
+3. 打开扩展插件面板：`Ctrl + Shift + X`
+4. 打开Agent面板：`Ctrl + Shift + /`
+5. 打开文件夹：`Ctrl + O`
+6. 快速打开文件：`Ctrl + P`
+7. 打开命令面板（全能入口）：`Ctrl + Shift + P`
+8. 打开快捷键配置：`Ctrl + K + Ctrl + S`
+9. 新建编辑器窗口：`Ctrl + Shift + N`
+10. 新建对话：`Ctrl + N`
+11. 查看 AI 聊天历史：`Ctrl + Shift + H`
+12. 预览mrkdown：`Ctrl-Shift-V`
