@@ -1,5 +1,5 @@
 ---
-title:
+title: Flipbook 可视化搜索
 published: 2026-04-26
 tags: []
 category: Xenia
@@ -15,7 +15,6 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/202604261824
 
 输入关键词即刻手绘生成场景画面，点击任意区域深度探索，全程 AI 实时绘图，无固定页面束缚。
 
-![](assets/images/演示.mp4)
 
 比如输入关键词：**杭州下沙天街**
 
