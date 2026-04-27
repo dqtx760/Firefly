@@ -81,13 +81,19 @@ Claude Skills 作为 AI 助手的功能拓展核心，能精准对接各类场�
 | 去除AI味           | [talk-normal](https://github.com/hexiecs/talk-normal/blob/main/README_CN.md)                                                                                      |       |                                                                                         |
 | 公众号自动化写作        | [wewrite](https://github.com/oaker-io/wewrite)                                                                                                                    |       |                                                                                         |
 | 自媒体写作           | [writing-assistant-skill](https://github.com/Ceeon/writing-assistant-skill)                                                                                       |       |                                                                                         |
+| 搜索社交媒体和搜索引擎     | [DOROBOT](https://dokobot.ai/zh-CN/skill/173023680392200192)                                                                                                      |       | [效果演示](https://x.com/supezen/status/2048684517553287474)                                |
 
 [Notion备份](https://www.notion.so/skill-347351994e408091a13be04d19c62d1e)
 
 [10个面向前端 /产品/ UI的 Agent Skills](https://x.com/shao__meng/status/2035316234271764654)
 
+[Claude Code 值得安装的8个skills](https://x.com/WY_mask/status/2048537609308344658)
 
-## 六个Skill聚合战
+[5 个才是真正值得必装的](https://x.com/BTCqzy1/status/2048628785793425837)
+
+## 11个Skill聚合战
+
+https://dokobot.ai/zh-CN/skill
 
 https://mcpmarket.com/zh/tools/skills/leaderboard
 

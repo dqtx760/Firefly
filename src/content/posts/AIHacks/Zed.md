@@ -55,6 +55,10 @@ ps.如报错如下DLL错误
 regsvr32 windowsperformancerecordercontrol.DLL
 ```
 
+### 软件设置
+自动保存→开启。
+![image.png](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260427005030653.webp)
+
 
 ## 二.安装插件
 
