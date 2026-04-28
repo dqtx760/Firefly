@@ -77,5 +77,8 @@ Win+R 输入「日记」，自动调用 `obsidian daily` 命令，快速打开�
  ## 四、Obsidian插件
 -  Floating Search----双击shift搜索文件
 
+```
+D:\project2026\fuwari\src\content\.obsidian\plugins
+```
 ## 相关链接
 [‌⁣⁡﻿​﻿​﻿​‍﻿⁣⁣‬﻿⁡⁢​​‬​​‍⁡﻿⁣‍‍‬⁤⁢⁢​‬⁢⁤​‍‍﻿⁤​⁣‌‬​‬‌⁢‌Obsidian系列教程 - 飞书云文档](https://xodnytdcaw.feishu.cn/wiki/MK77w8EnCig8dBkrULUcgtVjn3b)

@@ -20,6 +20,7 @@ https://github.com/shanliuling/skills-link/blob/main/README.zh.md
 
 https://www.npmjs.com/package/skills-link?activeTab=readme
 
+https://github.com/dqtx760/skills-manage
 ![image.png](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260424220829071.webp)
 
 
@@ -44,66 +45,9 @@ skills-link
 
 PS.默认`C:\Users\Administrator\AISkills`做为中央仓库，也可以填写其他自定义路径作为中央仓。工具会自动创建Agent软连接执行同步
 
-![image.png](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260426004906504.webp)
 
-### 配置文件
 
-编辑 
-```
-C:\Users\Administrator\config.yaml
-```
-中央仓库masterDir 也可以在这里进行后续更换，另外有些skill目前他扫描不到，你需要手动添加后在运行命令比如zed中使用opencode插件skill目录：
-C:\Users\Administrator\.config\opencode\skills\
-她是扫描不到的，你就需要手动添加：
-
-```yaml
-language: zh
-masterDir: ~/AISkills
-
-git:
-  enabled: true
-  remote: https://github.com/you/skills.git
-  autoPush: true
-
-watch:
-  enabled: false
-  debounceMs: 3000
-
-apps:
-  - name: Claude Code
-    skillsPath: ~/.claude/skills
-    enabled: true
-  - name: Cursor
-    skillsPath: ~/.cursor/skills
-    enabled: true
-```
-
-### 添加新Skills
-
-把想用的 skills 放到 `C:\Users\Administrator\AISkills` 
-`
-**⚠️ 重要：让 AI 安装 skill 时，一定要指定安装到中央仓库目录！**
-示例
-
-```bash
-# 先 cd 到中央仓库再安装
-cd C:\Users\Administrator\AISkills
-# 然后再让 AI 安装 skill
-```
-
-否则 skill 会安装到 Agent 的本地目录，不会同步到其他工具！
-
-然后运行 `skills-link`，会分两步：
-
-**第一步：导入**
-- 扫描中央仓库，发现新 skills，git同步已启用
-- 显示"已导入 xxx"
-
-**第二步：创建链接**
-- 为各 Agent 的 skills 目录创建软链接
-- 这样 Qwen Code、Claude Code 才能看到这个 skill
-
-### 推送到 GitHub
+### 推送GitHub
 
 ```
  skills-link sync
@@ -141,6 +85,65 @@ git push
 skills-link sync
 ```
 
+
+### 配置文件修
+
+在哪里运行这个命令，就会产生这个配置文件
+
+```
+C:\Users\Administrator\AISkills\config.yaml
+```
+
+中央仓库masterDir 也可以在这里进行后续更换，另外有些skill目前他扫描不到，你需要手动添加后在运行命令比如zed中使用opencode插件skill目录：
+C:\Users\Administrator\.config\opencode\skills\
+她是扫描不到的，你就需要手动添加：
+
+```yaml
+language: zh
+masterDir: ~/AISkills
+
+git:
+  enabled: true
+  remote: https://github.com/you/skills.git
+  autoPush: true
+
+watch:
+  enabled: false
+  debounceMs: 3000
+
+apps:
+  - name: Claude Code
+    skillsPath: ~/.claude/skills
+    enabled: true
+  - name: Cursor
+    skillsPath: ~/.cursor/skills
+    enabled: true
+```
+
+### 添加新Skills说明
+
+把想用的 skills 放到 `C:\Users\Administrator\AISkills` 
+`
+**⚠️ 重要：让 AI 安装 skill 时，一定要指定安装到中央仓库目录！**
+示例
+
+```bash
+# 先 cd 到中央仓库再安装
+cd C:\Users\Administrator\AISkills
+# 然后再让 AI 安装 skill
+```
+
+否则 skill 会安装到 Agent 的本地目录，不会同步到其他工具！
+
+然后运行 `skills-link`，会分两步：
+
+**第一步：导入**
+- 扫描中央仓库，发现新 skills，git同步已启用
+- 显示"已导入 xxx"
+
+**第二步：创建链接**
+- 为各 Agent 的 skills 目录创建软链接
+- 这样 Qwen Code、Claude Code 才能看到这个 skill
 
 ## 多电脑同步
 

@@ -15,43 +15,6 @@ Claude Skills 作为 AI 助手的功能拓展核心，能精准对接各类场�
 ![image.png](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260422191135966.webp)
 
 
-
-## 我的实际情况
-
-我有2好几台电脑，每个电脑，安装了数十个AI agent，有1000多个skill，所以这些skill的管理如果不借助工具的话，是非常难以管理的。我使用的工具是：[Skills-Link](https://www.dqtx.cc/posts/aihacks/skills-link/)
-
-我的安装的skill已开源github：[点此查看](https://github.com/dqtx760/skills-manage)
-
-```
-┌─────────────────────────────────────────────────────────────────────┐
-│                         本地电脑                                    │
-│                                                                     │
-│   .qwen/skills ──┐                                                 │
-│   .claude/skills ──┤     ┌──────────────────┐                       │
-│   .codex/skills ──┤     │  .skillshub      │◀─── 软链接           │
-│   .trae/skills ───┼────▶│  (D:\project2026 │                       │
-│   ...            │     │   \skills-manage)│                       │
-│                   │     └──────────────────┘                       │
-│                              │                                      │
-│                              ▼ GitHub                              │
-│                   https://github.com/dqtx760/skills-manage         │
-└─────────────────────────────────────────────────────────────────────┘
-```
-
-**一句话解释**：所有 AI 工具的 Skills 目录都指向同一个地方，修改一次，所有工具都生效。
-
-| 目录                                      | 性质   | 存什么                     |
-| --------------------------------------- | ---- | ----------------------- |
-| `D:\project2026\skills-manage`          | 真实目录 | GitHub 仓库，1000 个 Skills |
-| `C:\Users\Administrator\.skillshub`     | 软链接  | 指向上面那个目录                |
-| `C:\Users\Administrator\.qwen\skills`   | 软链接  | 指向中央仓储                  |
-| `C:\Users\Administrator\.claude\skills` | 软链接  | 指向中央仓储                  |
-|                                         |      |                         |
-
-**软链接就像快捷方式** —— 不占硬盘空间，指向同一个地方。
-
-
-
 ## 我推荐的Skills列表
 
 | 功能              | skill开源地址                                                                                                                                                         | 备注    | 使用&效果                                                                                   |
@@ -81,7 +44,6 @@ Claude Skills 作为 AI 助手的功能拓展核心，能精准对接各类场�
 | 去除AI味           | [talk-normal](https://github.com/hexiecs/talk-normal/blob/main/README_CN.md)                                                                                      |       |                                                                                         |
 | 公众号自动化写作        | [wewrite](https://github.com/oaker-io/wewrite)                                                                                                                    |       |                                                                                         |
 | 自媒体写作           | [writing-assistant-skill](https://github.com/Ceeon/writing-assistant-skill)                                                                                       |       |                                                                                         |
-| 搜索社交媒体和搜索引擎     | [DOROBOT](https://dokobot.ai/zh-CN/skill/173023680392200192)                                                                                                      |       | [效果演示](https://x.com/supezen/status/2048684517553287474)                                |
 
 [Notion备份](https://www.notion.so/skill-347351994e408091a13be04d19c62d1e)
 
@@ -115,6 +77,7 @@ https://claudemarketplaces.com/
 
 https://clawhub.ai/skills?sort=downloads  --小龙虾专用
 
+
 ## 自然语言使用示例
 
 在 Claude Code 中直接对话使用，例如：
@@ -122,6 +85,40 @@ https://clawhub.ai/skills?sort=downloads  --小龙虾专用
 - 请用 baoyu-article-illustrator 为这篇文章配图
 - 请用 image 生成一张猫的图片
 - 请用 ai-writing-assistant 帮我写一篇技术文章
+
+## 我的Skill管理情况
+
+我有2好几台电脑，每个电脑，安装了数十个AI agent，有1000多个skill，所以这些skill的管理如果不借助工具的话，是非常难以管理的。我使用的工具是：[Skills-Link](https://www.dqtx.cc/posts/aihacks/skills-link/)
+
+我的安装的skill已开源github：[点此查看](https://github.com/dqtx760/skills-manage)
+
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│                         本地电脑                                    │
+│                                                                     │
+│   .qwen/skills ──┐                                                 │
+│   .claude/skills ──┤     ┌──────────────────┐                       │
+│   .codex/skills ──┤     │  .skillshub      │◀─── 软链接           │
+│   .trae/skills ───┼────▶│  (D:\project2026 │                       │
+│   ...            │     │   \skills-manage)│                       │
+│                   │     └──────────────────┘                       │
+│                              │                                      │
+│                              ▼ GitHub                              │
+│                   https://github.com/dqtx760/skills-manage         │
+└─────────────────────────────────────────────────────────────────────┘
+```
+
+**一句话解释**：所有 AI 工具的 Skills 目录都指向同一个地方，修改一次，所有工具都生效。
+
+| 目录                                      | 性质   | 存什么                     |
+| --------------------------------------- | ---- | ----------------------- |
+| `D:\project2026\skills-manage`          | 真实目录 | GitHub 仓库，1000 个 Skills |
+| `C:\Users\Administrator\.skillshub`     | 软链接  | 指向上面那个目录                |
+| `C:\Users\Administrator\.qwen\skills`   | 软链接  | 指向中央仓储                  |
+| `C:\Users\Administrator\.claude\skills` | 软链接  | 指向中央仓储                  |
+|                                         |      |                         |
+
+**软链接就像快捷方式** —— 不占硬盘空间，指向同一个地方。
 
 
 ## 更新日志
