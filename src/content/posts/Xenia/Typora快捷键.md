@@ -1,13 +1,13 @@
 ---
 title: Typora快捷键
 published: 2025-04-05T11:45:00.000Z
-description: --- YAML Front Matter：一种在文本文件（常见于 Markdown、HTML 等）开头添加的元数据格式，核心用于存储文件的额外信息（如标题、日...
+description: 一种在文本文件（常见于 Markdown、HTML 等）开头添加的元数据格式，核心用于存储文件的额外信息（如标题、日...
 tags:
   - 快捷键
 draft: false
 lang: zh_CN
 category: Xenia
-image: 
+image:
 ---
 
 

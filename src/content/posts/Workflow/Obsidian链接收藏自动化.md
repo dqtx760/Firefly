@@ -12,9 +12,9 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/202604271152
 ---
 
 
-你有没有过这样的困扰？
-
-刷到优质干货、实用工具、优质教程，随手存入浏览器书签，想着日后回看。久而久之，书签越堆越多、杂乱无序，想要检索复用却无从下手，大量优质资源最终沦为闲置的无效数据。
+> 你有没有过这样的困扰？
+> 
+> 刷到优质干货、实用工具、优质教程，随手存入浏览器书签，想着日后回看。久而久之，书签越堆越多、杂乱无序，想要检索复用却无从下手，大量优质资源最终沦为闲置的无效数据。
 
 于我们而言，每一条优质链接，都是珍贵的**数字资产**。
 单纯存放在浏览器中，只会零散堆积、难以管理；但如果统一沉淀到 Obsidian 知识库，就能实现标签归类、结构化归档、全局检索，还能与日常笔记、项目资料双向联动，最大化发挥资源价值。
@@ -24,11 +24,12 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/202604271152
 一键收藏网页、云端中转同步、本地自动归档、标签分类索引，彻底告别杂乱书签，轻松沉淀全网优质资源。
 
 ![大强同学「www.dqtx.cc](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260427195504528.webp)
-### 部署先决条件
+## 一.部署先决条件
 1. 前往 [linkstowr.com](https://linkstowr.com/) 注册账号，生成专属访问令牌；
 2. 浏览器安装 [LinkStowr 扩展](https://chromewebstore.google.com/detail/linkstowr/aabkobajeambdejghgegicnhcndhcjpk)，填入[访问令牌](https://linkstowr.com/user/settings)完成绑定授权；
 3. 在 Obsidian 中安装并启用 [**LinkStowr**](https://github.com/joelseq/obsidian-linkstowr)、**Dataview** 两款核心插件；
 4. 全部配置完成后，即可随时一键收藏网页，自定义添加标签与备注，高效系统化管理所有链接资源。
+
 ---
 
 ## 一键收藏
