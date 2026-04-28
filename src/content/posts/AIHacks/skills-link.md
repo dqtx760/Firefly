@@ -21,6 +21,7 @@ https://github.com/shanliuling/skills-link/blob/main/README.zh.md
 https://www.npmjs.com/package/skills-link?activeTab=readme
 
 https://github.com/dqtx760/skills-manage
+
 ![image.png](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260424220829071.webp)
 
 
@@ -35,7 +36,7 @@ npm i -g skills-link
 ```
 
 
-### 初始化配置
+### skill配置
 
 交互式引导命令
 

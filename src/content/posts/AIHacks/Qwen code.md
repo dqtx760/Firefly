@@ -74,6 +74,24 @@ qwen --approval-mode yolo
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260414202107652.webp)
 
 
+### 一键静默启动bat
+
+```
+@echo off
+chcp 65001 >nul
+title Qwen Code
+
+:: 检查 qwen 命令
+where qwen >nul 2>&1
+if %errorlevel% neq 0 (
+    echo [错误] 未检测到 qwen 命令，请先安装。
+    pause
+    exit /b 1
+)
+
+:: 直接启动，不显示任何额外信息
+qwen -y
+```
 
 **使用 Qwen3.6 Plus 模型**
 

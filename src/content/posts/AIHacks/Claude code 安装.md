@@ -50,6 +50,15 @@ Claude
 claude --dangerously-skip-permissions
 ```
 
+一键启动bat
+```
+@echo off
+title Claude Code
+where claude >nul 2>&1 || (echo Claude Code 未安装 & pause & exit /b 1)
+claude --dangerously-skip-permissions
+```
+
+
 ## 二.安装Obsidian
 ###  [Obsidian安装包]( https://github.com/obsidianmd/obsidian-releases/releases/download/v1.12.7/Obsidian-1.12.7.exe)
 ```

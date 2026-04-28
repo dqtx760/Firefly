@@ -37,7 +37,7 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/202604232323
 
 ### Agent 软件
 - Qwen Code
-- Claude Code
+- Claude Code  接入有点特殊：[查看教程](https://mp.weixin.qq.com/s/BWXOgzvQSD7FJ1eov4RbPQ)
 
 ### 接口配置
 
