@@ -130,10 +130,12 @@
 &lt;li&gt;OpenList/Alist网盘挂载&lt;/li&gt;
 &lt;li&gt;RustDesk客户端编译&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;✅服务价格：
-•单次问题解决：35 元起
-•远程安装 + 配置调试：50 元起
-•系统重装 / 网站搭建 / 编译/网盘挂载：60元起&lt;/p&gt;
+&lt;p&gt;✅服务价格：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;单次问题解决：35 元起&lt;/li&gt;
+&lt;li&gt;远程安装 + 配置调试：50 元起&lt;/li&gt;
+&lt;li&gt;系统重装 / 网站搭建 / 编译/网盘挂载：60元起&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;温馨提示：如需远程服务&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;请提前安装远程协作工具！访问→&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;更多本人定制化服务，访问→&lt;a href=&quot;https://app.dqtx.cc/&quot;&gt;app.dqtx.cc&lt;/a&gt;&lt;/p&gt;
@@ -355,18 +357,140 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/tech-shrimp&quot;&gt;tech-shrimp&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>Flipbook 可视化搜索</title><link>https://dqtx.cc/posts/xenia/flipbook%E5%8F%AF%E8%A7%86%E5%8C%96%E6%90%9C%E7%B4%A2/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/flipbook%E5%8F%AF%E8%A7%86%E5%8C%96%E6%90%9C%E7%B4%A2/</guid><pubDate>Sun, 26 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这两天，Flipbook 横扫中英文社交圈，彻底颠覆传统搜索形态。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;一个完全按需实时生成的无限可视化搜索引擎&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;输入关键词即刻手绘生成场景画面，点击任意区域深度探索，全程 AI 实时绘图，无固定页面束缚。&lt;/p&gt;
-&lt;p&gt;比如输入关键词：&lt;strong&gt;杭州下沙天街&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;屏幕上瞬间出现一张手绘风格杭州下沙天街地图&lt;/p&gt;
+</content:encoded></item><item><title>Obsidian链接收藏自动化</title><link>https://dqtx.cc/posts/workflow/obsidian%E9%93%BE%E6%8E%A5%E6%94%B6%E8%97%8F%E8%87%AA%E5%8A%A8%E5%8C%96/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/obsidian%E9%93%BE%E6%8E%A5%E6%94%B6%E8%97%8F%E8%87%AA%E5%8A%A8%E5%8C%96/</guid><pubDate>Mon, 27 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;你有没有过这样的困扰？&lt;/p&gt;
+&lt;p&gt;刷到优质干货、实用工具、优质教程，随手存入浏览器书签，想着日后回看。久而久之，书签越堆越多、杂乱无序，想要检索复用却无从下手，大量优质资源最终沦为闲置的无效数据。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;于我们而言，每一条优质链接，都是珍贵的&lt;strong&gt;数字资产&lt;/strong&gt;。
+单纯存放在浏览器中，只会零散堆积、难以管理；但如果统一沉淀到 Obsidian 知识库，就能实现标签归类、结构化归档、全局检索，还能与日常笔记、项目资料双向联动，最大化发挥资源价值。&lt;/p&gt;
+&lt;p&gt;为此，我搭建了一套&lt;strong&gt;轻量化全自动链接收藏工作流&lt;/strong&gt;，依靠 &lt;strong&gt;LinkStowr + Obsidian + Dataview&lt;/strong&gt; 三方联动，实现：&lt;/p&gt;
+&lt;p&gt;一键收藏网页、云端中转同步、本地自动归档、标签分类索引，彻底告别杂乱书签，轻松沉淀全网优质资源。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260427195504528.webp&quot; alt=&quot;大强同学「www.dqtx.cc&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;一.部署先决条件&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;前往 &lt;a href=&quot;https://linkstowr.com/&quot;&gt;linkstowr.com&lt;/a&gt; 注册账号，生成专属访问令牌；&lt;/li&gt;
+&lt;li&gt;浏览器安装 &lt;a href=&quot;https://chromewebstore.google.com/detail/linkstowr/aabkobajeambdejghgegicnhcndhcjpk&quot;&gt;LinkStowr 扩展&lt;/a&gt;，填入&lt;a href=&quot;https://linkstowr.com/user/settings&quot;&gt;访问令牌&lt;/a&gt;完成绑定授权；&lt;/li&gt;
+&lt;li&gt;在 Obsidian 中安装并启用 &lt;a href=&quot;https://github.com/joelseq/obsidian-linkstowr&quot;&gt;&lt;strong&gt;LinkStowr&lt;/strong&gt;&lt;/a&gt;、&lt;strong&gt;Dataview&lt;/strong&gt; 两款核心插件；&lt;/li&gt;
+&lt;li&gt;全部配置完成后，即可随时一键收藏网页，自定义添加标签与备注，高效系统化管理所有链接资源。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;h2&gt;一键收藏&lt;/h2&gt;
+&lt;p&gt;安装好 LinkStowr 浏览器扩展后，收藏链接的过程变得异常简单：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;看到优质网页，点击右上角的扩展图标。&lt;/li&gt;
+&lt;li&gt;插件会自动抓取网页标题，你可以按需修改。&lt;/li&gt;
+&lt;li&gt;给链接打上标签（比如 &lt;code&gt;#AI工具&lt;/code&gt;、&lt;code&gt;#飞书&lt;/code&gt;、&lt;code&gt;#Notion&lt;/code&gt;），⚠️&lt;strong&gt;输入标签并按回车键&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;写下几句备注，记录为什么收藏它，方便未来回忆。&lt;/li&gt;
+&lt;li&gt;点击「Save Link」，完成！&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;整个过程不到 3 秒，链接就被安全地暂存到云端，等待被同步到 Obsidian。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;沉淀到知识库&lt;/h2&gt;
+&lt;p&gt;接下来，Obsidian 里的  **LinkStowr 插件会接管一切。它的配置非常关键，我是这样设置的：&lt;/p&gt;
+&lt;h3&gt;1. 配置基础信息&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Links folder path&lt;/strong&gt;：设置为 &lt;code&gt;02_Wiki/链接收藏&lt;/code&gt;，所有链接笔记都会存放在这里。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Access Token&lt;/strong&gt;：填入 LinkStowr 扩展中获取的令牌，打通同步通道。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sync on load&lt;/strong&gt;：开启，每次打开 Obsidian 自动同步一次新链接。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Custom server URL&lt;/strong&gt;：留空，使用官方服务即可。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260427115231051.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;2. 标准化笔记模板&lt;/h3&gt;
+&lt;p&gt;为了让所有链接笔记格式统一，我创建了一个模板文件 &lt;code&gt;templates/link-template.md&lt;/code&gt;，内容如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+title: {{title}}
+url: {{url}}
+date: {{date:YYYY/MM/DD}}
+tags: {{tags}}
+note: {{note}}
+---
+
+# {{title}}
+🔗 链接：[{{title}}]({{url}})
+📝 说明：{{note}}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这个模板会自动填充标题、链接、日期、标签和备注，保证每一条链接笔记都结构清晰，可被 Dataview 检索和调用。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;Dataview自动化索引&lt;/h2&gt;
+&lt;p&gt;所有链接笔记都沉淀好了，怎么高效查看？我用 Dataview 做了一个「index.md」作为统一入口，实现了按标签自动分类。&lt;/p&gt;
+&lt;h1&gt;链接收藏&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;有价值的工具和资源链接。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;飞书文档合集&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
+  title AS &quot;名称&quot;,
+  url AS &quot;链接&quot;,
+  note AS &quot;说明&quot;,
+  tags AS &quot;标签&quot;
+FROM &quot;02_Wiki/链接收藏&quot;
+WHERE file.path != &quot;02_Wiki/链接收藏/00-index.md&quot;
+AND contains(tags, &quot;飞书&quot;)
+SORT date DESC
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Notion文档合集&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
+  title AS &quot;名称&quot;,
+  url AS &quot;链接&quot;,
+  note AS &quot;说明&quot;,
+  tags AS &quot;标签&quot;
+FROM &quot;02_Wiki/链接收藏&quot;
+WHERE file.path != &quot;02_Wiki/链接收藏/00-index.md&quot;
+AND contains(tags, &quot;notion&quot;)
+SORT date DESC
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;github项目&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
+  title AS &quot;名称&quot;,
+  url AS &quot;链接&quot;,
+  note AS &quot;说明&quot;,
+  tags AS &quot;标签&quot;
+FROM &quot;02_Wiki/链接收藏&quot;
+WHERE file.path != &quot;02_Wiki/链接收藏/00-index.md&quot;
+AND contains(tags, &quot;github&quot;)
+SORT date DESC
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;AI工具&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
+  title AS &quot;名称&quot;,
+  url AS &quot;链接&quot;,
+  note AS &quot;说明&quot;,
+  tags AS &quot;标签&quot;
+FROM &quot;02_Wiki/链接收藏&quot;
+WHERE file.path != &quot;02_Wiki/链接收藏/00-index.md&quot;
+AND contains(tags, &quot;ai&quot;)
+SORT date DESC
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;全部链接&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
+  title AS &quot;名称&quot;,
+  url AS &quot;链接&quot;,
+  note AS &quot;说明&quot;,
+  tags AS &quot;标签&quot;
+FROM &quot;02_Wiki/链接收藏&quot;
+WHERE file.path != &quot;02_Wiki/链接收藏/00-index.md&quot;
+SORT date DESC
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;p&gt;这套工作流不仅解决了我链接杂乱的问题，更让每一次收藏都变成了对数字资产的有效沉淀。如果你也被杂乱的书签困扰，不妨试试 LinkShelf + Obsidian 这套组合，让你的链接管理从此告别手动，走向自动化。&lt;/p&gt;
+</content:encoded></item><item><title>Flipbook 可视化搜索</title><link>https://dqtx.cc/posts/xenia/flipbook%E5%8F%AF%E8%A7%86%E5%8C%96%E6%90%9C%E7%B4%A2/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/flipbook%E5%8F%AF%E8%A7%86%E5%8C%96%E6%90%9C%E7%B4%A2/</guid><pubDate>Sun, 26 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近刷到一个叫缘缘博主说：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我这两天被这个爆火的Flipbook刷屏并被震撼到，现在的UI界面也许会在不久的将来彻底改变。&lt;/p&gt;
+&lt;p&gt;Flipbook是三星工程师(前OpenAl) Zain Shah和另外两个伙伴做的一个无限视觉浏览器，根据你的搜索词，实时用像素生成一张类似百科全书里的动态插画，连文字也是像素组成，没有代码，没有HTML，画面上的任何区域你都可以点击，生成这块区域的进一步画面。&lt;/p&gt;
+&lt;p&gt;而且作者们调制的这个画面风格太好看了，我小时候要是有这玩意能玩一整天不吃不喝，完全就是一本无限魔法书。作者直接展示了在这上面搜索巴黎旅游景点，还直接买了巴黎圣母院的票。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我自己我亲自尝试了下，比如输入关键词：&lt;strong&gt;杭州下沙天街&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;页面瞬间出现一张手绘风格杭州下沙天街地图&lt;/p&gt;
 &lt;p&gt;全程没有一行HTML，没有任何预设的按钮，AI在实时画你想看的东西。
 &lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260426182435376.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;借助点击右下角&lt;strong&gt;Connect to Live Video Stream&lt;/strong&gt;（连接到实时视频流）&lt;/p&gt;
+&lt;p&gt;点击右下角&lt;strong&gt;Connect to Live Video Stream&lt;/strong&gt;（连接到实时视频流）&lt;/p&gt;
 &lt;p&gt;更夸张的来了，所有的东西都动了起来。根据上方的地标说明，我们可以点击进入大门口。可以清晰地看到大门口具体的内容。
 &lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260426182857432.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;试用地址：&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://flipbook.page/&quot;&gt;flipbook.page&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;参考资料：&lt;/strong&gt;
+Zain Shah：
+https://x.com/zan2434&lt;/p&gt;
 </content:encoded></item><item><title>短短30天，AI圈炸了！</title><link>https://dqtx.cc/posts/aihacks/4%E6%9C%88ai%E6%97%B6%E9%97%B4%E7%BA%BF/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/4%E6%9C%88ai%E6%97%B6%E9%97%B4%E7%BA%BF/</guid><pubDate>Sat, 25 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近一个月，AI圈直接“炸”了。&lt;/p&gt;
 &lt;p&gt;先是 GPT-Image-2 横空出世，生出的图片质量高到刷屏朋友圈，真假难辨；紧接着短短几天内，OpenAI 与国产开源势力前后脚连放大招——闭源旗舰和开源顶流正面硬刚，把整个4月推向高潮。&lt;/p&gt;
 &lt;p&gt;从编程智能体到桌面原生应用，从超长上下文到图像生成，AI产品迭代速度快得让人喘不过气。下面用最直白的方式，带你快速梳理4月核心亮点：&lt;/p&gt;
@@ -2539,6 +2663,9 @@ https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/bug-check-0x
 &lt;p&gt;执行注册命令&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;regsvr32 windowsperformancerecordercontrol.DLL
 &lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;软件设置&lt;/h3&gt;
+&lt;p&gt;自动保存→开启。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260427005030653.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;二.安装插件&lt;/h2&gt;
 &lt;h3&gt;opencode插件&lt;/h3&gt;
 &lt;hr /&gt;
@@ -5477,11 +5604,20 @@ happy codex  # 启动Codex
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;搜索社交媒体和搜索引擎&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://dokobot.ai/zh-CN/skill/173023680392200192&quot;&gt;DOROBOT&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://x.com/supezen/status/2048684517553287474&quot;&gt;效果演示&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.notion.so/skill-347351994e408091a13be04d19c62d1e&quot;&gt;Notion备份&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://x.com/shao__meng/status/2035316234271764654&quot;&gt;10个面向前端 /产品/ UI的 Agent Skills&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;六个Skill聚合战&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://x.com/WY_mask/status/2048537609308344658&quot;&gt;Claude Code 值得安装的8个skills&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://x.com/BTCqzy1/status/2048628785793425837&quot;&gt;5 个才是真正值得必装的&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;11个Skill聚合战&lt;/h2&gt;
+&lt;p&gt;https://dokobot.ai/zh-CN/skill&lt;/p&gt;
 &lt;p&gt;https://mcpmarket.com/zh/tools/skills/leaderboard&lt;/p&gt;
 &lt;p&gt;https://skillhub.cn/#&lt;/p&gt;
 &lt;p&gt;https://skills.pub/zh&lt;/p&gt;
@@ -7573,7 +7709,7 @@ https://github.com/modelcontextprotocol/servers/tree/main/sequential-thinking&lt
     }
   }
 }&lt;/code&gt;&lt;/pre&gt;
-</content:encoded></item><item><title>Typora快捷键</title><link>https://dqtx.cc/posts/xenia/typora%E5%BF%AB%E6%8D%B7%E9%94%AE/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/typora%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid><description>--- YAML Front Matter：一种在文本文件（常见于 Markdown、HTML 等）开头添加的元数据格式，核心用于存储文件的额外信息（如标题、日...</description><pubDate>Sat, 05 Apr 2025 11:45:00 GMT</pubDate><content:encoded>&lt;h2&gt;Typora快捷键&lt;/h2&gt;
+</content:encoded></item><item><title>Typora快捷键</title><link>https://dqtx.cc/posts/xenia/typora%E5%BF%AB%E6%8D%B7%E9%94%AE/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/typora%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid><description>一种在文本文件（常见于 Markdown、HTML 等）开头添加的元数据格式，核心用于存储文件的额外信息（如标题、日...</description><pubDate>Sat, 05 Apr 2025 11:45:00 GMT</pubDate><content:encoded>&lt;h2&gt;Typora快捷键&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
