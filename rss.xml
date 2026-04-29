@@ -379,6 +379,50 @@ https://platform.xiaomimimo.com/contact
 &lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260429135733268.webp&quot; alt=&quot;f16d6021ac340bf9503741e01a68c0e3.png&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;可以在订阅套餐里看到该套餐的有效期和额度。我看了一下，我的额度是两个亿。
 &lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260429135746969.webp&quot; alt=&quot;7e60c3fe07593ee78def36703add3f4e.png&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;创建 API Key&lt;/h3&gt;
+&lt;p&gt;注意⚠️：一定是去来这里获取&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;专属API key&lt;/li&gt;
+&lt;li&gt;专属Base URL
+这样才是使用的免费的额度
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260429162707099.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;接入Claude code&lt;/h3&gt;
+&lt;p&gt;在CC Switch填写参数&lt;/p&gt;
+&lt;p&gt;注意⚠️：不要使用默认的请求地址，已经自己去创建API key&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;请求地址：专属Base URL
+API Key：你的专属API&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;ps，默认使用&lt;strong&gt;mimo-v2-pro&lt;/strong&gt;模型，不支持获取模型列表。&lt;/p&gt;
+&lt;h3&gt;接入Qwen Code&lt;/h3&gt;
+&lt;h4&gt;选择认证方式&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260429160433714.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;h4&gt;进入自定义配置**&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260429160502785.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;h4&gt;选择兼容协议&lt;/h4&gt;
+&lt;p&gt;OpenAI 与Anthropic都支持
+我选择OpenAI
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260429160551791.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;h4&gt;粘贴你的&lt;strong&gt;专属 Base URL&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260429160916176.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;h4&gt;粘贴你的&lt;strong&gt;专属 API KEY&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260429160951881.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;h4&gt;输入模型名称&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;MiMo-V2.5-Pro、MiMo-V2.5、MiMo-V2.5-TTS-VoiceClone、MiMo-V2.5-TTS-VoiceDesign、MiMo-V2.5-TTS、MiMo-V2-Pro、MiMo-V2-Omni、MiMo-V2-TTS&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;注意⚠️：我试了MiMo-V2.5-Pro、MiMo-V2.5都不想，后面settings.json换成mimo-v2-pro可以了&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260429161451540.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;h4&gt;启用思考模式&lt;/h4&gt;
+&lt;p&gt;按下**空格键（Space）**选中然后回车，两个可同时启用。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;Enable thinking&lt;/code&gt;（启用思考模式）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Enable modality&lt;/code&gt;（启用多模态能力）
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260429161543041.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4&gt;开始使用&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260429163300716.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 </content:encoded></item><item><title>Win重装系统软件</title><link>https://dqtx.cc/posts/software/win%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/win%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F/</guid><pubDate>Wed, 29 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这篇文章将整理全网所有与重装 Windows 系统相关的工具和可能用到的教程。希望能够对你有所帮助。我会在这篇文章中持续更新相关使用的软件、工具及教程等。&lt;/p&gt;
 &lt;h2&gt;镜像下载&lt;/h2&gt;
 &lt;ol&gt;
