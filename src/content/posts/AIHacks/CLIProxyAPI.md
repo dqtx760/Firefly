@@ -1,12 +1,12 @@
 ---
 title: CLIProxyAPI教程
-published: 2026-04-28
+published: 0202-02-14
 tags:
   - 技术教程
 category: AIHacks
 draft: false
 pinned: false
-image: 
+image:
 ---
 
 

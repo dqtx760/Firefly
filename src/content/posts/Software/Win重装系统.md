@@ -31,6 +31,7 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/202604291136
 [微PE工具箱](https://www.wepe.com.cn/)
 [FirPE](https://www.firpe.cn/)
 [Edgeless](https://home.edgeless.top/#)
+[cmdpe](https://www.cmdpe.com/)
 
 ## 一键重装
 - [天使PE一键装机助手](https://www.angel-pe.cn/tspeyjzjzs/)
@@ -38,8 +39,8 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/202604291136
 - [37个在线重装测评](https://www.kdocs.cn/l/cldrRfBbT1Rh)  →[视频](https://www.bilibili.com/video/BV1aru1zsEf8/?spm_id_from=333.337.search-card.all.click&vd_source=206031f494850e57fd6c92ace02b1bed)
 
 ## 资料来源
-[删除U盘的EFI分区方法](https://web.okjike.com/originalPost/6639f4b1a922aa28d0fa4dec) 
-[E盘合并到D盘](https://www.bilibili.com/video/BV1hd4y1m7BP/?spm_id_from=333.337.search-card.all.click&vd_source=206031f494850e57fd6c92ace02b1bed)
-https://zhuangit.ababtools.com/tools
-https://xodnytdcaw.feishu.cn/wiki/RhUiwv79HiIeWUkxMndcXkIan0c?from=space_search
-https://www.notion.so/33f351994e40804b9d77efd03befda5d
+- [删除U盘的EFI分区方法](https://web.okjike.com/originalPost/6639f4b1a922aa28d0fa4dec) 
+- [E盘合并到D盘](https://www.bilibili.com/video/BV1hd4y1m7BP/?spm_id_from=333.337.search-card.all.click&vd_source=206031f494850e57fd6c92ace02b1bed)
+- https://zhuangit.ababtools.com/tools
+- https://xodnytdcaw.feishu.cn/wiki/RhUiwv79HiIeWUkxMndcXkIan0c?from=space_search
+- https://www.notion.so/33f351994e40804b9d77efd03befda5d
