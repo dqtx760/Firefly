@@ -376,7 +376,8 @@
 &lt;a href=&quot;https://www.hotpe.top/&quot;&gt;HotPE工具箱&lt;/a&gt;
 &lt;a href=&quot;https://www.wepe.com.cn/&quot;&gt;微PE工具箱&lt;/a&gt;
 &lt;a href=&quot;https://www.firpe.cn/&quot;&gt;FirPE&lt;/a&gt;
-&lt;a href=&quot;https://home.edgeless.top/#&quot;&gt;Edgeless&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&quot;https://home.edgeless.top/#&quot;&gt;Edgeless&lt;/a&gt;
+&lt;a href=&quot;https://www.cmdpe.com/&quot;&gt;cmdpe&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;一键重装&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.angel-pe.cn/tspeyjzjzs/&quot;&gt;天使PE一键装机助手&lt;/a&gt;&lt;/li&gt;
@@ -384,46 +385,13 @@
 &lt;li&gt;&lt;a href=&quot;https://www.kdocs.cn/l/cldrRfBbT1Rh&quot;&gt;37个在线重装测评&lt;/a&gt;  →&lt;a href=&quot;https://www.bilibili.com/video/BV1aru1zsEf8/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=206031f494850e57fd6c92ace02b1bed&quot;&gt;视频&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;资料来源&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://web.okjike.com/originalPost/6639f4b1a922aa28d0fa4dec&quot;&gt;删除U盘的EFI分区方法&lt;/a&gt;
-&lt;a href=&quot;https://www.bilibili.com/video/BV1hd4y1m7BP/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=206031f494850e57fd6c92ace02b1bed&quot;&gt;E盘合并到D盘&lt;/a&gt;
-https://zhuangit.ababtools.com/tools
-https://xodnytdcaw.feishu.cn/wiki/RhUiwv79HiIeWUkxMndcXkIan0c?from=space_search
-https://www.notion.so/33f351994e40804b9d77efd03befda5d&lt;/p&gt;
-</content:encoded></item><item><title>CLIProxyAPI教程</title><link>https://dqtx.cc/posts/aihacks/cliproxyapi/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/cliproxyapi/</guid><pubDate>Tue, 28 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这就是个能让你绕过官方限制，把各大 AI 客户端额度无缝转成标准 API 的本地代理。 平时你开了 ChatGPT Plus、Claude Pro 或者用免费的 Gemini 2.5 Pro，官方只让在网页或自家的 CLI 工具里用。&lt;/p&gt;
-&lt;p&gt;这工具的骚操作在于，它直接拿你账号的 OAuth 登录态，在本地原地吐出一个标准的 OpenAI/Claude 兼容接口。&lt;/p&gt;
-&lt;p&gt;项目地址
-https://github.com/router-for-me/CLIProxyAPI&lt;/p&gt;
-&lt;h3&gt;配置&lt;/h3&gt;
-&lt;p&gt;1.下载解压：&lt;a href=&quot;https://github.com/router-for-me/CLIProxyAPI/releases&quot;&gt;点这里&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;2.修改配置文件&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;config.example.yaml改成config.yaml&lt;/li&gt;
-&lt;li&gt;config.yaml参数值修改allow-remote:false改成&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://web.okjike.com/originalPost/6639f4b1a922aa28d0fa4dec&quot;&gt;删除U盘的EFI分区方法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.bilibili.com/video/BV1hd4y1m7BP/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=206031f494850e57fd6c92ace02b1bed&quot;&gt;E盘合并到D盘&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;https://zhuangit.ababtools.com/tools&lt;/li&gt;
+&lt;li&gt;https://xodnytdcaw.feishu.cn/wiki/RhUiwv79HiIeWUkxMndcXkIan0c?from=space_search&lt;/li&gt;
+&lt;li&gt;https://www.notion.so/33f351994e40804b9d77efd03befda5d&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt; allow-remote:true
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;config.yaml参数值secret-key:&quot;&quot;（后台访问密码）改成&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;secret-key:&quot;123&quot; 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;3.调用可执行程序
-在安装目录右键打开cmd，输入下面命令回车&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;cli-proxy-api.exe antigravity-login
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;接入cc&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;{
-  &quot;env&quot;: {
-    &quot;ANTHROPIC_BASE_URL&quot;: &quot;http://localhost:8317&quot;,
-    &quot;ANTHROPIC_AUTH_TOKEN&quot;: &quot;your-api-key-1&quot;,
-    &quot;ANTHROPIC_MODEL&quot;: &quot;gemini-claude-opus-4-5-thinking&quot;
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;CLIProxyAPI 用户手册：&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://help.router-for.me/cn/&quot;&gt;https://help.router-for.me/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;视频教程
-https://www.bilibili.com/video/BV1bgB9BfEKv/?spm_id_from=333.1391.0.0&amp;amp;vd_source=206031f494850e57fd6c92ace02b1bed&lt;/p&gt;
 </content:encoded></item><item><title>OpenRouter免费模型食用指南</title><link>https://dqtx.cc/posts/aihacks/openrouter/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/openrouter/</guid><pubDate>Tue, 28 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;介绍一种零成本使用 Claude Code 的方案：通过 OpenRouter 上的免费模型 Ling-2.6-1T，配合 CC Switch 这款可视化管理工具，一键切换 API 提供商，实现完全免费的 AI 编程体验。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260428232049626.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;接入流程&lt;/h3&gt;
@@ -1828,31 +1796,6 @@ mklink /h &quot;D:\project2026\zhishiku\QWEN\知识库规范.md&quot; &quot;D:\p
 &lt;p&gt;https://x.com/liyue_ai/status/2017259163127304623&lt;/p&gt;
 &lt;p&gt;https://www.youtube.com/watch?v=4Gz2Sxgpv20&lt;/p&gt;
 &lt;p&gt;https://x.com/linxiaobei888/status/2017061177311056343&lt;/p&gt;
-</content:encoded></item><item><title>包管理工具UniGetU</title><link>https://dqtx.cc/posts/software/unigetui/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/unigetui/</guid><pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;重装系统最烦的就是一个个装软件？UniGetUI 直接帮你一键搞定。&lt;/p&gt;
-&lt;p&gt;UniGetUI 是一款开源 GUI 包管理工具，专为 Windows 10/11 设计，统一整合 WinGet、Scoop、Chocolatey、pip、npm、.NET Tool、PowerShell Gallery 等常用命令行包管理器，可视化操作更简单。&lt;/p&gt;
-&lt;p&gt;开源地址：https://github.com/Devolutions/UniGetUI&lt;/p&gt;
-&lt;h2&gt;软件界面&lt;/h2&gt;
-&lt;p&gt;打开 UniGetUI 主界面，布局简洁清晰，核心功能一目了然：发现软件包、软件更新、已安装软件包、软件捆绑包，新手也能快速上手。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260417214231839.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;备份与导入&lt;/h2&gt;
-&lt;h4&gt;1️⃣ 本地方式&lt;/h4&gt;
-&lt;ol&gt;
-&lt;li&gt;进入已安装的软件标签页&lt;/li&gt;
-&lt;li&gt;勾选需要备份的软件（可全选）&lt;/li&gt;
-&lt;li&gt;点击添加所选项进捆绑包，自动跳转至软件捆绑包页面&lt;/li&gt;
-&lt;li&gt;点击另存为，生成软件捆绑包.ubundle文件&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;新电脑或重装系统后，只需在软件捆绑包页面打开备份文件，即可一键批量安装所有软件，自动下载、自动配置，无需逐个去官网下载安装。&lt;/p&gt;
-&lt;h4&gt;2️⃣ 云端方式&lt;/h4&gt;
-&lt;ol&gt;
-&lt;li&gt;打开 UniGetUI 设置界面&lt;/li&gt;
-&lt;li&gt;进入 &lt;strong&gt;&quot;设置 &amp;gt; 软件包备份&quot;&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;使用 GitHub 帐户登录&lt;/li&gt;
-&lt;li&gt;点击&lt;strong&gt;立即执行云备份&lt;/strong&gt;-备份&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;换新设备后，同样在备份设置中，直接从云端还原即可。&lt;/p&gt;
-&lt;p&gt;以上就是本期全部内容。如果本教程对你有帮助，欢迎点赞、收藏、转发三连，你的支持是我持续更新的动力。&lt;/p&gt;
-&lt;p&gt;Ps. 想要学习AI、提升数字化效率、打造全自动工作流，也欢迎加入我的专属社群：https://t.zsxq.com/d4zSX&lt;/p&gt;
 </content:encoded></item><item><title>Cc-sync：多电脑CC配置同步</title><link>https://dqtx.cc/posts/aihacks/cc-sync/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/cc-sync/</guid><pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;换电脑后，你最怕什么？不是装机，而是你和 Claude 聊了半天的代码、需求、方案——全没了。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1926,6 +1869,31 @@ bash ~/.claude/uninstall.sh
 &lt;p&gt;你和 Claude 聊了半小时的需求、写的代码片段——换台电脑全没了。&lt;/p&gt;
 &lt;p&gt;cc-sync 让你&lt;strong&gt;永远从上次停下的地方继续&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;工具不帮你做事，但帮你少重复做事。&lt;/strong&gt;&lt;/p&gt;
+</content:encoded></item><item><title>包管理工具UniGetU</title><link>https://dqtx.cc/posts/software/unigetui/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/unigetui/</guid><pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;重装系统最烦的就是一个个装软件？UniGetUI 直接帮你一键搞定。&lt;/p&gt;
+&lt;p&gt;UniGetUI 是一款开源 GUI 包管理工具，专为 Windows 10/11 设计，统一整合 WinGet、Scoop、Chocolatey、pip、npm、.NET Tool、PowerShell Gallery 等常用命令行包管理器，可视化操作更简单。&lt;/p&gt;
+&lt;p&gt;开源地址：https://github.com/Devolutions/UniGetUI&lt;/p&gt;
+&lt;h2&gt;软件界面&lt;/h2&gt;
+&lt;p&gt;打开 UniGetUI 主界面，布局简洁清晰，核心功能一目了然：发现软件包、软件更新、已安装软件包、软件捆绑包，新手也能快速上手。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260417214231839.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;备份与导入&lt;/h2&gt;
+&lt;h4&gt;1️⃣ 本地方式&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;进入已安装的软件标签页&lt;/li&gt;
+&lt;li&gt;勾选需要备份的软件（可全选）&lt;/li&gt;
+&lt;li&gt;点击添加所选项进捆绑包，自动跳转至软件捆绑包页面&lt;/li&gt;
+&lt;li&gt;点击另存为，生成软件捆绑包.ubundle文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;新电脑或重装系统后，只需在软件捆绑包页面打开备份文件，即可一键批量安装所有软件，自动下载、自动配置，无需逐个去官网下载安装。&lt;/p&gt;
+&lt;h4&gt;2️⃣ 云端方式&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;打开 UniGetUI 设置界面&lt;/li&gt;
+&lt;li&gt;进入 &lt;strong&gt;&quot;设置 &amp;gt; 软件包备份&quot;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;使用 GitHub 帐户登录&lt;/li&gt;
+&lt;li&gt;点击&lt;strong&gt;立即执行云备份&lt;/strong&gt;-备份&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;换新设备后，同样在备份设置中，直接从云端还原即可。&lt;/p&gt;
+&lt;p&gt;以上就是本期全部内容。如果本教程对你有帮助，欢迎点赞、收藏、转发三连，你的支持是我持续更新的动力。&lt;/p&gt;
+&lt;p&gt;Ps. 想要学习AI、提升数字化效率、打造全自动工作流，也欢迎加入我的专属社群：https://t.zsxq.com/d4zSX&lt;/p&gt;
 </content:encoded></item><item><title>Karpathy Wiki方法论实践</title><link>https://dqtx.cc/posts/workflow/karpathy/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/karpathy/</guid><pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;告别一盘散沙的笔记，AI让知识真正&quot;活&quot;起来。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -6239,15 +6207,6 @@ source ~/catkin_ws/devel/setup.bash
 &lt;h2&gt;参考资料&lt;/h2&gt;
 &lt;p&gt;openclaw接入飞书教程&lt;/p&gt;
 &lt;p&gt;https://x.com/0xValkyrie_ai/status/2020330035652227360&lt;/p&gt;
-</content:encoded></item><item><title>闪电说：端侧AI语音输入法</title><link>https://dqtx.cc/posts/software/%E9%97%AA%E7%94%B5%E8%AF%B4/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E9%97%AA%E7%94%B5%E8%AF%B4/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;闪电说是由武汉团队打造的&lt;strong&gt;国产 AI 语音输入法&lt;/strong&gt;，前身为代体输入法，以 “端侧本地处理” 为核心特色，实现毫秒级语音转文字体验。它打破传统云端语音输入的延迟与隐私痛点，通过本地 AI 引擎构建 “即说即显、思维同步” 的输入模式，兼容 Windows 和 macOS 全平台，是一款完全免费的系统级输入工具，被观猹平台评为 8.6 分高分产品。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260204111254949.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;上手指南&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;下载安装&lt;/strong&gt;：访问官网（https://shandianshuo.cn），根据系统选择 Windows 或 macOS 版本下载安装；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;权限配置&lt;/strong&gt;：授予麦克风权限，测试音频输入是否正常；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;个性化设置&lt;/strong&gt;：自定义激活快捷键、默认语言、输入模式等基础配置；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;即时使用&lt;/strong&gt;：在任意文本输入框按下快捷键，启动语音输入，转写文本自动优化呈现，支持后续编辑调整。&lt;/li&gt;
-&lt;/ol&gt;
 </content:encoded></item><item><title>workany：桌面Agent产品</title><link>https://dqtx.cc/posts/aihacks/workany/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/workany/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;WorkAny&lt;/strong&gt; 是一款基于 Claude 3.5 Sonnet 模型构建的智能工作助手平台。它不仅能与你自然对话，更拥有强大的文件处理、代码编写、文档创建等实用能力。简单来说，它就像给 AI 装上了&quot;双手&quot;——不仅能思考，还能真正帮你&lt;strong&gt;动手完成工作&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/workany_coding_1280x720.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;✨ 核心功能一览&lt;/h2&gt;
@@ -6426,6 +6385,15 @@ source ~/catkin_ws/devel/setup.bash
 &lt;p&gt;下载地址：https://workany.ai/zh&lt;/p&gt;
 &lt;p&gt;如果觉得这篇教程对你有帮助，别忘了&lt;strong&gt;点赞+收藏+转发&lt;/strong&gt;三连呀！关注我，后续分享更多实用技巧、效率工具干货，下次见～ 👋&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;大强远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+</content:encoded></item><item><title>闪电说：端侧AI语音输入法</title><link>https://dqtx.cc/posts/software/%E9%97%AA%E7%94%B5%E8%AF%B4/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E9%97%AA%E7%94%B5%E8%AF%B4/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;闪电说是由武汉团队打造的&lt;strong&gt;国产 AI 语音输入法&lt;/strong&gt;，前身为代体输入法，以 “端侧本地处理” 为核心特色，实现毫秒级语音转文字体验。它打破传统云端语音输入的延迟与隐私痛点，通过本地 AI 引擎构建 “即说即显、思维同步” 的输入模式，兼容 Windows 和 macOS 全平台，是一款完全免费的系统级输入工具，被观猹平台评为 8.6 分高分产品。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260204111254949.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;上手指南&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;下载安装&lt;/strong&gt;：访问官网（https://shandianshuo.cn），根据系统选择 Windows 或 macOS 版本下载安装；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;权限配置&lt;/strong&gt;：授予麦克风权限，测试音频输入是否正常；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;个性化设置&lt;/strong&gt;：自定义激活快捷键、默认语言、输入模式等基础配置；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;即时使用&lt;/strong&gt;：在任意文本输入框按下快捷键，启动语音输入，转写文本自动优化呈现，支持后续编辑调整。&lt;/li&gt;
+&lt;/ol&gt;
 </content:encoded></item><item><title>干货教程：我的博客发布工作流</title><link>https://dqtx.cc/posts/workflow/%E5%8D%9A%E5%AE%A2%E5%B7%A5%E4%BD%9C%E6%B5%81/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/%E5%8D%9A%E5%AE%A2%E5%B7%A5%E4%BD%9C%E6%B5%81/</guid><description>分享我的无服务器博客发布流程：使用 GitHub 托管 + EdgeOne 自动部署，配合 Typora 和脚本实现高效的文章发布工作流。</description><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天想跟大家分享一下我的博客发布工作流。我的博客没有服务器，只有一个域名通过 GitHub 进行托管，配合 EdgeOne 实现自动构建部署。整个过程非常高效，下面就来详细介绍！&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260208222439485.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;创建文章&lt;/h2&gt;
@@ -10017,4 +9985,39 @@ https://mumu.163.com/&lt;/p&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/4%E6%9C%88ai%E6%97%B6%E9%97%B4%E7%BA%BF/&quot;&gt;短短30天，AI圈炸了！&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;em&gt;更新时间&lt;/em&gt;：2026/04/29&lt;/p&gt;
+</content:encoded></item><item><title>CLIProxyAPI教程</title><link>https://dqtx.cc/posts/aihacks/cliproxyapi/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/cliproxyapi/</guid><pubDate>Sun, 14 Feb 0202 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这就是个能让你绕过官方限制，把各大 AI 客户端额度无缝转成标准 API 的本地代理。 平时你开了 ChatGPT Plus、Claude Pro 或者用免费的 Gemini 2.5 Pro，官方只让在网页或自家的 CLI 工具里用。&lt;/p&gt;
+&lt;p&gt;这工具的骚操作在于，它直接拿你账号的 OAuth 登录态，在本地原地吐出一个标准的 OpenAI/Claude 兼容接口。&lt;/p&gt;
+&lt;p&gt;项目地址
+https://github.com/router-for-me/CLIProxyAPI&lt;/p&gt;
+&lt;h3&gt;配置&lt;/h3&gt;
+&lt;p&gt;1.下载解压：&lt;a href=&quot;https://github.com/router-for-me/CLIProxyAPI/releases&quot;&gt;点这里&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2.修改配置文件&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;config.example.yaml改成config.yaml&lt;/li&gt;
+&lt;li&gt;config.yaml参数值修改allow-remote:false改成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt; allow-remote:true
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;config.yaml参数值secret-key:&quot;&quot;（后台访问密码）改成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;secret-key:&quot;123&quot; 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;3.调用可执行程序
+在安装目录右键打开cmd，输入下面命令回车&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cli-proxy-api.exe antigravity-login
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;接入cc&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;{
+  &quot;env&quot;: {
+    &quot;ANTHROPIC_BASE_URL&quot;: &quot;http://localhost:8317&quot;,
+    &quot;ANTHROPIC_AUTH_TOKEN&quot;: &quot;your-api-key-1&quot;,
+    &quot;ANTHROPIC_MODEL&quot;: &quot;gemini-claude-opus-4-5-thinking&quot;
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;CLIProxyAPI 用户手册：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://help.router-for.me/cn/&quot;&gt;https://help.router-for.me/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;视频教程
+https://www.bilibili.com/video/BV1bgB9BfEKv/?spm_id_from=333.1391.0.0&amp;amp;vd_source=206031f494850e57fd6c92ace02b1bed&lt;/p&gt;
 </content:encoded></item></channel></rss>
