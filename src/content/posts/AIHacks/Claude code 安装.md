@@ -91,6 +91,7 @@ Claude code在终端使用正常， 但在Obsidian的插件中Claudian对话异�
 | [MiniMax](https://platform.minimaxi.com/subscribe/coding-plan) | [点此获取](https://platform.minimaxi.com/user-center/basic-information/interface-key)     | [点此查看](https://platform.minimaxi.com/docs/guides/text-ai-coding-tools#%E5%9C%A8-claude-code-%E4%B8%AD%E4%BD%BF%E7%94%A8-minimax-m2%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89) |
 | [Kimi K2](https://www.kimi.com/code)                           | 点此获取                                                                                  | [点此查看](https://www.kimi.com/code/docs/third-party-tools/other-coding-agents.html)                                                                                       |
 | [OpenRouter](https://openrouter.ai/)                           | [点此获取](https://openrouter.ai/workspaces/default/keys)                                 | 点此查看                                                                                                                                                                    |
+| [XiaomiMIMO](https://platform.xiaomimimo.com/token-plan)       | [点击获取](https://platform.xiaomimimo.com/console/api-keys)                              | [点此查看](https://platform.xiaomimimo.com/docs/zh-CN/integration/tools-overview)                                                                                           |
 #### 2. 配置API
 
 #### 借助→[CC Switch](https://github.1zyq1.com/farion1231/cc-switch/releases/download/v3.14.1/CC-Switch-v3.14.1-Windows.msi)
