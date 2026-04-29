@@ -1,10 +1,10 @@
 ---
-title: CodePilot接入飞书指南
+title: CodePilot安装使用教程
 published: 2026-03-07
 tags:
   - Claudecode
   - 软件推荐
-category: Software
+category: AIHacks
 draft: false
 pinned: false
 image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260307140824884.webp

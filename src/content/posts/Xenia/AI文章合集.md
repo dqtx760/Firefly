@@ -3,7 +3,7 @@ title: AI文章合集
 published: 2022-01-29
 tags:
   - AI
-category: AIHacks
+category: Xenia
 draft: false
 pinned: false
 ---
@@ -16,10 +16,14 @@ pinned: false
 - [Newtype-os完整工作流指南](https://www.dqtx.cc/posts/aihacks/newtype-os/)
 - [Hermes Agent上手指南。](https://www.dqtx.cc/posts/aihacks/hermes-agent/)
 
-## IDE工具
+## 桌面Agent产品
 - [Zed安装使用教程](https://www.dqtx.cc/posts/aihacks/zed/)
 - [Antigravity安装使用教程](https://www.dqtx.cc/posts/aihacks/antigravity/)
 - [workany：桌面Agent产品](https://www.dqtx.cc/posts/aihacks/workany/)
+- CodePilot使用指南
+- 秘塔回响语音输入法
+待补充
+- opencode
 
 
 ## 拓展插件
@@ -57,3 +61,6 @@ pinned: false
 ## 行业资讯
 - [ClaudeCode泄露后，程序员们疯了！](https://www.dqtx.cc/posts/aihacks/ccxielu/)
 - [短短30天，AI圈炸了！](https://www.dqtx.cc/posts/aihacks/4%E6%9C%88ai%E6%97%B6%E9%97%B4%E7%BA%BF/)
+
+
+*更新时间*：2026/04/29
