@@ -1,3 +1,12 @@
+---
+title: AI文章合集
+published: 2022-01-29
+tags: []
+category: AIHacks
+draft: false
+pinned: false
+---
+
 
 ## Cli工具
 [Claude code 安装教程](https://www.dqtx.cc/posts/aihacks/claude-code-%E5%AE%89%E8%A3%85/)
