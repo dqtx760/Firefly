@@ -451,13 +451,53 @@ https://zhuanlan.zhihu.com/p/1902150269241893722&lt;/li&gt;
 &lt;li&gt;创建API入口
 https://openrouter.ai/workspaces/default/keys&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>蚂蚁百灵大模型ling-2.6-1t</title><link>https://dqtx.cc/posts/xenia/%E8%9A%82%E8%9A%81%E7%99%BE%E7%81%B5%E5%A4%A7%E6%A8%A1%E5%9E%8B%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/%E8%9A%82%E8%9A%81%E7%99%BE%E7%81%B5%E5%A4%A7%E6%A8%A1%E5%9E%8B%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</guid><pubDate>Tue, 28 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;📊 模型简介&lt;/h2&gt;
+</content:encoded></item><item><title>蚂蚁百灵大模型ling-2.6-1t</title><link>https://dqtx.cc/posts/xenia/%E8%9A%82%E8%9A%81%E7%99%BE%E7%81%B5%E5%A4%A7%E6%A8%A1%E5%9E%8B%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/%E8%9A%82%E8%9A%81%E7%99%BE%E7%81%B5%E5%A4%A7%E6%A8%A1%E5%9E%8B%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</guid><pubDate>Tue, 28 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;引言&lt;/h2&gt;
 &lt;p&gt;蚂蚁百灵大模型是蚂蚁集团自主研发的大语言模型，具备强大的自然语言处理能力和丰富的知识储备。该模型在中文理解、代码生成、逻辑推理等方面表现出色，特别适合中文场景下的各类AI应用。&lt;/p&gt;
 &lt;p&gt;最近有一个活动，每天在02:00前会赠送当日50万token的免费额度，当日未使用完的额度不结转至次日。这篇文章将演示如何接入你的千Qwen code使用。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;API调用入口&lt;/strong&gt;
-https://ling.tbox.cn/open&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260428234447030.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;🔧 Qwen Code 接入配置&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;API调用入口&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;https://ling.tbox.cn/open&lt;/p&gt;
+&lt;p&gt;OpenAI 兼容接口文档&lt;/p&gt;
+&lt;p&gt;https://developer.ant-ling.com/zh-CN/docs/api-reference/openai/&lt;/p&gt;
+&lt;p&gt;Anthropic 兼容接口
+https://developer.ant-ling.com/zh-CN/docs/api-reference/anthropic/&lt;/p&gt;
+&lt;p&gt;Claude Code 中使用
+https://developer.ant-ling.com/zh-CN/docs/integrations/claude-code/&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260429004940300.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;模型列表&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;模型名称&lt;/th&gt;
+&lt;th&gt;上下文窗口&lt;/th&gt;
+&lt;th&gt;推荐场景&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Ling-2.6-1T&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;256K&lt;/td&gt;
+&lt;td&gt;复杂代码、长文档分析、Agent 任务&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Ling-2.6-flash&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;128K&lt;/td&gt;
+&lt;td&gt;日常开发、快速迭代、批量任务&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Ling-2.5-1T&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;128K&lt;/td&gt;
+&lt;td&gt;通用推理、中等复杂度任务&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Ring-2.5-1T&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;128K&lt;/td&gt;
+&lt;td&gt;多模态任务（图片 + 文本）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;接入Qwen Code&lt;/h2&gt;
 &lt;p&gt;我成功接入了Qwen Code与蚂蚁百灵大模型，以下是完整的配置步骤：&lt;/p&gt;
 &lt;h3&gt;配置文件路径&lt;/h3&gt;
 &lt;blockquote&gt;
@@ -503,6 +543,17 @@ https://ling.tbox.cn/open&lt;/p&gt;
   }
 }
 &lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;临时bat&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;@echo off
+title Qwen Code - 百灵模型
+
+:: 百灵 OpenAI 兼容接口配置
+set OPENAI_API_KEY=sk-studio-xxxx
+set OPENAI_BASE_URL=https://api.ant-ling.com/v1
+
+where qwen &amp;gt;nul 2&amp;gt;&amp;amp;1 || (echo qwen 未安装 &amp;amp; pause &amp;amp; exit /b 1)
+qwen -y
+&lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;配置说明&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -538,15 +589,135 @@ https://ling.tbox.cn/open&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2&gt;🤖 模型推荐&lt;/h2&gt;
-&lt;h3&gt;1. 深度思考模型：&lt;code&gt;inclusionai/ling-2.6-1t:free&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;该模型知识覆盖面广、储备扎实，分析维度更深、逻辑推理能力突出，输出内容精准优质；短板为响应速度偏慢。更适配复杂代码重构、深度文档撰写、核心业务设计、多轮推演类高难度复杂场景。&lt;/p&gt;
-&lt;h3&gt;2. 快速响应模型：&lt;code&gt;ling-2.6-flash&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;该模型响应极速、延迟低，可满足各类基础使用需求，支持批量处理，整体效率优异；适合简单代码补全、快速问答查询、批量文本处理及需要即时反馈的日常任务。&lt;/p&gt;
-&lt;h2&gt;📝 总结&lt;/h2&gt;
+&lt;h2&gt;接入Claude code&lt;/h2&gt;
+&lt;p&gt;Claude Code 的配置方式因版本而异，&lt;code&gt;settings.json&lt;/code&gt; 格式可能不兼容。bat 环境变量方式是可靠的。这里提供一个&lt;strong&gt;纯 bat 方案&lt;/strong&gt;，同时支持&lt;strong&gt;项目级 &lt;code&gt;.env&lt;/code&gt; 文件&lt;/strong&gt;管理：&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h3&gt;配置文件路径&lt;/h3&gt;
+&lt;p&gt;路径&lt;code&gt;C:\Users\Administrator\.claude\settings.json&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{
+  &quot;anthropicBaseUrl&quot;: &quot;https://api.ant-ling.com/anthropic&quot;,
+  &quot;anthropicApiKey&quot;: &quot;你的百灵API令牌&quot;,
+  &quot;model&quot;: &quot;Ling-2.6-flash&quot;,
+  &quot;defaultOpusModel&quot;: &quot;Ling-2.6-flash&quot;,
+  &quot;defaultSonnetModel&quot;: &quot;Ling-2.6-flash&quot;,
+  &quot;defaultHaikuModel&quot;: &quot;Ling-2.6-flash&quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;我自己的启动不起来,因版本而已&lt;/p&gt;
+&lt;h3&gt;全局启动 bat（推荐）&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;@echo off
+title Claude Code - 百灵模型
+
+:: ========== 百灵配置区（修改这里）==========
+set ANTHROPIC_BASE_URL=https://api.ant-ling.com/anthropic
+set ANTHROPIC_API_KEY=你的百灵API令牌
+set ANTHROPIC_MODEL=Ling-2.6-flash
+set ANTHROPIC_DEFAULT_OPUS_MODEL=Ling-2.6-flash
+set ANTHROPIC_DEFAULT_SONNET_MODEL=Ling-2.6-flash
+set ANTHROPIC_DEFAULT_HAIKU_MODEL=Ling-2.6-flash
+:: ===========================================
+
+where claude &amp;gt;nul 2&amp;gt;&amp;amp;1 || (echo Claude Code 未安装 &amp;amp; pause &amp;amp; exit /b 1)
+claude --dangerously-skip-permissions --model %ANTHROPIC_MODEL%
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;h3&gt;自动读取项目 .env 的启动 bat&lt;/h3&gt;
+&lt;p&gt;把 bat 放在&lt;strong&gt;项目根目录&lt;/strong&gt;，自动加载同目录的 &lt;code&gt;.env&lt;/code&gt;：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;@echo off
+title Claude Code - 百灵模型
+chcp 65001 &amp;gt;nul
+
+:: 加载同目录 .env 文件（如果存在）
+if exist &quot;.env&quot; (
+    for /f &quot;usebackq tokens=1,* delims==&quot; %%a in (&quot;.env&quot;) do (
+        set &quot;%%a=%%b&quot;
+    )
+)
+
+:: 兜底：如果 .env 没配置，使用默认值
+if not defined ANTHROPIC_BASE_URL set ANTHROPIC_BASE_URL=https://api.ant-ling.com/anthropic
+if not defined ANTHROPIC_API_KEY (
+    echo [错误] 未找到 ANTHROPIC_API_KEY
+    echo 请在 .env 文件或 bat 中配置你的百灵 API 令牌
+    pause
+    exit /b 1
+)
+if not defined ANTHROPIC_MODEL set ANTHROPIC_MODEL=Ling-2.6-flash
+if not defined ANTHROPIC_DEFAULT_OPUS_MODEL set ANTHROPIC_DEFAULT_OPUS_MODEL=%ANTHROPIC_MODEL%
+if not defined ANTHROPIC_DEFAULT_SONNET_MODEL set ANTHROPIC_DEFAULT_SONNET_MODEL=%ANTHROPIC_MODEL%
+if not defined ANTHROPIC_DEFAULT_HAIKU_MODEL set ANTHROPIC_DEFAULT_HAIKU_MODEL=%ANTHROPIC_MODEL%
+
+where claude &amp;gt;nul 2&amp;gt;&amp;amp;1 || (echo Claude Code 未安装 &amp;amp; pause &amp;amp; exit /b 1)
+
+echo 当前模型: %ANTHROPIC_MODEL%
+claude --dangerously-skip-permissions --model %ANTHROPIC_MODEL%
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;h3&gt;配套 &lt;code&gt;.env&lt;/code&gt; 文件（放项目根目录）&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;ANTHROPIC_BASE_URL=https://api.ant-ling.com/anthropic
+ANTHROPIC_API_KEY=你的百灵API令牌
+ANTHROPIC_MODEL=Ling-2.6-flash
+ANTHROPIC_DEFAULT_OPUS_MODEL=Ling-2.6-flash
+ANTHROPIC_DEFAULT_SONNET_MODEL=Ling-2.6-flash
+ANTHROPIC_DEFAULT_HAIKU_MODEL=Ling-2.6-flash
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;记得把 &lt;code&gt;.env&lt;/code&gt; 加入 &lt;code&gt;.gitignore&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+&lt;h3&gt;快速切换模型&lt;/h3&gt;
+&lt;p&gt;bat 里改一行就行：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;set ANTHROPIC_MODEL=Ling-2.5-1T
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;或启动时临时覆盖：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;set ANTHROPIC_MODEL=Ling-2.5-1T &amp;amp;&amp;amp; start-claude.bat
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;settings.json&lt;/code&gt; 路径（&lt;code&gt;~/.claude/settings.json&lt;/code&gt;）是 Claude Code 早期版本的配置方式，新版主要靠环境变量。bat 方案最稳。&lt;/p&gt;
+&lt;h3&gt;配置说明&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;环境变量 (bat)&lt;/th&gt;
+&lt;th&gt;settings.json 字段&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;ANTHROPIC_BASE_URL&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;anthropicBaseUrl&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;百灵 Anthropic 兼容端点&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;ANTHROPIC_API_KEY&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;anthropicApiKey&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;百灵 API 令牌&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;ANTHROPIC_MODEL&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;model&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;默认模型&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;ANTHROPIC_DEFAULT_OPUS_MODEL&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;defaultOpusModel&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Opus 档位映射&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;ANTHROPIC_DEFAULT_SONNET_MODEL&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;defaultSonnetModel&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Sonnet 档位映射&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;ANTHROPIC_DEFAULT_HAIKU_MODEL&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;defaultHaikuModel&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Haiku 档位映射&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;写在最后&lt;/h2&gt;
 &lt;p&gt;蚂蚁百灵大模型为开发者提供了强大的AI辅助能力。通过合理的模型选择和配置，可以显著提升开发效率。建议根据实际使用场景灵活切换模型，充分利用每日免费额度，同时注意API安全和使用成本控制。&lt;/p&gt;
-</content:encoded></item><item><title>Obsidian链接收藏自动化</title><link>https://dqtx.cc/posts/workflow/obsidian%E9%93%BE%E6%8E%A5%E6%94%B6%E8%97%8F%E8%87%AA%E5%8A%A8%E5%8C%96/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/obsidian%E9%93%BE%E6%8E%A5%E6%94%B6%E8%97%8F%E8%87%AA%E5%8A%A8%E5%8C%96/</guid><pubDate>Mon, 27 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你有没有过这样的困扰？&lt;/p&gt;
-&lt;p&gt;刷到优质干货、实用工具、优质教程，随手存入浏览器书签，想着日后回看。久而久之，书签越堆越多、杂乱无序，想要检索复用却无从下手，大量优质资源最终沦为闲置的无效数据。&lt;/p&gt;
+</content:encoded></item><item><title>Obsidian链接收藏自动化</title><link>https://dqtx.cc/posts/workflow/obsidian%E9%93%BE%E6%8E%A5%E6%94%B6%E8%97%8F%E8%87%AA%E5%8A%A8%E5%8C%96/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/obsidian%E9%93%BE%E6%8E%A5%E6%94%B6%E8%97%8F%E8%87%AA%E5%8A%A8%E5%8C%96/</guid><pubDate>Mon, 27 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你有没有过这样的困扰？刷到优质干货、实用工具、优质教程，随手存入浏览器书签，想着日后回看。久而久之，书签越堆越多、杂乱无序，想要检索复用却无从下手，大量优质资源最终沦为闲置的无效数据。&lt;/p&gt;
 &lt;p&gt;为此，我搭建了一套&lt;strong&gt;轻量化全自动链接收藏工作流&lt;/strong&gt;，依靠 &lt;strong&gt;LinkStowr + Obsidian + Dataview&lt;/strong&gt; 三方联动，实现：&lt;/p&gt;
 &lt;p&gt;一键收藏网页、云端中转同步、本地自动归档、标签分类索引，彻底告别杂乱书签，轻松沉淀全网优质资源。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260427195504528.webp&quot; alt=&quot;大强同学「www.dqtx.cc&quot; /&gt;&lt;/p&gt;
@@ -1504,6 +1675,47 @@ https://v.douyin.com/4K4Njgxq0Oc/&lt;/p&gt;
 https://mp.weixin.qq.com/s/kPjIpHmzciWY8_3ettEVsg&lt;/p&gt;
 &lt;p&gt;→NotionNext帮助手册：
 https://docs.tangly1024.com/about&lt;/p&gt;
+</content:encoded></item><item><title>Dos命令mklink详解</title><link>https://dqtx.cc/posts/workflow/mklink%E5%91%BD%E4%BB%A4/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/mklink%E5%91%BD%E4%BB%A4/</guid><pubDate>Mon, 20 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你是否遇到过这些问题：想让软件从A目录读取文件，但文件实际存放在B目录？&lt;/p&gt;
+&lt;p&gt;想在多个位置同步同一个文件，又不想每次手动复制？或是想给文件夹创建&quot;替身&quot;，让不同程序都能访问？&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Windows 自带的 mklink 命令，就是解决这些问题的神器。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260420172844734.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;01 先搞懂四种链接的区别&lt;/h3&gt;
+&lt;p&gt;Windows 提供了四种创建链接的方式，各有各的脾气：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;文件软链接（符号链接）&lt;/strong&gt; 是默认模式，用 &lt;code&gt;mklink 链接名 目标文件&lt;/code&gt; 即可创建。它像一个&quot;快捷方式升级版&quot;，让程序能读取别处的文件。&lt;strong&gt;支持跨盘&lt;/strong&gt;，比如在D盘创建一个链接指向C盘的文件。但如果你删掉原文件，这个链接就失效了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260420173406196.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;目录软链接（/D参数）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;专门用于文件夹，和文件软链接一样支持跨盘，原文件夹删除后链接同样失效。很多工具用它来重定向配置目录，比如让Claude从默认路径读取，实际文件存放在别处。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;硬链接（/H参数）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;它不是指向路径，而是给同一份数据多起几个&quot;名字&quot;。即使删掉原始文件，链接依然能打开内容，因为它指向的是硬盘上的实际数据。&lt;strong&gt;但它只能在同一个盘符内使用&lt;/strong&gt;，且只能用于文件，不能用于文件夹。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;目录联接（/J参数）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;和目录软链接类似，也是针对文件夹的链接方式。区别在于它属于NTFS的旧功能，&lt;strong&gt;不支持跨盘&lt;/strong&gt;，但兼容性更好，一些老旧程序也能正常识别。&lt;/p&gt;
+&lt;h3&gt;02 实际使用场景&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;场景一：让AI工具读取备份目录&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;想把Claude的全局skills目录指向GitHub备份仓库？可以这样操作：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cmd /c mklink /D &quot;C:\Users\你的用户名\.claude\skills&quot; &quot;C:\Users\你的用户名\claude-skills&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这两个路径指向同一个文件夹，往任意一个里放文件，另一个立刻同步。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;场景二：项目skill使用全局skill配置&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在Obsidian仓库里创建软链接，指向Claude code读取的全局skill目录：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mklink /D &quot;%userprofile%\.claude\skills&quot; &quot;%userprofile%\Documents\Obsidian\.claude\skills&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这样AI在Obsidia仓库就可以调用全局skill，不要单独安装&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;场景三：一个规范给不同的Agent用&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;用硬链接让同一份文档以不一样的名字显示，同时保持内容完全一致：&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;PS.这是 3 条独立命令，会运行 3 次，创建 3 个独立的硬链接。&lt;/em&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mklink /h &quot;D:\project2026\zhishiku\AGENTS\知识库规范.md&quot; &quot;D:\project2026\zhishiku\知识库规范.md&quot;
+mklink /h &quot;D:\project2026\zhishiku\CLAUDE\知识库规范.md&quot; &quot;D:\project2026\zhishiku\知识库规范.md&quot;
+mklink /h &quot;D:\project2026\zhishiku\QWEN\知识库规范.md&quot; &quot;D:\project2026\zhishiku\知识库规范.md&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;修改任意一个文件，其他文件同步更新，而且不怕误删原文件。&lt;/p&gt;
+&lt;h3&gt;03 重要注意事项&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;创建符号链接需要&lt;strong&gt;管理员权限&lt;/strong&gt;，记得以管理员模式运行CMD或PowerShell&lt;/li&gt;
+&lt;li&gt;软链接删除原文件后链接失效，因为链接指向的是路径&lt;/li&gt;
+&lt;li&gt;硬链接删除原文件后依然有效，因为它指向的是数据本身&lt;/li&gt;
+&lt;li&gt;如果你需要跨盘操作，选择软链接；如果只在同盘内使用，硬链接更稳定&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;掌握这四个命令，你就是Windows文件管理的高手了。&lt;/strong&gt;&lt;/p&gt;
 </content:encoded></item><item><title>Agent Skills 管理方案</title><link>https://dqtx.cc/posts/xenia/skills%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/skills%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/</guid><pubDate>Mon, 20 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;相信有很多小伙伴跟我一样，手头同时在用好几个 AI Agent——Claude Code、Codex、Cursor、Windsurf……每个 Agent 都有自己的 Skill 目录，装了一堆技能包。&lt;/p&gt;
 &lt;p&gt;时间一长就会遇到一个头疼的问题：同一个 Skill 要在不同 Agent 里各装一遍，版本还不一定一致，管理起来非常混乱。从最早手动复制粘贴技能配置，到用脚本管理本地技能库，再到尝试多设备同步——我发现&lt;strong&gt;技能的发现、配置、迁移和同步&lt;/strong&gt;，一直是个很痛的问题。&lt;/p&gt;
 &lt;p&gt;我一直在想，有没有一种方式能像管理代码依赖一样，统一管理所有 Agent 的技能包？同时实现在多设备上能够一键迁移跟同步？最近我在 GitHub 上发现了 几个解决方案，完美解决了我的痛点。&lt;/p&gt;
@@ -1586,47 +1798,6 @@ https://docs.tangly1024.com/about&lt;/p&gt;
 &lt;p&gt;https://x.com/liyue_ai/status/2017259163127304623&lt;/p&gt;
 &lt;p&gt;https://www.youtube.com/watch?v=4Gz2Sxgpv20&lt;/p&gt;
 &lt;p&gt;https://x.com/linxiaobei888/status/2017061177311056343&lt;/p&gt;
-</content:encoded></item><item><title>Dos命令mklink详解</title><link>https://dqtx.cc/posts/workflow/mklink%E5%91%BD%E4%BB%A4/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/mklink%E5%91%BD%E4%BB%A4/</guid><pubDate>Mon, 20 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你是否遇到过这些问题：想让软件从A目录读取文件，但文件实际存放在B目录？&lt;/p&gt;
-&lt;p&gt;想在多个位置同步同一个文件，又不想每次手动复制？或是想给文件夹创建&quot;替身&quot;，让不同程序都能访问？&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Windows 自带的 mklink 命令，就是解决这些问题的神器。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260420172844734.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;01 先搞懂四种链接的区别&lt;/h3&gt;
-&lt;p&gt;Windows 提供了四种创建链接的方式，各有各的脾气：&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;文件软链接（符号链接）&lt;/strong&gt; 是默认模式，用 &lt;code&gt;mklink 链接名 目标文件&lt;/code&gt; 即可创建。它像一个&quot;快捷方式升级版&quot;，让程序能读取别处的文件。&lt;strong&gt;支持跨盘&lt;/strong&gt;，比如在D盘创建一个链接指向C盘的文件。但如果你删掉原文件，这个链接就失效了。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260420173406196.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;目录软链接（/D参数）&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;专门用于文件夹，和文件软链接一样支持跨盘，原文件夹删除后链接同样失效。很多工具用它来重定向配置目录，比如让Claude从默认路径读取，实际文件存放在别处。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;硬链接（/H参数）&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;它不是指向路径，而是给同一份数据多起几个&quot;名字&quot;。即使删掉原始文件，链接依然能打开内容，因为它指向的是硬盘上的实际数据。&lt;strong&gt;但它只能在同一个盘符内使用&lt;/strong&gt;，且只能用于文件，不能用于文件夹。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;目录联接（/J参数）&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;和目录软链接类似，也是针对文件夹的链接方式。区别在于它属于NTFS的旧功能，&lt;strong&gt;不支持跨盘&lt;/strong&gt;，但兼容性更好，一些老旧程序也能正常识别。&lt;/p&gt;
-&lt;h3&gt;02 实际使用场景&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;场景一：让AI工具读取备份目录&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;想把Claude的全局skills目录指向GitHub备份仓库？可以这样操作：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;cmd /c mklink /D &quot;C:\Users\你的用户名\.claude\skills&quot; &quot;C:\Users\你的用户名\claude-skills&quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;这两个路径指向同一个文件夹，往任意一个里放文件，另一个立刻同步。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;场景二：项目skill使用全局skill配置&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;在Obsidian仓库里创建软链接，指向Claude code读取的全局skill目录：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;mklink /D &quot;%userprofile%\.claude\skills&quot; &quot;%userprofile%\Documents\Obsidian\.claude\skills&quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;这样AI在Obsidia仓库就可以调用全局skill，不要单独安装&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;场景三：一个规范给不同的Agent用&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;用硬链接让同一份文档以不一样的名字显示，同时保持内容完全一致：&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;PS.这是 3 条独立命令，会运行 3 次，创建 3 个独立的硬链接。&lt;/em&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;mklink /h &quot;D:\project2026\zhishiku\AGENTS\知识库规范.md&quot; &quot;D:\project2026\zhishiku\知识库规范.md&quot;
-mklink /h &quot;D:\project2026\zhishiku\CLAUDE\知识库规范.md&quot; &quot;D:\project2026\zhishiku\知识库规范.md&quot;
-mklink /h &quot;D:\project2026\zhishiku\QWEN\知识库规范.md&quot; &quot;D:\project2026\zhishiku\知识库规范.md&quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;修改任意一个文件，其他文件同步更新，而且不怕误删原文件。&lt;/p&gt;
-&lt;h3&gt;03 重要注意事项&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;创建符号链接需要&lt;strong&gt;管理员权限&lt;/strong&gt;，记得以管理员模式运行CMD或PowerShell&lt;/li&gt;
-&lt;li&gt;软链接删除原文件后链接失效，因为链接指向的是路径&lt;/li&gt;
-&lt;li&gt;硬链接删除原文件后依然有效，因为它指向的是数据本身&lt;/li&gt;
-&lt;li&gt;如果你需要跨盘操作，选择软链接；如果只在同盘内使用，硬链接更稳定&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;掌握这四个命令，你就是Windows文件管理的高手了。&lt;/strong&gt;&lt;/p&gt;
 </content:encoded></item><item><title>Cc-sync：多电脑CC配置同步</title><link>https://dqtx.cc/posts/aihacks/cc-sync/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/cc-sync/</guid><pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;换电脑后，你最怕什么？不是装机，而是你和 Claude 聊了半天的代码、需求、方案——全没了。&lt;/p&gt;
 &lt;/blockquote&gt;
