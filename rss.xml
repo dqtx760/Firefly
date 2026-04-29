@@ -357,7 +357,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/tech-shrimp&quot;&gt;tech-shrimp&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>CLIProxyAPI教程</title><link>https://dqtx.cc/posts/xenia/cliproxyapi/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/cliproxyapi/</guid><pubDate>Tue, 28 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这就是个能让你绕过官方限制，把各大 AI 客户端额度无缝转成标准 API 的本地代理。 平时你开了 ChatGPT Plus、Claude Pro 或者用免费的 Gemini 2.5 Pro，官方只让在网页或自家的 CLI 工具里用。&lt;/p&gt;
+</content:encoded></item><item><title>CLIProxyAPI教程</title><link>https://dqtx.cc/posts/aihacks/cliproxyapi/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/cliproxyapi/</guid><pubDate>Tue, 28 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这就是个能让你绕过官方限制，把各大 AI 客户端额度无缝转成标准 API 的本地代理。 平时你开了 ChatGPT Plus、Claude Pro 或者用免费的 Gemini 2.5 Pro，官方只让在网页或自家的 CLI 工具里用。&lt;/p&gt;
 &lt;p&gt;这工具的骚操作在于，它直接拿你账号的 OAuth 登录态，在本地原地吐出一个标准的 OpenAI/Claude 兼容接口。&lt;/p&gt;
 &lt;p&gt;项目地址
 https://github.com/router-for-me/CLIProxyAPI&lt;/p&gt;
@@ -392,66 +392,7 @@ https://github.com/router-for-me/CLIProxyAPI&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://help.router-for.me/cn/&quot;&gt;https://help.router-for.me/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;视频教程
 https://www.bilibili.com/video/BV1bgB9BfEKv/?spm_id_from=333.1391.0.0&amp;amp;vd_source=206031f494850e57fd6c92ace02b1bed&lt;/p&gt;
-</content:encoded></item><item><title>Claude code接OpenRouter免费模型</title><link>https://dqtx.cc/posts/xenia/claude-code%E6%8E%A5%E5%85%A5openrouter%E5%85%8D%E8%B4%B9%E6%A8%A1%E5%9E%8B%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/claude-code%E6%8E%A5%E5%85%A5openrouter%E5%85%8D%E8%B4%B9%E6%A8%A1%E5%9E%8B%E6%95%99%E7%A8%8B/</guid><pubDate>Tue, 28 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;介绍一种零成本使用 Claude Code 的方案：通过 OpenRouter 上的免费模型 Ling-2.6-1T，配合 CC Switch 这款可视化管理工具，一键切换 API 提供商，实现完全免费的 AI 编程体验。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260428232049626.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;接入流程&lt;/h3&gt;
-&lt;p&gt;OpenRouter 提供了免费模型，CC Switch 让你一键把这些模型接入 Claude Code，不用手动改配置文件，全程可视化操作。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;```*
-OpenRouter（免费模型 Ling-2.6-1T）
-        ↓
-  CC Switch（可视化管理 + 一键切换）
-        ↓
-  Claude Code
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;整个流程分三步：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;在 OpenRouter 注册并&lt;a href=&quot;https://openrouter.ai/workspaces/default/keys&quot;&gt;获取 API Key&lt;/a&gt;
-&lt;em&gt;免费模型每日额度说明&lt;/em&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;日限额：50次 / 天，20 次 / 分钟
-&lt;a href=&quot;https://openrouter.ai/settings/credits&quot;&gt;充值&lt;/a&gt; ≥$10（约 70-75 元），永久保持 1000 次/天&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;安装 CC Switch&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;在 CC Switch 中添加 OpenRouter 提供商，一键切换给 Claude Code&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3&gt;CC Switch 中配置 OpenRouter&lt;/h3&gt;
-&lt;p&gt;Base URL&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;https://openrouter.ai/api/v1
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;模型推荐&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;inclusionai/ling-2.6-1t:free
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;最近很火的模型，出自蚂蚁百灵大模型，知识储备充足，思考维度更深，输出的回答质量更高、精准度更强，但响应速度相对缓慢，更适配复杂且重要的工作任务。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;ling-2.6-flash
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;类似快枪手，核心优势是反应速度快，作答内容满足基础使用需求即可，不会过度追求完美，整体工作效率出色，能够快速批量处理事务，适合应用于简单、需要即时响应的各类任务。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Nemotron 3 Super (free)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;超长上下文、多智能体推理、高吞吐量，长文档分析、跨文档推理、科学计算&lt;/p&gt;
-&lt;p&gt;建议多配置几个，如下图方便快速切换
-小技巧：配置好一个直接复制，然后编辑，粘贴模型Id，点击模型映射“一键设置”&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260428224818573.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;PS.OpenRouter充值如果想要支付宝或微信，勾选 “Use checkout page”。然后页面出现。详细教程：&lt;a href=&quot;https://zhuanlan.zhihu.com/p/1902150269241893722&quot;&gt;参阅&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;相关资料&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;OpenRouter官网LLM排行榜
-https://openrouter.ai/rankings&lt;/li&gt;
-&lt;li&gt;免费模型合集
-https://openrouter.ai/models?q=FREE&lt;/li&gt;
-&lt;li&gt;充信用点入口
-https://openrouter.ai/settings/credits&lt;/li&gt;
-&lt;li&gt;微信、支付宝充值信用点
-https://zhuanlan.zhihu.com/p/1902150269241893722&lt;/li&gt;
-&lt;li&gt;创建API入口
-https://openrouter.ai/workspaces/default/keys&lt;/li&gt;
-&lt;/ul&gt;
-</content:encoded></item><item><title>蚂蚁百灵大模型ling-2.6-1t</title><link>https://dqtx.cc/posts/xenia/%E8%9A%82%E8%9A%81%E7%99%BE%E7%81%B5%E5%A4%A7%E6%A8%A1%E5%9E%8B%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/%E8%9A%82%E8%9A%81%E7%99%BE%E7%81%B5%E5%A4%A7%E6%A8%A1%E5%9E%8B%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</guid><pubDate>Tue, 28 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;引言&lt;/h2&gt;
+</content:encoded></item><item><title>蚂蚁百灵大模型ling-2.6-1t</title><link>https://dqtx.cc/posts/aihacks/%E8%9A%82%E8%9A%81%E7%99%BE%E7%81%B5%E5%A4%A7%E6%A8%A1%E5%9E%8B/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E8%9A%82%E8%9A%81%E7%99%BE%E7%81%B5%E5%A4%A7%E6%A8%A1%E5%9E%8B/</guid><pubDate>Tue, 28 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;引言&lt;/h2&gt;
 &lt;p&gt;蚂蚁百灵大模型是蚂蚁集团自主研发的大语言模型，具备强大的自然语言处理能力和丰富的知识储备。该模型在中文理解、代码生成、逻辑推理等方面表现出色，特别适合中文场景下的各类AI应用。&lt;/p&gt;
 &lt;p&gt;最近有一个活动，每天在02:00前会赠送当日50万token的免费额度，当日未使用完的额度不结转至次日。这篇文章将演示如何接入你的千Qwen code使用。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -717,6 +658,65 @@ ANTHROPIC_DEFAULT_HAIKU_MODEL=Ling-2.6-flash
 &lt;/table&gt;
 &lt;h2&gt;写在最后&lt;/h2&gt;
 &lt;p&gt;蚂蚁百灵大模型为开发者提供了强大的AI辅助能力。通过合理的模型选择和配置，可以显著提升开发效率。建议根据实际使用场景灵活切换模型，充分利用每日免费额度，同时注意API安全和使用成本控制。&lt;/p&gt;
+</content:encoded></item><item><title>Claude code接OpenRouter免费模型</title><link>https://dqtx.cc/posts/xenia/claude-code%E6%8E%A5%E5%85%A5openrouter%E5%85%8D%E8%B4%B9%E6%A8%A1%E5%9E%8B%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/claude-code%E6%8E%A5%E5%85%A5openrouter%E5%85%8D%E8%B4%B9%E6%A8%A1%E5%9E%8B%E6%95%99%E7%A8%8B/</guid><pubDate>Tue, 28 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;介绍一种零成本使用 Claude Code 的方案：通过 OpenRouter 上的免费模型 Ling-2.6-1T，配合 CC Switch 这款可视化管理工具，一键切换 API 提供商，实现完全免费的 AI 编程体验。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260428232049626.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;接入流程&lt;/h3&gt;
+&lt;p&gt;OpenRouter 提供了免费模型，CC Switch 让你一键把这些模型接入 Claude Code，不用手动改配置文件，全程可视化操作。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```*
+OpenRouter（免费模型 Ling-2.6-1T）
+        ↓
+  CC Switch（可视化管理 + 一键切换）
+        ↓
+  Claude Code
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;整个流程分三步：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在 OpenRouter 注册并&lt;a href=&quot;https://openrouter.ai/workspaces/default/keys&quot;&gt;获取 API Key&lt;/a&gt;
+&lt;em&gt;免费模型每日额度说明&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;日限额：50次 / 天，20 次 / 分钟
+&lt;a href=&quot;https://openrouter.ai/settings/credits&quot;&gt;充值&lt;/a&gt; ≥$10（约 70-75 元），永久保持 1000 次/天&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;安装 CC Switch&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在 CC Switch 中添加 OpenRouter 提供商，一键切换给 Claude Code&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;CC Switch 中配置 OpenRouter&lt;/h3&gt;
+&lt;p&gt;Base URL&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;https://openrouter.ai/api/v1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;模型推荐&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;inclusionai/ling-2.6-1t:free
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;最近很火的模型，出自蚂蚁百灵大模型，知识储备充足，思考维度更深，输出的回答质量更高、精准度更强，但响应速度相对缓慢，更适配复杂且重要的工作任务。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ling-2.6-flash
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;类似快枪手，核心优势是反应速度快，作答内容满足基础使用需求即可，不会过度追求完美，整体工作效率出色，能够快速批量处理事务，适合应用于简单、需要即时响应的各类任务。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Nemotron 3 Super (free)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;超长上下文、多智能体推理、高吞吐量，长文档分析、跨文档推理、科学计算&lt;/p&gt;
+&lt;p&gt;建议多配置几个，如下图方便快速切换
+小技巧：配置好一个直接复制，然后编辑，粘贴模型Id，点击模型映射“一键设置”&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260428224818573.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;PS.OpenRouter充值如果想要支付宝或微信，勾选 “Use checkout page”。然后页面出现。详细教程：&lt;a href=&quot;https://zhuanlan.zhihu.com/p/1902150269241893722&quot;&gt;参阅&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;相关资料&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;OpenRouter官网LLM排行榜
+https://openrouter.ai/rankings&lt;/li&gt;
+&lt;li&gt;免费模型合集
+https://openrouter.ai/models?q=FREE&lt;/li&gt;
+&lt;li&gt;充信用点入口
+https://openrouter.ai/settings/credits&lt;/li&gt;
+&lt;li&gt;微信、支付宝充值信用点
+https://zhuanlan.zhihu.com/p/1902150269241893722&lt;/li&gt;
+&lt;li&gt;创建API入口
+https://openrouter.ai/workspaces/default/keys&lt;/li&gt;
+&lt;/ul&gt;
 </content:encoded></item><item><title>Obsidian链接收藏自动化</title><link>https://dqtx.cc/posts/workflow/obsidian%E9%93%BE%E6%8E%A5%E6%94%B6%E8%97%8F%E8%87%AA%E5%8A%A8%E5%8C%96/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/obsidian%E9%93%BE%E6%8E%A5%E6%94%B6%E8%97%8F%E8%87%AA%E5%8A%A8%E5%8C%96/</guid><pubDate>Mon, 27 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你有没有过这样的困扰？刷到优质干货、实用工具、优质教程，随手存入浏览器书签，想着日后回看。久而久之，书签越堆越多、杂乱无序，想要检索复用却无从下手，大量优质资源最终沦为闲置的无效数据。&lt;/p&gt;
 &lt;p&gt;为此，我搭建了一套&lt;strong&gt;轻量化全自动链接收藏工作流&lt;/strong&gt;，依靠 &lt;strong&gt;LinkStowr + Obsidian + Dataview&lt;/strong&gt; 三方联动，实现：&lt;/p&gt;
 &lt;p&gt;一键收藏网页、云端中转同步、本地自动归档、标签分类索引，彻底告别杂乱书签，轻松沉淀全网优质资源。&lt;/p&gt;
@@ -897,6 +897,157 @@ https://api-docs.deepseek.com/zh-cn/quick_start/pricing
 https://github.com/victorchen96/deepseek_v4_rolepaly_instruct&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;整体来看，这个月确实非常疯狂。Claude 4.7 与 Kimi K2.6 / DeepSeek V4 的直接对刚，Qwen3.6 系列跟进！&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;4 月下旬中美开源与闭源模型密集对刚，编程与 Agent 能力成为新焦点，AI 工具链迭代速度远超预期。&lt;/p&gt;
+</content:encoded></item><item><title>Claude code 安装教程</title><link>https://dqtx.cc/posts/aihacks/claude-code-%E5%AE%89%E8%A3%85/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/claude-code-%E5%AE%89%E8%A3%85/</guid><pubDate>Fri, 24 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这篇文章是我整理的远程安装CC全套SOP文档，今天免费公开分享给大家。不止会手把手教你顺利安装CC，同时还会顺带讲解Obsidian相关配置，全程带大家实操学会 Cloud Code 的完整使用方法，一站式搞定部署与实操，新手也能直接跟着操作，方便大家直接上手使用。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260424220034771.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;一.安装Claude code&lt;/h2&gt;
+&lt;h3&gt;Node.js(&lt;a href=&quot;https://nodejs.org/en/download/&quot;&gt;安装包&lt;/a&gt;)&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;winget install OpenJS.NodeJS.LTS
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Git(&lt;a href=&quot;https://git-scm.com/install/windows&quot;&gt;安装包&lt;/a&gt;)&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;winget install Git.Git
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Claude Code&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;npm install -g @anthropic-ai/claude-code
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;skills-link&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;npm i -g skills-link
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;skills-link
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;https://github.com/dqtx760/skills-manage
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;启动命令&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;Claude
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;claude --dangerously-skip-permissions
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;一键启动bat&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;@echo off
+title Claude Code
+where claude &amp;gt;nul 2&amp;gt;&amp;amp;1 || (echo Claude Code 未安装 &amp;amp; pause &amp;amp; exit /b 1)
+claude --dangerously-skip-permissions
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;二.安装Obsidian&lt;/h2&gt;
+&lt;h3&gt;&lt;a href=&quot;https://github.com/obsidianmd/obsidian-releases/releases/download/v1.12.7/Obsidian-1.12.7.exe&quot;&gt;Obsidian安装包&lt;/a&gt;&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;winget install Git.Git
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;拉取仓库模板&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;get clone https://github.com/dqtx760/obsidian-vault-template
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;get clone https://github.com/iamzhihuix/obsidian-ai-vault-template
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Claudian出现报错&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;Claude code在终端使用正常， 但在Obsidian的插件中Claudian对话异常,帮我排除下原因
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;三.配置API&lt;/h2&gt;
+&lt;h4&gt;1. 获取API key&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Api供应商&lt;/th&gt;
+&lt;th&gt;Key创建入口&lt;/th&gt;
+&lt;th&gt;使用说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://www.bigmodel.cn/glm-coding?ic=PUCQNADSPM&quot;&gt;智谱&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://bigmodel.cn/usercenter/proj-mgmt/apikeys&quot;&gt;点此获取&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://docs.bigmodel.cn/cn/guide/develop/claude&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://volcengine.com/L/HKZkyHHHJ0k/&quot;&gt;火山&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://console.volcengine.com/ark/region:ark+cn-beijing/apikey?apikey=%7B%7D&quot;&gt;点此获取&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://www.volcengine.com/docs/82379/1928261?lang=zh&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://platform.minimaxi.com/subscribe/coding-plan&quot;&gt;MiniMax&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://platform.minimaxi.com/user-center/basic-information/interface-key&quot;&gt;点此获取&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://platform.minimaxi.com/docs/guides/text-ai-coding-tools#%E5%9C%A8-claude-code-%E4%B8%AD%E4%BD%BF%E7%94%A8-minimax-m2%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://www.kimi.com/code&quot;&gt;Kimi K2&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;点此获取&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://www.kimi.com/code/docs/third-party-tools/other-coding-agents.html&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://openrouter.ai/&quot;&gt;OpenRouter&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://openrouter.ai/workspaces/default/keys&quot;&gt;点此获取&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;点此查看&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4&gt;2. 配置API&lt;/h4&gt;
+&lt;h4&gt;借助→&lt;a href=&quot;https://github.1zyq1.com/farion1231/cc-switch/releases/download/v3.14.1/CC-Switch-v3.14.1-Windows.msi&quot;&gt;CC Switch&lt;/a&gt;&lt;/h4&gt;
+&lt;h4&gt;手动配置&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;~/.claude/settings.json
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;智谱&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{
+  &quot;env&quot;: {
+    &quot;ANTHROPIC_AUTH_TOKEN&quot;: &quot;yourkey here&quot;,
+    &quot;API_TIMEOUT_MS&quot;: &quot;3000000&quot;,
+    &quot;ANTHROPIC_BASE_URL&quot;: &quot;https://open.bigmodel.cn/api/anthropic&quot;,
+    &quot;MCP_TOOL_TIMEOUT&quot;: &quot;30000&quot;
+  },
+  &quot;permissions&quot;: {
+    &quot;defaultMode&quot;: &quot;bypassPermissions&quot;
+  },
+  &quot;alwaysThinkingEnabled&quot;: false
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;火山&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```JSON
+{
+    &quot;env&quot;: {
+        &quot;ANTHROPIC_AUTH_TOKEN&quot;: &quot;&amp;lt;ARK_API_KEY&amp;gt;&quot;,
+        &quot;ANTHROPIC_BASE_URL&quot;: &quot;https://ark.cn-beijing.volces.com/api/coding&quot;,
+        &quot;ANTHROPIC_MODEL&quot;: &quot;ark-code-latest&quot;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;MiniMax&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{
+  &quot;env&quot;: {
+    &quot;ANTHROPIC_BASE_URL&quot;: &quot;https://api.minimaxi.com/anthropic&quot;,
+    &quot;ANTHROPIC_AUTH_TOKEN&quot;: &quot;&quot;,
+    &quot;API_TIMEOUT_MS&quot;: &quot;3000000&quot;,
+    &quot;CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC&quot;: 1,
+    &quot;ANTHROPIC_MODEL&quot;: &quot;MiniMax-M2.7&quot;,
+    &quot;ANTHROPIC_DEFAULT_SONNET_MODEL&quot;: &quot;MiniMax-M2.7&quot;,
+    &quot;ANTHROPIC_DEFAULT_OPUS_MODEL&quot;: &quot;MiniMax-M2.7&quot;,
+    &quot;ANTHROPIC_DEFAULT_HAIKU_MODEL&quot;: &quot;MiniMax-M2.7&quot;
+  },
+  &quot;includeCoAuthoredBy&quot;: false
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Kimi K2&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$env:ENABLE_TOOL_SEARCH=&quot;false&quot;
+$env:ANTHROPIC_BASE_URL=&quot;https://api.kimi.com/coding/&quot;
+$env:ANTHROPIC_API_KEY=&quot;你的API Key&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;openrouter&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;  
+&quot;env&quot;: {
+    &quot;ANTHROPIC_BASE_URL&quot;: &quot;https://openrouter.ai/api&quot;,
+    &quot;ANTHROPIC_AUTH_TOKEN&quot;: &quot;sk-or-v1-xxxxx&quot;,
+    &quot;ANTHROPIC_API_KEY&quot;: &quot;&quot;,
+    &quot;ANTHROPIC_DEFAULT_OPUS_MODEL&quot;: &quot;openrouter/free&quot;,
+    &quot;ANTHROPIC_DEFAULT_SONNET_MODEL&quot;: &quot;openrouter/free&quot;,
+    &quot;ANTHROPIC_DEFAULT_HAIKU_MODEL&quot;: &quot;openrouter/free&quot;,
+    &quot;CLAUDE_CODE_SUBAGENT_MODEL&quot;: &quot;openrouter/free&quot;
+  },
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;四.参考资料&lt;/h2&gt;
+&lt;h3&gt;Claude code命令&amp;amp;快捷键:&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/cc/&quot;&gt;点此查看&lt;/a&gt;&lt;/h3&gt;
+&lt;h3&gt;Agent Skills 管理方案:&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/skills-manage/&quot;&gt;点此查看&lt;/a&gt;&lt;/h3&gt;
+&lt;h3&gt;Claude code skill推荐:&lt;a href=&quot;https://www.notion.so/skill-347351994e408091a13be04d19c62d1e&quot;&gt;点此查看&lt;/a&gt;&lt;/h3&gt;
+&lt;h3&gt;Claude code MCP:&lt;a href=&quot;https://www.dqtx.cc/posts/xenia/mcp%E6%B8%85%E5%8D%95/&quot;&gt;点此查看&lt;/a&gt;&lt;/h3&gt;
+&lt;h3&gt;有些有用的cli工具:点此查看&lt;/h3&gt;
+&lt;h2&gt;五.常见问题&lt;/h2&gt;
+&lt;h3&gt;~/.claude.json&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;  &quot;hasCompletedOnboarding&quot;: true
+&lt;/code&gt;&lt;/pre&gt;
 </content:encoded></item><item><title>free-claude-code 代理使用指南</title><link>https://dqtx.cc/posts/aihacks/free-claude-code/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/free-claude-code/</guid><pubDate>Fri, 24 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;如果你正在寻找免费使用 Claude Code 的方法，那么 &lt;strong&gt;free-claude-code&lt;/strong&gt; 这个开源项目绝对值得关注。它能让 Claude Code 完美对接 NVIDIA NIM、OpenRouter、DeepSeek 等多种免费或低成本的大模型服务，同时保留 Claude Code 原生的工程能力。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260424141510353.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;为什么选择 free-claude-code？&lt;/h2&gt;
@@ -1115,157 +1266,6 @@ MODEL=&quot;nvidia_nim/moonshotai/kimi-k2-thinking&quot;  # Kimi K2
 &lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/A-FwkXui7Wby2zIjAw4sJg&quot;&gt;NVIDIA免费API的申请流程&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/WjG8-UV8sGBCR26_MFgzTg&quot;&gt;零成本接管 Nvidia 算力的本地部署方案&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>Claude code 安装教程</title><link>https://dqtx.cc/posts/aihacks/claude-code-%E5%AE%89%E8%A3%85/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/claude-code-%E5%AE%89%E8%A3%85/</guid><pubDate>Fri, 24 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这篇文章是我整理的远程安装CC全套SOP文档，今天免费公开分享给大家。不止会手把手教你顺利安装CC，同时还会顺带讲解Obsidian相关配置，全程带大家实操学会 Cloud Code 的完整使用方法，一站式搞定部署与实操，新手也能直接跟着操作，方便大家直接上手使用。
-&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260424220034771.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;一.安装Claude code&lt;/h2&gt;
-&lt;h3&gt;Node.js(&lt;a href=&quot;https://nodejs.org/en/download/&quot;&gt;安装包&lt;/a&gt;)&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;winget install OpenJS.NodeJS.LTS
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;Git(&lt;a href=&quot;https://git-scm.com/install/windows&quot;&gt;安装包&lt;/a&gt;)&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;winget install Git.Git
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;Claude Code&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;npm install -g @anthropic-ai/claude-code
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;skills-link&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;npm i -g skills-link
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;skills-link
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;https://github.com/dqtx760/skills-manage
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;启动命令&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;Claude
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;claude --dangerously-skip-permissions
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;一键启动bat&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;@echo off
-title Claude Code
-where claude &amp;gt;nul 2&amp;gt;&amp;amp;1 || (echo Claude Code 未安装 &amp;amp; pause &amp;amp; exit /b 1)
-claude --dangerously-skip-permissions
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;二.安装Obsidian&lt;/h2&gt;
-&lt;h3&gt;&lt;a href=&quot;https://github.com/obsidianmd/obsidian-releases/releases/download/v1.12.7/Obsidian-1.12.7.exe&quot;&gt;Obsidian安装包&lt;/a&gt;&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;winget install Git.Git
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;拉取仓库模板&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;get clone https://github.com/dqtx760/obsidian-vault-template
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;get clone https://github.com/iamzhihuix/obsidian-ai-vault-template
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;Claudian出现报错&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;Claude code在终端使用正常， 但在Obsidian的插件中Claudian对话异常,帮我排除下原因
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;三.配置API&lt;/h2&gt;
-&lt;h4&gt;1. 获取API key&lt;/h4&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Api供应商&lt;/th&gt;
-&lt;th&gt;Key创建入口&lt;/th&gt;
-&lt;th&gt;使用说明&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&quot;https://www.bigmodel.cn/glm-coding?ic=PUCQNADSPM&quot;&gt;智谱&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&quot;https://bigmodel.cn/usercenter/proj-mgmt/apikeys&quot;&gt;点此获取&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&quot;https://docs.bigmodel.cn/cn/guide/develop/claude&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&quot;https://volcengine.com/L/HKZkyHHHJ0k/&quot;&gt;火山&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&quot;https://console.volcengine.com/ark/region:ark+cn-beijing/apikey?apikey=%7B%7D&quot;&gt;点此获取&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&quot;https://www.volcengine.com/docs/82379/1928261?lang=zh&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&quot;https://platform.minimaxi.com/subscribe/coding-plan&quot;&gt;MiniMax&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&quot;https://platform.minimaxi.com/user-center/basic-information/interface-key&quot;&gt;点此获取&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&quot;https://platform.minimaxi.com/docs/guides/text-ai-coding-tools#%E5%9C%A8-claude-code-%E4%B8%AD%E4%BD%BF%E7%94%A8-minimax-m2%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&quot;https://www.kimi.com/code&quot;&gt;Kimi K2&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;点此获取&lt;/td&gt;
-&lt;td&gt;&lt;a href=&quot;https://www.kimi.com/code/docs/third-party-tools/other-coding-agents.html&quot;&gt;点此查看&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&quot;https://openrouter.ai/&quot;&gt;OpenRouter&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&quot;https://openrouter.ai/workspaces/default/keys&quot;&gt;点此获取&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;点此查看&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h4&gt;2. 配置API&lt;/h4&gt;
-&lt;h4&gt;借助→&lt;a href=&quot;https://github.1zyq1.com/farion1231/cc-switch/releases/download/v3.14.1/CC-Switch-v3.14.1-Windows.msi&quot;&gt;CC Switch&lt;/a&gt;&lt;/h4&gt;
-&lt;h4&gt;手动配置&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;~/.claude/settings.json
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;智谱&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;{
-  &quot;env&quot;: {
-    &quot;ANTHROPIC_AUTH_TOKEN&quot;: &quot;yourkey here&quot;,
-    &quot;API_TIMEOUT_MS&quot;: &quot;3000000&quot;,
-    &quot;ANTHROPIC_BASE_URL&quot;: &quot;https://open.bigmodel.cn/api/anthropic&quot;,
-    &quot;MCP_TOOL_TIMEOUT&quot;: &quot;30000&quot;
-  },
-  &quot;permissions&quot;: {
-    &quot;defaultMode&quot;: &quot;bypassPermissions&quot;
-  },
-  &quot;alwaysThinkingEnabled&quot;: false
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;火山&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;```JSON
-{
-    &quot;env&quot;: {
-        &quot;ANTHROPIC_AUTH_TOKEN&quot;: &quot;&amp;lt;ARK_API_KEY&amp;gt;&quot;,
-        &quot;ANTHROPIC_BASE_URL&quot;: &quot;https://ark.cn-beijing.volces.com/api/coding&quot;,
-        &quot;ANTHROPIC_MODEL&quot;: &quot;ark-code-latest&quot;
-    }
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;MiniMax&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;{
-  &quot;env&quot;: {
-    &quot;ANTHROPIC_BASE_URL&quot;: &quot;https://api.minimaxi.com/anthropic&quot;,
-    &quot;ANTHROPIC_AUTH_TOKEN&quot;: &quot;&quot;,
-    &quot;API_TIMEOUT_MS&quot;: &quot;3000000&quot;,
-    &quot;CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC&quot;: 1,
-    &quot;ANTHROPIC_MODEL&quot;: &quot;MiniMax-M2.7&quot;,
-    &quot;ANTHROPIC_DEFAULT_SONNET_MODEL&quot;: &quot;MiniMax-M2.7&quot;,
-    &quot;ANTHROPIC_DEFAULT_OPUS_MODEL&quot;: &quot;MiniMax-M2.7&quot;,
-    &quot;ANTHROPIC_DEFAULT_HAIKU_MODEL&quot;: &quot;MiniMax-M2.7&quot;
-  },
-  &quot;includeCoAuthoredBy&quot;: false
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Kimi K2&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;$env:ENABLE_TOOL_SEARCH=&quot;false&quot;
-$env:ANTHROPIC_BASE_URL=&quot;https://api.kimi.com/coding/&quot;
-$env:ANTHROPIC_API_KEY=&quot;你的API Key&quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;openrouter&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;  
-&quot;env&quot;: {
-    &quot;ANTHROPIC_BASE_URL&quot;: &quot;https://openrouter.ai/api&quot;,
-    &quot;ANTHROPIC_AUTH_TOKEN&quot;: &quot;sk-or-v1-xxxxx&quot;,
-    &quot;ANTHROPIC_API_KEY&quot;: &quot;&quot;,
-    &quot;ANTHROPIC_DEFAULT_OPUS_MODEL&quot;: &quot;openrouter/free&quot;,
-    &quot;ANTHROPIC_DEFAULT_SONNET_MODEL&quot;: &quot;openrouter/free&quot;,
-    &quot;ANTHROPIC_DEFAULT_HAIKU_MODEL&quot;: &quot;openrouter/free&quot;,
-    &quot;CLAUDE_CODE_SUBAGENT_MODEL&quot;: &quot;openrouter/free&quot;
-  },
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;四.参考资料&lt;/h2&gt;
-&lt;h3&gt;Claude code命令&amp;amp;快捷键:&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/cc/&quot;&gt;点此查看&lt;/a&gt;&lt;/h3&gt;
-&lt;h3&gt;Agent Skills 管理方案:&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/skills-manage/&quot;&gt;点此查看&lt;/a&gt;&lt;/h3&gt;
-&lt;h3&gt;Claude code skill推荐:&lt;a href=&quot;https://www.notion.so/skill-347351994e408091a13be04d19c62d1e&quot;&gt;点此查看&lt;/a&gt;&lt;/h3&gt;
-&lt;h3&gt;Claude code MCP:&lt;a href=&quot;https://www.dqtx.cc/posts/xenia/mcp%E6%B8%85%E5%8D%95/&quot;&gt;点此查看&lt;/a&gt;&lt;/h3&gt;
-&lt;h3&gt;有些有用的cli工具:点此查看&lt;/h3&gt;
-&lt;h2&gt;五.常见问题&lt;/h2&gt;
-&lt;h3&gt;~/.claude.json&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;  &quot;hasCompletedOnboarding&quot;: true
-&lt;/code&gt;&lt;/pre&gt;
 </content:encoded></item><item><title>Skills-Link完全使用指南!</title><link>https://dqtx.cc/posts/aihacks/skills-link/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/skills-link/</guid><pubDate>Fri, 24 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你是否也有这样的困扰？在多个 AI 工具里安装了同样的技能（Skills），修改一次要同步多次，麻烦！&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Skills-Link&lt;/strong&gt; 就是来解决这个问题的 —— 让所有 AI 编程工具共享同一个 Skills 文件夹。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;相关文档&lt;/strong&gt;&lt;/p&gt;
@@ -1504,74 +1504,6 @@ cd C:\Users\Administrator\AISkills
 &lt;/ol&gt;
 &lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;参考资料&lt;/strong&gt;：&lt;a href=&quot;https://mp.weixin.qq.com/s/XWS97jr_PwcbbmKkZVqbyw&quot;&gt;点此查看&lt;/a&gt;&lt;/p&gt;
-</content:encoded></item><item><title>我push博客时泄露了API</title><link>https://dqtx.cc/posts/technical/push%E6%B3%84%E9%9C%B2api/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/push%E6%B3%84%E9%9C%B2api/</guid><pubDate>Tue, 21 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天在推送 &lt;code&gt;fuwari&lt;/code&gt; 博客仓库到 GitHub 时，遭遇了一个意料之外但又在情理之中的拦截。GitHub 直接拒绝了我的推送，提示发现了「Secret（密钥）」泄露。经过排查和修复，两个仓库的 API Token 泄露风险已解除。写下这篇文章，既是复盘，也是给有类似经历的朋友一个参考。
-&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260421233006929.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;事件回顾&lt;/h2&gt;
-&lt;p&gt;像往常一样，我在 Obsidian 中写完一篇博客后，执行 &lt;code&gt;git push&lt;/code&gt; 准备推送到 GitHub。然而这次推送失败了，错误信息如下：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;remote: error: GH013: Repository rule violations found for refs/heads/main.
-remote:
-remote: - Push cannot contain secrets
-remote:
-remote:  — Notion API Token ——————————————————————————————————
-remote:    locations:
-remote:      - commit: 25f1c5df1c410ba48f6890a8961371de5cf6cef8
-remote:        path: src/content/.obsidian/plugins/share-to-notionnext/data.json:29
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;GitHub 的 &lt;strong&gt;Push Protection（推送保护）&lt;/strong&gt; 功能检测到了我的 Notion API Token 泄露。问题出在 Obsidian 插件 &lt;code&gt;Share to NotionNext&lt;/code&gt; 的配置文件 &lt;code&gt;data.json&lt;/code&gt; 中，我配置了 Notion 的 API 密钥，而这个文件被 Git 跟踪并推送到了远程仓库。&lt;/p&gt;
-&lt;p&gt;有趣的是，同步排查另一个仓库 &lt;code&gt;zhishiku&lt;/code&gt; 时，我发现它虽然也安装了同样的插件、同样包含 API Token，却没有被拦截。这可能是因为 Token 格式（&lt;code&gt;ntn_&lt;/code&gt; 开头）的识别率不同，或者该仓库的 Push Protection 设置没有 fuwari 那么严格。但不管怎样，这确实是一个安全隐患。&lt;/p&gt;
-&lt;h2&gt;问题根因&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;为什么 API Token 会泄露到 GitHub？&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;核心原因是：&lt;strong&gt;Obsidian 的 &lt;code&gt;.obsidian&lt;/code&gt; 目录被 Git 跟踪了。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;.obsidian&lt;/code&gt; 是 Obsidian 的配置目录，里面包含了插件配置、主题设置、工作区状态等信息。当我们安装像 &lt;code&gt;Share to NotionNext&lt;/code&gt; 这类需要 API 密钥的插件时，插件会把配置（包括 Token）保存在 &lt;code&gt;data.json&lt;/code&gt; 文件中。如果这个目录被 Git 跟踪，每次推送都会把这些敏感信息一起送到远程仓库。&lt;/p&gt;
-&lt;p&gt;GitHub 提供了 Secret Scanning（密钥扫描）功能，会自动扫描推送的内容，识别常见的密钥格式（如 AWS Key、Notion Token、OpenAI API Key 等），发现后会拦截推送并通知开发者。这就是为什么 fuwari 仓库被拦截的原因。&lt;/p&gt;
-&lt;h2&gt;解决方案&lt;/h2&gt;
-&lt;h3&gt;方案一：修改 .gitignore（推荐）&lt;/h3&gt;
-&lt;p&gt;最简单有效的方案是把 &lt;code&gt;.obsidian/&lt;/code&gt; 目录加入 &lt;code&gt;.gitignore&lt;/code&gt;，让 Git 忽略这个目录。具体步骤如下：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;在项目根目录的 &lt;code&gt;.gitignore&lt;/code&gt; 文件中添加：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;.obsidian/
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;从 Git 跟踪中移除已存在的 &lt;code&gt;.obsidian&lt;/code&gt; 目录：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;git rm --cached -r .obsidian/
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;提交并推送：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;git add .gitignore
-git commit -m &quot;chore: ignore .obsidian directory&quot;
-git push
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;这样操作后，&lt;code&gt;.obsidian&lt;/code&gt; 目录会保留在本地，但不会被 Git 跟踪，API Token 也就不会再泄露了。&lt;/p&gt;
-&lt;h3&gt;方案二：清理 Git 历史&lt;/h3&gt;
-&lt;p&gt;如果已经推送了包含 Token 的提交，需要从 Git 历史中彻底删除它。可以使用 &lt;code&gt;git filter-repo&lt;/code&gt; 工具：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# 安装工具
-pip install git-filter-repo
-
-# 从历史中移除指定文件
-git filter-repo --path .obsidian/plugins/share-to-notionnext/data.json --invert-paths --force
-
-# 重新添加 remote 并推送
-git remote add origin your-repo-url
-git push --force
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;注意：这种方法会重写 Git 历史，如果与其他开发者共享仓库，需要协调好。&lt;/p&gt;
-&lt;h3&gt;方案三：轮换 API Token&lt;/h3&gt;
-&lt;p&gt;无论采用哪种方案，都建议&lt;strong&gt;重新生成 API Token&lt;/strong&gt;。即使已经修复了泄露问题，旧的 Token 可能已经在某个时刻被恶意获取。前往相关服务的设置页面（如 Notion 集成设置）生成新的密钥，并更新本地配置。&lt;/p&gt;
-&lt;h2&gt;经验总结&lt;/h2&gt;
-&lt;p&gt;这次事件虽然是个「事故」，但也带来了几点有价值的思考：&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;第一，敏感配置一定要排除在 Git 跟踪之外。&lt;/strong&gt; 不只是 &lt;code&gt;.obsidian&lt;/code&gt;，任何包含 API Key、Token、密码的文件都应该加入 &lt;code&gt;.gitignore&lt;/code&gt;。常见的包括 &lt;code&gt;.env&lt;/code&gt;、&lt;code&gt;.env.local&lt;/code&gt;、&lt;code&gt;config/secrets.json&lt;/code&gt; 等。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;第二，GitHub 的 Push Protection 是最后一道防线，而非第一道。&lt;/strong&gt; 这次能被拦截是幸运的，说明 GitHub 的密钥扫描确实在起作用。但并非所有格式的密钥都能被识别，这次 &lt;code&gt;zhishiku&lt;/code&gt; 仓库的 Token 就漏过了扫描。所以不能依赖 GitHub 的保护，自己做好防范才是根本。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;第三，本地配置不影响使用。&lt;/strong&gt; 很多人担心忽略 &lt;code&gt;.obsidian&lt;/code&gt; 后会影响 Obsidian 的功能。实际上 &lt;code&gt;.gitignore&lt;/code&gt; 只是阻止 Git 跟踪，不影响文件的本地存在和使用。插件配置会正常读取本地文件，只是不会同步到远程仓库。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;第四，定期排查仓库安全。&lt;/strong&gt; 建议定期检查自己的仓库是否有敏感信息泄露，可以用 GitHub 的「Secret scanning alerts」功能查看已泄露的密钥（如果有的话）。&lt;/p&gt;
-&lt;h2&gt;附：两个仓库的修复记录&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260422222241120.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;修复完成后，两个仓库都安全了，以后再也不用担心 API Token 泄露的问题。&lt;/p&gt;
-&lt;p&gt;文章来源：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;  远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/p&gt;
 </content:encoded></item><item><title>Obsidian 同步 Notion 神插件</title><link>https://dqtx.cc/posts/workflow/ob%E5%90%8C%E6%AD%A5notion%E6%8F%92%E4%BB%B6/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/ob%E5%90%8C%E6%AD%A5notion%E6%8F%92%E4%BB%B6/</guid><pubDate>Tue, 21 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;我最近发现了一个超好用的 Obsidian 神器，叫 Share to NotionNext！&lt;/p&gt;
 &lt;p&gt;可以直接把Obsidian里的Markdown同步到Notion数据库，还能自动生成NotionNext博客，告别复制粘贴、排版错乱，一篇文章秒发博客。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260421200259532.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
@@ -1675,6 +1607,74 @@ https://v.douyin.com/4K4Njgxq0Oc/&lt;/p&gt;
 https://mp.weixin.qq.com/s/kPjIpHmzciWY8_3ettEVsg&lt;/p&gt;
 &lt;p&gt;→NotionNext帮助手册：
 https://docs.tangly1024.com/about&lt;/p&gt;
+</content:encoded></item><item><title>我push博客时泄露了API</title><link>https://dqtx.cc/posts/technical/push%E6%B3%84%E9%9C%B2api/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/push%E6%B3%84%E9%9C%B2api/</guid><pubDate>Tue, 21 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天在推送 &lt;code&gt;fuwari&lt;/code&gt; 博客仓库到 GitHub 时，遭遇了一个意料之外但又在情理之中的拦截。GitHub 直接拒绝了我的推送，提示发现了「Secret（密钥）」泄露。经过排查和修复，两个仓库的 API Token 泄露风险已解除。写下这篇文章，既是复盘，也是给有类似经历的朋友一个参考。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260421233006929.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;事件回顾&lt;/h2&gt;
+&lt;p&gt;像往常一样，我在 Obsidian 中写完一篇博客后，执行 &lt;code&gt;git push&lt;/code&gt; 准备推送到 GitHub。然而这次推送失败了，错误信息如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;remote: error: GH013: Repository rule violations found for refs/heads/main.
+remote:
+remote: - Push cannot contain secrets
+remote:
+remote:  — Notion API Token ——————————————————————————————————
+remote:    locations:
+remote:      - commit: 25f1c5df1c410ba48f6890a8961371de5cf6cef8
+remote:        path: src/content/.obsidian/plugins/share-to-notionnext/data.json:29
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;GitHub 的 &lt;strong&gt;Push Protection（推送保护）&lt;/strong&gt; 功能检测到了我的 Notion API Token 泄露。问题出在 Obsidian 插件 &lt;code&gt;Share to NotionNext&lt;/code&gt; 的配置文件 &lt;code&gt;data.json&lt;/code&gt; 中，我配置了 Notion 的 API 密钥，而这个文件被 Git 跟踪并推送到了远程仓库。&lt;/p&gt;
+&lt;p&gt;有趣的是，同步排查另一个仓库 &lt;code&gt;zhishiku&lt;/code&gt; 时，我发现它虽然也安装了同样的插件、同样包含 API Token，却没有被拦截。这可能是因为 Token 格式（&lt;code&gt;ntn_&lt;/code&gt; 开头）的识别率不同，或者该仓库的 Push Protection 设置没有 fuwari 那么严格。但不管怎样，这确实是一个安全隐患。&lt;/p&gt;
+&lt;h2&gt;问题根因&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;为什么 API Token 会泄露到 GitHub？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;核心原因是：&lt;strong&gt;Obsidian 的 &lt;code&gt;.obsidian&lt;/code&gt; 目录被 Git 跟踪了。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;.obsidian&lt;/code&gt; 是 Obsidian 的配置目录，里面包含了插件配置、主题设置、工作区状态等信息。当我们安装像 &lt;code&gt;Share to NotionNext&lt;/code&gt; 这类需要 API 密钥的插件时，插件会把配置（包括 Token）保存在 &lt;code&gt;data.json&lt;/code&gt; 文件中。如果这个目录被 Git 跟踪，每次推送都会把这些敏感信息一起送到远程仓库。&lt;/p&gt;
+&lt;p&gt;GitHub 提供了 Secret Scanning（密钥扫描）功能，会自动扫描推送的内容，识别常见的密钥格式（如 AWS Key、Notion Token、OpenAI API Key 等），发现后会拦截推送并通知开发者。这就是为什么 fuwari 仓库被拦截的原因。&lt;/p&gt;
+&lt;h2&gt;解决方案&lt;/h2&gt;
+&lt;h3&gt;方案一：修改 .gitignore（推荐）&lt;/h3&gt;
+&lt;p&gt;最简单有效的方案是把 &lt;code&gt;.obsidian/&lt;/code&gt; 目录加入 &lt;code&gt;.gitignore&lt;/code&gt;，让 Git 忽略这个目录。具体步骤如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;在项目根目录的 &lt;code&gt;.gitignore&lt;/code&gt; 文件中添加：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.obsidian/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;从 Git 跟踪中移除已存在的 &lt;code&gt;.obsidian&lt;/code&gt; 目录：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git rm --cached -r .obsidian/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;提交并推送：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git add .gitignore
+git commit -m &quot;chore: ignore .obsidian directory&quot;
+git push
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这样操作后，&lt;code&gt;.obsidian&lt;/code&gt; 目录会保留在本地，但不会被 Git 跟踪，API Token 也就不会再泄露了。&lt;/p&gt;
+&lt;h3&gt;方案二：清理 Git 历史&lt;/h3&gt;
+&lt;p&gt;如果已经推送了包含 Token 的提交，需要从 Git 历史中彻底删除它。可以使用 &lt;code&gt;git filter-repo&lt;/code&gt; 工具：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# 安装工具
+pip install git-filter-repo
+
+# 从历史中移除指定文件
+git filter-repo --path .obsidian/plugins/share-to-notionnext/data.json --invert-paths --force
+
+# 重新添加 remote 并推送
+git remote add origin your-repo-url
+git push --force
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;注意：这种方法会重写 Git 历史，如果与其他开发者共享仓库，需要协调好。&lt;/p&gt;
+&lt;h3&gt;方案三：轮换 API Token&lt;/h3&gt;
+&lt;p&gt;无论采用哪种方案，都建议&lt;strong&gt;重新生成 API Token&lt;/strong&gt;。即使已经修复了泄露问题，旧的 Token 可能已经在某个时刻被恶意获取。前往相关服务的设置页面（如 Notion 集成设置）生成新的密钥，并更新本地配置。&lt;/p&gt;
+&lt;h2&gt;经验总结&lt;/h2&gt;
+&lt;p&gt;这次事件虽然是个「事故」，但也带来了几点有价值的思考：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第一，敏感配置一定要排除在 Git 跟踪之外。&lt;/strong&gt; 不只是 &lt;code&gt;.obsidian&lt;/code&gt;，任何包含 API Key、Token、密码的文件都应该加入 &lt;code&gt;.gitignore&lt;/code&gt;。常见的包括 &lt;code&gt;.env&lt;/code&gt;、&lt;code&gt;.env.local&lt;/code&gt;、&lt;code&gt;config/secrets.json&lt;/code&gt; 等。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第二，GitHub 的 Push Protection 是最后一道防线，而非第一道。&lt;/strong&gt; 这次能被拦截是幸运的，说明 GitHub 的密钥扫描确实在起作用。但并非所有格式的密钥都能被识别，这次 &lt;code&gt;zhishiku&lt;/code&gt; 仓库的 Token 就漏过了扫描。所以不能依赖 GitHub 的保护，自己做好防范才是根本。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第三，本地配置不影响使用。&lt;/strong&gt; 很多人担心忽略 &lt;code&gt;.obsidian&lt;/code&gt; 后会影响 Obsidian 的功能。实际上 &lt;code&gt;.gitignore&lt;/code&gt; 只是阻止 Git 跟踪，不影响文件的本地存在和使用。插件配置会正常读取本地文件，只是不会同步到远程仓库。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第四，定期排查仓库安全。&lt;/strong&gt; 建议定期检查自己的仓库是否有敏感信息泄露，可以用 GitHub 的「Secret scanning alerts」功能查看已泄露的密钥（如果有的话）。&lt;/p&gt;
+&lt;h2&gt;附：两个仓库的修复记录&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260422222241120.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;修复完成后，两个仓库都安全了，以后再也不用担心 API Token 泄露的问题。&lt;/p&gt;
+&lt;p&gt;文章来源：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;  远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/p&gt;
 </content:encoded></item><item><title>Dos命令mklink详解</title><link>https://dqtx.cc/posts/workflow/mklink%E5%91%BD%E4%BB%A4/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/mklink%E5%91%BD%E4%BB%A4/</guid><pubDate>Mon, 20 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你是否遇到过这些问题：想让软件从A目录读取文件，但文件实际存放在B目录？&lt;/p&gt;
 &lt;p&gt;想在多个位置同步同一个文件，又不想每次手动复制？或是想给文件夹创建&quot;替身&quot;，让不同程序都能访问？&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Windows 自带的 mklink 命令，就是解决这些问题的神器。&lt;/strong&gt;&lt;/p&gt;
@@ -2219,72 +2219,35 @@ index.html → index.php → index.htm 等&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;开源地址&lt;/strong&gt;：https://github.com/QwenLM/qwen-code&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260414155118952.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;一、前置准备&lt;/h2&gt;
-&lt;h3&gt;1. 安装必备环境&lt;/h3&gt;
+&lt;h3&gt;1. 环境说明&lt;/h3&gt;
 &lt;p&gt;Qwen Code 依赖 &lt;strong&gt;Node.js 20.0 及以上版本&lt;/strong&gt;，必须先安装：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;打开官网：https://nodejs.org/&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;下载 &lt;strong&gt;LTS 版本&lt;/strong&gt;（长期稳定版），一路默认安装即可&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;验证是否安装成功：
-按下 &lt;code&gt;Win + R&lt;/code&gt;，输入 &lt;code&gt;cmd&lt;/code&gt; 打开终端，执行命令：&lt;/p&gt;
+&lt;li&gt;打开官网：https://nodejs.org/&lt;/li&gt;
+&lt;li&gt;下载 &lt;strong&gt;LTS 版本&lt;/strong&gt;（长期稳定版），一路默认安装即可&lt;/li&gt;
+&lt;li&gt;验证是否安装成功：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;按下 &lt;code&gt;Win + R&lt;/code&gt;，输入 &lt;code&gt;cmd&lt;/code&gt; 打开终端，执行命令：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;node -v
 npm -v
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;出现版本号就说明环境就绪。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
 &lt;h3&gt;2. 关键要求&lt;/h3&gt;
 &lt;p&gt;打开终端时，&lt;strong&gt;必须右键选择「以管理员身份运行」&lt;/strong&gt;（否则无法全局安装）。&lt;/p&gt;
 &lt;h2&gt;二、安装命令&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;npm install -g @qwen-code/qwen-code@latest
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;等待安装完成，出现安装成功提示即可。&lt;/p&gt;
-&lt;h3&gt;验证安装是否成功&lt;/h3&gt;
+&lt;h3&gt;验证安装&lt;/h3&gt;
 &lt;p&gt;在终端输入：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;qwen --version
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;显示版本号 = &lt;strong&gt;安装成功&lt;/strong&gt;。&lt;/p&gt;
-&lt;h2&gt;三、首次使用 + 登录授权&lt;/h2&gt;
-&lt;h3&gt;终端启动&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;# 1. 默认启动（建议模式 - 每次操作需确认）
-qwen 
-
-# 2. 全自动模式（无需确认，自动执行所有操作）
-qwen -y
-qwen --approval-mode yolo
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol&gt;
-&lt;li&gt;首次启动会提示选择登录方式，&lt;strong&gt;直接选择「Qwen OAuth」&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;会自动跳转到浏览器，登录你的通义千问账号（直接用github登录）&lt;/li&gt;
-&lt;li&gt;登录完成后，返回终端，自动完成认证，&lt;strong&gt;无需手动配置密钥&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260414202107652.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;一键静默启动bat&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;@echo off
-chcp 65001 &amp;gt;nul
-title Qwen Code
-
-:: 检查 qwen 命令
-where qwen &amp;gt;nul 2&amp;gt;&amp;amp;1
-if %errorlevel% neq 0 (
-    echo [错误] 未检测到 qwen 命令，请先安装。
-    pause
-    exit /b 1
-)
-
-:: 直接启动，不显示任何额外信息
-qwen -y
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;使用 Qwen3.6 Plus 模型&lt;/strong&gt;&lt;/p&gt;
+&lt;h2&gt;三、配置API&lt;/h2&gt;
+&lt;p&gt;默认授权或接入阿里云百炼API&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;使用 Qwen3.6 Plus 模型&lt;/strong&gt; 示例&lt;/p&gt;
 &lt;p&gt;进入交互界面后，使用命令 &lt;code&gt;/model&lt;/code&gt; 切换模型：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;/model qwen3.6-plus
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260414203620949.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;配置 API Key&lt;/h3&gt;
+&lt;h3&gt;集成火山MiniMax-M2.5&lt;/h3&gt;
 &lt;p&gt;在 settings.json 中配置 API Key 和模型&lt;/p&gt;
 &lt;p&gt;参考：&lt;a href=&quot;https://qwenlm.github.io/qwen-code-docs/zh/users/configuration/model-providers/&quot;&gt;配置说明&lt;/a&gt;   火山API：&lt;a href=&quot;https://volcengine.com/L/RvxTJNv-DhA/&quot;&gt;点此购买&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;配置火山引擎方舟Coding Plan模型MiniMax-M2.5示例&lt;/p&gt;
@@ -2312,6 +2275,93 @@ qwen -y
     &quot;name&quot;: &quot;minimax-m2.5&quot;
   }
 }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;集成蚂蚁百灵ling-2.6-1t&lt;/h3&gt;
+&lt;p&gt;详细的教程:&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/%E8%9A%82%E8%9A%81%E7%99%BE%E7%81%B5%E5%A4%A7%E6%A8%A1%E5%9E%8B/&quot;&gt;点击查看&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;全局启动 bat（推荐）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;@echo off
+title Claude Code - 百灵模型
+
+:: ========== 百灵配置区（修改这里）==========
+set ANTHROPIC_BASE_URL=https://api.ant-ling.com/anthropic
+set ANTHROPIC_API_KEY=你的百灵API令牌
+set ANTHROPIC_MODEL=Ling-2.6-flash
+set ANTHROPIC_DEFAULT_OPUS_MODEL=Ling-2.6-flash
+set ANTHROPIC_DEFAULT_SONNET_MODEL=Ling-2.6-flash
+set ANTHROPIC_DEFAULT_HAIKU_MODEL=Ling-2.6-flash
+:: ===========================================
+
+where claude &amp;gt;nul 2&amp;gt;&amp;amp;1 || (echo Claude Code 未安装 &amp;amp; pause &amp;amp; exit /b 1)
+claude --dangerously-skip-permissions --model %ANTHROPIC_MODEL%
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;把 bat 放在&lt;strong&gt;项目根目录&lt;/strong&gt;，自动加载同目录的 &lt;code&gt;.env&lt;/code&gt;：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;@echo off
+title Claude Code - 百灵模型
+chcp 65001 &amp;gt;nul
+
+:: 加载同目录 .env 文件（如果存在）
+if exist &quot;.env&quot; (
+    for /f &quot;usebackq tokens=1,* delims==&quot; %%a in (&quot;.env&quot;) do (
+        set &quot;%%a=%%b&quot;
+    )
+)
+
+:: 兜底：如果 .env 没配置，使用默认值
+if not defined ANTHROPIC_BASE_URL set ANTHROPIC_BASE_URL=https://api.ant-ling.com/anthropic
+if not defined ANTHROPIC_API_KEY (
+    echo [错误] 未找到 ANTHROPIC_API_KEY
+    echo 请在 .env 文件或 bat 中配置你的百灵 API 令牌
+    pause
+    exit /b 1
+)
+if not defined ANTHROPIC_MODEL set ANTHROPIC_MODEL=Ling-2.6-flash
+if not defined ANTHROPIC_DEFAULT_OPUS_MODEL set ANTHROPIC_DEFAULT_OPUS_MODEL=%ANTHROPIC_MODEL%
+if not defined ANTHROPIC_DEFAULT_SONNET_MODEL set ANTHROPIC_DEFAULT_SONNET_MODEL=%ANTHROPIC_MODEL%
+if not defined ANTHROPIC_DEFAULT_HAIKU_MODEL set ANTHROPIC_DEFAULT_HAIKU_MODEL=%ANTHROPIC_MODEL%
+
+where claude &amp;gt;nul 2&amp;gt;&amp;amp;1 || (echo Claude Code 未安装 &amp;amp; pause &amp;amp; exit /b 1)
+
+echo 当前模型: %ANTHROPIC_MODEL%
+claude --dangerously-skip-permissions --model %ANTHROPIC_MODEL%
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;配套 &lt;code&gt;.env&lt;/code&gt; 文件（放项目根目录）&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ANTHROPIC_BASE_URL=https://api.ant-ling.com/anthropic
+ANTHROPIC_API_KEY=你的百灵API令牌
+ANTHROPIC_MODEL=Ling-2.6-flash
+ANTHROPIC_DEFAULT_OPUS_MODEL=Ling-2.6-flash
+ANTHROPIC_DEFAULT_SONNET_MODEL=Ling-2.6-flash
+ANTHROPIC_DEFAULT_HAIKU_MODEL=Ling-2.6-flash
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;记得把 &lt;code&gt;.env&lt;/code&gt; 加入 &lt;code&gt;.gitignore&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;命令启动&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;# 1. 默认启动（建议模式 - 每次操作需确认）
+qwen 
+
+# 2. 全自动模式（无需确认，自动执行所有操作）
+qwen -y
+qwen --approval-mode yolo
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;首次启动会提示选择登录方式，&lt;strong&gt;直接选择「Qwen OAuth」&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;会自动跳转到浏览器，登录你的通义千问账号（直接用github登录）&lt;/li&gt;
+&lt;li&gt;登录完成后，返回终端，自动完成认证，&lt;strong&gt;无需手动配置密钥&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260414202107652.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;启动bat&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;@echo off
+chcp 65001 &amp;gt;nul
+title Qwen Code
+
+:: 检查 qwen 命令
+where qwen &amp;gt;nul 2&amp;gt;&amp;amp;1
+if %errorlevel% neq 0 (
+    echo [错误] 未检测到 qwen 命令，请先安装。
+    pause
+    exit /b 1
+)
+
+:: 直接启动，不显示任何额外信息
+qwen -y
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;四、自然语言使用&lt;/h2&gt;
 &lt;p&gt;启动工具后，直接输入中文需求即可：&lt;/p&gt;
@@ -2357,23 +2407,6 @@ qwen -y
   ]
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;使用场景&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;✅ 批量处理多个文件&lt;/li&gt;
-&lt;li&gt;✅ 并行执行独立的搜索任务&lt;/li&gt;
-&lt;li&gt;✅ 同时分析不同模块的代码&lt;/li&gt;
-&lt;li&gt;✅ 大规模代码重构前的多点扫描&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;注意事项&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;⚠️ 同时调用的 Agent 越多，消耗资源越大&lt;/li&gt;
-&lt;li&gt;⚠️ 建议控制在 3-5 个并行任务&lt;/li&gt;
-&lt;li&gt;✅ 复杂任务拆分为多个子任务，效率更高&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;以上，既然看到这里了，如果觉得教程对你有帮助，随手点个赞、收藏、转发三连吧！有任何问题，欢迎在留言区评论，我会逐一回复。👏👏&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;✅大远程技术支持&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;如果你在安装、配置或使用中遇到任何问题，不想自己折腾&lt;/p&gt;
-&lt;p&gt;随时可以找我提供 &lt;strong&gt;1 对 1 远程技术支持&lt;/strong&gt;：&lt;a href=&quot;742112.xyz&quot;&gt;742112.xyz&lt;/a&gt;&lt;/p&gt;
 </content:encoded></item><item><title>我的博客工作流bat</title><link>https://dqtx.cc/posts/workflow/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B8%83bat/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B8%83bat/</guid><pubDate>Tue, 14 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;优化了下我的博客发布工作流bat脚本&lt;/p&gt;
 &lt;p&gt;这是一个典型的&lt;a href=&quot;https://www.doubao.com/thread/wad1cb0794ccb7f0c&quot;&gt;DevOps 流程&lt;/a&gt;在博客环境中的应用&lt;/p&gt;
 &lt;h2&gt;工作流程&lt;/h2&gt;
@@ -4120,73 +4153,6 @@ opencli zhihu hot -f json       # 查看知乎热榜并以JSON格式输出
 &lt;/blockquote&gt;
 &lt;p&gt;OpenCLI 的安装非常直观，关键在于浏览器插件的桥接。一旦打通，你的终端就不再只是一个冷冰冰的控制台，而是通往整个 Web 世界的万能钥匙。&lt;/p&gt;
 &lt;p&gt;文章来源：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;  远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/p&gt;
-</content:encoded></item><item><title>Rustdesk定制编译工具</title><link>https://dqtx.cc/posts/technical/rustdesk/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/rustdesk/</guid><pubDate>Mon, 23 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;作为一名技术爱好者，偶然在闲鱼上刷到定制化的Rustdesk客户端，简洁的界面和实用的功能让我萌生了自研同款编译工具的想法。虽花费数百元向卖家请教却因对方忙碌无疾而终，但也坚定了我靠技术实现需求的决心——最终借助Codex从命令行版本起步，迭代出可视化网页面板的Rustdesk一键编译工具，现将整个开发过程与成果分享如下。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260323223059574.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;一、成品核心优势&lt;/h2&gt;
-&lt;p&gt;相较于原生Rustdesk，定制编译后的工具在使用体验上做了针对性优化：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;无感连接&lt;/strong&gt;：控制端与客户端建立连接时无感知，无需繁琐确认步骤；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;免安装特性&lt;/strong&gt;：客户端和控制端均为绿色单文件，无需安装即可运行；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;隐私化展示&lt;/strong&gt;：控制端界面隐藏设备ID，仅客户端显示ID，兼顾使用便捷性与设备安全性。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2&gt;二、开发环境准备&lt;/h2&gt;
-&lt;p&gt;为保证编译流程的稳定性和兼容性，需提前配置以下开发环境：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;脚本执行环境：PowerShell 7（推荐版本，兼容更多命令）；&lt;/li&gt;
-&lt;li&gt;主开发语言：Python 3.10+（适配第三方库及语法特性）；&lt;/li&gt;
-&lt;li&gt;底层编译依赖：Rust（通过rustup管理版本）、LLVM（clang编译器）；&lt;/li&gt;
-&lt;li&gt;依赖库管理：vcpkg（用于管理C/C++依赖库）；&lt;/li&gt;
-&lt;li&gt;代码拉取工具：Git（获取Rustdesk源码及依赖）。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;三、项目结构梳理&lt;/h2&gt;
-&lt;p&gt;整个编译工具的目录结构清晰划分，便于维护和扩展：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;D:\project2026\rustdesk
-├─ tools\one_click_pack.ps1                     # 命令行版一键出包脚本（核心逻辑）
-├─ tools\pack_web_ui.py                         # 可视化网页面板核心代码
-├─ tools\start_pack_web_ui.ps1                  # 网页面板一键启动脚本
-├─ src\ui\index.tis / index.css / ab.tis        # Rustdesk UI定制化改动文件
-├─ libs\portable\generate.py                    # 便携包生成逻辑
-└─ target\release\rustdesk-portable-packer.exe  # 编译后生成的单文件打包器
-
-C:\Users\Administrator\rustdesk-build-platform\storage\artifacts
-├─ vfun-client-complete                         # 客户端打包素材（资源、配置模板等）
-└─ vfun-controller-complete                     # 控制端打包素材
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;四、编译流程解析&lt;/h2&gt;
-&lt;p&gt;整个编译过程实现全自动化，仅需输入核心参数即可生成定制化exe文件，流程如下：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;输入客户参数
-   ↓
-one_click_pack.ps1 / 网页面板
-   ↓
-生成 customer.json（client/controller）
-   ↓
-同步 UI 文件到 artifacts
-   ↓
-generate.py 打包
-   ↓
-输出 2 个 exe（客户端 + 控制端）
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;参数输入&lt;/strong&gt;：在命令行/网页面板中填写域名、公钥、品牌名称、访问密码等定制化参数；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;脚本触发&lt;/strong&gt;：执行&lt;code&gt;one_click_pack.ps1&lt;/code&gt;命令行脚本或通过网页面板触发编译；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;配置生成&lt;/strong&gt;：自动生成&lt;code&gt;customer.json&lt;/code&gt;配置文件（区分客户端/控制端参数）；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;资源同步&lt;/strong&gt;：将定制化UI文件同步到打包素材目录&lt;code&gt;artifacts&lt;/code&gt;；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;打包编译&lt;/strong&gt;：调用&lt;code&gt;generate.py&lt;/code&gt;执行便携包打包逻辑；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;成果输出&lt;/strong&gt;：最终生成2个独立exe文件（客户端+控制端）。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3&gt;快速运行方式&lt;/h3&gt;
-&lt;p&gt;只需执行以下PowerShell命令，即可启动可视化网页面板：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;amp; &apos;D:\project2026\rustdesk\tools\start_pack_web_ui.ps1&apos;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;五、编译成果展示&lt;/h2&gt;
-&lt;p&gt;整个编译流程耗时约4分钟，最终输出按“品牌-类型-时间戳”命名的可执行文件，示例如下：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;大强同学-控制端-20260323-102318.exe&lt;/li&gt;
-&lt;li&gt;大强同学-客户端-20260323-102318.exe&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;目前该工具仅支持Windows版本的Rustdesk控制端/客户端编译，若有定制编译需求，可添加微信dqtx33交流。&lt;/p&gt;
-&lt;h2&gt;六、写在最后&lt;/h2&gt;
-&lt;p&gt;本次开发从闲鱼灵感出发，基于Python、PowerShell等技术栈实现了Rustdesk定制化编译工具，核心优化了连接体验、免安装和隐私展示三大特性；工具实现了从命令行到网页可视化面板的迭代，编译流程自动化，仅需输入核心参数即可快速生成定制化exe文件；项目结构清晰，依赖环境明确，编译耗时约4分钟，仅支持Windows版本的Rustdesk控制端/客户端编译。&lt;/p&gt;
 </content:encoded></item><item><title>NotebookLM封神指南</title><link>https://dqtx.cc/posts/workflow/notebooklm/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/notebooklm/</guid><pubDate>Mon, 23 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;在众多AI工具中，Google推出的NotebookLM正逐渐成为许多人每天离不开的“超级大脑”。简单来说，它是一个专门帮你消化大量、杂乱资料的私人助理。&lt;/p&gt;
 &lt;p&gt;与ChatGPT等依赖自身数据库或联网搜索的AI不同，NotebookLM最大的杀手锏在于**“零幻觉”**：&lt;/p&gt;
 &lt;p&gt;它只根据你上传的资料来回答问题。无论你丢给它网页、Google文档还是YouTube视频，它都能在几分钟内完成整合，并生成简报、数据表、信息图表甚至播客。&lt;/p&gt;
@@ -4338,6 +4304,73 @@ generate.py 打包
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;写在最后&lt;/h2&gt;
 &lt;p&gt;当NotebookLM 把 1 小时的学习压缩到 15 分钟，把 3 天的调研缩短到 1 小时，效率差距已不再是努力程度，而是工具选择。从学生到科研人员，从产品经理到内容创作者，这款被《巴伦周刊》称为 “生成式 AI 杀手级应用” 的工具，正在重构知识工作的底层逻辑。现在登录 Google 账号即可免费体验，你的 10 倍效率革命，从上传第一份文档开始。&lt;/p&gt;
+</content:encoded></item><item><title>Rustdesk定制编译工具</title><link>https://dqtx.cc/posts/technical/rustdesk/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/rustdesk/</guid><pubDate>Mon, 23 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;作为一名技术爱好者，偶然在闲鱼上刷到定制化的Rustdesk客户端，简洁的界面和实用的功能让我萌生了自研同款编译工具的想法。虽花费数百元向卖家请教却因对方忙碌无疾而终，但也坚定了我靠技术实现需求的决心——最终借助Codex从命令行版本起步，迭代出可视化网页面板的Rustdesk一键编译工具，现将整个开发过程与成果分享如下。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260323223059574.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;一、成品核心优势&lt;/h2&gt;
+&lt;p&gt;相较于原生Rustdesk，定制编译后的工具在使用体验上做了针对性优化：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;无感连接&lt;/strong&gt;：控制端与客户端建立连接时无感知，无需繁琐确认步骤；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;免安装特性&lt;/strong&gt;：客户端和控制端均为绿色单文件，无需安装即可运行；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;隐私化展示&lt;/strong&gt;：控制端界面隐藏设备ID，仅客户端显示ID，兼顾使用便捷性与设备安全性。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;二、开发环境准备&lt;/h2&gt;
+&lt;p&gt;为保证编译流程的稳定性和兼容性，需提前配置以下开发环境：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;脚本执行环境：PowerShell 7（推荐版本，兼容更多命令）；&lt;/li&gt;
+&lt;li&gt;主开发语言：Python 3.10+（适配第三方库及语法特性）；&lt;/li&gt;
+&lt;li&gt;底层编译依赖：Rust（通过rustup管理版本）、LLVM（clang编译器）；&lt;/li&gt;
+&lt;li&gt;依赖库管理：vcpkg（用于管理C/C++依赖库）；&lt;/li&gt;
+&lt;li&gt;代码拉取工具：Git（获取Rustdesk源码及依赖）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;三、项目结构梳理&lt;/h2&gt;
+&lt;p&gt;整个编译工具的目录结构清晰划分，便于维护和扩展：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;D:\project2026\rustdesk
+├─ tools\one_click_pack.ps1                     # 命令行版一键出包脚本（核心逻辑）
+├─ tools\pack_web_ui.py                         # 可视化网页面板核心代码
+├─ tools\start_pack_web_ui.ps1                  # 网页面板一键启动脚本
+├─ src\ui\index.tis / index.css / ab.tis        # Rustdesk UI定制化改动文件
+├─ libs\portable\generate.py                    # 便携包生成逻辑
+└─ target\release\rustdesk-portable-packer.exe  # 编译后生成的单文件打包器
+
+C:\Users\Administrator\rustdesk-build-platform\storage\artifacts
+├─ vfun-client-complete                         # 客户端打包素材（资源、配置模板等）
+└─ vfun-controller-complete                     # 控制端打包素材
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;四、编译流程解析&lt;/h2&gt;
+&lt;p&gt;整个编译过程实现全自动化，仅需输入核心参数即可生成定制化exe文件，流程如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入客户参数
+   ↓
+one_click_pack.ps1 / 网页面板
+   ↓
+生成 customer.json（client/controller）
+   ↓
+同步 UI 文件到 artifacts
+   ↓
+generate.py 打包
+   ↓
+输出 2 个 exe（客户端 + 控制端）
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;参数输入&lt;/strong&gt;：在命令行/网页面板中填写域名、公钥、品牌名称、访问密码等定制化参数；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;脚本触发&lt;/strong&gt;：执行&lt;code&gt;one_click_pack.ps1&lt;/code&gt;命令行脚本或通过网页面板触发编译；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;配置生成&lt;/strong&gt;：自动生成&lt;code&gt;customer.json&lt;/code&gt;配置文件（区分客户端/控制端参数）；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;资源同步&lt;/strong&gt;：将定制化UI文件同步到打包素材目录&lt;code&gt;artifacts&lt;/code&gt;；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;打包编译&lt;/strong&gt;：调用&lt;code&gt;generate.py&lt;/code&gt;执行便携包打包逻辑；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;成果输出&lt;/strong&gt;：最终生成2个独立exe文件（客户端+控制端）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;快速运行方式&lt;/h3&gt;
+&lt;p&gt;只需执行以下PowerShell命令，即可启动可视化网页面板：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;amp; &apos;D:\project2026\rustdesk\tools\start_pack_web_ui.ps1&apos;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;五、编译成果展示&lt;/h2&gt;
+&lt;p&gt;整个编译流程耗时约4分钟，最终输出按“品牌-类型-时间戳”命名的可执行文件，示例如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;大强同学-控制端-20260323-102318.exe&lt;/li&gt;
+&lt;li&gt;大强同学-客户端-20260323-102318.exe&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;目前该工具仅支持Windows版本的Rustdesk控制端/客户端编译，若有定制编译需求，可添加微信dqtx33交流。&lt;/p&gt;
+&lt;h2&gt;六、写在最后&lt;/h2&gt;
+&lt;p&gt;本次开发从闲鱼灵感出发，基于Python、PowerShell等技术栈实现了Rustdesk定制化编译工具，核心优化了连接体验、免安装和隐私展示三大特性；工具实现了从命令行到网页可视化面板的迭代，编译流程自动化，仅需输入核心参数即可快速生成定制化exe文件；项目结构清晰，依赖环境明确，编译耗时约4分钟，仅支持Windows版本的Rustdesk控制端/客户端编译。&lt;/p&gt;
 </content:encoded></item><item><title>零成本搭建在线图床</title><link>https://dqtx.cc/posts/technical/%E5%9C%A8%E7%BA%BF%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E5%9C%A8%E7%BA%BF%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA/</guid><pubDate>Sun, 22 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;90%的博主都不知道！免费100G图床竟比付费的还稳定～ 写文章、做分享时，你是不是也总被图床问题折磨？免费的容量小得可怜，付费的一年要花几百块，更糟的是还常遇到文件失效、大文件传不了的坑，辛苦写的内容全白费！今天就分享一个零成本神方案——用GitHub 4k+星标的开源项目CloudFlare-ImgBed搭配HuggingFace，10分钟快速搭建100G免费图床，无需实名认证、支持大文件自动分片上传，不用额外买服务器，稳定又省心，自媒体、学生、打工人都能用～&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260122014636902.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;一、工具介绍：CloudFlare-ImgBed&lt;/h2&gt;
@@ -5729,7 +5762,7 @@ happy codex  # 启动Codex
 &lt;p&gt;&lt;strong&gt;如果觉得这篇教程对你有帮助，别忘了点赞+收藏+转发三连呀！关注我，后续分享更多实用技巧、效率工具干货，下次见～ 👋&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;大强远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260306064028188.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-</content:encoded></item><item><title>一些送API的平台</title><link>https://dqtx.cc/posts/xenia/%E4%B8%80%E4%BA%9B%E9%80%81api%E7%9A%84%E5%B9%B3%E5%8F%B0/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/%E4%B8%80%E4%BA%9B%E9%80%81api%E7%9A%84%E5%B9%B3%E5%8F%B0/</guid><pubDate>Fri, 13 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;整理了几个免费使用GLM-4.7与MiniMax M2.1大模型的区域免费渠道，2个可以提供免费的API,一个在线平台，还是两个客户端中可以免费用这两个模型。&lt;/p&gt;
+</content:encoded></item><item><title>一些送API的平台</title><link>https://dqtx.cc/posts/aihacks/%E4%B8%80%E4%BA%9B%E9%80%81api%E7%9A%84%E5%B9%B3%E5%8F%B0/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E4%B8%80%E4%BA%9B%E9%80%81api%E7%9A%84%E5%B9%B3%E5%8F%B0/</guid><pubDate>Fri, 13 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;整理了几个免费使用GLM-4.7与MiniMax M2.1大模型的区域免费渠道，2个可以提供免费的API,一个在线平台，还是两个客户端中可以免费用这两个模型。&lt;/p&gt;
 &lt;h2&gt;1.英伟达&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.80aj.com/2026/01/06/nvidia-nim-glm4-minimax-guide/&quot;&gt;英伟达NIM平台：免费调用GLM-4.7与MiniMax M2.1指南&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=vSjC6LnMGm4&quot;&gt;GLM-4.7 + MiniMax M2.1 免费 API，媲美直连 Claude Code！&lt;/a&gt;&lt;/p&gt;
@@ -5762,7 +5795,6 @@ happy codex  # 启动Codex
 &lt;li&gt;连续包季（9折）：132/季&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;如果觉得这篇教程对你有帮助，别忘了&lt;strong&gt;点赞+收藏+转发&lt;/strong&gt;三连呀！关注我，后续分享更多实用技巧、效率工具干货，下次见～ 👋&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;大强远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 </content:encoded></item><item><title>Claude Skills 合集</title><link>https://dqtx.cc/posts/xenia/%E8%87%AA%E7%94%A8skill%E7%9B%98%E7%82%B9/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/%E8%87%AA%E7%94%A8skill%E7%9B%98%E7%82%B9/</guid><pubDate>Fri, 13 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Claude Skills 作为 AI 助手的功能拓展核心，能精准对接各类场景化需求，让智能协作更高效、更具针对性。以下是安装的16个自用的实用且强大的 Claude Skills。这些Skills覆盖了工作与创作中的关键场景，从基础的笔记优化、项目管理，到高阶的内容生成、设计开发，均能提供专业化支持。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260422191135966.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;我推荐的Skills列表&lt;/h2&gt;
@@ -6592,6 +6624,66 @@ category: Technical
 &lt;h2&gt;网易爆米花（手机端/TV端）&lt;/h2&gt;
 &lt;p&gt;网易爆米花官网：&lt;a href=&quot;https://bmh.163.com/&quot;&gt;点此直达&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;添加WebDAV，自动刮削&lt;/p&gt;
+</content:encoded></item><item><title>OBS摄像头一键移动插件</title><link>https://dqtx.cc/posts/workflow/obs%E6%8F%92%E4%BB%B6%E6%91%84%E5%83%8F%E5%A4%B4%E7%A7%BB%E5%8A%A8/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/obs%E6%8F%92%E4%BB%B6%E6%91%84%E5%83%8F%E5%A4%B4%E7%A7%BB%E5%8A%A8/</guid><description>想让 OBS 摄像头实现「一键移动+一键复位」的平滑效果？不管是直播过场切换、录课构图调整，还是避免画面遮挡，motion-effect 插件都能轻松搞定！无需复杂操作，3 步就能实现精准位移，让你的...</description><pubDate>Thu, 15 Jan 2026 11:20:00 GMT</pubDate><content:encoded>&lt;p&gt;想让 OBS 摄像头实现「一键移动+一键复位」的平滑效果？不管是直播过场切换、录课构图调整，还是避免画面遮挡，motion-effect 插件都能轻松搞定！无需复杂操作，3 步就能实现精准位移，让你的画面切换更专业～&lt;/p&gt;
+&lt;h2&gt;一、插件简介&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;开发者：CatxFish（免费开源）&lt;/li&gt;
+&lt;li&gt;核心功能：画面平滑运动控制（平移、旋转、变焦等），支持往返触发&lt;/li&gt;
+&lt;li&gt;适配设备：绝大多数普通 USB 摄像头、部分 PTZ 摄像头&lt;/li&gt;
+&lt;li&gt;兼容系统：Windows、macOS、Linux&lt;/li&gt;
+&lt;li&gt;项目地址：https://github.com/CatxFish/motion-effect&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;二、安装步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;下载对应系统安装包，解压后将文件放入 obs-studio 主文件夹&lt;/li&gt;
+&lt;li&gt;重启 OBS 完成生效&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;三、前置准备&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;场景名：教程（可自定义）&lt;/li&gt;
+&lt;li&gt;源：摄像头、显示器（按需添加）&lt;/li&gt;
+&lt;li&gt;目标效果：按快捷键 → 摄像头右下移动；再按快捷键 → 摄像头左上返回&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;四、配置流程&lt;/h2&gt;
+&lt;h3&gt;1. 记录初始坐标&lt;/h3&gt;
+&lt;p&gt;右键「源→摄像头」→ 变换→编辑变换，记录初始坐标（示例：1725, 489）&lt;/p&gt;
+&lt;h3&gt;2. 添加运动滤镜&lt;/h3&gt;
+&lt;p&gt;选中场景「教程」→ 右键→滤镜→效果滤镜→左下角「+」→ 选择「Motion」&lt;br /&gt;
+命名滤镜（自定义），核心参数配置：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Trigger Behavior 设为「Hotkey (Round trip)」（往返模式）&lt;/li&gt;
+&lt;li&gt;填写记录的初始坐标与目标坐标（示例目标：1735, 539）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260117005310134.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;3. 绑定快捷键&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;OBS 顶部→设置→快捷键&lt;/li&gt;
+&lt;li&gt;找到对应滤镜，为「Forward」和「Backward」绑定同一快捷键（示例：Alt+K）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260117005511984.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;五、效果说明&lt;/h2&gt;
+&lt;p&gt;&lt;img alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;以上就是 motion-effect 插件的核心配置流程，全程聚焦「快速部署+实用效果」，无需多余步骤！插件轻量开源，兼容主流系统与摄像头，如需调整移动距离、速度或拓展多档位，直接修改坐标与参数即可。&lt;/p&gt;
+&lt;p&gt;✨ &lt;strong&gt;互动时间&lt;/strong&gt;&lt;br /&gt;
+你平时用 OBS 做直播/录课时，还遇到过哪些画面调整的难题？欢迎在评论区留言分享，我会一一解答～&lt;/p&gt;
+&lt;p&gt;如果觉得这篇教程对你有帮助，别忘了&lt;strong&gt;点赞+收藏+转发&lt;/strong&gt;三连呀！关注我，后续分享更多OBS 实用技巧、效率工具干货，下次见～ 👋&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;大强远程技术支持：742112.xyz&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;+86新注册电报，绕过sms收费
+1、换IP，建议，美 日 新 节点，不建议香港节点。
+2、换客户端，telegramx，或者这两个。
+[telegramx](https://github.com/TGX-Android/Telegram-X/releases) [第三方客户端](https://github.com/forkgram/TelegramAndroid/releases) [飞机旧版](https://www.apkmirror.com/uploads/?devcategory=telegram-fz-llc) 
+
+3、卡bug，可以邮箱验证优先邮箱验证。
+
+遇到付费解密强制重启app，多试几次有概率可以跳过。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;+86新注册电报，绕过sms收费&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1、换IP，建议，美 日 新 节点，不建议香港节点。
+2、换客户端，telegramx，或者这两个。
+&lt;a href=&quot;https://github.com/TGX-Android/Telegram-X/releases&quot;&gt;telegramx&lt;/a&gt; &lt;a href=&quot;https://github.com/forkgram/TelegramAndroid/releases&quot;&gt;第三方客户端&lt;/a&gt; &lt;a href=&quot;https://www.apkmirror.com/uploads/?devcategory=telegram-fz-llc&quot;&gt;飞机旧版&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;3、卡bug，可以邮箱验证优先邮箱验证。遇到付费解密强制重启app，多试几次有概率可以跳过。&lt;/p&gt;
+&lt;/blockquote&gt;
 </content:encoded></item><item><title>Passkeys通行密钥</title><link>https://dqtx.cc/posts/technical/passkeys%E9%80%9A%E8%A1%8C%E5%AF%86%E9%92%A5/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/passkeys%E9%80%9A%E8%A1%8C%E5%AF%86%E9%92%A5/</guid><description>你是否厌倦了记密码？设个简单的不安全，设个复杂的记不住？每次登录还要翻找密码本、或者点那该死的&apos;忘记密码&apos;？这几天测试了一圈Passkeys（通行密钥），我只能...</description><pubDate>Thu, 15 Jan 2026 11:20:00 GMT</pubDate><content:encoded>&lt;p&gt;你是否厌倦了记密码？设个简单的不安全，设个复杂的记不住？每次登录还要翻找密码本、或者点那该死的&quot;忘记密码&quot;？这几天测试了一圈&lt;strong&gt;Passkeys（通行密钥）&lt;/strong&gt;，我只能说：**真TM牛逼！**以后再也不用记密码了，指纹一按、Face ID 一扫，直接登录，速度那叫一个快！今天就给大家分享这个让密码彻底淘汰的神仙技术。&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h2&gt;一、什么是 Passkeys？&lt;/h2&gt;
@@ -6754,66 +6846,6 @@ https://www.passkeys.com/websites-with-passkey-support-sites-directory&lt;/p&gt;
 &lt;li&gt;建议配合密码管理器使用，覆盖不支持的场景&lt;/li&gt;
 &lt;li&gt;多设备备份很重要，别只依赖单一设备&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>OBS摄像头一键移动插件</title><link>https://dqtx.cc/posts/workflow/obs%E6%8F%92%E4%BB%B6%E6%91%84%E5%83%8F%E5%A4%B4%E7%A7%BB%E5%8A%A8/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/obs%E6%8F%92%E4%BB%B6%E6%91%84%E5%83%8F%E5%A4%B4%E7%A7%BB%E5%8A%A8/</guid><description>想让 OBS 摄像头实现「一键移动+一键复位」的平滑效果？不管是直播过场切换、录课构图调整，还是避免画面遮挡，motion-effect 插件都能轻松搞定！无需复杂操作，3 步就能实现精准位移，让你的...</description><pubDate>Thu, 15 Jan 2026 11:20:00 GMT</pubDate><content:encoded>&lt;p&gt;想让 OBS 摄像头实现「一键移动+一键复位」的平滑效果？不管是直播过场切换、录课构图调整，还是避免画面遮挡，motion-effect 插件都能轻松搞定！无需复杂操作，3 步就能实现精准位移，让你的画面切换更专业～&lt;/p&gt;
-&lt;h2&gt;一、插件简介&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;开发者：CatxFish（免费开源）&lt;/li&gt;
-&lt;li&gt;核心功能：画面平滑运动控制（平移、旋转、变焦等），支持往返触发&lt;/li&gt;
-&lt;li&gt;适配设备：绝大多数普通 USB 摄像头、部分 PTZ 摄像头&lt;/li&gt;
-&lt;li&gt;兼容系统：Windows、macOS、Linux&lt;/li&gt;
-&lt;li&gt;项目地址：https://github.com/CatxFish/motion-effect&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;二、安装步骤&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;下载对应系统安装包，解压后将文件放入 obs-studio 主文件夹&lt;/li&gt;
-&lt;li&gt;重启 OBS 完成生效&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2&gt;三、前置准备&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;场景名：教程（可自定义）&lt;/li&gt;
-&lt;li&gt;源：摄像头、显示器（按需添加）&lt;/li&gt;
-&lt;li&gt;目标效果：按快捷键 → 摄像头右下移动；再按快捷键 → 摄像头左上返回&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;四、配置流程&lt;/h2&gt;
-&lt;h3&gt;1. 记录初始坐标&lt;/h3&gt;
-&lt;p&gt;右键「源→摄像头」→ 变换→编辑变换，记录初始坐标（示例：1725, 489）&lt;/p&gt;
-&lt;h3&gt;2. 添加运动滤镜&lt;/h3&gt;
-&lt;p&gt;选中场景「教程」→ 右键→滤镜→效果滤镜→左下角「+」→ 选择「Motion」&lt;br /&gt;
-命名滤镜（自定义），核心参数配置：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Trigger Behavior 设为「Hotkey (Round trip)」（往返模式）&lt;/li&gt;
-&lt;li&gt;填写记录的初始坐标与目标坐标（示例目标：1735, 539）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260117005310134.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;3. 绑定快捷键&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;OBS 顶部→设置→快捷键&lt;/li&gt;
-&lt;li&gt;找到对应滤镜，为「Forward」和「Backward」绑定同一快捷键（示例：Alt+K）&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260117005511984.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;五、效果说明&lt;/h2&gt;
-&lt;p&gt;&lt;img alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;以上就是 motion-effect 插件的核心配置流程，全程聚焦「快速部署+实用效果」，无需多余步骤！插件轻量开源，兼容主流系统与摄像头，如需调整移动距离、速度或拓展多档位，直接修改坐标与参数即可。&lt;/p&gt;
-&lt;p&gt;✨ &lt;strong&gt;互动时间&lt;/strong&gt;&lt;br /&gt;
-你平时用 OBS 做直播/录课时，还遇到过哪些画面调整的难题？欢迎在评论区留言分享，我会一一解答～&lt;/p&gt;
-&lt;p&gt;如果觉得这篇教程对你有帮助，别忘了&lt;strong&gt;点赞+收藏+转发&lt;/strong&gt;三连呀！关注我，后续分享更多OBS 实用技巧、效率工具干货，下次见～ 👋&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;大强远程技术支持：742112.xyz&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;+86新注册电报，绕过sms收费
-1、换IP，建议，美 日 新 节点，不建议香港节点。
-2、换客户端，telegramx，或者这两个。
-[telegramx](https://github.com/TGX-Android/Telegram-X/releases) [第三方客户端](https://github.com/forkgram/TelegramAndroid/releases) [飞机旧版](https://www.apkmirror.com/uploads/?devcategory=telegram-fz-llc) 
-
-3、卡bug，可以邮箱验证优先邮箱验证。
-
-遇到付费解密强制重启app，多试几次有概率可以跳过。
-&lt;/code&gt;&lt;/pre&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;+86新注册电报，绕过sms收费&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;1、换IP，建议，美 日 新 节点，不建议香港节点。
-2、换客户端，telegramx，或者这两个。
-&lt;a href=&quot;https://github.com/TGX-Android/Telegram-X/releases&quot;&gt;telegramx&lt;/a&gt; &lt;a href=&quot;https://github.com/forkgram/TelegramAndroid/releases&quot;&gt;第三方客户端&lt;/a&gt; &lt;a href=&quot;https://www.apkmirror.com/uploads/?devcategory=telegram-fz-llc&quot;&gt;飞机旧版&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;3、卡bug，可以邮箱验证优先邮箱验证。遇到付费解密强制重启app，多试几次有概率可以跳过。&lt;/p&gt;
-&lt;/blockquote&gt;
 </content:encoded></item><item><title>API封装成Skill最佳实践</title><link>https://dqtx.cc/posts/workflow/api%E5%B0%81%E7%94%9F%E5%9B%BEskill/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/api%E5%B0%81%E7%94%9F%E5%9B%BEskill/</guid><description>最近被阿里巴巴通义MAI的Z-Image狠狠圈粉，不仅搭载了高效的 Z-Image-Turbo 模型，更关键的是每天能免费生 2000 张图，不管是生成文章视频...</description><pubDate>Sun, 30 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近被阿里巴巴通义MAI的Z-Image狠狠圈粉，不仅搭载了高效的 &lt;strong&gt;Z-Image-Turbo&lt;/strong&gt; 模型，更关键的是&lt;strong&gt;每天能免费生 2000 张图&lt;/strong&gt;，不管是生成文章视频封面还是异常创作，这个配额都完全够用。&lt;/p&gt;
 &lt;p&gt;恰巧这段时间我正在研究 Claude 的 Skills 功能，于是就萌生了一个想法：&lt;strong&gt;把 Z-Image 的免费生图能力和 Claude Skills 结合起来&lt;/strong&gt;，做一个专属生图 Skill，通过自然语言就可以生图到本地文件夹，既省时间又能充分利用免费配额。带着这个实操需求，我把整个创建过程整理成了这篇文章，希望能给同样喜欢折腾工具、需要生图功能的朋友提供一点参考～&lt;/p&gt;
 &lt;h2&gt;一.创建方法&lt;/h2&gt;
