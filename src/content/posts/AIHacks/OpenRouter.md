@@ -1,8 +1,8 @@
 ---
-title: Claude code接OpenRouter免费模型
+title: OpenRouter免费模型食用指南
 published: 2026-04-28
 tags: []
-category: Xenia
+category: AIHacks
 draft: false
 pinned: false
 image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260428232049626.webp

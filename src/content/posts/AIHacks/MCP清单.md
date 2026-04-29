@@ -2,10 +2,10 @@
 title: 10个MCP清单
 published: 2025-04-24
 tags: []
-category: Xenia
+category: AIHacks
 draft: false
 pinned: false
-image: 
+image:
 ---
 
 随着 MCP（Model Context Protocol）生态快速普及，AI 工具不再局限于纯文本对话。
