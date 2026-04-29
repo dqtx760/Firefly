@@ -5,7 +5,7 @@ tags: []
 category: AIHacks
 draft: false
 pinned: false
-image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260429135442847.webp
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260429164836641.webp
 ---
 Xiaomi MiMo 将面向全球 AI 用户进行免费 Token 发放，我们将在 30 天内发放总计 100 万亿（100T） Token 权益，赠完即止。
 ![image.png](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260429164836641.webp)
