@@ -43,3 +43,55 @@ https://platform.xiaomimimo.com/contact
 可以在订阅套餐里看到该套餐的有效期和额度。我看了一下，我的额度是两个亿。
 ![7e60c3fe07593ee78def36703add3f4e.png](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260429135746969.webp)
 
+
+
+### 创建 API Key
+注意⚠️：一定是去来这里获取
+- 专属API key
+- 专属Base URL
+这样才是使用的免费的额度
+![image.png](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260429162707099.webp)
+
+### 接入Claude code
+
+在CC Switch填写参数
+
+注意⚠️：不要使用默认的请求地址，已经自己去创建API key
+> 请求地址：专属Base URL
+> API Key：你的专属API
+
+ps，默认使用**mimo-v2-pro**模型，不支持获取模型列表。
+
+### 接入Qwen Code
+
+#### 选择认证方式
+
+![image.png](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260429160433714.webp)
+#### 进入自定义配置**
+![image.png](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260429160502785.webp)
+#### 选择兼容协议 
+OpenAI 与Anthropic都支持 
+我选择OpenAI
+![image.png](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260429160551791.webp)
+
+#### 粘贴你的**专属 Base URL**
+
+![image.png](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260429160916176.webp)
+#### 粘贴你的**专属 API KEY**
+![image.png](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260429160951881.webp)
+
+#### 输入模型名称
+  
+> MiMo-V2.5-Pro、MiMo-V2.5、MiMo-V2.5-TTS-VoiceClone、MiMo-V2.5-TTS-VoiceDesign、MiMo-V2.5-TTS、MiMo-V2-Pro、MiMo-V2-Omni、MiMo-V2-TTS
+
+注意⚠️：我试了MiMo-V2.5-Pro、MiMo-V2.5都不想，后面settings.json换成mimo-v2-pro可以了
+
+![image.png](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260429161451540.webp)
+#### 启用思考模式
+按下**空格键（Space）**选中然后回车，两个可同时启用。
+1. `Enable thinking`（启用思考模式）
+2. `Enable modality`（启用多模态能力）
+![image.png](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260429161543041.webp)
+
+#### 开始使用
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260429163300716.webp)
