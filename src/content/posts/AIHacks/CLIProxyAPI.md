@@ -3,7 +3,7 @@ title: CLIProxyAPI教程
 published: 2026-04-28
 tags:
   - 技术教程
-category: Xenia
+category: AIHacks
 draft: false
 pinned: false
 ---

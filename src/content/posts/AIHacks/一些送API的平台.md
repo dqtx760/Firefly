@@ -4,7 +4,7 @@ published: 2026-02-13
 tags:
   - API
   - Claudecode
-category: Xenia
+category: AIHacks
 draft: false
 pinned: false
 image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260213210334278.webp
@@ -81,9 +81,5 @@ GLM Coding Lite现在的价格
 - 连续包季（9折）：132/季
 
 
-
 如果觉得这篇教程对你有帮助，别忘了**点赞+收藏+转发**三连呀！关注我，后续分享更多实用技巧、效率工具干货，下次见～ 👋
 
-
-
-**大强远程技术支持：[742112.xyz](https://www.742112.xyz/)**

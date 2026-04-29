@@ -16,84 +16,48 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-202604
 
 Qwen Code 是基于 Gemini Code 二次开发的**终端 AI 编程助手**，完美搭载**通义千问3.6 Plus 最新编程模型**，支持纯中文交互、代码生成/修复/Git 协作，**免费**提供**每日100次请求**额度完全满足日常开发需求。
 
-
-
 **开源地址**：https://github.com/QwenLM/qwen-code
-
 
 
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260414155118952.webp)
 
 ## 一、前置准备
 
-### 1. 安装必备环境
+### 1. 环境说明
 Qwen Code 依赖 **Node.js 20.0 及以上版本**，必须先安装：
 1. 打开官网：https://nodejs.org/
 2. 下载 **LTS 版本**（长期稳定版），一路默认安装即可
 3. 验证是否安装成功：
-   按下 `Win + R`，输入 `cmd` 打开终端，执行命令：
-   
+
+按下 `Win + R`，输入 `cmd` 打开终端，执行命令：
    ```cmd
    node -v
    npm -v
    ```
-   出现版本号就说明环境就绪。
 
 ### 2. 关键要求
 打开终端时，**必须右键选择「以管理员身份运行」**（否则无法全局安装）。
 
 ## 二、安装命令
+
 ```cmd
 npm install -g @qwen-code/qwen-code@latest
 ```
 
-等待安装完成，出现安装成功提示即可。
 
-### 验证安装是否成功
+### 验证安装
 在终端输入：
 ```cmd
 qwen --version
 ```
+
 显示版本号 = **安装成功**。
 
-## 三、首次使用 + 登录授权
-### 终端启动
+## 三、配置API
 
-```
-# 1. 默认启动（建议模式 - 每次操作需确认）
-qwen 
+默认授权或接入阿里云百炼API
 
-# 2. 全自动模式（无需确认，自动执行所有操作）
-qwen -y
-qwen --approval-mode yolo
-```
-1. 首次启动会提示选择登录方式，**直接选择「Qwen OAuth」**
-2. 会自动跳转到浏览器，登录你的通义千问账号（直接用github登录）
-3. 登录完成后，返回终端，自动完成认证，**无需手动配置密钥**
-
-![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260414202107652.webp)
-
-
-### 一键静默启动bat
-
-```
-@echo off
-chcp 65001 >nul
-title Qwen Code
-
-:: 检查 qwen 命令
-where qwen >nul 2>&1
-if %errorlevel% neq 0 (
-    echo [错误] 未检测到 qwen 命令，请先安装。
-    pause
-    exit /b 1
-)
-
-:: 直接启动，不显示任何额外信息
-qwen -y
-```
-
-**使用 Qwen3.6 Plus 模型**
+**使用 Qwen3.6 Plus 模型** 示例
 
 进入交互界面后，使用命令 `/model` 切换模型：
 
@@ -103,7 +67,7 @@ qwen -y
 
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260414203620949.webp)
 
-### 配置 API Key 
+### 集成火山MiniMax-M2.5
 
 在 settings.json 中配置 API Key 和模型                  
 
@@ -138,7 +102,111 @@ qwen -y
 }
 ```
 
+### 集成蚂蚁百灵ling-2.6-1t
 
+详细的教程:[点击查看](https://www.dqtx.cc/posts/aihacks/%E8%9A%82%E8%9A%81%E7%99%BE%E7%81%B5%E5%A4%A7%E6%A8%A1%E5%9E%8B/)
+
+全局启动 bat（推荐）
+
+```
+@echo off
+title Claude Code - 百灵模型
+
+:: ========== 百灵配置区（修改这里）==========
+set ANTHROPIC_BASE_URL=https://api.ant-ling.com/anthropic
+set ANTHROPIC_API_KEY=你的百灵API令牌
+set ANTHROPIC_MODEL=Ling-2.6-flash
+set ANTHROPIC_DEFAULT_OPUS_MODEL=Ling-2.6-flash
+set ANTHROPIC_DEFAULT_SONNET_MODEL=Ling-2.6-flash
+set ANTHROPIC_DEFAULT_HAIKU_MODEL=Ling-2.6-flash
+:: ===========================================
+
+where claude >nul 2>&1 || (echo Claude Code 未安装 & pause & exit /b 1)
+claude --dangerously-skip-permissions --model %ANTHROPIC_MODEL%
+```
+
+把 bat 放在**项目根目录**，自动加载同目录的 `.env`：
+
+```
+@echo off
+title Claude Code - 百灵模型
+chcp 65001 >nul
+
+:: 加载同目录 .env 文件（如果存在）
+if exist ".env" (
+    for /f "usebackq tokens=1,* delims==" %%a in (".env") do (
+        set "%%a=%%b"
+    )
+)
+
+:: 兜底：如果 .env 没配置，使用默认值
+if not defined ANTHROPIC_BASE_URL set ANTHROPIC_BASE_URL=https://api.ant-ling.com/anthropic
+if not defined ANTHROPIC_API_KEY (
+    echo [错误] 未找到 ANTHROPIC_API_KEY
+    echo 请在 .env 文件或 bat 中配置你的百灵 API 令牌
+    pause
+    exit /b 1
+)
+if not defined ANTHROPIC_MODEL set ANTHROPIC_MODEL=Ling-2.6-flash
+if not defined ANTHROPIC_DEFAULT_OPUS_MODEL set ANTHROPIC_DEFAULT_OPUS_MODEL=%ANTHROPIC_MODEL%
+if not defined ANTHROPIC_DEFAULT_SONNET_MODEL set ANTHROPIC_DEFAULT_SONNET_MODEL=%ANTHROPIC_MODEL%
+if not defined ANTHROPIC_DEFAULT_HAIKU_MODEL set ANTHROPIC_DEFAULT_HAIKU_MODEL=%ANTHROPIC_MODEL%
+
+where claude >nul 2>&1 || (echo Claude Code 未安装 & pause & exit /b 1)
+
+echo 当前模型: %ANTHROPIC_MODEL%
+claude --dangerously-skip-permissions --model %ANTHROPIC_MODEL%
+```
+
+配套 `.env` 文件（放项目根目录）
+
+```
+ANTHROPIC_BASE_URL=https://api.ant-ling.com/anthropic
+ANTHROPIC_API_KEY=你的百灵API令牌
+ANTHROPIC_MODEL=Ling-2.6-flash
+ANTHROPIC_DEFAULT_OPUS_MODEL=Ling-2.6-flash
+ANTHROPIC_DEFAULT_SONNET_MODEL=Ling-2.6-flash
+ANTHROPIC_DEFAULT_HAIKU_MODEL=Ling-2.6-flash
+```
+
+记得把 `.env` 加入 `.gitignore`
+
+### 命令启动
+
+```
+# 1. 默认启动（建议模式 - 每次操作需确认）
+qwen 
+
+# 2. 全自动模式（无需确认，自动执行所有操作）
+qwen -y
+qwen --approval-mode yolo
+```
+
+1. 首次启动会提示选择登录方式，**直接选择「Qwen OAuth」**
+2. 会自动跳转到浏览器，登录你的通义千问账号（直接用github登录）
+3. 登录完成后，返回终端，自动完成认证，**无需手动配置密钥**
+
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260414202107652.webp)
+
+
+### 启动bat
+
+```
+@echo off
+chcp 65001 >nul
+title Qwen Code
+
+:: 检查 qwen 命令
+where qwen >nul 2>&1
+if %errorlevel% neq 0 (
+    echo [错误] 未检测到 qwen 命令，请先安装。
+    pause
+    exit /b 1
+)
+
+:: 直接启动，不显示任何额外信息
+qwen -y
+```
 
 ## 四、自然语言使用
 
@@ -196,28 +264,6 @@ Qwen Code 支持调用多个**子 Agent（子程序）**并行工作，大幅提
 }
 ```
 
-### 使用场景
-
-- ✅ 批量处理多个文件
-- ✅ 并行执行独立的搜索任务
-- ✅ 同时分析不同模块的代码
-- ✅ 大规模代码重构前的多点扫描
-
-### 注意事项
-
-- ⚠️ 同时调用的 Agent 越多，消耗资源越大
-- ⚠️ 建议控制在 3-5 个并行任务
-- ✅ 复杂任务拆分为多个子任务，效率更高
 
 
-
-**以上，既然看到这里了，如果觉得教程对你有帮助，随手点个赞、收藏、转发三连吧！有任何问题，欢迎在留言区评论，我会逐一回复。👏👏**
-
-
-
-**✅大远程技术支持**
-
-如果你在安装、配置或使用中遇到任何问题，不想自己折腾
-
-随时可以找我提供 **1 对 1 远程技术支持**：[742112.xyz](742112.xyz)
 
