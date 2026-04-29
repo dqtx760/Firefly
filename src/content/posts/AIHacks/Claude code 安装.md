@@ -9,6 +9,7 @@ pinned: false
 image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260424220034771.webp
 ---
 这篇文章是我整理的远程安装CC全套SOP文档，今天免费公开分享给大家。不止会手把手教你顺利安装CC，同时还会顺带讲解Obsidian相关配置，全程带大家实操学会 Cloud Code 的完整使用方法，一站式搞定部署与实操，新手也能直接跟着操作，方便大家直接上手使用。
+
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260424220034771.webp)
 
 ## 一.安装Claude code
@@ -168,12 +169,9 @@ openrouter
 ```
 
 ## 四.参考资料
-### Claude code命令&快捷键:[点此查看](https://www.dqtx.cc/posts/aihacks/cc/)
-### Agent Skills 管理方案:[点此查看](https://www.dqtx.cc/posts/aihacks/skills-manage/)
+### Claude code命令&快捷键:[点此查看](https://www.dqtx.cc/posts/xenia/cc%E5%91%BD%E4%BB%A4%E5%BF%AB%E6%8D%B7%E9%94%AE/)
 ### Claude code skill推荐:[点此查看](https://www.notion.so/skill-347351994e408091a13be04d19c62d1e)
 ### Claude code MCP:[点此查看](https://www.dqtx.cc/posts/xenia/mcp%E6%B8%85%E5%8D%95/)
-### 有些有用的cli工具:点此查看
-
 
 
 ## 五.常见问题

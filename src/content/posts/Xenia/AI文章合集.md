@@ -21,10 +21,9 @@ image:
 - [Zed安装使用教程](https://www.dqtx.cc/posts/aihacks/zed/)
 - [Antigravity安装使用教程](https://www.dqtx.cc/posts/aihacks/antigravity/)
 - [workany：桌面Agent产品](https://www.dqtx.cc/posts/aihacks/workany/)
-- CodePilot使用指南
-- 秘塔回响语音输入法
-待补充
-- opencode
+- [CodePilot使用指南](https://dqtx.cc/posts/aihacks/codepilot/)
+- [秘塔回响语音输入法](https://dqtx.cc/posts/aihacks/%E7%A7%98%E5%A1%94%E5%9B%9E%E5%93%8D/)
+- opencode（待补充)
 
 
 ## 拓展插件
@@ -35,6 +34,7 @@ image:
 - [AntigravityTool使用教程](https://www.dqtx.cc/posts/aihacks/antigravitytool/)
 - [CLIProxyAPI教程](https://www.dqtx.cc/posts/aihacks/cliproxyapi/)
 - [free-claude-code代理使用指南](https://www.dqtx.cc/posts/aihacks/claude-code-%E5%AE%89%E8%A3%85/)
+- [Claude code命令&快捷键](https://www.dqtx.cc/posts/xenia/cc%E5%91%BD%E4%BB%A4%E5%BF%AB%E6%8D%B7%E9%94%AE/)
 
 ## ApI keys
 - [OpenRouter免费模型食用指南](https://www.dqtx.cc/posts/aihacks/openrouter/)
