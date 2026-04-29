@@ -37,9 +37,11 @@ image:
 - [Claude code命令&快捷键](https://www.dqtx.cc/posts/xenia/cc%E5%91%BD%E4%BB%A4%E5%BF%AB%E6%8D%B7%E9%94%AE/)
 
 ## ApI keys
+- [Token Plan服务订阅平台](https://www.dqtx.cc/posts/xenia/api-%E5%BC%80%E6%94%BE%E5%B9%B3%E5%8F%B0/)
 - [OpenRouter免费模型食用指南](https://www.dqtx.cc/posts/aihacks/openrouter/)
-- [蚂蚁百灵大模型免费食用指南](https://www.dqtx.cc/posts/aihacks/%E8%9A%82%E8%9A%81%E7%99%BE%E7%81%B5%E5%A4%A7%E6%A8%A1%E5%9E%8B/)
 - [英伟达免费API申请流程](https://www.dqtx.cc/posts/aihacks/nvidia-api%E7%94%B3%E8%AF%B7/)
+-  [蚂蚁百灵大模型免费食用指南](https://www.dqtx.cc/posts/aihacks/%E8%9A%82%E8%9A%81%E7%99%BE%E7%81%B5%E5%A4%A7%E6%A8%A1%E5%9E%8B/)
+- [Xiaomi MiMo百万亿 Token 激励计划](https://www.dqtx.cc/posts/aihacks/xiaomi-mimo%E7%99%BE%E4%B8%87%E4%BA%BF-token-%E6%BF%80%E5%8A%B1%E8%AE%A1%E5%88%92/)
 
 
 ## skill

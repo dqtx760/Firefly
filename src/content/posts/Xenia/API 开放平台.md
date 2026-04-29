@@ -1,13 +1,14 @@
 ---
 title: Token Plan服务订阅平台
-published: 2026-04-29
+published: 2026-04-27
 tags:
   - AI
 category: Xenia
 draft: false
 pinned: false
-image: 
+image:
 ---
+这篇文章会更新全网一些优质的 token plan 服务订阅平台及其快捷入口，方便大家查询价格和申请 API Key。
 
 ### 订阅Token Plan 服务
 

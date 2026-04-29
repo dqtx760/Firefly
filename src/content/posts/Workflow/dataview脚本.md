@@ -29,10 +29,13 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-202604
 在开始之前，请确保你已经安装并启用了 `Dataview` 和 `Templater` 插件，并完成以下核心设置：
 1. **Dataview 设置**：必须开启 **Enable JavaScript Queries**（启用 JavaScript 查询）。
 2. **Templater 设置**：建议绑定一个快捷键（如 `Alt+E`）用于一键呼出模板列表。
+注意快捷键的设置，不然“全局搜索器”**不会弹出输入框**
+
+| 模板: 插入模板                              | `Alt+E` | ❌   |
+| ------------------------------------- | ------- | --- |
+| Templater: Open insert template modal | `Alt+E` | 对   |
 
 将下方的代码分别复制并保存到你的“模板文件夹”中。使用时，在任意笔记中通过 Templater 插入该模板，即可触发极具交互感的弹窗查询！
-
-
 
 ## 案例 1：全局搜索器
 
