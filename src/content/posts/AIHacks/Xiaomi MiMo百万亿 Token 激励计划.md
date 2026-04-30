@@ -8,6 +8,7 @@ pinned: false
 image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260429164836641.webp
 ---
 Xiaomi MiMo 将面向全球 AI 用户进行免费 Token 发放，我们将在 30 天内发放总计 100 万亿（100T） Token 权益，赠完即止。
+
 ![image.png](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260429164836641.webp)
 ### 活动说明
 活动时间：北京时间 2026 年 4 月 28 日 00:00 至 5 月 28 日 00:00
@@ -45,7 +46,7 @@ https://platform.xiaomimimo.com/contact
 
 
 ### 获取专属 API Key
-注意⚠️：一定是去来[订阅管理](https://platform.xiaomimimo.com/console/plan-manage)获取
+⚠️注意：一定是去来[订阅管理](https://platform.xiaomimimo.com/console/plan-manage)获取
 而不是自己去创建，这样才是使用的免费的额度，哈哈哈！
 - 专属API key
 - 专属Base URL
@@ -56,7 +57,7 @@ https://platform.xiaomimimo.com/contact
 
 在CC Switch填写参数
 
-注意⚠️：不要使用默认的请求地址，已经自己去创建API key
+⚠️注意：不要使用默认的请求地址，不要自己去创建API key
 > 请求地址：填你的专属Base URL
 > API Key：填你的专属API
 
@@ -84,7 +85,7 @@ OpenAI 与Anthropic都支持
   
 > MiMo-V2.5-Pro、MiMo-V2.5、MiMo-V2.5-TTS-VoiceClone、MiMo-V2.5-TTS-VoiceDesign、MiMo-V2.5-TTS、MiMo-V2-Pro、MiMo-V2-Omni、MiMo-V2-TTS
 
-注意⚠️：
+⚠️注意：
 
 我试了MiMo-V2.5-Pro、MiMo-V2.5都不想，后面settings.json换成mimo-v2-pro可以了
 
@@ -103,7 +104,7 @@ OpenAI 与Anthropic都支持
 ### 写在最后
 以上是本次激励计划的免费领取步骤，以及接入两个常用AI Agent的流程，但需要注意的事项较多。
 
-你的**订阅管理**中已为你准备好专属的 ipa key 和 base url，切勿自行创建，因为免费额度仅适用于系统提供的专属配置，自行创建将产生额外费用。
+你的**订阅管理**中已为你准备好专属的 API key 和 Base url，切勿自行创建，因为免费额度仅适用于系统提供的专属配置，自行创建将产生额外费用。
 
 **Source来源**：[www.dqtx.cc](www.dqtx.cc)
 
