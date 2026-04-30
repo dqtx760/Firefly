@@ -2,7 +2,7 @@
 title: Flipbook 可视化搜索
 published: 2026-04-26
 tags: []
-category: Xenia
+category: AIHacks
 draft: false
 pinned: false
 image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260426182435376.webp

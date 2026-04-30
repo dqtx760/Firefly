@@ -49,7 +49,6 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-202604
 ## 📝 内容/文档
 
 - [Obsidian Web Clipper](https://chromewebstore.google.com/detail/obsidian-web-clipper/cnjifjpddelmedmihgijeibhnjfabmlf)：网页剪藏Obsidian
-
 - [SmartClip](https://chromewebstore.google.com/detail/oddgijbbpmjcnomkfmcdjiolcciemddf)：一键剪藏网页内容
 - [Markdown Editor](https://github.com/yishu-ziyu/chrome-md-editor)：浏览器内编辑本地 Markdown 文件
 - [Cloud Document Converter](https://chromewebstore.google.com/detail/cloud-document-converter/ehkomhhcinhikfddnmklbloahaakploh)：将网页内容复制为 Markdown
@@ -58,10 +57,9 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-202604
 - [豆包无水印下载](https://pan.xunlei.com/s/VOqOWbr5dIw7kwRnmHkwx4v0A1?pwd=xkdj)：豆包内容无水印下载工具
 
 ## 其他
-
 [Bookmark Save](https://chromewebstore.google.com/detail/bookmark-save-export-twit/lgjolpecipmadohbokoeojckfbcglbod)：导出 Twitter 书签
-
 [即刻导出](https://chromewebstore.google.com/detail/%E5%8D%B3%E5%88%BB%E5%AF%BC%E5%87%BA/bknkpflbkcapjdbcbdoijnjdbkdabjli)：导出即刻动态为本地文件
+[Gatekeeper](https://chromewebstore.google.com/detail/cat-gatekeeper/elbikiflgfhjdjmficnigpeegjbhdidh?authuser=2)：一个猫咪强制休息插件！
 
 ## ✅排版提示词
 
