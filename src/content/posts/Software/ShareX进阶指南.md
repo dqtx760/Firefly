@@ -1,7 +1,8 @@
 ---
-title:
+title: ShareX进阶指南
 published: 2026-04-30
-tags: []
+tags:
+  - 软件推荐
 category: Software
 draft: false
 pinned: false
