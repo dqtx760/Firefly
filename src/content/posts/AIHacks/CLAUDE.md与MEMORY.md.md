@@ -1,17 +1,16 @@
 ---
-title: CLAUDE.md 与 MEMORY.md：99%的人分不清这两个文件
+title: CLAUDE.md 与 MEMORY.md详解
 description: 一个给 AI 看，一个给 AI 记。搞混了，你的 AI 助手就废了。
 published: 2026-04-30
 tags:
-  - AI开发工具
-  - 最佳实践
+  - Claudecode
 category: AIHacks
 draft: false
 pinned: false
 image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260430235845976.webp
 ---
 
-很多人用 Claude Code 写了上百个文件，但从来没搞清楚一个最基本的问题：
+很多人用 Claude Code 写了上百个文件，但99%的人从来没搞清楚一个最基本的问题：
 
 **CLAUDE.md 和 MEMORY.md 到底有什么区别？**
 

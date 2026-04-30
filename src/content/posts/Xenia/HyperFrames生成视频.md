@@ -1,8 +1,10 @@
 ---
-title: 用Claude Code把一篇文章自动做成视频，全程不用碰剪辑软件
+title: HyperFrames：用HTML写视频框架
 published: 2026-04-30T16:00:00.000Z
-tags: []
-category: Xenia
+tags:
+  - Claudecode
+  - skill
+category: AIHacks
 draft: false
 pinned: false
 image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260430153231682.webp

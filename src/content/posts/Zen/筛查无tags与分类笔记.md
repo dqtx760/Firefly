@@ -1,19 +1,19 @@
 ---
-title: 本周创建的笔记
+title: 筛查无tags与分类笔记
 published: 2025-05-01
 tags:
+  - dataview模板
 category: Zen
 draft: false
 pinned: false
-image:
 ---
 
 ```dataview
 TABLE WITHOUT ID
-  category AS "分类",
   dateformat(file.ctime, "yyyy/MM/dd") AS "创建日期",
-  file.link AS "本周笔记"
+  file.link AS "笔记名称"
 WHERE file.ctime >= date(today) - dur(3 days)
-SORT category ASC, file.ctime DESC
+AND !file.tags
+AND !category
+SORT file.ctime DESC
 ```
----
