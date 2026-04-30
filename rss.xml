@@ -357,6 +357,704 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/tech-shrimp&quot;&gt;tech-shrimp&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>用Claude Code把一篇文章自动做成视频，全程不用碰剪辑软件</title><link>https://dqtx.cc/posts/xenia/html%E8%87%AA%E5%8A%A8%E5%81%9A%E8%A7%86%E9%A2%91/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/html%E8%87%AA%E5%8A%A8%E5%81%9A%E8%A7%86%E9%A2%91/</guid><pubDate>Thu, 30 Apr 2026 16:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;引言&lt;/h3&gt;
+&lt;p&gt;做短视频最烦的是什么？写文案、找素材、调时间轴、配音乐、导出……每一步都是手动操作。&lt;/p&gt;
+&lt;p&gt;今天分享一个骚操作：&lt;strong&gt;直接丢一篇 Markdown 文章给 Claude Code，它自动帮你生成一个带动画、配乐的视频 MP4 文件。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;整个过程我全程没碰任何剪辑软件，全靠一条命令搞定。&lt;/p&gt;
+&lt;p&gt;用到的工具叫 &lt;strong&gt;HyperFrames&lt;/strong&gt;，开源免费&lt;/p&gt;
+&lt;p&gt;GitHub 地址：&lt;/p&gt;
+&lt;p&gt;https://github.com/heygen-com/hyperframes&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260430153231682.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;一、HyperFrames 是什么&lt;/h3&gt;
+&lt;p&gt;简单说，它是一个 &lt;strong&gt;用 HTML 写视频&lt;/strong&gt; 的框架。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;视频的每一帧都是 HTML + CSS&lt;/li&gt;
+&lt;li&gt;动画用 GSAP（前端最流行的动画库）控制&lt;/li&gt;
+&lt;li&gt;时序用 &lt;code&gt;data-*&lt;/code&gt; 属性标记&lt;/li&gt;
+&lt;li&gt;最终渲染成 MP4&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;配合 Claude Code 的 AI 能力，你只需要告诉它&quot;我要什么风格的视频&quot;，它就能自动写出 HTML、配好动画、加上音乐，然后渲染出成品。&lt;/p&gt;
+&lt;h3&gt;二、安装步骤&lt;/h3&gt;
+&lt;h4&gt;前置条件&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Node.js ≥ 22&lt;/li&gt;
+&lt;li&gt;FFmpeg&lt;/li&gt;
+&lt;li&gt;Claude Code（或任意 AI 编程工具）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;安装 HyperFrames 技能&lt;/h4&gt;
+&lt;p&gt;在终端执行：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npx skills add heygen-com/hyperframes
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;执行后会列出 6 个 skill，&lt;strong&gt;首次建议全选&lt;/strong&gt;（按空格键勾选全部，回车确认）：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;技能名&lt;/th&gt;
+&lt;th&gt;核心用途&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;gsap&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;GSAP 动画语法参考&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;hyperframes&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;核心技能：创建视频合成、动画、标题卡&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;hyperframes-cli&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;命令行工具：初始化、检查、预览、渲染&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;hyperframes-registry&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;安装官方组件库/预设模块&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;remotion-to-hyperframes&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;将 Remotion 项目转为 HyperFrames 格式&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;website-to-hyperframes&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;抓取网页并自动生成视频&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;安装完成后，重启 Claude Code 即可使用。&lt;/p&gt;
+&lt;h3&gt;三、实操：把一篇文章做成视频&lt;/h3&gt;
+&lt;p&gt;下面是我完整的操作流程，从一篇 Markdown 文章到一个 MP4 视频，全程自动化。&lt;/p&gt;
+&lt;h4&gt;第一步：给 Claude Code 发指令&lt;/h4&gt;
+&lt;p&gt;我有一篇自我介绍文章，路径是：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;D:\project2026\fuwari\src\content\posts\Xenia\自我介绍.md
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;直接在 Claude Code 对话框发送：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;把这个文章使用HyperFrames做个视频
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;第二步：选择风格和用途&lt;/h4&gt;
+&lt;p&gt;Claude Code 会问你两个问题：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;问题一：视觉风格&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;科技感/暗色 — 深色背景，霓虹高亮，适合技术博主&lt;/li&gt;
+&lt;li&gt;简约/明亮 — 白色背景，干净排版，适合品牌展示&lt;/li&gt;
+&lt;li&gt;活力/彩色 — 多彩渐变，适合社交媒体&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;问题二：视频用途&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;短视频/社交媒体 — 15-30 秒，竖屏 9:16&lt;/li&gt;
+&lt;li&gt;个人介绍/B 站片头 — 30-60 秒，横屏 16:10&lt;/li&gt;
+&lt;li&gt;完整自我介绍视频 — 1-2 分钟，横屏 16:9&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我选了「科技感/暗色」+「完整自我介绍视频」。&lt;/p&gt;
+&lt;h4&gt;第三步：自动初始化项目&lt;/h4&gt;
+&lt;p&gt;Claude Code 会自动执行 &lt;code&gt;npx hyperframes init&lt;/code&gt;，生成项目结构：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;dqtx-self-intro/
+├── assets/                # 静态资源（音乐、图片等）
+├── renders/               # 渲染输出的 MP4 视频
+├── AGENTS.md              # AI 协作文档
+├── CLAUDE.md              # Claude 技能配置
+├── DESIGN.md              # 视觉设计方案（颜色、字体、规范）
+├── hyperframes.json       # 项目配置
+├── index.html             # 核心！视频的源文件就是这个 HTML
+└── meta.json              # 项目元数据
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;其中 &lt;strong&gt;&lt;code&gt;index.html&lt;/code&gt;&lt;/strong&gt; 是最重要的文件——整个视频的画面、动画、时序全写在这里面。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;⚠️ 重要：每个视频是独立项目。&lt;/strong&gt; 这个 &lt;code&gt;dqtx-self-intro&lt;/code&gt; 文件夹只针对本次视频。下次做新视频会生成一个全新的项目文件夹，互不影响。各文件复用情况如下：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;文件/文件夹&lt;/th&gt;
+&lt;th&gt;能否复用&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;index.html&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;不复用&lt;/td&gt;
+&lt;td&gt;视频本身，每个视频完全不同&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;DESIGN.md&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;可当模板&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;配色方案可复制到新项目，省得重新定义风格&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;assets/&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;不复用&lt;/td&gt;
+&lt;td&gt;本视频的音乐/图片，新视频用新素材&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;renders/&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;不复用&lt;/td&gt;
+&lt;td&gt;输出的 MP4，每个视频单独渲染&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;CLAUDE.md&lt;/code&gt; &lt;code&gt;AGENTS.md&lt;/code&gt; &lt;code&gt;hyperframes.json&lt;/code&gt; &lt;code&gt;meta.json&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;自动生成&lt;/td&gt;
+&lt;td&gt;每次 init 都会生成，内容固定&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;以后做新视频的流程：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# 1. 在新目录初始化
+npx hyperframes init my-new-video
+
+# 2. 如果想复用科技暗色风格，把 DESIGN.md 复制过去
+cp dqtx-self-intro/DESIGN.md my-new-video/
+
+# 3. 告诉 Claude Code 用新文章创建视频
+# 它会自动写新的 index.html
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;简单说：&lt;strong&gt;每次新视频 = 新文件夹 + 新 index.html&lt;/strong&gt;，其他都是辅助文件。只有 &lt;code&gt;DESIGN.md&lt;/code&gt; 值得复用当模板。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;第四步：自动创建视频内容&lt;/h4&gt;
+&lt;p&gt;Claude Code 会根据你的文章内容，自动做这些事：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;创建 DESIGN.md&lt;/strong&gt; — 定义配色方案、字体、视觉风格&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;分析文章结构&lt;/strong&gt; — 把文章拆分成多个场景（Scene）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;编写 HTML&lt;/strong&gt; — 每个场景是一个 &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt;，用 &lt;code&gt;data-start&lt;/code&gt; 和 &lt;code&gt;data-duration&lt;/code&gt; 控制出现时间&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;添加 GSAP 动画&lt;/strong&gt; — 元素入场、退出、过渡效果&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;运行 lint 检查&lt;/strong&gt; — 自动检查 HTML 是否有错误&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;我的自我介绍视频被拆成了 7 个场景：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;场景&lt;/th&gt;
+&lt;th&gt;时间&lt;/th&gt;
+&lt;th&gt;内容&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1. 标题&lt;/td&gt;
+&lt;td&gt;0-5s&lt;/td&gt;
+&lt;td&gt;&quot;大强同学&quot; 品牌开场&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2. 关于我&lt;/td&gt;
+&lt;td&gt;5-16s&lt;/td&gt;
+&lt;td&gt;个人介绍 + 正在做的事&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3. 项目展示&lt;/td&gt;
+&lt;td&gt;16-30s&lt;/td&gt;
+&lt;td&gt;8 个网站 + 开源项目&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4. 服务社群&lt;/td&gt;
+&lt;td&gt;30-44s&lt;/td&gt;
+&lt;td&gt;商业服务 + 社群列表&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;5. 社交媒体&lt;/td&gt;
+&lt;td&gt;44-56s&lt;/td&gt;
+&lt;td&gt;粉丝数据 + 平台矩阵&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;6. AI 工具链&lt;/td&gt;
+&lt;td&gt;56-68s&lt;/td&gt;
+&lt;td&gt;AI Agent + API 供应商&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;7. 结尾&lt;/td&gt;
+&lt;td&gt;68-80s&lt;/td&gt;
+&lt;td&gt;联系方式收尾&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4&gt;第五步：本地预览&lt;/h4&gt;
+&lt;p&gt;Claude Code 会启动一个本地预览服务器：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npx hyperframes preview
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;浏览器打开 &lt;code&gt;http://localhost:3002&lt;/code&gt; 就能看到视频效果。&lt;strong&gt;修改 HTML 后会自动刷新&lt;/strong&gt;，所见即所得。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260430150154455.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h4&gt;第六步：反馈优化&lt;/h4&gt;
+&lt;p&gt;这一步很关键。我看第一版后觉得：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;节奏太慢&lt;/strong&gt; — 80 秒太长了&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;没有音乐&lt;/strong&gt; — 需要加 BGM&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;直接告诉 Claude Code，它会自动修改：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;把总时长从 80 秒压缩到 55 秒&lt;/li&gt;
+&lt;li&gt;动画从 0.5 秒缩短到 0.35 秒&lt;/li&gt;
+&lt;li&gt;卡片入场间隔从 0.08 秒压缩到 0.06 秒&lt;/li&gt;
+&lt;li&gt;问我要音乐文件，然后自动添加到项目中&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;第七步：渲染导出 MP4&lt;/h4&gt;
+&lt;p&gt;确认效果没问题后，执行渲染：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npx hyperframes render
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;渲染完成后，MP4 文件在：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;项目目录/renders/dqtx-self-intro_2026-04-30_15-09-53.mp4
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;我的成品：1920×1080、55 秒、3.8 MB，带背景音乐，可以直接上传社交媒体。&lt;/p&gt;
+&lt;p&gt;视频&lt;/p&gt;
+&lt;h3&gt;四、核心概念速览&lt;/h3&gt;
+&lt;h4&gt;HTML 就是视频源文件&lt;/h4&gt;
+&lt;p&gt;整个视频就是一个 HTML 文件，核心结构：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;div id=&quot;root&quot; data-composition-id=&quot;main&quot; 
+     data-start=&quot;0&quot; data-duration=&quot;55&quot;
+     data-width=&quot;1920&quot; data-height=&quot;1080&quot;&amp;gt;
+  
+  &amp;lt;!-- 每个场景是一个 clip --&amp;gt;
+  &amp;lt;div id=&quot;scene1&quot; class=&quot;clip scene&quot; 
+       data-start=&quot;0&quot; data-duration=&quot;3.5&quot; data-track-index=&quot;1&quot;&amp;gt;
+    &amp;lt;!-- 你的内容 --&amp;gt;
+  &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;data-start&lt;/code&gt; — 这个元素从第几秒出现&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;data-duration&lt;/code&gt; — 持续几秒&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;data-track-index&lt;/code&gt; — 轨道编号（决定层级）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;动画用 GSAP 控制&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;const tl = gsap.timeline({ paused: true });
+
+// 入场动画：从下方滑入 + 淡入
+tl.from(&quot;#title&quot;, {
+  opacity: 0, y: 40,
+  duration: 0.5, ease: &quot;power3.out&quot;
+}, 0); // 0 = 在第 0 秒开始
+
+// 退出动画：向上滑出 + 淡出
+tl.to(&quot;#title&quot;, {
+  opacity: 0, y: -25,
+  duration: 0.25, ease: &quot;power2.in&quot;
+}, 2.8); // 在第 2.8 秒退出
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;视觉方案在 DESIGN.md 中定义&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;## Colors
+| 角色       | 色值      | 说明              |
+|-----------|----------|------------------|
+| 背景      | #0a0e1a  | 深蓝黑，不是纯黑    |
+| 强调色    | #3b82f6  | 电光蓝            |
+| 辅助色    | #06b6d4  | 青色             |
+| 文字      | #e2e8f0  | 暖白色            |
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Claude Code 会严格遵守这个配色方案，不会乱用颜色。&lt;/p&gt;
+&lt;h3&gt;五、踩坑记录&lt;/h3&gt;
+&lt;h4&gt;1. 视频还没渲染出来&lt;/h4&gt;
+&lt;p&gt;预览只是本地 HTML 渲染，要生成 MP4 必须手动执行 &lt;code&gt;npx hyperframes render&lt;/code&gt;。&lt;/p&gt;
+&lt;h4&gt;2. 第一版节奏大概率偏慢&lt;/h4&gt;
+&lt;p&gt;AI 生成的视频默认节奏都比较保守，建议：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;直接告诉它&quot;节奏加快，总时长控制在 X 秒&quot;&lt;/li&gt;
+&lt;li&gt;每个场景的动画时长建议 0.3-0.4 秒&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;3. 背景音乐需要自己提供&lt;/h4&gt;
+&lt;p&gt;HyperFrames 支持添加音频，但音乐文件需要你自己准备。支持 mp3、wav、m4a 格式。&lt;/p&gt;
+&lt;h4&gt;4. 字体加载需要联网&lt;/h4&gt;
+&lt;p&gt;渲染时会从 Google Fonts 加载字体，首次渲染会慢一些。之后有缓存就快了。&lt;/p&gt;
+&lt;h4&gt;5. 大文件渲染时间较长&lt;/h4&gt;
+&lt;p&gt;55 秒的视频渲染大约需要 1-2 分钟，取决于你的电脑配置。&lt;/p&gt;
+&lt;h3&gt;总结&lt;/h3&gt;
+&lt;p&gt;整个流程的核心思路就是：&lt;strong&gt;用自然语言描述你想要的视频 → AI 自动生成 HTML → 渲染成 MP4&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;你不需要学 PR、不需要学剪映、不需要手动对齐时间轴。写一篇文章，跑一条命令，等几分钟，视频就出来了。&lt;/p&gt;
+&lt;p&gt;效果可能不一定完美，但你只需要先出第一版，之后让 AI 根据你的建议优化就行。整个过程耗时至少半小时，但&lt;strong&gt;全程不用你动手&lt;/strong&gt;——你可以去忙别的，等它完成后再提修改意见。&lt;/p&gt;
+&lt;p&gt;以上，既然看到这里了，如果你觉得内容不错，随手&lt;strong&gt;点个赞、在看、转发&lt;/strong&gt;三连吧！如果想第一时间收到推送，可以给我点个星标⭐～&lt;/p&gt;
+&lt;p&gt;谢谢你看我的文章，我们，下次再见。&lt;/p&gt;
+&lt;h3&gt;参考资料&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;项目地址：https://github.com/heygen-com/hyperframes&lt;/li&gt;
+&lt;li&gt;作者推文：https://x.com/liu8in/status/2044827628700684463&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded></item><item><title>CLAUDE.md 与 MEMORY.md：99%的人分不清这两个文件</title><link>https://dqtx.cc/posts/aihacks/claudemd%E4%B8%8Ememorymd%E5%8C%BA%E5%88%AB/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/claudemd%E4%B8%8Ememorymd%E5%8C%BA%E5%88%AB/</guid><description>一个给 AI 看，一个给 AI 记。搞混了，你的 AI 助手就废了。</description><pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;很多人用 Claude Code 写了上百个文件，但从来没搞清楚一个最基本的问题：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CLAUDE.md 和 MEMORY.md 到底有什么区别？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;今天用一张表、一个比喻，彻底讲清楚。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260430235845976.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h3&gt;一、一张表看懂&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;项目根目录的 &lt;code&gt;CLAUDE.md&lt;/code&gt;&lt;/th&gt;
+&lt;th&gt;&lt;code&gt;~/.claude/projects/xxx/memory/MEMORY.md&lt;/code&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;放在哪&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;项目根目录（跟着代码走）&lt;/td&gt;
+&lt;td&gt;Claude Code 内部目录（跟着工具走）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;谁来写&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;你手写&lt;/strong&gt;或 &lt;code&gt;/init&lt;/code&gt; 生成&lt;/td&gt;
+&lt;td&gt;Claude Code &lt;strong&gt;自动生成&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;给谁用&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;给 Claude &lt;strong&gt;看&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;给 Claude &lt;strong&gt;记&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;作用&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;告诉 Claude 这个项目是什么、怎么构建、有哪些规范&lt;/td&gt;
+&lt;td&gt;记住 Claude 在做这个项目时学到的东西&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;类比&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;项目的&lt;strong&gt;说明书&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Claude 的&lt;strong&gt;笔记本&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr /&gt;
+&lt;h3&gt;二、打个比方你就懂了&lt;/h3&gt;
+&lt;p&gt;想象你是一家公司的老板，Claude 是你新招的员工。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CLAUDE.md = 《员工手册》&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;你交给新员工的第一天，告诉他：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;公司做什么的（项目是干嘛的）&lt;/li&gt;
+&lt;li&gt;办公室在哪（目录结构怎么分）&lt;/li&gt;
+&lt;li&gt;着装要求（代码规范是什么）&lt;/li&gt;
+&lt;li&gt;出了事找谁（构建命令、测试命令）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这是你&lt;strong&gt;主动写的&lt;/strong&gt;，每个新员工拿到的都一样。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;memory/MEMORY.md = 《员工的笔记本》&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;员工干了一段时间，自己记下来的：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&quot;上次改支付模块踩了个坑，金额字段是字符串不是数字&quot;&lt;/li&gt;
+&lt;li&gt;&quot;老板不喜欢用 npm，这个项目统一用 bun&quot;&lt;/li&gt;
+&lt;li&gt;&quot;数据库迁移要在周三之前完成&quot;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这是 Claude &lt;strong&gt;自己积累的&lt;/strong&gt;，每做一件事就多记一点。下次遇到类似场景，它直接翻笔记，不用你再提醒。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h3&gt;三、它们怎么配合工作？&lt;/h3&gt;
+&lt;p&gt;实际使用中，Claude Code 启动时的加载顺序是这样的：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1. 加载全局 CLAUDE.md（~/.claude/CLAUDE.md）
+2. 加载项目 CLAUDE.md（项目根目录/CLAUDE.md）
+3. 加载项目记忆（~/.claude/projects/xxx/memory/）
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;三层叠加，Claude 既知道&quot;这个项目是什么&quot;（CLAUDE.md），也知道&quot;之前做过什么&quot;（memory），还能保持通用的行为准则（全局 CLAUDE.md）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;打个连续的比方：&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;阶段&lt;/th&gt;
+&lt;th&gt;发生了什么&lt;/th&gt;
+&lt;th&gt;类比&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;第一次对话&lt;/td&gt;
+&lt;td&gt;Claude 读 CLAUDE.md 了解项目&lt;/td&gt;
+&lt;td&gt;新员工读员工手册&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;做了几个任务&lt;/td&gt;
+&lt;td&gt;Claude 在 memory 里积累了经验&lt;/td&gt;
+&lt;td&gt;员工开始记工作笔记&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;下次对话&lt;/td&gt;
+&lt;td&gt;Claude 先读手册，再翻笔记，直接上手&lt;/td&gt;
+&lt;td&gt;老员工回公司，熟门熟路&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr /&gt;
+&lt;h3&gt;四、CLAUDE.md 里该写什么？&lt;/h3&gt;
+&lt;p&gt;根据 Karpathy 的经验（那个 98k Star 的项目），一份好的 CLAUDE.md 应该包含：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;项目概述&lt;/strong&gt; — 这个项目是干什么的&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;目录结构&lt;/strong&gt; — 关键目录各放什么&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;构建和测试命令&lt;/strong&gt; — 怎么跑、怎么测&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;代码规范&lt;/strong&gt; — 命名风格、注释要求等&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;踩坑记录&lt;/strong&gt; — 已知的坑，避免重复犯&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;关键原则：不超过 200 行。&lt;/strong&gt; Claude Code 创始人 Boris Cherny 说过，CLAUDE.md 超过 200 行，Claude 会选择性忽略。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h3&gt;五、memory 目录下还有什么？&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;~/.claude/projects/xxx/memory/&lt;/code&gt; 不只有 MEMORY.md，通常还有这些：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;文件&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;MEMORY.md&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;记忆索引，列出所有记忆文件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;user_preferences.md&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;用户偏好（输出目录、格式习惯等）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;feedback.md&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;用户的纠正和认可&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;project.md&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;项目背景（进度、决策、约束）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;reference.md&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;外部资源指引（文档链接、API 地址等）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;这些文件会在新会话时自动加载，Claude 不用你重复解释。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h3&gt;六、两个额外的工具&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/thedotmack/claude-mem&quot;&gt;claude-mem&lt;/a&gt;：一个让Claude code记忆持久化的skill&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/forrestchang/andrej-karpathy-skills&quot;&gt;karpathy大神的CLAUDE.md &lt;/a&gt;： 65 行四条铁律，直接给你的cc套上紧箍咒。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;六、一句话总结&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;CLAUDE.md 告诉 Claude &quot;你是什么&quot;，MEMORY.md 记住 Claude &quot;做过什么&quot;。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;一个是项目说明书，一个是 AI 笔记本。搞清楚这个区别，你的 Claude Code 用起来才能真正&quot;越用越聪明&quot;。&lt;/p&gt;
+</content:encoded></item><item><title>Karpathy的CLAUDE.md</title><link>https://dqtx.cc/posts/aihacks/%E4%B8%80%E4%BB%BDclaudemd%E6%96%A9%E8%8E%B7100k-star/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E4%B8%80%E4%BB%BDclaudemd%E6%96%A9%E8%8E%B7100k-star/</guid><pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Andrej Karpathy，OpenAI 创始成员、前 Tesla AI 总监，在 GitHub 扔出一份 &lt;code&gt;CLAUDE.md&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;结果一周狂揽 44k star，总星直接飙到 &lt;strong&gt;98k star&lt;/strong&gt;。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这是什么概念？Stack Overflow 都没这么火过。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;项目地址：&lt;a href=&quot;https://github.com/forrestchang/andrej-karpathy-skills&quot;&gt;github.com/forrestchang/andrej-karpathy-skills&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260430170738814.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;一、AI 编程助手为什么不听话？&lt;/h3&gt;
+&lt;p&gt;Karpathy 发现了一个扎心的真相：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;AI 不是不会干活，是&lt;strong&gt;太爱发挥了&lt;/strong&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;你一定遇到过这些场景：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;你让 AI 写个排序，它给你整一套策略模式 + 工厂模式 + 观察者模式&lt;/li&gt;
+&lt;li&gt;你让 AI 改个 bug，它顺手&quot;优化&quot;了三个文件&lt;/li&gt;
+&lt;li&gt;你让 AI 加个验证，它直接搭了一套框架&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这不是助手，是&lt;strong&gt;灾难&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;Karpathy 原话说得更狠：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&quot;模型替你做了错误假设，然后一条道跑到黑。它们不管理自己的困惑，不追问，不暴露矛盾，不呈现权衡，该推回来的时候也不推。&quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&quot;它们特别喜欢过度复杂化代码和 API，膨胀抽象层，不清理死代码……100 行能搞定的事，非得搞出 1000 行的臃肿建筑。&quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&quot;它们还会顺手改掉那些自己都没完全理解的注释和代码，即使那些跟当前任务完全无关。&quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+&lt;h3&gt;二、解决方案：65 行的四条铁律&lt;/h3&gt;
+&lt;p&gt;Karpathy 的方案极其简单 —— 一个 &lt;code&gt;CLAUDE.md&lt;/code&gt; 文件，&lt;strong&gt;总共才 65 行&lt;/strong&gt;，四条原则，直接给 AI 套上紧箍咒。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;原则&lt;/th&gt;
+&lt;th&gt;一句话&lt;/th&gt;
+&lt;th&gt;解决什么问题&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Think Before Coding&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;先想后写&lt;/td&gt;
+&lt;td&gt;错误假设、隐藏困惑、遗漏权衡&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Simplicity First&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;极简主义&lt;/td&gt;
+&lt;td&gt;过度设计、膨胀抽象&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Surgical Changes&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;精准手术&lt;/td&gt;
+&lt;td&gt;误改无关代码、顺手重构&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Goal-Driven Execution&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;目标驱动&lt;/td&gt;
+&lt;td&gt;缺乏验证、含糊指令&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;下面逐条拆解：&lt;/p&gt;
+&lt;h4&gt;原则一：Think Before Coding（先想后写）&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;核心：不确定就问，别替我做决定。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;LLM 最大的毛病就是 —— 遇到歧义，它不问你，自己挑一个方向就闷头干。等你发现错了，已经浪费了一轮对话。&lt;/p&gt;
+&lt;p&gt;这条原则要求 AI：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;假设必须显式说出来&lt;/strong&gt; — 你觉得是 A 还是 B？说出来，让我决定&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;有歧义就列举选项&lt;/strong&gt; — 别自己挑，把几个可能性摆出来&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;有更好的方案就推回来&lt;/strong&gt; — 我说往东，你发现往西更好，要说&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;卡住了就停&lt;/strong&gt; — 不懂就说不懂，别硬编&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;原则二：Simplicity First（极简主义）&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;核心：能 50 行解决的，禁止写 200 行。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;AI 特别爱搞&quot;防御性编程&quot;和&quot;过度抽象&quot; —— 你只要一个功能，它给你搭一个可扩展框架。&lt;/p&gt;
+&lt;p&gt;这条原则的铁律：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;没要求的功能，一个都不加&lt;/li&gt;
+&lt;li&gt;只用一次的代码，不许抽象&lt;/li&gt;
+&lt;li&gt;不要的&quot;灵活性&quot;和&quot;可配置性&quot;，没人要就别搞&lt;/li&gt;
+&lt;li&gt;不可能发生的场景，不写错误处理&lt;/li&gt;
+&lt;li&gt;如果 200 行能缩到 50 行，重写&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;自测标准：一个资深工程师看到这段代码会说&quot;搞复杂了&quot;吗？如果是，简化。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;原则三：Surgical Changes（精准手术）&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;核心：只改该改的，旁边的一根毛都不动。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这是 AI 最让人生气的行为 —— 你说改 A，它把 B、C 也&quot;顺手优化&quot;了。结果 diff 一堆无关改动，review 的人崩溃。&lt;/p&gt;
+&lt;p&gt;铁律：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不许&quot;改进&quot;相邻代码、注释、格式&lt;/li&gt;
+&lt;li&gt;不许重构没坏的东西&lt;/li&gt;
+&lt;li&gt;代码风格跟着项目走，哪怕你觉得可以更好&lt;/li&gt;
+&lt;li&gt;发现不相关的死代码？&lt;strong&gt;提一嘴就行，别删&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;你的改动导致某些东西没人用了？&lt;strong&gt;你自己清理干净&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;自测标准：diff 里的每一行，能不能直接追溯到用户的需求？追溯不到就不该出现。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;原则四：Goal-Driven Execution（目标驱动）&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;核心：别告诉 AI 怎么做，告诉它&quot;什么算做完&quot;。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这是 Karpathy 指南里最有洞察力的一条。&lt;/p&gt;
+&lt;p&gt;Karpathy 原话：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&quot;LLMs are exceptionally good at looping until they meet specific goals... Don&apos;t tell it what to do, give it success criteria and watch it go.&quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;翻译：LLM 非常擅长循环迭代直到达标……别告诉它步骤，给它验收标准，让它自己跑。&lt;/p&gt;
+&lt;p&gt;转换思路：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;别这么说&lt;/th&gt;
+&lt;th&gt;要这么说&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&quot;加个验证&quot;&lt;/td&gt;
+&lt;td&gt;&quot;写测试覆盖非法输入，然后让测试通过&quot;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&quot;修这个 bug&quot;&lt;/td&gt;
+&lt;td&gt;&quot;写一个能复现的测试，然后让它通过&quot;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&quot;重构 X&quot;&lt;/td&gt;
+&lt;td&gt;&quot;确保重构前后测试都能通过&quot;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;多步任务时，要求 AI 给出计划 + 检查点：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1. [步骤] → 验证：[检查什么]
+2. [步骤] → 验证：[检查什么]
+3. [步骤] → 验证：[检查什么]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;成功标准越强，AI 越能自主循环。标准越弱（比如&quot;让它能用&quot;），就越需要你不断追问。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+&lt;h3&gt;三、怎么用？&lt;/h3&gt;
+&lt;p&gt;这个文件有&lt;strong&gt;两种安装方式&lt;/strong&gt;：&lt;/p&gt;
+&lt;h4&gt;方式一：全局安装（推荐）&lt;/h4&gt;
+&lt;p&gt;放到 &lt;code&gt;~/.claude/CLAUDE.md&lt;/code&gt;，所有项目自动生效。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# 下载到全局目录
+curl -o ~/.claude/CLAUDE.md \
+  https://raw.githubusercontent.com/forrestchang/andrej-karpathy-skills/main/CLAUDE.md
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果你项目里已经有 CLAUDE.md（比如项目技术栈、目录结构说明），&lt;strong&gt;两个文件会叠加生效&lt;/strong&gt;，不会覆盖：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;文件位置&lt;/th&gt;
+&lt;th&gt;作用范围&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;~/.claude/CLAUDE.md&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;全局，所有项目&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;项目/CLAUDE.md&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;仅当前项目&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;各管各的，互不干扰。&lt;/p&gt;
+&lt;h4&gt;方式二：作为 Claude Code Plugin 安装&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;/plugin marketplace add forrestchang/andrej-karpathy-skills
+/plugin install andrej-karpathy-skills@karpathy-skills
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;h3&gt;四、效果验证&lt;/h3&gt;
+&lt;p&gt;怎么知道它起作用了？看这四点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;diff 变干净了&lt;/strong&gt; — 只有你要求的改动，没有&quot;顺手优化&quot;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;不再返工&lt;/strong&gt; — 代码第一次就简单，不用推翻重来&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;先问后做&lt;/strong&gt; — 有歧义时 AI 会先确认，而不是闷头干完才发现错&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;PR 更清爽&lt;/strong&gt; — 没有 drive-by refactoring，没有无关改动&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h3&gt;五、为什么这个文件能火？&lt;/h3&gt;
+&lt;p&gt;说到底，它厉害在三个地方：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. 问题找得准&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;不是泛泛地教 AI&quot;写好代码&quot;，而是精确命中 AI 编程的三大痛点：乱假设、过度设计、误改代码。每一条都有具体的症状对应。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. 方案极其简单&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;65 行，四条原则，一个文件。没有框架，没有依赖，没有配置。任何人 30 秒就能用上。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. 最有洞察力的那条 —— 目标驱动&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;第四条原则抓住了一个本质：别教 AI 怎么做，给它验收标准让它自己跑。这个思路一旦建立，不只编程，任何 AI 协作场景都能用。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Karpathy 的核心洞察就一句话：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;别告诉 AI 怎么做，告诉它什么算做完，然后放手让它跑。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+</content:encoded></item><item><title>ShareX进阶指南</title><link>https://dqtx.cc/posts/software/sharex%E8%BF%9B%E9%98%B6%E6%8C%87%E5%8D%97/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/sharex%E8%BF%9B%E9%98%B6%E6%8C%87%E5%8D%97/</guid><pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;关闭通知&lt;/h3&gt;
+&lt;p&gt;位置：动作设置→通知
+建议把“任务完成后显示短暂通知”取消打勾
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260430225229066.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;设置快捷键&lt;/h3&gt;
+&lt;p&gt;⚠️OCR如果错误
+需要在&lt;strong&gt;动作设置-截图-文字识别（OCR）&lt;/strong&gt; 配置默认语言为英文
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260430232240508.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;图像特效配置&lt;/h3&gt;
+&lt;p&gt;动作设置-图像-特效-图像特效配置
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260430231602576.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;设置截图后的特效&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260430231700030.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;录制视频选项&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260430230241879.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;更换主题&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260430231214424.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;ShareX录屏时如何设置自动检测并截图？&lt;/h3&gt;
+&lt;p&gt;在使用ShareX进行录屏时，如何设置自动检测并截图是一个常见的技术问题。用户通常希望在特定事件发生时，如屏幕变化或指定区域更新，能够自动触发截图功能。然而，许多用户不清楚如何配置这一功能。首先，需进入ShareX的“任务序列编辑器”，设定触发条件，例如“检测屏幕变化”或“监控特定窗口”。接着，在截图设置中选择“自动保存”并定义存储路径。此外，为提高效率，可结合热键设置实现更灵活的操作。如果自动检测未能正常工作，可能是由于系统权限限制或软件版本过旧导致，建议检查最新更新并调整相关权限设置。此问题解决后，用户将能更高效地利用ShareX完成自动化截图任务。&lt;/p&gt;
+&lt;h3&gt;参考资料&lt;/h3&gt;
+&lt;p&gt;官网网站
+https://getsharex.com
+2025年我写的文章
+https://mp.weixin.qq.com/s/npeJO3MccOCS0QSTIWYefw
+在 Windows 下优雅截图，利用 ShareX 截出带背景的图片
+https://utgd.net/article/20685
+一个软件，满足你所有的截图需求：ShareX
+https://sspai.com/post/43937&lt;/p&gt;
+</content:encoded></item><item><title>一个信息追踪 Python 脚本</title><link>https://dqtx.cc/posts/technical/%E4%B8%80%E4%B8%AA%E4%BF%A1%E6%81%AF%E8%BF%BD%E8%B8%AA-python-%E8%84%9A%E6%9C%AC/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E4%B8%80%E4%B8%AA%E4%BF%A1%E6%81%AF%E8%BF%BD%E8%B8%AA-python-%E8%84%9A%E6%9C%AC/</guid><pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这个开源项目，你丢一个名字/手机号/IP给它，得到关联的社交媒体账号、归属地、地理位置信息。&lt;/p&gt;
+&lt;p&gt;在 GitHub 已获取 11.8k star。
+项目地址
+https://github.com/HunxByts/GhostTrack&lt;/p&gt;
+&lt;p&gt;仅仅一个 Python 脚本，用来做 IP / 手机号 / 用户名的基础 OSINT 信息收集。&lt;/p&gt;
+&lt;p&gt;三个模块，覆盖常见情报场景：&lt;/p&gt;
+&lt;p&gt;IP Tracker：输入目标 IP，可获取基础地理位置信息，也可以结合 Seeker 等工具做进一步关联分析（例如辅助反查真实 IP）
+Phone Tracker：手机号归属地、运营商信息查询，属于 OSINT 中很常见的基础能力
+Username Tracker：输入用户名，跨多个平台搜索公开账号信息，把分散的社交媒体痕迹拼接起来&lt;/p&gt;
+&lt;p&gt;适合人群：&lt;/p&gt;
+&lt;p&gt;做渗透测试前期信息收集的安全工程师
+学习 OSINT 方法论的安全方向学生
+CTF 比赛中需要快速做信息侦察的选手
+对信息安全和数据关联分析感兴趣的开发者&lt;/p&gt;
+&lt;p&gt;⚠️ 需要强调：该工具仅用于合法授权的安全研究与学习用途，禁止用于任何未经授权的个人追踪或隐私侵犯行为。&lt;/p&gt;
 </content:encoded></item><item><title>Xiaomi MiMo百万亿 Token 激励计划</title><link>https://dqtx.cc/posts/aihacks/xiaomi-mimo%E7%99%BE%E4%B8%87%E4%BA%BF-token-%E6%BF%80%E5%8A%B1%E8%AE%A1%E5%88%92/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/xiaomi-mimo%E7%99%BE%E4%B8%87%E4%BA%BF-token-%E6%BF%80%E5%8A%B1%E8%AE%A1%E5%88%92/</guid><pubDate>Wed, 29 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Xiaomi MiMo 将面向全球 AI 用户进行免费 Token 发放，我们将在 30 天内发放总计 100 万亿（100T） Token 权益，赠完即止。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260429164836641.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;活动说明&lt;/h3&gt;
@@ -433,7 +1131,7 @@ API Key：填你的专属API&lt;/p&gt;
 &lt;p&gt;以上是本次激励计划的免费领取步骤，以及接入两个常用AI Agent的流程，但需要注意的事项较多。&lt;/p&gt;
 &lt;p&gt;你的&lt;strong&gt;订阅管理&lt;/strong&gt;中已为你准备好专属的 API key 和 Base url，切勿自行创建，因为免费额度仅适用于系统提供的专属配置，自行创建将产生额外费用。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Source来源&lt;/strong&gt;：&lt;a href=&quot;www.dqtx.cc&quot;&gt;www.dqtx.cc&lt;/a&gt;&lt;/p&gt;
-</content:encoded></item><item><title>Win重装系统软件</title><link>https://dqtx.cc/posts/software/win%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/win%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F/</guid><pubDate>Wed, 29 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这篇文章将整理全网所有与重装 Windows 系统相关的工具和可能用到的教程。希望能够对你有所帮助。我会在这篇文章中持续更新相关使用的软件、工具及教程等。&lt;/p&gt;
+</content:encoded></item><item><title>重装Windows系统相关工具</title><link>https://dqtx.cc/posts/software/win%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/win%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F/</guid><pubDate>Wed, 29 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这篇文章将整理全网所有与重装 Windows 系统相关的工具和可能用到的教程。希望能够对你有所帮助。我会在这篇文章中持续更新相关使用的软件、工具及教程等。&lt;/p&gt;
 &lt;h2&gt;镜像下载&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.microsoft.com/zh-cn/software-download/&quot;&gt;微软官网&lt;/a&gt;&lt;/li&gt;
@@ -1017,7 +1715,7 @@ SORT date DESC
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-</content:encoded></item><item><title>Flipbook 可视化搜索</title><link>https://dqtx.cc/posts/xenia/flipbook%E5%8F%AF%E8%A7%86%E5%8C%96%E6%90%9C%E7%B4%A2/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/flipbook%E5%8F%AF%E8%A7%86%E5%8C%96%E6%90%9C%E7%B4%A2/</guid><pubDate>Sun, 26 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近刷到一个叫缘缘博主说：&lt;/p&gt;
+</content:encoded></item><item><title>Flipbook 可视化搜索</title><link>https://dqtx.cc/posts/aihacks/flipbook%E5%8F%AF%E8%A7%86%E5%8C%96%E6%90%9C%E7%B4%A2/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/flipbook%E5%8F%AF%E8%A7%86%E5%8C%96%E6%90%9C%E7%B4%A2/</guid><pubDate>Sun, 26 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近刷到一个叫缘缘博主说：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;我这两天被这个爆火的Flipbook刷屏并被震撼到，现在的UI界面也许会在不久的将来彻底改变。&lt;/p&gt;
 &lt;p&gt;Flipbook是三星工程师(前OpenAl) Zain Shah和另外两个伙伴做的一个无限视觉浏览器，根据你的搜索词，实时用像素生成一张类似百科全书里的动态插画，连文字也是像素组成，没有代码，没有HTML，画面上的任何区域你都可以点击，生成这块区域的进一步画面。&lt;/p&gt;
@@ -1696,6 +2394,74 @@ cd C:\Users\Administrator\AISkills
 &lt;/ol&gt;
 &lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;参考资料&lt;/strong&gt;：&lt;a href=&quot;https://mp.weixin.qq.com/s/XWS97jr_PwcbbmKkZVqbyw&quot;&gt;点此查看&lt;/a&gt;&lt;/p&gt;
+</content:encoded></item><item><title>我push博客时泄露了API</title><link>https://dqtx.cc/posts/technical/push%E6%B3%84%E9%9C%B2api/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/push%E6%B3%84%E9%9C%B2api/</guid><pubDate>Tue, 21 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天在推送 &lt;code&gt;fuwari&lt;/code&gt; 博客仓库到 GitHub 时，遭遇了一个意料之外但又在情理之中的拦截。GitHub 直接拒绝了我的推送，提示发现了「Secret（密钥）」泄露。经过排查和修复，两个仓库的 API Token 泄露风险已解除。写下这篇文章，既是复盘，也是给有类似经历的朋友一个参考。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260421233006929.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;事件回顾&lt;/h2&gt;
+&lt;p&gt;像往常一样，我在 Obsidian 中写完一篇博客后，执行 &lt;code&gt;git push&lt;/code&gt; 准备推送到 GitHub。然而这次推送失败了，错误信息如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;remote: error: GH013: Repository rule violations found for refs/heads/main.
+remote:
+remote: - Push cannot contain secrets
+remote:
+remote:  — Notion API Token ——————————————————————————————————
+remote:    locations:
+remote:      - commit: 25f1c5df1c410ba48f6890a8961371de5cf6cef8
+remote:        path: src/content/.obsidian/plugins/share-to-notionnext/data.json:29
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;GitHub 的 &lt;strong&gt;Push Protection（推送保护）&lt;/strong&gt; 功能检测到了我的 Notion API Token 泄露。问题出在 Obsidian 插件 &lt;code&gt;Share to NotionNext&lt;/code&gt; 的配置文件 &lt;code&gt;data.json&lt;/code&gt; 中，我配置了 Notion 的 API 密钥，而这个文件被 Git 跟踪并推送到了远程仓库。&lt;/p&gt;
+&lt;p&gt;有趣的是，同步排查另一个仓库 &lt;code&gt;zhishiku&lt;/code&gt; 时，我发现它虽然也安装了同样的插件、同样包含 API Token，却没有被拦截。这可能是因为 Token 格式（&lt;code&gt;ntn_&lt;/code&gt; 开头）的识别率不同，或者该仓库的 Push Protection 设置没有 fuwari 那么严格。但不管怎样，这确实是一个安全隐患。&lt;/p&gt;
+&lt;h2&gt;问题根因&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;为什么 API Token 会泄露到 GitHub？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;核心原因是：&lt;strong&gt;Obsidian 的 &lt;code&gt;.obsidian&lt;/code&gt; 目录被 Git 跟踪了。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;.obsidian&lt;/code&gt; 是 Obsidian 的配置目录，里面包含了插件配置、主题设置、工作区状态等信息。当我们安装像 &lt;code&gt;Share to NotionNext&lt;/code&gt; 这类需要 API 密钥的插件时，插件会把配置（包括 Token）保存在 &lt;code&gt;data.json&lt;/code&gt; 文件中。如果这个目录被 Git 跟踪，每次推送都会把这些敏感信息一起送到远程仓库。&lt;/p&gt;
+&lt;p&gt;GitHub 提供了 Secret Scanning（密钥扫描）功能，会自动扫描推送的内容，识别常见的密钥格式（如 AWS Key、Notion Token、OpenAI API Key 等），发现后会拦截推送并通知开发者。这就是为什么 fuwari 仓库被拦截的原因。&lt;/p&gt;
+&lt;h2&gt;解决方案&lt;/h2&gt;
+&lt;h3&gt;方案一：修改 .gitignore（推荐）&lt;/h3&gt;
+&lt;p&gt;最简单有效的方案是把 &lt;code&gt;.obsidian/&lt;/code&gt; 目录加入 &lt;code&gt;.gitignore&lt;/code&gt;，让 Git 忽略这个目录。具体步骤如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;在项目根目录的 &lt;code&gt;.gitignore&lt;/code&gt; 文件中添加：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.obsidian/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;从 Git 跟踪中移除已存在的 &lt;code&gt;.obsidian&lt;/code&gt; 目录：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git rm --cached -r .obsidian/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;提交并推送：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git add .gitignore
+git commit -m &quot;chore: ignore .obsidian directory&quot;
+git push
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这样操作后，&lt;code&gt;.obsidian&lt;/code&gt; 目录会保留在本地，但不会被 Git 跟踪，API Token 也就不会再泄露了。&lt;/p&gt;
+&lt;h3&gt;方案二：清理 Git 历史&lt;/h3&gt;
+&lt;p&gt;如果已经推送了包含 Token 的提交，需要从 Git 历史中彻底删除它。可以使用 &lt;code&gt;git filter-repo&lt;/code&gt; 工具：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# 安装工具
+pip install git-filter-repo
+
+# 从历史中移除指定文件
+git filter-repo --path .obsidian/plugins/share-to-notionnext/data.json --invert-paths --force
+
+# 重新添加 remote 并推送
+git remote add origin your-repo-url
+git push --force
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;注意：这种方法会重写 Git 历史，如果与其他开发者共享仓库，需要协调好。&lt;/p&gt;
+&lt;h3&gt;方案三：轮换 API Token&lt;/h3&gt;
+&lt;p&gt;无论采用哪种方案，都建议&lt;strong&gt;重新生成 API Token&lt;/strong&gt;。即使已经修复了泄露问题，旧的 Token 可能已经在某个时刻被恶意获取。前往相关服务的设置页面（如 Notion 集成设置）生成新的密钥，并更新本地配置。&lt;/p&gt;
+&lt;h2&gt;经验总结&lt;/h2&gt;
+&lt;p&gt;这次事件虽然是个「事故」，但也带来了几点有价值的思考：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第一，敏感配置一定要排除在 Git 跟踪之外。&lt;/strong&gt; 不只是 &lt;code&gt;.obsidian&lt;/code&gt;，任何包含 API Key、Token、密码的文件都应该加入 &lt;code&gt;.gitignore&lt;/code&gt;。常见的包括 &lt;code&gt;.env&lt;/code&gt;、&lt;code&gt;.env.local&lt;/code&gt;、&lt;code&gt;config/secrets.json&lt;/code&gt; 等。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第二，GitHub 的 Push Protection 是最后一道防线，而非第一道。&lt;/strong&gt; 这次能被拦截是幸运的，说明 GitHub 的密钥扫描确实在起作用。但并非所有格式的密钥都能被识别，这次 &lt;code&gt;zhishiku&lt;/code&gt; 仓库的 Token 就漏过了扫描。所以不能依赖 GitHub 的保护，自己做好防范才是根本。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第三，本地配置不影响使用。&lt;/strong&gt; 很多人担心忽略 &lt;code&gt;.obsidian&lt;/code&gt; 后会影响 Obsidian 的功能。实际上 &lt;code&gt;.gitignore&lt;/code&gt; 只是阻止 Git 跟踪，不影响文件的本地存在和使用。插件配置会正常读取本地文件，只是不会同步到远程仓库。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第四，定期排查仓库安全。&lt;/strong&gt; 建议定期检查自己的仓库是否有敏感信息泄露，可以用 GitHub 的「Secret scanning alerts」功能查看已泄露的密钥（如果有的话）。&lt;/p&gt;
+&lt;h2&gt;附：两个仓库的修复记录&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260422222241120.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;修复完成后，两个仓库都安全了，以后再也不用担心 API Token 泄露的问题。&lt;/p&gt;
+&lt;p&gt;文章来源：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;  远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/p&gt;
 </content:encoded></item><item><title>Obsidian 同步 Notion 神插件</title><link>https://dqtx.cc/posts/workflow/ob%E5%90%8C%E6%AD%A5notion%E6%8F%92%E4%BB%B6/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/ob%E5%90%8C%E6%AD%A5notion%E6%8F%92%E4%BB%B6/</guid><pubDate>Tue, 21 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;我最近发现了一个超好用的 Obsidian 神器，叫 Share to NotionNext！&lt;/p&gt;
 &lt;p&gt;可以直接把Obsidian里的Markdown同步到Notion数据库，还能自动生成NotionNext博客，告别复制粘贴、排版错乱，一篇文章秒发博客。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260421200259532.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
@@ -1799,74 +2565,6 @@ https://v.douyin.com/4K4Njgxq0Oc/&lt;/p&gt;
 https://mp.weixin.qq.com/s/kPjIpHmzciWY8_3ettEVsg&lt;/p&gt;
 &lt;p&gt;→NotionNext帮助手册：
 https://docs.tangly1024.com/about&lt;/p&gt;
-</content:encoded></item><item><title>我push博客时泄露了API</title><link>https://dqtx.cc/posts/technical/push%E6%B3%84%E9%9C%B2api/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/push%E6%B3%84%E9%9C%B2api/</guid><pubDate>Tue, 21 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天在推送 &lt;code&gt;fuwari&lt;/code&gt; 博客仓库到 GitHub 时，遭遇了一个意料之外但又在情理之中的拦截。GitHub 直接拒绝了我的推送，提示发现了「Secret（密钥）」泄露。经过排查和修复，两个仓库的 API Token 泄露风险已解除。写下这篇文章，既是复盘，也是给有类似经历的朋友一个参考。
-&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260421233006929.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;事件回顾&lt;/h2&gt;
-&lt;p&gt;像往常一样，我在 Obsidian 中写完一篇博客后，执行 &lt;code&gt;git push&lt;/code&gt; 准备推送到 GitHub。然而这次推送失败了，错误信息如下：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;remote: error: GH013: Repository rule violations found for refs/heads/main.
-remote:
-remote: - Push cannot contain secrets
-remote:
-remote:  — Notion API Token ——————————————————————————————————
-remote:    locations:
-remote:      - commit: 25f1c5df1c410ba48f6890a8961371de5cf6cef8
-remote:        path: src/content/.obsidian/plugins/share-to-notionnext/data.json:29
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;GitHub 的 &lt;strong&gt;Push Protection（推送保护）&lt;/strong&gt; 功能检测到了我的 Notion API Token 泄露。问题出在 Obsidian 插件 &lt;code&gt;Share to NotionNext&lt;/code&gt; 的配置文件 &lt;code&gt;data.json&lt;/code&gt; 中，我配置了 Notion 的 API 密钥，而这个文件被 Git 跟踪并推送到了远程仓库。&lt;/p&gt;
-&lt;p&gt;有趣的是，同步排查另一个仓库 &lt;code&gt;zhishiku&lt;/code&gt; 时，我发现它虽然也安装了同样的插件、同样包含 API Token，却没有被拦截。这可能是因为 Token 格式（&lt;code&gt;ntn_&lt;/code&gt; 开头）的识别率不同，或者该仓库的 Push Protection 设置没有 fuwari 那么严格。但不管怎样，这确实是一个安全隐患。&lt;/p&gt;
-&lt;h2&gt;问题根因&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;为什么 API Token 会泄露到 GitHub？&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;核心原因是：&lt;strong&gt;Obsidian 的 &lt;code&gt;.obsidian&lt;/code&gt; 目录被 Git 跟踪了。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;.obsidian&lt;/code&gt; 是 Obsidian 的配置目录，里面包含了插件配置、主题设置、工作区状态等信息。当我们安装像 &lt;code&gt;Share to NotionNext&lt;/code&gt; 这类需要 API 密钥的插件时，插件会把配置（包括 Token）保存在 &lt;code&gt;data.json&lt;/code&gt; 文件中。如果这个目录被 Git 跟踪，每次推送都会把这些敏感信息一起送到远程仓库。&lt;/p&gt;
-&lt;p&gt;GitHub 提供了 Secret Scanning（密钥扫描）功能，会自动扫描推送的内容，识别常见的密钥格式（如 AWS Key、Notion Token、OpenAI API Key 等），发现后会拦截推送并通知开发者。这就是为什么 fuwari 仓库被拦截的原因。&lt;/p&gt;
-&lt;h2&gt;解决方案&lt;/h2&gt;
-&lt;h3&gt;方案一：修改 .gitignore（推荐）&lt;/h3&gt;
-&lt;p&gt;最简单有效的方案是把 &lt;code&gt;.obsidian/&lt;/code&gt; 目录加入 &lt;code&gt;.gitignore&lt;/code&gt;，让 Git 忽略这个目录。具体步骤如下：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;在项目根目录的 &lt;code&gt;.gitignore&lt;/code&gt; 文件中添加：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;.obsidian/
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;从 Git 跟踪中移除已存在的 &lt;code&gt;.obsidian&lt;/code&gt; 目录：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;git rm --cached -r .obsidian/
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;提交并推送：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;git add .gitignore
-git commit -m &quot;chore: ignore .obsidian directory&quot;
-git push
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;这样操作后，&lt;code&gt;.obsidian&lt;/code&gt; 目录会保留在本地，但不会被 Git 跟踪，API Token 也就不会再泄露了。&lt;/p&gt;
-&lt;h3&gt;方案二：清理 Git 历史&lt;/h3&gt;
-&lt;p&gt;如果已经推送了包含 Token 的提交，需要从 Git 历史中彻底删除它。可以使用 &lt;code&gt;git filter-repo&lt;/code&gt; 工具：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# 安装工具
-pip install git-filter-repo
-
-# 从历史中移除指定文件
-git filter-repo --path .obsidian/plugins/share-to-notionnext/data.json --invert-paths --force
-
-# 重新添加 remote 并推送
-git remote add origin your-repo-url
-git push --force
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;注意：这种方法会重写 Git 历史，如果与其他开发者共享仓库，需要协调好。&lt;/p&gt;
-&lt;h3&gt;方案三：轮换 API Token&lt;/h3&gt;
-&lt;p&gt;无论采用哪种方案，都建议&lt;strong&gt;重新生成 API Token&lt;/strong&gt;。即使已经修复了泄露问题，旧的 Token 可能已经在某个时刻被恶意获取。前往相关服务的设置页面（如 Notion 集成设置）生成新的密钥，并更新本地配置。&lt;/p&gt;
-&lt;h2&gt;经验总结&lt;/h2&gt;
-&lt;p&gt;这次事件虽然是个「事故」，但也带来了几点有价值的思考：&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;第一，敏感配置一定要排除在 Git 跟踪之外。&lt;/strong&gt; 不只是 &lt;code&gt;.obsidian&lt;/code&gt;，任何包含 API Key、Token、密码的文件都应该加入 &lt;code&gt;.gitignore&lt;/code&gt;。常见的包括 &lt;code&gt;.env&lt;/code&gt;、&lt;code&gt;.env.local&lt;/code&gt;、&lt;code&gt;config/secrets.json&lt;/code&gt; 等。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;第二，GitHub 的 Push Protection 是最后一道防线，而非第一道。&lt;/strong&gt; 这次能被拦截是幸运的，说明 GitHub 的密钥扫描确实在起作用。但并非所有格式的密钥都能被识别，这次 &lt;code&gt;zhishiku&lt;/code&gt; 仓库的 Token 就漏过了扫描。所以不能依赖 GitHub 的保护，自己做好防范才是根本。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;第三，本地配置不影响使用。&lt;/strong&gt; 很多人担心忽略 &lt;code&gt;.obsidian&lt;/code&gt; 后会影响 Obsidian 的功能。实际上 &lt;code&gt;.gitignore&lt;/code&gt; 只是阻止 Git 跟踪，不影响文件的本地存在和使用。插件配置会正常读取本地文件，只是不会同步到远程仓库。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;第四，定期排查仓库安全。&lt;/strong&gt; 建议定期检查自己的仓库是否有敏感信息泄露，可以用 GitHub 的「Secret scanning alerts」功能查看已泄露的密钥（如果有的话）。&lt;/p&gt;
-&lt;h2&gt;附：两个仓库的修复记录&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260422222241120.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;修复完成后，两个仓库都安全了，以后再也不用担心 API Token 泄露的问题。&lt;/p&gt;
-&lt;p&gt;文章来源：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;  远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/p&gt;
 </content:encoded></item><item><title>Dos命令mklink详解</title><link>https://dqtx.cc/posts/workflow/mklink%E5%91%BD%E4%BB%A4/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/mklink%E5%91%BD%E4%BB%A4/</guid><pubDate>Mon, 20 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你是否遇到过这些问题：想让软件从A目录读取文件，但文件实际存放在B目录？&lt;/p&gt;
 &lt;p&gt;想在多个位置同步同一个文件，又不想每次手动复制？或是想给文件夹创建&quot;替身&quot;，让不同程序都能访问？&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Windows 自带的 mklink 命令，就是解决这些问题的神器。&lt;/strong&gt;&lt;/p&gt;
@@ -2237,31 +2935,18 @@ AI 维护的知识库，包括摘要、概念页面、关联链接。AI 编写�
 &lt;/ul&gt;
 &lt;h2&gt;📝 内容/文档&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/obsidian-web-clipper/cnjifjpddelmedmihgijeibhnjfabmlf&quot;&gt;Obsidian Web Clipper&lt;/a&gt;：网页剪藏Obsidian&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/oddgijbbpmjcnomkfmcdjiolcciemddf&quot;&gt;SmartClip&lt;/a&gt;：一键剪藏网页内容&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/yishu-ziyu/chrome-md-editor&quot;&gt;Markdown Editor&lt;/a&gt;：浏览器内编辑本地 Markdown 文件&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/cloud-document-converter/ehkomhhcinhikfddnmklbloahaakploh&quot;&gt;Cloud Document Converter&lt;/a&gt;：将网页内容复制为 Markdown&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/easy-scraper-one-click-we/cljbfnedccphacfneigoegkiieckjndh&quot;&gt;Easy Scraper&lt;/a&gt;：一键网页数据抓取工具&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/instant-data-scraper/ofaokhiedipichpaobibbnahnkdoiiah&quot;&gt;Instant Data Scraper&lt;/a&gt;：一键网页数据抓取工具&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://pan.xunlei.com/s/VOqOWbr5dIw7kwRnmHkwx4v0A1?pwd=xkdj&quot;&gt;豆包无水印下载&lt;/a&gt;：豆包内容无水印下载工具&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/obsidian-web-clipper/cnjifjpddelmedmihgijeibhnjfabmlf&quot;&gt;Obsidian Web Clipper&lt;/a&gt;：网页剪藏Obsidian&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/oddgijbbpmjcnomkfmcdjiolcciemddf&quot;&gt;SmartClip&lt;/a&gt;：一键剪藏网页内容&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/yishu-ziyu/chrome-md-editor&quot;&gt;Markdown Editor&lt;/a&gt;：浏览器内编辑本地 Markdown 文件&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/cloud-document-converter/ehkomhhcinhikfddnmklbloahaakploh&quot;&gt;Cloud Document Converter&lt;/a&gt;：将网页内容复制为 Markdown&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/easy-scraper-one-click-we/cljbfnedccphacfneigoegkiieckjndh&quot;&gt;Easy Scraper&lt;/a&gt;：一键网页数据抓取工具&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/instant-data-scraper/ofaokhiedipichpaobibbnahnkdoiiah&quot;&gt;Instant Data Scraper&lt;/a&gt;：一键网页数据抓取工具&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://pan.xunlei.com/s/VOqOWbr5dIw7kwRnmHkwx4v0A1?pwd=xkdj&quot;&gt;豆包无水印下载&lt;/a&gt;：豆包内容无水印下载工具&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;其他&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/bookmark-save-export-twit/lgjolpecipmadohbokoeojckfbcglbod&quot;&gt;Bookmark Save&lt;/a&gt;：导出 Twitter 书签&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/%E5%8D%B3%E5%88%BB%E5%AF%BC%E5%87%BA/bknkpflbkcapjdbcbdoijnjdbkdabjli&quot;&gt;即刻导出&lt;/a&gt;：导出即刻动态为本地文件&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/bookmark-save-export-twit/lgjolpecipmadohbokoeojckfbcglbod&quot;&gt;Bookmark Save&lt;/a&gt;：导出 Twitter 书签
+&lt;a href=&quot;https://chromewebstore.google.com/detail/%E5%8D%B3%E5%88%BB%E5%AF%BC%E5%87%BA/bknkpflbkcapjdbcbdoijnjdbkdabjli&quot;&gt;即刻导出&lt;/a&gt;：导出即刻动态为本地文件
+&lt;a href=&quot;https://chromewebstore.google.com/detail/cat-gatekeeper/elbikiflgfhjdjmficnigpeegjbhdidh?authuser=2&quot;&gt;Gatekeeper&lt;/a&gt;：一个猫咪强制休息插件！&lt;/p&gt;
 &lt;h2&gt;✅排版提示词&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;优化下排版  输出示例
 
@@ -4011,7 +4696,7 @@ obsidian task:complete task=任务ID
 &lt;li&gt;stats：5 项属性&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
-</content:encoded></item><item><title>Claude Code泄露后，程序员们疯了!</title><link>https://dqtx.cc/posts/aihacks/ccxielu/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/ccxielu/</guid><pubDate>Wed, 01 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;就在昨天（2026年3月31日），一场波及整个AI编程圈的“核弹级”事件突然引爆——Anthropic旗下最神秘的AI编程助手Claude Code的&lt;strong&gt;完整源码&lt;/strong&gt;，疑似通过npm source map意外泄露！&lt;/p&gt;
+</content:encoded></item><item><title>Claude Code泄露后，程序员们疯了!</title><link>https://dqtx.cc/posts/aihacks/claude-code%E6%BA%90%E7%A0%81%E6%B3%84%E9%9C%B2/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/claude-code%E6%BA%90%E7%A0%81%E6%B3%84%E9%9C%B2/</guid><pubDate>Wed, 01 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;就在昨天（2026年3月31日），一场波及整个AI编程圈的“核弹级”事件突然引爆——Anthropic旗下最神秘的AI编程助手Claude Code的&lt;strong&gt;完整源码&lt;/strong&gt;，疑似通过npm source map意外泄露！&lt;/p&gt;
 &lt;p&gt;一夜之间，87个被封印的隐藏功能、108个失踪模块、44个内部feature flag、完整的Agent调度系统……全部暴露在光天化日之下。&lt;/p&gt;
 &lt;p&gt;这场轰动全球技术圈的“代码狂欢”，不仅让无数开发者第一次窥见Claude Code的底层架构，更像打开了潘多拉魔盒&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Anthropic在AI Agent领域的全部野心与路线图，被撕开了最后的遮羞布。&lt;/strong&gt;&lt;/p&gt;
@@ -4246,39 +4931,62 @@ nt inut   #初始化配置，注入技能到其他 AI工具
 &lt;p&gt;用了一段时间，最大的感受是：&lt;strong&gt;终于可以把「创作」这件事，真正变成一件只需要动嘴不动手的事。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;以前写一篇文章，要自己查资料、自己整理、自己写、自己改，来来回回折腾好几遍。现在只需要告诉 Chief 要写什么，它会把后面的事情全部安排好。&lt;/p&gt;
 &lt;p&gt;当然，它不是完美的。生成的内容还是需要自己过一遍，核心观点还是需要自己把控。但至少，&lt;strong&gt;那些繁琐的体力活，有人帮你干了。&lt;/strong&gt;&lt;/p&gt;
-</content:encoded></item><item><title>搜索模板</title><link>https://dqtx.cc/posts/zen/%E5%85%B3%E9%94%AE%E8%AF%8D%E6%A3%80%E7%B4%A2%E7%AC%94%E8%AE%B0/</link><guid isPermaLink="true">https://dqtx.cc/posts/zen/%E5%85%B3%E9%94%AE%E8%AF%8D%E6%A3%80%E7%B4%A2%E7%AC%94%E8%AE%B0/</guid><pubDate>Sun, 29 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;pre&gt;&lt;code&gt;// 1. 设置关键词（Templater 动态输入版本在下面）
-const prompt = &quot;chrome&quot;;
-// const prompt = &quot;&amp;lt;% tp.system.prompt(&apos;请输入搜索关键词：&apos;) %&amp;gt;&quot;;
+</content:encoded></item><item><title>搜索模板</title><link>https://dqtx.cc/posts/zen/%E6%9F%A5%E5%90%AB%E5%85%B3%E9%94%AE%E8%AF%8D%E7%AC%94%E8%AE%B0/</link><guid isPermaLink="true">https://dqtx.cc/posts/zen/%E6%9F%A5%E5%90%AB%E5%85%B3%E9%94%AE%E8%AF%8D%E7%AC%94%E8%AE%B0/</guid><pubDate>Sun, 29 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;pre&gt;&lt;code&gt;// 1. 设置关键词（Templater 动态输入版本在下面）
+const prompt = &quot;Obsidian&quot;;
+// const prompt = await tp.system.prompt(&quot;请输入搜索关键词：&quot;);
 
 const files = app.vault.getMarkdownFiles();
 const results = [];
 
-// 2. 遍历文件，只记录“有匹配的笔记”，不存具体行
+// 2. 遍历文件
 for (const file of files) {
     // 排除当前文件
-    const isCurrentFile = file.basename === &quot;未命名&quot;;
-    // const isCurrentFile = file.basename === &quot;&amp;lt;% tp.file.title %&amp;gt;&quot;;
-    if (isCurrentFile) continue;
+    if (file.basename === &quot;未命名&quot;) continue;
 
-    // 读取文件内容
     const content = await app.vault.cachedRead(file);
 
-    // 只要文件里包含关键词（不区分大小写），就记录文件
+    // 匹配关键词
     if (content.toLowerCase().includes(prompt.toLowerCase())) {
+        // 读取分类
+        const page = dv.page(file.path);
+        const category = page?.category ?? &quot;未分类&quot;;
+
+        // 【核心修复】改用文件系统原生创建时间
+        let ctime = &quot;未知时间&quot;;
+        try {
+            // 获取文件系统的创建时间
+            const stat = await app.vault.adapter.stat(file.path);
+            if (stat?.ctime) {
+                const date = new Date(stat.ctime);
+                ctime = date.toLocaleDateString(&quot;zh-CN&quot;, {
+                    year: &quot;numeric&quot;,
+                    month: &quot;2-digit&quot;,
+                    day: &quot;2-digit&quot;
+                }).replace(/\//g, &quot;/&quot;);
+            }
+        } catch (e) {
+            console.error(&quot;读取文件时间失败:&quot;, e);
+        }
+
+        // 笔记链接
         const fileLink = `[[${file.basename}]]`;
-        // 只存文件名，不存匹配行
-        results.push([fileLink]);
+
+        results.push([category, ctime, fileLink]);
     }
 }
 
-// 3. 渲染标题和极简表格
+// 3. 按分类排序（可选，让同分类笔记排在一起）
+results.sort((a, b) =&amp;gt; a[0].localeCompare(b[0]));
+
+// 4. 输出表格
 dv.header(2, `🔍 搜索：${prompt}`);
 if (results.length &amp;gt; 0) {
-    dv.table([&quot;匹配笔记&quot;], results);
+    dv.table([&quot;分类&quot;, &quot;创建时间&quot;, &quot;笔记&quot;], results);
 } else {
     dv.paragraph(&quot;没有找到匹配的结果。&quot;);
 }
 &lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
 </content:encoded></item><item><title>Claude联网神器：Web Access</title><link>https://dqtx.cc/posts/aihacks/web-access/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/web-access/</guid><pubDate>Thu, 26 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;前言&lt;/h2&gt;
 &lt;p&gt;过去的 AI 联网超 &quot;死板&quot;：要么用搜索引擎瞎找非公开内容，要么打不开需要登录的动态网页，还得单独给 AI 登各个平台，开多个网页就卡，踩过的坑下次还踩，甚至会跟人抢浏览器控制权，用着特别费劲。&lt;/p&gt;
 &lt;p&gt;最近发现了 &lt;a href=&quot;https://github.com/eze-is/web-access&quot;&gt;Web Access&lt;/a&gt; 这个 Skill，能把 AI Agent 的联网、操作浏览器的能力直接拉满。它用的是&lt;strong&gt;你自己已经登录的 Chrome&lt;/strong&gt;，不管是查信息、扒内容，还是交互操作，都能自动搞定，兼容 Claude Code、OpenClaw 等主流 AI Agent，普通人也能轻松上手。&lt;/p&gt;
@@ -4335,25 +5043,20 @@ if (results.length &amp;gt; 0) {
 &lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/rps5YVB6TchT9npAaIWKCw&quot;&gt;Web Access 原作者介绍文章&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/eze-is/web-access&quot;&gt;GitHub 仓库&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>Tags 标签查询</title><link>https://dqtx.cc/posts/zen/tags-%E6%A0%87%E7%AD%BE%E6%9F%A5%E8%AF%A2/</link><guid isPermaLink="true">https://dqtx.cc/posts/zen/tags-%E6%A0%87%E7%AD%BE%E6%9F%A5%E8%AF%A2/</guid><pubDate>Thu, 26 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;AI&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;LIST FROM #AI  
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;Obsidian&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;LIST FROM #Obsidian插件  
-&lt;/code&gt;&lt;/pre&gt;
-</content:encoded></item><item><title>今日新建与更新</title><link>https://dqtx.cc/posts/zen/%E4%BB%8A%E6%97%A5%E6%96%B0%E5%BB%BA%E4%B8%8E%E6%9B%B4%E6%96%B0/</link><guid isPermaLink="true">https://dqtx.cc/posts/zen/%E4%BB%8A%E6%97%A5%E6%96%B0%E5%BB%BA%E4%B8%8E%E6%9B%B4%E6%96%B0/</guid><pubDate>Thu, 26 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;hr /&gt;
-&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
-  file.link AS &quot;今日创建&quot;,
-  dateformat(file.ctime, &quot;yyyy/MM/dd HH:mm&quot;) AS &quot;创建时间&quot;
+</content:encoded></item><item><title>今日新建与更新</title><link>https://dqtx.cc/posts/zen/%E4%BB%8A%E6%97%A5%E6%96%B0%E5%BB%BA%E4%B8%8E%E6%9B%B4%E6%96%B0/</link><guid isPermaLink="true">https://dqtx.cc/posts/zen/%E4%BB%8A%E6%97%A5%E6%96%B0%E5%BB%BA%E4%B8%8E%E6%9B%B4%E6%96%B0/</guid><pubDate>Thu, 26 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
+  category AS &quot;分类&quot;,
+  dateformat(file.ctime, &quot;yyyy/MM/dd&quot;) AS &quot;创建日期&quot;,
+  file.link AS &quot;今日创建&quot;
 WHERE file.cday = date(today)
-SORT file.ctime desc
+SORT category ASC, file.ctime DESC
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;今日更新&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
-  file.link AS &quot;今日更新&quot;,
-  dateformat(file.mtime, &quot;yyyy/MM/dd HH:mm&quot;) AS &quot;更新时间&quot;
-WHERE file.mday = date(today)
-SORT file.mtime desc
+  category AS &quot;分类&quot;,
+  dateformat(file.mtime, &quot;yyyy/MM/dd&quot;) AS &quot;更新日期&quot;,
+  file.link AS &quot;今日更新&quot;
+WHERE file.mday = date(today) 
+  AND file.cday != date(today)
+SORT category ASC, file.mtime DESC
 &lt;/code&gt;&lt;/pre&gt;
 </content:encoded></item><item><title>迅雷v25.0.3.1096绿色精简版</title><link>https://dqtx.cc/posts/software/xunlei/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/xunlei/</guid><pubDate>Wed, 25 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;迅雷&lt;/strong&gt;Thunder 2025 v25.0.3.1096 去广告&lt;strong&gt;绿色&lt;/strong&gt;精简版，注意是Windows版本，可以直接搜索，分享资料可以复制仅单个URL，但是没有深色模式切换按钮，不过界面确实干净清爽！&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260325135455961.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -4415,6 +5118,73 @@ opencli zhihu hot -f json       # 查看知乎热榜并以JSON格式输出
 &lt;/blockquote&gt;
 &lt;p&gt;OpenCLI 的安装非常直观，关键在于浏览器插件的桥接。一旦打通，你的终端就不再只是一个冷冰冰的控制台，而是通往整个 Web 世界的万能钥匙。&lt;/p&gt;
 &lt;p&gt;文章来源：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;  远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/p&gt;
+</content:encoded></item><item><title>Rustdesk定制编译工具</title><link>https://dqtx.cc/posts/technical/rustdesk/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/rustdesk/</guid><pubDate>Mon, 23 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;作为一名技术爱好者，偶然在闲鱼上刷到定制化的Rustdesk客户端，简洁的界面和实用的功能让我萌生了自研同款编译工具的想法。虽花费数百元向卖家请教却因对方忙碌无疾而终，但也坚定了我靠技术实现需求的决心——最终借助Codex从命令行版本起步，迭代出可视化网页面板的Rustdesk一键编译工具，现将整个开发过程与成果分享如下。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260323223059574.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;一、成品核心优势&lt;/h2&gt;
+&lt;p&gt;相较于原生Rustdesk，定制编译后的工具在使用体验上做了针对性优化：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;无感连接&lt;/strong&gt;：控制端与客户端建立连接时无感知，无需繁琐确认步骤；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;免安装特性&lt;/strong&gt;：客户端和控制端均为绿色单文件，无需安装即可运行；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;隐私化展示&lt;/strong&gt;：控制端界面隐藏设备ID，仅客户端显示ID，兼顾使用便捷性与设备安全性。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;二、开发环境准备&lt;/h2&gt;
+&lt;p&gt;为保证编译流程的稳定性和兼容性，需提前配置以下开发环境：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;脚本执行环境：PowerShell 7（推荐版本，兼容更多命令）；&lt;/li&gt;
+&lt;li&gt;主开发语言：Python 3.10+（适配第三方库及语法特性）；&lt;/li&gt;
+&lt;li&gt;底层编译依赖：Rust（通过rustup管理版本）、LLVM（clang编译器）；&lt;/li&gt;
+&lt;li&gt;依赖库管理：vcpkg（用于管理C/C++依赖库）；&lt;/li&gt;
+&lt;li&gt;代码拉取工具：Git（获取Rustdesk源码及依赖）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;三、项目结构梳理&lt;/h2&gt;
+&lt;p&gt;整个编译工具的目录结构清晰划分，便于维护和扩展：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;D:\project2026\rustdesk
+├─ tools\one_click_pack.ps1                     # 命令行版一键出包脚本（核心逻辑）
+├─ tools\pack_web_ui.py                         # 可视化网页面板核心代码
+├─ tools\start_pack_web_ui.ps1                  # 网页面板一键启动脚本
+├─ src\ui\index.tis / index.css / ab.tis        # Rustdesk UI定制化改动文件
+├─ libs\portable\generate.py                    # 便携包生成逻辑
+└─ target\release\rustdesk-portable-packer.exe  # 编译后生成的单文件打包器
+
+C:\Users\Administrator\rustdesk-build-platform\storage\artifacts
+├─ vfun-client-complete                         # 客户端打包素材（资源、配置模板等）
+└─ vfun-controller-complete                     # 控制端打包素材
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;四、编译流程解析&lt;/h2&gt;
+&lt;p&gt;整个编译过程实现全自动化，仅需输入核心参数即可生成定制化exe文件，流程如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入客户参数
+   ↓
+one_click_pack.ps1 / 网页面板
+   ↓
+生成 customer.json（client/controller）
+   ↓
+同步 UI 文件到 artifacts
+   ↓
+generate.py 打包
+   ↓
+输出 2 个 exe（客户端 + 控制端）
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;参数输入&lt;/strong&gt;：在命令行/网页面板中填写域名、公钥、品牌名称、访问密码等定制化参数；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;脚本触发&lt;/strong&gt;：执行&lt;code&gt;one_click_pack.ps1&lt;/code&gt;命令行脚本或通过网页面板触发编译；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;配置生成&lt;/strong&gt;：自动生成&lt;code&gt;customer.json&lt;/code&gt;配置文件（区分客户端/控制端参数）；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;资源同步&lt;/strong&gt;：将定制化UI文件同步到打包素材目录&lt;code&gt;artifacts&lt;/code&gt;；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;打包编译&lt;/strong&gt;：调用&lt;code&gt;generate.py&lt;/code&gt;执行便携包打包逻辑；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;成果输出&lt;/strong&gt;：最终生成2个独立exe文件（客户端+控制端）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;快速运行方式&lt;/h3&gt;
+&lt;p&gt;只需执行以下PowerShell命令，即可启动可视化网页面板：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;amp; &apos;D:\project2026\rustdesk\tools\start_pack_web_ui.ps1&apos;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;五、编译成果展示&lt;/h2&gt;
+&lt;p&gt;整个编译流程耗时约4分钟，最终输出按“品牌-类型-时间戳”命名的可执行文件，示例如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;大强同学-控制端-20260323-102318.exe&lt;/li&gt;
+&lt;li&gt;大强同学-客户端-20260323-102318.exe&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;目前该工具仅支持Windows版本的Rustdesk控制端/客户端编译，若有定制编译需求，可添加微信dqtx33交流。&lt;/p&gt;
+&lt;h2&gt;六、写在最后&lt;/h2&gt;
+&lt;p&gt;本次开发从闲鱼灵感出发，基于Python、PowerShell等技术栈实现了Rustdesk定制化编译工具，核心优化了连接体验、免安装和隐私展示三大特性；工具实现了从命令行到网页可视化面板的迭代，编译流程自动化，仅需输入核心参数即可快速生成定制化exe文件；项目结构清晰，依赖环境明确，编译耗时约4分钟，仅支持Windows版本的Rustdesk控制端/客户端编译。&lt;/p&gt;
 </content:encoded></item><item><title>NotebookLM封神指南</title><link>https://dqtx.cc/posts/workflow/notebooklm/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/notebooklm/</guid><pubDate>Mon, 23 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;在众多AI工具中，Google推出的NotebookLM正逐渐成为许多人每天离不开的“超级大脑”。简单来说，它是一个专门帮你消化大量、杂乱资料的私人助理。&lt;/p&gt;
 &lt;p&gt;与ChatGPT等依赖自身数据库或联网搜索的AI不同，NotebookLM最大的杀手锏在于**“零幻觉”**：&lt;/p&gt;
 &lt;p&gt;它只根据你上传的资料来回答问题。无论你丢给它网页、Google文档还是YouTube视频，它都能在几分钟内完成整合，并生成简报、数据表、信息图表甚至播客。&lt;/p&gt;
@@ -4566,73 +5336,6 @@ opencli zhihu hot -f json       # 查看知乎热榜并以JSON格式输出
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;写在最后&lt;/h2&gt;
 &lt;p&gt;当NotebookLM 把 1 小时的学习压缩到 15 分钟，把 3 天的调研缩短到 1 小时，效率差距已不再是努力程度，而是工具选择。从学生到科研人员，从产品经理到内容创作者，这款被《巴伦周刊》称为 “生成式 AI 杀手级应用” 的工具，正在重构知识工作的底层逻辑。现在登录 Google 账号即可免费体验，你的 10 倍效率革命，从上传第一份文档开始。&lt;/p&gt;
-</content:encoded></item><item><title>Rustdesk定制编译工具</title><link>https://dqtx.cc/posts/technical/rustdesk/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/rustdesk/</guid><pubDate>Mon, 23 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;作为一名技术爱好者，偶然在闲鱼上刷到定制化的Rustdesk客户端，简洁的界面和实用的功能让我萌生了自研同款编译工具的想法。虽花费数百元向卖家请教却因对方忙碌无疾而终，但也坚定了我靠技术实现需求的决心——最终借助Codex从命令行版本起步，迭代出可视化网页面板的Rustdesk一键编译工具，现将整个开发过程与成果分享如下。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260323223059574.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;一、成品核心优势&lt;/h2&gt;
-&lt;p&gt;相较于原生Rustdesk，定制编译后的工具在使用体验上做了针对性优化：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;无感连接&lt;/strong&gt;：控制端与客户端建立连接时无感知，无需繁琐确认步骤；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;免安装特性&lt;/strong&gt;：客户端和控制端均为绿色单文件，无需安装即可运行；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;隐私化展示&lt;/strong&gt;：控制端界面隐藏设备ID，仅客户端显示ID，兼顾使用便捷性与设备安全性。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2&gt;二、开发环境准备&lt;/h2&gt;
-&lt;p&gt;为保证编译流程的稳定性和兼容性，需提前配置以下开发环境：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;脚本执行环境：PowerShell 7（推荐版本，兼容更多命令）；&lt;/li&gt;
-&lt;li&gt;主开发语言：Python 3.10+（适配第三方库及语法特性）；&lt;/li&gt;
-&lt;li&gt;底层编译依赖：Rust（通过rustup管理版本）、LLVM（clang编译器）；&lt;/li&gt;
-&lt;li&gt;依赖库管理：vcpkg（用于管理C/C++依赖库）；&lt;/li&gt;
-&lt;li&gt;代码拉取工具：Git（获取Rustdesk源码及依赖）。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;三、项目结构梳理&lt;/h2&gt;
-&lt;p&gt;整个编译工具的目录结构清晰划分，便于维护和扩展：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;D:\project2026\rustdesk
-├─ tools\one_click_pack.ps1                     # 命令行版一键出包脚本（核心逻辑）
-├─ tools\pack_web_ui.py                         # 可视化网页面板核心代码
-├─ tools\start_pack_web_ui.ps1                  # 网页面板一键启动脚本
-├─ src\ui\index.tis / index.css / ab.tis        # Rustdesk UI定制化改动文件
-├─ libs\portable\generate.py                    # 便携包生成逻辑
-└─ target\release\rustdesk-portable-packer.exe  # 编译后生成的单文件打包器
-
-C:\Users\Administrator\rustdesk-build-platform\storage\artifacts
-├─ vfun-client-complete                         # 客户端打包素材（资源、配置模板等）
-└─ vfun-controller-complete                     # 控制端打包素材
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;四、编译流程解析&lt;/h2&gt;
-&lt;p&gt;整个编译过程实现全自动化，仅需输入核心参数即可生成定制化exe文件，流程如下：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;输入客户参数
-   ↓
-one_click_pack.ps1 / 网页面板
-   ↓
-生成 customer.json（client/controller）
-   ↓
-同步 UI 文件到 artifacts
-   ↓
-generate.py 打包
-   ↓
-输出 2 个 exe（客户端 + 控制端）
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;参数输入&lt;/strong&gt;：在命令行/网页面板中填写域名、公钥、品牌名称、访问密码等定制化参数；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;脚本触发&lt;/strong&gt;：执行&lt;code&gt;one_click_pack.ps1&lt;/code&gt;命令行脚本或通过网页面板触发编译；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;配置生成&lt;/strong&gt;：自动生成&lt;code&gt;customer.json&lt;/code&gt;配置文件（区分客户端/控制端参数）；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;资源同步&lt;/strong&gt;：将定制化UI文件同步到打包素材目录&lt;code&gt;artifacts&lt;/code&gt;；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;打包编译&lt;/strong&gt;：调用&lt;code&gt;generate.py&lt;/code&gt;执行便携包打包逻辑；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;成果输出&lt;/strong&gt;：最终生成2个独立exe文件（客户端+控制端）。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3&gt;快速运行方式&lt;/h3&gt;
-&lt;p&gt;只需执行以下PowerShell命令，即可启动可视化网页面板：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;amp; &apos;D:\project2026\rustdesk\tools\start_pack_web_ui.ps1&apos;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;五、编译成果展示&lt;/h2&gt;
-&lt;p&gt;整个编译流程耗时约4分钟，最终输出按“品牌-类型-时间戳”命名的可执行文件，示例如下：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;大强同学-控制端-20260323-102318.exe&lt;/li&gt;
-&lt;li&gt;大强同学-客户端-20260323-102318.exe&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;目前该工具仅支持Windows版本的Rustdesk控制端/客户端编译，若有定制编译需求，可添加微信dqtx33交流。&lt;/p&gt;
-&lt;h2&gt;六、写在最后&lt;/h2&gt;
-&lt;p&gt;本次开发从闲鱼灵感出发，基于Python、PowerShell等技术栈实现了Rustdesk定制化编译工具，核心优化了连接体验、免安装和隐私展示三大特性；工具实现了从命令行到网页可视化面板的迭代，编译流程自动化，仅需输入核心参数即可快速生成定制化exe文件；项目结构清晰，依赖环境明确，编译耗时约4分钟，仅支持Windows版本的Rustdesk控制端/客户端编译。&lt;/p&gt;
 </content:encoded></item><item><title>零成本搭建在线图床</title><link>https://dqtx.cc/posts/technical/%E5%9C%A8%E7%BA%BF%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E5%9C%A8%E7%BA%BF%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA/</guid><pubDate>Sun, 22 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;90%的博主都不知道！免费100G图床竟比付费的还稳定～ 写文章、做分享时，你是不是也总被图床问题折磨？免费的容量小得可怜，付费的一年要花几百块，更糟的是还常遇到文件失效、大文件传不了的坑，辛苦写的内容全白费！今天就分享一个零成本神方案——用GitHub 4k+星标的开源项目CloudFlare-ImgBed搭配HuggingFace，10分钟快速搭建100G免费图床，无需实名认证、支持大文件自动分片上传，不用额外买服务器，稳定又省心，自媒体、学生、打工人都能用～&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260122014636902.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;一、工具介绍：CloudFlare-ImgBed&lt;/h2&gt;
@@ -6904,66 +7607,6 @@ category: Technical
 &lt;h2&gt;网易爆米花（手机端/TV端）&lt;/h2&gt;
 &lt;p&gt;网易爆米花官网：&lt;a href=&quot;https://bmh.163.com/&quot;&gt;点此直达&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;添加WebDAV，自动刮削&lt;/p&gt;
-</content:encoded></item><item><title>OBS摄像头一键移动插件</title><link>https://dqtx.cc/posts/workflow/obs%E6%8F%92%E4%BB%B6%E6%91%84%E5%83%8F%E5%A4%B4%E7%A7%BB%E5%8A%A8/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/obs%E6%8F%92%E4%BB%B6%E6%91%84%E5%83%8F%E5%A4%B4%E7%A7%BB%E5%8A%A8/</guid><description>想让 OBS 摄像头实现「一键移动+一键复位」的平滑效果？不管是直播过场切换、录课构图调整，还是避免画面遮挡，motion-effect 插件都能轻松搞定！无需复杂操作，3 步就能实现精准位移，让你的...</description><pubDate>Thu, 15 Jan 2026 11:20:00 GMT</pubDate><content:encoded>&lt;p&gt;想让 OBS 摄像头实现「一键移动+一键复位」的平滑效果？不管是直播过场切换、录课构图调整，还是避免画面遮挡，motion-effect 插件都能轻松搞定！无需复杂操作，3 步就能实现精准位移，让你的画面切换更专业～&lt;/p&gt;
-&lt;h2&gt;一、插件简介&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;开发者：CatxFish（免费开源）&lt;/li&gt;
-&lt;li&gt;核心功能：画面平滑运动控制（平移、旋转、变焦等），支持往返触发&lt;/li&gt;
-&lt;li&gt;适配设备：绝大多数普通 USB 摄像头、部分 PTZ 摄像头&lt;/li&gt;
-&lt;li&gt;兼容系统：Windows、macOS、Linux&lt;/li&gt;
-&lt;li&gt;项目地址：https://github.com/CatxFish/motion-effect&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;二、安装步骤&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;下载对应系统安装包，解压后将文件放入 obs-studio 主文件夹&lt;/li&gt;
-&lt;li&gt;重启 OBS 完成生效&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2&gt;三、前置准备&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;场景名：教程（可自定义）&lt;/li&gt;
-&lt;li&gt;源：摄像头、显示器（按需添加）&lt;/li&gt;
-&lt;li&gt;目标效果：按快捷键 → 摄像头右下移动；再按快捷键 → 摄像头左上返回&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;四、配置流程&lt;/h2&gt;
-&lt;h3&gt;1. 记录初始坐标&lt;/h3&gt;
-&lt;p&gt;右键「源→摄像头」→ 变换→编辑变换，记录初始坐标（示例：1725, 489）&lt;/p&gt;
-&lt;h3&gt;2. 添加运动滤镜&lt;/h3&gt;
-&lt;p&gt;选中场景「教程」→ 右键→滤镜→效果滤镜→左下角「+」→ 选择「Motion」&lt;br /&gt;
-命名滤镜（自定义），核心参数配置：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Trigger Behavior 设为「Hotkey (Round trip)」（往返模式）&lt;/li&gt;
-&lt;li&gt;填写记录的初始坐标与目标坐标（示例目标：1735, 539）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260117005310134.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;3. 绑定快捷键&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;OBS 顶部→设置→快捷键&lt;/li&gt;
-&lt;li&gt;找到对应滤镜，为「Forward」和「Backward」绑定同一快捷键（示例：Alt+K）&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260117005511984.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;五、效果说明&lt;/h2&gt;
-&lt;p&gt;&lt;img alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;以上就是 motion-effect 插件的核心配置流程，全程聚焦「快速部署+实用效果」，无需多余步骤！插件轻量开源，兼容主流系统与摄像头，如需调整移动距离、速度或拓展多档位，直接修改坐标与参数即可。&lt;/p&gt;
-&lt;p&gt;✨ &lt;strong&gt;互动时间&lt;/strong&gt;&lt;br /&gt;
-你平时用 OBS 做直播/录课时，还遇到过哪些画面调整的难题？欢迎在评论区留言分享，我会一一解答～&lt;/p&gt;
-&lt;p&gt;如果觉得这篇教程对你有帮助，别忘了&lt;strong&gt;点赞+收藏+转发&lt;/strong&gt;三连呀！关注我，后续分享更多OBS 实用技巧、效率工具干货，下次见～ 👋&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;大强远程技术支持：742112.xyz&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;+86新注册电报，绕过sms收费
-1、换IP，建议，美 日 新 节点，不建议香港节点。
-2、换客户端，telegramx，或者这两个。
-[telegramx](https://github.com/TGX-Android/Telegram-X/releases) [第三方客户端](https://github.com/forkgram/TelegramAndroid/releases) [飞机旧版](https://www.apkmirror.com/uploads/?devcategory=telegram-fz-llc) 
-
-3、卡bug，可以邮箱验证优先邮箱验证。
-
-遇到付费解密强制重启app，多试几次有概率可以跳过。
-&lt;/code&gt;&lt;/pre&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;+86新注册电报，绕过sms收费&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;1、换IP，建议，美 日 新 节点，不建议香港节点。
-2、换客户端，telegramx，或者这两个。
-&lt;a href=&quot;https://github.com/TGX-Android/Telegram-X/releases&quot;&gt;telegramx&lt;/a&gt; &lt;a href=&quot;https://github.com/forkgram/TelegramAndroid/releases&quot;&gt;第三方客户端&lt;/a&gt; &lt;a href=&quot;https://www.apkmirror.com/uploads/?devcategory=telegram-fz-llc&quot;&gt;飞机旧版&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;3、卡bug，可以邮箱验证优先邮箱验证。遇到付费解密强制重启app，多试几次有概率可以跳过。&lt;/p&gt;
-&lt;/blockquote&gt;
 </content:encoded></item><item><title>Passkeys通行密钥</title><link>https://dqtx.cc/posts/technical/passkeys%E9%80%9A%E8%A1%8C%E5%AF%86%E9%92%A5/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/passkeys%E9%80%9A%E8%A1%8C%E5%AF%86%E9%92%A5/</guid><description>你是否厌倦了记密码？设个简单的不安全，设个复杂的记不住？每次登录还要翻找密码本、或者点那该死的&apos;忘记密码&apos;？这几天测试了一圈Passkeys（通行密钥），我只能...</description><pubDate>Thu, 15 Jan 2026 11:20:00 GMT</pubDate><content:encoded>&lt;p&gt;你是否厌倦了记密码？设个简单的不安全，设个复杂的记不住？每次登录还要翻找密码本、或者点那该死的&quot;忘记密码&quot;？这几天测试了一圈&lt;strong&gt;Passkeys（通行密钥）&lt;/strong&gt;，我只能说：**真TM牛逼！**以后再也不用记密码了，指纹一按、Face ID 一扫，直接登录，速度那叫一个快！今天就给大家分享这个让密码彻底淘汰的神仙技术。&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h2&gt;一、什么是 Passkeys？&lt;/h2&gt;
@@ -7126,6 +7769,66 @@ https://www.passkeys.com/websites-with-passkey-support-sites-directory&lt;/p&gt;
 &lt;li&gt;建议配合密码管理器使用，覆盖不支持的场景&lt;/li&gt;
 &lt;li&gt;多设备备份很重要，别只依赖单一设备&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>OBS摄像头一键移动插件</title><link>https://dqtx.cc/posts/workflow/obs%E6%8F%92%E4%BB%B6%E6%91%84%E5%83%8F%E5%A4%B4%E7%A7%BB%E5%8A%A8/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/obs%E6%8F%92%E4%BB%B6%E6%91%84%E5%83%8F%E5%A4%B4%E7%A7%BB%E5%8A%A8/</guid><description>想让 OBS 摄像头实现「一键移动+一键复位」的平滑效果？不管是直播过场切换、录课构图调整，还是避免画面遮挡，motion-effect 插件都能轻松搞定！无需复杂操作，3 步就能实现精准位移，让你的...</description><pubDate>Thu, 15 Jan 2026 11:20:00 GMT</pubDate><content:encoded>&lt;p&gt;想让 OBS 摄像头实现「一键移动+一键复位」的平滑效果？不管是直播过场切换、录课构图调整，还是避免画面遮挡，motion-effect 插件都能轻松搞定！无需复杂操作，3 步就能实现精准位移，让你的画面切换更专业～&lt;/p&gt;
+&lt;h2&gt;一、插件简介&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;开发者：CatxFish（免费开源）&lt;/li&gt;
+&lt;li&gt;核心功能：画面平滑运动控制（平移、旋转、变焦等），支持往返触发&lt;/li&gt;
+&lt;li&gt;适配设备：绝大多数普通 USB 摄像头、部分 PTZ 摄像头&lt;/li&gt;
+&lt;li&gt;兼容系统：Windows、macOS、Linux&lt;/li&gt;
+&lt;li&gt;项目地址：https://github.com/CatxFish/motion-effect&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;二、安装步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;下载对应系统安装包，解压后将文件放入 obs-studio 主文件夹&lt;/li&gt;
+&lt;li&gt;重启 OBS 完成生效&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;三、前置准备&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;场景名：教程（可自定义）&lt;/li&gt;
+&lt;li&gt;源：摄像头、显示器（按需添加）&lt;/li&gt;
+&lt;li&gt;目标效果：按快捷键 → 摄像头右下移动；再按快捷键 → 摄像头左上返回&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;四、配置流程&lt;/h2&gt;
+&lt;h3&gt;1. 记录初始坐标&lt;/h3&gt;
+&lt;p&gt;右键「源→摄像头」→ 变换→编辑变换，记录初始坐标（示例：1725, 489）&lt;/p&gt;
+&lt;h3&gt;2. 添加运动滤镜&lt;/h3&gt;
+&lt;p&gt;选中场景「教程」→ 右键→滤镜→效果滤镜→左下角「+」→ 选择「Motion」&lt;br /&gt;
+命名滤镜（自定义），核心参数配置：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Trigger Behavior 设为「Hotkey (Round trip)」（往返模式）&lt;/li&gt;
+&lt;li&gt;填写记录的初始坐标与目标坐标（示例目标：1735, 539）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260117005310134.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;3. 绑定快捷键&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;OBS 顶部→设置→快捷键&lt;/li&gt;
+&lt;li&gt;找到对应滤镜，为「Forward」和「Backward」绑定同一快捷键（示例：Alt+K）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260117005511984.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;五、效果说明&lt;/h2&gt;
+&lt;p&gt;&lt;img alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;以上就是 motion-effect 插件的核心配置流程，全程聚焦「快速部署+实用效果」，无需多余步骤！插件轻量开源，兼容主流系统与摄像头，如需调整移动距离、速度或拓展多档位，直接修改坐标与参数即可。&lt;/p&gt;
+&lt;p&gt;✨ &lt;strong&gt;互动时间&lt;/strong&gt;&lt;br /&gt;
+你平时用 OBS 做直播/录课时，还遇到过哪些画面调整的难题？欢迎在评论区留言分享，我会一一解答～&lt;/p&gt;
+&lt;p&gt;如果觉得这篇教程对你有帮助，别忘了&lt;strong&gt;点赞+收藏+转发&lt;/strong&gt;三连呀！关注我，后续分享更多OBS 实用技巧、效率工具干货，下次见～ 👋&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;大强远程技术支持：742112.xyz&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;+86新注册电报，绕过sms收费
+1、换IP，建议，美 日 新 节点，不建议香港节点。
+2、换客户端，telegramx，或者这两个。
+[telegramx](https://github.com/TGX-Android/Telegram-X/releases) [第三方客户端](https://github.com/forkgram/TelegramAndroid/releases) [飞机旧版](https://www.apkmirror.com/uploads/?devcategory=telegram-fz-llc) 
+
+3、卡bug，可以邮箱验证优先邮箱验证。
+
+遇到付费解密强制重启app，多试几次有概率可以跳过。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;+86新注册电报，绕过sms收费&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1、换IP，建议，美 日 新 节点，不建议香港节点。
+2、换客户端，telegramx，或者这两个。
+&lt;a href=&quot;https://github.com/TGX-Android/Telegram-X/releases&quot;&gt;telegramx&lt;/a&gt; &lt;a href=&quot;https://github.com/forkgram/TelegramAndroid/releases&quot;&gt;第三方客户端&lt;/a&gt; &lt;a href=&quot;https://www.apkmirror.com/uploads/?devcategory=telegram-fz-llc&quot;&gt;飞机旧版&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;3、卡bug，可以邮箱验证优先邮箱验证。遇到付费解密强制重启app，多试几次有概率可以跳过。&lt;/p&gt;
+&lt;/blockquote&gt;
 </content:encoded></item><item><title>API封装成Skill最佳实践</title><link>https://dqtx.cc/posts/workflow/api%E5%B0%81%E7%94%9F%E5%9B%BEskill/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/api%E5%B0%81%E7%94%9F%E5%9B%BEskill/</guid><description>最近被阿里巴巴通义MAI的Z-Image狠狠圈粉，不仅搭载了高效的 Z-Image-Turbo 模型，更关键的是每天能免费生 2000 张图，不管是生成文章视频...</description><pubDate>Sun, 30 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近被阿里巴巴通义MAI的Z-Image狠狠圈粉，不仅搭载了高效的 &lt;strong&gt;Z-Image-Turbo&lt;/strong&gt; 模型，更关键的是&lt;strong&gt;每天能免费生 2000 张图&lt;/strong&gt;，不管是生成文章视频封面还是异常创作，这个配额都完全够用。&lt;/p&gt;
 &lt;p&gt;恰巧这段时间我正在研究 Claude 的 Skills 功能，于是就萌生了一个想法：&lt;strong&gt;把 Z-Image 的免费生图能力和 Claude Skills 结合起来&lt;/strong&gt;，做一个专属生图 Skill，通过自然语言就可以生图到本地文件夹，既省时间又能充分利用免费配额。带着这个实操需求，我把整个创建过程整理成了这篇文章，希望能给同样喜欢折腾工具、需要生图功能的朋友提供一点参考～&lt;/p&gt;
 &lt;h2&gt;一.创建方法&lt;/h2&gt;
@@ -7929,6 +8632,62 @@ function extractFirstImageIgnoreFrontmatter(content) {
 备选方案：  
 - %windir%\Resources\
 &lt;/code&gt;&lt;/pre&gt;
+</content:encoded></item><item><title>tags查询</title><link>https://dqtx.cc/posts/zen/%E6%9F%A5tags%E7%9B%B8%E5%85%B3%E7%9A%84%E7%AC%94%E8%AE%B0/</link><guid isPermaLink="true">https://dqtx.cc/posts/zen/%E6%9F%A5tags%E7%9B%B8%E5%85%B3%E7%9A%84%E7%AC%94%E8%AE%B0/</guid><pubDate>Thu, 01 May 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Obsidian系列&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
+  default(category, &quot;未分类&quot;) AS &quot;分类&quot;,
+  dateformat(file.ctime, &quot;yyyy/MM/dd&quot;) AS &quot;创建日期&quot;,
+  file.link AS &quot;笔记名称&quot;
+WHERE contains(file.tags, &quot;Obsidian&quot;)
+SORT category ASC, file.ctime DESC
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Claude系列&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
+  default(category, &quot;未分类&quot;) AS &quot;分类&quot;,
+  dateformat(file.ctime, &quot;yyyy/MM/dd&quot;) AS &quot;创建日期&quot;,
+  file.link AS &quot;笔记名称&quot;
+WHERE contains(file.tags, &quot;Claude&quot;)
+SORT category ASC, file.ctime DESC
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;快捷键系列&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
+  default(category, &quot;未分类&quot;) AS &quot;分类&quot;,
+  dateformat(file.ctime, &quot;yyyy/MM/dd&quot;) AS &quot;创建日期&quot;,
+  file.link AS &quot;笔记名称&quot;
+WHERE contains(file.tags, &quot;快捷键&quot;)
+SORT category ASC, file.ctime DESC
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Agent系列&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
+  default(category, &quot;未分类&quot;) AS &quot;分类&quot;,
+  dateformat(file.ctime, &quot;yyyy/MM/dd&quot;) AS &quot;创建日期&quot;,
+  file.link AS &quot;笔记名称&quot;
+WHERE contains(file.tags, &quot;Agent&quot;)
+SORT category ASC, file.ctime DESC
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;skill系列&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
+  default(category, &quot;未分类&quot;) AS &quot;分类&quot;,
+  dateformat(file.ctime, &quot;yyyy/MM/dd&quot;) AS &quot;创建日期&quot;,
+  file.link AS &quot;笔记名称&quot;
+WHERE contains(file.tags, &quot;skill&quot;)
+SORT category ASC, file.ctime DESC
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;博客系列&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
+  default(category, &quot;未分类&quot;) AS &quot;分类&quot;,
+  dateformat(file.ctime, &quot;yyyy/MM/dd&quot;) AS &quot;创建日期&quot;,
+  file.link AS &quot;笔记名称&quot;
+WHERE contains(file.tags, &quot;博客&quot;)
+SORT category ASC, file.ctime DESC
+&lt;/code&gt;&lt;/pre&gt;
+</content:encoded></item><item><title>本周创建的笔记</title><link>https://dqtx.cc/posts/zen/%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%91%A8%E5%88%9B%E5%BB%BA/</link><guid isPermaLink="true">https://dqtx.cc/posts/zen/%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%91%A8%E5%88%9B%E5%BB%BA/</guid><pubDate>Thu, 01 May 2025 00:00:00 GMT</pubDate><content:encoded>&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
+  category AS &quot;分类&quot;,
+  dateformat(file.ctime, &quot;yyyy/MM/dd&quot;) AS &quot;创建日期&quot;,
+  file.link AS &quot;本周笔记&quot;
+WHERE file.ctime &amp;gt;= date(today) - dur(3 days)
+SORT category ASC, file.ctime DESC
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
 </content:encoded></item><item><title>Bash上传代码到github命令</title><link>https://dqtx.cc/posts/xenia/bash%E4%B8%8A%E4%BC%A0github%E5%91%BD%E4%BB%A4/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/bash%E4%B8%8A%E4%BC%A0github%E5%91%BD%E4%BB%A4/</guid><pubDate>Sat, 26 Apr 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;本教程详细介绍如何将本地项目通过Bash 终端上传代码到 GitHub&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260426215604902.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;准备工作&lt;/h2&gt;
@@ -9412,6 +10171,389 @@ https://mumu.163.com/&lt;/p&gt;
 &lt;p&gt;点击模拟器桌面的设置-壁纸，然后更换即可&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20251130144137855.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;经过这些配置之后，MuMu 就会变成一个干净优雅的虚拟空间，使用 MuMu 的过程中遇到任何问题，或者有更好用的优化技巧，欢迎在评论区交流分享。&lt;/p&gt;
+</content:encoded></item><item><title>Vimium快捷键</title><link>https://dqtx.cc/posts/xenia/vimium%E5%BF%AB%E6%8D%B7%E9%94%AE/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/vimium%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid><pubDate>Thu, 30 May 2024 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;⚡ 高频必记（按使用频率排序）&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;快捷键&lt;/th&gt;
+&lt;th&gt;是否需要 Shift&lt;/th&gt;
+&lt;th&gt;功能说明&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;j&lt;/code&gt; / &lt;code&gt;k&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;❌ 不需要&lt;/td&gt;
+&lt;td&gt;向下 / 向上滚动（最核心）&lt;/td&gt;
+&lt;td&gt;常用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;gg&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;双击&lt;/td&gt;
+&lt;td&gt;跳转到页面顶部&lt;/td&gt;
+&lt;td&gt;常用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;G&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;✅ 需要 Shift&lt;/td&gt;
+&lt;td&gt;跳转到页面底部&lt;/td&gt;
+&lt;td&gt;常用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;d&lt;/code&gt; / &lt;code&gt;u&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;❌ 不需要&lt;/td&gt;
+&lt;td&gt;向下 / 向上滚动半页&lt;/td&gt;
+&lt;td&gt;常用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;r&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;❌ 不需要&lt;/td&gt;
+&lt;td&gt;刷新当前页面&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;/&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;❌ 不需要&lt;/td&gt;
+&lt;td&gt;开启页面查找模式&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;n&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;❌ 不需要&lt;/td&gt;
+&lt;td&gt;查找下一个匹配项&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;N&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;✅ 需要 Shift&lt;/td&gt;
+&lt;td&gt;查找上一个匹配项&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;t&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;❌ 不需要&lt;/td&gt;
+&lt;td&gt;新建标签页&lt;/td&gt;
+&lt;td&gt;常用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;x&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;❌ 不需要&lt;/td&gt;
+&lt;td&gt;关闭当前标签页&lt;/td&gt;
+&lt;td&gt;常用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;X&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;✅ 需要 Shift&lt;/td&gt;
+&lt;td&gt;恢复刚关闭的标签页&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;J&lt;/code&gt; / &lt;code&gt;K&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;✅ 需要 Shift&lt;/td&gt;
+&lt;td&gt;切换到左边 / 右边的标签页&lt;/td&gt;
+&lt;td&gt;常用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;H&lt;/code&gt; / &lt;code&gt;L&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;✅ 需要 Shift&lt;/td&gt;
+&lt;td&gt;浏览器历史后退 / 前进&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;yy&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;❌ 不需要&lt;/td&gt;
+&lt;td&gt;复制当前页面URL到剪贴板&lt;/td&gt;
+&lt;td&gt;常用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;gi&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;❌ 不需要&lt;/td&gt;
+&lt;td&gt;快速聚焦页面第一个输入框&lt;/td&gt;
+&lt;td&gt;常用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;?&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;✅ 需要 Shift&lt;/td&gt;
+&lt;td&gt;打开Vimium帮助面板&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr /&gt;
+&lt;h2&gt;📋 全快捷键清单（带 Shift 标注）&lt;/h2&gt;
+&lt;h3&gt;1. 页面导航（滚动与跳转）&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;快捷键&lt;/th&gt;
+&lt;th&gt;是否需要 Shift&lt;/th&gt;
+&lt;th&gt;功能说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;j&lt;/code&gt; / &lt;code&gt;&amp;lt;c-e&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;❌ 不需要&lt;/td&gt;
+&lt;td&gt;向下滚动&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;k&lt;/code&gt; / &lt;code&gt;&amp;lt;c-y&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;❌ 不需要&lt;/td&gt;
+&lt;td&gt;向上滚动&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;gg&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;❌ 不需要&lt;/td&gt;
+&lt;td&gt;滚动到页面顶部&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;G&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;✅ 需要 Shift&lt;/td&gt;
+&lt;td&gt;滚动到页面底部&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;d&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;❌ 不需要&lt;/td&gt;
+&lt;td&gt;向下滚动半页&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;u&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;❌ 不需要&lt;/td&gt;
+&lt;td&gt;向上滚动半页&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;h&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;❌ 不需要&lt;/td&gt;
+&lt;td&gt;向左滚动&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;zl&lt;/code&gt; / &lt;code&gt;zL&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;❌/✅ 小写/大写&lt;/td&gt;
+&lt;td&gt;滚动到页面最右侧&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;r&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;❌ 不需要&lt;/td&gt;
+&lt;td&gt;刷新页面&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;gi&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;❌ 不需要&lt;/td&gt;
+&lt;td&gt;聚焦到页面的第一个文本输入框&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;gf&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;❌ 不需要&lt;/td&gt;
+&lt;td&gt;选择页面上的下一个框架&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;gF&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;✅ 需要 Shift&lt;/td&gt;
+&lt;td&gt;选择页面的主/顶部框架&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;2. 标签页操作&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;快捷键&lt;/th&gt;
+&lt;th&gt;是否需要 Shift&lt;/th&gt;
+&lt;th&gt;功能说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;t&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;❌ 不需要&lt;/td&gt;
+&lt;td&gt;新建标签页&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;J&lt;/code&gt; / &lt;code&gt;gT&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;✅ 需要 Shift&lt;/td&gt;
+&lt;td&gt;切换到左侧标签页&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;K&lt;/code&gt; / &lt;code&gt;gt&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;✅/❌ 大写/小写&lt;/td&gt;
+&lt;td&gt;切换到右侧标签页&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;^&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;✅ 需要 Shift&lt;/td&gt;
+&lt;td&gt;切换到上一个访问过的标签页&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;g0&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;❌ 不需要&lt;/td&gt;
+&lt;td&gt;跳转到第一个标签页&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;g$&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;✅ 需要 Shift&lt;/td&gt;
+&lt;td&gt;跳转到最后一个标签页&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;yt&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;❌ 不需要&lt;/td&gt;
+&lt;td&gt;复制当前标签页并新建副本&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;&amp;lt;a-p&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;❌ 不需要&lt;/td&gt;
+&lt;td&gt;固定/取消固定当前标签页&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;&amp;lt;a-m&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;❌ 不需要&lt;/td&gt;
+&lt;td&gt;静音/取消静音当前标签页&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;x&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;❌ 不需要&lt;/td&gt;
+&lt;td&gt;关闭当前标签页&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;X&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;✅ 需要 Shift&lt;/td&gt;
+&lt;td&gt;恢复已关闭的标签页&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;3. URL 与 Vomnibar（地址栏/搜索栏）&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;快捷键&lt;/th&gt;
+&lt;th&gt;是否需要 Shift&lt;/th&gt;
+&lt;th&gt;功能说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;yy&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;❌ 不需要&lt;/td&gt;
+&lt;td&gt;复制当前页面URL到剪贴板&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;p&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;❌ 不需要&lt;/td&gt;
+&lt;td&gt;在当前标签页打开剪贴板中的URL&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;P&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;✅ 需要 Shift&lt;/td&gt;
+&lt;td&gt;在新标签页打开剪贴板中的URL&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;F&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;✅ 需要 Shift&lt;/td&gt;
+&lt;td&gt;在新标签页打开链接（带提示）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;o&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;❌ 不需要&lt;/td&gt;
+&lt;td&gt;打开URL、书签或历史记录（当前标签页）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;O&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;✅ 需要 Shift&lt;/td&gt;
+&lt;td&gt;在新标签页打开URL、书签或历史记录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;b&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;❌ 不需要&lt;/td&gt;
+&lt;td&gt;打开书签（当前标签页）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;B&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;✅ 需要 Shift&lt;/td&gt;
+&lt;td&gt;在新标签页打开书签&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;T&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;✅ 需要 Shift&lt;/td&gt;
+&lt;td&gt;搜索所有已打开的标签页&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;ge&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;❌ 不需要&lt;/td&gt;
+&lt;td&gt;编辑当前URL并跳转&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;gE&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;✅ 需要 Shift&lt;/td&gt;
+&lt;td&gt;编辑当前URL并在新标签页打开&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;4. 查找与历史记录&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;快捷键&lt;/th&gt;
+&lt;th&gt;是否需要 Shift&lt;/th&gt;
+&lt;th&gt;功能说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;/&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;❌ 不需要&lt;/td&gt;
+&lt;td&gt;开启页面查找模式&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;n&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;❌ 不需要&lt;/td&gt;
+&lt;td&gt;跳转到下一个查找结果&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;N&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;✅ 需要 Shift&lt;/td&gt;
+&lt;td&gt;跳转到上一个查找结果&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;H&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;✅ 需要 Shift&lt;/td&gt;
+&lt;td&gt;浏览器历史后退&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;L&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;✅ 需要 Shift&lt;/td&gt;
+&lt;td&gt;浏览器历史前进&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;5. 其他模式与杂项&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;快捷键&lt;/th&gt;
+&lt;th&gt;是否需要 Shift&lt;/th&gt;
+&lt;th&gt;功能说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;i&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;❌ 不需要&lt;/td&gt;
+&lt;td&gt;进入插入模式（暂时禁用Vimium快捷键）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;v&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;❌ 不需要&lt;/td&gt;
+&lt;td&gt;进入可视模式（文本选择）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;?&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;❌ 不需要&lt;/td&gt;
+&lt;td&gt;打开Vimium帮助面板&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260430141154912.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260430141222986.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
 </content:encoded></item><item><title>Dos常用命令</title><link>https://dqtx.cc/posts/xenia/cmd%E5%91%BD%E4%BB%A4/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/cmd%E5%91%BD%E4%BB%A4/</guid><pubDate>Sat, 18 May 2024 10:30:00 GMT</pubDate><content:encoded>&lt;h2&gt;&amp;lt;b style=&quot;color: red;&quot;&amp;gt;常用cmd/PowerShell命令&amp;lt;/b&amp;gt;&lt;/h2&gt;
 &lt;h3&gt;✅PowerShell命令&lt;/h3&gt;
 &lt;table&gt;
