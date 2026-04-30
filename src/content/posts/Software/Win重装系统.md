@@ -24,19 +24,19 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/202604291136
 ## PE工具
 ![image.png](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260429113645224.webp)
 
-[Rufus](https://rufus.ie/zh/)
-[balena](https://etcher.balena.io/) 
-[Ventoy](https://www.ventoy.net/cn/download.html)
-[HotPE工具箱](https://www.hotpe.top/)
-[微PE工具箱](https://www.wepe.com.cn/)
-[FirPE](https://www.firpe.cn/)
-[Edgeless](https://home.edgeless.top/#)
-[cmdpe](https://www.cmdpe.com/)
+1. [Rufus](https://rufus.ie/zh/)
+2. [balena](https://etcher.balena.io/) 
+3. [Ventoy](https://www.ventoy.net/cn/download.html)
+4. [HotPE工具箱](https://www.hotpe.top/)
+5. [微PE工具箱](https://www.wepe.com.cn/)
+6. [FirPE](https://www.firpe.cn/)
+7. [Edgeless](https://home.edgeless.top/#)
+8. [cmdpe](https://www.cmdpe.com/)
 
 ## 一键重装
-- [天使PE一键装机助手](https://www.angel-pe.cn/tspeyjzjzs/)
-- [盛千装机助手](http://www.9a9m.com/soft/2390.html)
-- [37个在线重装测评](https://www.kdocs.cn/l/cldrRfBbT1Rh)  →[视频](https://www.bilibili.com/video/BV1aru1zsEf8/?spm_id_from=333.337.search-card.all.click&vd_source=206031f494850e57fd6c92ace02b1bed)
+1. [天使PE一键装机助手](https://www.angel-pe.cn/tspeyjzjzs/)
+2. [盛千装机助手](http://www.9a9m.com/soft/2390.html)
+3. [37个在线重装测评](https://www.kdocs.cn/l/cldrRfBbT1Rh)  →[视频](https://www.bilibili.com/video/BV1aru1zsEf8/?spm_id_from=333.337.search-card.all.click&vd_source=206031f494850e57fd6c92ace02b1bed)
 
 ## 资料来源
 - [删除U盘的EFI分区方法](https://web.okjike.com/originalPost/6639f4b1a922aa28d0fa4dec) 
