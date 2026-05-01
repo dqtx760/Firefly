@@ -6,6 +6,7 @@ tags:
 category: Zen
 draft: false
 pinned: false
+image: 
 ---
 
 ```dataview

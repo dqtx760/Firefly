@@ -1,5 +1,5 @@
 ---
-title: ShareX进阶指南
+title: ShareX截屏录屏教程！
 published: 2026-04-30
 tags:
   - 软件推荐

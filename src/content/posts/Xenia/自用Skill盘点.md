@@ -47,6 +47,7 @@ Claude Skills 作为 AI 助手的功能拓展核心，能精准对接各类场�
 | 去除AI味           | [talk-normal](https://github.com/hexiecs/talk-normal/blob/main/README_CN.md)                                   |        |                                                                                         |
 | 公众号自动化写作        | [wewrite](https://github.com/oaker-io/wewrite)                                                                 |        |                                                                                         |
 | 自媒体写作           | [writing-assistant-skill](https://github.com/Ceeon/writing-assistant-skill)                                    |        |                                                                                         |
+| 教程制作            | [yao-tutorial-skill](https://github.com/yaojingang/yao-open-skills/tree/main/skills/yao-tutorial-skill)        |        |                                                                                         |
 
 [Notion备份](https://www.notion.so/skill-347351994e408091a13be04d19c62d1e)
 
