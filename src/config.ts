@@ -84,7 +84,7 @@ export const navBarConfig: NavBarConfig = {
 		{
 			name: "Wiki",
 			url: "/wiki/",
-			external: false,
+			external: true,
 		},
 		{
 			name: "友链",

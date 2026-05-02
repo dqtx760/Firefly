@@ -18,7 +18,7 @@ const pageDescription = description || siteConfig.description;
 // 快捷导航链接
 const quickLinks = [
 	{ name: "Home", url: "/" },
-	{ name: "Index", url: "/wiki/index/" },
+	{ name: "Index", url: "/wiki/" },
 	{ name: "Overview", url: "/wiki/overview/" },
 	{ name: "Purpose", url: "/wiki/purpose/" },
 	{ name: "Schema", url: "/wiki/schema/" },
@@ -43,7 +43,7 @@ const quickLinks = [
 		:root {
 			--hue: 250;
 			--primary: #3b82f6;
-			--page-bg: #0f172a;
+			--page-bg: #000000;
 			--card-bg: #1e293b;
 			--text-primary: #e2e8f0;
 			--text-secondary: #94a3b8;
@@ -53,7 +53,7 @@ const quickLinks = [
 		}
 		/* Prevent FOUC - inline critical styles */
 		body {
-			background: #0f172a;
+			background: #000000;
 			color: #e2e8f0;
 			font-family: 'LXGW WenKai', system-ui, -apple-system, sans-serif;
 			margin: 0;

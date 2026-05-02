@@ -27,16 +27,19 @@ export function getStaticPaths() {
 
 	collectSlugs(tree);
 
-	return slugs.map((slug) => ({
-		params: { slug },
-	}));
+	return [
+		{ params: { slug: "" } },  // /wiki/ → index
+		...slugs.map((slug) => ({
+			params: { slug },
+		})),
+	];
 }
 
 const { slug } = Astro.params;
 const wiki = getWikiBySlug(slug || "index");
 
 if (!wiki) {
-	return Astro.redirect("/wiki/index/");
+	return Astro.redirect("/wiki/");
 }
 
 const headings = wiki.content ? extractHeadings(wiki.content) : [];
