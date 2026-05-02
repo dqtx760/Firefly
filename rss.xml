@@ -2676,6 +2676,47 @@ https://v.douyin.com/4K4Njgxq0Oc/&lt;/p&gt;
 https://mp.weixin.qq.com/s/kPjIpHmzciWY8_3ettEVsg&lt;/p&gt;
 &lt;p&gt;→NotionNext帮助手册：
 https://docs.tangly1024.com/about&lt;/p&gt;
+</content:encoded></item><item><title>Dos命令mklink详解</title><link>https://dqtx.cc/posts/workflow/mklink%E5%91%BD%E4%BB%A4/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/mklink%E5%91%BD%E4%BB%A4/</guid><pubDate>Mon, 20 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你是否遇到过这些问题：想让软件从A目录读取文件，但文件实际存放在B目录？&lt;/p&gt;
+&lt;p&gt;想在多个位置同步同一个文件，又不想每次手动复制？或是想给文件夹创建&quot;替身&quot;，让不同程序都能访问？&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Windows 自带的 mklink 命令，就是解决这些问题的神器。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260420172844734.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;01 先搞懂四种链接的区别&lt;/h3&gt;
+&lt;p&gt;Windows 提供了四种创建链接的方式，各有各的脾气：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;文件软链接（符号链接）&lt;/strong&gt; 是默认模式，用 &lt;code&gt;mklink 链接名 目标文件&lt;/code&gt; 即可创建。它像一个&quot;快捷方式升级版&quot;，让程序能读取别处的文件。&lt;strong&gt;支持跨盘&lt;/strong&gt;，比如在D盘创建一个链接指向C盘的文件。但如果你删掉原文件，这个链接就失效了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260420173406196.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;目录软链接（/D参数）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;专门用于文件夹，和文件软链接一样支持跨盘，原文件夹删除后链接同样失效。很多工具用它来重定向配置目录，比如让Claude从默认路径读取，实际文件存放在别处。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;硬链接（/H参数）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;它不是指向路径，而是给同一份数据多起几个&quot;名字&quot;。即使删掉原始文件，链接依然能打开内容，因为它指向的是硬盘上的实际数据。&lt;strong&gt;但它只能在同一个盘符内使用&lt;/strong&gt;，且只能用于文件，不能用于文件夹。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;目录联接（/J参数）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;和目录软链接类似，也是针对文件夹的链接方式。区别在于它属于NTFS的旧功能，&lt;strong&gt;不支持跨盘&lt;/strong&gt;，但兼容性更好，一些老旧程序也能正常识别。&lt;/p&gt;
+&lt;h3&gt;02 实际使用场景&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;场景一：让AI工具读取备份目录&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;想把Claude的全局skills目录指向GitHub备份仓库？可以这样操作：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cmd /c mklink /D &quot;C:\Users\你的用户名\.claude\skills&quot; &quot;C:\Users\你的用户名\claude-skills&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这两个路径指向同一个文件夹，往任意一个里放文件，另一个立刻同步。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;场景二：项目skill使用全局skill配置&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在Obsidian仓库里创建软链接，指向Claude code读取的全局skill目录：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mklink /D &quot;%userprofile%\.claude\skills&quot; &quot;%userprofile%\Documents\Obsidian\.claude\skills&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这样AI在Obsidia仓库就可以调用全局skill，不要单独安装&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;场景三：一个规范给不同的Agent用&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;用硬链接让同一份文档以不一样的名字显示，同时保持内容完全一致：&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;PS.这是 3 条独立命令，会运行 3 次，创建 3 个独立的硬链接。&lt;/em&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mklink /h &quot;D:\project2026\zhishiku\AGENTS\知识库规范.md&quot; &quot;D:\project2026\zhishiku\知识库规范.md&quot;
+mklink /h &quot;D:\project2026\zhishiku\CLAUDE\知识库规范.md&quot; &quot;D:\project2026\zhishiku\知识库规范.md&quot;
+mklink /h &quot;D:\project2026\zhishiku\QWEN\知识库规范.md&quot; &quot;D:\project2026\zhishiku\知识库规范.md&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;修改任意一个文件，其他文件同步更新，而且不怕误删原文件。&lt;/p&gt;
+&lt;h3&gt;03 重要注意事项&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;创建符号链接需要&lt;strong&gt;管理员权限&lt;/strong&gt;，记得以管理员模式运行CMD或PowerShell&lt;/li&gt;
+&lt;li&gt;软链接删除原文件后链接失效，因为链接指向的是路径&lt;/li&gt;
+&lt;li&gt;硬链接删除原文件后依然有效，因为它指向的是数据本身&lt;/li&gt;
+&lt;li&gt;如果你需要跨盘操作，选择软链接；如果只在同盘内使用，硬链接更稳定&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;掌握这四个命令，你就是Windows文件管理的高手了。&lt;/strong&gt;&lt;/p&gt;
 </content:encoded></item><item><title>Agent Skills 管理方案</title><link>https://dqtx.cc/posts/xenia/skills%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/skills%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/</guid><pubDate>Mon, 20 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;相信有很多小伙伴跟我一样，手头同时在用好几个 AI Agent——Claude Code、Codex、Cursor、Windsurf……每个 Agent 都有自己的 Skill 目录，装了一堆技能包。&lt;/p&gt;
 &lt;p&gt;时间一长就会遇到一个头疼的问题：同一个 Skill 要在不同 Agent 里各装一遍，版本还不一定一致，管理起来非常混乱。从最早手动复制粘贴技能配置，到用脚本管理本地技能库，再到尝试多设备同步——我发现&lt;strong&gt;技能的发现、配置、迁移和同步&lt;/strong&gt;，一直是个很痛的问题。&lt;/p&gt;
 &lt;p&gt;我一直在想，有没有一种方式能像管理代码依赖一样，统一管理所有 Agent 的技能包？同时实现在多设备上能够一键迁移跟同步？最近我在 GitHub 上发现了 几个解决方案，完美解决了我的痛点。&lt;/p&gt;
@@ -2758,47 +2799,6 @@ https://docs.tangly1024.com/about&lt;/p&gt;
 &lt;p&gt;https://x.com/liyue_ai/status/2017259163127304623&lt;/p&gt;
 &lt;p&gt;https://www.youtube.com/watch?v=4Gz2Sxgpv20&lt;/p&gt;
 &lt;p&gt;https://x.com/linxiaobei888/status/2017061177311056343&lt;/p&gt;
-</content:encoded></item><item><title>Dos命令mklink详解</title><link>https://dqtx.cc/posts/workflow/mklink%E5%91%BD%E4%BB%A4/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/mklink%E5%91%BD%E4%BB%A4/</guid><pubDate>Mon, 20 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你是否遇到过这些问题：想让软件从A目录读取文件，但文件实际存放在B目录？&lt;/p&gt;
-&lt;p&gt;想在多个位置同步同一个文件，又不想每次手动复制？或是想给文件夹创建&quot;替身&quot;，让不同程序都能访问？&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Windows 自带的 mklink 命令，就是解决这些问题的神器。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260420172844734.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;01 先搞懂四种链接的区别&lt;/h3&gt;
-&lt;p&gt;Windows 提供了四种创建链接的方式，各有各的脾气：&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;文件软链接（符号链接）&lt;/strong&gt; 是默认模式，用 &lt;code&gt;mklink 链接名 目标文件&lt;/code&gt; 即可创建。它像一个&quot;快捷方式升级版&quot;，让程序能读取别处的文件。&lt;strong&gt;支持跨盘&lt;/strong&gt;，比如在D盘创建一个链接指向C盘的文件。但如果你删掉原文件，这个链接就失效了。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260420173406196.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;目录软链接（/D参数）&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;专门用于文件夹，和文件软链接一样支持跨盘，原文件夹删除后链接同样失效。很多工具用它来重定向配置目录，比如让Claude从默认路径读取，实际文件存放在别处。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;硬链接（/H参数）&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;它不是指向路径，而是给同一份数据多起几个&quot;名字&quot;。即使删掉原始文件，链接依然能打开内容，因为它指向的是硬盘上的实际数据。&lt;strong&gt;但它只能在同一个盘符内使用&lt;/strong&gt;，且只能用于文件，不能用于文件夹。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;目录联接（/J参数）&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;和目录软链接类似，也是针对文件夹的链接方式。区别在于它属于NTFS的旧功能，&lt;strong&gt;不支持跨盘&lt;/strong&gt;，但兼容性更好，一些老旧程序也能正常识别。&lt;/p&gt;
-&lt;h3&gt;02 实际使用场景&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;场景一：让AI工具读取备份目录&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;想把Claude的全局skills目录指向GitHub备份仓库？可以这样操作：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;cmd /c mklink /D &quot;C:\Users\你的用户名\.claude\skills&quot; &quot;C:\Users\你的用户名\claude-skills&quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;这两个路径指向同一个文件夹，往任意一个里放文件，另一个立刻同步。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;场景二：项目skill使用全局skill配置&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;在Obsidian仓库里创建软链接，指向Claude code读取的全局skill目录：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;mklink /D &quot;%userprofile%\.claude\skills&quot; &quot;%userprofile%\Documents\Obsidian\.claude\skills&quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;这样AI在Obsidia仓库就可以调用全局skill，不要单独安装&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;场景三：一个规范给不同的Agent用&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;用硬链接让同一份文档以不一样的名字显示，同时保持内容完全一致：&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;PS.这是 3 条独立命令，会运行 3 次，创建 3 个独立的硬链接。&lt;/em&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;mklink /h &quot;D:\project2026\zhishiku\AGENTS\知识库规范.md&quot; &quot;D:\project2026\zhishiku\知识库规范.md&quot;
-mklink /h &quot;D:\project2026\zhishiku\CLAUDE\知识库规范.md&quot; &quot;D:\project2026\zhishiku\知识库规范.md&quot;
-mklink /h &quot;D:\project2026\zhishiku\QWEN\知识库规范.md&quot; &quot;D:\project2026\zhishiku\知识库规范.md&quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;修改任意一个文件，其他文件同步更新，而且不怕误删原文件。&lt;/p&gt;
-&lt;h3&gt;03 重要注意事项&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;创建符号链接需要&lt;strong&gt;管理员权限&lt;/strong&gt;，记得以管理员模式运行CMD或PowerShell&lt;/li&gt;
-&lt;li&gt;软链接删除原文件后链接失效，因为链接指向的是路径&lt;/li&gt;
-&lt;li&gt;硬链接删除原文件后依然有效，因为它指向的是数据本身&lt;/li&gt;
-&lt;li&gt;如果你需要跨盘操作，选择软链接；如果只在同盘内使用，硬链接更稳定&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;掌握这四个命令，你就是Windows文件管理的高手了。&lt;/strong&gt;&lt;/p&gt;
 </content:encoded></item><item><title>Cc-sync：多电脑CC配置同步</title><link>https://dqtx.cc/posts/aihacks/cc-sync/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/cc-sync/</guid><pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;换电脑后，你最怕什么？不是装机，而是你和 Claude 聊了半天的代码、需求、方案——全没了。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -9183,22 +9183,6 @@ function extractFirstImageIgnoreFrontmatter(content) {
 备选方案：  
 - %windir%\Resources\
 &lt;/code&gt;&lt;/pre&gt;
-</content:encoded></item><item><title>本周创建的笔记</title><link>https://dqtx.cc/posts/zen/%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%91%A8%E5%88%9B%E5%BB%BA/</link><guid isPermaLink="true">https://dqtx.cc/posts/zen/%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%91%A8%E5%88%9B%E5%BB%BA/</guid><pubDate>Thu, 01 May 2025 00:00:00 GMT</pubDate><content:encoded>&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
-  category AS &quot;分类&quot;,
-  dateformat(file.ctime, &quot;yyyy/MM/dd&quot;) AS &quot;创建日期&quot;,
-  file.link AS &quot;本周笔记&quot;
-WHERE file.ctime &amp;gt;= date(today) - dur(3 days)
-SORT category ASC, file.ctime DESC
-&lt;/code&gt;&lt;/pre&gt;
-&lt;hr /&gt;
-</content:encoded></item><item><title>筛查无tags与分类笔记</title><link>https://dqtx.cc/posts/zen/%E7%AD%9B%E6%9F%A5%E6%97%A0tags%E4%B8%8E%E5%88%86%E7%B1%BB%E7%AC%94%E8%AE%B0/</link><guid isPermaLink="true">https://dqtx.cc/posts/zen/%E7%AD%9B%E6%9F%A5%E6%97%A0tags%E4%B8%8E%E5%88%86%E7%B1%BB%E7%AC%94%E8%AE%B0/</guid><pubDate>Thu, 01 May 2025 00:00:00 GMT</pubDate><content:encoded>&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
-  category AS &quot;分类&quot;,
-  file.tags AS &quot;标签&quot;,
-  dateformat(file.ctime, &quot;yyyy/MM/dd&quot;) AS &quot;创建日期&quot;,
-  file.link AS &quot;笔记名称&quot;
-WHERE !category OR !file.tags OR length(file.tags) = 0
-SORT category ASC, file.ctime DESC
-&lt;/code&gt;&lt;/pre&gt;
 </content:encoded></item><item><title>tags查询</title><link>https://dqtx.cc/posts/zen/%E6%9F%A5tags%E7%9B%B8%E5%85%B3%E7%9A%84%E7%AC%94%E8%AE%B0/</link><guid isPermaLink="true">https://dqtx.cc/posts/zen/%E6%9F%A5tags%E7%9B%B8%E5%85%B3%E7%9A%84%E7%AC%94%E8%AE%B0/</guid><pubDate>Thu, 01 May 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Obsidian系列&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
   default(category, &quot;未分类&quot;) AS &quot;分类&quot;,
@@ -9245,6 +9229,22 @@ SORT category ASC, file.ctime DESC
   dateformat(file.ctime, &quot;yyyy/MM/dd&quot;) AS &quot;创建日期&quot;,
   file.link AS &quot;笔记名称&quot;
 WHERE contains(file.tags, &quot;博客&quot;)
+SORT category ASC, file.ctime DESC
+&lt;/code&gt;&lt;/pre&gt;
+</content:encoded></item><item><title>本周创建的笔记</title><link>https://dqtx.cc/posts/zen/%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%91%A8%E5%88%9B%E5%BB%BA/</link><guid isPermaLink="true">https://dqtx.cc/posts/zen/%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%91%A8%E5%88%9B%E5%BB%BA/</guid><pubDate>Thu, 01 May 2025 00:00:00 GMT</pubDate><content:encoded>&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
+  category AS &quot;分类&quot;,
+  dateformat(file.ctime, &quot;yyyy/MM/dd&quot;) AS &quot;创建日期&quot;,
+  file.link AS &quot;本周笔记&quot;
+WHERE file.ctime &amp;gt;= date(today) - dur(3 days)
+SORT category ASC, file.ctime DESC
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+</content:encoded></item><item><title>筛查无tags与分类笔记</title><link>https://dqtx.cc/posts/zen/%E7%AD%9B%E6%9F%A5%E6%97%A0tags%E4%B8%8E%E5%88%86%E7%B1%BB%E7%AC%94%E8%AE%B0/</link><guid isPermaLink="true">https://dqtx.cc/posts/zen/%E7%AD%9B%E6%9F%A5%E6%97%A0tags%E4%B8%8E%E5%88%86%E7%B1%BB%E7%AC%94%E8%AE%B0/</guid><pubDate>Thu, 01 May 2025 00:00:00 GMT</pubDate><content:encoded>&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
+  category AS &quot;分类&quot;,
+  file.tags AS &quot;标签&quot;,
+  dateformat(file.ctime, &quot;yyyy/MM/dd&quot;) AS &quot;创建日期&quot;,
+  file.link AS &quot;笔记名称&quot;
+WHERE !category OR !file.tags OR length(file.tags) = 0
 SORT category ASC, file.ctime DESC
 &lt;/code&gt;&lt;/pre&gt;
 </content:encoded></item><item><title>Bash上传代码到github命令</title><link>https://dqtx.cc/posts/xenia/bash%E4%B8%8A%E4%BC%A0github%E5%91%BD%E4%BB%A4/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/bash%E4%B8%8A%E4%BC%A0github%E5%91%BD%E4%BB%A4/</guid><pubDate>Sat, 26 Apr 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;本教程详细介绍如何将本地项目通过Bash 终端上传代码到 GitHub&lt;/p&gt;
@@ -10278,6 +10278,16 @@ const sponsors = [
 #go-to-comments-btn
   // 从 bottom: 14.5rem 改为 bottom: 10.5rem（向下移动 4rem）
 &lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;坑 11：导航栏文字点击后向右移动&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;现象&lt;/strong&gt;：点击导航栏链接（首页、归档等）时，文字会向右抖动/拉扯，像是位移了一样。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;排查过程&lt;/strong&gt;：花了很长时间排查代码，尝试了移除 &lt;code&gt;onload-animation&lt;/code&gt;、&lt;code&gt;scale-animation&lt;/code&gt;、&lt;code&gt;active:scale-95&lt;/code&gt; 等动画类，修改 Swup 过渡动画 CSS，添加 &lt;code&gt;contain: layout&lt;/code&gt; 等多种方案，本地始终没有解决。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原因&lt;/strong&gt;：最终发现是&lt;strong&gt;浏览器本地缓存&lt;/strong&gt;导致的。推送到 GitHub 构建部署后，访问线上网站时完全没有这个问题。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;经验教训&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;先对比线上版本&lt;/strong&gt;：遇到视觉问题时，先检查 GitHub 部署后的线上版本是否也有同样的问题。如果线上正常，大概率是本地缓存。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;清除缓存再测试&lt;/strong&gt;：&lt;code&gt;Ctrl+Shift+Delete&lt;/code&gt; 清除浏览器缓存后重新加载，很多&quot;诡异&quot;问题会自动消失。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;不要在缓存问题上浪费时间&lt;/strong&gt;：如果改了很多代码都没效果，停下来想想是不是根本不是代码的问题。&lt;/li&gt;
+&lt;/ol&gt;
 &lt;h2&gt;五、配色系统设计&lt;/h2&gt;
 &lt;h3&gt;设计理念&lt;/h3&gt;
 &lt;p&gt;博客采用&lt;strong&gt;冷紫蓝系&lt;/strong&gt;作为唯一签名色，打造冷静编辑部的视觉氛围。&lt;/p&gt;
