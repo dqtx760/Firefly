@@ -59,6 +59,7 @@ Claude Skills 作为 AI 助手的功能拓展核心，能精准对接各类场�
 [5 个才是真正值得必装的](https://x.com/BTCqzy1/status/2048628785793425837)
 
 ## 11个Skill聚合战
+https://ai.codefather.cn/skills
 
 https://dokobot.ai/zh-CN/skill
 

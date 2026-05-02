@@ -3,7 +3,7 @@
 @layer components {
     /* 覆盖卡片背景色，更冷的灰蓝 */
     :root {
-        --card-bg: oklch(0.97 0.003 268) !important;
+        --card-bg: #F8F6F2 !important;
     }
     html.dark :root {
         --card-bg: oklch(0.22 0.008 268) !important;
@@ -34,11 +34,15 @@
     }
 
     .card-base {
-        @apply rounded-[var(--radius-large)] overflow-hidden bg-[var(--card-bg)] transition;
+        @apply rounded-[var(--radius-large)] overflow-hidden transition;
+        background: #F8F6F2 !important;
+        background-color: #F8F6F2 !important;
         border: 1px solid oklch(0.90 0.005 268);
         box-shadow: 0 1px 4px oklch(0 0 0 / 0.04);
     }
     .dark .card-base {
+        background: oklch(0.22 0.008 268) !important;
+        background-color: oklch(0.22 0.008 268) !important;
         border-color: oklch(0.25 0.01 268);
         box-shadow: 0 1px 4px oklch(0 0 0 / 0.3);
     }

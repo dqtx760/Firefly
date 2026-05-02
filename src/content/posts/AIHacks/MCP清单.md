@@ -75,6 +75,9 @@ https://github.com/glips/figma-context-mcp
 - 项目地址：
 https://github.com/modelcontextprotocol/servers/tree/main/sequential-thinking
 
+更多
+https://ai.codefather.cn/mcp
+
 ## 二、完整MCP配置文件
 适配 Cursor、Claude 桌面端、TRAE 等客户端，直接写入 mcp.json 即可使用。
 ```json

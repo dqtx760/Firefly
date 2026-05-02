@@ -225,6 +225,7 @@ C:\Users\%username%\AppData\Roaming\Listary\UserProfile\Settings\Preferences.jso
 
 -  [Everything](https://ftp.voidtools.com/zh-cn/downloads/)
 -  [Flow Launcher](https://github.com/Flow-Launcher/Flow.Launcher)
+- [燕子启动器](https://github.com/luoluoluo22/yanzi)
 
 
 

@@ -135,7 +135,7 @@ export const profileConfig: ProfileConfig = {
 			url: "https://t.me/+Vk17JyylJkdjMmU1",
 		},
 		{
-			name: "Bilibli",
+			name: "Bilibili",
 			icon: "bilibili", // Local icon
 			url: "https://space.bilibili.com/491358682/upload/video",
 		},

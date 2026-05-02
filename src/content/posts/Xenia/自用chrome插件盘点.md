@@ -60,6 +60,7 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-202604
 [Bookmark Save](https://chromewebstore.google.com/detail/bookmark-save-export-twit/lgjolpecipmadohbokoeojckfbcglbod)：导出 Twitter 书签
 [即刻导出](https://chromewebstore.google.com/detail/%E5%8D%B3%E5%88%BB%E5%AF%BC%E5%87%BA/bknkpflbkcapjdbcbdoijnjdbkdabjli)：导出即刻动态为本地文件
 [Gatekeeper](https://chromewebstore.google.com/detail/cat-gatekeeper/elbikiflgfhjdjmficnigpeegjbhdidh?authuser=2)：一个猫咪强制休息插件！
+[X 爆款监测](https://chromewebstore.google.com/detail/x-viral-monitor/dkplofpecmjmbhgjgleeflcnfgfkdfpd)：生成评论回复
 
 ## ✅排版提示词
 

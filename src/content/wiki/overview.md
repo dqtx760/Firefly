@@ -4,7 +4,7 @@
 
 - **主题**: Fuwari 静态站点生成器
 - **部署**: GitHub + EdgeOne 自动构建
-- **图床**: Gitee (gitee.com/da-qiang-classmate/typora)
+- **图床**: Gitee 
 - **作者**: 92 年生人，数字生产力玩家
 - **文章总数**: 105 篇
 - **分类数**: 6 个
