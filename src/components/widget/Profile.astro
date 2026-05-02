@@ -129,12 +129,12 @@ for (const post of posts) {
 
     /* 社交图标按钮 */
     .social-icon-btn {
-        background: #f1f5f9 !important;
+        background: #e2e8f0 !important;
         display: flex;
         align-items: center;
         justify-content: center;
         transition: all 0.2s ease;
-        border: 1px solid #e2e8f0;
+        border: 1px solid #cbd5e1;
     }
 
     .social-icon-btn:hover {
@@ -143,68 +143,76 @@ for (const post of posts) {
     }
 
     html.dark .social-icon-btn {
-        background: rgba(51, 65, 85, 0.5) !important;
-        border: 1px solid rgba(148, 163, 184, 0.15);
-        backdrop-filter: blur(8px);
+        background: rgba(51, 65, 85, 0.8) !important;
+        border: 1px solid rgba(148, 163, 184, 0.2);
     }
 
-    /* 品牌色 - 悬停时显示对应品牌色 */
+    /* 品牌色 - 默认显示品牌图标色，悬停白字+品牌背景 */
+    .social-icon-btn[aria-label="微信"] svg,
+    .social-icon-btn[aria-label="微信"] svg * {
+        fill: #07a33e !important;
+        color: #07a33e !important;
+    }
     .social-icon-btn[aria-label="微信"]:hover {
         background: #07a33e !important;
         border-color: #07a33e !important;
+    }
+    .social-icon-btn[aria-label="微信"]:hover svg,
+    .social-icon-btn[aria-label="微信"]:hover svg * {
+        fill: #ffffff !important;
+        color: #ffffff !important;
+    }
+
+    .social-icon-btn[aria-label="Telegram"] svg,
+    .social-icon-btn[aria-label="Telegram"] svg * {
+        fill: #1d8ed2 !important;
+        color: #1d8ed2 !important;
     }
     .social-icon-btn[aria-label="Telegram"]:hover {
         background: #1d8ed2 !important;
         border-color: #1d8ed2 !important;
     }
+    .social-icon-btn[aria-label="Telegram"]:hover svg,
+    .social-icon-btn[aria-label="Telegram"]:hover svg * {
+        fill: #ffffff !important;
+        color: #ffffff !important;
+    }
+
+    .social-icon-btn[aria-label="Bilibili"] svg,
+    .social-icon-btn[aria-label="Bilibili"] svg * {
+        fill: #e5567a !important;
+        color: #e5567a !important;
+    }
     .social-icon-btn[aria-label="Bilibili"]:hover {
         background: #e5567a !important;
         border-color: #e5567a !important;
+    }
+    .social-icon-btn[aria-label="Bilibili"]:hover svg,
+    .social-icon-btn[aria-label="Bilibili"]:hover svg * {
+        fill: #ffffff !important;
+        color: #ffffff !important;
+    }
+
+    .social-icon-btn[aria-label="GitHub"] svg,
+    .social-icon-btn[aria-label="GitHub"] svg * {
+        fill: #1f2937 !important;
+        color: #1f2937 !important;
     }
     .social-icon-btn[aria-label="GitHub"]:hover {
         background: #1f2937 !important;
         border-color: #1f2937 !important;
     }
-
-    /* 图标颜色 - 深色确保浅色模式可见 */
-    .social-icon-btn svg,
-    .social-icon-btn :deep(svg),
-    .social-icon-btn :deep(.iconify),
-    .social-icon-btn svg path,
-    .social-icon-btn :deep(svg path),
-    .social-icon-btn :deep(.iconify) path,
-    .social-icon-btn svg *,
-    .social-icon-btn :deep(svg *) {
-        fill: #374151 !important;
-        color: #374151 !important;
-        stroke: #374151 !important;
-    }
-
-    .social-icon-btn:hover svg,
-    .social-icon-btn:hover :deep(svg),
-    .social-icon-btn:hover :deep(.iconify),
-    .social-icon-btn:hover svg path,
-    .social-icon-btn:hover :deep(svg path),
-    .social-icon-btn:hover :deep(.iconify) path,
-    .social-icon-btn:hover svg *,
-    .social-icon-btn:hover :deep(svg *) {
+    .social-icon-btn[aria-label="GitHub"]:hover svg,
+    .social-icon-btn[aria-label="GitHub"]:hover svg * {
         fill: #ffffff !important;
         color: #ffffff !important;
-        stroke: #ffffff !important;
     }
 
-    /* 暗黑模式图标颜色 */
-    html.dark .social-icon-btn svg,
-    html.dark .social-icon-btn :deep(svg),
-    html.dark .social-icon-btn :deep(.iconify),
-    html.dark .social-icon-btn svg path,
-    html.dark .social-icon-btn :deep(svg path),
-    html.dark .social-icon-btn :deep(.iconify) path,
-    html.dark .social-icon-btn svg *,
-    html.dark .social-icon-btn :deep(svg *) {
+    /* 暗黑模式 - GitHub 图标改浅色 */
+    html.dark .social-icon-btn[aria-label="GitHub"] svg,
+    html.dark .social-icon-btn[aria-label="GitHub"] svg * {
         fill: #94a3b8 !important;
         color: #94a3b8 !important;
-        stroke: #94a3b8 !important;
     }
 
     /* 个人信息卡片 - 浅色模式 */
