@@ -68,7 +68,10 @@ export function setBgHueRotate(hue: number): void {
 	if (bgBox) {
 		// Retrieve existing blur value
 		const blur = getBgBlur();
-		bgBox.style.setProperty("filter", `blur(${blur / 16}rem) hue-rotate(${hue}deg)`);
+		bgBox.style.setProperty(
+			"filter",
+			`blur(${blur / 16}rem) hue-rotate(${hue}deg)`,
+		);
 	}
 }
 

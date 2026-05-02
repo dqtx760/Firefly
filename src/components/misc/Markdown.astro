@@ -8,6 +8,37 @@ interface Props {
 const className = Astro.props.class;
 ---
 <div data-pagefind-body class=`prose dark:prose-invert prose-base !max-w-none custom-md break-words ${className}`>
+
+<style>
+/* Mac-style code blocks */
+:global(.expressive-code .frame) {
+  position: relative;
+  padding-top: 2rem !important;
+  border-radius: 8px !important;
+  border: none !important;
+  overflow: hidden;
+  background: #1e1e2e !important;
+}
+:global(.expressive-code .frame::before) {
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 11px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #ff5f57;
+  box-shadow:
+    8px 0 0 #febc2e,
+    16px 0 0 #28c840;
+  z-index: 10;
+}
+:global(.expressive-code .frame pre) {
+  border: none !important;
+  border-radius: 0 0 8px 8px !important;
+  margin-top: 0 !important;
+}
+</style>
     <!--<div class="prose dark:prose-invert max-w-none custom-md">-->
     <!--<div class="max-w-none custom-md">-->
     <slot/>

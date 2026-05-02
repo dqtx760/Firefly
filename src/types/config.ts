@@ -125,8 +125,14 @@ export type GitHubEditConfig = {
 };
 
 export type NoticeConfig = {
-    enable: boolean;
-    level: "info" | "note" | "tip" | "happy" | "caution" | "warning" | "important";
-    content: string;
+	enable: boolean;
+	level:
+		| "info"
+		| "note"
+		| "tip"
+		| "happy"
+		| "caution"
+		| "warning"
+		| "important";
+	content: string;
 };
-

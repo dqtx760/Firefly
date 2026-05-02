@@ -7,46 +7,46 @@ import { getCollection } from "astro:content";
 
 // 获取所有文章并统计标签
 const allPosts = await getCollection("posts", ({ data }) => {
-    return import.meta.env.PROD ? data.draft !== true : true;
+	return import.meta.env.PROD ? data.draft !== true : true;
 });
 
 // 统计每个标签的文章数量
 const tagCount = new Map<string, number>();
 for (const post of allPosts) {
-    const tags = post.data.tags || [];
-    for (const tag of tags) {
-        tagCount.set(tag, (tagCount.get(tag) || 0) + 1);
-    }
+	const tags = post.data.tags || [];
+	for (const tag of tags) {
+		tagCount.set(tag, (tagCount.get(tag) || 0) + 1);
+	}
 }
 
 // 获取标签
 const tags = Array.from(tagCount.entries())
-    .map(([name, count]) => ({ name, count }))
-    .sort((a, b) => b.count - a.count)
-    .slice(0, 16);
+	.map(([name, count]) => ({ name, count }))
+	.sort((a, b) => b.count - a.count)
+	.slice(0, 16);
 
 // 为每个标签生成从中心向外扩散的动画参数
 const fireflyTags = tags.map((tag, index) => {
-    // 从中心向外散开的角度
-    const angle = (index / tags.length) * Math.PI * 2;
-    // 起始位置在中心附近
-    const startX = Math.cos(angle) * 5;
-    const startY = Math.sin(angle) * 5;
-    // 向外扩散的目标位置
-    const floatX = Math.cos(angle) * (50 + Math.random() * 30);
-    const floatY = Math.sin(angle) * (40 + Math.random() * 25);
-    
-    return {
-        ...tag,
-        startX,
-        startY,
-        floatX,
-        floatY,
-        delay: Math.random() * 2,
-        duration: 4 + Math.random() * 3,
-        // 每个标签不同的颜色
-        hue: (index * 30) % 360,
-    };
+	// 从中心向外散开的角度
+	const angle = (index / tags.length) * Math.PI * 2;
+	// 起始位置在中心附近
+	const startX = Math.cos(angle) * 5;
+	const startY = Math.sin(angle) * 5;
+	// 向外扩散的目标位置
+	const floatX = Math.cos(angle) * (50 + Math.random() * 30);
+	const floatY = Math.sin(angle) * (40 + Math.random() * 25);
+
+	return {
+		...tag,
+		startX,
+		startY,
+		floatX,
+		floatY,
+		delay: Math.random() * 2,
+		duration: 4 + Math.random() * 3,
+		// 每个标签不同的颜色
+		hue: (index * 30) % 360,
+	};
 });
 ---
 

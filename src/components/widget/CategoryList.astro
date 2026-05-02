@@ -1,23 +1,23 @@
 ---
+import fs from "node:fs";
+import path from "node:path";
 /**
  * 文章分类组件
  * 显示所有分类及其文章数量
  * 自动检测 content/posts 下的文件夹作为分类
  */
 import { getCollection } from "astro:content";
-import fs from "node:fs";
-import path from "node:path";
 
 // 获取所有文章并统计分类
 const allPosts = await getCollection("posts", ({ data }) => {
-    return import.meta.env.PROD ? data.draft !== true : true;
+	return import.meta.env.PROD ? data.draft !== true : true;
 });
 
 // 统计每个分类的文章数量
 const categoryCount = new Map<string, number>();
 for (const post of allPosts) {
-    const category = post.data.category || "未分类";
-    categoryCount.set(category, (categoryCount.get(category) || 0) + 1);
+	const category = post.data.category || "未分类";
+	categoryCount.set(category, (categoryCount.get(category) || 0) + 1);
 }
 
 // 自动检测 content/posts 下的文件夹作为分类
@@ -25,12 +25,13 @@ const postsDir = path.join(process.cwd(), "src/content/posts");
 let validCategories: Set<string>;
 
 if (fs.existsSync(postsDir)) {
-    const folders = fs.readdirSync(postsDir, { withFileTypes: true })
-        .filter(dirent => dirent.isDirectory())
-        .map(dirent => dirent.name);
-    validCategories = new Set(folders);
+	const folders = fs
+		.readdirSync(postsDir, { withFileTypes: true })
+		.filter((dirent) => dirent.isDirectory())
+		.map((dirent) => dirent.name);
+	validCategories = new Set(folders);
 } else {
-    validCategories = new Set(["Software", "Technical", "AIHacks", "Other"]);
+	validCategories = new Set(["Software", "Technical", "AIHacks", "Other"]);
 }
 
 // 自定义分类排序顺序
@@ -38,19 +39,19 @@ const customOrder = ["Software", "Technical", "AIHacks", "Other"];
 
 // 转换为数组并排序
 const categories = Array.from(categoryCount.entries())
-    .filter(([name]) => validCategories.has(name))
-    .map(([name, count]) => ({
-        name,
-        count
-    }))
-    .sort((a, b) => {
-        const aIndex = customOrder.indexOf(a.name);
-        const bIndex = customOrder.indexOf(b.name);
-        if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex;
-        if (aIndex !== -1) return -1;
-        if (bIndex !== -1) return 1;
-        return a.name.localeCompare(b.name);
-    });
+	.filter(([name]) => validCategories.has(name))
+	.map(([name, count]) => ({
+		name,
+		count,
+	}))
+	.sort((a, b) => {
+		const aIndex = customOrder.indexOf(a.name);
+		const bIndex = customOrder.indexOf(b.name);
+		if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex;
+		if (aIndex !== -1) return -1;
+		if (bIndex !== -1) return 1;
+		return a.name.localeCompare(b.name);
+	});
 ---
 
 <div class="category-list">

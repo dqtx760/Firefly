@@ -18,7 +18,7 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/202605011715
 **填写邀请码，免费领 ¥10 API 体验金**
 邀请新用户注册，双方各得 **¥10 API 体验金**（40天有效）
 
-![小米MiMo V2.5 AI大模型邀请注册免费体验](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260501164444860.webp)
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260501164444860.webp)
 
 ### 🔗快速入口
 👉 注册地址：

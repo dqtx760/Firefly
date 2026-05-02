@@ -21,6 +21,14 @@ const postsCollection = defineCollection({
 	}),
 });
 
+const wikiCollection = defineCollection({
+	schema: z.object({
+		title: z.string().optional().default(""),
+		description: z.string().optional().default(""),
+	}),
+});
+
 export const collections = {
 	posts: postsCollection,
+	wiki: wikiCollection,
 };

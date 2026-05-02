@@ -1,0 +1,149 @@
+---
+import Footer from "@components/Footer.astro";
+import BackToTop from "@components/control/BackToTop.astro";
+import type { MarkdownHeading } from "astro";
+import { siteConfig, profileConfig } from "@/config";
+
+interface Props {
+	title?: string;
+	description?: string;
+	headings?: MarkdownHeading[];
+}
+
+const { title, description, headings = [] } = Astro.props;
+
+const pageTitle = title ? `${title} - ${siteConfig.title}` : siteConfig.title;
+const pageDescription = description || siteConfig.description;
+
+// 快捷导航链接
+const quickLinks = [
+	{ name: "Home", url: "/" },
+	{ name: "Index", url: "/wiki/index/" },
+	{ name: "Overview", url: "/wiki/overview/" },
+	{ name: "Purpose", url: "/wiki/purpose/" },
+	{ name: "Schema", url: "/wiki/schema/" },
+	{ name: "Log", url: "/wiki/log/" },
+];
+---
+
+<!DOCTYPE html>
+<html lang="zh-CN" class="dark bg-[var(--page-bg)] transition text-[12px] md:text-[16px]">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="referrer" content="no-referrer">
+	<title>{pageTitle}</title>
+	<meta name="description" content={pageDescription}>
+	<meta name="author" content={profileConfig.name}>
+	<link rel="icon" href="/avatar.jpg" sizes="32x32">
+	<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+	<link rel="preload" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css"></noscript>
+	<style>
+		:root {
+			--hue: 250;
+			--primary: #3b82f6;
+			--page-bg: #0f172a;
+			--card-bg: #1e293b;
+			--text-primary: #e2e8f0;
+			--text-secondary: #94a3b8;
+			--line-divider: #334155;
+			--btn-regular-bg: #1e293b;
+			--code-block-bg: #0f172a;
+		}
+		/* Prevent FOUC - inline critical styles */
+		body {
+			background: #0f172a;
+			color: #e2e8f0;
+			font-family: 'LXGW WenKai', system-ui, -apple-system, sans-serif;
+			margin: 0;
+		}
+		.card-base {
+			background: #1e293b;
+			border-radius: 0.75rem;
+		}
+		.wiki-nav {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-bottom: 1rem;
+		}
+		.wiki-title {
+			background: linear-gradient(135deg, #38bdf8, #a78bfa);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+		}
+		.wiki-nav-links {
+			display: flex;
+			align-items: center;
+			gap: 0.25rem;
+		}
+		.wiki-nav-links a {
+			padding: 0.375rem 0.75rem;
+			border-radius: 0.25rem;
+			font-size: 0.875rem;
+			color: var(--text-secondary);
+			text-decoration: none;
+			transition: all 0.2s;
+		}
+		.wiki-nav-links a:hover {
+			color: var(--primary);
+			background: var(--btn-regular-bg);
+		}
+	</style>
+</head>
+<body class="min-h-screen transition">
+	<!-- 整体居中容器 -->
+	<div class="wiki-wrapper max-w-[1280px] mx-auto px-6 py-4">
+		<!-- 顶部导航栏 -->
+		<div class="wiki-nav">
+			<!-- 左侧 Wiki 标题 -->
+			<a href="/wiki/" target="_blank" class="flex items-center gap-2 group">
+				<span class="wiki-title" style="font-size:1.25rem;font-weight:700;">Wiki</span>
+			</a>
+			<!-- 右侧快捷链接 -->
+			<div class="wiki-nav-links">
+				{quickLinks.map((link) => (
+					<a href={link.url}>
+						{link.name}
+					</a>
+				))}
+			</div>
+		</div>
+
+		<!-- 三栏布局 -->
+		<div class="flex gap-6">
+			<slot></slot>
+			<!-- 右侧大纲 -->
+			{headings && headings.length > 0 && (
+				<aside class="wiki-toc hidden xl:block w-56 shrink-0">
+					<nav class="sticky top-40 max-h-[calc(100vh-10rem)] overflow-y-auto hide-scrollbar">
+						<ul class="space-y-1.5 text-sm">
+							{headings.map((heading) => (
+								<li class:list={[heading.depth === 3 && "pl-3"]}>
+									<a
+										href={`#${heading.slug}`}
+										class="block px-2 py-1 rounded hover:bg-[var(--btn-regular-bg)] text-[var(--text-secondary)] hover:text-[var(--primary)] transition"
+									>
+										{heading.text}
+									</a>
+								</li>
+							))}
+						</ul>
+					</nav>
+				</aside>
+			)}
+		</div>
+
+		<!-- Footer -->
+		<Footer></Footer>
+	</div>
+
+	<!-- Back to Top -->
+	<BackToTop></BackToTop>
+
+	<script type="module" src="/_astro/page.G51m6u_A.js"></script>
+</body>
+</html>
+

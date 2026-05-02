@@ -9,8 +9,7 @@ draft: false
 pinned: false
 image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260430235845976.webp
 ---
-
-很多人用 Claude Code 写了上百个文件，但99%的人从来没搞清楚一个最基本的问题：
+很多人用 Claude Code 写了上百篇文章，但99%的人从来没搞清楚一个最基本的问题：
 
 **CLAUDE.md 和 MEMORY.md 到底有什么区别？**
 

@@ -3,7 +3,7 @@ import { getSortedPosts } from "../utils/content-utils";
 import { getPostUrlBySlug } from "../utils/url-utils";
 
 interface Props {
-    cols?: number; // 每行显示几列
+	cols?: number; // 每行显示几列
 }
 
 const { cols = 3 } = Astro.props;
@@ -11,7 +11,9 @@ const { cols = 3 } = Astro.props;
 const posts = await getSortedPosts();
 
 // 过滤出有封面图的文章
-const postsWithCover = posts.filter(post => post.data.image || post.data.cover);
+const postsWithCover = posts.filter(
+	(post) => post.data.image || post.data.cover,
+);
 ---
 
 <div class="gallery-container">

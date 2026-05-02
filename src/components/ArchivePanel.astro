@@ -10,46 +10,46 @@ let posts = await getSortedPosts();
 
 // 按年份和月份分组
 interface MonthGroup {
-    month: number;
-    posts: typeof posts;
+	month: number;
+	posts: typeof posts;
 }
 
 interface YearGroup {
-    year: number;
-    months: MonthGroup[];
+	year: number;
+	months: MonthGroup[];
 }
 
 const groups: YearGroup[] = (() => {
-    const yearGroups: { [year: number]: { [month: number]: typeof posts } } = {};
-    
-    posts.forEach(post => {
-        const year = post.data.published.getFullYear();
-        const month = post.data.published.getMonth() + 1;
-        
-        if (!yearGroups[year]) {
-            yearGroups[year] = {};
-        }
-        if (!yearGroups[year][month]) {
-            yearGroups[year][month] = [];
-        }
-        yearGroups[year][month].push(post);
-    });
-    
-    const result: YearGroup[] = Object.keys(yearGroups)
-        .map(year => {
-            const yearNum = Number.parseInt(year);
-            const months: MonthGroup[] = Object.keys(yearGroups[yearNum])
-                .map(month => ({
-                    month: Number.parseInt(month),
-                    posts: yearGroups[yearNum][Number.parseInt(month)]
-                }))
-                .sort((a, b) => b.month - a.month);
-            
-            return { year: yearNum, months };
-        })
-        .sort((a, b) => b.year - a.year);
-    
-    return result;
+	const yearGroups: { [year: number]: { [month: number]: typeof posts } } = {};
+
+	posts.forEach((post) => {
+		const year = post.data.published.getFullYear();
+		const month = post.data.published.getMonth() + 1;
+
+		if (!yearGroups[year]) {
+			yearGroups[year] = {};
+		}
+		if (!yearGroups[year][month]) {
+			yearGroups[year][month] = [];
+		}
+		yearGroups[year][month].push(post);
+	});
+
+	const result: YearGroup[] = Object.keys(yearGroups)
+		.map((year) => {
+			const yearNum = Number.parseInt(year);
+			const months: MonthGroup[] = Object.keys(yearGroups[yearNum])
+				.map((month) => ({
+					month: Number.parseInt(month),
+					posts: yearGroups[yearNum][Number.parseInt(month)],
+				}))
+				.sort((a, b) => b.month - a.month);
+
+			return { year: yearNum, months };
+		})
+		.sort((a, b) => b.year - a.year);
+
+	return result;
 })();
 
 function formatDate(date: Date) {
@@ -58,7 +58,21 @@ function formatDate(date: Date) {
 	return `${month}-${day}`;
 }
 
-const monthNames = ['', '一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'];
+const monthNames = [
+	"",
+	"一月",
+	"二月",
+	"三月",
+	"四月",
+	"五月",
+	"六月",
+	"七月",
+	"八月",
+	"九月",
+	"十月",
+	"十一月",
+	"十二月",
+];
 ---
 
 <div class="card-base px-8 py-6">

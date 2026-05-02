@@ -12,13 +12,13 @@ import type {
 import { LinkPreset } from "./types/config";
 
 export const noticeConfig: NoticeConfig = {
-    enable: false,
-    level: "happy",
-    content: "元宝发红包了！看置顶文章！",
+	enable: false,
+	level: "happy",
+	content: "元宝发红包了！看置顶文章！",
 };
 
 export const siteConfig: SiteConfig = {
-	title: "Derek Zhao Blog",
+	title: "Derek Zhao",
 	subtitle: "技术分享与实践",
 	description:
 		"分享网络技术、服务器部署、内网穿透、静态网站搭建、CDN优化、容器化部署等技术教程与实践经验的个人技术博客，专注于云原生、无服务器架构和前后端开发，作者为Derek Zhao",
@@ -82,6 +82,11 @@ export const navBarConfig: NavBarConfig = {
 			external: false,
 		},
 		{
+			name: "Wiki",
+			url: "/wiki/",
+			external: false,
+		},
+		{
 			name: "友链",
 			url: "/friends/", // Internal links should not include the base path, as it is automatically added
 			external: false, // Show an external link icon and will open in a new tab
@@ -138,7 +143,7 @@ export const profileConfig: ProfileConfig = {
 			name: "GitHub",
 			icon: "github", // Local icon
 			url: "https://github.com/dqtx760",
-		}
+		},
 	],
 };
 
