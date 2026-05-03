@@ -86,7 +86,7 @@
 
   thead th
     background: rgba(0, 0, 0, 0.6)
-    color: var(--primary)
+    color: #6B9BD2
     font-weight: 700 !important
 
   th, td
@@ -111,6 +111,14 @@
   // 表格内加粗文字显示蓝色
   td strong, td b, td [style*="font-weight"]
     color: var(--primary)
+
+  // 表格内链接颜色 - 在深色背景上需要亮色
+  td a, th a
+    color: #6B9BD2 !important
+    text-decoration: underline
+    text-decoration-style: dashed
+    &:hover
+      color: #93c5fd !important
 
   th > p, td > p
     margin: 0

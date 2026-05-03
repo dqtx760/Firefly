@@ -88,8 +88,8 @@ const fireflyTags = tags.map((tag, index) => {
         align-items: center;
         position: relative;
         overflow: hidden;
-        /* 深黑背景，微弱模糊 */
-        background: rgba(8, 12, 20, 0.85);
+        /* 暖色深棕背景，配合 Kami 主题 */
+        background: linear-gradient(135deg, #2a2520, #1e1a16);
         border-radius: 12px;
     }
 
@@ -100,9 +100,9 @@ const fireflyTags = tags.map((tag, index) => {
         left: 0;
         right: 0;
         bottom: 0;
-        background-image: 
-            linear-gradient(rgba(100, 180, 255, 0.02) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(100, 180, 255, 0.02) 1px, transparent 1px);
+        background-image:
+            linear-gradient(rgba(200, 180, 150, 0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(200, 180, 150, 0.03) 1px, transparent 1px);
         background-size: 40px 40px;
         pointer-events: none;
     }
@@ -115,8 +115,8 @@ const fireflyTags = tags.map((tag, index) => {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background: radial-gradient(circle, 
-            rgba(100, 200, 255, 0.08) 0%, 
+        background: radial-gradient(circle,
+            rgba(200, 170, 120, 0.1) 0%,
             transparent 70%
         );
         animation: centerPulse 5s ease-in-out infinite;
@@ -199,8 +199,8 @@ const fireflyTags = tags.map((tag, index) => {
         font-weight: 500;
         font-family: 'Consolas', 'Courier New', monospace;
         /* 渐变文字 */
-        background: linear-gradient(90deg, 
-            hsl(var(--hue), 90%, 70%), 
+        background: linear-gradient(90deg,
+            hsl(var(--hue), 90%, 70%),
             hsl(calc(var(--hue) + 40), 90%, 65%),
             hsl(calc(var(--hue) + 80), 90%, 70%)
         );
@@ -211,7 +211,7 @@ const fireflyTags = tags.map((tag, index) => {
         filter: drop-shadow(0 0 3px hsl(var(--hue), 90%, 60%))
                 drop-shadow(0 0 6px hsl(var(--hue), 80%, 50%));
         padding: 2px 5px;
-        background-color: rgba(20, 25, 35, 0.3);
+        background-color: rgba(40, 35, 28, 0.4);
         border-radius: 3px;
     }
 

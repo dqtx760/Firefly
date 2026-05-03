@@ -1,7 +1,7 @@
 ---
 import MainGridLayout from "@layouts/MainGridLayout.astro";
 import { Icon } from "astro-icon/components";
-import { siteConfig } from "@/config";
+import { siteConfig, profileConfig } from "@/config";
 import fs from "node:fs";
 import path from "node:path";
 
@@ -143,7 +143,7 @@ function formatDate(dateStr: string): string {
               </div>
               <div class="moment-body">
                 <div class="moment-header">
-                  <span class="moment-name">{siteConfig.title}</span>
+                  <span class="moment-name">{profileConfig.name}</span>
                   <span class="moment-time">{note.time}</span>
                 </div>
                 {note.content && (
