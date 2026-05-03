@@ -24,6 +24,10 @@ export function pluginLanguageBadge() {
         transition: opacity 0.3s;
         opacity: 0;
       }
+      [data-language="plaintext"]::before,
+      [data-language="Plain"]::before {
+        display: none;
+      }
       .frame:not(.has-title):not(.is-terminal) {
         @media (hover: none) {
           & [data-language]::before {
