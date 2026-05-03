@@ -8,8 +8,8 @@
   background: #1e1e2e !important;
 }
 
-/* Mac-style window dots */
-.expressive-code .frame::before {
+/* Mac-style window dots for non-terminal frames */
+.expressive-code .frame:not(.is-terminal)::before {
   content: "";
   position: absolute;
   left: 14px;
@@ -28,6 +28,26 @@
   margin-top: 0 !important;
 }
 
+/* Terminal frames: no extra padding-top, library handles header */
 .expressive-code .frame.is-terminal {
-  padding-top: 1.4rem;
+  padding-top: 0;
+}
+
+/* Restyle terminal header: compact, with bigger dots */
+.expressive-code .frame.is-terminal .header {
+  padding-block: 0.15rem !important;
+  min-height: auto !important;
+}
+
+/* Override terminal dots: bigger and more visible */
+.expressive-code .frame.is-terminal .header::before {
+  left: 14px !important;
+  width: 6px !important;
+  height: 6px !important;
+  background-color: #ff5f57 !important;
+  opacity: 1 !important;
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+  border-radius: 50% !important;
+  box-shadow: 9px 0 0 #febc2e, 18px 0 0 #28c840 !important;
 }
