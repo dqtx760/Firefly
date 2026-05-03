@@ -2,11 +2,11 @@ import { LinkPreset, type NavBarLink } from "@/types/config";
 
 export const LinkPresets: { [key in LinkPreset]: NavBarLink } = {
 	[LinkPreset.Home]: {
-		name: "首页",
+		name: "Home",
 		url: "/",
 	},
 	[LinkPreset.Archive]: {
-		name: "归档",
+		name: "Archive",
 		url: "/archive/",
 	},
 };

@@ -27,7 +27,7 @@ let links: NavBarLink[] = navBarConfig.links.map(
         <a href={url('/')} class="btn-plain rounded-lg h-[3.25rem] px-5 font-bold">
             <div class="flex flex-row items-center text-md">
                 <Icon name="material-symbols:home-outline-rounded" class="text-[1.75rem] mb-1 mr-2 navbar-title-gradient-icon" />
-                <span class="navbar-title-gradient text-lg">{siteConfig.title}</span>
+                <span class="navbar-title-gradient text-lg navbar-blog-title">Blog</span>
             </div>
         </a>
         <div class="hidden md:flex items-center gap-1">
@@ -44,8 +44,8 @@ let links: NavBarLink[] = navBarConfig.links.map(
             ))}
             {/* 更多下拉菜单 */}
             <div class="relative" id="more-menu-wrapper">
-                <button aria-label="更多" class="btn-plain rounded-lg h-11 px-3 font-bold flex items-center gap-1" id="more-menu-btn">
-                    更多
+                <button aria-label="More" class="btn-plain rounded-lg h-11 px-3 font-bold flex items-center gap-1" id="more-menu-btn">
+                    More
                     <Icon name="material-symbols:expand-more" class="text-[1.1rem] transition-transform" id="more-menu-arrow"></Icon>
                 </button>
                 <div id="more-menu-panel" class="float-panel float-panel-closed absolute top-full right-0 mt-1 min-w-[140px] p-2 flex flex-col gap-0.5">
@@ -163,6 +163,13 @@ html.dark .navbar-title-gradient {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+/* Blog 标题 - 斜体艺术风格 */
+.navbar-blog-title {
+    font-style: italic;
+    font-family: 'Georgia', 'Palatino Linotype', 'Book Antiqua', serif;
+    letter-spacing: 0.08em;
 }
 
 /* 导航栏图标 - 渐变色 */

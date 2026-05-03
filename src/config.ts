@@ -77,7 +77,7 @@ export const navBarConfig: NavBarConfig = {
 		LinkPreset.Home,
 		LinkPreset.Archive,
 		{
-			name: "画廊",
+			name: "Gallery",
 			url: "/gallery/",
 			external: false,
 		},
@@ -97,12 +97,12 @@ export const navBarConfig: NavBarConfig = {
 			external: false, // Show an external link icon and will open in a new tab
 		},
 		{
-			name: "远程",
+			name: "Remote",
 			url: "https://www.742112.xyz/", // Internal links should not include the base path, as it is automatically added
 			external: true, // Show an external link icon and will open in a new tab
 		},
 		{
-			name: "赞助",
+			name: "Sponsors",
 			url: "/sponsors/", // Internal links should not include the base path, as it is automatically added
 			external: false, // Show an external link icon and will open in a new tab
 		},
