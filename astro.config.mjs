@@ -17,6 +17,7 @@ import remarkMath from "remark-math";
 import remarkSectionize from "remark-sectionize";
 import { imageFallbackConfig, siteConfig } from "./src/config.ts";
 import { expressiveCodeConfig } from "./src/config.ts";
+import memoriaAssets from "./src/integrations/memoria-assets.ts";
 import { pluginLanguageBadge } from "./src/plugins/expressive-code/language-badge.ts";
 import { pluginCustomCopyButton } from "./src/plugins/expressive-code/custom-copy-button.js";
 import { AdmonitionComponent } from "./src/plugins/rehype-component-admonition.mjs";
@@ -111,6 +112,7 @@ export default defineConfig({
 		},
 	},
 	integrations: [
+		memoriaAssets(),
 		tailwind({
 			nesting: true,
 		}),

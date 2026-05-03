@@ -5,19 +5,7 @@ import { siteConfig, profileConfig } from "@/config";
 import fs from "node:fs";
 import path from "node:path";
 
-// 将 Memoria 附件复制到 public 目录
 const memoriaDir = path.resolve("src/content/Memoria");
-const attachmentsDir = path.join(memoriaDir, "attachments");
-const publicAttachmentsDir = path.resolve("public/memoria-attachments");
-
-if (fs.existsSync(attachmentsDir)) {
-  if (!fs.existsSync(publicAttachmentsDir)) {
-    fs.mkdirSync(publicAttachmentsDir, { recursive: true });
-  }
-  for (const file of fs.readdirSync(attachmentsDir)) {
-    fs.copyFileSync(path.join(attachmentsDir, file), path.join(publicAttachmentsDir, file));
-  }
-}
 
 // 解析 Memoria 笔记
 const mdFiles = fs.readdirSync(memoriaDir).filter(f => f.endsWith(".md"));
