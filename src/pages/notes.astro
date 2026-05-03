@@ -199,23 +199,28 @@ function formatDate(dateStr: string): string {
 </div>
 
 <script is:inline>
-// 标签筛选 - 事件委托
+// 标签筛选 - 事件委托（挂在 document 上，不受 swup 影响）
 document.addEventListener('click', function(e) {
-  // 图片灯箱
-  var imgWrap = e.target.closest('.img-wrapper img');
+  // 图片灯箱 - 点击 .img-wrapper 内任意位置
+  var imgWrap = e.target.closest('.img-wrapper');
   if (imgWrap) {
-    var lb = document.getElementById('note-lightbox');
-    var lbImg = document.getElementById('note-lightbox-img');
-    lbImg.src = imgWrap.src;
-    lb.classList.add('open');
-    return;
+    var img = imgWrap.querySelector('img');
+    if (img) {
+      var lb = document.getElementById('note-lightbox');
+      var lbImg = document.getElementById('note-lightbox-img');
+      lbImg.src = img.src;
+      lb.classList.add('open');
+      return;
+    }
   }
+  // 点击灯箱关闭
   var lb2 = document.getElementById('note-lightbox');
   if (lb2 && lb2.classList.contains('open')) {
     lb2.classList.remove('open');
     return;
   }
 
+  // 标签筛选
   var pill = e.target.closest('.tag-pill');
   if (pill) {
     var tag = pill.getAttribute('data-filter') || 'all';
@@ -237,6 +242,7 @@ document.addEventListener('click', function(e) {
     return;
   }
 
+  // 动态内标签点击
   var noteTag = e.target.closest('.note-tag');
   if (noteTag) {
     var tag2 = noteTag.getAttribute('data-tag') || 'all';
@@ -258,6 +264,7 @@ document.addEventListener('click', function(e) {
     return;
   }
 
+  // 展开/收起
   var expandBtn = e.target.closest('.expand-btn');
   if (expandBtn) {
     var textEl = expandBtn.previousElementSibling;
@@ -268,6 +275,7 @@ document.addEventListener('click', function(e) {
     return;
   }
 
+  // 复制
   var copyBtn = e.target.closest('.copy-btn');
   if (copyBtn) {
     var content = copyBtn.getAttribute('data-content');
@@ -288,37 +296,37 @@ function initExpandButtons() {
     }
   });
 }
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', initExpandButtons);
-} else {
-  initExpandButtons();
-}
 
-// 日期导航
-document.addEventListener('DOMContentLoaded', function() {
+// 日期导航初始化
+function initDateNav() {
   var toggleBtn = document.getElementById('date-nav-toggle');
   var navPanel = document.getElementById('date-nav-panel');
-  if (toggleBtn && navPanel) {
-    toggleBtn.addEventListener('click', function(e) {
-      e.stopPropagation();
-      var isOpen = navPanel.classList.toggle('open');
-      toggleBtn.classList.toggle('active', isOpen);
-    });
+  if (!toggleBtn || !navPanel) return;
 
-    document.addEventListener('click', function(e) {
-      if (!navPanel.contains(e.target) && e.target !== toggleBtn) {
-        navPanel.classList.remove('open');
-        toggleBtn.classList.remove('active');
-      }
-    });
+  // 移除旧监听器（用克隆节点替换）
+  var newToggle = toggleBtn.cloneNode(true);
+  toggleBtn.parentNode.replaceChild(newToggle, toggleBtn);
+  toggleBtn = newToggle;
 
-    navPanel.querySelectorAll('.date-link').forEach(function(link) {
-      link.addEventListener('click', function() {
-        navPanel.classList.remove('open');
-        toggleBtn.classList.remove('active');
-      });
+  toggleBtn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    var isOpen = navPanel.classList.toggle('open');
+    toggleBtn.classList.toggle('active', isOpen);
+  });
+
+  document.addEventListener('click', function(e) {
+    if (!navPanel.contains(e.target) && e.target !== toggleBtn) {
+      navPanel.classList.remove('open');
+      toggleBtn.classList.remove('active');
+    }
+  });
+
+  navPanel.querySelectorAll('.date-link').forEach(function(link) {
+    link.addEventListener('click', function() {
+      navPanel.classList.remove('open');
+      toggleBtn.classList.remove('active');
     });
-  }
+  });
 
   var dateLinks = document.querySelectorAll('.date-link');
   var daySections = document.querySelectorAll('.day-section');
@@ -347,7 +355,22 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   }
-});
+}
+
+// 首次加载
+function initNotesPage() {
+  initExpandButtons();
+  initDateNav();
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initNotesPage);
+} else {
+  initNotesPage();
+}
+
+// swup 页面切换后重新初始化
+document.addEventListener('swup:contentReplaced', initNotesPage);
 </script>
 
 <style>

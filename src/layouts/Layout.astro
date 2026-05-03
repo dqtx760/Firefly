@@ -601,6 +601,13 @@ const setup = () => {
 		}
 	})
 	window.swup.hooks.on('content:replace', initCustomScrollbar)
+	window.swup.hooks.on('content:replace', () => {
+		// Disable animations on newly replaced content to prevent flash
+		document.querySelectorAll('.onload-animation').forEach(el => {
+			el.style.opacity = '1';
+			el.style.animation = 'none';
+		});
+	})
 	window.swup.hooks.on('visit:start', (visit: {to: {url: string}}) => {
 		// change banner height immediately when a link is clicked
 		const bodyElement = document.querySelector('body')
