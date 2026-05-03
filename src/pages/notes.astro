@@ -16,6 +16,7 @@ interface Note {
   time: string;
   content: string;
   images: string[];
+  tags: string[];
 }
 
 const notes: Note[] = [];
@@ -43,7 +44,15 @@ for (const file of mdFiles) {
         images.push(`/memoria-attachments/${match[1]}`);
       }
       content = content.replace(/!\[\[[^\]]+\]\]/g, "").trim();
-      notes.push({ date, weekday, time, content, images });
+      // 提取 #标签
+      const tags: string[] = [];
+      const tagRegex = /#([^\s#]+)/g;
+      let tagMatch;
+      while ((tagMatch = tagRegex.exec(content)) !== null) {
+        tags.push(tagMatch[1]);
+      }
+      content = content.replace(/#[^\s#]+/g, "").replace(/\n{2,}/g, "\n").trim();
+      notes.push({ date, weekday, time, content, images, tags });
     }
   }
 }
@@ -56,6 +65,9 @@ for (const note of notes) {
   if (!grouped.has(note.date)) grouped.set(note.date, []);
   grouped.get(note.date)!.push(note);
 }
+
+// 收集所有标签
+const allTags = Array.from(new Set(notes.flatMap(n => n.tags)));
 
 // 生成日期列表（用于右侧导航）
 const dates = Array.from(grouped.entries())
@@ -96,6 +108,18 @@ function formatDate(dateStr: string): string {
       </div>
     </div>
 
+    <!-- 标签筛选栏 -->
+    {allTags.length > 0 && (
+      <div class="card-base px-6 py-3 mb-4 tag-filter-bar">
+        <div class="tag-filter-scroll">
+          <button class="tag-pill active" data-filter="all">全部</button>
+          {allTags.map(tag => (
+            <button class="tag-pill" data-filter={tag}>#{tag}</button>
+          ))}
+        </div>
+      </div>
+    )}
+
     <!-- 笔记流 -->
     <div class="card-base px-6 py-2 relative">
       <!-- 日期导航按钮（右上角） -->
@@ -123,7 +147,7 @@ function formatDate(dateStr: string): string {
           </div>
 
           {dayNotes.map((note) => (
-            <div class="moment-card">
+            <div class="moment-card" data-tags={note.tags.join(",")}>
               <div class="moment-left">
                 <div class="avatar">
                   <img src="/avatar.jpg" alt="avatar" />
@@ -152,6 +176,13 @@ function formatDate(dateStr: string): string {
                     ))}
                   </div>
                 )}
+                {note.tags.length > 0 && (
+                  <div class="moment-tags">
+                    {note.tags.map(tag => (
+                      <span class="note-tag" data-tag={tag}>#{tag}</span>
+                    ))}
+                  </div>
+                )}
               </div>
               <div class="moment-actions">
                 <button class="copy-btn" title="复制" data-content={note.content}>
@@ -174,8 +205,46 @@ function formatDate(dateStr: string): string {
 
 </MainGridLayout>
 
-<script>
+<script is:inline>
 document.addEventListener('DOMContentLoaded', () => {
+  // 标签筛选
+  const tagPills = document.querySelectorAll('.tag-pill');
+  const momentCards = document.querySelectorAll('.moment-card');
+  const daySections = document.querySelectorAll('.day-section');
+  const noteTags = document.querySelectorAll('.note-tag');
+
+  function filterByTag(tag) {
+    tagPills.forEach(p => p.classList.toggle('active', p.getAttribute('data-filter') === tag));
+    momentCards.forEach(card => {
+      const cardTags = (card.getAttribute('data-tags') || '').split(',').filter(Boolean);
+      if (tag === 'all' || cardTags.includes(tag)) {
+        card.classList.remove('hidden-card');
+      } else {
+        card.classList.add('hidden-card');
+      }
+    });
+    daySections.forEach(section => {
+      const visibleCards = section.querySelectorAll('.moment-card:not(.hidden-card)');
+      if (visibleCards.length > 0) {
+        section.classList.remove('hidden-card');
+      } else {
+        section.classList.add('hidden-card');
+      }
+    });
+  }
+
+  tagPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      filterByTag(pill.getAttribute('data-filter') || 'all');
+    });
+  });
+
+  noteTags.forEach(tag => {
+    tag.addEventListener('click', () => {
+      filterByTag(tag.getAttribute('data-tag') || 'all');
+    });
+  });
+
   // 复制按钮
   document.querySelectorAll('.copy-btn').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -605,6 +674,77 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* 空状态 */
   .empty-state { text-align: center; }
+
+  .hidden-card { display: none !important; }
+
+  /* 标签筛选栏 */
+  .tag-filter-bar {
+    overflow: hidden;
+  }
+
+  .tag-filter-scroll {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 2px 0;
+  }
+
+  .tag-filter-scroll::-webkit-scrollbar { display: none; }
+
+  .tag-pill {
+    flex-shrink: 0;
+    padding: 4px 12px;
+    border-radius: 14px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border: 1px solid oklch(0.88 0.005 268);
+    background: transparent;
+    color: oklch(0.50 0.01 268);
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+
+  .dark .tag-pill {
+    border-color: oklch(0.30 0.01 268);
+    color: oklch(0.55 0.01 268);
+  }
+
+  .tag-pill:hover {
+    border-color: color-mix(in srgb, var(--primary) 40%, transparent);
+    color: var(--primary);
+  }
+
+  .tag-pill.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+  }
+
+  /* 笔记内标签 */
+  .moment-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+  }
+
+  .note-tag {
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--primary);
+    background: color-mix(in srgb, var(--primary) 8%, transparent);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .note-tag:hover {
+    background: color-mix(in srgb, var(--primary) 18%, transparent);
+  }
 
   /* 响应式 */
   @media (max-width: 1024px) {
