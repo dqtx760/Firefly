@@ -9183,14 +9183,6 @@ function extractFirstImageIgnoreFrontmatter(content) {
 备选方案：  
 - %windir%\Resources\
 &lt;/code&gt;&lt;/pre&gt;
-</content:encoded></item><item><title>本周创建的笔记</title><link>https://dqtx.cc/posts/zen/%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%91%A8%E5%88%9B%E5%BB%BA/</link><guid isPermaLink="true">https://dqtx.cc/posts/zen/%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%91%A8%E5%88%9B%E5%BB%BA/</guid><pubDate>Thu, 01 May 2025 00:00:00 GMT</pubDate><content:encoded>&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
-  category AS &quot;分类&quot;,
-  dateformat(file.ctime, &quot;yyyy/MM/dd&quot;) AS &quot;创建日期&quot;,
-  file.link AS &quot;本周笔记&quot;
-WHERE file.ctime &amp;gt;= date(today) - dur(3 days)
-SORT category ASC, file.ctime DESC
-&lt;/code&gt;&lt;/pre&gt;
-&lt;hr /&gt;
 </content:encoded></item><item><title>tags查询</title><link>https://dqtx.cc/posts/zen/%E6%9F%A5tags%E7%9B%B8%E5%85%B3%E7%9A%84%E7%AC%94%E8%AE%B0/</link><guid isPermaLink="true">https://dqtx.cc/posts/zen/%E6%9F%A5tags%E7%9B%B8%E5%85%B3%E7%9A%84%E7%AC%94%E8%AE%B0/</guid><pubDate>Thu, 01 May 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Obsidian系列&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
   default(category, &quot;未分类&quot;) AS &quot;分类&quot;,
@@ -9239,6 +9231,14 @@ SORT category ASC, file.ctime DESC
 WHERE contains(file.tags, &quot;博客&quot;)
 SORT category ASC, file.ctime DESC
 &lt;/code&gt;&lt;/pre&gt;
+</content:encoded></item><item><title>本周创建的笔记</title><link>https://dqtx.cc/posts/zen/%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%91%A8%E5%88%9B%E5%BB%BA/</link><guid isPermaLink="true">https://dqtx.cc/posts/zen/%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%91%A8%E5%88%9B%E5%BB%BA/</guid><pubDate>Thu, 01 May 2025 00:00:00 GMT</pubDate><content:encoded>&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
+  category AS &quot;分类&quot;,
+  dateformat(file.ctime, &quot;yyyy/MM/dd&quot;) AS &quot;创建日期&quot;,
+  file.link AS &quot;本周笔记&quot;
+WHERE file.ctime &amp;gt;= date(today) - dur(3 days)
+SORT category ASC, file.ctime DESC
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
 </content:encoded></item><item><title>筛查无tags与分类笔记</title><link>https://dqtx.cc/posts/zen/%E7%AD%9B%E6%9F%A5%E6%97%A0tags%E4%B8%8E%E5%88%86%E7%B1%BB%E7%AC%94%E8%AE%B0/</link><guid isPermaLink="true">https://dqtx.cc/posts/zen/%E7%AD%9B%E6%9F%A5%E6%97%A0tags%E4%B8%8E%E5%88%86%E7%B1%BB%E7%AC%94%E8%AE%B0/</guid><pubDate>Thu, 01 May 2025 00:00:00 GMT</pubDate><content:encoded>&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
   category AS &quot;分类&quot;,
   file.tags AS &quot;标签&quot;,
