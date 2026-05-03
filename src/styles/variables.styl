@@ -23,22 +23,22 @@ define(vars)
         {key}: value[1]
 
 define({
-  --primary: oklch(0.70 0.14 var(--hue)) oklch(0.75 0.14 var(--hue))
-  --page-bg: #F5F5F5 #000000
-  --card-bg: rgba(255, 255, 255, 0.75) unquote("oklch(0.23 0.015 var(--hue) / 0.75)")
-  --card-bg-transparent: rgba(255, 255, 255, 0.8) rgba(23, 23, 23, 0.8)
+  --primary: #1B365D #6B9BD2
+  --page-bg: #f5f4ed #141413
+  --card-bg: #faf9f5 #30302e
+  --card-bg-transparent: rgba(250, 249, 245, 0.8) rgba(48, 48, 46, 0.8)
 
-  --btn-content: oklch(0.55 0.12 var(--hue)) oklch(0.75 0.1 var(--hue))
+  --btn-content: #1B365D #6B9BD2
 
-  --btn-regular-bg: oklch(0.95 0.025 var(--hue)) oklch(0.33 0.035 var(--hue))
-  --btn-regular-bg-hover: oklch(0.9 0.05 var(--hue)) oklch(0.38 0.04 var(--hue))
-  --btn-regular-bg-active: oklch(0.85 0.08 var(--hue)) oklch(0.43 0.045 var(--hue))
+  --btn-regular-bg: #e8e6dc #3d3d3a
+  --btn-regular-bg-hover: #dddbd0 #4d4c48
+  --btn-regular-bg-active: #d2d0c5 #504e49
 
-  --btn-plain-bg-hover: oklch(0.95 0.025 var(--hue)) oklch(0.30 0.035 var(--hue))
-  --btn-plain-bg-active: oklch(0.98 0.01 var(--hue)) oklch(0.27 0.025 var(--hue))
+  --btn-plain-bg-hover: #e8e6dc #30302e
+  --btn-plain-bg-active: #dddbd0 #3d3d3a
 
-  --btn-card-bg-hover: oklch(0.98 0.005 var(--hue)) oklch(0.3 0.03 var(--hue))
-  --btn-card-bg-active: oklch(0.9 0.03 var(--hue)) oklch(0.35 0.035 var(--hue))
+  --btn-card-bg-hover: #f0efe8 #3d3d3a
+  --btn-card-bg-active: #e8e6dc #4d4c48
 
   --enter-btn-bg: var(--btn-regular-bg)
   --enter-btn-bg-hover: var(--btn-regular-bg-hover)
@@ -48,27 +48,27 @@ define({
 
   --title-active: oklch(0.6 0.1 var(--hue))
 
-  --line-divider: black(0.08) white(0.08)
+  --line-divider: rgba(0,0,0,0.08) rgba(255,255,255,0.08)
 
-  --line-color: black(0.1) white(0.1)
-  --meta-divider: black(0.2) white(0.2)
+  --line-color: #e8e6dc #3d3d3a
+  --meta-divider: #6b6a64 #b0aea5
 
-  --inline-code-bg: var(--btn-regular-bg)
-  --inline-code-color: var(--btn-content)
-  --selection-bg: oklch(0.90 0.05 var(--hue)) oklch(0.40 0.08 var(--hue))
-  --codeblock-selection: oklch(0.40 0.08 var(--hue))
-  --codeblock-bg: oklch(0.17 0.015 var(--hue)) oklch(0.17 0.015 var(--hue))
-  --codeblock-topbar-bg: oklch(0.3 0.02 var(--hue)) oklch(0.12 0.015 var(--hue))
+  --inline-code-bg: #EEF2F7 #3d3d3a
+  --inline-code-color: #1B365D #6B9BD2
+  --selection-bg: #E4ECF5 #2D5A8A
+  --codeblock-selection: #2D5A8A
+  --codeblock-bg: #141413 #141413
+  --codeblock-topbar-bg: #3d3d3a #1a1a19
 
-  --license-block-bg: black(0.03) var(--codeblock-bg)
+  --license-block-bg: rgba(0,0,0,0.03) var(--codeblock-bg)
 
-  --link-underline: oklch(0.93 0.04 var(--hue)) oklch(0.40 0.08 var(--hue))
-  --link-hover: oklch(0.95 0.025 var(--hue)) oklch(0.40 0.08 var(--hue))
-  --link-active: oklch(0.90 0.05 var(--hue)) oklch(0.35 0.07 var(--hue))
+  --link-underline: #e8e6dc #504e49
+  --link-hover: #1B365D #6B9BD2
+  --link-active: #2D5A8A #6B9BD2
 
-  --float-panel-bg: rgba(255, 255, 255, 0.9) unquote("oklch(0.19 0.015 var(--hue) / 0.9)")
-  --float-panel-bg-transparent: rgba(255, 255, 255, 0.8) rgba(23, 23, 23, 0.8)
-  --float-panel-bg-opaque: rgba(255, 255, 255, 1) unquote("oklch(0.19 0.015 var(--hue))")
+  --float-panel-bg: rgba(250,249,245,0.9) rgba(48,48,46,0.9)
+  --float-panel-bg-transparent: rgba(250,249,245,0.8) rgba(48,48,46,0.8)
+  --float-panel-bg-opaque: #faf9f5 #30302e
 
   --scrollbar-bg-light: black(0.4)
   --scrollbar-bg-hover-light: black(0.5)
@@ -93,9 +93,9 @@ define({
   --admonitions-color-warning: oklch(0.7 0.14 60) oklch(0.75 0.14 60)
   --admonitions-color-caution: oklch(0.6 0.2 25) oklch(0.65 0.2 25)
 
-  --toc-badge-bg: oklch(0.89 0.050 var(--hue)) var(--btn-regular-bg)
-  --toc-btn-hover: oklch(0.926 0.015 var(--hue)) oklch(0.30 0.02 var(--hue))
-  --toc-btn-active: oklch(0.90 0.015 var(--hue)) oklch(0.33 0.02 var(--hue))
+  --toc-badge-bg: #EEF2F7 #3d3d3a
+  --toc-btn-hover: #f0efe8 #3d3d3a
+  --toc-btn-active: #e8e6dc #4d4c48
   --toc-width: calc((100vw - var(--page-width)) / 2 - 1rem)
-  --toc-item-active: oklch(0.70 0.13 var(--hue)) oklch(0.35 0.07 var(--hue))
+  --toc-item-active: #1B365D #6B9BD2
 })

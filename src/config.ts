@@ -14,11 +14,11 @@ import { LinkPreset } from "./types/config";
 export const noticeConfig: NoticeConfig = {
 	enable: false,
 	level: "happy",
-	content: "元宝发红包了！看置顶文章！",
+	content: "元宝发红包了！看置顶文章？",
 };
 
 export const siteConfig: SiteConfig = {
-	title: "Derek Zhao",
+	title: "大强博客",
 	subtitle: "技术分享与实践",
 	description:
 		"分享网络技术、服务器部署、内网穿透、静态网站搭建、CDN优化、容器化部署等技术教程与实践经验的个人技术博客，专注于云原生、无服务器架构和前后端开发，作者为Derek Zhao",
@@ -43,8 +43,8 @@ export const siteConfig: SiteConfig = {
 		},
 	},
 	background: {
-		enable: true, // Enable background
-		src: "", // 使用 CSS 渐变而非图片
+		enable: false, // 没有背景图片，禁用 bg-box 覆盖层
+		src: "",
 		position: "center",
 		size: "cover",
 		repeat: "no-repeat",
@@ -79,6 +79,11 @@ export const navBarConfig: NavBarConfig = {
 		{
 			name: "画廊",
 			url: "/gallery/",
+			external: false,
+		},
+		{
+			name: "Notes",
+			url: "/notes/",
 			external: false,
 		},
 		{
@@ -121,8 +126,8 @@ export const navBarConfig: NavBarConfig = {
 
 export const profileConfig: ProfileConfig = {
 	avatar: "/avatar.jpg", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
-	name: "大强同学",
-	bio: "人间忽晚，山河已秋。",
+	name: "Derek Zhao",
+	bio: "Build in Public 践行者<br>AI探索 · 效率工具 · 出海实操<br>提供定制化远程技术服务",
 	links: [
 		{
 			name: "微信",

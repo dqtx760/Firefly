@@ -41,3 +41,6 @@ ori
 src/content/.obsidian/
 
 .git
+
+# Memoria 附件副本（构建时自动生成）
+public/memoria-attachments/

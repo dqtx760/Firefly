@@ -142,15 +142,19 @@ const bannerOffset =
 			switch (theme) {
 				case LIGHT_MODE:
 					document.documentElement.classList.remove('dark');
+					document.documentElement.style.backgroundColor = '#f5f4ed';
 					break
 				case DARK_MODE:
 					document.documentElement.classList.add('dark');
+					document.documentElement.style.backgroundColor = '#141413';
 					break
 				case AUTO_MODE:
 					if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
 						document.documentElement.classList.add('dark');
+						document.documentElement.style.backgroundColor = '#141413';
 					} else {
 						document.documentElement.classList.remove('dark');
+						document.documentElement.style.backgroundColor = '#f5f4ed';
 					}
 			}
 			}
@@ -201,9 +205,19 @@ const bannerOffset =
 			html.dark .card-base {
 				background: oklch(0.22 0.008 268) !important;
 			}
-			/* 背景色 */
+			/* 全局背景色 - 强制羊皮纸色 */
+			html, body, .os-viewport, .os-content {
+				background-color: #f5f4ed !important;
+			}
+			html.dark, html.dark body, html.dark .os-viewport, html.dark .os-content {
+				background-color: #141413 !important;
+			}
 			#bg-box {
-				background: #000000 !important;
+				background-color: #f5f4ed !important;
+				opacity: 0 !important;
+			}
+			html.dark #bg-box {
+				background-color: #141413 !important;
 			}
 		</style>
         
@@ -236,6 +250,12 @@ const bannerOffset =
 			
 			/* Background image configuration */
 			body {
+				background-color: #f5f4ed;
+			}
+			html.dark body {
+				background-color: #141413;
+			}
+			body {
 				--bg-url: var(--bg-url);
 				--bg-enable: var(--bg-enable);
 				--bg-position: var(--bg-position);
@@ -251,17 +271,20 @@ const bannerOffset =
 				left: 0;
 				width: 100%;
 				height: 100%;
+				background-color: #f5f4ed;
+				background-image: var(--bg-url);
 				background-position: var(--bg-position);
 				background-size: var(--bg-size);
 				background-repeat: var(--bg-repeat);
+				background-attachment: var(--bg-attachment);
 				opacity: 0;
 				pointer-events: none;
 				z-index: -1;
 				transition: opacity 0.3s ease-in-out;
-				/* 极简暗色背景 - 单一色调，无装饰 */
-				background: #000000;
 			}
-			
+			html.dark #bg-box {
+				background-color: #141413;
+			}
 			#bg-box.loaded {
 				opacity: calc(var(--bg-opacity) * var(--bg-enable));
 			}

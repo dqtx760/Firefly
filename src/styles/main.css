@@ -1,12 +1,12 @@
 @tailwind components;
 
 @layer components {
-    /* 覆盖卡片背景色，更冷的灰蓝 */
+    /* Kami 暖色系 */
     :root {
-        --card-bg: #F8F6F2 !important;
+        --card-bg: #faf9f5 !important;
     }
     html.dark :root {
-        --card-bg: oklch(0.22 0.008 268) !important;
+        --card-bg: #30302e !important;
     }
 
     /* Rainbow Mode Animation */
@@ -35,16 +35,16 @@
 
     .card-base {
         @apply rounded-[var(--radius-large)] overflow-hidden transition;
-        background: #F8F6F2 !important;
-        background-color: #F8F6F2 !important;
-        border: 1px solid oklch(0.90 0.005 268);
-        box-shadow: 0 1px 4px oklch(0 0 0 / 0.04);
+        background: #faf9f5 !important;
+        background-color: #faf9f5 !important;
+        border: 1px solid #e8e6dc;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.04);
     }
     .dark .card-base {
-        background: oklch(0.22 0.008 268) !important;
-        background-color: oklch(0.22 0.008 268) !important;
-        border-color: oklch(0.25 0.01 268);
-        box-shadow: 0 1px 4px oklch(0 0 0 / 0.3);
+        background: #30302e !important;
+        background-color: #30302e !important;
+        border-color: #3d3d3a;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.3);
     }
     .card-hover {
         @apply hover:scale-[1.005] hover:z-10;

@@ -1,0 +1,631 @@
+---
+import MainGridLayout from "@layouts/MainGridLayout.astro";
+import { Icon } from "astro-icon/components";
+import { siteConfig } from "@/config";
+import fs from "node:fs";
+import path from "node:path";
+
+// 将 Memoria 附件复制到 public 目录
+const memoriaDir = path.resolve("src/content/Memoria");
+const attachmentsDir = path.join(memoriaDir, "attachments");
+const publicAttachmentsDir = path.resolve("public/memoria-attachments");
+
+if (fs.existsSync(attachmentsDir)) {
+  if (!fs.existsSync(publicAttachmentsDir)) {
+    fs.mkdirSync(publicAttachmentsDir, { recursive: true });
+  }
+  for (const file of fs.readdirSync(attachmentsDir)) {
+    fs.copyFileSync(path.join(attachmentsDir, file), path.join(publicAttachmentsDir, file));
+  }
+}
+
+// 解析 Memoria 笔记
+const mdFiles = fs.readdirSync(memoriaDir).filter(f => f.endsWith(".md"));
+
+interface Note {
+  date: string;
+  weekday: string;
+  time: string;
+  content: string;
+  images: string[];
+}
+
+const notes: Note[] = [];
+
+for (const file of mdFiles) {
+  const raw = fs.readFileSync(path.join(memoriaDir, file), "utf-8");
+  const dayBlocks = raw.split(/(?=^## \d{4}-\d{2}-\d{2})/m);
+
+  for (const block of dayBlocks) {
+    const dayMatch = block.match(/^## (\d{4}-\d{2}-\d{2})\s+(.*)/m);
+    if (!dayMatch) continue;
+    const date = dayMatch[1];
+    const weekday = dayMatch[2];
+
+    const memoBlocks = block.split(/(?=^- \d{2}:\d{2})/m);
+    for (const memo of memoBlocks) {
+      const memoMatch = memo.match(/^- (\d{2}:\d{2})\s*\n?([\s\S]*)/);
+      if (!memoMatch) continue;
+      const time = memoMatch[1];
+      let content = memoMatch[2].trim();
+      const images: string[] = [];
+      const imageRegex = /!\[\[([^\]]+)\]\]/g;
+      let match;
+      while ((match = imageRegex.exec(content)) !== null) {
+        images.push(`/memoria-attachments/${match[1]}`);
+      }
+      content = content.replace(/!\[\[[^\]]+\]\]/g, "").trim();
+      notes.push({ date, weekday, time, content, images });
+    }
+  }
+}
+
+notes.sort((a, b) => `${b.date}T${b.time}`.localeCompare(`${a.date}T${a.time}`));
+
+// 按日期分组
+const grouped = new Map<string, Note[]>();
+for (const note of notes) {
+  if (!grouped.has(note.date)) grouped.set(note.date, []);
+  grouped.get(note.date)!.push(note);
+}
+
+// 生成日期列表（用于右侧导航）
+const dates = Array.from(grouped.entries())
+  .sort(([a], [b]) => b.localeCompare(a))
+  .map(([date, dayNotes]) => ({ date, weekday: dayNotes[0].weekday }));
+
+function formatDate(dateStr: string): string {
+  const d = new Date(dateStr + "T00:00:00");
+  const month = d.getMonth() + 1;
+  const day = d.getDate();
+  return `${month}月${day}日`;
+}
+---
+
+<MainGridLayout title="Notes">
+  <!-- 笔记内容（铺满主区域） -->
+  <div>
+    <!-- 顶部横幅 -->
+    <div class="card-base notes-banner px-6 py-5 mb-4">
+      <div class="banner-content">
+        <div class="banner-icon">
+          <Icon name="material-symbols:edit-note" class="text-[1.75rem]" />
+        </div>
+        <div>
+          <h1 class="text-lg font-bold text-75">碎片笔记</h1>
+          <p class="text-xs text-50 mt-0.5">记录灵感 · 积累思考</p>
+        </div>
+      </div>
+      <div class="banner-stats">
+        <div class="stat-item">
+          <span class="stat-num text-75">{notes.length}</span>
+          <span class="stat-label text-50">条</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num text-75">{grouped.size}</span>
+          <span class="stat-label text-50">天</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 笔记流 -->
+    <div class="card-base px-6 py-2 relative">
+      <!-- 日期导航按钮（右上角） -->
+      <div class="notes-date-nav hidden lg:block absolute top-3 left-1/2 -translate-x-1/2">
+        <button id="date-nav-toggle" class="date-toggle-btn" aria-label="日期导航">
+          <Icon name="material-symbols:calendar-month-outline" class="text-[0.95rem]" />
+        </button>
+        <!-- 弹出面板 -->
+        <div id="date-nav-panel" class="date-nav-panel">
+          <div class="date-panel-header">日期导航</div>
+          <nav class="date-nav">
+            {dates.map(({ date, weekday }) => (
+              <a href={`#day-${date}`} class="date-link" data-date={date}>
+                <span>{formatDate(date)} {weekday}</span>
+              </a>
+            ))}
+          </nav>
+        </div>
+      </div>
+
+      {Array.from(grouped.entries()).map(([date, dayNotes]) => (
+        <div class="day-section" id={`day-${date}`}>
+          <div class="day-divider">
+            <span class="day-badge">{formatDate(date)} {dayNotes[0].weekday}</span>
+          </div>
+
+          {dayNotes.map((note) => (
+            <div class="moment-card">
+              <div class="moment-left">
+                <div class="avatar">
+                  <img src="/avatar.jpg" alt="avatar" />
+                </div>
+              </div>
+              <div class="moment-body">
+                <div class="moment-header">
+                  <span class="moment-name">{siteConfig.title}</span>
+                  <span class="moment-time">{note.time}</span>
+                </div>
+                {note.content && (
+                  <div class="moment-text" set:html={note.content} />
+                )}
+                {note.images.length > 0 && (
+                  <div class:list={["moment-images", {
+                    "img-grid-1": note.images.length === 1,
+                    "img-grid-2": note.images.length === 2,
+                    "img-grid-3": note.images.length === 3,
+                    "img-grid-4": note.images.length === 4,
+                    "img-grid-multi": note.images.length > 4,
+                  }]}>
+                    {note.images.map((img) => (
+                      <div class="img-wrapper">
+                        <img src={img} alt="" loading="lazy" />
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+              <div class="moment-actions">
+                <button class="copy-btn" title="复制" data-content={note.content}>
+                  <Icon name="material-symbols:content-copy-outline-rounded" class="text-[0.85rem]" />
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      ))}
+    </div>
+
+    {notes.length === 0 && (
+      <div class="card-base empty-state py-12">
+        <Icon name="material-symbols:note-add" class="text-[3rem] opacity-30" />
+        <p class="text-50 mt-2">还没有笔记</p>
+      </div>
+    )}
+  </div>
+
+</MainGridLayout>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // 复制按钮
+  document.querySelectorAll('.copy-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const content = btn.getAttribute('data-content');
+      if (content) {
+        navigator.clipboard.writeText(content).then(() => {
+          btn.classList.add('copied');
+          setTimeout(() => btn.classList.remove('copied'), 1500);
+        });
+      }
+    });
+  });
+
+  // 日期导航弹窗
+  const toggleBtn = document.getElementById('date-nav-toggle');
+  const navPanel = document.getElementById('date-nav-panel');
+  if (toggleBtn && navPanel) {
+    toggleBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = navPanel.classList.toggle('open');
+      toggleBtn.classList.toggle('active', isOpen);
+    });
+
+    // 点击外部关闭
+    document.addEventListener('click', (e) => {
+      if (!navPanel.contains(e.target as Node) && e.target !== toggleBtn) {
+        navPanel.classList.remove('open');
+        toggleBtn.classList.remove('active');
+      }
+    });
+
+    // 点击日期链接后关闭
+    navPanel.querySelectorAll('.date-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navPanel.classList.remove('open');
+        toggleBtn.classList.remove('active');
+      });
+    });
+  }
+
+  // 日期导航高亮
+  const dateLinks = document.querySelectorAll('.date-link');
+  const daySections = document.querySelectorAll('.day-section');
+
+  if (dateLinks.length && daySections.length) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          dateLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('data-date') === id.replace('day-', ''));
+          });
+        }
+      });
+    }, { rootMargin: '-20% 0px -60% 0px' });
+
+    daySections.forEach(section => observer.observe(section));
+
+    // 点击平滑滚动
+    dateLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.getElementById(`day-${link.getAttribute('data-date')}`);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  }
+});
+</script>
+
+<style>
+  /* 横幅 */
+  .notes-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(135deg, color-mix(in srgb, var(--primary) 8%, var(--card-bg)), var(--card-bg)) !important;
+  }
+
+  .banner-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .banner-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: color-mix(in srgb, var(--primary) 12%, transparent);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .banner-stats {
+    display: flex;
+    gap: 18px;
+  }
+
+  .stat-item { text-align: center; }
+  .stat-num { display: block; font-size: 1.25rem; font-weight: 700; line-height: 1; }
+  .stat-label { font-size: 0.7rem; }
+
+  /* 日期分割 */
+  .day-section { margin-bottom: 4px; }
+
+  .day-divider {
+    display: flex;
+    align-items: center;
+    padding: 14px 0 8px;
+  }
+
+  .day-badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--primary);
+    background: color-mix(in srgb, var(--primary) 8%, transparent);
+    padding: 4px 14px;
+    border-radius: 20px;
+  }
+
+  /* 卡片 */
+  .moment-card {
+    display: flex;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid oklch(0.92 0.005 268);
+  }
+
+  .dark .moment-card {
+    border-bottom-color: oklch(0.26 0.01 268);
+  }
+
+  .moment-card:last-child { border-bottom: none; }
+
+  .moment-left { flex-shrink: 0; }
+
+  .avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: oklch(0.95 0.005 268);
+  }
+
+  .dark .avatar { background: oklch(0.25 0.008 268); }
+
+  .avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+  .moment-body { flex: 1; min-width: 0; }
+
+  .moment-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 6px;
+  }
+
+  .moment-name { font-size: 0.85rem; font-weight: 600; color: var(--primary); }
+  .moment-time { font-size: 0.72rem; color: oklch(0.60 0.01 268); }
+  .dark .moment-time { color: oklch(0.50 0.01 268); }
+
+  .moment-text {
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: oklch(0.30 0.01 268);
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  .dark .moment-text { color: oklch(0.82 0.005 268); }
+
+  /* 复制按钮 */
+  .moment-actions {
+    flex-shrink: 0;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 2px;
+  }
+
+  .copy-btn {
+    width: 26px;
+    height: 26px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: oklch(0.70 0.01 268);
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+    position: relative;
+  }
+
+  .dark .copy-btn { color: oklch(0.45 0.01 268); }
+
+  .copy-btn:hover {
+    background: color-mix(in srgb, var(--primary) 10%, transparent);
+    color: var(--primary);
+  }
+
+  .copy-btn.copied {
+    color: oklch(0.65 0.15 145);
+    background: oklch(0.95 0.05 145);
+  }
+
+  .dark .copy-btn.copied {
+    color: oklch(0.70 0.15 145);
+    background: oklch(0.25 0.05 145);
+  }
+
+  .copy-btn.copied::after {
+    content: '已复制';
+    position: absolute;
+    top: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.6rem;
+    white-space: nowrap;
+    background: oklch(0.2 0.01 268);
+    color: white;
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+
+  .dark .copy-btn.copied::after {
+    background: oklch(0.80 0.01 268);
+    color: oklch(0.15 0.01 268);
+  }
+
+  /* 图片网格 */
+  .moment-images {
+    margin-top: 10px;
+    display: grid;
+    gap: 4px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .img-grid-1 { grid-template-columns: 1fr; max-width: 280px; }
+  .img-grid-2 { grid-template-columns: 1fr 1fr; max-width: 300px; }
+  .img-grid-3 { grid-template-columns: 1fr 1fr 1fr; max-width: 340px; }
+  .img-grid-4 { grid-template-columns: 1fr 1fr; max-width: 300px; }
+  .img-grid-multi { grid-template-columns: 1fr 1fr 1fr; max-width: 340px; }
+
+  .img-wrapper {
+    aspect-ratio: 1;
+    overflow: hidden;
+    background: oklch(0.96 0.005 268);
+    cursor: pointer;
+  }
+
+  .dark .img-wrapper { background: oklch(0.20 0.008 268); }
+
+  .img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+
+  .img-wrapper:hover img { transform: scale(1.03); }
+
+  /* 日期导航容器 */
+  .notes-date-nav {
+    z-index: 50;
+  }
+
+  /* 切换按钮 */
+  .date-toggle-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--card-bg);
+    border: 1px solid oklch(0.90 0.005 268);
+    color: oklch(0.55 0.01 268);
+    cursor: pointer;
+    transition: color 0.15s, border-color 0.15s;
+  }
+
+  .dark .date-toggle-btn {
+    border-color: oklch(0.28 0.01 268);
+    color: oklch(0.50 0.01 268);
+  }
+
+  .date-toggle-btn:hover,
+  .date-toggle-btn.active {
+    color: var(--primary);
+    border-color: color-mix(in srgb, var(--primary) 40%, transparent);
+  }
+
+  /* 弹出面板 - 绝对定位，不影响布局 */
+  .date-nav-panel {
+    display: none;
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 120px;
+    max-height: 360px;
+    overflow-y: auto;
+    border-radius: 10px;
+    background: var(--card-bg);
+    border: 1px solid oklch(0.90 0.005 268);
+    box-shadow: 0 4px 20px oklch(0 0 0 / 0.1);
+    padding: 6px;
+    z-index: 50;
+  }
+
+  .dark .date-nav-panel {
+    border-color: oklch(0.28 0.01 268);
+    box-shadow: 0 4px 20px oklch(0 0 0 / 0.4);
+  }
+
+  .date-nav-panel.open {
+    display: block;
+  }
+
+  .date-panel-header {
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: oklch(0.55 0.01 268);
+    padding: 4px 8px 6px;
+  }
+
+  .dark .date-panel-header {
+    color: oklch(0.50 0.01 268);
+  }
+
+  .date-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+  }
+
+  .date-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 8px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.75rem;
+    color: oklch(0.45 0.01 268);
+    transition: all 0.15s;
+    white-space: nowrap;
+  }
+
+  .dark .date-link { color: oklch(0.55 0.01 268); }
+
+  .date-link:hover {
+    background: color-mix(in srgb, var(--primary) 8%, transparent);
+    color: var(--primary);
+  }
+
+  .date-link.active {
+    background: color-mix(in srgb, var(--primary) 10%, transparent);
+    color: var(--primary);
+    font-weight: 600;
+  }
+
+  .date-link-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: oklch(0.80 0.005 268);
+  }
+
+  .dark .date-link-dot {
+    background: oklch(0.35 0.008 268);
+  }
+
+  .date-link.active .date-link-dot {
+    background: var(--primary);
+  }
+
+  .date-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.78rem;
+    color: oklch(0.50 0.01 268);
+    transition: all 0.15s;
+  }
+
+  .dark .date-link { color: oklch(0.55 0.01 268); }
+
+  .date-link:hover {
+    background: color-mix(in srgb, var(--primary) 8%, transparent);
+    color: var(--primary);
+  }
+
+  .date-link.active {
+    background: color-mix(in srgb, var(--primary) 12%, transparent);
+    color: var(--primary);
+    font-weight: 600;
+  }
+
+  .date-link-count {
+    font-size: 0.65rem;
+    background: oklch(0.93 0.005 268);
+    padding: 1px 6px;
+    border-radius: 10px;
+    color: oklch(0.55 0.01 268);
+  }
+
+  .dark .date-link-count {
+    background: oklch(0.28 0.008 268);
+    color: oklch(0.50 0.01 268);
+  }
+
+  .date-link.active .date-link-count {
+    background: color-mix(in srgb, var(--primary) 20%, transparent);
+    color: var(--primary);
+  }
+
+  /* 空状态 */
+  .empty-state { text-align: center; }
+
+  /* 响应式 */
+  @media (max-width: 1024px) {
+    .notes-banner {
+      flex-direction: column;
+      gap: 12px;
+      text-align: center;
+    }
+    .banner-content { flex-direction: column; }
+    .avatar { width: 34px; height: 34px; }
+  }
+</style>
