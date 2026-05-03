@@ -87,24 +87,24 @@ export const navBarConfig: NavBarConfig = {
 			external: false,
 		},
 		{
+			name: "Sponsors",
+			url: "/sponsors/",
+			external: false,
+		},
+		{
 			name: "Wiki",
 			url: "/wiki/",
 			external: true,
 		},
 		{
 			name: "友链",
-			url: "/friends/", // Internal links should not include the base path, as it is automatically added
-			external: false, // Show an external link icon and will open in a new tab
+			url: "/friends/",
+			external: false,
 		},
 		{
 			name: "Remote",
-			url: "https://www.742112.xyz/", // Internal links should not include the base path, as it is automatically added
-			external: true, // Show an external link icon and will open in a new tab
-		},
-		{
-			name: "Sponsors",
-			url: "/sponsors/", // Internal links should not include the base path, as it is automatically added
-			external: false, // Show an external link icon and will open in a new tab
+			url: "https://www.742112.xyz/",
+			external: true,
 		},
 		{
 			name: "电视喵",

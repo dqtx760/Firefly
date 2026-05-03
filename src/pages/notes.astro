@@ -51,7 +51,7 @@ for (const file of mdFiles) {
       while ((tagMatch = tagRegex.exec(content)) !== null) {
         tags.push(tagMatch[1]);
       }
-      content = content.replace(/#[\w一-鿿-]+/g, "").replace(/\n{2,}/g, "\n").trim();
+      content = content.replace(/#[\w一-鿿-]+/g, "").replace(/^ +/gm, "").replace(/\n{2,}/g, "\n").trim();
       // 将 URL 转为链接，再转义其余 HTML
       content = content.replace(/(https?:\/\/[^\s<)]+)/g, '\x00LINK\x00$1\x00/LINK\x00');
       content = content
@@ -93,28 +93,6 @@ function formatDate(dateStr: string): string {
 <MainGridLayout title="Notes">
   <!-- 笔记内容（铺满主区域） -->
   <div>
-    <!-- 顶部横幅 -->
-    <div class="card-base notes-banner px-6 py-5 mb-4">
-      <div class="banner-content">
-        <div class="banner-icon">
-          <Icon name="material-symbols:edit-note" class="text-[1.75rem]" />
-        </div>
-        <div>
-          <h1 class="text-lg font-bold text-75">碎片笔记</h1>
-          <p class="text-xs text-50 mt-0.5">记录灵感 · 积累思考</p>
-        </div>
-      </div>
-      <div class="banner-stats">
-        <div class="stat-item">
-          <span class="stat-num text-75">{notes.length}</span>
-          <span class="stat-label text-50">条</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-num text-75">{grouped.size}</span>
-          <span class="stat-label text-50">天</span>
-        </div>
-      </div>
-    </div>
 
     <!-- 标签筛选栏 -->
     <div class="card-base px-6 py-3 mb-4 tag-filter-bar">
@@ -215,9 +193,29 @@ function formatDate(dateStr: string): string {
 
 </MainGridLayout>
 
+<!-- 图片灯箱 -->
+<div id="note-lightbox" class="note-lightbox">
+  <img id="note-lightbox-img" src="" alt="" />
+</div>
+
 <script is:inline>
 // 标签筛选 - 事件委托
 document.addEventListener('click', function(e) {
+  // 图片灯箱
+  var imgWrap = e.target.closest('.img-wrapper img');
+  if (imgWrap) {
+    var lb = document.getElementById('note-lightbox');
+    var lbImg = document.getElementById('note-lightbox-img');
+    lbImg.src = imgWrap.src;
+    lb.classList.add('open');
+    return;
+  }
+  var lb2 = document.getElementById('note-lightbox');
+  if (lb2 && lb2.classList.contains('open')) {
+    lb2.classList.remove('open');
+    return;
+  }
+
   var pill = e.target.closest('.tag-pill');
   if (pill) {
     var tag = pill.getAttribute('data-filter') || 'all';
@@ -457,14 +455,21 @@ document.addEventListener('DOMContentLoaded', function() {
   .dark .moment-text { color: oklch(0.82 0.005 268); }
 
   .moment-text a {
-    color: #6B9BD2;
+    color: #7c3aed !important;
     text-decoration: underline;
-    text-decoration-style: dashed;
     word-break: break-all;
   }
 
+  html.dark .moment-text a {
+    color: #a78bfa !important;
+  }
+
   .moment-text a:hover {
-    color: #93c5fd;
+    color: #6d28d9 !important;
+  }
+
+  html.dark .moment-text a:hover {
+    color: #c4b5fd !important;
   }
 
   /* 折叠长文本 */
@@ -565,17 +570,24 @@ document.addEventListener('DOMContentLoaded', function() {
     overflow: hidden;
   }
 
-  .img-grid-1 { grid-template-columns: 1fr; max-width: 280px; }
+  .img-grid-1 { grid-template-columns: 1fr; max-width: 360px; }
   .img-grid-2 { grid-template-columns: 1fr 1fr; max-width: 300px; }
   .img-grid-3 { grid-template-columns: 1fr 1fr 1fr; max-width: 340px; }
   .img-grid-4 { grid-template-columns: 1fr 1fr; max-width: 300px; }
   .img-grid-multi { grid-template-columns: 1fr 1fr 1fr; max-width: 340px; }
 
   .img-wrapper {
-    aspect-ratio: 1;
     overflow: hidden;
     background: oklch(0.96 0.005 268);
     cursor: pointer;
+    border-radius: 6px;
+  }
+
+  .img-grid-2 .img-wrapper,
+  .img-grid-3 .img-wrapper,
+  .img-grid-4 .img-wrapper,
+  .img-grid-multi .img-wrapper {
+    aspect-ratio: 1;
   }
 
   .dark .img-wrapper { background: oklch(0.20 0.008 268); }
@@ -585,6 +597,11 @@ document.addEventListener('DOMContentLoaded', function() {
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s;
+  }
+
+  .img-grid-1 .img-wrapper img {
+    object-fit: contain;
+    max-height: 360px;
   }
 
   .img-wrapper:hover img { transform: scale(1.03); }
@@ -748,6 +765,30 @@ document.addEventListener('DOMContentLoaded', function() {
   .date-link.active .date-link-count {
     background: color-mix(in srgb, var(--primary) 20%, transparent);
     color: var(--primary);
+  }
+
+  /* 图片灯箱 */
+  .note-lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: oklch(0 0 0 / 0.85);
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-out;
+  }
+
+  .note-lightbox.open {
+    display: flex;
+  }
+
+  .note-lightbox img {
+    max-width: 92vw;
+    max-height: 92vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 8px 40px oklch(0 0 0 / 0.5);
   }
 
   /* 空状态 */

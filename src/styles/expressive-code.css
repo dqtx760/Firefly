@@ -1,19 +1,33 @@
 .expressive-code .frame {
   @apply !shadow-none;
   position: relative;
-  padding-top: 2rem;
+  padding-top: 1.4rem;
+  border-radius: 8px !important;
+  border: none !important;
+  overflow: hidden;
+  background: #1e1e2e !important;
 }
 
 /* Mac-style window dots */
 .expressive-code .frame::before {
   content: "";
   position: absolute;
-  left: 12px;
-  top: 0.6rem;
-  width: 12px;
-  height: 12px;
+  left: 14px;
+  top: 7px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: #ff5f57;
-  box-shadow: 16px 0 0 #febc2e, 32px 0 0 #28c840;
+  box-shadow: 9px 0 0 #febc2e, 18px 0 0 #28c840;
   z-index: 10;
+}
+
+.expressive-code .frame pre {
+  border: none !important;
+  border-radius: 0 0 8px 8px !important;
+  margin-top: 0 !important;
+}
+
+.expressive-code .frame.is-terminal {
+  padding-top: 1.4rem;
 }
