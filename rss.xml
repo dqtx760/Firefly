@@ -592,15 +592,17 @@ https://platform.xiaomimimo.com?ref=V4B9NJ&lt;/p&gt;
 ✅ 免费API体验金 40 天有效
 ✅ 邀请名额仅 &lt;strong&gt;20 位&lt;/strong&gt;，先到先得&lt;/p&gt;
 &lt;p&gt;填码即到账 · 尽情释放你的卓越创造力&lt;/p&gt;
-</content:encoded></item><item><title>两款mrkdown编辑器</title><link>https://dqtx.cc/posts/software/mrkdown%E7%BC%96%E8%BE%91%E5%99%A8/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/mrkdown%E7%BC%96%E8%BE%91%E5%99%A8/</guid><pubDate>Fri, 01 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;ColaMD
-实时显示 AI agent 编辑状态的 Agent Native 编辑器
-https://github.com/marswaveai/ColaMD&lt;/p&gt;
-&lt;p&gt;Moraya
-开源 Markdown AI Agent
-https://github.com/zouwei/moraya&lt;/p&gt;
+</content:encoded></item><item><title>两款mrkdown编辑器</title><link>https://dqtx.cc/posts/software/mrkdown%E7%BC%96%E8%BE%91%E5%99%A8/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/mrkdown%E7%BC%96%E8%BE%91%E5%99%A8/</guid><pubDate>Fri, 01 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;ColaMD&lt;/h3&gt;
+&lt;p&gt;实时显示 AI agent 编辑状态的 Agent Native 编辑器&lt;/p&gt;
+&lt;p&gt;https://github.com/marswaveai/ColaMD&lt;/p&gt;
+&lt;h3&gt;Moraya&lt;/h3&gt;
+&lt;p&gt;开源 Markdown AI Agent&lt;/p&gt;
+&lt;p&gt;https://github.com/zouwei/moraya&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260501170443582.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;综合使用体验总结：&lt;/p&gt;
-&lt;p&gt;两款工具均只支持单个文件导入，不支持文件夹批量导入，且第一款无大纲切换功能。对比来看，第一款界面设计精致、内置主题美观，但全程为英文界面；第二款功能更完善，自带 AI 能力，设置面板拥有 MCP 等丰富自定义配置。&lt;/p&gt;
+&lt;p&gt;两款工具均只支持单个文件导入，不支持文件夹批量导入。且第一款无大纲切换功能。&lt;/p&gt;
+&lt;p&gt;第一款界面设计精致、内置主题美观，但全程为英文界面；&lt;/p&gt;
+&lt;p&gt;第二款功能更完善，自带 AI 能力，设置面板拥有 MCP 等丰富自定义配置。&lt;/p&gt;
 </content:encoded></item><item><title>一键内容同步N媒体平台</title><link>https://dqtx.cc/posts/software/%E4%B8%80%E9%94%AE%E5%86%85%E5%AE%B9%E5%90%8C%E6%AD%A5n%E5%AA%92%E4%BD%93%E5%B9%B3%E5%8F%B0/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E4%B8%80%E9%94%AE%E5%86%85%E5%AE%B9%E5%90%8C%E6%AD%A5n%E5%AA%92%E4%BD%93%E5%B9%B3%E5%8F%B0/</guid><pubDate>Fri, 01 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天想跟大家分享四款内容同步的 Chrome 插件。&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h3&gt;1. WechatSync&lt;/h3&gt;
@@ -1761,117 +1763,6 @@ ANTHROPIC_DEFAULT_HAIKU_MODEL=Ling-2.6-flash
 &lt;/table&gt;
 &lt;h2&gt;写在最后&lt;/h2&gt;
 &lt;p&gt;蚂蚁百灵大模型为开发者提供了强大的AI辅助能力。通过合理的模型选择和配置，可以显著提升开发效率。建议根据实际使用场景灵活切换模型，充分利用每日免费额度，同时注意API安全和使用成本控制。&lt;/p&gt;
-</content:encoded></item><item><title>Obsidian链接收藏自动化</title><link>https://dqtx.cc/posts/workflow/obsidian%E9%93%BE%E6%8E%A5%E6%94%B6%E8%97%8F%E8%87%AA%E5%8A%A8%E5%8C%96/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/obsidian%E9%93%BE%E6%8E%A5%E6%94%B6%E8%97%8F%E8%87%AA%E5%8A%A8%E5%8C%96/</guid><pubDate>Mon, 27 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你有没有过这样的困扰？刷到优质干货、实用工具、优质教程，随手存入浏览器书签，想着日后回看。久而久之，书签越堆越多、杂乱无序，想要检索复用却无从下手，大量优质资源最终沦为闲置的无效数据。&lt;/p&gt;
-&lt;p&gt;为此，我搭建了一套&lt;strong&gt;轻量化全自动链接收藏工作流&lt;/strong&gt;，依靠 &lt;strong&gt;LinkStowr + Obsidian + Dataview&lt;/strong&gt; 三方联动，实现：&lt;/p&gt;
-&lt;p&gt;一键收藏网页、云端中转同步、本地自动归档、标签分类索引，彻底告别杂乱书签，轻松沉淀全网优质资源。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260427195504528.webp&quot; alt=&quot;大强同学「www.dqtx.cc&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;部署先决条件&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;前往 &lt;a href=&quot;https://linkstowr.com/&quot;&gt;linkstowr.com&lt;/a&gt; 注册账号，生成专属访问令牌；&lt;/li&gt;
-&lt;li&gt;浏览器安装 &lt;a href=&quot;https://chromewebstore.google.com/detail/linkstowr/aabkobajeambdejghgegicnhcndhcjpk&quot;&gt;LinkStowr 扩展&lt;/a&gt;，填入&lt;a href=&quot;https://linkstowr.com/user/settings&quot;&gt;访问令牌&lt;/a&gt;完成绑定授权；&lt;/li&gt;
-&lt;li&gt;在 Obsidian 中安装并启用 &lt;a href=&quot;https://github.com/joelseq/obsidian-linkstowr&quot;&gt;&lt;strong&gt;LinkStowr&lt;/strong&gt;&lt;/a&gt;、&lt;strong&gt;Dataview&lt;/strong&gt; 两款核心插件；&lt;/li&gt;
-&lt;li&gt;全部配置完成后，即可随时一键收藏网页，自定义添加标签与备注，高效系统化管理所有链接资源。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr /&gt;
-&lt;h3&gt;一键收藏网页Url&lt;/h3&gt;
-&lt;p&gt;安装好 LinkStowr 浏览器扩展后，收藏链接的过程变得异常简单：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;看到优质网页，点击右上角的扩展图标。&lt;/li&gt;
-&lt;li&gt;插件会自动抓取网页标题，你可以按需修改。&lt;/li&gt;
-&lt;li&gt;给链接打上标签（比如 &lt;code&gt;#AI工具&lt;/code&gt;、&lt;code&gt;#飞书&lt;/code&gt;、&lt;code&gt;#Notion&lt;/code&gt;），⚠️&lt;strong&gt;输入标签并按回车键&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;写下几句备注，记录为什么收藏它，方便未来回忆。&lt;/li&gt;
-&lt;li&gt;点击「Save Link」，完成！&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;整个过程不到 3 秒，链接就被安全地暂存到云端，等待被同步到 Obsidian。&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h3&gt;沉淀到知识库&lt;/h3&gt;
-&lt;p&gt;接下来，Obsidian 里的  **LinkStowr 插件会接管一切。它的配置非常关键，我是这样设置的：&lt;/p&gt;
-&lt;h4&gt;1. 配置基础信息&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Links folder path&lt;/strong&gt;：设置为 &lt;code&gt;02_Wiki/链接收藏&lt;/code&gt;，所有链接笔记都会存放在这里。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Access Token&lt;/strong&gt;：填入 LinkStowr 扩展中获取的令牌，打通同步通道。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Sync on load&lt;/strong&gt;：开启，每次打开 Obsidian 自动同步一次新链接。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Custom server URL&lt;/strong&gt;：留空，使用官方服务即可。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260427115231051.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
-&lt;h4&gt;2. 标准化笔记模板&lt;/h4&gt;
-&lt;p&gt;为了让所有链接笔记格式统一，我创建了一个模板文件 &lt;code&gt;templates/link-template.md&lt;/code&gt;，内容如下：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;---
-title: {{title}}
-url: {{url}}
-date: {{date:YYYY/MM/DD}}
-tags: {{tags}}
-note: {{note}}
----
-
-# {{title}}
-🔗 链接：[{{title}}]({{url}})
-📝 说明：{{note}}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;这个模板会自动填充标题、链接、日期、标签和备注，保证每一条链接笔记都结构清晰，可被 Dataview 检索和调用。&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h3&gt;Dataview自动化索引&lt;/h3&gt;
-&lt;p&gt;所有链接笔记都沉淀好了，怎么高效查看？我用 Dataview 做了一个「index.md」作为统一入口，实现了按标签自动分类。&lt;/p&gt;
-&lt;p&gt;链接收藏&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;有价值的工具和资源链接。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h4&gt;飞书文档合集&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
-  title AS &quot;名称&quot;,
-  url AS &quot;链接&quot;,
-  note AS &quot;说明&quot;,
-  tags AS &quot;标签&quot;
-FROM &quot;02_Wiki/链接收藏&quot;
-WHERE file.path != &quot;02_Wiki/链接收藏/00-index.md&quot;
-AND contains(tags, &quot;飞书&quot;)
-SORT date DESC
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4&gt;Notion文档合集&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
-  title AS &quot;名称&quot;,
-  url AS &quot;链接&quot;,
-  note AS &quot;说明&quot;,
-  tags AS &quot;标签&quot;
-FROM &quot;02_Wiki/链接收藏&quot;
-WHERE file.path != &quot;02_Wiki/链接收藏/00-index.md&quot;
-AND contains(tags, &quot;notion&quot;)
-SORT date DESC
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4&gt;github项目&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
-  title AS &quot;名称&quot;,
-  url AS &quot;链接&quot;,
-  note AS &quot;说明&quot;,
-  tags AS &quot;标签&quot;
-FROM &quot;02_Wiki/链接收藏&quot;
-WHERE file.path != &quot;02_Wiki/链接收藏/00-index.md&quot;
-AND contains(tags, &quot;github&quot;)
-SORT date DESC
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4&gt;AI工具&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
-  title AS &quot;名称&quot;,
-  url AS &quot;链接&quot;,
-  note AS &quot;说明&quot;,
-  tags AS &quot;标签&quot;
-FROM &quot;02_Wiki/链接收藏&quot;
-WHERE file.path != &quot;02_Wiki/链接收藏/00-index.md&quot;
-AND contains(tags, &quot;ai&quot;)
-SORT date DESC
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4&gt;全部链接&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
-  title AS &quot;名称&quot;,
-  url AS &quot;链接&quot;,
-  note AS &quot;说明&quot;,
-  tags AS &quot;标签&quot;
-FROM &quot;02_Wiki/链接收藏&quot;
-WHERE file.path != &quot;02_Wiki/链接收藏/00-index.md&quot;
-SORT date DESC
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;这套工作流不仅解决了我链接杂乱的问题，更让每一次收藏都变成了对数字资产的有效沉淀。&lt;/p&gt;
-&lt;p&gt;如果你也被杂乱的书签困扰，不妨试试 LinkShelf + Obsidian 这套组合，让你的链接管理从此告别手动，走向自动化。&lt;/p&gt;
 </content:encoded></item><item><title>Token Plan服务订阅平台</title><link>https://dqtx.cc/posts/xenia/api-%E5%BC%80%E6%94%BE%E5%B9%B3%E5%8F%B0/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/api-%E5%BC%80%E6%94%BE%E5%B9%B3%E5%8F%B0/</guid><pubDate>Mon, 27 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这篇文章会更新全网一些优质的 token plan 服务订阅平台及其快捷入口，方便大家查询价格和申请 API Key。&lt;/p&gt;
 &lt;h3&gt;订阅Token Plan 服务&lt;/h3&gt;
 &lt;table&gt;
@@ -1984,6 +1875,117 @@ SORT date DESC
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+</content:encoded></item><item><title>Obsidian链接收藏自动化</title><link>https://dqtx.cc/posts/workflow/obsidian%E9%93%BE%E6%8E%A5%E6%94%B6%E8%97%8F%E8%87%AA%E5%8A%A8%E5%8C%96/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/obsidian%E9%93%BE%E6%8E%A5%E6%94%B6%E8%97%8F%E8%87%AA%E5%8A%A8%E5%8C%96/</guid><pubDate>Mon, 27 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你有没有过这样的困扰？刷到优质干货、实用工具、优质教程，随手存入浏览器书签，想着日后回看。久而久之，书签越堆越多、杂乱无序，想要检索复用却无从下手，大量优质资源最终沦为闲置的无效数据。&lt;/p&gt;
+&lt;p&gt;为此，我搭建了一套&lt;strong&gt;轻量化全自动链接收藏工作流&lt;/strong&gt;，依靠 &lt;strong&gt;LinkStowr + Obsidian + Dataview&lt;/strong&gt; 三方联动，实现：&lt;/p&gt;
+&lt;p&gt;一键收藏网页、云端中转同步、本地自动归档、标签分类索引，彻底告别杂乱书签，轻松沉淀全网优质资源。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260427195504528.webp&quot; alt=&quot;大强同学「www.dqtx.cc&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;部署先决条件&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;前往 &lt;a href=&quot;https://linkstowr.com/&quot;&gt;linkstowr.com&lt;/a&gt; 注册账号，生成专属访问令牌；&lt;/li&gt;
+&lt;li&gt;浏览器安装 &lt;a href=&quot;https://chromewebstore.google.com/detail/linkstowr/aabkobajeambdejghgegicnhcndhcjpk&quot;&gt;LinkStowr 扩展&lt;/a&gt;，填入&lt;a href=&quot;https://linkstowr.com/user/settings&quot;&gt;访问令牌&lt;/a&gt;完成绑定授权；&lt;/li&gt;
+&lt;li&gt;在 Obsidian 中安装并启用 &lt;a href=&quot;https://github.com/joelseq/obsidian-linkstowr&quot;&gt;&lt;strong&gt;LinkStowr&lt;/strong&gt;&lt;/a&gt;、&lt;strong&gt;Dataview&lt;/strong&gt; 两款核心插件；&lt;/li&gt;
+&lt;li&gt;全部配置完成后，即可随时一键收藏网页，自定义添加标签与备注，高效系统化管理所有链接资源。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;h3&gt;一键收藏网页Url&lt;/h3&gt;
+&lt;p&gt;安装好 LinkStowr 浏览器扩展后，收藏链接的过程变得异常简单：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;看到优质网页，点击右上角的扩展图标。&lt;/li&gt;
+&lt;li&gt;插件会自动抓取网页标题，你可以按需修改。&lt;/li&gt;
+&lt;li&gt;给链接打上标签（比如 &lt;code&gt;#AI工具&lt;/code&gt;、&lt;code&gt;#飞书&lt;/code&gt;、&lt;code&gt;#Notion&lt;/code&gt;），⚠️&lt;strong&gt;输入标签并按回车键&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;写下几句备注，记录为什么收藏它，方便未来回忆。&lt;/li&gt;
+&lt;li&gt;点击「Save Link」，完成！&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;整个过程不到 3 秒，链接就被安全地暂存到云端，等待被同步到 Obsidian。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h3&gt;沉淀到知识库&lt;/h3&gt;
+&lt;p&gt;接下来，Obsidian 里的  **LinkStowr 插件会接管一切。它的配置非常关键，我是这样设置的：&lt;/p&gt;
+&lt;h4&gt;1. 配置基础信息&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Links folder path&lt;/strong&gt;：设置为 &lt;code&gt;02_Wiki/链接收藏&lt;/code&gt;，所有链接笔记都会存放在这里。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Access Token&lt;/strong&gt;：填入 LinkStowr 扩展中获取的令牌，打通同步通道。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sync on load&lt;/strong&gt;：开启，每次打开 Obsidian 自动同步一次新链接。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Custom server URL&lt;/strong&gt;：留空，使用官方服务即可。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260427115231051.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;h4&gt;2. 标准化笔记模板&lt;/h4&gt;
+&lt;p&gt;为了让所有链接笔记格式统一，我创建了一个模板文件 &lt;code&gt;templates/link-template.md&lt;/code&gt;，内容如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+title: {{title}}
+url: {{url}}
+date: {{date:YYYY/MM/DD}}
+tags: {{tags}}
+note: {{note}}
+---
+
+# {{title}}
+🔗 链接：[{{title}}]({{url}})
+📝 说明：{{note}}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这个模板会自动填充标题、链接、日期、标签和备注，保证每一条链接笔记都结构清晰，可被 Dataview 检索和调用。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h3&gt;Dataview自动化索引&lt;/h3&gt;
+&lt;p&gt;所有链接笔记都沉淀好了，怎么高效查看？我用 Dataview 做了一个「index.md」作为统一入口，实现了按标签自动分类。&lt;/p&gt;
+&lt;p&gt;链接收藏&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;有价值的工具和资源链接。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;飞书文档合集&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
+  title AS &quot;名称&quot;,
+  url AS &quot;链接&quot;,
+  note AS &quot;说明&quot;,
+  tags AS &quot;标签&quot;
+FROM &quot;02_Wiki/链接收藏&quot;
+WHERE file.path != &quot;02_Wiki/链接收藏/00-index.md&quot;
+AND contains(tags, &quot;飞书&quot;)
+SORT date DESC
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;Notion文档合集&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
+  title AS &quot;名称&quot;,
+  url AS &quot;链接&quot;,
+  note AS &quot;说明&quot;,
+  tags AS &quot;标签&quot;
+FROM &quot;02_Wiki/链接收藏&quot;
+WHERE file.path != &quot;02_Wiki/链接收藏/00-index.md&quot;
+AND contains(tags, &quot;notion&quot;)
+SORT date DESC
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;github项目&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
+  title AS &quot;名称&quot;,
+  url AS &quot;链接&quot;,
+  note AS &quot;说明&quot;,
+  tags AS &quot;标签&quot;
+FROM &quot;02_Wiki/链接收藏&quot;
+WHERE file.path != &quot;02_Wiki/链接收藏/00-index.md&quot;
+AND contains(tags, &quot;github&quot;)
+SORT date DESC
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;AI工具&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
+  title AS &quot;名称&quot;,
+  url AS &quot;链接&quot;,
+  note AS &quot;说明&quot;,
+  tags AS &quot;标签&quot;
+FROM &quot;02_Wiki/链接收藏&quot;
+WHERE file.path != &quot;02_Wiki/链接收藏/00-index.md&quot;
+AND contains(tags, &quot;ai&quot;)
+SORT date DESC
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;全部链接&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
+  title AS &quot;名称&quot;,
+  url AS &quot;链接&quot;,
+  note AS &quot;说明&quot;,
+  tags AS &quot;标签&quot;
+FROM &quot;02_Wiki/链接收藏&quot;
+WHERE file.path != &quot;02_Wiki/链接收藏/00-index.md&quot;
+SORT date DESC
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这套工作流不仅解决了我链接杂乱的问题，更让每一次收藏都变成了对数字资产的有效沉淀。&lt;/p&gt;
+&lt;p&gt;如果你也被杂乱的书签困扰，不妨试试 LinkShelf + Obsidian 这套组合，让你的链接管理从此告别手动，走向自动化。&lt;/p&gt;
 </content:encoded></item><item><title>Flipbook 可视化搜索</title><link>https://dqtx.cc/posts/aihacks/flipbook%E5%8F%AF%E8%A7%86%E5%8C%96%E6%90%9C%E7%B4%A2/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/flipbook%E5%8F%AF%E8%A7%86%E5%8C%96%E6%90%9C%E7%B4%A2/</guid><pubDate>Sun, 26 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近刷到一个叫缘缘博主说：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;我这两天被这个爆火的Flipbook刷屏并被震撼到，现在的UI界面也许会在不久的将来彻底改变。&lt;/p&gt;
@@ -9341,14 +9343,6 @@ function extractFirstImageIgnoreFrontmatter(content) {
 备选方案：  
 - %windir%\Resources\
 &lt;/code&gt;&lt;/pre&gt;
-</content:encoded></item><item><title>筛查无tags与分类笔记</title><link>https://dqtx.cc/posts/zen/%E7%AD%9B%E6%9F%A5%E6%97%A0tags%E4%B8%8E%E5%88%86%E7%B1%BB%E7%AC%94%E8%AE%B0/</link><guid isPermaLink="true">https://dqtx.cc/posts/zen/%E7%AD%9B%E6%9F%A5%E6%97%A0tags%E4%B8%8E%E5%88%86%E7%B1%BB%E7%AC%94%E8%AE%B0/</guid><pubDate>Thu, 01 May 2025 00:00:00 GMT</pubDate><content:encoded>&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
-  category AS &quot;分类&quot;,
-  file.tags AS &quot;标签&quot;,
-  dateformat(file.ctime, &quot;yyyy/MM/dd&quot;) AS &quot;创建日期&quot;,
-  file.link AS &quot;笔记名称&quot;
-WHERE !category OR !file.tags OR length(file.tags) = 0
-SORT category ASC, file.ctime DESC
-&lt;/code&gt;&lt;/pre&gt;
 </content:encoded></item><item><title>本周创建的笔记</title><link>https://dqtx.cc/posts/zen/%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%91%A8%E5%88%9B%E5%BB%BA/</link><guid isPermaLink="true">https://dqtx.cc/posts/zen/%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%91%A8%E5%88%9B%E5%BB%BA/</guid><pubDate>Thu, 01 May 2025 00:00:00 GMT</pubDate><content:encoded>&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
   category AS &quot;分类&quot;,
   dateformat(file.ctime, &quot;yyyy/MM/dd&quot;) AS &quot;创建日期&quot;,
@@ -9357,6 +9351,14 @@ WHERE file.ctime &amp;gt;= date(today) - dur(3 days)
 SORT category ASC, file.ctime DESC
 &lt;/code&gt;&lt;/pre&gt;
 &lt;hr /&gt;
+</content:encoded></item><item><title>筛查无tags与分类笔记</title><link>https://dqtx.cc/posts/zen/%E7%AD%9B%E6%9F%A5%E6%97%A0tags%E4%B8%8E%E5%88%86%E7%B1%BB%E7%AC%94%E8%AE%B0/</link><guid isPermaLink="true">https://dqtx.cc/posts/zen/%E7%AD%9B%E6%9F%A5%E6%97%A0tags%E4%B8%8E%E5%88%86%E7%B1%BB%E7%AC%94%E8%AE%B0/</guid><pubDate>Thu, 01 May 2025 00:00:00 GMT</pubDate><content:encoded>&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
+  category AS &quot;分类&quot;,
+  file.tags AS &quot;标签&quot;,
+  dateformat(file.ctime, &quot;yyyy/MM/dd&quot;) AS &quot;创建日期&quot;,
+  file.link AS &quot;笔记名称&quot;
+WHERE !category OR !file.tags OR length(file.tags) = 0
+SORT category ASC, file.ctime DESC
+&lt;/code&gt;&lt;/pre&gt;
 </content:encoded></item><item><title>tags查询</title><link>https://dqtx.cc/posts/zen/%E6%9F%A5tags%E7%9B%B8%E5%85%B3%E7%9A%84%E7%AC%94%E8%AE%B0/</link><guid isPermaLink="true">https://dqtx.cc/posts/zen/%E6%9F%A5tags%E7%9B%B8%E5%85%B3%E7%9A%84%E7%AC%94%E8%AE%B0/</guid><pubDate>Thu, 01 May 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Obsidian系列&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
   default(category, &quot;未分类&quot;) AS &quot;分类&quot;,
