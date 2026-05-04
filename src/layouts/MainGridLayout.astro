@@ -83,10 +83,10 @@ const mainPanelTop = siteConfig.banner.enable
 
             <SideBar class="hidden lg:block mb-4 row-start-2 col-span-2 lg:row-start-1 lg:col-span-1 lg:max-w-[17.5rem]" headings={headings}></SideBar>
 
-            <main id="swup-container" class="transition-swup-fade row-start-1 col-span-2 lg:row-start-1 lg:col-span-1 overflow-visible min-w-0">
+            <main id="swup-container" class="row-start-1 col-span-2 lg:row-start-1 lg:col-span-1 overflow-visible min-w-0">
                 <div id="content-wrapper" class="onload-animation">
                     <!-- the overflow-hidden here prevent long text break the layout-->
-                    <!-- make id different from windows.swup global property -->
+                    <!-- content wrapper -->
                     <Announcement></Announcement>
                     <slot></slot>
                 </div>
@@ -109,7 +109,7 @@ const mainPanelTop = siteConfig.banner.enable
             {"toc-hide": siteConfig.banner.enable}]}
         >
             <div id="toc-inner-wrapper" class="fixed top-14 w-[var(--toc-width)] h-[calc(100vh_-_20rem)] overflow-y-scroll overflow-x-hidden hide-scrollbar">
-                <div id="toc" class="w-full h-full transition-swup-fade ">
+                <div id="toc" class="w-full h-full">
                     <div class="h-8 w-full"></div>
                     <TOC headings={headings}></TOC>
                     <div class="h-8 w-full"></div>

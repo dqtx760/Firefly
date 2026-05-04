@@ -3,6 +3,7 @@ import Footer from "@components/Footer.astro";
 import BackToTop from "@components/control/BackToTop.astro";
 import type { MarkdownHeading } from "astro";
 import { siteConfig, profileConfig } from "@/config";
+import "lxgw-wenkai-webfont/style.css";
 
 interface Props {
 	title?: string;
@@ -36,9 +37,7 @@ const quickLinks = [
 	<meta name="description" content={pageDescription}>
 	<meta name="author" content={profileConfig.name}>
 	<link rel="icon" href="/avatar.jpg" sizes="32x32">
-	<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-	<link rel="preload" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.7.0/style.css"></noscript>
+	<!-- 霞鹜文楷字体已通过 npm 本地化 -->
 	<style>
 		:root {
 			--hue: 250;

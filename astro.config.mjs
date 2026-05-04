@@ -2,10 +2,9 @@ import sitemap from "@astrojs/sitemap";
 import svelte from "@astrojs/svelte";
 import tailwind from "@astrojs/tailwind";
 import { pluginCollapsibleSections } from "@expressive-code/plugin-collapsible-sections";
-import swup from "@swup/astro";
 import expressiveCode from "astro-expressive-code";
 import icon from "astro-icon";
-import { defineConfig, passthroughImageService } from "astro/config";
+import { defineConfig } from "astro/config";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeComponents from "rehype-components"; /* Render the custom directive content */
 import rehypeExternalLinks from "rehype-external-links";
@@ -30,9 +29,6 @@ import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
 
 // https://astro.build/config
 export default defineConfig({
-	image: {
-		service: passthroughImageService(),
-	},
 	site: "https://dqtx.cc",
 	base: "/",
 	trailingSlash: "always",
@@ -116,28 +112,50 @@ export default defineConfig({
 		tailwind({
 			nesting: true,
 		}),
-		swup({
-			theme: false,
-			animationClass: "transition-swup-", // see https://swup.js.org/options/#animationselector
-			// the default value `transition-` cause transition delay
-			// when the Tailwind class `transition-all` is used
-			containers: ["main", "#toc"],
-			smoothScrolling: true,
-			cache: true,
-			preload: true,
-			accessibility: true,
-			updateHead: true,
-			updateBodyClass: false,
-			globalInstance: true,
-		}),
 		icon({
 			include: {
-				"fa6-brands": ["*"],
-				"fa6-regular": ["*"],
-				"fa6-solid": ["*"],
-				"simple-icons": ["*"],
-				"material-symbols-light": ["*"],
-				"material-symbols": ["*"],
+				"fa6-brands": ["github"],
+				"fa6-solid": [
+					"arrow-up-right-from-square",
+					"box-archive",
+					"clock-rotate-left",
+					"face-sad-tear",
+					"house",
+				],
+				"simple-icons": ["alipay", "wechat"],
+				"material-symbols": [
+					"article-outline",
+					"calendar-month-outline",
+					"calendar-today-outline-rounded",
+					"chevron-left-rounded",
+					"chevron-right-rounded",
+					"comment",
+					"contact-mail-outline",
+					"content-copy-outline-rounded",
+					"diversity-3",
+					"edit-calendar-outline-rounded",
+					"edit-outline",
+					"expand-more",
+					"favorite",
+					"favorite-outline",
+					"folder-outline-rounded",
+					"format-list-numbered",
+					"help-outline",
+					"home-outline-rounded",
+					"keyboard-arrow-up-rounded",
+					"menu-rounded",
+					"mode-comment-outline",
+					"more-horiz",
+					"note-add",
+					"notes-rounded",
+					"open-in-new",
+					"palette-outline",
+					"person",
+					"schedule-outline-rounded",
+					"share",
+					"star",
+					"visibility-outline-rounded",
+				],
 			},
 			iconDir: "public/icons",
 		}),

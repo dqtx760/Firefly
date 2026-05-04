@@ -6,6 +6,7 @@ tags:
 category: AIHacks
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/MiMo_长图.webp
 ---
 
 ljg-card 是一个将内容铸造成 PNG 信息卡片的技能。输入文字或链接，输出高质量的视觉卡片。

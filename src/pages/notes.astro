@@ -359,8 +359,10 @@ function initDateNav() {
 
 // 首次加载
 function initNotesPage() {
-  initExpandButtons();
-  initDateNav();
+  requestAnimationFrame(function() {
+    initExpandButtons();
+    initDateNav();
+  });
 }
 
 if (document.readyState === 'loading') {
@@ -369,8 +371,6 @@ if (document.readyState === 'loading') {
   initNotesPage();
 }
 
-// swup 页面切换后重新初始化
-document.addEventListener('swup:contentReplaced', initNotesPage);
 </script>
 
 <style>

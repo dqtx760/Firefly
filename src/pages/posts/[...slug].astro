@@ -173,7 +173,7 @@ const jsonLd = {
 
             
             <!-- Giscus 评论区 -->
-            <div id="giscus-container" class="giscus" data-swup-ignore-script
+            <div id="giscus-container" class="giscus"
                 data-repo="dqtx760/Firefly"
                 data-repo-id="R_kgDORH-6kA"
                 data-category="Announcements"
@@ -231,9 +231,6 @@ const jsonLd = {
 
     // 初始化
     setupImageLoading();
-    
-    // 支持 Swup 页面切换
-    document.addEventListener('swup:contentReplaced', setupImageLoading);
 </script>
 
 <script define:vars={{ umamiConfig, postUrl: getPostUrlBySlug(entry.slug) }}>
@@ -287,7 +284,6 @@ const jsonLd = {
     }
 
     document.addEventListener('DOMContentLoaded', loadPageViews);
-    document.addEventListener('swup:contentReplaced', loadPageViews);
 </script>
 
 <style is:global>
