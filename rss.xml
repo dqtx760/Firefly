@@ -363,11 +363,165 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/tech-shrimp&quot;&gt;tech-shrimp&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>Kami：专业排版技能</title><link>https://dqtx.cc/posts/aihacks/kami/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/kami/</guid><pubDate>Sun, 03 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;AI生成文档最大的问题不是内容差，而是排版千篇一律的灰色平庸。Kami（紙）是一个面向AI Agent的文档排版设计系统，用一套约束语言让每份输出都像专业印刷品。&lt;/p&gt;
+</content:encoded></item><item><title>一键推送Obsidian笔记到微信</title><link>https://dqtx.cc/posts/workflow/wechat-converter%E6%8F%92%E4%BB%B6/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/wechat-converter%E6%8F%92%E4%BB%B6/</guid><pubDate>Mon, 04 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近使用了一款叫「Wechat Converter」的 Obsidian 插件，觉得挺好用的，支持一键将 Obsidian 中的 Markdown 文档推送至微信公众号草稿箱。&lt;/p&gt;
+&lt;p&gt;但由于我网络 IP 经常变化，直接请求微信 API 会被拦截，本文将详细拆解配置代理流程，重点解决代理服务部署问题，让你顺利落地插件功能。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260504184445684.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;获取 AppID 与 AppSecret&lt;/h3&gt;
+&lt;p&gt;在&lt;strong&gt;微信开发者平台&lt;/strong&gt;获取公众号的核心凭证，用于插件与微信 API 对接：&lt;/p&gt;
+&lt;p&gt;进入「我的业务与服务 → 公众号 → 基础信息」，就可以看到「AppID」与「AppSecret」。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h3&gt;部署 CF Worker 服务&lt;/h3&gt;
+&lt;h4&gt;第一步：创建 Cloudflare Worker&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;登录 Cloudflare Dashboard。&lt;/li&gt;
+&lt;li&gt;左侧菜单 &lt;code&gt;计算&lt;/code&gt; → &lt;code&gt;Workers 和 Pages&lt;/code&gt; → &lt;code&gt;创建应用程序&lt;/code&gt; → &lt;code&gt;从 Hello World! 开始&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;为服务命名（建议命名为 &lt;code&gt;wechat-proxy&lt;/code&gt;），点击 &lt;code&gt;部署&lt;/code&gt; 部署初始版本。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;h4&gt;第二步：编辑 Worker 代码&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;前往此页面，点击复制 &lt;code&gt;Cloudflare Worker&lt;/code&gt; 方案的完整代理代码。&lt;/li&gt;
+&lt;li&gt;回到 Cloudflare 仪表盘，点击右上角 &lt;code&gt;编辑代码&lt;/code&gt;，&lt;code&gt;删除所有原有代码&lt;/code&gt;，粘贴复制的代码。&lt;/li&gt;
+&lt;li&gt;点击 &lt;code&gt;部署&lt;/code&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;h4&gt;第三步：配置微信 IP 白名单&lt;/h4&gt;
+&lt;p&gt;你需要将 Cloudflare 的出口 IP 添加到微信公众号后台。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;登录微信公众号平台&lt;/li&gt;
+&lt;li&gt;进入 &lt;code&gt;设置与开发&lt;/code&gt; → &lt;code&gt;安全中心&lt;/code&gt; → &lt;code&gt;IP 白名单&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;复制以下 IP 列表，粘贴到输入框中并保存：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;173.245.48.0/20
+103.21.244.0/22
+103.22.200.0/22
+103.31.4.0/22
+141.101.64.0/18
+108.162.192.0/18
+190.93.240.0/20
+188.114.96.0/20
+197.234.240.0/22
+198.41.128.0/17
+162.158.0.0/15
+104.16.0.0/13
+104.24.0.0/14
+172.64.0.0/13
+131.0.72.0/22
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;最终插件配置&lt;/h3&gt;
+&lt;p&gt;打开 Obsidian，进入本插件设置页。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;添加账号&lt;/code&gt;：填写「公众号名字」、「AppID」与「AppSecret」。&lt;/li&gt;
+&lt;li&gt;找到 &lt;code&gt;高级设置&lt;/code&gt; → &lt;code&gt;API 代理地址&lt;/code&gt;，填入你的代理 URL。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;注意事项：
+Cloudflare 的 IP 列表可能会偶发变动，若出现连接问题，请查阅 Cloudflare 官方 IP 列表，官方页面同时包含 IPv4 和 IPv6 列表，&lt;strong&gt;请仅复制 IPv4 列表&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;另外，Obsidian不要有 WebP 格式图片。如果你使用 PicList 并安装了压缩插件，图片可能会被自动转换为 WebP 格式，导致推送失败。还有就是正文中不要插入微信以外的超链接。&lt;/p&gt;
+&lt;h3&gt;相关资料&lt;/h3&gt;
+&lt;p&gt;→ Wechat Converter
+https://github.com/DavidLam-oss/obsidian-wechat-converter&lt;/p&gt;
+&lt;p&gt;→ 微信开发者平台
+https://developers.weixin.qq.com/&lt;/p&gt;
+&lt;p&gt;→ 部署替换代码
+https://xiaoweibox.top/chats/wechat-proxy.html&lt;/p&gt;
+&lt;p&gt;→ Cloudflare 官网
+https://dash.cloudflare.com/&lt;/p&gt;
+&lt;p&gt;→ Cloudflare 官方 IP 列表
+https://www.cloudflare.com/ips&lt;/p&gt;
+</content:encoded></item><item><title>网站CF加速配置指南</title><link>https://dqtx.cc/posts/technical/%E7%BD%91%E7%AB%99cf%E5%8A%A0%E9%80%9F%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E7%BD%91%E7%AB%99cf%E5%8A%A0%E9%80%9F%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/</guid><pubDate>Mon, 04 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;本文为通过 EdgeOne 部署的静态网站，提供一套完整、可直接落地的 Cloudflare（CF）优选配置方案，兼顾全球 CDN 加速、国内三网访问稳定性与安全防护，高效解决海外托管常见的延迟高、丢包问题。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260504162956507.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;一、基础 DNS 解析配置&lt;/h3&gt;
+&lt;p&gt;Cloudflare 后台添加域名后，按如下方式配置 DNS 记录，开启 CF 代理模式：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;关键：务必开启「橙色云」代理状态，使流量经过 CF CDN 节点。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;类型&lt;/th&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;目标&lt;/th&gt;
+&lt;th&gt;代理状态&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;CNAME&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;www&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;www.dqtx.cc.pages.dnsoe9.com&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;已代理（橙色云）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;CNAME&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;@&lt;/code&gt;（或&lt;code&gt;dqtx.cc&lt;/code&gt;）&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;dqtx.cc.pages.dnsoe9.com&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;已代理（橙色云）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;二、核心优化配置&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;性能加速&lt;/strong&gt;：进入「速度 - 设置 - 站点建议」，一键开启自动压缩、Brotli、HTTP/3 等优化项。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;安全与 HTTPS&lt;/strong&gt;：在「SSL/TLS」中设置加密模式为「完整」，并开启「始终使用 HTTPS」。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;缓存规则&lt;/strong&gt;：创建页面规则，匹配&lt;code&gt;*.dqtx.cc/*&lt;/code&gt;，设置缓存级别为「标准」，静态资源缓存 30 天，平衡更新与加载速度。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;优化 Astro 构建&lt;/strong&gt;：针对 Astro 静态站的性能损耗模式，做了以下优化：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;优化项&lt;/th&gt;
+&lt;th&gt;改动&lt;/th&gt;
+&lt;th&gt;预期效果&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;图片服务&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;passthroughImageService()&lt;/code&gt; → sharp（默认）&lt;/td&gt;
+&lt;td&gt;新图片自动 AVIF/WebP，体积减 50-80%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Swup 移除&lt;/td&gt;
+&lt;td&gt;删掉 swup + 4个插件，清理所有相关代码&lt;/td&gt;
+&lt;td&gt;JS 减少 ~48K，消除页面切换开销&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;字体本地化&lt;/td&gt;
+&lt;td&gt;CDN link → npm 本地 import&lt;/td&gt;
+&lt;td&gt;消除外部 DNS + 跨域请求&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;KaTeX 移除&lt;/td&gt;
+&lt;td&gt;全局 CSS import 删除&lt;/td&gt;
+&lt;td&gt;每页减少一个 CSS 请求&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Icon 按需&lt;/td&gt;
+&lt;td&gt;6个集合全量 → 40个具体 icon&lt;/td&gt;
+&lt;td&gt;减少无用 icon 数据&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;代码清理&lt;/td&gt;
+&lt;td&gt;移除注释代码、dead code&lt;/td&gt;
+&lt;td&gt;HTML 体积微减&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;注意事项&lt;/strong&gt;：CSS 600K 偏大（Tailwind 输出未充分 purge），swup 移除后页面导航为全量刷新但无交互异常，sharp 图片优化仅对新构建图片生效。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;三、验证生效&lt;/h3&gt;
+&lt;p&gt;配置完成后，在本地终端执行&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;nslookup www.dqtx.cc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;解析结果若返回 Cloudflare 节点 IP，即代表 CDN 已成功启用。此时用户访问流程为「用户→CF 节点→源站」，网站访问速度、稳定性与安全性均得到全面提升。&lt;/p&gt;
+</content:encoded></item><item><title>Kami：专业排版技能</title><link>https://dqtx.cc/posts/aihacks/kami/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/kami/</guid><pubDate>Sun, 03 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;AI生成文档最大的问题不是内容差，而是排版千篇一律的灰色平庸。&lt;/p&gt;
+&lt;p&gt;Kami（紙）是一个面向AI Agent的文档排版设计系统，用一套约束语言让每份输出都像专业印刷品。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;项目地址&lt;/strong&gt;：https://github.com/tw93/kami&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260503015233739.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260503212707072.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;它能做什么&lt;/h3&gt;
-&lt;p&gt;Kami 内置6种文档模板，覆盖日常办公场景：&lt;/p&gt;
+&lt;p&gt;Kami 内置6种文档模板&lt;/p&gt;
+&lt;p&gt;覆盖日常办公场景：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;One-Pager&lt;/strong&gt; — 一页纸方案 / 执行摘要&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Resume&lt;/strong&gt; — 简历，结构化输出&lt;/li&gt;
@@ -377,7 +531,7 @@
 &lt;li&gt;&lt;strong&gt;Portfolio&lt;/strong&gt; — 作品集&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;设计风格统一：暖色羊皮纸底 &lt;code&gt;#f5f4ed&lt;/code&gt;、墨蓝强调色、衬线字体层级，装完不用配置，自然语言直接触发。&lt;/p&gt;
-&lt;h3&gt;安装&lt;/h3&gt;
+&lt;h3&gt;安装命令&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Claude Code 一行命令&lt;/strong&gt;：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;npx skills add tw93/kami -a claude-code -g -y
 &lt;/code&gt;&lt;/pre&gt;
@@ -414,7 +568,11 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;作者 Tw93 是淘宝前端工程师，他是从每次让Claude写美股研报时受不了默认排版开始，一步步提炼出这套设计约束。Kami 是 Kaku（写代码）、Waza（练技能）、Kami（做文档）三部曲的最后一环。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;再比如，我对 Agent 直接说了句&lt;/strong&gt;：「把 Kami 技能里的配色提取出来，应用到我的博客中」。&lt;/p&gt;
+&lt;p&gt;几秒钟后，博客的主色、背景色、强调色全部换成了 Kami 那套暖色羊皮纸风格，标题用了墨蓝衬线，正文间距也跟着调整了——一句话搞定整站视觉统一。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260503213507841.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;作者 Tw93 是淘宝前端工程师，他是从每次让Claude写美股研报时受不了默认排版开始，一步步提炼出这套设计约束。&lt;/p&gt;
+&lt;p&gt;Kami 是 Kaku（写代码）、Waza（练技能）、Kami（做文档）三部曲的最后一环。&lt;/p&gt;
 </content:encoded></item><item><title>小米MiMo V2.5 邀请码 V4B9NJ</title><link>https://dqtx.cc/posts/aihacks/mimo-v25-%E9%82%80%E8%AF%B7%E7%A0%81-v4b9nj/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/mimo-v25-%E9%82%80%E8%AF%B7%E7%A0%81-v4b9nj/</guid><pubDate>Fri, 01 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;近日，小米 MiMo V2.5 开放平台正式公测，平台特别推出新用户福利：填写&lt;strong&gt;邀请码 V4B9NJ&lt;/strong&gt; 即可领取 ¥10 API 体验金&lt;/p&gt;
 &lt;p&gt;叠加 100 万亿 Token 免费申领计划，这场兼顾技术深度与普惠性的 AI 盛宴，正在重新定义专业场景的 AI 应用边界。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260501171535698.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
@@ -9231,14 +9389,6 @@ SORT category ASC, file.ctime DESC
 WHERE contains(file.tags, &quot;博客&quot;)
 SORT category ASC, file.ctime DESC
 &lt;/code&gt;&lt;/pre&gt;
-</content:encoded></item><item><title>本周创建的笔记</title><link>https://dqtx.cc/posts/zen/%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%91%A8%E5%88%9B%E5%BB%BA/</link><guid isPermaLink="true">https://dqtx.cc/posts/zen/%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%91%A8%E5%88%9B%E5%BB%BA/</guid><pubDate>Thu, 01 May 2025 00:00:00 GMT</pubDate><content:encoded>&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
-  category AS &quot;分类&quot;,
-  dateformat(file.ctime, &quot;yyyy/MM/dd&quot;) AS &quot;创建日期&quot;,
-  file.link AS &quot;本周笔记&quot;
-WHERE file.ctime &amp;gt;= date(today) - dur(3 days)
-SORT category ASC, file.ctime DESC
-&lt;/code&gt;&lt;/pre&gt;
-&lt;hr /&gt;
 </content:encoded></item><item><title>筛查无tags与分类笔记</title><link>https://dqtx.cc/posts/zen/%E7%AD%9B%E6%9F%A5%E6%97%A0tags%E4%B8%8E%E5%88%86%E7%B1%BB%E7%AC%94%E8%AE%B0/</link><guid isPermaLink="true">https://dqtx.cc/posts/zen/%E7%AD%9B%E6%9F%A5%E6%97%A0tags%E4%B8%8E%E5%88%86%E7%B1%BB%E7%AC%94%E8%AE%B0/</guid><pubDate>Thu, 01 May 2025 00:00:00 GMT</pubDate><content:encoded>&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
   category AS &quot;分类&quot;,
   file.tags AS &quot;标签&quot;,
@@ -9247,6 +9397,14 @@ SORT category ASC, file.ctime DESC
 WHERE !category OR !file.tags OR length(file.tags) = 0
 SORT category ASC, file.ctime DESC
 &lt;/code&gt;&lt;/pre&gt;
+</content:encoded></item><item><title>本周创建的笔记</title><link>https://dqtx.cc/posts/zen/%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%91%A8%E5%88%9B%E5%BB%BA/</link><guid isPermaLink="true">https://dqtx.cc/posts/zen/%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%91%A8%E5%88%9B%E5%BB%BA/</guid><pubDate>Thu, 01 May 2025 00:00:00 GMT</pubDate><content:encoded>&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
+  category AS &quot;分类&quot;,
+  dateformat(file.ctime, &quot;yyyy/MM/dd&quot;) AS &quot;创建日期&quot;,
+  file.link AS &quot;本周笔记&quot;
+WHERE file.ctime &amp;gt;= date(today) - dur(3 days)
+SORT category ASC, file.ctime DESC
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
 </content:encoded></item><item><title>Bash上传代码到github命令</title><link>https://dqtx.cc/posts/xenia/bash%E4%B8%8A%E4%BC%A0github%E5%91%BD%E4%BB%A4/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/bash%E4%B8%8A%E4%BC%A0github%E5%91%BD%E4%BB%A4/</guid><pubDate>Sat, 26 Apr 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;本教程详细介绍如何将本地项目通过Bash 终端上传代码到 GitHub&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260426215604902.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;准备工作&lt;/h2&gt;
