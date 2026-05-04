@@ -90,8 +90,9 @@
         @apply pointer-events-none text-black/10 dark:text-white/10
     }
     .btn-plain {
-        @apply transition relative flex items-center justify-center bg-none
+        @apply relative flex items-center justify-center bg-none
         text-black/75 hover:text-[var(--primary)] dark:text-white/75 dark:hover:text-[var(--primary)];
+        transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
         &:not(.scale-animation) {
             @apply hover:bg-[var(--btn-plain-bg-hover)] active:bg-[var(--btn-plain-bg-active)]
         }

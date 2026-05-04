@@ -112,4 +112,20 @@
         }
 
     }
+
+    table {
+        border-radius: 0;
+    }
+
+    table, thead, thead th, tbody tr, tbody td {
+        border-color: #504e49;
+    }
+
+    thead, tbody tr {
+        background-color: #2a2a28;
+    }
+
+    thead th, tbody td {
+        color: #e8e6dc;
+    }
 }
