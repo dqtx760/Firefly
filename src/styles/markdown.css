@@ -122,10 +122,20 @@
     }
 
     thead, tbody tr {
-        background-color: #2a2a28;
+        background-color: #3d3d3a !important;
     }
 
     thead th, tbody td {
         color: #e8e6dc;
+        background-color: #3d3d3a !important;
+    }
+
+    tbody tr:hover {
+        background-color: #3d3d3a;
+    }
+
+    tbody td::selection {
+        background-color: #f5f5f5;
+        color: #000;
     }
 }
