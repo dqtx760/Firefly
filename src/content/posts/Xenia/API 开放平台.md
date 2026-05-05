@@ -10,7 +10,7 @@ image:
 ---
 这篇文章会更新全网一些优质的 token plan 服务订阅平台及其快捷入口，方便大家查询价格和申请 API Key。
 
-### 订阅Token Plan 服务
+### 付费订Token平台
 
 | Api供应商                                                         | API Keys                                                                              | 使用说明                                                                                                                                                                    | 参考价格 |
 | -------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
@@ -20,8 +20,28 @@ image:
 | [Kimi K2](https://www.kimi.com/code)                           | 点此获取                                                                                  | [点此查看](https://www.kimi.com/code/docs/third-party-tools/other-coding-agents.html)                                                                                       |      |
 | [OpenRouter](https://openrouter.ai/)                           | [点此获取](https://openrouter.ai/workspaces/default/keys)                                 | 点此查看                                                                                                                                                                    |      |
 | [XiaomiMIMO](https://platform.xiaomimimo.com/token-plan)       | [点击获取](https://platform.xiaomimimo.com/console/api-keys)                              | [点此查看](https://platform.xiaomimimo.com/docs/zh-CN/integration/tools-overview)                                                                                           |      |
+| [Deekseek](https://platform.deepseek.com/usage)                | [点此获取](https://platform.deepseek.com/api_keys)                                        | [接口文档](https://api-docs.deepseek.com/zh-cn/quick_start/agent_integrations/claude_code)                                                                                  |      |
+| 胜算云                                                            | https://www.shengsuanyun.com                                                          |                                                                                                                                                                         |      |
+| SiliconFlow                                                    | https://siliconflow.cn                                                                |                                                                                                                                                                         |      |
+| DMXAPI                                                         | https://www.dmxapi.cn                                                                 |                                                                                                                                                                         |      |
+| 优云智算                                                           | https://www.compshare.cn                                                              |                                                                                                                                                                         |      |
+| PackyCode                                                      | https://www.packyapi.com                                                              |                                                                                                                                                                         |      |
+| Cubence                                                        | https://cubence.com                                                                   |                                                                                                                                                                         |      |
+| AIGoCode                                                       | https://aigocode.com                                                                  |                                                                                                                                                                         |      |
+| RightCode                                                      | https://www.right.codes                                                               |                                                                                                                                                                         |      |
+| AICodeMirror                                                   | https://aigocode.com                                                                  |                                                                                                                                                                         |      |
+| AICoding                                                       | https://aicoding.sh                                                                   |                                                                                                                                                                         |      |
+| CrazyRouter                                                    | https://www.crazyrouter.com                                                           |                                                                                                                                                                         |      |
+### 免费送token活动平台
+- [OpenRouter](https://www.dqtx.cc/posts/aihacks/openrouter/)----冲70米 1000次/次
+- [NVIDIA](https://www.dqtx.cc/posts/aihacks/nvidia-api%E7%94%B3%E8%AF%B7/)----一年有效期
+- [Xiaomi MiMo 百亿token计划](https://www.dqtx.cc/posts/aihacks/xiaomi-mimo%E7%99%BE%E4%B8%87%E4%BA%BFtoken/)---- 活动5.28结束
+- [Xiaomi MiMo 要求计划](https://www.dqtx.cc/posts/aihacks/mimo-v25-%E9%82%80%E8%AF%B7%E7%A0%81-v4b9nj/)---- 双方各得￥10体验金
+- [蚂蚁百灵](https://www.dqtx.cc/posts/aihacks/%E8%9A%82%E8%9A%81%E7%99%BE%E7%81%B5%E5%A4%A7%E6%A8%A1%E5%9E%8B/)----每日50万
+- 魔塔社区----每日200次 
 
-#### Al Coding 工具
+
+### Al Agent 工具
 
 | 工具名称                                                 | 说明                     |     |
 | ---------------------------------------------------- | ---------------------- | --- |
