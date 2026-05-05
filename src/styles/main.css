@@ -1,5 +1,8 @@
 @tailwind components;
 
+/* 禁用点击时的 focus outline 避免抖动 */
+*:focus { outline: none; }
+
 @layer components {
     /* Kami 暖色系 */
     :root {

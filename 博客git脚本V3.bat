@@ -1,22 +1,21 @@
 @echo off
-chcp 936 >nul
 cd /d "%~dp0"
-title 博客工作菜单
+title Blog Publisher
 
 :menu
 cls
 echo.
 echo ====================================================
-echo            大强博客「dqtx.cc」工作流菜单
+echo            Blog Publisher - dqtx.cc
 echo ====================================================
 echo.
-echo  [1] 生成文章YAML 模板
-echo  [2] Git 提交并推送代码
-echo  [3] 启动本地构建预览
-echo  [4] 退出程序
+echo  [1] Generate YAML Template
+echo  [2] Git Commit and Push
+echo  [3] Start Preview
+echo  [4] Exit
 echo.
 echo ====================================================
-choice /c 1234 /n /m "请选择操作 [1-4]："
+choice /c 1234 /n /m "Select [1-4]: "
 
 if errorlevel 4 goto exit
 if errorlevel 3 goto preview
@@ -24,45 +23,43 @@ if errorlevel 2 goto gitpush
 if errorlevel 1 goto template
 goto menu
 
-REM 1. 生成 YAML 文章模板
 :template
 cls
 echo.
 echo ==============================================
-echo          正在生成 YAML 模板...
+echo          Generate YAML Template...
 echo ==============================================
 echo.
 cd /d D:\project2026\fuwari
 node scripts/add-frontmatter.cjs
 echo.
 echo ==============================================
-echo      模板生成完成！请在 Typora 中编辑
+echo      Done! Please edit in Typora
 echo ==============================================
 echo.
 pause
 goto menu
 
-REM 2. Git 提交并推送代码
 :gitpush
 cls
 echo.
 echo ==============================================
-echo           Git 提交与推送
+echo           Git Commit and Push
 echo ==============================================
 echo.
 cd /d D:\project2026\fuwari
-echo [1/4] 正在检查文件变更...
+echo [1/4] Checking file changes...
 echo.
 git status --short
 echo.
 if errorlevel 1 (
-    echo ??  警告：未检测到 Git 仓库或无文件变更
+    echo Warning: No files changed
     echo.
     pause
     goto menu
 )
 
-echo [2/4] 准备提交信息...
+echo [2/4] Preparing commit message...
 echo.
 for /f "tokens=1-6 delims=/-: " %%a in ("%date% %time%") do (
     set "year=%%c"
@@ -72,50 +69,49 @@ for /f "tokens=1-6 delims=/-: " %%a in ("%date% %time%") do (
     set "minute=%%e"
 )
 if %hour% lss 10 set "hour=0%hour%"
-set "default_msg=更新博客内容 %year%-%month%-%day% %hour%:%minute%"
+set "default_msg=Update blog %year%-%month%-%day% %hour%:%minute%"
 
 set "commit_msg="
-set /p "commit_msg=请输入提交备注 (直接回车使用默认: %default_msg%)："
+set /p "commit_msg=Enter commit message (press Enter for default): "
 
 if not defined commit_msg (
     set "commit_msg=%default_msg%"
 )
 
 echo.
-echo [3/4] 正在提交："%commit_msg%"
+echo [3/4] Committing to "%commit_msg%"
 echo.
 git add .
 git commit -m "%commit_msg%"
 
 echo.
-echo [4/4] 正在推送到远程仓库...
+echo [4/4] Pushing to remote...
 echo.
 git push
 if errorlevel 1 (
-    echo 推送被拒绝，正在拉取远程更改...
+    echo Push failed, retrying...
     git pull --rebase
     git push
 )
 
 echo.
 echo ==============================================
-echo           ? Git 提交推送完成！
+echo           Done!
 echo ==============================================
 echo.
 pause
 goto menu
 
-REM 3. 启动本地构建预览
 :preview
 cls
 echo.
 echo ==============================================
-echo         正在启动本地预览服务
+echo         Start Local Preview
 echo ==============================================
 echo.
 cd /d D:\project2026\fuwari
-echo  预览地址：http://localhost:4321
-echo  停止预览：按 Ctrl + C
+echo  Preview: http://localhost:4321
+echo  Press Ctrl + C to stop
 echo.
 start http://localhost:4321
 npm run dev
@@ -123,10 +119,9 @@ echo.
 pause
 goto menu
 
-REM 4. 退出程序
 :exit
 echo.
-echo 再见！
+echo Bye!
 echo.
-timeout /t 1 /nobreak >nul
+timeout /t 1 /nobreak >/dev/null
 exit

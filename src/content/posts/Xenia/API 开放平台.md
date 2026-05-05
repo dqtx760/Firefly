@@ -38,7 +38,7 @@ image:
 - [Xiaomi MiMo 百亿token计划](https://www.dqtx.cc/posts/aihacks/xiaomi-mimo%E7%99%BE%E4%B8%87%E4%BA%BFtoken/)---- 活动5.28结束
 - [Xiaomi MiMo 要求计划](https://www.dqtx.cc/posts/aihacks/mimo-v25-%E9%82%80%E8%AF%B7%E7%A0%81-v4b9nj/)---- 双方各得￥10体验金
 - [蚂蚁百灵](https://www.dqtx.cc/posts/aihacks/%E8%9A%82%E8%9A%81%E7%99%BE%E7%81%B5%E5%A4%A7%E6%A8%A1%E5%9E%8B/)----每日50万
-- 魔塔社区----每日200次 
+- [魔塔社区](https://www.dqtx.cc/posts/aihacks/%E9%AD%94%E6%90%AD%E7%A4%BE%E5%8C%BA%E5%85%8D%E8%B4%B9token%E6%B4%BB%E5%8A%A8/)----每日200次 
 
 
 ### Al Agent 工具
