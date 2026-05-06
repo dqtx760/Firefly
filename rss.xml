@@ -363,7 +363,8 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/tech-shrimp&quot;&gt;tech-shrimp&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>几款录屏软件整理</title><link>https://dqtx.cc/posts/software/%E5%87%A0%E6%AC%BE%E5%BD%95%E5%B1%8F%E8%BD%AF%E4%BB%B6/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E5%87%A0%E6%AC%BE%E5%BD%95%E5%B1%8F%E8%BD%AF%E4%BB%B6/</guid><pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;免费开源软件&lt;/h2&gt;
+</content:encoded></item><item><title>几款录屏软件整理</title><link>https://dqtx.cc/posts/software/%E5%87%A0%E6%AC%BE%E5%BD%95%E5%B1%8F%E8%BD%AF%E4%BB%B6/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E5%87%A0%E6%AC%BE%E5%BD%95%E5%B1%8F%E8%BD%AF%E4%BB%B6/</guid><pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;复盘下市面的上的录屏工具&lt;/p&gt;
+&lt;h2&gt;免费开源软件&lt;/h2&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -415,23 +416,14 @@
 &lt;td&gt;¥5&lt;/td&gt;
 &lt;td&gt;&lt;a href=&quot;https://huashuo.ashooter.com/&quot;&gt;ashooter.com&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2&gt;国产软件&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;软件&lt;/th&gt;
-&lt;th&gt;官网&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;Bandicam&lt;/td&gt;
+&lt;td&gt;¥269 终身&lt;/td&gt;
 &lt;td&gt;&lt;a href=&quot;https://www.bandicam.cn/&quot;&gt;bandicam.cn&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;嗨格式录屏&lt;/td&gt;
+&lt;td&gt;FocuSee&lt;/td&gt;
+&lt;td&gt;¥295  1年  高级版&lt;/td&gt;
 &lt;td&gt;&lt;a href=&quot;https://focusee.imobie.net/&quot;&gt;focusee.imobie.net&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -442,169 +434,6 @@
 &lt;li&gt;&lt;a href=&quot;https://github.com/jaywcjlove/quick-rss/issues&quot;&gt;jaywcjlove/quick-rss&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/ruanyf/weekly/issues&quot;&gt;ruanyf/weekly&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>我的github仓库合集</title><link>https://dqtx.cc/posts/xenia/%E6%88%91%E7%9A%84github%E4%BB%93%E5%BA%93%E5%90%88%E9%9B%86/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/%E6%88%91%E7%9A%84github%E4%BB%93%E5%BA%93%E5%90%88%E9%9B%86/</guid><pubDate>Tue, 05 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;属性&lt;/th&gt;
-&lt;th&gt;仓库地址&lt;/th&gt;
-&lt;th&gt;说明&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;自建公共&lt;/td&gt;
-&lt;td&gt;https://github.com/dqtx760/Firefly&lt;/td&gt;
-&lt;td&gt;博客&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;自建公共&lt;/td&gt;
-&lt;td&gt;https://github.com/dqtx760/Curriculum-Vitae&lt;/td&gt;
-&lt;td&gt;个人简历&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;自建公共&lt;/td&gt;
-&lt;td&gt;https://github.com/dqtx760/remote&lt;/td&gt;
-&lt;td&gt;远程&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;自建公共&lt;/td&gt;
-&lt;td&gt;https://github.com/dqtx760/Proxyfree&lt;/td&gt;
-&lt;td&gt;魔法&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;自建公共&lt;/td&gt;
-&lt;td&gt;https://github.com/dqtx760/Tvfree&lt;/td&gt;
-&lt;td&gt;TV导航&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;自建公共&lt;/td&gt;
-&lt;td&gt;https://github.com/dqtx760/nav&lt;/td&gt;
-&lt;td&gt;大强导航&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;自建公共&lt;/td&gt;
-&lt;td&gt;https://github.com/dqtx760/Calculator&lt;/td&gt;
-&lt;td&gt;在线计算器&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;自建公共&lt;/td&gt;
-&lt;td&gt;https://github.com/dqtx760/key&lt;/td&gt;
-&lt;td&gt;密码生成&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;自建公共&lt;/td&gt;
-&lt;td&gt;https://github.com/dqtx760/check&lt;/td&gt;
-&lt;td&gt;直播源检查&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;自建公共&lt;/td&gt;
-&lt;td&gt;https://github.com/dqtx760/op&lt;/td&gt;
-&lt;td&gt;旁路由方案&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;自建公共&lt;/td&gt;
-&lt;td&gt;https://github.com/dqtx760/card&lt;/td&gt;
-&lt;td&gt;卡片生成&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;自建公共&lt;/td&gt;
-&lt;td&gt;https://github.com/dqtx760/blog&lt;/td&gt;
-&lt;td&gt;博客&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;自建公共&lt;/td&gt;
-&lt;td&gt;https://github.com/dqtx760/bx&lt;/td&gt;
-&lt;td&gt;社保报销&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;自建公共&lt;/td&gt;
-&lt;td&gt;https://github.com/dqtx760/Nano-Banana-pro&lt;/td&gt;
-&lt;td&gt;图片生成&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;自建公共&lt;/td&gt;
-&lt;td&gt;https://github.com/dqtx760/1TV&lt;/td&gt;
-&lt;td&gt;IPTV源&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;自建公共&lt;/td&gt;
-&lt;td&gt;https://github.com/dqtx760/Shopping&lt;/td&gt;
-&lt;td&gt;工坊&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;自建公共&lt;/td&gt;
-&lt;td&gt;https://github.com/dqtx760/help&lt;/td&gt;
-&lt;td&gt;商务合作&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;自建公共&lt;/td&gt;
-&lt;td&gt;https://github.com/dqtx760/Codedoc&lt;/td&gt;
-&lt;td&gt;Claude学习资料&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;自建公共&lt;/td&gt;
-&lt;td&gt;https://github.com/dqtx760/oplist-Neumorphism&lt;/td&gt;
-&lt;td&gt;openlist主题代码&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;自建公共&lt;/td&gt;
-&lt;td&gt;https://github.com/dqtx760/ceshi&lt;/td&gt;
-&lt;td&gt;博客&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;自建公共&lt;/td&gt;
-&lt;td&gt;https://github.com/dqtx760/dqtx760&lt;/td&gt;
-&lt;td&gt;github主页&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;自建公共&lt;/td&gt;
-&lt;td&gt;https://github.com/dqtx760/StarTab&lt;/td&gt;
-&lt;td&gt;chrome插件&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;自建公共&lt;/td&gt;
-&lt;td&gt;https://github.com/dqtx760/Snaply&lt;/td&gt;
-&lt;td&gt;chrome插件&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;复刻&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;https://github.com/dqtx760/CloudFlare-ImgBed&lt;/td&gt;
-&lt;td&gt;在线图床&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;复刻&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;https://github.com/dqtx760/MoonTV&lt;/td&gt;
-&lt;td&gt;影视站&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;复刻&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;https://github.com/dqtx760/vlt_zh&lt;/td&gt;
-&lt;td&gt;VLC 皮肤脚本&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;复刻&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;https://github.com/dqtx760/dqtx760.github.io&lt;/td&gt;
-&lt;td&gt;个人主页&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;&amp;lt;span style=&quot;color: rgb(216,57,49); background-color: inherit&quot;&amp;gt;私有&amp;lt;/span&amp;gt;&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;https://github.com/dqtx760/zhishiku&lt;/td&gt;
-&lt;td&gt;Obsidian备份&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;&amp;lt;span style=&quot;color: rgb(216,57,49); background-color: inherit&quot;&amp;gt;私有&amp;lt;/span&amp;gt;&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;https://github.com/dqtx760/cfg&lt;/td&gt;
-&lt;td&gt;我的软件配置文件&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&amp;lt;span style=&quot;color: rgb(216,57,49); background-color: inherit&quot;&amp;gt;私有&amp;lt;/span&amp;gt;&lt;/td&gt;
-&lt;td&gt;https://github.com/dqtx760/skills-manage&lt;/td&gt;
-&lt;td&gt;Skill管理备份&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;原备份地址：
-https://xodnytdcaw.feishu.cn/wiki/Yv29w7gcaiQqQ4kbGU7csQymn4e&lt;/p&gt;
 </content:encoded></item><item><title>一键推送Obsidian笔记到微信</title><link>https://dqtx.cc/posts/workflow/wechat-converter%E6%8F%92%E4%BB%B6/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/wechat-converter%E6%8F%92%E4%BB%B6/</guid><pubDate>Mon, 04 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近使用了一款叫「Wechat Converter」的 Obsidian 插件，觉得挺好用的，支持一键将 Obsidian 中的 Markdown 文档推送至微信公众号草稿箱。&lt;/p&gt;
 &lt;p&gt;但由于我网络 IP 经常变化，直接请求微信 API 会被拦截，本文将详细拆解配置代理流程，重点解决代理服务部署问题，让你顺利落地插件功能。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260504184445684.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -2005,6 +1834,117 @@ ANTHROPIC_DEFAULT_HAIKU_MODEL=Ling-2.6-flash
 &lt;/table&gt;
 &lt;h2&gt;写在最后&lt;/h2&gt;
 &lt;p&gt;蚂蚁百灵大模型为开发者提供了强大的AI辅助能力。通过合理的模型选择和配置，可以显著提升开发效率。建议根据实际使用场景灵活切换模型，充分利用每日免费额度，同时注意API安全和使用成本控制。&lt;/p&gt;
+</content:encoded></item><item><title>Obsidian链接收藏自动化</title><link>https://dqtx.cc/posts/workflow/obsidian%E9%93%BE%E6%8E%A5%E6%94%B6%E8%97%8F%E8%87%AA%E5%8A%A8%E5%8C%96/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/obsidian%E9%93%BE%E6%8E%A5%E6%94%B6%E8%97%8F%E8%87%AA%E5%8A%A8%E5%8C%96/</guid><pubDate>Mon, 27 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你有没有过这样的困扰？刷到优质干货、实用工具、优质教程，随手存入浏览器书签，想着日后回看。久而久之，书签越堆越多、杂乱无序，想要检索复用却无从下手，大量优质资源最终沦为闲置的无效数据。&lt;/p&gt;
+&lt;p&gt;为此，我搭建了一套&lt;strong&gt;轻量化全自动链接收藏工作流&lt;/strong&gt;，依靠 &lt;strong&gt;LinkStowr + Obsidian + Dataview&lt;/strong&gt; 三方联动，实现：&lt;/p&gt;
+&lt;p&gt;一键收藏网页、云端中转同步、本地自动归档、标签分类索引，彻底告别杂乱书签，轻松沉淀全网优质资源。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260427195504528.webp&quot; alt=&quot;大强同学「www.dqtx.cc&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;部署先决条件&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;前往 &lt;a href=&quot;https://linkstowr.com/&quot;&gt;linkstowr.com&lt;/a&gt; 注册账号，生成专属访问令牌；&lt;/li&gt;
+&lt;li&gt;浏览器安装 &lt;a href=&quot;https://chromewebstore.google.com/detail/linkstowr/aabkobajeambdejghgegicnhcndhcjpk&quot;&gt;LinkStowr 扩展&lt;/a&gt;，填入&lt;a href=&quot;https://linkstowr.com/user/settings&quot;&gt;访问令牌&lt;/a&gt;完成绑定授权；&lt;/li&gt;
+&lt;li&gt;在 Obsidian 中安装并启用 &lt;a href=&quot;https://github.com/joelseq/obsidian-linkstowr&quot;&gt;&lt;strong&gt;LinkStowr&lt;/strong&gt;&lt;/a&gt;、&lt;strong&gt;Dataview&lt;/strong&gt; 两款核心插件；&lt;/li&gt;
+&lt;li&gt;全部配置完成后，即可随时一键收藏网页，自定义添加标签与备注，高效系统化管理所有链接资源。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;h3&gt;一键收藏网页Url&lt;/h3&gt;
+&lt;p&gt;安装好 LinkStowr 浏览器扩展后，收藏链接的过程变得异常简单：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;看到优质网页，点击右上角的扩展图标。&lt;/li&gt;
+&lt;li&gt;插件会自动抓取网页标题，你可以按需修改。&lt;/li&gt;
+&lt;li&gt;给链接打上标签（比如 &lt;code&gt;#AI工具&lt;/code&gt;、&lt;code&gt;#飞书&lt;/code&gt;、&lt;code&gt;#Notion&lt;/code&gt;），⚠️&lt;strong&gt;输入标签并按回车键&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;写下几句备注，记录为什么收藏它，方便未来回忆。&lt;/li&gt;
+&lt;li&gt;点击「Save Link」，完成！&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;整个过程不到 3 秒，链接就被安全地暂存到云端，等待被同步到 Obsidian。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h3&gt;沉淀到知识库&lt;/h3&gt;
+&lt;p&gt;接下来，Obsidian 里的  **LinkStowr 插件会接管一切。它的配置非常关键，我是这样设置的：&lt;/p&gt;
+&lt;h4&gt;1. 配置基础信息&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Links folder path&lt;/strong&gt;：设置为 &lt;code&gt;02_Wiki/链接收藏&lt;/code&gt;，所有链接笔记都会存放在这里。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Access Token&lt;/strong&gt;：填入 LinkStowr 扩展中获取的令牌，打通同步通道。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sync on load&lt;/strong&gt;：开启，每次打开 Obsidian 自动同步一次新链接。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Custom server URL&lt;/strong&gt;：留空，使用官方服务即可。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260427115231051.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;h4&gt;2. 标准化笔记模板&lt;/h4&gt;
+&lt;p&gt;为了让所有链接笔记格式统一，我创建了一个模板文件 &lt;code&gt;templates/link-template.md&lt;/code&gt;，内容如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+title: {{title}}
+url: {{url}}
+date: {{date:YYYY/MM/DD}}
+tags: {{tags}}
+note: {{note}}
+---
+
+# {{title}}
+🔗 链接：[{{title}}]({{url}})
+📝 说明：{{note}}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这个模板会自动填充标题、链接、日期、标签和备注，保证每一条链接笔记都结构清晰，可被 Dataview 检索和调用。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h3&gt;Dataview自动化索引&lt;/h3&gt;
+&lt;p&gt;所有链接笔记都沉淀好了，怎么高效查看？我用 Dataview 做了一个「index.md」作为统一入口，实现了按标签自动分类。&lt;/p&gt;
+&lt;p&gt;链接收藏&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;有价值的工具和资源链接。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;飞书文档合集&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
+  title AS &quot;名称&quot;,
+  url AS &quot;链接&quot;,
+  note AS &quot;说明&quot;,
+  tags AS &quot;标签&quot;
+FROM &quot;02_Wiki/链接收藏&quot;
+WHERE file.path != &quot;02_Wiki/链接收藏/00-index.md&quot;
+AND contains(tags, &quot;飞书&quot;)
+SORT date DESC
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;Notion文档合集&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
+  title AS &quot;名称&quot;,
+  url AS &quot;链接&quot;,
+  note AS &quot;说明&quot;,
+  tags AS &quot;标签&quot;
+FROM &quot;02_Wiki/链接收藏&quot;
+WHERE file.path != &quot;02_Wiki/链接收藏/00-index.md&quot;
+AND contains(tags, &quot;notion&quot;)
+SORT date DESC
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;github项目&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
+  title AS &quot;名称&quot;,
+  url AS &quot;链接&quot;,
+  note AS &quot;说明&quot;,
+  tags AS &quot;标签&quot;
+FROM &quot;02_Wiki/链接收藏&quot;
+WHERE file.path != &quot;02_Wiki/链接收藏/00-index.md&quot;
+AND contains(tags, &quot;github&quot;)
+SORT date DESC
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;AI工具&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
+  title AS &quot;名称&quot;,
+  url AS &quot;链接&quot;,
+  note AS &quot;说明&quot;,
+  tags AS &quot;标签&quot;
+FROM &quot;02_Wiki/链接收藏&quot;
+WHERE file.path != &quot;02_Wiki/链接收藏/00-index.md&quot;
+AND contains(tags, &quot;ai&quot;)
+SORT date DESC
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;全部链接&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
+  title AS &quot;名称&quot;,
+  url AS &quot;链接&quot;,
+  note AS &quot;说明&quot;,
+  tags AS &quot;标签&quot;
+FROM &quot;02_Wiki/链接收藏&quot;
+WHERE file.path != &quot;02_Wiki/链接收藏/00-index.md&quot;
+SORT date DESC
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这套工作流不仅解决了我链接杂乱的问题，更让每一次收藏都变成了对数字资产的有效沉淀。&lt;/p&gt;
+&lt;p&gt;如果你也被杂乱的书签困扰，不妨试试 LinkShelf + Obsidian 这套组合，让你的链接管理从此告别手动，走向自动化。&lt;/p&gt;
 </content:encoded></item><item><title>Token Plan服务订阅平台</title><link>https://dqtx.cc/posts/xenia/api-%E5%BC%80%E6%94%BE%E5%B9%B3%E5%8F%B0/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/api-%E5%BC%80%E6%94%BE%E5%B9%B3%E5%8F%B0/</guid><pubDate>Mon, 27 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这篇文章会更新全网一些优质的 token plan 服务订阅平台及其快捷入口，方便大家查询价格和申请 API Key。&lt;/p&gt;
 &lt;h3&gt;付费订Token平台&lt;/h3&gt;
 &lt;table&gt;
@@ -2198,117 +2138,6 @@ ANTHROPIC_DEFAULT_HAIKU_MODEL=Ling-2.6-flash
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-</content:encoded></item><item><title>Obsidian链接收藏自动化</title><link>https://dqtx.cc/posts/workflow/obsidian%E9%93%BE%E6%8E%A5%E6%94%B6%E8%97%8F%E8%87%AA%E5%8A%A8%E5%8C%96/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/obsidian%E9%93%BE%E6%8E%A5%E6%94%B6%E8%97%8F%E8%87%AA%E5%8A%A8%E5%8C%96/</guid><pubDate>Mon, 27 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你有没有过这样的困扰？刷到优质干货、实用工具、优质教程，随手存入浏览器书签，想着日后回看。久而久之，书签越堆越多、杂乱无序，想要检索复用却无从下手，大量优质资源最终沦为闲置的无效数据。&lt;/p&gt;
-&lt;p&gt;为此，我搭建了一套&lt;strong&gt;轻量化全自动链接收藏工作流&lt;/strong&gt;，依靠 &lt;strong&gt;LinkStowr + Obsidian + Dataview&lt;/strong&gt; 三方联动，实现：&lt;/p&gt;
-&lt;p&gt;一键收藏网页、云端中转同步、本地自动归档、标签分类索引，彻底告别杂乱书签，轻松沉淀全网优质资源。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260427195504528.webp&quot; alt=&quot;大强同学「www.dqtx.cc&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;部署先决条件&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;前往 &lt;a href=&quot;https://linkstowr.com/&quot;&gt;linkstowr.com&lt;/a&gt; 注册账号，生成专属访问令牌；&lt;/li&gt;
-&lt;li&gt;浏览器安装 &lt;a href=&quot;https://chromewebstore.google.com/detail/linkstowr/aabkobajeambdejghgegicnhcndhcjpk&quot;&gt;LinkStowr 扩展&lt;/a&gt;，填入&lt;a href=&quot;https://linkstowr.com/user/settings&quot;&gt;访问令牌&lt;/a&gt;完成绑定授权；&lt;/li&gt;
-&lt;li&gt;在 Obsidian 中安装并启用 &lt;a href=&quot;https://github.com/joelseq/obsidian-linkstowr&quot;&gt;&lt;strong&gt;LinkStowr&lt;/strong&gt;&lt;/a&gt;、&lt;strong&gt;Dataview&lt;/strong&gt; 两款核心插件；&lt;/li&gt;
-&lt;li&gt;全部配置完成后，即可随时一键收藏网页，自定义添加标签与备注，高效系统化管理所有链接资源。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr /&gt;
-&lt;h3&gt;一键收藏网页Url&lt;/h3&gt;
-&lt;p&gt;安装好 LinkStowr 浏览器扩展后，收藏链接的过程变得异常简单：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;看到优质网页，点击右上角的扩展图标。&lt;/li&gt;
-&lt;li&gt;插件会自动抓取网页标题，你可以按需修改。&lt;/li&gt;
-&lt;li&gt;给链接打上标签（比如 &lt;code&gt;#AI工具&lt;/code&gt;、&lt;code&gt;#飞书&lt;/code&gt;、&lt;code&gt;#Notion&lt;/code&gt;），⚠️&lt;strong&gt;输入标签并按回车键&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;写下几句备注，记录为什么收藏它，方便未来回忆。&lt;/li&gt;
-&lt;li&gt;点击「Save Link」，完成！&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;整个过程不到 3 秒，链接就被安全地暂存到云端，等待被同步到 Obsidian。&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h3&gt;沉淀到知识库&lt;/h3&gt;
-&lt;p&gt;接下来，Obsidian 里的  **LinkStowr 插件会接管一切。它的配置非常关键，我是这样设置的：&lt;/p&gt;
-&lt;h4&gt;1. 配置基础信息&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Links folder path&lt;/strong&gt;：设置为 &lt;code&gt;02_Wiki/链接收藏&lt;/code&gt;，所有链接笔记都会存放在这里。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Access Token&lt;/strong&gt;：填入 LinkStowr 扩展中获取的令牌，打通同步通道。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Sync on load&lt;/strong&gt;：开启，每次打开 Obsidian 自动同步一次新链接。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Custom server URL&lt;/strong&gt;：留空，使用官方服务即可。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260427115231051.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
-&lt;h4&gt;2. 标准化笔记模板&lt;/h4&gt;
-&lt;p&gt;为了让所有链接笔记格式统一，我创建了一个模板文件 &lt;code&gt;templates/link-template.md&lt;/code&gt;，内容如下：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;---
-title: {{title}}
-url: {{url}}
-date: {{date:YYYY/MM/DD}}
-tags: {{tags}}
-note: {{note}}
----
-
-# {{title}}
-🔗 链接：[{{title}}]({{url}})
-📝 说明：{{note}}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;这个模板会自动填充标题、链接、日期、标签和备注，保证每一条链接笔记都结构清晰，可被 Dataview 检索和调用。&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h3&gt;Dataview自动化索引&lt;/h3&gt;
-&lt;p&gt;所有链接笔记都沉淀好了，怎么高效查看？我用 Dataview 做了一个「index.md」作为统一入口，实现了按标签自动分类。&lt;/p&gt;
-&lt;p&gt;链接收藏&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;有价值的工具和资源链接。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h4&gt;飞书文档合集&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
-  title AS &quot;名称&quot;,
-  url AS &quot;链接&quot;,
-  note AS &quot;说明&quot;,
-  tags AS &quot;标签&quot;
-FROM &quot;02_Wiki/链接收藏&quot;
-WHERE file.path != &quot;02_Wiki/链接收藏/00-index.md&quot;
-AND contains(tags, &quot;飞书&quot;)
-SORT date DESC
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4&gt;Notion文档合集&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
-  title AS &quot;名称&quot;,
-  url AS &quot;链接&quot;,
-  note AS &quot;说明&quot;,
-  tags AS &quot;标签&quot;
-FROM &quot;02_Wiki/链接收藏&quot;
-WHERE file.path != &quot;02_Wiki/链接收藏/00-index.md&quot;
-AND contains(tags, &quot;notion&quot;)
-SORT date DESC
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4&gt;github项目&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
-  title AS &quot;名称&quot;,
-  url AS &quot;链接&quot;,
-  note AS &quot;说明&quot;,
-  tags AS &quot;标签&quot;
-FROM &quot;02_Wiki/链接收藏&quot;
-WHERE file.path != &quot;02_Wiki/链接收藏/00-index.md&quot;
-AND contains(tags, &quot;github&quot;)
-SORT date DESC
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4&gt;AI工具&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
-  title AS &quot;名称&quot;,
-  url AS &quot;链接&quot;,
-  note AS &quot;说明&quot;,
-  tags AS &quot;标签&quot;
-FROM &quot;02_Wiki/链接收藏&quot;
-WHERE file.path != &quot;02_Wiki/链接收藏/00-index.md&quot;
-AND contains(tags, &quot;ai&quot;)
-SORT date DESC
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4&gt;全部链接&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
-  title AS &quot;名称&quot;,
-  url AS &quot;链接&quot;,
-  note AS &quot;说明&quot;,
-  tags AS &quot;标签&quot;
-FROM &quot;02_Wiki/链接收藏&quot;
-WHERE file.path != &quot;02_Wiki/链接收藏/00-index.md&quot;
-SORT date DESC
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;这套工作流不仅解决了我链接杂乱的问题，更让每一次收藏都变成了对数字资产的有效沉淀。&lt;/p&gt;
-&lt;p&gt;如果你也被杂乱的书签困扰，不妨试试 LinkShelf + Obsidian 这套组合，让你的链接管理从此告别手动，走向自动化。&lt;/p&gt;
 </content:encoded></item><item><title>Flipbook 可视化搜索</title><link>https://dqtx.cc/posts/aihacks/flipbook%E5%8F%AF%E8%A7%86%E5%8C%96%E6%90%9C%E7%B4%A2/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/flipbook%E5%8F%AF%E8%A7%86%E5%8C%96%E6%90%9C%E7%B4%A2/</guid><pubDate>Sun, 26 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近刷到一个叫缘缘博主说：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;我这两天被这个爆火的Flipbook刷屏并被震撼到，现在的UI界面也许会在不久的将来彻底改变。&lt;/p&gt;
@@ -3159,6 +2988,47 @@ git push --force
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260422222241120.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;修复完成后，两个仓库都安全了，以后再也不用担心 API Token 泄露的问题。&lt;/p&gt;
 &lt;p&gt;文章来源：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;  远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/p&gt;
+</content:encoded></item><item><title>Dos命令mklink详解</title><link>https://dqtx.cc/posts/workflow/mklink%E5%91%BD%E4%BB%A4/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/mklink%E5%91%BD%E4%BB%A4/</guid><pubDate>Mon, 20 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你是否遇到过这些问题：想让软件从A目录读取文件，但文件实际存放在B目录？&lt;/p&gt;
+&lt;p&gt;想在多个位置同步同一个文件，又不想每次手动复制？或是想给文件夹创建&quot;替身&quot;，让不同程序都能访问？&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Windows 自带的 mklink 命令，就是解决这些问题的神器。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260420172844734.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;01 先搞懂四种链接的区别&lt;/h3&gt;
+&lt;p&gt;Windows 提供了四种创建链接的方式，各有各的脾气：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;文件软链接（符号链接）&lt;/strong&gt; 是默认模式，用 &lt;code&gt;mklink 链接名 目标文件&lt;/code&gt; 即可创建。它像一个&quot;快捷方式升级版&quot;，让程序能读取别处的文件。&lt;strong&gt;支持跨盘&lt;/strong&gt;，比如在D盘创建一个链接指向C盘的文件。但如果你删掉原文件，这个链接就失效了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260420173406196.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;目录软链接（/D参数）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;专门用于文件夹，和文件软链接一样支持跨盘，原文件夹删除后链接同样失效。很多工具用它来重定向配置目录，比如让Claude从默认路径读取，实际文件存放在别处。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;硬链接（/H参数）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;它不是指向路径，而是给同一份数据多起几个&quot;名字&quot;。即使删掉原始文件，链接依然能打开内容，因为它指向的是硬盘上的实际数据。&lt;strong&gt;但它只能在同一个盘符内使用&lt;/strong&gt;，且只能用于文件，不能用于文件夹。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;目录联接（/J参数）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;和目录软链接类似，也是针对文件夹的链接方式。区别在于它属于NTFS的旧功能，&lt;strong&gt;不支持跨盘&lt;/strong&gt;，但兼容性更好，一些老旧程序也能正常识别。&lt;/p&gt;
+&lt;h3&gt;02 实际使用场景&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;场景一：让AI工具读取备份目录&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;想把Claude的全局skills目录指向GitHub备份仓库？可以这样操作：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cmd /c mklink /D &quot;C:\Users\你的用户名\.claude\skills&quot; &quot;C:\Users\你的用户名\claude-skills&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这两个路径指向同一个文件夹，往任意一个里放文件，另一个立刻同步。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;场景二：项目skill使用全局skill配置&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在Obsidian仓库里创建软链接，指向Claude code读取的全局skill目录：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mklink /D &quot;%userprofile%\.claude\skills&quot; &quot;%userprofile%\Documents\Obsidian\.claude\skills&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这样AI在Obsidia仓库就可以调用全局skill，不要单独安装&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;场景三：一个规范给不同的Agent用&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;用硬链接让同一份文档以不一样的名字显示，同时保持内容完全一致：&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;PS.这是 3 条独立命令，会运行 3 次，创建 3 个独立的硬链接。&lt;/em&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mklink /h &quot;D:\project2026\zhishiku\AGENTS\知识库规范.md&quot; &quot;D:\project2026\zhishiku\知识库规范.md&quot;
+mklink /h &quot;D:\project2026\zhishiku\CLAUDE\知识库规范.md&quot; &quot;D:\project2026\zhishiku\知识库规范.md&quot;
+mklink /h &quot;D:\project2026\zhishiku\QWEN\知识库规范.md&quot; &quot;D:\project2026\zhishiku\知识库规范.md&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;修改任意一个文件，其他文件同步更新，而且不怕误删原文件。&lt;/p&gt;
+&lt;h3&gt;03 重要注意事项&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;创建符号链接需要&lt;strong&gt;管理员权限&lt;/strong&gt;，记得以管理员模式运行CMD或PowerShell&lt;/li&gt;
+&lt;li&gt;软链接删除原文件后链接失效，因为链接指向的是路径&lt;/li&gt;
+&lt;li&gt;硬链接删除原文件后依然有效，因为它指向的是数据本身&lt;/li&gt;
+&lt;li&gt;如果你需要跨盘操作，选择软链接；如果只在同盘内使用，硬链接更稳定&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;掌握这四个命令，你就是Windows文件管理的高手了。&lt;/strong&gt;&lt;/p&gt;
 </content:encoded></item><item><title>Agent Skills 管理方案</title><link>https://dqtx.cc/posts/xenia/skills%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/skills%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/</guid><pubDate>Mon, 20 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;相信有很多小伙伴跟我一样，手头同时在用好几个 AI Agent——Claude Code、Codex、Cursor、Windsurf……每个 Agent 都有自己的 Skill 目录，装了一堆技能包。&lt;/p&gt;
 &lt;p&gt;时间一长就会遇到一个头疼的问题：同一个 Skill 要在不同 Agent 里各装一遍，版本还不一定一致，管理起来非常混乱。从最早手动复制粘贴技能配置，到用脚本管理本地技能库，再到尝试多设备同步——我发现&lt;strong&gt;技能的发现、配置、迁移和同步&lt;/strong&gt;，一直是个很痛的问题。&lt;/p&gt;
 &lt;p&gt;我一直在想，有没有一种方式能像管理代码依赖一样，统一管理所有 Agent 的技能包？同时实现在多设备上能够一键迁移跟同步？最近我在 GitHub 上发现了 几个解决方案，完美解决了我的痛点。&lt;/p&gt;
@@ -3241,47 +3111,6 @@ git push --force
 &lt;p&gt;https://x.com/liyue_ai/status/2017259163127304623&lt;/p&gt;
 &lt;p&gt;https://www.youtube.com/watch?v=4Gz2Sxgpv20&lt;/p&gt;
 &lt;p&gt;https://x.com/linxiaobei888/status/2017061177311056343&lt;/p&gt;
-</content:encoded></item><item><title>Dos命令mklink详解</title><link>https://dqtx.cc/posts/workflow/mklink%E5%91%BD%E4%BB%A4/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/mklink%E5%91%BD%E4%BB%A4/</guid><pubDate>Mon, 20 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你是否遇到过这些问题：想让软件从A目录读取文件，但文件实际存放在B目录？&lt;/p&gt;
-&lt;p&gt;想在多个位置同步同一个文件，又不想每次手动复制？或是想给文件夹创建&quot;替身&quot;，让不同程序都能访问？&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Windows 自带的 mklink 命令，就是解决这些问题的神器。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260420172844734.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;01 先搞懂四种链接的区别&lt;/h3&gt;
-&lt;p&gt;Windows 提供了四种创建链接的方式，各有各的脾气：&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;文件软链接（符号链接）&lt;/strong&gt; 是默认模式，用 &lt;code&gt;mklink 链接名 目标文件&lt;/code&gt; 即可创建。它像一个&quot;快捷方式升级版&quot;，让程序能读取别处的文件。&lt;strong&gt;支持跨盘&lt;/strong&gt;，比如在D盘创建一个链接指向C盘的文件。但如果你删掉原文件，这个链接就失效了。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260420173406196.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;目录软链接（/D参数）&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;专门用于文件夹，和文件软链接一样支持跨盘，原文件夹删除后链接同样失效。很多工具用它来重定向配置目录，比如让Claude从默认路径读取，实际文件存放在别处。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;硬链接（/H参数）&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;它不是指向路径，而是给同一份数据多起几个&quot;名字&quot;。即使删掉原始文件，链接依然能打开内容，因为它指向的是硬盘上的实际数据。&lt;strong&gt;但它只能在同一个盘符内使用&lt;/strong&gt;，且只能用于文件，不能用于文件夹。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;目录联接（/J参数）&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;和目录软链接类似，也是针对文件夹的链接方式。区别在于它属于NTFS的旧功能，&lt;strong&gt;不支持跨盘&lt;/strong&gt;，但兼容性更好，一些老旧程序也能正常识别。&lt;/p&gt;
-&lt;h3&gt;02 实际使用场景&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;场景一：让AI工具读取备份目录&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;想把Claude的全局skills目录指向GitHub备份仓库？可以这样操作：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;cmd /c mklink /D &quot;C:\Users\你的用户名\.claude\skills&quot; &quot;C:\Users\你的用户名\claude-skills&quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;这两个路径指向同一个文件夹，往任意一个里放文件，另一个立刻同步。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;场景二：项目skill使用全局skill配置&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;在Obsidian仓库里创建软链接，指向Claude code读取的全局skill目录：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;mklink /D &quot;%userprofile%\.claude\skills&quot; &quot;%userprofile%\Documents\Obsidian\.claude\skills&quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;这样AI在Obsidia仓库就可以调用全局skill，不要单独安装&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;场景三：一个规范给不同的Agent用&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;用硬链接让同一份文档以不一样的名字显示，同时保持内容完全一致：&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;PS.这是 3 条独立命令，会运行 3 次，创建 3 个独立的硬链接。&lt;/em&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;mklink /h &quot;D:\project2026\zhishiku\AGENTS\知识库规范.md&quot; &quot;D:\project2026\zhishiku\知识库规范.md&quot;
-mklink /h &quot;D:\project2026\zhishiku\CLAUDE\知识库规范.md&quot; &quot;D:\project2026\zhishiku\知识库规范.md&quot;
-mklink /h &quot;D:\project2026\zhishiku\QWEN\知识库规范.md&quot; &quot;D:\project2026\zhishiku\知识库规范.md&quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;修改任意一个文件，其他文件同步更新，而且不怕误删原文件。&lt;/p&gt;
-&lt;h3&gt;03 重要注意事项&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;创建符号链接需要&lt;strong&gt;管理员权限&lt;/strong&gt;，记得以管理员模式运行CMD或PowerShell&lt;/li&gt;
-&lt;li&gt;软链接删除原文件后链接失效，因为链接指向的是路径&lt;/li&gt;
-&lt;li&gt;硬链接删除原文件后依然有效，因为它指向的是数据本身&lt;/li&gt;
-&lt;li&gt;如果你需要跨盘操作，选择软链接；如果只在同盘内使用，硬链接更稳定&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;掌握这四个命令，你就是Windows文件管理的高手了。&lt;/strong&gt;&lt;/p&gt;
 </content:encoded></item><item><title>Cc-sync：多电脑CC配置同步</title><link>https://dqtx.cc/posts/aihacks/cc-sync/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/cc-sync/</guid><pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;换电脑后，你最怕什么？不是装机，而是你和 Claude 聊了半天的代码、需求、方案——全没了。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -8641,6 +8470,250 @@ category: Technical
 &lt;h2&gt;网易爆米花（手机端/TV端）&lt;/h2&gt;
 &lt;p&gt;网易爆米花官网：&lt;a href=&quot;https://bmh.163.com/&quot;&gt;点此直达&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;添加WebDAV，自动刮削&lt;/p&gt;
+</content:encoded></item><item><title>我的github仓库合集</title><link>https://dqtx.cc/posts/xenia/%E6%88%91%E7%9A%84github%E4%BB%93%E5%BA%93%E5%90%88%E9%9B%86/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/%E6%88%91%E7%9A%84github%E4%BB%93%E5%BA%93%E5%90%88%E9%9B%86/</guid><pubDate>Sat, 17 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;属性&lt;/th&gt;
+&lt;th&gt;仓库地址&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;自建公共&lt;/td&gt;
+&lt;td&gt;https://github.com/dqtx760/Firefly&lt;/td&gt;
+&lt;td&gt;博客&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;自建公共&lt;/td&gt;
+&lt;td&gt;https://github.com/dqtx760/Curriculum-Vitae&lt;/td&gt;
+&lt;td&gt;个人简历&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;自建公共&lt;/td&gt;
+&lt;td&gt;https://github.com/dqtx760/remote&lt;/td&gt;
+&lt;td&gt;远程&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;自建公共&lt;/td&gt;
+&lt;td&gt;https://github.com/dqtx760/Proxyfree&lt;/td&gt;
+&lt;td&gt;魔法&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;自建公共&lt;/td&gt;
+&lt;td&gt;https://github.com/dqtx760/Tvfree&lt;/td&gt;
+&lt;td&gt;TV导航&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;自建公共&lt;/td&gt;
+&lt;td&gt;https://github.com/dqtx760/nav&lt;/td&gt;
+&lt;td&gt;大强导航&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;自建公共&lt;/td&gt;
+&lt;td&gt;https://github.com/dqtx760/Calculator&lt;/td&gt;
+&lt;td&gt;在线计算器&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;自建公共&lt;/td&gt;
+&lt;td&gt;https://github.com/dqtx760/key&lt;/td&gt;
+&lt;td&gt;密码生成&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;自建公共&lt;/td&gt;
+&lt;td&gt;https://github.com/dqtx760/check&lt;/td&gt;
+&lt;td&gt;直播源检查&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;自建公共&lt;/td&gt;
+&lt;td&gt;https://github.com/dqtx760/op&lt;/td&gt;
+&lt;td&gt;旁路由方案&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;自建公共&lt;/td&gt;
+&lt;td&gt;https://github.com/dqtx760/card&lt;/td&gt;
+&lt;td&gt;卡片生成&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;自建公共&lt;/td&gt;
+&lt;td&gt;https://github.com/dqtx760/blog&lt;/td&gt;
+&lt;td&gt;博客&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;自建公共&lt;/td&gt;
+&lt;td&gt;https://github.com/dqtx760/bx&lt;/td&gt;
+&lt;td&gt;社保报销&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;自建公共&lt;/td&gt;
+&lt;td&gt;https://github.com/dqtx760/Nano-Banana-pro&lt;/td&gt;
+&lt;td&gt;图片生成&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;自建公共&lt;/td&gt;
+&lt;td&gt;https://github.com/dqtx760/1TV&lt;/td&gt;
+&lt;td&gt;IPTV源&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;自建公共&lt;/td&gt;
+&lt;td&gt;https://github.com/dqtx760/Shopping&lt;/td&gt;
+&lt;td&gt;工坊&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;自建公共&lt;/td&gt;
+&lt;td&gt;https://github.com/dqtx760/help&lt;/td&gt;
+&lt;td&gt;商务合作&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;自建公共&lt;/td&gt;
+&lt;td&gt;https://github.com/dqtx760/Codedoc&lt;/td&gt;
+&lt;td&gt;Claude学习资料&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;自建公共&lt;/td&gt;
+&lt;td&gt;https://github.com/dqtx760/oplist-Neumorphism&lt;/td&gt;
+&lt;td&gt;openlist主题代码&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;自建公共&lt;/td&gt;
+&lt;td&gt;https://github.com/dqtx760/ceshi&lt;/td&gt;
+&lt;td&gt;博客&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;自建公共&lt;/td&gt;
+&lt;td&gt;https://github.com/dqtx760/dqtx760&lt;/td&gt;
+&lt;td&gt;github主页&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;自建公共&lt;/td&gt;
+&lt;td&gt;https://github.com/dqtx760/StarTab&lt;/td&gt;
+&lt;td&gt;chrome插件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;自建公共&lt;/td&gt;
+&lt;td&gt;https://github.com/dqtx760/Snaply&lt;/td&gt;
+&lt;td&gt;chrome插件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;复刻&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;https://github.com/dqtx760/CloudFlare-ImgBed&lt;/td&gt;
+&lt;td&gt;在线图床&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;复刻&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;https://github.com/dqtx760/MoonTV&lt;/td&gt;
+&lt;td&gt;影视站&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;复刻&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;https://github.com/dqtx760/vlt_zh&lt;/td&gt;
+&lt;td&gt;VLC 皮肤脚本&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;复刻&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;https://github.com/dqtx760/dqtx760.github.io&lt;/td&gt;
+&lt;td&gt;个人主页&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&amp;lt;span style=&quot;color: rgb(216,57,49); background-color: inherit&quot;&amp;gt;私有&amp;lt;/span&amp;gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;https://github.com/dqtx760/zhishiku&lt;/td&gt;
+&lt;td&gt;Obsidian备份&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;&amp;lt;span style=&quot;color: rgb(216,57,49); background-color: inherit&quot;&amp;gt;私有&amp;lt;/span&amp;gt;&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;https://github.com/dqtx760/cfg&lt;/td&gt;
+&lt;td&gt;我的软件配置文件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&amp;lt;span style=&quot;color: rgb(216,57,49); background-color: inherit&quot;&amp;gt;私有&amp;lt;/span&amp;gt;&lt;/td&gt;
+&lt;td&gt;https://github.com/dqtx760/skills-manage&lt;/td&gt;
+&lt;td&gt;Skill管理备份&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;原备份地址：
+https://xodnytdcaw.feishu.cn/wiki/Yv29w7gcaiQqQ4kbGU7csQymn4e&lt;/p&gt;
+</content:encoded></item><item><title>我安装的Obsidian插件复盘</title><link>https://dqtx.cc/posts/xenia/%E6%88%91%E5%AE%89%E8%A3%85%E7%9A%84obsidian%E6%8F%92%E4%BB%B6%E5%A4%8D%E7%9B%98/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/%E6%88%91%E5%AE%89%E8%A3%85%E7%9A%84obsidian%E6%8F%92%E4%BB%B6%E5%A4%8D%E7%9B%98/</guid><pubDate>Fri, 16 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Enhancing Export&lt;/strong&gt;
+文件导出增强插件，支持多种格式导出&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Advanced Canvas&lt;/strong&gt;
+画布功能增强，支持更多节点类型&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;BRAT&lt;/strong&gt;
+测试版插件管理工具，可安装beta版插件&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Calendar&lt;/strong&gt;
+日历视图插件，支持日记和任务管理&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Claudian&lt;/strong&gt;
+AI助手集成，与Claude、Codex对话&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Custom Frames&lt;/strong&gt;
+将网页作为面板嵌入Obsidian&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Dataview&lt;/strong&gt;
+强大的数据查询和动态列表功能&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Excalidraw&lt;/strong&gt;
+手绘风格的白板绘图工具&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Floating Search&lt;/strong&gt;
+全局快速搜索浮窗&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Git&lt;/strong&gt;
+版本控制同步github&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Image auto upload&lt;/strong&gt;
+图片自动上传到图床&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;LinkStowr&lt;/strong&gt;
+双向链接管理与预览&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Notebook Navigator&lt;/strong&gt;
+笔记导航可视化预览&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;ObShare&lt;/strong&gt;
+分享笔记到飞书&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Share to NotionNext&lt;/strong&gt;
+同步笔记到Notion&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Style Settings&lt;/strong&gt;
+主题样式自定义配置&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Templater&lt;/strong&gt;
+高级模板功能，超越内置模板&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Terminal&lt;/strong&gt;
+在Obsidian中集成终端&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Wechat Converter&lt;/strong&gt;
+微信公众号文章格式转换
+https://github.com/DavidLam-oss/obsidian-wechat-converter&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;PS.飞书同步地址&lt;/strong&gt;
+https://xodnytdcaw.feishu.cn/wiki/MK77w8EnCig8dBkrULUcgtVjn3b&lt;/p&gt;
 </content:encoded></item><item><title>OBS摄像头一键移动插件</title><link>https://dqtx.cc/posts/workflow/obs%E6%8F%92%E4%BB%B6%E6%91%84%E5%83%8F%E5%A4%B4%E7%A7%BB%E5%8A%A8/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/obs%E6%8F%92%E4%BB%B6%E6%91%84%E5%83%8F%E5%A4%B4%E7%A7%BB%E5%8A%A8/</guid><description>想让 OBS 摄像头实现「一键移动+一键复位」的平滑效果？不管是直播过场切换、录课构图调整，还是避免画面遮挡，motion-effect 插件都能轻松搞定！无需复杂操作，3 步就能实现精准位移，让你的...</description><pubDate>Thu, 15 Jan 2026 11:20:00 GMT</pubDate><content:encoded>&lt;p&gt;想让 OBS 摄像头实现「一键移动+一键复位」的平滑效果？不管是直播过场切换、录课构图调整，还是避免画面遮挡，motion-effect 插件都能轻松搞定！无需复杂操作，3 步就能实现精准位移，让你的画面切换更专业～&lt;/p&gt;
 &lt;h2&gt;一、插件简介&lt;/h2&gt;
 &lt;ul&gt;
@@ -8863,6 +8936,78 @@ https://www.passkeys.com/websites-with-passkey-support-sites-directory&lt;/p&gt;
 &lt;li&gt;建议配合密码管理器使用，覆盖不支持的场景&lt;/li&gt;
 &lt;li&gt;多设备备份很重要，别只依赖单一设备&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>AI文章合集</title><link>https://dqtx.cc/posts/xenia/ai%E6%96%87%E7%AB%A0%E5%90%88%E9%9B%86/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/ai%E6%96%87%E7%AB%A0%E5%90%88%E9%9B%86/</guid><pubDate>Wed, 14 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Cli工具&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/claude-code-%E5%AE%89%E8%A3%85/&quot;&gt;Claude code 安装教程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/qwen-code/&quot;&gt;Qwen Code安装使用教程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/openclaw/&quot;&gt;OpenClaw完整安装指南&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/newtype-os/&quot;&gt;Newtype-os完整工作流指南&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/hermes-agent/&quot;&gt;Hermes Agent上手指南。&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;桌面Agent产品&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/zed/&quot;&gt;Zed安装使用教程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/antigravity/&quot;&gt;Antigravity安装使用教程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/workany/&quot;&gt;workany：桌面Agent产品&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://dqtx.cc/posts/aihacks/codepilot/&quot;&gt;CodePilot使用指南&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://dqtx.cc/posts/aihacks/%E7%A7%98%E5%A1%94%E5%9B%9E%E5%93%8D/&quot;&gt;秘塔回响语音输入法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;opencode（待补充)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;拓展插件&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/obsidian-cli/&quot;&gt;Obsidian CLI终端管理笔记指南&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/open-cli/&quot;&gt;OpenCLI安装与配置全攻略&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/weclaw/&quot;&gt;weclaw：微信桥接Agent工具&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/cc-happy/&quot;&gt;Happy：给Claude一双翅膀&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/antigravitytool/&quot;&gt;AntigravityTool使用教程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/cliproxyapi/&quot;&gt;CLIProxyAPI教程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/claude-code-%E5%AE%89%E8%A3%85/&quot;&gt;free-claude-code代理使用指南&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/xenia/cc%E5%91%BD%E4%BB%A4%E5%BF%AB%E6%8D%B7%E9%94%AE/&quot;&gt;Claude code命令&amp;amp;快捷键&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;ApI keys&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/xenia/api-%E5%BC%80%E6%94%BE%E5%B9%B3%E5%8F%B0/&quot;&gt;Token Plan服务订阅平台&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/openrouter/&quot;&gt;OpenRouter免费模型食用指南&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/nvidia-api%E7%94%B3%E8%AF%B7/&quot;&gt;英伟达免费API申请流程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/%E8%9A%82%E8%9A%81%E7%99%BE%E7%81%B5%E5%A4%A7%E6%A8%A1%E5%9E%8B/&quot;&gt;蚂蚁百灵大模型免费食用指南&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/xiaomi-mimo%E7%99%BE%E4%B8%87%E4%BA%BF-token-%E6%BF%80%E5%8A%B1%E8%AE%A1%E5%88%92/&quot;&gt;Xiaomi MiMo百万亿 Token 激励计划&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;skill&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/xenia/%E8%87%AA%E7%94%A8skill%E7%9B%98%E7%82%B9/&quot;&gt;我推荐安装的skill&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/xenia/skills%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/&quot;&gt;Skills管理方案&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/skills-link/&quot;&gt;Skills-Link完全使用指南！&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/cc-sync/&quot;&gt;Cc-sync：多电脑CC配置同步&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/ui-ux-pro-max-skill/&quot;&gt;用Claude搞定UI配色与排版指南&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/agent-reach/&quot;&gt;给Al装上“眼晴”：Agent-Reach真实体验&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/web-access/&quot;&gt;Claude联网神器：Web Access&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;MCP 协议&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/chrome-devtools-mcp/&quot;&gt;Chrome官方MCP：chrome-devtools-mcp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/feish-umcp/&quot;&gt;Claude配置飞书MCP教程&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/mcp%E6%B8%85%E5%8D%95/&quot;&gt;10个MCP清单&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;行业资讯&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/ccxielu/&quot;&gt;ClaudeCode泄露后，程序员们疯了！&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/4%E6%9C%88ai%E6%97%B6%E9%97%B4%E7%BA%BF/&quot;&gt;短短30天，AI圈炸了！&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;更新时间&lt;/em&gt;：2026/04/29&lt;/p&gt;
 </content:encoded></item><item><title>API封装成Skill最佳实践</title><link>https://dqtx.cc/posts/workflow/api%E5%B0%81%E7%94%9F%E5%9B%BEskill/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/api%E5%B0%81%E7%94%9F%E5%9B%BEskill/</guid><description>最近被阿里巴巴通义MAI的Z-Image狠狠圈粉，不仅搭载了高效的 Z-Image-Turbo 模型，更关键的是每天能免费生 2000 张图，不管是生成文章视频...</description><pubDate>Sun, 30 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近被阿里巴巴通义MAI的Z-Image狠狠圈粉，不仅搭载了高效的 &lt;strong&gt;Z-Image-Turbo&lt;/strong&gt; 模型，更关键的是&lt;strong&gt;每天能免费生 2000 张图&lt;/strong&gt;，不管是生成文章视频封面还是异常创作，这个配额都完全够用。&lt;/p&gt;
 &lt;p&gt;恰巧这段时间我正在研究 Claude 的 Skills 功能，于是就萌生了一个想法：&lt;strong&gt;把 Z-Image 的免费生图能力和 Claude Skills 结合起来&lt;/strong&gt;，做一个专属生图 Skill，通过自然语言就可以生图到本地文件夹，既省时间又能充分利用免费配额。带着这个实操需求，我把整个创建过程整理成了这篇文章，希望能给同样喜欢折腾工具、需要生图功能的朋友提供一点参考～&lt;/p&gt;
 &lt;h2&gt;一.创建方法&lt;/h2&gt;
@@ -9727,6 +9872,14 @@ function extractFirstImageIgnoreFrontmatter(content) {
 备选方案：  
 - %windir%\Resources\
 &lt;/code&gt;&lt;/pre&gt;
+</content:encoded></item><item><title>本周创建的笔记</title><link>https://dqtx.cc/posts/zen/%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%91%A8%E5%88%9B%E5%BB%BA/</link><guid isPermaLink="true">https://dqtx.cc/posts/zen/%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%91%A8%E5%88%9B%E5%BB%BA/</guid><pubDate>Thu, 01 May 2025 00:00:00 GMT</pubDate><content:encoded>&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
+  category AS &quot;分类&quot;,
+  dateformat(file.ctime, &quot;yyyy/MM/dd&quot;) AS &quot;创建日期&quot;,
+  file.link AS &quot;本周笔记&quot;
+WHERE file.ctime &amp;gt;= date(today) - dur(3 days)
+SORT category ASC, file.ctime DESC
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
 </content:encoded></item><item><title>tags查询</title><link>https://dqtx.cc/posts/zen/%E6%9F%A5tags%E7%9B%B8%E5%85%B3%E7%9A%84%E7%AC%94%E8%AE%B0/</link><guid isPermaLink="true">https://dqtx.cc/posts/zen/%E6%9F%A5tags%E7%9B%B8%E5%85%B3%E7%9A%84%E7%AC%94%E8%AE%B0/</guid><pubDate>Thu, 01 May 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Obsidian系列&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
   default(category, &quot;未分类&quot;) AS &quot;分类&quot;,
@@ -9775,14 +9928,6 @@ SORT category ASC, file.ctime DESC
 WHERE contains(file.tags, &quot;博客&quot;)
 SORT category ASC, file.ctime DESC
 &lt;/code&gt;&lt;/pre&gt;
-</content:encoded></item><item><title>本周创建的笔记</title><link>https://dqtx.cc/posts/zen/%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%91%A8%E5%88%9B%E5%BB%BA/</link><guid isPermaLink="true">https://dqtx.cc/posts/zen/%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%91%A8%E5%88%9B%E5%BB%BA/</guid><pubDate>Thu, 01 May 2025 00:00:00 GMT</pubDate><content:encoded>&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
-  category AS &quot;分类&quot;,
-  dateformat(file.ctime, &quot;yyyy/MM/dd&quot;) AS &quot;创建日期&quot;,
-  file.link AS &quot;本周笔记&quot;
-WHERE file.ctime &amp;gt;= date(today) - dur(3 days)
-SORT category ASC, file.ctime DESC
-&lt;/code&gt;&lt;/pre&gt;
-&lt;hr /&gt;
 </content:encoded></item><item><title>筛查无tags与分类笔记</title><link>https://dqtx.cc/posts/zen/%E7%AD%9B%E6%9F%A5%E6%97%A0tags%E4%B8%8E%E5%88%86%E7%B1%BB%E7%AC%94%E8%AE%B0/</link><guid isPermaLink="true">https://dqtx.cc/posts/zen/%E7%AD%9B%E6%9F%A5%E6%97%A0tags%E4%B8%8E%E5%88%86%E7%B1%BB%E7%AC%94%E8%AE%B0/</guid><pubDate>Thu, 01 May 2025 00:00:00 GMT</pubDate><content:encoded>&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
   category AS &quot;分类&quot;,
   file.tags AS &quot;标签&quot;,
@@ -12454,78 +12599,6 @@ https://mumu.163.com/&lt;/p&gt;
 &lt;blockquote&gt;&lt;/blockquote&gt;
 &lt;pre&gt;&lt;code&gt;
 &lt;/code&gt;&lt;/pre&gt;
-</content:encoded></item><item><title>AI文章合集</title><link>https://dqtx.cc/posts/xenia/ai%E6%96%87%E7%AB%A0%E5%90%88%E9%9B%86/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/ai%E6%96%87%E7%AB%A0%E5%90%88%E9%9B%86/</guid><pubDate>Sat, 29 Jan 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Cli工具&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/claude-code-%E5%AE%89%E8%A3%85/&quot;&gt;Claude code 安装教程&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/qwen-code/&quot;&gt;Qwen Code安装使用教程&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/openclaw/&quot;&gt;OpenClaw完整安装指南&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/newtype-os/&quot;&gt;Newtype-os完整工作流指南&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/hermes-agent/&quot;&gt;Hermes Agent上手指南。&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;桌面Agent产品&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/zed/&quot;&gt;Zed安装使用教程&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/antigravity/&quot;&gt;Antigravity安装使用教程&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/workany/&quot;&gt;workany：桌面Agent产品&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://dqtx.cc/posts/aihacks/codepilot/&quot;&gt;CodePilot使用指南&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://dqtx.cc/posts/aihacks/%E7%A7%98%E5%A1%94%E5%9B%9E%E5%93%8D/&quot;&gt;秘塔回响语音输入法&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;opencode（待补充)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;拓展插件&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/obsidian-cli/&quot;&gt;Obsidian CLI终端管理笔记指南&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/open-cli/&quot;&gt;OpenCLI安装与配置全攻略&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/weclaw/&quot;&gt;weclaw：微信桥接Agent工具&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/cc-happy/&quot;&gt;Happy：给Claude一双翅膀&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/antigravitytool/&quot;&gt;AntigravityTool使用教程&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/cliproxyapi/&quot;&gt;CLIProxyAPI教程&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/claude-code-%E5%AE%89%E8%A3%85/&quot;&gt;free-claude-code代理使用指南&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/xenia/cc%E5%91%BD%E4%BB%A4%E5%BF%AB%E6%8D%B7%E9%94%AE/&quot;&gt;Claude code命令&amp;amp;快捷键&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;ApI keys&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/xenia/api-%E5%BC%80%E6%94%BE%E5%B9%B3%E5%8F%B0/&quot;&gt;Token Plan服务订阅平台&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/openrouter/&quot;&gt;OpenRouter免费模型食用指南&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/nvidia-api%E7%94%B3%E8%AF%B7/&quot;&gt;英伟达免费API申请流程&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/%E8%9A%82%E8%9A%81%E7%99%BE%E7%81%B5%E5%A4%A7%E6%A8%A1%E5%9E%8B/&quot;&gt;蚂蚁百灵大模型免费食用指南&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/xiaomi-mimo%E7%99%BE%E4%B8%87%E4%BA%BF-token-%E6%BF%80%E5%8A%B1%E8%AE%A1%E5%88%92/&quot;&gt;Xiaomi MiMo百万亿 Token 激励计划&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;skill&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/xenia/%E8%87%AA%E7%94%A8skill%E7%9B%98%E7%82%B9/&quot;&gt;我推荐安装的skill&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/xenia/skills%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/&quot;&gt;Skills管理方案&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/skills-link/&quot;&gt;Skills-Link完全使用指南！&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/cc-sync/&quot;&gt;Cc-sync：多电脑CC配置同步&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/ui-ux-pro-max-skill/&quot;&gt;用Claude搞定UI配色与排版指南&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/agent-reach/&quot;&gt;给Al装上“眼晴”：Agent-Reach真实体验&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/web-access/&quot;&gt;Claude联网神器：Web Access&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;MCP 协议&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/chrome-devtools-mcp/&quot;&gt;Chrome官方MCP：chrome-devtools-mcp&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/feish-umcp/&quot;&gt;Claude配置飞书MCP教程&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/mcp%E6%B8%85%E5%8D%95/&quot;&gt;10个MCP清单&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;行业资讯&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/ccxielu/&quot;&gt;ClaudeCode泄露后，程序员们疯了！&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/4%E6%9C%88ai%E6%97%B6%E9%97%B4%E7%BA%BF/&quot;&gt;短短30天，AI圈炸了！&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;更新时间&lt;/em&gt;：2026/04/29&lt;/p&gt;
 </content:encoded></item><item><title>CLIProxyAPI教程</title><link>https://dqtx.cc/posts/aihacks/cliproxyapi/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/cliproxyapi/</guid><pubDate>Sun, 14 Feb 0202 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这就是个能让你绕过官方限制，把各大 AI 客户端额度无缝转成标准 API 的本地代理。 平时你开了 ChatGPT Plus、Claude Pro 或者用免费的 Gemini 2.5 Pro，官方只让在网页或自家的 CLI 工具里用。&lt;/p&gt;
 &lt;p&gt;这工具的骚操作在于，它直接拿你账号的 OAuth 登录态，在本地原地吐出一个标准的 OpenAI/Claude 兼容接口。&lt;/p&gt;
 &lt;p&gt;项目地址
