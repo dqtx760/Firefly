@@ -346,3 +346,9 @@ Windows Terminal → 下拉箭头 →「设置」→「添加新配置文件」�
     "CLAUDE_CODE_NO_FLICKER": "0"
 ```
 
+## 类似的工具
+### warp：
+https://www.warp.dev/
+
+### WezTerm
+https://www.dqtx.cc/posts/software/wezterm/
