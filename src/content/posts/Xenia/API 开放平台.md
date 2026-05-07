@@ -21,6 +21,7 @@ image:
 | [OpenRouter](https://openrouter.ai/)                           | [点此获取](https://openrouter.ai/workspaces/default/keys)                                 | 点此查看                                                                                                                                                                    |      |
 | [XiaomiMIMO](https://platform.xiaomimimo.com/token-plan)       | [点击获取](https://platform.xiaomimimo.com/console/api-keys)                              | [点此查看](https://platform.xiaomimimo.com/docs/zh-CN/integration/tools-overview)                                                                                           |      |
 | [Deekseek](https://platform.deepseek.com/usage)                | [点此获取](https://platform.deepseek.com/api_keys)                                        | [接口文档](https://api-docs.deepseek.com/zh-cn/quick_start/agent_integrations/claude_code)                                                                                  |      |
+| [Apimart](https://apimart.ai/register?aff=QVui)                | [点此获取](https://apimart.ai/zh/keys)                                                    | [接口文档](https://docs.apimart.ai/cn)                                                                                                                                      |      |
 | 胜算云                                                            | https://www.shengsuanyun.com                                                          |                                                                                                                                                                         |      |
 | SiliconFlow                                                    | https://siliconflow.cn                                                                |                                                                                                                                                                         |      |
 | DMXAPI                                                         | https://www.dmxapi.cn                                                                 |                                                                                                                                                                         |      |
@@ -32,6 +33,24 @@ image:
 | AICodeMirror                                                   | https://aigocode.com                                                                  |                                                                                                                                                                         |      |
 | AICoding                                                       | https://aicoding.sh                                                                   |                                                                                                                                                                         |      |
 | CrazyRouter                                                    | https://www.crazyrouter.com                                                           |                                                                                                                                                                         |      |
+
+**参考：**
+- [大模型排行榜](https://pinchbench.com/)
+- [全球大模型稳定性监测](https://relaypulse.top/)
+
+AI 中转站精选合集（建议收藏备用）
+https://tokennav.cc - 中转站导航汇总站，方便快速查找各种 API 资源  
+https://aigocode.com - 专注编程开发场景，稳定性较好  
+https://openrouter.ai - 知名模型聚合平台，模型种类丰富  
+https://aibijia.org - 综合 API 中转服务，价格比较实惠  
+https://manage-xai.ainaibahub.com - 专注 Codex 系列模型，支持较强  
+https://subrouter.ai - 多模型切换顺畅，适合日常使用  
+https://packyapi.com - 提供稳定 API 转发服务  
+http://apimart.ai - 支持 AI 生图、生视频等多种创意模型  
+http://yunwu.ai - 聚合多家 AI 模型，创意类 API 较全  
+https://dapicloud.com - 综合算力和 API 服务平台
+
+
 ### 免费送token活动平台
 - [OpenRouter](https://www.dqtx.cc/posts/aihacks/openrouter/)----冲70米 1000次/次
 - [NVIDIA](https://www.dqtx.cc/posts/aihacks/nvidia-api%E7%94%B3%E8%AF%B7/)----一年有效期
@@ -39,6 +58,13 @@ image:
 - [Xiaomi MiMo 要求计划](https://www.dqtx.cc/posts/aihacks/mimo-v25-%E9%82%80%E8%AF%B7%E7%A0%81-v4b9nj/)---- 双方各得￥10体验金
 - [蚂蚁百灵](https://www.dqtx.cc/posts/aihacks/%E8%9A%82%E8%9A%81%E7%99%BE%E7%81%B5%E5%A4%A7%E6%A8%A1%E5%9E%8B/)----每日50万
 - [魔塔社区](https://www.dqtx.cc/posts/aihacks/%E9%AD%94%E6%90%AD%E7%A4%BE%E5%8C%BA%E5%85%8D%E8%B4%B9token%E6%B4%BB%E5%8A%A8/)----每日200次 
+
+**其他**
+
+| 平台                                                                                              | 福利             | 来源                                                     |
+| ----------------------------------------------------------------------------------------------- | -------------- | ------------------------------------------------------ |
+| https://b.ai/                                                                                   | 获赠500,000 免费积分 | [点此](https://x.com/BAI_AGI/status/2050197122377728073) |
+| [https://monkeycode-ai.com](https://monkeycode-ai.com/?ic=019c5715-01a8-7e40-a320-4d16498c5f2d) | **20000 点**    |                                                        |
 
 
 ### Al Agent 工具

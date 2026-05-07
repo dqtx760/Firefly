@@ -26,3 +26,7 @@ https://github.com/zouwei/moraya
 第一款界面设计精致、内置主题美观，但全程为英文界面；
 
 第二款功能更完善，自带 AI 能力，设置面板拥有 MCP 等丰富自定义配置。
+
+其他：
+- https://logseq.com/
+- https://obsidian.md/zh/
