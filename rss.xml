@@ -617,6 +617,11 @@
 &lt;td&gt;实时检测 CPU/RAM/GPU/VRAM，结合模型数据库直接给出可运行模型及推荐量化版本&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/random-llama/llm-capability-checker&quot;&gt;llm-capability-checker&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;gui&lt;/td&gt;
+&lt;td&gt;图形界面显示0-100分硬件评分，提供瓶颈分析，分级推荐模型|&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
 &lt;td&gt;&lt;a href=&quot;https://model.aibase.com/zh/tools/pc-check&quot;&gt;AIBase PC 检测&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;在线&lt;/td&gt;
 &lt;td&gt;快速检查设备能否运行不同规模模型，无需安装&lt;/td&gt;
@@ -793,6 +798,201 @@ https://github.com/denghuichao/x-capture&lt;/p&gt;
 &lt;h3&gt;两个热帖搜索网站&lt;/h3&gt;
 &lt;p&gt;https://sopilot.net/zh/hot-tweets
 https://x-sou.com/&lt;/p&gt;
+</content:encoded></item><item><title>复现Karpathy的LLM Wiki</title><link>https://dqtx.cc/posts/software/%E5%A4%8D%E7%8E%B0karpathy%E7%9A%84llm-wiki/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E5%A4%8D%E7%8E%B0karpathy%E7%9A%84llm-wiki/</guid><pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;AI 时代最大的讽刺：我们拥有了最强大的知识处理工具，却仍在用最原始的方式管理知识。&lt;/p&gt;
+&lt;p&gt;前 Tesla AI 总监 Karpathy 给出了他的答案——&lt;strong&gt;LLM Wiki&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;这套框架近期在 GitHub 上引发广泛关注。仔细研读后，我发现它的核心价值不在于技术实现，而在于一套关于&lt;strong&gt;知识组织的理念与行为准则&lt;/strong&gt;——门槛极低，却能带来质的飞跃。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260507230429547.png&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;核心框架&lt;/h3&gt;
+&lt;h4&gt;三种文件：知识库的基石&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;文件类型&lt;/th&gt;
+&lt;th&gt;作用&lt;/th&gt;
+&lt;th&gt;示例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Raw Resource&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;存放原始资料&lt;/td&gt;
+&lt;td&gt;PDF、视频、网页剪藏&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Wiki&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;AI 主导生成的知识节点&lt;/td&gt;
+&lt;td&gt;实体页、概念页、对比页&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;TheSchema&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;人与 AI 约定的加工规范&lt;/td&gt;
+&lt;td&gt;目录结构、Front Matter、工作流&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;核心洞察&lt;/strong&gt;：原始资料是唯一事实来源，AI 的任务是把资料&lt;strong&gt;编译&lt;/strong&gt;成可复用的知识网络。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+&lt;h4&gt;三种日常操作&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;1. Ingest（摄取）&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;把新资料喂给 AI → AI 提取实体/概念 → 新增或修改 Wiki → 更新 Index 和 Log&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;2. Query（问答）&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;基于 Wiki 而非原始资料提问 → 效率更高 → 回答有价值可生成新 Wiki&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;3. Lint（审查）&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;让 AI 定期做体检：是否有矛盾？是否有被推翻的旧表述？是否有孤立页面？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h4&gt;三种查询提效工具&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;工具&lt;/th&gt;
+&lt;th&gt;作用&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Index&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;所有 Wiki 的一句话摘要，方便 AI 快速定位&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Log&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;记录 AI 每次操作，让它知道你研究了什么&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;RAG&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Wiki &amp;gt;1000 页时，用 Qmd 等工具进行混合检索&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;附：QMD原理详细解读
+https://zhuanlan.zhihu.com/p/2016471943256254194&lt;/p&gt;
+&lt;h3&gt;我的 Obsidian 实践&lt;/h3&gt;
+&lt;h4&gt;模板示范&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;obsidian-vault/
+├── 01-INPUT/                  ← 原材料入口，低摩擦记录
+│   ├── articles/                文章
+│   ├── transcripts/             转录稿
+│   ├── ideas（选题）/            选题灵感
+│   ├── sources（素材）/          素材收集
+│   ├── 剪藏/                    网页剪藏
+│   ├── 周报和复盘/              复盘记录
+│   ├── 文章草稿/                写作草稿
+│   ├── 模板/                    笔记模板
+│   ├── 研究报告/                研究资料
+│   └── 项目资料/                项目相关
+├── 02-PROCESSING/             ← AI 处理区，研究摘要、选题分析、中间稿
+│   ├── research/
+│   ├── outlines/
+│   ├── drafts（AI初稿）/
+│   └── reviews/
+├── 03-OUTPUT/                 ← 正式作品区，可发布内容
+│   ├── newsletters/
+│   ├── scripts/
+│   └── wiki/                    知识 Wiki
+├── 04-FEEDBACK/               ← 反馈层，追踪内容效果，驱动系统进化
+│   ├── metrics/
+│   ├── comments/
+│   ├── retrospectives/
+│   └── ARCHIVE归档/
+├── 05-REFERENCE/              ← 长期参考资料
+│   └── 提示词/                  AI 提示词库
+├── AGENTS                     ← Newtype-os记忆文件（硬链接）
+├── CLAUDE                     ← Claude code记忆文件（硬链接）
+├── QWEN                       ← qwen code记忆文件（硬链接）
+├── TheSchema                  ← 核心规范文档
+└── commands/                  ← 自定义命令
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 说明：CLAUDE、QWEN、AGENTS 实际上是同一个文件的硬链接（TheSchema），让不同的 AI Agent 都能读取到同一份规范文档。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;yaml属性示例&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;---
+type: &quot;entity|concept|comparison|source&quot;
+tags: []
+summary: &quot;一句话说明&quot;
+sources: [&quot;raw/xxx.pdf&quot;]
+updated: &quot;2026-05-07&quot;
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;实践建议&lt;/h4&gt;
+&lt;p&gt;建议建 3 个 skill：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. ingest&lt;/strong&gt; — 将 Raw/ 目录下的原始资料编译到 Wiki/ 中&lt;/p&gt;
+&lt;p&gt;也可以直接在 Claudian 插件中对话：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;请根据 @wiki/TheSchema 的规范，针对我 01_Raw/ 文件夹下的所有文件夹下全部文档进行分析拆解并创建出相应的wiki页面以及建立他们之间的链接关系
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;或：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;请基于提供的资料，生成 02_Wiki/ 下的结构化知识条目，并根据主题归入对应的分类目录；若知识库中没有匹配的分类，请自动创建新分类。条目需保持独立、标题清晰，格式符合 Wiki 规范
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;2. lint&lt;/strong&gt; — 知识库全局健康度检查&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. query&lt;/strong&gt; — 基于本地 Wiki 知识库回答用户提问&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h3&gt;三个容易被忽视的盲点&lt;/h3&gt;
+&lt;h4&gt;1. 原始资料可能更适合入门&lt;/h4&gt;
+&lt;p&gt;Wiki 是原子化、结构化的，&lt;strong&gt;适合回顾和总结&lt;/strong&gt;。但初学者应该先完整学习原始资料（PDF 的章节结构、视频的循序渐进），再来看 Wiki 串联知识点。&lt;/p&gt;
+&lt;h4&gt;2. AI 生成的 Wiki 需要验收&lt;/h4&gt;
+&lt;p&gt;不要无脑囤积。检查链接是否有上下文（&quot;详见 XXX&quot;却没说为什么相关）、内容是否准确。&lt;strong&gt;持续迭代 Schema 才能产生真正价值。&lt;/strong&gt;&lt;/p&gt;
+&lt;h4&gt;3. 现在创建的内容是给 AI 看的&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Index 和 Log 的设计初衷就是给 AI 用&lt;/li&gt;
+&lt;li&gt;用 &lt;code&gt;type&lt;/code&gt; 属性区分&quot;人写的内容&quot;和&quot;AI 生成的内容&quot;&lt;/li&gt;
+&lt;li&gt;Summary 字段方便 AI 检索&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h3&gt;资源汇总&lt;/h3&gt;
+&lt;h4&gt;Obsidian实例&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;模板&lt;/th&gt;
+&lt;th&gt;作者&lt;/th&gt;
+&lt;th&gt;链接&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;obsidian-vault-template&lt;/td&gt;
+&lt;td&gt;我自己创建&lt;/td&gt;
+&lt;td&gt;https://github.com/dqtx760/obsidian-vault-template&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;karpathy-llm-wiki-vault&lt;/td&gt;
+&lt;td&gt;内含 3 个 skill&lt;/td&gt;
+&lt;td&gt;https://github.com/jason-effi-lab/karpathy-llm-wiki-vault&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;llm-wiki-obsidian-blink&lt;/td&gt;
+&lt;td&gt;Blink 老师&lt;/td&gt;
+&lt;td&gt;https://github.com/iBlinkQ/llm-wiki-obsidian-blink&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;obsidian-ai-vault-template&lt;/td&gt;
+&lt;td&gt;志辉&lt;/td&gt;
+&lt;td&gt;https://github.com/iamzhihuix/obsidian-ai-vault-template&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4&gt;一键 Wiki&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 这里与 Karpathy 原方法略有不同：原方法是&quot;摄入新资料后编译&quot;，这里是&quot;对已发布的博客内容进行编译&quot;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;前提需安装 Newtype-os。比如我对我博客编译是这样的，终端 &lt;code&gt;nt&lt;/code&gt; 启动 Newtype-os：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/wiki 根据 post 文件夹内容进行编译
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;本地体验&lt;/strong&gt;：安装 &lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/newtype-os/&quot;&gt;Newtype-os&lt;/a&gt; 后，在终端执行上述命令&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;在线预览&lt;/strong&gt;：访问 &lt;a href=&quot;https://www.dqtx.cc/wiki/&quot;&gt;dqtx.cc/wiki&lt;/a&gt; 免安装查看我的博客编译&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;p&gt;Karpathy 的 LLM Wiki 框架，本质是把知识管理从&quot;每次查询时重新派生&quot;变成&quot;编译一次，保持最新&quot;。&lt;/p&gt;
+&lt;p&gt;这才是真正的&lt;strong&gt;可复利&lt;/strong&gt;知识层。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;工具会变，但这套方法论值得长期践行!&lt;/strong&gt;&lt;/p&gt;
 </content:encoded></item><item><title>短网址</title><link>https://dqtx.cc/posts/xenia/%E7%9F%AD%E7%BD%91%E5%9D%80/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/%E7%9F%AD%E7%BD%91%E5%9D%80/</guid><pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;ul&gt;
 &lt;li&gt;https://suo.yt&lt;/li&gt;
 &lt;li&gt;https://v1.mk&lt;/li&gt;
@@ -1986,6 +2186,21 @@ curl -o ~/.claude/CLAUDE.md \
 &lt;p&gt;Karpathy 的核心洞察就一句话：&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;别告诉 AI 怎么做，告诉它什么算做完，然后放手让它跑。&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
+</content:encoded></item><item><title>一个信息追踪 Python 脚本</title><link>https://dqtx.cc/posts/technical/%E4%B8%80%E4%B8%AA%E4%BF%A1%E6%81%AF%E8%BF%BD%E8%B8%AA-python-%E8%84%9A%E6%9C%AC/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E4%B8%80%E4%B8%AA%E4%BF%A1%E6%81%AF%E8%BF%BD%E8%B8%AA-python-%E8%84%9A%E6%9C%AC/</guid><pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这个开源项目，你丢一个名字/手机号/IP给它，得到关联的社交媒体账号、归属地、地理位置信息。&lt;/p&gt;
+&lt;p&gt;在 GitHub 已获取 11.8k star。
+项目地址
+https://github.com/HunxByts/GhostTrack&lt;/p&gt;
+&lt;p&gt;仅仅一个 Python 脚本，用来做 IP / 手机号 / 用户名的基础 OSINT 信息收集。&lt;/p&gt;
+&lt;p&gt;三个模块，覆盖常见情报场景：&lt;/p&gt;
+&lt;p&gt;IP Tracker：输入目标 IP，可获取基础地理位置信息，也可以结合 Seeker 等工具做进一步关联分析（例如辅助反查真实 IP）
+Phone Tracker：手机号归属地、运营商信息查询，属于 OSINT 中很常见的基础能力
+Username Tracker：输入用户名，跨多个平台搜索公开账号信息，把分散的社交媒体痕迹拼接起来&lt;/p&gt;
+&lt;p&gt;适合人群：&lt;/p&gt;
+&lt;p&gt;做渗透测试前期信息收集的安全工程师
+学习 OSINT 方法论的安全方向学生
+CTF 比赛中需要快速做信息侦察的选手
+对信息安全和数据关联分析感兴趣的开发者&lt;/p&gt;
+&lt;p&gt;⚠️ 需要强调：该工具仅用于合法授权的安全研究与学习用途，禁止用于任何未经授权的个人追踪或隐私侵犯行为。&lt;/p&gt;
 </content:encoded></item><item><title>ShareX截屏录屏教程！</title><link>https://dqtx.cc/posts/software/sharex%E6%88%AA%E5%B1%8F%E5%BD%95%E5%B1%8F%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/sharex%E6%88%AA%E5%B1%8F%E5%BD%95%E5%B1%8F%E6%95%99%E7%A8%8B/</guid><pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;关闭通知&lt;/h3&gt;
 &lt;p&gt;位置：动作设置→通知
 建议把“任务完成后显示短暂通知”取消打勾
@@ -2014,21 +2229,6 @@ https://mp.weixin.qq.com/s/npeJO3MccOCS0QSTIWYefw
 https://utgd.net/article/20685
 一个软件，满足你所有的截图需求：ShareX
 https://sspai.com/post/43937&lt;/p&gt;
-</content:encoded></item><item><title>一个信息追踪 Python 脚本</title><link>https://dqtx.cc/posts/technical/%E4%B8%80%E4%B8%AA%E4%BF%A1%E6%81%AF%E8%BF%BD%E8%B8%AA-python-%E8%84%9A%E6%9C%AC/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E4%B8%80%E4%B8%AA%E4%BF%A1%E6%81%AF%E8%BF%BD%E8%B8%AA-python-%E8%84%9A%E6%9C%AC/</guid><pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这个开源项目，你丢一个名字/手机号/IP给它，得到关联的社交媒体账号、归属地、地理位置信息。&lt;/p&gt;
-&lt;p&gt;在 GitHub 已获取 11.8k star。
-项目地址
-https://github.com/HunxByts/GhostTrack&lt;/p&gt;
-&lt;p&gt;仅仅一个 Python 脚本，用来做 IP / 手机号 / 用户名的基础 OSINT 信息收集。&lt;/p&gt;
-&lt;p&gt;三个模块，覆盖常见情报场景：&lt;/p&gt;
-&lt;p&gt;IP Tracker：输入目标 IP，可获取基础地理位置信息，也可以结合 Seeker 等工具做进一步关联分析（例如辅助反查真实 IP）
-Phone Tracker：手机号归属地、运营商信息查询，属于 OSINT 中很常见的基础能力
-Username Tracker：输入用户名，跨多个平台搜索公开账号信息，把分散的社交媒体痕迹拼接起来&lt;/p&gt;
-&lt;p&gt;适合人群：&lt;/p&gt;
-&lt;p&gt;做渗透测试前期信息收集的安全工程师
-学习 OSINT 方法论的安全方向学生
-CTF 比赛中需要快速做信息侦察的选手
-对信息安全和数据关联分析感兴趣的开发者&lt;/p&gt;
-&lt;p&gt;⚠️ 需要强调：该工具仅用于合法授权的安全研究与学习用途，禁止用于任何未经授权的个人追踪或隐私侵犯行为。&lt;/p&gt;
 </content:encoded></item><item><title>Xiaomi MiMo百万亿 Token 激励计划</title><link>https://dqtx.cc/posts/aihacks/xiaomi-mimo%E7%99%BE%E4%B8%87%E4%BA%BFtoken/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/xiaomi-mimo%E7%99%BE%E4%B8%87%E4%BA%BFtoken/</guid><pubDate>Wed, 29 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Xiaomi MiMo 将面向全球 AI 用户进行免费 Token 发放，我们将在 30 天内发放总计 100 万亿（100T） Token 权益，赠完即止。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260429164836641.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;活动说明&lt;/h3&gt;
@@ -2468,6 +2668,117 @@ ANTHROPIC_DEFAULT_HAIKU_MODEL=Ling-2.6-flash
 &lt;/table&gt;
 &lt;h2&gt;写在最后&lt;/h2&gt;
 &lt;p&gt;蚂蚁百灵大模型为开发者提供了强大的AI辅助能力。通过合理的模型选择和配置，可以显著提升开发效率。建议根据实际使用场景灵活切换模型，充分利用每日免费额度，同时注意API安全和使用成本控制。&lt;/p&gt;
+</content:encoded></item><item><title>Obsidian链接收藏自动化</title><link>https://dqtx.cc/posts/workflow/obsidian%E9%93%BE%E6%8E%A5%E6%94%B6%E8%97%8F%E8%87%AA%E5%8A%A8%E5%8C%96/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/obsidian%E9%93%BE%E6%8E%A5%E6%94%B6%E8%97%8F%E8%87%AA%E5%8A%A8%E5%8C%96/</guid><pubDate>Mon, 27 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你有没有过这样的困扰？刷到优质干货、实用工具、优质教程，随手存入浏览器书签，想着日后回看。久而久之，书签越堆越多、杂乱无序，想要检索复用却无从下手，大量优质资源最终沦为闲置的无效数据。&lt;/p&gt;
+&lt;p&gt;为此，我搭建了一套&lt;strong&gt;轻量化全自动链接收藏工作流&lt;/strong&gt;，依靠 &lt;strong&gt;LinkStowr + Obsidian + Dataview&lt;/strong&gt; 三方联动，实现：&lt;/p&gt;
+&lt;p&gt;一键收藏网页、云端中转同步、本地自动归档、标签分类索引，彻底告别杂乱书签，轻松沉淀全网优质资源。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260427195504528.webp&quot; alt=&quot;大强同学「www.dqtx.cc&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;部署先决条件&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;前往 &lt;a href=&quot;https://linkstowr.com/&quot;&gt;linkstowr.com&lt;/a&gt; 注册账号，生成专属访问令牌；&lt;/li&gt;
+&lt;li&gt;浏览器安装 &lt;a href=&quot;https://chromewebstore.google.com/detail/linkstowr/aabkobajeambdejghgegicnhcndhcjpk&quot;&gt;LinkStowr 扩展&lt;/a&gt;，填入&lt;a href=&quot;https://linkstowr.com/user/settings&quot;&gt;访问令牌&lt;/a&gt;完成绑定授权；&lt;/li&gt;
+&lt;li&gt;在 Obsidian 中安装并启用 &lt;a href=&quot;https://github.com/joelseq/obsidian-linkstowr&quot;&gt;&lt;strong&gt;LinkStowr&lt;/strong&gt;&lt;/a&gt;、&lt;strong&gt;Dataview&lt;/strong&gt; 两款核心插件；&lt;/li&gt;
+&lt;li&gt;全部配置完成后，即可随时一键收藏网页，自定义添加标签与备注，高效系统化管理所有链接资源。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;h3&gt;一键收藏网页Url&lt;/h3&gt;
+&lt;p&gt;安装好 LinkStowr 浏览器扩展后，收藏链接的过程变得异常简单：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;看到优质网页，点击右上角的扩展图标。&lt;/li&gt;
+&lt;li&gt;插件会自动抓取网页标题，你可以按需修改。&lt;/li&gt;
+&lt;li&gt;给链接打上标签（比如 &lt;code&gt;#AI工具&lt;/code&gt;、&lt;code&gt;#飞书&lt;/code&gt;、&lt;code&gt;#Notion&lt;/code&gt;），⚠️&lt;strong&gt;输入标签并按回车键&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;写下几句备注，记录为什么收藏它，方便未来回忆。&lt;/li&gt;
+&lt;li&gt;点击「Save Link」，完成！&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;整个过程不到 3 秒，链接就被安全地暂存到云端，等待被同步到 Obsidian。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h3&gt;沉淀到知识库&lt;/h3&gt;
+&lt;p&gt;接下来，Obsidian 里的  **LinkStowr 插件会接管一切。它的配置非常关键，我是这样设置的：&lt;/p&gt;
+&lt;h4&gt;1. 配置基础信息&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Links folder path&lt;/strong&gt;：设置为 &lt;code&gt;02_Wiki/链接收藏&lt;/code&gt;，所有链接笔记都会存放在这里。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Access Token&lt;/strong&gt;：填入 LinkStowr 扩展中获取的令牌，打通同步通道。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sync on load&lt;/strong&gt;：开启，每次打开 Obsidian 自动同步一次新链接。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Custom server URL&lt;/strong&gt;：留空，使用官方服务即可。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260427115231051.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;h4&gt;2. 标准化笔记模板&lt;/h4&gt;
+&lt;p&gt;为了让所有链接笔记格式统一，我创建了一个模板文件 &lt;code&gt;templates/link-template.md&lt;/code&gt;，内容如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+title: {{title}}
+url: {{url}}
+date: {{date:YYYY/MM/DD}}
+tags: {{tags}}
+note: {{note}}
+---
+
+# {{title}}
+🔗 链接：[{{title}}]({{url}})
+📝 说明：{{note}}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这个模板会自动填充标题、链接、日期、标签和备注，保证每一条链接笔记都结构清晰，可被 Dataview 检索和调用。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h3&gt;Dataview自动化索引&lt;/h3&gt;
+&lt;p&gt;所有链接笔记都沉淀好了，怎么高效查看？我用 Dataview 做了一个「index.md」作为统一入口，实现了按标签自动分类。&lt;/p&gt;
+&lt;p&gt;链接收藏&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;有价值的工具和资源链接。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;飞书文档合集&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
+  title AS &quot;名称&quot;,
+  url AS &quot;链接&quot;,
+  note AS &quot;说明&quot;,
+  tags AS &quot;标签&quot;
+FROM &quot;02_Wiki/链接收藏&quot;
+WHERE file.path != &quot;02_Wiki/链接收藏/00-index.md&quot;
+AND contains(tags, &quot;飞书&quot;)
+SORT date DESC
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;Notion文档合集&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
+  title AS &quot;名称&quot;,
+  url AS &quot;链接&quot;,
+  note AS &quot;说明&quot;,
+  tags AS &quot;标签&quot;
+FROM &quot;02_Wiki/链接收藏&quot;
+WHERE file.path != &quot;02_Wiki/链接收藏/00-index.md&quot;
+AND contains(tags, &quot;notion&quot;)
+SORT date DESC
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;github项目&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
+  title AS &quot;名称&quot;,
+  url AS &quot;链接&quot;,
+  note AS &quot;说明&quot;,
+  tags AS &quot;标签&quot;
+FROM &quot;02_Wiki/链接收藏&quot;
+WHERE file.path != &quot;02_Wiki/链接收藏/00-index.md&quot;
+AND contains(tags, &quot;github&quot;)
+SORT date DESC
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;AI工具&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
+  title AS &quot;名称&quot;,
+  url AS &quot;链接&quot;,
+  note AS &quot;说明&quot;,
+  tags AS &quot;标签&quot;
+FROM &quot;02_Wiki/链接收藏&quot;
+WHERE file.path != &quot;02_Wiki/链接收藏/00-index.md&quot;
+AND contains(tags, &quot;ai&quot;)
+SORT date DESC
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;全部链接&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
+  title AS &quot;名称&quot;,
+  url AS &quot;链接&quot;,
+  note AS &quot;说明&quot;,
+  tags AS &quot;标签&quot;
+FROM &quot;02_Wiki/链接收藏&quot;
+WHERE file.path != &quot;02_Wiki/链接收藏/00-index.md&quot;
+SORT date DESC
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这套工作流不仅解决了我链接杂乱的问题，更让每一次收藏都变成了对数字资产的有效沉淀。&lt;/p&gt;
+&lt;p&gt;如果你也被杂乱的书签困扰，不妨试试 LinkShelf + Obsidian 这套组合，让你的链接管理从此告别手动，走向自动化。&lt;/p&gt;
 </content:encoded></item><item><title>Token Plan服务订阅平台</title><link>https://dqtx.cc/posts/xenia/api-%E5%BC%80%E6%94%BE%E5%B9%B3%E5%8F%B0/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/api-%E5%BC%80%E6%94%BE%E5%B9%B3%E5%8F%B0/</guid><pubDate>Mon, 27 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这篇文章会更新全网一些优质的 token plan 服务订阅平台及其快捷入口，方便大家查询价格和申请 API Key。&lt;/p&gt;
 &lt;h3&gt;付费订Token平台&lt;/h3&gt;
 &lt;table&gt;
@@ -2705,117 +3016,6 @@ https://dapicloud.com - 综合算力和 API 服务平台&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-</content:encoded></item><item><title>Obsidian链接收藏自动化</title><link>https://dqtx.cc/posts/workflow/obsidian%E9%93%BE%E6%8E%A5%E6%94%B6%E8%97%8F%E8%87%AA%E5%8A%A8%E5%8C%96/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/obsidian%E9%93%BE%E6%8E%A5%E6%94%B6%E8%97%8F%E8%87%AA%E5%8A%A8%E5%8C%96/</guid><pubDate>Mon, 27 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你有没有过这样的困扰？刷到优质干货、实用工具、优质教程，随手存入浏览器书签，想着日后回看。久而久之，书签越堆越多、杂乱无序，想要检索复用却无从下手，大量优质资源最终沦为闲置的无效数据。&lt;/p&gt;
-&lt;p&gt;为此，我搭建了一套&lt;strong&gt;轻量化全自动链接收藏工作流&lt;/strong&gt;，依靠 &lt;strong&gt;LinkStowr + Obsidian + Dataview&lt;/strong&gt; 三方联动，实现：&lt;/p&gt;
-&lt;p&gt;一键收藏网页、云端中转同步、本地自动归档、标签分类索引，彻底告别杂乱书签，轻松沉淀全网优质资源。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260427195504528.webp&quot; alt=&quot;大强同学「www.dqtx.cc&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;部署先决条件&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;前往 &lt;a href=&quot;https://linkstowr.com/&quot;&gt;linkstowr.com&lt;/a&gt; 注册账号，生成专属访问令牌；&lt;/li&gt;
-&lt;li&gt;浏览器安装 &lt;a href=&quot;https://chromewebstore.google.com/detail/linkstowr/aabkobajeambdejghgegicnhcndhcjpk&quot;&gt;LinkStowr 扩展&lt;/a&gt;，填入&lt;a href=&quot;https://linkstowr.com/user/settings&quot;&gt;访问令牌&lt;/a&gt;完成绑定授权；&lt;/li&gt;
-&lt;li&gt;在 Obsidian 中安装并启用 &lt;a href=&quot;https://github.com/joelseq/obsidian-linkstowr&quot;&gt;&lt;strong&gt;LinkStowr&lt;/strong&gt;&lt;/a&gt;、&lt;strong&gt;Dataview&lt;/strong&gt; 两款核心插件；&lt;/li&gt;
-&lt;li&gt;全部配置完成后，即可随时一键收藏网页，自定义添加标签与备注，高效系统化管理所有链接资源。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr /&gt;
-&lt;h3&gt;一键收藏网页Url&lt;/h3&gt;
-&lt;p&gt;安装好 LinkStowr 浏览器扩展后，收藏链接的过程变得异常简单：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;看到优质网页，点击右上角的扩展图标。&lt;/li&gt;
-&lt;li&gt;插件会自动抓取网页标题，你可以按需修改。&lt;/li&gt;
-&lt;li&gt;给链接打上标签（比如 &lt;code&gt;#AI工具&lt;/code&gt;、&lt;code&gt;#飞书&lt;/code&gt;、&lt;code&gt;#Notion&lt;/code&gt;），⚠️&lt;strong&gt;输入标签并按回车键&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;写下几句备注，记录为什么收藏它，方便未来回忆。&lt;/li&gt;
-&lt;li&gt;点击「Save Link」，完成！&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;整个过程不到 3 秒，链接就被安全地暂存到云端，等待被同步到 Obsidian。&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h3&gt;沉淀到知识库&lt;/h3&gt;
-&lt;p&gt;接下来，Obsidian 里的  **LinkStowr 插件会接管一切。它的配置非常关键，我是这样设置的：&lt;/p&gt;
-&lt;h4&gt;1. 配置基础信息&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Links folder path&lt;/strong&gt;：设置为 &lt;code&gt;02_Wiki/链接收藏&lt;/code&gt;，所有链接笔记都会存放在这里。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Access Token&lt;/strong&gt;：填入 LinkStowr 扩展中获取的令牌，打通同步通道。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Sync on load&lt;/strong&gt;：开启，每次打开 Obsidian 自动同步一次新链接。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Custom server URL&lt;/strong&gt;：留空，使用官方服务即可。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260427115231051.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
-&lt;h4&gt;2. 标准化笔记模板&lt;/h4&gt;
-&lt;p&gt;为了让所有链接笔记格式统一，我创建了一个模板文件 &lt;code&gt;templates/link-template.md&lt;/code&gt;，内容如下：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;---
-title: {{title}}
-url: {{url}}
-date: {{date:YYYY/MM/DD}}
-tags: {{tags}}
-note: {{note}}
----
-
-# {{title}}
-🔗 链接：[{{title}}]({{url}})
-📝 说明：{{note}}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;这个模板会自动填充标题、链接、日期、标签和备注，保证每一条链接笔记都结构清晰，可被 Dataview 检索和调用。&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h3&gt;Dataview自动化索引&lt;/h3&gt;
-&lt;p&gt;所有链接笔记都沉淀好了，怎么高效查看？我用 Dataview 做了一个「index.md」作为统一入口，实现了按标签自动分类。&lt;/p&gt;
-&lt;p&gt;链接收藏&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;有价值的工具和资源链接。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h4&gt;飞书文档合集&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
-  title AS &quot;名称&quot;,
-  url AS &quot;链接&quot;,
-  note AS &quot;说明&quot;,
-  tags AS &quot;标签&quot;
-FROM &quot;02_Wiki/链接收藏&quot;
-WHERE file.path != &quot;02_Wiki/链接收藏/00-index.md&quot;
-AND contains(tags, &quot;飞书&quot;)
-SORT date DESC
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4&gt;Notion文档合集&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
-  title AS &quot;名称&quot;,
-  url AS &quot;链接&quot;,
-  note AS &quot;说明&quot;,
-  tags AS &quot;标签&quot;
-FROM &quot;02_Wiki/链接收藏&quot;
-WHERE file.path != &quot;02_Wiki/链接收藏/00-index.md&quot;
-AND contains(tags, &quot;notion&quot;)
-SORT date DESC
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4&gt;github项目&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
-  title AS &quot;名称&quot;,
-  url AS &quot;链接&quot;,
-  note AS &quot;说明&quot;,
-  tags AS &quot;标签&quot;
-FROM &quot;02_Wiki/链接收藏&quot;
-WHERE file.path != &quot;02_Wiki/链接收藏/00-index.md&quot;
-AND contains(tags, &quot;github&quot;)
-SORT date DESC
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4&gt;AI工具&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
-  title AS &quot;名称&quot;,
-  url AS &quot;链接&quot;,
-  note AS &quot;说明&quot;,
-  tags AS &quot;标签&quot;
-FROM &quot;02_Wiki/链接收藏&quot;
-WHERE file.path != &quot;02_Wiki/链接收藏/00-index.md&quot;
-AND contains(tags, &quot;ai&quot;)
-SORT date DESC
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4&gt;全部链接&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
-  title AS &quot;名称&quot;,
-  url AS &quot;链接&quot;,
-  note AS &quot;说明&quot;,
-  tags AS &quot;标签&quot;
-FROM &quot;02_Wiki/链接收藏&quot;
-WHERE file.path != &quot;02_Wiki/链接收藏/00-index.md&quot;
-SORT date DESC
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;这套工作流不仅解决了我链接杂乱的问题，更让每一次收藏都变成了对数字资产的有效沉淀。&lt;/p&gt;
-&lt;p&gt;如果你也被杂乱的书签困扰，不妨试试 LinkShelf + Obsidian 这套组合，让你的链接管理从此告别手动，走向自动化。&lt;/p&gt;
 </content:encoded></item><item><title>Flipbook 可视化搜索</title><link>https://dqtx.cc/posts/aihacks/flipbook%E5%8F%AF%E8%A7%86%E5%8C%96%E6%90%9C%E7%B4%A2/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/flipbook%E5%8F%AF%E8%A7%86%E5%8C%96%E6%90%9C%E7%B4%A2/</guid><pubDate>Sun, 26 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近刷到一个叫缘缘博主说：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;我这两天被这个爆火的Flipbook刷屏并被震撼到，现在的UI界面也许会在不久的将来彻底改变。&lt;/p&gt;
@@ -3669,6 +3869,47 @@ https://v.douyin.com/4K4Njgxq0Oc/&lt;/p&gt;
 https://mp.weixin.qq.com/s/kPjIpHmzciWY8_3ettEVsg&lt;/p&gt;
 &lt;p&gt;→NotionNext帮助手册：
 https://docs.tangly1024.com/about&lt;/p&gt;
+</content:encoded></item><item><title>Dos命令mklink详解</title><link>https://dqtx.cc/posts/workflow/mklink%E5%91%BD%E4%BB%A4/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/mklink%E5%91%BD%E4%BB%A4/</guid><pubDate>Mon, 20 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你是否遇到过这些问题：想让软件从A目录读取文件，但文件实际存放在B目录？&lt;/p&gt;
+&lt;p&gt;想在多个位置同步同一个文件，又不想每次手动复制？或是想给文件夹创建&quot;替身&quot;，让不同程序都能访问？&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Windows 自带的 mklink 命令，就是解决这些问题的神器。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260420172844734.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;01 先搞懂四种链接的区别&lt;/h3&gt;
+&lt;p&gt;Windows 提供了四种创建链接的方式，各有各的脾气：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;文件软链接（符号链接）&lt;/strong&gt; 是默认模式，用 &lt;code&gt;mklink 链接名 目标文件&lt;/code&gt; 即可创建。它像一个&quot;快捷方式升级版&quot;，让程序能读取别处的文件。&lt;strong&gt;支持跨盘&lt;/strong&gt;，比如在D盘创建一个链接指向C盘的文件。但如果你删掉原文件，这个链接就失效了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260420173406196.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;目录软链接（/D参数）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;专门用于文件夹，和文件软链接一样支持跨盘，原文件夹删除后链接同样失效。很多工具用它来重定向配置目录，比如让Claude从默认路径读取，实际文件存放在别处。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;硬链接（/H参数）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;它不是指向路径，而是给同一份数据多起几个&quot;名字&quot;。即使删掉原始文件，链接依然能打开内容，因为它指向的是硬盘上的实际数据。&lt;strong&gt;但它只能在同一个盘符内使用&lt;/strong&gt;，且只能用于文件，不能用于文件夹。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;目录联接（/J参数）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;和目录软链接类似，也是针对文件夹的链接方式。区别在于它属于NTFS的旧功能，&lt;strong&gt;不支持跨盘&lt;/strong&gt;，但兼容性更好，一些老旧程序也能正常识别。&lt;/p&gt;
+&lt;h3&gt;02 实际使用场景&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;场景一：让AI工具读取备份目录&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;想把Claude的全局skills目录指向GitHub备份仓库？可以这样操作：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cmd /c mklink /D &quot;C:\Users\你的用户名\.claude\skills&quot; &quot;C:\Users\你的用户名\claude-skills&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这两个路径指向同一个文件夹，往任意一个里放文件，另一个立刻同步。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;场景二：项目skill使用全局skill配置&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在Obsidian仓库里创建软链接，指向Claude code读取的全局skill目录：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mklink /D &quot;%userprofile%\.claude\skills&quot; &quot;%userprofile%\Documents\Obsidian\.claude\skills&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这样AI在Obsidia仓库就可以调用全局skill，不要单独安装&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;场景三：一个规范给不同的Agent用&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;用硬链接让同一份文档以不一样的名字显示，同时保持内容完全一致：&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;PS.这是 3 条独立命令，会运行 3 次，创建 3 个独立的硬链接。&lt;/em&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mklink /h &quot;D:\project2026\zhishiku\AGENTS\知识库规范.md&quot; &quot;D:\project2026\zhishiku\知识库规范.md&quot;
+mklink /h &quot;D:\project2026\zhishiku\CLAUDE\知识库规范.md&quot; &quot;D:\project2026\zhishiku\知识库规范.md&quot;
+mklink /h &quot;D:\project2026\zhishiku\QWEN\知识库规范.md&quot; &quot;D:\project2026\zhishiku\知识库规范.md&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;修改任意一个文件，其他文件同步更新，而且不怕误删原文件。&lt;/p&gt;
+&lt;h3&gt;03 重要注意事项&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;创建符号链接需要&lt;strong&gt;管理员权限&lt;/strong&gt;，记得以管理员模式运行CMD或PowerShell&lt;/li&gt;
+&lt;li&gt;软链接删除原文件后链接失效，因为链接指向的是路径&lt;/li&gt;
+&lt;li&gt;硬链接删除原文件后依然有效，因为它指向的是数据本身&lt;/li&gt;
+&lt;li&gt;如果你需要跨盘操作，选择软链接；如果只在同盘内使用，硬链接更稳定&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;掌握这四个命令，你就是Windows文件管理的高手了。&lt;/strong&gt;&lt;/p&gt;
 </content:encoded></item><item><title>Agent Skills 管理方案</title><link>https://dqtx.cc/posts/xenia/skills%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/skills%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/</guid><pubDate>Mon, 20 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;相信有很多小伙伴跟我一样，手头同时在用好几个 AI Agent——Claude Code、Codex、Cursor、Windsurf……每个 Agent 都有自己的 Skill 目录，装了一堆技能包。&lt;/p&gt;
 &lt;p&gt;时间一长就会遇到一个头疼的问题：同一个 Skill 要在不同 Agent 里各装一遍，版本还不一定一致，管理起来非常混乱。从最早手动复制粘贴技能配置，到用脚本管理本地技能库，再到尝试多设备同步——我发现&lt;strong&gt;技能的发现、配置、迁移和同步&lt;/strong&gt;，一直是个很痛的问题。&lt;/p&gt;
 &lt;p&gt;我一直在想，有没有一种方式能像管理代码依赖一样，统一管理所有 Agent 的技能包？同时实现在多设备上能够一键迁移跟同步？最近我在 GitHub 上发现了 几个解决方案，完美解决了我的痛点。&lt;/p&gt;
@@ -3751,47 +3992,6 @@ https://docs.tangly1024.com/about&lt;/p&gt;
 &lt;p&gt;https://x.com/liyue_ai/status/2017259163127304623&lt;/p&gt;
 &lt;p&gt;https://www.youtube.com/watch?v=4Gz2Sxgpv20&lt;/p&gt;
 &lt;p&gt;https://x.com/linxiaobei888/status/2017061177311056343&lt;/p&gt;
-</content:encoded></item><item><title>Dos命令mklink详解</title><link>https://dqtx.cc/posts/workflow/mklink%E5%91%BD%E4%BB%A4/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/mklink%E5%91%BD%E4%BB%A4/</guid><pubDate>Mon, 20 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你是否遇到过这些问题：想让软件从A目录读取文件，但文件实际存放在B目录？&lt;/p&gt;
-&lt;p&gt;想在多个位置同步同一个文件，又不想每次手动复制？或是想给文件夹创建&quot;替身&quot;，让不同程序都能访问？&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Windows 自带的 mklink 命令，就是解决这些问题的神器。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260420172844734.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;01 先搞懂四种链接的区别&lt;/h3&gt;
-&lt;p&gt;Windows 提供了四种创建链接的方式，各有各的脾气：&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;文件软链接（符号链接）&lt;/strong&gt; 是默认模式，用 &lt;code&gt;mklink 链接名 目标文件&lt;/code&gt; 即可创建。它像一个&quot;快捷方式升级版&quot;，让程序能读取别处的文件。&lt;strong&gt;支持跨盘&lt;/strong&gt;，比如在D盘创建一个链接指向C盘的文件。但如果你删掉原文件，这个链接就失效了。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260420173406196.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;目录软链接（/D参数）&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;专门用于文件夹，和文件软链接一样支持跨盘，原文件夹删除后链接同样失效。很多工具用它来重定向配置目录，比如让Claude从默认路径读取，实际文件存放在别处。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;硬链接（/H参数）&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;它不是指向路径，而是给同一份数据多起几个&quot;名字&quot;。即使删掉原始文件，链接依然能打开内容，因为它指向的是硬盘上的实际数据。&lt;strong&gt;但它只能在同一个盘符内使用&lt;/strong&gt;，且只能用于文件，不能用于文件夹。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;目录联接（/J参数）&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;和目录软链接类似，也是针对文件夹的链接方式。区别在于它属于NTFS的旧功能，&lt;strong&gt;不支持跨盘&lt;/strong&gt;，但兼容性更好，一些老旧程序也能正常识别。&lt;/p&gt;
-&lt;h3&gt;02 实际使用场景&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;场景一：让AI工具读取备份目录&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;想把Claude的全局skills目录指向GitHub备份仓库？可以这样操作：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;cmd /c mklink /D &quot;C:\Users\你的用户名\.claude\skills&quot; &quot;C:\Users\你的用户名\claude-skills&quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;这两个路径指向同一个文件夹，往任意一个里放文件，另一个立刻同步。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;场景二：项目skill使用全局skill配置&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;在Obsidian仓库里创建软链接，指向Claude code读取的全局skill目录：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;mklink /D &quot;%userprofile%\.claude\skills&quot; &quot;%userprofile%\Documents\Obsidian\.claude\skills&quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;这样AI在Obsidia仓库就可以调用全局skill，不要单独安装&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;场景三：一个规范给不同的Agent用&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;用硬链接让同一份文档以不一样的名字显示，同时保持内容完全一致：&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;PS.这是 3 条独立命令，会运行 3 次，创建 3 个独立的硬链接。&lt;/em&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;mklink /h &quot;D:\project2026\zhishiku\AGENTS\知识库规范.md&quot; &quot;D:\project2026\zhishiku\知识库规范.md&quot;
-mklink /h &quot;D:\project2026\zhishiku\CLAUDE\知识库规范.md&quot; &quot;D:\project2026\zhishiku\知识库规范.md&quot;
-mklink /h &quot;D:\project2026\zhishiku\QWEN\知识库规范.md&quot; &quot;D:\project2026\zhishiku\知识库规范.md&quot;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;修改任意一个文件，其他文件同步更新，而且不怕误删原文件。&lt;/p&gt;
-&lt;h3&gt;03 重要注意事项&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;创建符号链接需要&lt;strong&gt;管理员权限&lt;/strong&gt;，记得以管理员模式运行CMD或PowerShell&lt;/li&gt;
-&lt;li&gt;软链接删除原文件后链接失效，因为链接指向的是路径&lt;/li&gt;
-&lt;li&gt;硬链接删除原文件后依然有效，因为它指向的是数据本身&lt;/li&gt;
-&lt;li&gt;如果你需要跨盘操作，选择软链接；如果只在同盘内使用，硬链接更稳定&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;掌握这四个命令，你就是Windows文件管理的高手了。&lt;/strong&gt;&lt;/p&gt;
 </content:encoded></item><item><title>Cc-sync：多电脑CC配置同步</title><link>https://dqtx.cc/posts/aihacks/cc-sync/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/cc-sync/</guid><pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;换电脑后，你最怕什么？不是装机，而是你和 Claude 聊了半天的代码、需求、方案——全没了。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -10530,6 +10730,22 @@ function extractFirstImageIgnoreFrontmatter(content) {
 备选方案：  
 - %windir%\Resources\
 &lt;/code&gt;&lt;/pre&gt;
+</content:encoded></item><item><title>本周创建的笔记</title><link>https://dqtx.cc/posts/zen/%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%91%A8%E5%88%9B%E5%BB%BA/</link><guid isPermaLink="true">https://dqtx.cc/posts/zen/%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%91%A8%E5%88%9B%E5%BB%BA/</guid><pubDate>Thu, 01 May 2025 00:00:00 GMT</pubDate><content:encoded>&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
+  category AS &quot;分类&quot;,
+  dateformat(file.ctime, &quot;yyyy/MM/dd&quot;) AS &quot;创建日期&quot;,
+  file.link AS &quot;本周笔记&quot;
+WHERE file.ctime &amp;gt;= date(today) - dur(3 days)
+SORT category ASC, file.ctime DESC
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+</content:encoded></item><item><title>筛查无tags与分类笔记</title><link>https://dqtx.cc/posts/zen/%E7%AD%9B%E6%9F%A5%E6%97%A0tags%E4%B8%8E%E5%88%86%E7%B1%BB%E7%AC%94%E8%AE%B0/</link><guid isPermaLink="true">https://dqtx.cc/posts/zen/%E7%AD%9B%E6%9F%A5%E6%97%A0tags%E4%B8%8E%E5%88%86%E7%B1%BB%E7%AC%94%E8%AE%B0/</guid><pubDate>Thu, 01 May 2025 00:00:00 GMT</pubDate><content:encoded>&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
+  category AS &quot;分类&quot;,
+  file.tags AS &quot;标签&quot;,
+  dateformat(file.ctime, &quot;yyyy/MM/dd&quot;) AS &quot;创建日期&quot;,
+  file.link AS &quot;笔记名称&quot;
+WHERE !category OR !file.tags OR length(file.tags) = 0
+SORT category ASC, file.ctime DESC
+&lt;/code&gt;&lt;/pre&gt;
 </content:encoded></item><item><title>tags查询</title><link>https://dqtx.cc/posts/zen/%E6%9F%A5tags%E7%9B%B8%E5%85%B3%E7%9A%84%E7%AC%94%E8%AE%B0/</link><guid isPermaLink="true">https://dqtx.cc/posts/zen/%E6%9F%A5tags%E7%9B%B8%E5%85%B3%E7%9A%84%E7%AC%94%E8%AE%B0/</guid><pubDate>Thu, 01 May 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Obsidian系列&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
   default(category, &quot;未分类&quot;) AS &quot;分类&quot;,
@@ -10576,22 +10792,6 @@ SORT category ASC, file.ctime DESC
   dateformat(file.ctime, &quot;yyyy/MM/dd&quot;) AS &quot;创建日期&quot;,
   file.link AS &quot;笔记名称&quot;
 WHERE contains(file.tags, &quot;博客&quot;)
-SORT category ASC, file.ctime DESC
-&lt;/code&gt;&lt;/pre&gt;
-</content:encoded></item><item><title>本周创建的笔记</title><link>https://dqtx.cc/posts/zen/%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%91%A8%E5%88%9B%E5%BB%BA/</link><guid isPermaLink="true">https://dqtx.cc/posts/zen/%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%91%A8%E5%88%9B%E5%BB%BA/</guid><pubDate>Thu, 01 May 2025 00:00:00 GMT</pubDate><content:encoded>&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
-  category AS &quot;分类&quot;,
-  dateformat(file.ctime, &quot;yyyy/MM/dd&quot;) AS &quot;创建日期&quot;,
-  file.link AS &quot;本周笔记&quot;
-WHERE file.ctime &amp;gt;= date(today) - dur(3 days)
-SORT category ASC, file.ctime DESC
-&lt;/code&gt;&lt;/pre&gt;
-&lt;hr /&gt;
-</content:encoded></item><item><title>筛查无tags与分类笔记</title><link>https://dqtx.cc/posts/zen/%E7%AD%9B%E6%9F%A5%E6%97%A0tags%E4%B8%8E%E5%88%86%E7%B1%BB%E7%AC%94%E8%AE%B0/</link><guid isPermaLink="true">https://dqtx.cc/posts/zen/%E7%AD%9B%E6%9F%A5%E6%97%A0tags%E4%B8%8E%E5%88%86%E7%B1%BB%E7%AC%94%E8%AE%B0/</guid><pubDate>Thu, 01 May 2025 00:00:00 GMT</pubDate><content:encoded>&lt;pre&gt;&lt;code&gt;TABLE WITHOUT ID
-  category AS &quot;分类&quot;,
-  file.tags AS &quot;标签&quot;,
-  dateformat(file.ctime, &quot;yyyy/MM/dd&quot;) AS &quot;创建日期&quot;,
-  file.link AS &quot;笔记名称&quot;
-WHERE !category OR !file.tags OR length(file.tags) = 0
 SORT category ASC, file.ctime DESC
 &lt;/code&gt;&lt;/pre&gt;
 </content:encoded></item><item><title>Bash上传代码到github命令</title><link>https://dqtx.cc/posts/xenia/bash%E4%B8%8A%E4%BC%A0github%E5%91%BD%E4%BB%A4/</link><guid isPermaLink="true">https://dqtx.cc/posts/xenia/bash%E4%B8%8A%E4%BC%A0github%E5%91%BD%E4%BB%A4/</guid><pubDate>Sat, 26 Apr 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;本教程详细介绍如何将本地项目通过Bash 终端上传代码到 GitHub&lt;/p&gt;
