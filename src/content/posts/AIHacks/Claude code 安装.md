@@ -67,13 +67,19 @@ winget install Git.Git
 ```
 
 ### 拉取仓库模板
-```
-get clone https://github.com/dqtx760/obsidian-vault-template
-```
 
 ```
-get clone https://github.com/iamzhihuix/obsidian-ai-vault-template
+get clone 
 ```
+
+https://github.com/dqtx760/obsidian-vault-template
+https://github.com/jason-effi-lab/karpathy-llm-wiki-vault
+https://github.com/iBlinkQ/llm-wiki-obsidian-blink
+https://github.com/iamzhihuix/obsidian-ai-vault-template
+
+一条命令自动搭建Andrej Karpathy 的 LLM Wiki AI 知识库：[查看命令](https://github.com/eleven-net-cn/llm-wiki-starter/blob/main/README.zh-CN.md)
+
+
 ###  Claudian出现报错
 ```
 Claude code在终端使用正常， 但在Obsidian的插件中Claudian对话异常,帮我排除下原因
