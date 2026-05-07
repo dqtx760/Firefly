@@ -1,16 +1,21 @@
 ---
 title: GPT-Image-2参考资料
 published: 2026-05-07
-tags: []
+tags:
+  - GPT
+  - 生图
+  - 提示词
 category: AIHacks
 draft: false
 pinned: false
-image: 
+image:
 ---
 ### 第三方网站
 - https://labnana.com/zh
+- https://listenhub.ai/zh
 - http://kkmax.cn/
 - https://deepsider.ai/
+
 
 ### 提示词合集
 - https://gptimageprompt.xyz/gallery

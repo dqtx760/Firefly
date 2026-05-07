@@ -3,10 +3,11 @@ title: 我安装的Obsidian插件
 published: 2026-01-16
 tags:
   - Obsidian
+  - Obsidian插件
 category: Xenia
 draft: false
 pinned: false
-image: 
+image:
 ---
 1. **Enhancing Export**
 

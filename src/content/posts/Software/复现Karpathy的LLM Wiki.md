@@ -1,7 +1,8 @@
 ---
 title: 复现Karpathy的LLM Wiki
 published: 2026-05-07
-tags: []
+tags:
+  - Obsidian
 category: Software
 draft: false
 pinned: false

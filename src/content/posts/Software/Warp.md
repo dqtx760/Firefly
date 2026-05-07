@@ -1,7 +1,8 @@
 ---
 title: Warp终端测评记录
 published: 2026-05-07
-tags: []
+tags:
+  - 终端
 category: Software
 draft: false
 pinned: false

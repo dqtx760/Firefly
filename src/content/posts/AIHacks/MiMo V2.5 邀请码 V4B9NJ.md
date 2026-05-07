@@ -1,7 +1,9 @@
 ---
 title: 小米MiMo V2.5 邀请码 V4B9NJ
 published: 2026-05-01
-tags: []
+tags:
+  - 邀请码
+  - 小米
 category: AIHacks
 draft: false
 pinned: false

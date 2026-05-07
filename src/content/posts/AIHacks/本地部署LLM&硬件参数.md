@@ -1,7 +1,9 @@
 ---
 title: 本地部署LLM&硬件参数
 published: 2026-05-07
-tags: []
+tags:
+  - LLM
+  - 本地部署
 category: AIHacks
 draft: false
 pinned: false
