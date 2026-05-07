@@ -3,7 +3,7 @@ title: 谷歌新产品&功能
 published: 2026-04-20
 tags:
   - google
-category: Xenia
+category: Software
 draft: false
 pinned: false
 image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260420211847140.webp
@@ -13,16 +13,12 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-202604
 
 
 
-
-
-## 安装Google App
+## 产品-Google App
 
 Windows 版下载： **[点击前往](https://search.google/google-app/desktop/)**
 
 
-
 内置的AI模型是Google最新最强的Gemini 3模型，同时内置了AI生图功能，使用的是 Google 最强的Nano Banana 2 模型，可以自由切换需要的功能！
-
 
 
 **使用说明**
@@ -33,7 +29,7 @@ Windows 版下载： **[点击前往](https://search.google/google-app/desktop/)
 
 
 
-## 开启垂直标签页开启
+## 功能-垂直标签页开启
 
 - chrome://flags/#vertical-tabs并回车。
 - 将右侧的下拉菜单由 "Default" 修改为 "Enabled"，重启浏览器
@@ -43,7 +39,7 @@ Windows 版下载： **[点击前往](https://search.google/google-app/desktop/)
 
 
 
-## 开启Chrome-Gemini
+## 功能-Chrome-Gemini
 
 *更新时间：2026/04/20*
 

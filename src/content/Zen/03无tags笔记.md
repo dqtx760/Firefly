@@ -12,9 +12,9 @@ image:
 ```dataview
 TABLE WITHOUT ID
   category AS "分类",
-  file.tags AS "标签",
   dateformat(file.ctime, "yyyy/MM/dd") AS "创建日期",
-  file.link AS "笔记名称"
+  file.link AS "笔记名称",
+  file.tags AS "标签"
 WHERE 
   contains(file.folder, "posts")
   AND (category = null OR file.tags = null OR length(file.tags) = 0)

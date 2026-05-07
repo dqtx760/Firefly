@@ -1,7 +1,8 @@
 ---
 title: 10个MCP清单
 published: 2025-04-24
-tags: []
+tags:
+  - MCP
 category: AIHacks
 draft: false
 pinned: false

@@ -3,7 +3,7 @@ title: 复现Karpathy的LLM Wiki
 published: 2026-05-07
 tags:
   - Obsidian
-category: Software
+category: Workflow
 draft: false
 pinned: false
 image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260507230429547.png
