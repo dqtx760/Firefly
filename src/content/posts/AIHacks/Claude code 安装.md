@@ -42,7 +42,9 @@ skills-link
 ```
 https://github.com/dqtx760/skills-manage
 ```
+
 ### 启动命令
+
 ```
 Claude
 ```
@@ -52,6 +54,7 @@ claude --dangerously-skip-permissions
 ```
 
 一键启动bat
+
 ```
 @echo off
 title Claude Code

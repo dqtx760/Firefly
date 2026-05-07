@@ -5,6 +5,7 @@ tags: []
 category: AIHacks
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260507191110816.png
 ---
 
 > 随着大语言模型的开源生态日趋成熟，本地部署不再是极客的专属游戏。本文精选**国产开源大模型**，按显卡显存分档，给出硬件建议与部署方案。无论你是想用 RTX 4060 Ti 跑日常文案，还是用 RTX 4090 跑编程 Agent，都能找到适合的配置。
@@ -120,11 +121,12 @@ pinned: false
 
 在正式部署前，建议先用以下工具评估本机硬件的模型运行能力：
 
-| 工具 | 类型 | 特点 |
-|------|------|------|
-| [llmfit](https://github.com/AlexsJones/llmfit) | CLI | 实时检测 CPU/RAM/GPU/VRAM，结合模型数据库直接给出可运行模型及推荐量化版本 |
-| [AIBase PC 检测](https://model.aibase.com/zh/tools/pc-check) | 在线 | 快速检查设备能否运行不同规模模型，无需安装 |
-| [Can I Run AI?](https://www.canirun.ai/) | 在线 | 主流大模型兼容性检查 |
+| 工具                                                                               | 类型  | 特点                                            |
+| -------------------------------------------------------------------------------- | --- | --------------------------------------------- |
+| [llmfit](https://github.com/AlexsJones/llmfit)                                   | CLI | 实时检测 CPU/RAM/GPU/VRAM，结合模型数据库直接给出可运行模型及推荐量化版本 |
+| [llm-capability-checker](https://github.com/random-llama/llm-capability-checker) | gui | 图形界面显示0-100分硬件评分，提供瓶颈分析，分级推荐模型\|              |
+| [AIBase PC 检测](https://model.aibase.com/zh/tools/pc-check)                       | 在线  | 快速检查设备能否运行不同规模模型，无需安装                         |
+| [Can I Run AI?](https://www.canirun.ai/)                                         | 在线  | 主流大模型兼容性检查                                    |
 
 ---
 
