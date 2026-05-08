@@ -363,6 +363,199 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/tech-shrimp&quot;&gt;tech-shrimp&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>全球2000个顶级产品的设计规范</title><link>https://dqtx.cc/posts/aihacks/%E6%9C%80%E4%BD%B3-saas-%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1%E7%81%B5%E6%84%9F/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E6%9C%80%E4%BD%B3-saas-%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1%E7%81%B5%E6%84%9F/</guid><pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;分享几个我日常做前端落地页用到的灵感设计网站&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260509012552321.png&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;https://styles.refero.design/
+这个网站直接把全球2000个顶级产品的设计规范打包成DESIGN.md文件&lt;/p&gt;
+&lt;p&gt;https://github.com/VoltAgent/awesome-design-md
+一批借鉴主流品牌设计系统编写的 DESIGN.md 文件合集&lt;/p&gt;
+&lt;p&gt;专门收录帮 AI 提升界面审美和设计水准的工具。
+https://github.com/maxbogo/awesome-ai-tools-for-ui&lt;/p&gt;
+&lt;p&gt;ui提示词
+https://www.designprompts.dev/&lt;/p&gt;
+&lt;p&gt;最佳 SaaS 网页设计灵感
+https://saaspo.com/&lt;/p&gt;
+&lt;p&gt;用于 AI 构建的 AI 生成 UI 应用
+https://www.vibeui.studio/&lt;/p&gt;
+</content:encoded></item><item><title>DeepSeek TUI - 终端编码代理新体验</title><link>https://dqtx.cc/posts/aihacks/deepseek-tui/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/deepseek-tui/</guid><pubDate>Fri, 08 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;DeepSeek TUI 是一个运行在终端中的 AI 编码代理，它从 &lt;code&gt;deepseek&lt;/code&gt; 命令启动，支持流式推理区块、编辑本地工作区（带审批门控），还包含自动模式，可为每次交互选择模型和思考级别。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260508210940076.png&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;核心特性&lt;/h2&gt;
+&lt;h3&gt;🚀 Auto 模式&lt;/h3&gt;
+&lt;p&gt;使用 &lt;code&gt;deepseek --model auto&lt;/code&gt; 或 &lt;code&gt;/model auto&lt;/code&gt;，让 DeepSeek TUI 自动决定每次交互需要多少模型和推理能力。&lt;/p&gt;
+&lt;p&gt;Auto 模式控制两个设置：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;模型&lt;/strong&gt;：&lt;code&gt;deepseek-v4-flash&lt;/code&gt; 或 &lt;code&gt;deepseek-v4-pro&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;思考级别&lt;/strong&gt;：&lt;code&gt;off&lt;/code&gt;、&lt;code&gt;high&lt;/code&gt; 或 &lt;code&gt;max&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在发送真正的请求前，程序会进行一次小型的 &lt;code&gt;deepseek-v4-flash&lt;/code&gt; 路由调用（思考关闭）。路由器查看最新请求和最近上下文，然后为实际请求选择具体的模型和思考级别。&lt;/p&gt;
+&lt;h3&gt;💭 思考模式流式输出&lt;/h3&gt;
+&lt;p&gt;在模型工作时，你可以实时看到 DeepSeek 的推理区块（reasoning blocks），直观了解 AI 的思考过程。&lt;/p&gt;
+&lt;h3&gt;🛠️ 完整工具套件&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;文件操作&lt;/li&gt;
+&lt;li&gt;Shell 命令执行&lt;/li&gt;
+&lt;li&gt;Git 管理&lt;/li&gt;
+&lt;li&gt;网页搜索/浏览&lt;/li&gt;
+&lt;li&gt;应用补丁&lt;/li&gt;
+&lt;li&gt;子代理&lt;/li&gt;
+&lt;li&gt;MCP 服务器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;📚 100 万 Token 上下文&lt;/h3&gt;
+&lt;p&gt;支持上下文追踪、手动或配置的压缩，以及前缀缓存遥测。&lt;/p&gt;
+&lt;h3&gt;🎯 三种模式&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;模式&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Plan&lt;/strong&gt; 🔍&lt;/td&gt;
+&lt;td&gt;只读调查模式——模型探索并提出计划后再进行修改&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Agent&lt;/strong&gt; 🤖&lt;/td&gt;
+&lt;td&gt;默认交互模式——多步骤工具使用，带审批门控&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;YOLO&lt;/strong&gt; ⚡&lt;/td&gt;
+&lt;td&gt;自动批准所有工具——适合可信工作区&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;⌨️ 快捷键&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;按键&lt;/th&gt;
+&lt;th&gt;功能&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Tab&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;完成 &lt;code&gt;/&lt;/code&gt; 或 &lt;code&gt;@&lt;/code&gt; 条目；运行时将草稿排队为后续；否则切换模式&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Shift+Tab&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;切换推理强度：off → high → max&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;F1&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;可搜索的帮助叠加层&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Esc&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;返回/关闭&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Ctrl+K&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;命令面板&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Ctrl+R&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;恢复之前的会话&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Alt+R&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;搜索提示历史并恢复清除的草稿&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Ctrl+S&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;隐藏当前草稿&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2&gt;安装方式&lt;/h2&gt;
+&lt;h3&gt;npm（最简单）&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;npm install -g deepseek-tui
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Cargo&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;cargo install deepseek-tui-cli --locked
+cargo install deepseek-tui --locked
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Homebrew (macOS)&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;brew tap Hmbown/deepseek-tui
+brew install deepseek-tui
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Docker&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;docker run --rm -it \
+  -e DEEPSEEK_API_KEY \
+  -v &quot;$PWD:/workspace&quot; \
+  ghcr.io/hmbown/deepseek-tui:latest
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;快速开始&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;npm install -g deepseek-tui
+deepseek --version
+deepseek --model auto
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;首次启动时，系统会提示输入 &lt;a href=&quot;https://platform.deepseek.com/api_keys&quot;&gt;DeepSeek API key&lt;/a&gt;。密钥会保存到 &lt;code&gt;~/.deepseek/config.toml&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;你也可以提前设置：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;deepseek auth set --provider deepseek
+deepseek auth status
+deepseek doctor
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;模型定价&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;模型&lt;/th&gt;
+&lt;th&gt;上下文&lt;/th&gt;
+&lt;th&gt;输入（缓存命中）&lt;/th&gt;
+&lt;th&gt;输入（缓存未命中）&lt;/th&gt;
+&lt;th&gt;输出&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;deepseek-v4-pro&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;1M&lt;/td&gt;
+&lt;td&gt;$0.003625 / 1M&lt;/td&gt;
+&lt;td&gt;$0.435 / 1M&lt;/td&gt;
+&lt;td&gt;$0.87 / 1M&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;deepseek-v4-flash&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;1M&lt;/td&gt;
+&lt;td&gt;$0.0028 / 1M&lt;/td&gt;
+&lt;td&gt;$0.14 / 1M&lt;/td&gt;
+&lt;td&gt;$0.28 / 1M&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注：DeepSeek Pro 费率目前享受 75% 折扣，有效期至 2026 年 5 月 31 日 15:59 UTC。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;其他 API 提供商&lt;/h2&gt;
+&lt;p&gt;除了 DeepSeek，还支持：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# NVIDIA NIM
+deepseek auth set --provider nvidia-nim --api-key &quot;YOUR_NVIDIA_API_KEY&quot;
+
+# Fireworks
+deepseek auth set --provider fireworks --api-key &quot;YOUR_FIREWORKS_API_KEY&quot;
+
+# 自托管 SGLang
+SGLANG_BASE_URL=&quot;http://localhost:30000/v1&quot; deepseek --provider sglang --model deepseek-v4-flash
+
+# 自托管 vLLM
+VLLM_BASE_URL=&quot;http://localhost:8000/v1&quot; deepseek --provider vllm --model deepseek-v4-flash
+
+# 自托管 Ollama
+ollama pull deepseek-coder:1.3b
+deepseek --provider ollama --model deepseek-coder:1.3b
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Skills 系统&lt;/h2&gt;
+&lt;p&gt;DeepSeek TUI 从工作区目录发现技能（&lt;code&gt;.agents/skills&lt;/code&gt; → &lt;code&gt;skills&lt;/code&gt; → &lt;code&gt;.opencode/skills&lt;/code&gt; → &lt;code&gt;.claude/skills&lt;/code&gt; → &lt;code&gt;.cursor/skills&lt;/code&gt;）和全局目录（&lt;code&gt;~/.agents/skills&lt;/code&gt; → &lt;code&gt;~/.claude/skills&lt;/code&gt; → &lt;code&gt;~/.deepseek/skills&lt;/code&gt;）。&lt;/p&gt;
+&lt;p&gt;每个技能是一个包含 &lt;code&gt;SKILL.md&lt;/code&gt; 文件的目录：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;~/.agents/skills/my-skill/
+└── SKILL.md
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;总结&lt;/h2&gt;
+&lt;p&gt;DeepSeek TUI 为开发者提供了一个强大的终端编码代理，结合了 DeepSeek V4 模型的强大能力和直观的 TUI 界面。无论是日常编码、调试还是架构设计，它都能成为你的得力助手。&lt;/p&gt;
+&lt;p&gt;官方网站：
+https://github.com/Hmbown/DeepSeek-TUI&lt;/p&gt;
 </content:encoded></item><item><title>GPT-Image-2参考资料</title><link>https://dqtx.cc/posts/aihacks/gpt-image-2/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/gpt-image-2/</guid><pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;第三方网站&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;https://labnana.com/zh&lt;/li&gt;
@@ -801,6 +994,17 @@ https://github.com/denghuichao/x-capture&lt;/p&gt;
 &lt;h3&gt;两个热帖搜索网站&lt;/h3&gt;
 &lt;p&gt;https://sopilot.net/zh/hot-tweets
 https://x-sou.com/&lt;/p&gt;
+&lt;h3&gt;X Data Scraper&lt;/h3&gt;
+&lt;p&gt;任意页面的数据抓取  &lt;a href=&quot;https://x.com/ttmouse/status/2001941518765183033&quot;&gt;演示&lt;/a&gt;
+https://chromewebstore.google.com/detail/x-data-scraper/icnlkhdghnkbmcfcjjgbmndigmofnocn?hl=en-US&lt;/p&gt;
+&lt;h3&gt;Twillot&lt;/h3&gt;
+&lt;p&gt;实现书签的搜索功能 找推文方便很多  &lt;a href=&quot;https://x.com/0x17B/status/1497889044227067904&quot;&gt;高级技巧&lt;/a&gt;
+https://chromewebstore.google.com/detail/twillot-your-twitter-orga/flkokionhgagpmnhlngldhbfnblmenen
+网页⬇️
+https://x.com/0x17B/status/1497889044227067904&lt;/p&gt;
+&lt;h3&gt;# Minimal&lt;/h3&gt;
+&lt;p&gt;自定义界面，消除干扰，获得更简约的外观，在使用 Twitter 时更加专注和高效
+https://chromewebstore.google.com/detail/minimal-theme-for-twitter/pobhoodpcipjmedfenaigbeloiidbflp&lt;/p&gt;
 </content:encoded></item><item><title>复现Karpathy的LLM Wiki</title><link>https://dqtx.cc/posts/workflow/%E5%A4%8D%E7%8E%B0karpathy%E7%9A%84llm-wiki/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/%E5%A4%8D%E7%8E%B0karpathy%E7%9A%84llm-wiki/</guid><pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;AI 时代最大的讽刺：我们拥有了最强大的知识处理工具，却仍在用最原始的方式管理知识。&lt;/p&gt;
 &lt;p&gt;前 Tesla AI 总监 Karpathy 给出了他的答案——&lt;strong&gt;LLM Wiki&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;这套框架近期在 GitHub 上引发广泛关注。仔细研读后，我发现它的核心价值不在于技术实现，而在于一套关于&lt;strong&gt;知识组织的理念与行为准则&lt;/strong&gt;——门槛极低，却能带来质的飞跃。&lt;/p&gt;
