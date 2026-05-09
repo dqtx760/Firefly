@@ -92,13 +92,19 @@ AI助手集成，与Claude、Codex对话
 
 微信公众号文章格式转换，作者DavidLam
 
-**以上就是我的插件清单，每个都是经过长期使用后保留下来的「精品」。**
+### 20.仿 Notion Blocks插件
+obsidian-dragger
+https://github.com/Ariestar/obsidian-dragger
+notion-block
+https://github.com/BCS1037/notion-block/releases/tag/1.0.0
+
+----
 
 如果你也有什么私藏神器，欢迎在评论区留言推荐，互相种草！觉得有帮助的话，点个赞再走呗～
 
+**以上就是我的插件清单，每个都是经过长期使用后保留下来的「精品」。**
+
 **PS.飞书同步地址**：[点此](https://xodnytdcaw.feishu.cn/wiki/MK77w8EnCig8dBkrULUcgtVjn3b)
-
-
 
 
 
