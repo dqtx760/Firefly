@@ -363,6 +363,37 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/tech-shrimp&quot;&gt;tech-shrimp&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>离线安装微软商城应用</title><link>https://dqtx.cc/posts/aihacks/win%E5%AE%89%E8%A3%85codex-app/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/win%E5%AE%89%E8%A3%85codex-app/</guid><pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;很多朋友安装了精简版 Windows，却遭遇致命痛点：想装个应用，系统却强行跳转微软商城？&lt;/p&gt;
+&lt;p&gt;Microsoft Store 打不开、下载失败、寸步难行！今天以 &lt;strong&gt;Codex&lt;/strong&gt; 为例，手把手教你离线安装微软商城应用&lt;/p&gt;
+&lt;p&gt;这不仅是解决 Codex 的方案，更是&lt;strong&gt;破解所有微软商城应用安装僵局的终极钥匙&lt;/strong&gt;！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260509221703981.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;01：提取微软商城链接&lt;/h3&gt;
+&lt;p&gt;打开微软商城，搜索 Codex，复制地址栏里的链接。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260509221138557.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;02：解析并下载安装包&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;打开https://store.rg-adguard.net/&lt;/li&gt;
+&lt;li&gt;把链接粘贴进去解析，找到 &lt;code&gt;.msix&lt;/code&gt; 文件下载。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 文件名类似
+&lt;code&gt;OpenAI.Codex_26.506.3741.0_x64__2p2nqsd0c76g0.Msix&lt;/code&gt;，版本号会更新。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260509220949717.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;03：安装 .msix 文件&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;从开始菜单打开 &lt;strong&gt;PowerShell&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;cd 到下载目录，例如：&lt;code&gt;cd D:\Downloads&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;执行安装命令：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;Add-AppxPackage .\你下载的文件名.Msix
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;04：启动 Codex&lt;/h3&gt;
+&lt;p&gt;从开始菜单搜索「Codex」打开。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;这个方法不仅能装 Codex，其他人任何微软商城应用都可以用这种方式离线安装，只需要替换对应的商城链接即可！&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;有用的话，欢迎收藏转发！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;文章来源：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;  远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/p&gt;
 </content:encoded></item><item><title>全球2000个顶级产品的设计规范</title><link>https://dqtx.cc/posts/aihacks/%E6%9C%80%E4%BD%B3-saas-%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1%E7%81%B5%E6%84%9F/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E6%9C%80%E4%BD%B3-saas-%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1%E7%81%B5%E6%84%9F/</guid><pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;分享几个我日常做前端落地页用到的灵感设计网站&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260509012552321.png&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;https://styles.refero.design/
