@@ -366,10 +366,6 @@
 </content:encoded></item><item><title>Claude Code 窗口接管</title><link>https://dqtx.cc/posts/aihacks/claude-code-%E7%AA%97%E5%8F%A3%E6%8E%A5%E7%AE%A1/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/claude-code-%E7%AA%97%E5%8F%A3%E6%8E%A5%E7%AE%A1/</guid><pubDate>Sun, 10 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;很多开发者都有这样一个刚需：正在电脑上用 &lt;strong&gt;Claude Code&lt;/strong&gt; 开发项目，突然临时有事需要离开工位。 、&lt;/p&gt;
 &lt;p&gt;人一走，就没法继续和电脑端的 Claude Code 交互跟进任务。其实现在已有不少解决方案，可以通过技能把 Claude Code 桥接到第三方平台，比如飞书、微信、Telegram。哪怕不在电脑旁，也能随时查看开发进度、远程下发指令操控。&lt;/p&gt;
 &lt;p&gt;https://github.com/hanxiao/claudecode-telegram&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;test
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;test
-&lt;/code&gt;&lt;/pre&gt;
 </content:encoded></item><item><title>博客导航栏抖动修复记</title><link>https://dqtx.cc/posts/technical/%E5%AF%BC%E8%88%AA%E6%A0%8F%E6%8A%96%E5%8A%A8%E4%BF%AE%E5%A4%8D%E8%AE%B0/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E5%AF%BC%E8%88%AA%E6%A0%8F%E6%8A%96%E5%8A%A8%E4%BF%AE%E5%A4%8D%E8%AE%B0/</guid><pubDate>Sun, 10 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这个 bug 折磨了我好几天。每次点博客导航栏上的链接，其他几个文字就像被电了一下，集体向右哆嗦一下再弹回来。不像什么大问题，但每次看到都很难受。&lt;/p&gt;
 &lt;p&gt;我尝试了不同的模型去修复这个问题，都没有找到真正的元凶&lt;/p&gt;
 &lt;h2&gt;第一回合：怀疑字体&lt;/h2&gt;
