@@ -87,7 +87,7 @@ export const navBarConfig: NavBarConfig = {
 			external: false,
 		},
 		{
-			name: "Sponsors",
+			name: "赞助",
 			url: "/sponsors/",
 			external: false,
 		},

@@ -93,6 +93,28 @@ function formatDate(dateStr: string): string {
 <MainGridLayout title="Notes">
   <!-- 笔记内容（铺满主区域） -->
   <div>
+    <!-- 顶部横幅 -->
+    <div class="card-base notes-banner px-6 py-5 mb-4">
+      <div class="banner-content">
+        <div class="banner-icon">
+          <Icon name="material-symbols:notes-rounded" class="text-[1.75rem]" />
+        </div>
+        <div>
+          <h1 class="text-lg font-bold text-black/80 dark:text-white/90">碎片笔记</h1>
+          <p class="text-xs text-black/50 dark:text-white/50 mt-0.5">记录灵感 · 积累思考</p>
+        </div>
+      </div>
+      <div class="banner-stats">
+        <div class="stat-item">
+          <span class="stat-num">{notes.length}</span>
+          <span class="stat-label">条</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">{grouped.size}</span>
+          <span class="stat-label">天</span>
+        </div>
+      </div>
+    </div>
 
     <!-- 标签筛选栏 -->
     <div class="card-base px-6 py-3 mb-4 tag-filter-bar">
@@ -405,8 +427,10 @@ if (document.readyState === 'loading') {
   }
 
   .stat-item { text-align: center; }
-  .stat-num { display: block; font-size: 1.25rem; font-weight: 700; line-height: 1; }
-  .stat-label { font-size: 0.7rem; }
+  .stat-num { display: block; font-size: 1.25rem; font-weight: 700; line-height: 1; color: oklch(0.25 0.02 var(--hue)); }
+  .stat-label { font-size: 0.7rem; color: oklch(0.55 0.01 268); }
+  :global(.dark) .stat-num { color: white; }
+  :global(.dark) .stat-label { color: rgba(255,255,255,0.7); }
 
   /* 日期分割 */
   .day-section { margin-bottom: 4px; }

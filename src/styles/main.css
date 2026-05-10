@@ -10,8 +10,8 @@ html { scrollbar-gutter: stable; }
     :root {
         --card-bg: #faf9f5 !important;
     }
-    html.dark :root {
-        --card-bg: #30302e !important;
+    :root.dark {
+        --card-bg: #141414 !important;
     }
 
     /* Rainbow Mode Animation */
@@ -46,10 +46,10 @@ html { scrollbar-gutter: stable; }
         box-shadow: 0 1px 4px rgba(0,0,0,0.04);
     }
     .dark .card-base {
-        background: #30302e !important;
-        background-color: #30302e !important;
-        border-color: #3d3d3a;
-        box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+        background: #141414 !important;
+        background-color: #141414 !important;
+        border-color: #2a2a2a;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.5);
     }
     .card-hover {
         @apply hover:scale-[1.005] hover:z-10;

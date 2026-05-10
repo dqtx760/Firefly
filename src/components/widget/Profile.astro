@@ -242,6 +242,7 @@ for (const post of posts) {
         inset: -2px;
         border-radius: 1rem;
         background: conic-gradient(from var(--neon-angle), #38bdf8, #a78bfa, #38bdf8);
+        opacity: 0.25;
         z-index: -1;
         animation: neon-spin 4s linear infinite;
     }
@@ -251,8 +252,8 @@ for (const post of posts) {
         position: absolute;
         inset: 0;
         border-radius: 0.75rem;
-        background: radial-gradient(ellipse at 30% 20%, rgba(56, 189, 248, 0.08), transparent 60%),
-                    radial-gradient(ellipse at 70% 80%, rgba(167, 139, 250, 0.08), transparent 60%);
+        background: radial-gradient(ellipse at 30% 20%, rgba(56, 189, 248, 0.04), transparent 60%),
+                    radial-gradient(ellipse at 70% 80%, rgba(167, 139, 250, 0.04), transparent 60%);
         pointer-events: none;
         z-index: 1;
     }
@@ -262,14 +263,12 @@ for (const post of posts) {
     }
 
     html.dark .card-base.profile-card-enhanced {
-        background: rgba(30, 30, 40, 0.75) !important;
-        background-color: rgba(30, 30, 40, 0.75) !important;
-        backdrop-filter: blur(20px) saturate(1.5);
-        -webkit-backdrop-filter: blur(20px) saturate(1.5);
+        background: #141414 !important;
+        background-color: #141414 !important;
         box-shadow:
-            0 1px 3px rgba(0, 0, 0, 0.4),
-            0 4px 12px rgba(0, 0, 0, 0.25),
-            inset 0 1px 0 rgba(255, 255, 255, 0.05) !important;
+            0 1px 3px rgba(0, 0, 0, 0.6),
+            0 4px 12px rgba(0, 0, 0, 0.5),
+            inset 0 1px 0 rgba(255, 255, 255, 0.03) !important;
     }
 
     /* 名字文字阴影 */

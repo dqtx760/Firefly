@@ -14,10 +14,4 @@ pinned: false
 
 https://github.com/hanxiao/claudecode-telegram
 
-```
-test
-```
 
-```bash
-test
-```

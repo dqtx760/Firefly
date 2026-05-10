@@ -146,12 +146,12 @@ const bannerOffset =
 					break
 				case DARK_MODE:
 					document.documentElement.classList.add('dark');
-					document.documentElement.style.backgroundColor = '#141413';
+					document.documentElement.style.backgroundColor = '#0A0A0A';
 					break
 				case AUTO_MODE:
 					if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
 						document.documentElement.classList.add('dark');
-						document.documentElement.style.backgroundColor = '#141413';
+						document.documentElement.style.backgroundColor = '#0A0A0A';
 					} else {
 						document.documentElement.classList.remove('dark');
 						document.documentElement.style.backgroundColor = '#f5f4ed';
@@ -210,14 +210,14 @@ const bannerOffset =
 				background-color: #f5f4ed !important;
 			}
 			html.dark, html.dark body, html.dark .os-viewport, html.dark .os-content {
-				background-color: #141413 !important;
+				background-color: #0A0A0A !important;
 			}
 			#bg-box {
 				background-color: #f5f4ed !important;
 				opacity: 0 !important;
 			}
 			html.dark #bg-box {
-				background-color: #141413 !important;
+				background-color: #0A0A0A !important;
 			}
 		</style>
         
@@ -253,7 +253,7 @@ const bannerOffset =
 				background-color: #f5f4ed;
 			}
 			html.dark body {
-				background-color: #141413;
+				background-color: #0A0A0A;
 			}
 			body {
 				--bg-url: var(--bg-url);
@@ -283,7 +283,7 @@ const bannerOffset =
 				transition: opacity 0.3s ease-in-out;
 			}
 			html.dark #bg-box {
-				background-color: #141413;
+				background-color: #0A0A0A;
 			}
 			#bg-box.loaded {
 				opacity: calc(var(--bg-opacity) * var(--bg-enable));
