@@ -7,33 +7,57 @@ export function pluginLanguageBadge() {
 	return definePlugin({
 		name: "Language Badge",
 		baseStyles: `
-      [data-language]::before {
-        position: absolute;
-        z-index: 2;
-        right: 0.5rem;
-        top: 0.5rem;
-        padding: 0.1rem 0.5rem;
-        content: attr(data-language);
-        font-size: 0.7rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        color: oklch(0.75 0.1 var(--hue));
-        background: oklch(0.33 0.035 var(--hue));
-        border-radius: 0.4rem;
-        pointer-events: none;
-        transition: opacity 0.3s;
-        opacity: 0;
-      }
-      [data-language="plaintext"]::before,
-      [data-language="Plain"]::before {
-        display: none;
-      }
-      .frame:not(.has-title):not(.is-terminal) [data-language]::before {
-        opacity: 0.3;
-      }
-      .frame:not(.has-title):not(.is-terminal):hover [data-language]::before {
-        opacity: 0.06;
-      }
-    `,
+	      [data-language]::before {
+	        position: absolute;
+	        z-index: 2;
+	        right: 0.5rem;
+	        top: 0.5rem;
+	        padding: 0.1rem 0.5rem;
+	        content: attr(data-language);
+	        font-size: 0.7rem;
+	        font-weight: bold;
+	        text-transform: uppercase;
+	        color: oklch(0.75 0.1 var(--hue));
+	        background: oklch(0.33 0.035 var(--hue));
+	        border-radius: 0.4rem;
+	        pointer-events: none;
+	        transition: opacity 0.3s;
+	        opacity: 0;
+	      }
+	      [data-language="plaintext"]::before,
+	      [data-language="Plain"]::before {
+	        display: none;
+	      }
+	      .frame:not(.has-title):not(.is-terminal) [data-language]::before {
+	        opacity: 0.3;
+	      }
+	      .frame:not(.has-title):not(.is-terminal):hover [data-language]::before {
+	        opacity: 0.06;
+	      }
+
+	      /* 未指定语言的代码块显示默认 CODE 标记 */
+	      .frame:not(.has-title):not(.is-terminal) pre:not([data-language])::before,
+	      .frame:not(.has-title):not(.is-terminal) [data-language=""]::before {
+	        position: absolute;
+	        z-index: 2;
+	        right: 0.5rem;
+	        top: 0.5rem;
+	        padding: 0.1rem 0.5rem;
+	        content: "CODE";
+	        font-size: 0.7rem;
+	        font-weight: bold;
+	        text-transform: uppercase;
+	        color: oklch(0.75 0.1 var(--hue));
+	        background: oklch(0.33 0.035 var(--hue));
+	        border-radius: 0.4rem;
+	        pointer-events: none;
+	        transition: opacity 0.3s;
+	        opacity: 0.3;
+	      }
+	      .frame:not(.has-title):not(.is-terminal):hover pre:not([data-language])::before,
+	      .frame:not(.has-title):not(.is-terminal):hover [data-language=""]::before {
+	        opacity: 0.06;
+	      }
+	    `,
 	});
 }
