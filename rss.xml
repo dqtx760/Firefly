@@ -744,14 +744,14 @@ https://www.vibeui.studio/&lt;/p&gt;
 </content:encoded></item><item><title>Warp终端测评记录</title><link>https://dqtx.cc/posts/software/warp/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/warp/</guid><pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;10小时GitHub狂揽3万星，OpenAI亲自下场成为Founding Sponsor，由Rust原生打造的Warp终端，正在以颠覆性的方式，彻底改写开发者对命令行工具的认知。&lt;/p&gt;
 &lt;h3&gt;安装&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;官网下载安装包：&lt;a href=&quot;https://www.warp.dev/&quot;&gt;参照&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;官网：warp.dev&lt;/li&gt;
 &lt;li&gt;winget安装命令安装&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre&gt;&lt;code&gt;winget install Warp.Warp
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260510004653994.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;自定义背景&lt;/h3&gt;
-&lt;p&gt;在 Warp 里按 &lt;code&gt;Ctrl + ,&lt;/code&gt;  搜索→ Background&lt;/p&gt;
+&lt;h3&gt;更好主题&lt;/h3&gt;
+&lt;p&gt;在 Warp 里按 &lt;code&gt;Ctrl + ,&lt;/code&gt;  搜索→ Themes&lt;/p&gt;
 &lt;h3&gt;关闭启动提示&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;右下角有个 &lt;strong&gt;&quot;Don&apos;t show again&quot;&lt;/strong&gt; 按钮，直接点它就行。&lt;/li&gt;
@@ -768,6 +768,20 @@ https://www.vibeui.studio/&lt;/p&gt;
 function cc { claude --dangerously-skip-permissions }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260510005702430.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;一键右键粘贴&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;安装 &lt;strong&gt;AutoHotkey&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;新建 &lt;code&gt;Warp_RightClick_Paste.ahk&lt;/code&gt;：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;#IfWinActive ahk_exe warp.exe
+~RButton::
+    SendInput ^+v  ; 发送 Ctrl+Shift+V
+    return
+#IfWinActive
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;运行脚本 → &lt;strong&gt;右键 = 直接粘贴&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;h3&gt;常用快捷键&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -779,7 +793,7 @@ function cc { claude --dangerously-skip-permissions }
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;Ctrl + ,&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;设置&lt;/td&gt;
+&lt;td&gt;打开设置&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;code&gt;Ctrl + P&lt;/code&gt;&lt;/td&gt;
@@ -790,25 +804,26 @@ function cc { claude --dangerously-skip-permissions }
 &lt;td&gt;新建终端会话&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Ctrl Shift V&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;Ctrl + Shift + V&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;粘贴&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Ctrl Shift D&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;Ctrl + Shift + D&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;右拆分窗格&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;CtrlAlt +⬆️⬇️&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;Ctrl + Alt + ↑ / ↓&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;切换光标&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Ctrl Shift B&lt;/td&gt;
-&lt;td&gt;显示、隐藏左侧栏&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;Ctrl + Shift + B&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;显示/隐藏左侧栏&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;Warp的出现，本质上是命令行工具的一次“现代化重构”。它没有抛弃开发者熟悉的命令行能力，而是用AI、块状输出、IDE级交互这些现代技术，给传统终端装上了“翅膀”。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;命令行的未来，早已不是“能用就行”，而是“智能、高效、丝滑”。而Warp，正是这个未来的起点。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;体验下来，Warp 的垂直侧边标签体验格外出色，多开 AI Agent 会话一目了然，批量切换工作流也十分顺手。&lt;/p&gt;
+&lt;p&gt;唯一小小的遗憾就是，软件默认右键无法直接一键粘贴，稍微影响日常操作的流畅度。&lt;/p&gt;
+&lt;p&gt;即便有这点小瑕疵，也完全不影响它作为终端工具的综合实力，侧边标签加持下的多会话管理，依旧是重度多开、常驻 AI Agent 用户的绝佳选择。&lt;/p&gt;
 </content:encoded></item><item><title>几个推特有关的插件</title><link>https://dqtx.cc/posts/software/%E5%87%A0%E4%B8%AA%E6%8E%A8%E7%89%B9%E6%9C%89%E5%85%B3%E7%9A%84%E6%8F%92%E4%BB%B6/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E5%87%A0%E4%B8%AA%E6%8E%A8%E7%89%B9%E6%9C%89%E5%85%B3%E7%9A%84%E6%8F%92%E4%BB%B6/</guid><pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Twitter Video&lt;/h3&gt;
 &lt;p&gt;下载推特视频
 https://chromewebstore.google.com/detail/twitter-videogif-download/lpfalnepgkapbckncailhheiabcjlbje?hl=zh-CN&amp;amp;utm_source=ext_sidebar
@@ -1034,7 +1049,7 @@ updated: &quot;2026-05-07&quot;
 &lt;p&gt;Karpathy 的 LLM Wiki 框架，本质是把知识管理从&quot;每次查询时重新派生&quot;变成&quot;编译一次，保持最新&quot;。&lt;/p&gt;
 &lt;p&gt;这才是真正的&lt;strong&gt;可复利&lt;/strong&gt;知识层。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;工具会变，但这套方法论值得长期践行!&lt;/strong&gt;&lt;/p&gt;
-</content:encoded></item><item><title>AI 幻灯片模板库</title><link>https://dqtx.cc/posts/aihacks/ai-%E5%B9%BB%E7%81%AF%E7%89%87%E6%A8%A1%E6%9D%BF%E5%BA%93/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/ai-%E5%B9%BB%E7%81%AF%E7%89%87%E6%A8%A1%E6%9D%BF%E5%BA%93/</guid><pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+</content:encoded></item><item><title>张咋啦html模板库</title><link>https://dqtx.cc/posts/aihacks/ai-%E5%B9%BB%E7%81%AF%E7%89%87%E6%A8%A1%E6%9D%BF%E5%BA%93/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/ai-%E5%B9%BB%E7%81%AF%E7%89%87%E6%A8%A1%E6%9D%BF%E5%BA%93/</guid><pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;AI 时代的 HTML 幻灯片模板库，让任何 AI Agent 都能为用户生成精美的演示文稿。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;GitHub地址
@@ -2437,7 +2452,7 @@ https://zhuanlan.zhihu.com/p/1902150269241893722&lt;/li&gt;
 &lt;li&gt;创建API入口
 https://openrouter.ai/workspaces/default/keys&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>蚂蚁百灵大模型免费食用指南</title><link>https://dqtx.cc/posts/aihacks/%E8%9A%82%E8%9A%81%E7%99%BE%E7%81%B5%E5%A4%A7%E6%A8%A1%E5%9E%8B/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E8%9A%82%E8%9A%81%E7%99%BE%E7%81%B5%E5%A4%A7%E6%A8%A1%E5%9E%8B/</guid><pubDate>Tue, 28 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;引言&lt;/h2&gt;
+</content:encoded></item><item><title>蚂蚁百灵大Api活动</title><link>https://dqtx.cc/posts/aihacks/%E8%9A%82%E8%9A%81%E7%99%BE%E7%81%B5%E5%A4%A7%E6%A8%A1%E5%9E%8B/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E8%9A%82%E8%9A%81%E7%99%BE%E7%81%B5%E5%A4%A7%E6%A8%A1%E5%9E%8B/</guid><pubDate>Tue, 28 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;引言&lt;/h2&gt;
 &lt;p&gt;蚂蚁百灵大模型是蚂蚁集团自主研发的大语言模型，具备强大的自然语言处理能力和丰富的知识储备。该模型在中文理解、代码生成、逻辑推理等方面表现出色，特别适合中文场景下的各类AI应用。&lt;/p&gt;
 &lt;p&gt;最近有一个活动，每天在02:00前会赠送当日50万token的免费额度，当日未使用完的额度不结转至次日。这篇文章将演示如何接入你的千Qwen code使用。&lt;/p&gt;
 &lt;blockquote&gt;
