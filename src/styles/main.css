@@ -214,3 +214,13 @@ html { scrollbar-gutter: stable; }
   animation: none;
 }
 
+/* 桌面端导航链接使用系统字体，避免 LXGW WenKai 字体加载时产生布局抖动 */
+#navbar .hidden.md\:flex > .btn-plain {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* 隔离导航栏布局，防止页面切换时重绘级联 */
+#navbar .hidden.md\:flex {
+    contain: layout style;
+}
+
