@@ -1,5 +1,5 @@
 ---
-title: Obsidian配图skill与picgo
+title: picgo图床配置
 published: 2026-05-09
 tags: []
 category: Software
@@ -8,6 +8,15 @@ pinned: false
 image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260509152117853.png
 ---
 微信官方上传普遍要求图片小于 5MB，但超过 1~2MB 基本就开始体验变差了，后台容易抽风或重压缩，微信后台服务器在拉图时非常挑，有时候**Pcigo 返回的图床 URL 微信抓不到**，还有GIF 对微信极不友好，公众号对 GIF 容忍度很差。
+
+### 相关链接
+
+- Obsidian+picgo+图床
+- Typora+picgo+图床
+
+- picgo:https://picgo.app/
+- piclist:https://piclist.cn/
+
 
 ### PicGo +Gitee
 https://cloud.tencent.cn/developer/article/2604043
@@ -29,7 +38,7 @@ https://zhuanlan.zhihu.com/p/693152576
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260509152117853.png)
 
 
-我的方案
+### 我的方案
 Obsidian+picgo+gitee
 
 picgo安装的插件
@@ -38,3 +47,9 @@ picgo安装的插件
 
 
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260509192705833.webp)
+
+### 使用体验
+
+- piclist界面优雅，但是粘贴在Obsidian众的GIF不能上传
+- 目前常用好几个图片压缩的插件，微信后台服务器在拉图时拉不到
+- 目前使用picgo，可以上传GIF，但压缩使用webp 1.0.0插件，GIF也就无缘了

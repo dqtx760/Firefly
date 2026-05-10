@@ -50,3 +50,37 @@
   border-radius: 50% !important;
   box-shadow: 9px 0 0 #febc2e, 18px 0 0 #28c840 !important;
 }
+
+/* Plaintext / no-language blocks: mimic terminal frame style */
+.expressive-code .frame:has([data-language="plaintext"]),
+.expressive-code .frame:has([data-language="Plain"]) {
+  padding-top: 0 !important;
+}
+
+.expressive-code .frame:has([data-language="plaintext"])::before,
+.expressive-code .frame:has([data-language="Plain"])::before {
+  display: none !important;
+}
+
+.expressive-code .frame:has([data-language="plaintext"]) .header,
+.expressive-code .frame:has([data-language="Plain"]) .header {
+  display: flex !important;
+  align-items: center;
+  padding-block: 0.15rem !important;
+  min-height: auto !important;
+}
+
+.expressive-code .frame:has([data-language="plaintext"]) .header::before,
+.expressive-code .frame:has([data-language="Plain"]) .header::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  width: 6px;
+  height: 6px;
+  background-color: #ff5f57;
+  opacity: 1;
+  -webkit-mask-image: none;
+  mask-image: none;
+  border-radius: 50%;
+  box-shadow: 9px 0 0 #febc2e, 18px 0 0 #28c840;
+}

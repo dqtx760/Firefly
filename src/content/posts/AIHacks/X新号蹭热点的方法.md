@@ -1,5 +1,5 @@
 ---
-title: 新号蹭热点的方法
+title: X新号蹭热点的方法
 published: 2026-05-07
 tags:
   - 网站
@@ -8,8 +8,13 @@ tags:
 category: AIHacks
 draft: false
 pinned: false
-image:
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260510170127279.webp
 ---
+今天这篇文章想跟大家分享一种X蹭热点引流的思路，整理了几个找热点的爆款帖子网站，此外，评论时还需使用一款Chrome插件，可自动发布评论。
+
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260510170127279.webp)
+
+
 ### 抓取
 https://sopilot.net/zh/hot-tweets
 
