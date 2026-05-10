@@ -13,3 +13,11 @@ pinned: false
 人一走，就没法继续和电脑端的 Claude Code 交互跟进任务。其实现在已有不少解决方案，可以通过技能把 Claude Code 桥接到第三方平台，比如飞书、微信、Telegram。哪怕不在电脑旁，也能随时查看开发进度、远程下发指令操控。
 
 https://github.com/hanxiao/claudecode-telegram
+
+```
+test
+```
+
+```bash
+test
+```
