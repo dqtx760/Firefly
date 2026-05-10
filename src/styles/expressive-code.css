@@ -1,15 +1,38 @@
 .expressive-code .frame {
   @apply !shadow-none;
   position: relative;
-  padding-top: 1.4rem;
+  padding-top: 1.2rem;
   border-radius: 8px !important;
   border: none !important;
   overflow: hidden;
   background: #1e1e2e !important;
 }
 
-/* Mac-style window dots for non-terminal frames */
+/* Mac-style window dots for ALL non-terminal frames */
 .expressive-code .frame:not(.is-terminal)::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 7px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ff5f57;
+  box-shadow: 9px 0 0 #febc2e, 18px 0 0 #28c840;
+  z-index: 10;
+}
+
+/* Terminal frames: hide native header, unify with non-terminal look */
+.expressive-code .frame.is-terminal {
+  padding-top: 1.2rem;
+}
+
+.expressive-code .frame.is-terminal .header {
+  display: none !important;
+}
+
+/* Mirror dots for terminal frames (since header is hidden, add to frame) */
+.expressive-code .frame.is-terminal::before {
   content: "";
   position: absolute;
   left: 14px;
@@ -25,62 +48,4 @@
 .expressive-code .frame pre {
   border: none !important;
   margin-top: 0 !important;
-}
-
-/* Terminal frames: no extra padding-top, library handles header */
-.expressive-code .frame.is-terminal {
-  padding-top: 0;
-}
-
-/* Restyle terminal header: compact, with bigger dots */
-.expressive-code .frame.is-terminal .header {
-  padding-block: 0.15rem !important;
-  min-height: auto !important;
-}
-
-/* Override terminal dots: bigger and more visible */
-.expressive-code .frame.is-terminal .header::before {
-  left: 14px !important;
-  width: 6px !important;
-  height: 6px !important;
-  background-color: #ff5f57 !important;
-  opacity: 1 !important;
-  -webkit-mask-image: none !important;
-  mask-image: none !important;
-  border-radius: 50% !important;
-  box-shadow: 9px 0 0 #febc2e, 18px 0 0 #28c840 !important;
-}
-
-/* Plaintext / no-language blocks: mimic terminal frame style */
-.expressive-code .frame:has([data-language="plaintext"]),
-.expressive-code .frame:has([data-language="Plain"]) {
-  padding-top: 0 !important;
-}
-
-.expressive-code .frame:has([data-language="plaintext"])::before,
-.expressive-code .frame:has([data-language="Plain"])::before {
-  display: none !important;
-}
-
-.expressive-code .frame:has([data-language="plaintext"]) .header,
-.expressive-code .frame:has([data-language="Plain"]) .header {
-  display: flex !important;
-  align-items: center;
-  padding-block: 0.15rem !important;
-  min-height: auto !important;
-}
-
-.expressive-code .frame:has([data-language="plaintext"]) .header::before,
-.expressive-code .frame:has([data-language="Plain"]) .header::before {
-  content: "";
-  position: absolute;
-  left: 14px;
-  width: 6px;
-  height: 6px;
-  background-color: #ff5f57;
-  opacity: 1;
-  -webkit-mask-image: none;
-  mask-image: none;
-  border-radius: 50%;
-  box-shadow: 9px 0 0 #febc2e, 18px 0 0 #28c840;
 }
