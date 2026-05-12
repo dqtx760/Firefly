@@ -16,21 +16,15 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/202605101701
 
 
 ### 抓取
-https://sopilot.net/zh/hot-tweets
 
-帮你发现正在快速升温、具备互动价值的 X 起爆帖
 
-https://aihot.virxact.com/
-
-卡兹每天看的优质信息源
-
-https://www.tl1.com/trending/hours/2
-
-实时追踪中文区热帖趋势、用户排行、互关关系与 AI 灵感
-
-https://www.attentionvc.ai/article?lang=zh 
-
-可以追踪最近的爆火的长推文
+| 说明                           | 地址                                           |
+| ---------------------------- | -------------------------------------------- |
+| 24小时AI更新雷达「卡尔的AI沃茨」          | https://learnprompt.github.io/ai-news-radar/ |
+| 卡兹每天看的优质信息源                  | https://aihot.virxact.com/                   |
+| 帮你发现正在快速升温、具备互动价值的 X 起爆帖     | https://sopilot.net/zh/hot-tweets            |
+| 实时追踪中文区热帖趋势、用户排行、互关关系与 AI 灵感 | https://www.tl1.com/trending/hours/2         |
+| 可以追踪最近的爆火的长推文                | https://www.attentionvc.ai/article?lang=zh   |
 
 
 ```

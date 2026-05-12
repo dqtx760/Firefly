@@ -55,7 +55,7 @@ https://www.codebuddy.cn/docs/workbuddy/WeixinBot-Guide
 设置---Claw设置---微信助手集成-配置
 
 扫码后即可在微信上发消息，电脑端会同步接收，稍后消息也会传到手机上，非常丝滑
-⚠️但是你电脑上发消息不会同步到微信
+⚠️但是你电脑上发消息不会同步到微信，另外，电脑需要一直开着，适合提醒人物，比如：提醒我下午3点去去快递。
 
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260511180317180.webp)
 

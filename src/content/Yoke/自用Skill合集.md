@@ -59,19 +59,24 @@ https://github.com/dqtx760/skills-manage
 
 #### 内容创作
 
-| 功能        | skill开源地址                                                                                                      | 备注  | 使用&效果                                                         |
-| --------- | -------------------------------------------------------------------------------------------------------------- | --- | ------------------------------------------------------------- |
-| 文章配图      | [baoyu-article-illustrator](https://github.com/JimLiu/baoyu-skills/tree/main/skills/baoyu-article-illustrator) | 宝玉  | 点此查看                                                          |
-| 生成信息卡     | [ljg-card](https://github.com/lijigang/ljg-skills/tree/master/skills/ljg-card)                                 | 李继刚 | [效果示例](https://x.com/berryxia/status/2036963670014779468)     |
-| X导师.skill | [alchaincyf/x-mentor-skill](https://github.com/alchaincyf/x-mentor-skill)                                      | 花叔  | 点此查看                                                          |
-| 公众号写作     | [wewrite](https://github.com/oaker-io/wewrite)                                                                 |     |                                                               |
-| 自媒体写作     | [writing-assistant-skill](https://github.com/Ceeon/writing-assistant-skill)                                    |     |                                                               |
-| 教程制作      | [yao-tutorial-skill](https://github.com/yaojingang/yao-open-skills/tree/main/skills/yao-tutorial-skill)        |     |                                                               |
-| 像做手术一样写作  | [ljg-writes](https://github.com/lijigang/ljg-skills/tree/master/skills/ljg-writes)                             | 李继刚 |                                                               |
-| PPT skill | [ian-handdrawn-ppt](https://github.com/helloianneo/ian-handdrawn-ppt)                                          | 手绘风 | [点此查看](https://x.com/ianneo_ai/status/2048047226782670931)    |
-| PPT skill | [guizang-ppt-skill](https://github.com/op7418/guizang-ppt-skill)                                               | 歸藏  | [点此查看](https://x.com/op7418/status/2048245950813282481)       |
-| PPT skill | [zarazhangrui/frontend-slides](https://github.com/zarazhangrui/frontend-slides)                                | 张咋啦 | [点此查看](https://x.com/zarazhangrui/status/2016337615843434646) |
-| PPT Skill | [alchaincyf/huashu-design](https://github.com/alchaincyf/huashu-design)                                        | 花叔  | [效果示例](https://skill.huasheng.ai/)                            |
+| 功能                 | skill开源地址                                                                                                      | 备注  | 使用&效果                                                         |
+| ------------------ | -------------------------------------------------------------------------------------------------------------- | --- | ------------------------------------------------------------- |
+| 文章配图               | [baoyu-article-illustrator](https://github.com/JimLiu/baoyu-skills/tree/main/skills/baoyu-article-illustrator) | 宝玉  | 点此查看                                                          |
+| 生成信息卡              | [ljg-card](https://github.com/lijigang/ljg-skills/tree/master/skills/ljg-card)                                 | 李继刚 | [效果示例](https://x.com/berryxia/status/2036963670014779468)     |
+| X导师.skill          | [alchaincyf/x-mentor-skill](https://github.com/alchaincyf/x-mentor-skill)                                      | 花叔  | 点此查看                                                          |
+| 公众号写作              | [wewrite](https://github.com/oaker-io/wewrite)                                                                 |     |                                                               |
+| 自媒体写作              | [writing-assistant-skill](https://github.com/Ceeon/writing-assistant-skill)                                    |     |                                                               |
+| 教程制作               | [yao-tutorial-skill](https://github.com/yaojingang/yao-open-skills/tree/main/skills/yao-tutorial-skill)        |     |                                                               |
+| 像做手术一样写作           | [ljg-writes](https://github.com/lijigang/ljg-skills/tree/master/skills/ljg-writes)                             | 李继刚 |                                                               |
+| PPT skill          | [ian-handdrawn-ppt](https://github.com/helloianneo/ian-handdrawn-ppt)                                          | 手绘风 | [点此查看](https://x.com/ianneo_ai/status/2048047226782670931)    |
+| PPT skill          | [guizang-ppt-skill](https://github.com/op7418/guizang-ppt-skill)                                               | 歸藏  | [点此查看](https://x.com/op7418/status/2048245950813282481)       |
+| PPT skill          | [zarazhangrui/frontend-slides](https://github.com/zarazhangrui/frontend-slides)                                | 张咋啦 | [点此查看](https://x.com/zarazhangrui/status/2016337615843434646) |
+| PPT Skill          | [alchaincyf/huashu-design](https://github.com/alchaincyf/huashu-design)                                        | 花叔  | [效果示例](https://skill.huasheng.ai/)                            |
+| 协作式文档创作            | [doc-coauthoring](https://github.com/zephyrwang6/allSkills/tree/main/doc-coauthoring)                          |     |                                                               |
+| 即刻/X 动态改写与创作       | [x-post](https://github.com/zephyrwang6/allSkills/tree/main/x-post)                                            |     |                                                               |
+| 多角度选题生成（推文+公众号）    | [content-topic-generator](https://github.com/zephyrwang6/allSkills/tree/main/content-topic-generator)          |     |                                                               |
+| 文章改写优化（含 4 种写作风格库） | [content-rewriting-2601](https://github.com/zephyrwang6/allSkills/tree/main/content-rewriting-2601)            |     |                                                               |
+| 深度文章评价/解读          | [article-review](https://github.com/zephyrwang6/allSkills/tree/main/article-review)                            |     |                                                               |
 
 [Notion备份](https://www.notion.so/skill-347351994e408091a13be04d19c62d1e)
 
