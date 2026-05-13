@@ -6,7 +6,6 @@ category: AIHacks
 draft: false
 pinned: false
 ---
-
 在电脑上用 Agents 很爽，但 **Agent 能随身带在手机里，直接调用你手机的所有能力呢？**
 
 这就是 [Open Minis](https://openminis.app/) —— 一个真正把「端侧 AI Agent」做明白的产品。

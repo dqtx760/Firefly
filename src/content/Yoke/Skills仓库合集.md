@@ -16,6 +16,8 @@ Claude Skills 作为 AI 助手的功能拓展核心，能精准对接各类场�
 **开源地址：**
 https://github.com/dqtx760/skills-manage
 
+### 参照：[斜杠命令合集](斜杠命令合集.md)
+
 ![image.png](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260422191135966.webp)
 
 
@@ -23,22 +25,23 @@ https://github.com/dqtx760/skills-manage
 ---
 #### 元能力拓展
 
-| 功能              | skill开源地址                                                                                     | 备注     | 使用&效果                                                                                   |
-| --------------- | --------------------------------------------------------------------------------------------- | ------ | --------------------------------------------------------------------------------------- |
-| 帮你创建技能          | [Skill-Creator](https://github.com/anthropics/skills/blob/main/skills/skill-creator/SKILL.md) |        |                                                                                         |
-| 找到最匹配skills     | [find-skills](https://github.com/vercel-labs/skills/tree/main/skills/find-skills)             |        |                                                                                         |
-| 自动纠正记录          | [self-improving-agent](https://github.com/peterskoett/self-improving-agent)                   |        |                                                                                         |
-| 项目规划            | [planning-with-files](https://github.com/OthmanAdi/planning-with-files)                       |        | 点此查看                                                                                    |
-| 记忆持久化           | [Claude-mem](https://github.com/thedotmack/claude-mem)                                        |        | 点此查看                                                                                    |
-| 私董会             | [advisory-board](https://github.com/Backtthefuture/huangshu/tree/main/skills/advisory-board)  | 黄叔     |                                                                                         |
-| 跨平台搜索           | [Agent-Reach](https://github.com/Panniantong/Agent-Reach)                                     |        |                                                                                         |
-| chrome 自动化      | [Web Access](https://github.com/eze-is/web-access)                                            | -泽Eze  | [点此查看](https://www.dqtx.cc/posts/aihacks/web-access/)                                   |
-| 女娲.skill        | [alchaincyf/nuwa-skill](https://github.com/alchaincyf/nuwa-skill)                             | 花叔     | 点此查看                                                                                    |
-| Obsidia可视化X3    | [obsidian-visual-skills](https://github.com/axtonliu/axton-obsidian-visual-skills)            | Axton  | [使用说明](https://github.com/axtonliu/axton-obsidian-visual-skills/blob/main/README_CN.md) |
-| obsidian-bases  | [obsidian-bases](https://github.com/kepano/obsidian-skills/tree/main/skills/obsidian-bases)   | kepano |                                                                                         |
-| 推送顶尖信息到Telegram | [follow-builders](https://github.com/zarazhangrui/follow-builders/blob/main/README.zh-CN.md)  | 张咋啦    |                                                                                         |
-| 多Agent协调工作      | [axtonliu/ai-pair](https://github.com/axtonliu/ai-pair)                                       | Axton  | 点此查看                                                                                    |
-| 让llm说人话         | [talk-normal](https://github.com/hexiecs/talk-normal/blob/main/README_CN.md)                  |        |                                                                                         |
+| 功能                 | skill开源地址                                                                                     | 备注      | 使用&效果                                                                                   |
+| ------------------ | --------------------------------------------------------------------------------------------- | ------- | --------------------------------------------------------------------------------------- |
+| 帮你创建技能             | [Skill-Creator](https://github.com/anthropics/skills/blob/main/skills/skill-creator/SKILL.md) |         |                                                                                         |
+| 找到最匹配skills        | [find-skills](https://github.com/vercel-labs/skills/tree/main/skills/find-skills)             |         |                                                                                         |
+| 自动纠正记录             | [self-improving-agent](https://github.com/peterskoett/self-improving-agent)                   |         |                                                                                         |
+| 项目规划               | [planning-with-files](https://github.com/OthmanAdi/planning-with-files)                       |         | 点此查看                                                                                    |
+| 记忆持久化              | [Claude-mem](https://github.com/thedotmack/claude-mem)                                        |         | 点此查看                                                                                    |
+| 私董会                | [advisory-board](https://github.com/Backtthefuture/huangshu/tree/main/skills/advisory-board)  | 黄叔      |                                                                                         |
+| 跨平台搜索              | [Agent-Reach](https://github.com/Panniantong/Agent-Reach)                                     |         |                                                                                         |
+| chrome 自动化         | [Web Access](https://github.com/eze-is/web-access)                                            | -泽Eze   | [点此查看](https://www.dqtx.cc/posts/aihacks/web-access/)                                   |
+| 女娲.skill           | [alchaincyf/nuwa-skill](https://github.com/alchaincyf/nuwa-skill)                             | 花叔      | 点此查看                                                                                    |
+| Obsidia可视化X3       | [obsidian-visual-skills](https://github.com/axtonliu/axton-obsidian-visual-skills)            | Axton   | [使用说明](https://github.com/axtonliu/axton-obsidian-visual-skills/blob/main/README_CN.md) |
+| obsidian-bases     | [obsidian-bases](https://github.com/kepano/obsidian-skills/tree/main/skills/obsidian-bases)   | kepano  |                                                                                         |
+| 推送顶尖信息到Telegram    | [follow-builders](https://github.com/zarazhangrui/follow-builders/blob/main/README.zh-CN.md)  | 张咋啦     |                                                                                         |
+| 多Agent协调工作         | [axtonliu/ai-pair](https://github.com/axtonliu/ai-pair)                                       | Axton   | 点此查看                                                                                    |
+| 让llm说人话            | [talk-normal](https://github.com/hexiecs/talk-normal/blob/main/README_CN.md)                  |         |                                                                                         |
+| AI HOT 日报和全部 AI 动态 | [aihot](https://github.com/KKKKhazix/khazix-skills/blob/main/aihot/SKILL.md)                  | 数字生命卡兹克 |                                                                                         |
 
 #### 软件开发
 
@@ -72,11 +75,14 @@ https://github.com/dqtx760/skills-manage
 | PPT skill          | [guizang-ppt-skill](https://github.com/op7418/guizang-ppt-skill)                                               | 歸藏  | [点此查看](https://x.com/op7418/status/2048245950813282481)       |
 | PPT skill          | [zarazhangrui/frontend-slides](https://github.com/zarazhangrui/frontend-slides)                                | 张咋啦 | [点此查看](https://x.com/zarazhangrui/status/2016337615843434646) |
 | PPT Skill          | [alchaincyf/huashu-design](https://github.com/alchaincyf/huashu-design)                                        | 花叔  | [效果示例](https://skill.huasheng.ai/)                            |
+| 一个可播放的思维导图 PPT     | [mindmap-ppt#](https://github.com/agegr/mindmap-ppt#)                                                          |     |                                                               |
 | 协作式文档创作            | [doc-coauthoring](https://github.com/zephyrwang6/allSkills/tree/main/doc-coauthoring)                          |     |                                                               |
 | 即刻/X 动态改写与创作       | [x-post](https://github.com/zephyrwang6/allSkills/tree/main/x-post)                                            |     |                                                               |
 | 多角度选题生成（推文+公众号）    | [content-topic-generator](https://github.com/zephyrwang6/allSkills/tree/main/content-topic-generator)          |     |                                                               |
 | 文章改写优化（含 4 种写作风格库） | [content-rewriting-2601](https://github.com/zephyrwang6/allSkills/tree/main/content-rewriting-2601)            |     |                                                               |
 | 深度文章评价/解读          | [article-review](https://github.com/zephyrwang6/allSkills/tree/main/article-review)                            |     |                                                               |
+| 文章去AI味             | [humanizer](https://github.com/blader/humanizer)                                                               |     |                                                               |
+| 卡兹克风格创作            | [khazix-skills](https://github.com/KKKKhazix/khazix-skills)                                                    |     |                                                               |
 
 [Notion备份](https://www.notion.so/skill-347351994e408091a13be04d19c62d1e)
 
