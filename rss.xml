@@ -521,7 +521,7 @@
 &lt;p&gt;就只是，没有人告诉你，真正的问题是什么。&lt;/p&gt;
 &lt;p&gt;以上，既然看到这里了，如果觉得不错，随手点个赞、在看、转发三连吧，如果想第一时间收到推送，也可以给我个星标⭐～&lt;/p&gt;
 &lt;p&gt;谢谢你看我的文章，我们，下次再见。&lt;/p&gt;
-</content:encoded></item><item><title>Google搜索CLI：给AI Agent装上谷歌搜索能力</title><link>https://dqtx.cc/posts/aihacks/gsearch-cli/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/gsearch-cli/</guid><pubDate>Thu, 14 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;AI Agent 不能联网真的太蛋疼了。试了五六种搜索工具，没有一个让人省心——要么要配 API Key，要么要跑后台服务，要么结果一塌糊涂。&lt;/p&gt;
+</content:encoded></item><item><title>Gsearch-cli实现Agent调用谷歌</title><link>https://dqtx.cc/posts/aihacks/gsearch-cli/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/gsearch-cli/</guid><pubDate>Thu, 14 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;AI Agent 不能联网真的太蛋疼了。试了五六种搜索工具，没有一个让人省心——要么要配 API Key，要么要跑后台服务，要么结果一塌糊涂。&lt;/p&gt;
 &lt;p&gt;直到发现 &lt;a href=&quot;https://github.com/aeroxy/gsearch-cli&quot;&gt;gsearch-cli&lt;/a&gt;。Rust 写的，单二进制，小得离谱，跑起来快得惊人。最妙的是它能直接复用 Gemini CLI 的 OAuth 认证，&lt;strong&gt;零配置，装完就能用&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;现在 Claude Code 终于有真正的谷歌搜索能力了。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260514195541715.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -614,7 +614,7 @@ cp gsearch-cli/skill/gsearch/SKILL.md ~/.claude/skills/gsearch/
 &lt;h2&gt;最后说两句&lt;/h2&gt;
 &lt;p&gt;不是什么惊天动地的大项目，但它把一个很小的问题解决得特别干净。没有花里胡哨的功能，没有复杂的配置，装完就能用。&lt;/p&gt;
 &lt;p&gt;对于折腾 AI Agent 的人来说，这玩意儿就是刚需——你的 Agent 终于能真正&quot;上网&quot;了。&lt;/p&gt;
-</content:encoded></item><item><title>Codex 接入国产大模</title><link>https://dqtx.cc/posts/aihacks/codex-cn-bridge/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/codex-cn-bridge/</guid><description>本地代理把 OpenAI Responses API 转成标准 Chat Completions API，Codex 桌面端可以直接用 DeepSeek、智谱 GLM、Kimi、通义千问、豆包。</description><pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Codex App 最近在推特上很火，但没 GPT Pro 会员就用不了，每月 200 刀也不便宜。能不能接国产模型？逛 GitHub 发现了 &lt;strong&gt;codex-cn-bridge&lt;/strong&gt;。&lt;/p&gt;
+</content:encoded></item><item><title>Codex App接入国产模型</title><link>https://dqtx.cc/posts/aihacks/codex-cn-bridge/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/codex-cn-bridge/</guid><description>本地代理把 OpenAI Responses API 转成标准 Chat Completions API，Codex 桌面端可以直接用 DeepSeek、智谱 GLM、Kimi、通义千问、豆包。</description><pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Codex App 最近在推特上很火，但没 GPT Pro 会员就用不了，每月 200 刀也不便宜。能不能接国产模型？逛 GitHub 发现了 &lt;strong&gt;codex-cn-bridge&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;它是个本地代理，专门解决 Codex 只能用官方 GPT 的问题——把 OpenAI 的 &lt;code&gt;Responses API&lt;/code&gt; 翻译成标准 &lt;code&gt;Chat Completions API&lt;/code&gt;，让 Codex 桌面端、CLI、VS Code 插件都能直接用国产大模型。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;项目地址：&lt;/strong&gt;
 https://github.com/git-liu835/codex-cn-bridge&lt;/p&gt;
@@ -681,7 +681,7 @@ wire_api = &quot;responses&quot;
 &lt;p&gt;这个工具解决的就一件事：&lt;strong&gt;不想给 OpenAI 交钱，又想用 Codex&lt;/strong&gt;。国产模型的 coding 能力其实不差，DeepSeek V3、Kimi K2 写代码都是有口碑的，配上 Codex 的交互体验，日常开发够用了。&lt;/p&gt;
 &lt;p&gt;有个小提示：代理跑在本地 &lt;code&gt;127.0.0.1:8765&lt;/code&gt;，只监听本机，不用担心安全问题。但记得 API Key 别在别处泄露。&lt;/p&gt;
 &lt;p&gt;项目还在快速迭代，遇到 bug 去 GitHub Issues 反馈，作者响应挺快的。&lt;/p&gt;
-</content:encoded></item><item><title>gemini生成高级封面</title><link>https://dqtx.cc/posts/aihacks/gemini%E7%94%9F%E6%88%90%E9%AB%98%E7%BA%A7%E5%B0%81%E9%9D%A2/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/gemini%E7%94%9F%E6%88%90%E9%AB%98%E7%BA%A7%E5%B0%81%E9%9D%A2/</guid><pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近在推特上找封面相关的提示词，偶然刷到极客杰尼老师的文章，我再整理一下，&lt;/p&gt;
+</content:encoded></item><item><title>高颜值封面Gem</title><link>https://dqtx.cc/posts/aihacks/gemini%E7%94%9F%E6%88%90%E9%AB%98%E7%BA%A7%E5%B0%81%E9%9D%A2/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/gemini%E7%94%9F%E6%88%90%E9%AB%98%E7%BA%A7%E5%B0%81%E9%9D%A2/</guid><pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近在推特上找封面相关的提示词，偶然刷到极客杰尼老师的文章，我再整理一下，&lt;/p&gt;
 &lt;p&gt;流程：主副标题→16:9海报提示词→即梦→图片&lt;/p&gt;
 &lt;h3&gt;从 Pinterest 找灵感&lt;/h3&gt;
 &lt;p&gt;https://jp.pinterest.com/search/pins/?q=%E6%96%87%E5%AD%97%E6%8E%92%E7%89%88&amp;amp;rs=typed&lt;/p&gt;
@@ -800,7 +800,7 @@ https://x.com/seekjourney/status/1977307327645835478&lt;/p&gt;
 &lt;p&gt;这不是「手机上的又一个 AI App」，这是 &lt;strong&gt;AI 终于能真正用你的手机了&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;之前的手机 AI 都停留在「聊天」层面，而 Open Minis 直接把 Agent 的触手伸进了系统层。日历、健康数据、智能家居、文件系统 —— AI 终于能以自然的方式访问和操作它们了。&lt;/p&gt;
 &lt;p&gt;如果你在电脑上已经体会过 Agents 带来的效率革命，把这种能力装进口袋的感觉，值得立刻去试一下。&lt;/p&gt;
-</content:encoded></item><item><title>WorkBuddy安装使用教程</title><link>https://dqtx.cc/posts/aihacks/workbuddy/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/workbuddy/</guid><pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;使用 AI Agent 时，两大痛点让人抓狂：&lt;/p&gt;
+</content:encoded></item><item><title>WorkBuddy安装与使用</title><link>https://dqtx.cc/posts/aihacks/workbuddy/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/workbuddy/</guid><pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;使用 AI Agent 时，两大痛点让人抓狂：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;命令交互反直觉&lt;/strong&gt;：斜杠命令一输就触发，需求还没写完，思路已被打断，反复修正苦不堪言。&lt;/p&gt;
@@ -934,7 +934,7 @@ mklink /D &quot;C:\Users\Administrator\.workbuddy\skills&quot; &quot;C:\Users\Ad
 &lt;p&gt;这个方法不仅能装 Codex，其他人任何微软商城应用都可以用这种方式离线安装，只需要替换对应的商城链接即可！&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;有用的话，欢迎收藏转发！&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;文章来源：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;  远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/p&gt;
-</content:encoded></item><item><title>全球2000个顶级产品的设计规范</title><link>https://dqtx.cc/posts/aihacks/%E6%9C%80%E4%BD%B3-saas-%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1%E7%81%B5%E6%84%9F/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E6%9C%80%E4%BD%B3-saas-%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1%E7%81%B5%E6%84%9F/</guid><pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;分享几个我日常做前端落地页用到的灵感设计网站&lt;/p&gt;
+</content:encoded></item><item><title>网站UI设计参考</title><link>https://dqtx.cc/posts/aihacks/%E7%BD%91%E7%AB%99ui%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E7%BD%91%E7%AB%99ui%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83/</guid><pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;分享几个我日常做前端落地页用到的灵感设计网站&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260509012552321.png&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;https://styles.refero.design/
 这个网站直接把全球2000个顶级产品的设计规范打包成DESIGN.md文件&lt;/p&gt;
@@ -948,7 +948,7 @@ https://www.designprompts.dev/&lt;/p&gt;
 https://saaspo.com/&lt;/p&gt;
 &lt;p&gt;用于 AI 构建的 AI 生成 UI 应用
 https://www.vibeui.studio/&lt;/p&gt;
-</content:encoded></item><item><title>picgo图床配置</title><link>https://dqtx.cc/posts/software/picgo/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/picgo/</guid><pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;微信官方上传普遍要求图片小于 5MB，但超过 1~2MB 基本就开始体验变差了，后台容易抽风或重压缩，微信后台服务器在拉图时非常挑，有时候&lt;strong&gt;Pcigo 返回的图床 URL 微信抓不到&lt;/strong&gt;，还有GIF 对微信极不友好，公众号对 GIF 容忍度很差。&lt;/p&gt;
+</content:encoded></item><item><title>picgo/Piclist图床</title><link>https://dqtx.cc/posts/software/picgo/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/picgo/</guid><pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;微信官方上传普遍要求图片小于 5MB，但超过 1~2MB 基本就开始体验变差了，后台容易抽风或重压缩，微信后台服务器在拉图时非常挑，有时候&lt;strong&gt;Pcigo 返回的图床 URL 微信抓不到&lt;/strong&gt;，还有GIF 对微信极不友好，公众号对 GIF 容忍度很差。&lt;/p&gt;
 &lt;h3&gt;相关链接&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
