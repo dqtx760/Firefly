@@ -261,6 +261,14 @@ export default defineConfig({
 		],
 	},
 	vite: {
+		plugins: [
+			{
+				name: "ignore-canvas",
+				load(id) {
+					if (id.endsWith(".canvas")) return "export default {}";
+				},
+			},
+		],
 		server: {
 			port: 4321,
 			host: true,
