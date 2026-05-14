@@ -29,6 +29,7 @@ https://github.com/dqtx760/skills-manage
 | ------------------ | --------------------------------------------------------------------------------------------- | ------- | --------------------------------------------------------------------------------------- |
 | 帮你创建技能             | [Skill-Creator](https://github.com/anthropics/skills/blob/main/skills/skill-creator/SKILL.md) |         |                                                                                         |
 | 找到最匹配skills        | [find-skills](https://github.com/vercel-labs/skills/tree/main/skills/find-skills)             |         |                                                                                         |
+| 一行切换模型             | [cc-switcher](https://github.com/idongdongh/cc-switcher)                                      |         |                                                                                         |
 | 自动纠正记录             | [self-improving-agent](https://github.com/peterskoett/self-improving-agent)                   |         |                                                                                         |
 | 项目规划               | [planning-with-files](https://github.com/OthmanAdi/planning-with-files)                       |         | 点此查看                                                                                    |
 | 记忆持久化              | [Claude-mem](https://github.com/thedotmack/claude-mem)                                        |         | 点此查看                                                                                    |
@@ -83,6 +84,7 @@ https://github.com/dqtx760/skills-manage
 | 深度文章评价/解读          | [article-review](https://github.com/zephyrwang6/allSkills/tree/main/article-review)                            |     |                                                               |
 | 文章去AI味             | [humanizer](https://github.com/blader/humanizer)                                                               |     |                                                               |
 | 卡兹克风格创作            | [khazix-skills](https://github.com/KKKKhazix/khazix-skills)                                                    |     |                                                               |
+| 剪映SRT校对员           | [SRT-Proofreader](https://clawhub.ai/kapiai/srt-proofreader#versions)                                          |     |                                                               |
 
 [Notion备份](https://www.notion.so/skill-347351994e408091a13be04d19c62d1e)
 
@@ -93,6 +95,9 @@ https://github.com/dqtx760/skills-manage
 [5 个才是真正值得必装的](https://x.com/BTCqzy1/status/2048628785793425837)
 
 ## 11个Skill聚合战
+
+https://www.skills.sh/hot
+
 https://ai.codefather.cn/skills
 
 https://dokobot.ai/zh-CN/skill

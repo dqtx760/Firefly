@@ -38,3 +38,4 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/202605101704
 - [个人色彩诊断报告图](https://x.com/MrLarus/status/2049043423173181533)
 - [形象商业海报](https://x.com/AwakeningBear01/status/2052244790461571554)
 - [帮做职业类证件照](https://x.com/MenglinZhao3/status/2050200293309047047)
+- [GPT提示词合集](../../Yoke/GPT提示词合集.md)

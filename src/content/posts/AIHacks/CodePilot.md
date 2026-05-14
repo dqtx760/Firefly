@@ -9,7 +9,6 @@ draft: false
 pinned: false
 image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260307140824884.webp
 ---
-
 CodePilot 是一款功能强大的 Claude 第三方客户端，近期上线的飞书桥接功能，实现了 Claude 能力与飞书生态的深度打通。完成接入配置后，你可以直接在飞书内使用 Claude 完成以下场景的工作：
 
 - 无需切换客户端，在飞书聊天窗口直接与 Claude 对话咨询问题

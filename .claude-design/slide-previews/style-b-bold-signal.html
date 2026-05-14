@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gsearch-cli - Bold Signal Style</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* ===========================================
+           VIEWPORT FITTING: MANDATORY BASE STYLES
+           =========================================== */
+        html, body {
+            height: 100%;
+            overflow-x: hidden;
+        }
+        html {
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+        }
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            height: 100dvh;
+            overflow: hidden;
+            scroll-snap-align: start;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        .slide-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-height: 100%;
+            overflow: hidden;
+            padding: var(--slide-padding);
+        }
+        :root {
+            --title-size: clamp(1.5rem, 5vw, 4rem);
+            --h2-size: clamp(1.25rem, 3.5vw, 2.5rem);
+            --body-size: clamp(0.75rem, 1.5vw, 1.125rem);
+            --slide-padding: clamp(1rem, 4vw, 4rem);
+            --content-gap: clamp(0.5rem, 2vw, 2rem);
+        }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.2s !important;
+            }
+            html { scroll-behavior: auto; }
+        }
+
+        /* ===========================================
+           BOLD SIGNAL THEME
+           Confident, bold, modern, high-impact
+           =========================================== */
+        :root {
+            --bg-primary: #1a1a1a;
+            --bg-gradient: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+            --card-bg: #FF5722;
+            --text-primary: #ffffff;
+            --text-on-card: #1a1a1a;
+            --font-display: 'Archivo Black', sans-serif;
+            --font-body: 'Space Grotesk', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--bg-gradient);
+            color: var(--text-primary);
+        }
+
+        /* Section number decoration */
+        .slide-number {
+            position: absolute;
+            top: var(--slide-padding);
+            left: var(--slide-padding);
+            font-family: var(--font-display);
+            font-size: clamp(3rem, 10vw, 8rem);
+            opacity: 0.1;
+            line-height: 1;
+        }
+
+        /* Bold accent card */
+        .accent-card {
+            background: var(--card-bg);
+            color: var(--text-on-card);
+            padding: clamp(1.5rem, 4vw, 3rem) clamp(2rem, 5vw, 4rem);
+            border-radius: 4px;
+            position: relative;
+            max-width: min(85vw, 800px);
+            margin: 0 auto;
+            box-shadow: 0 20px 60px rgba(255, 87, 34, 0.3);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .slide.visible .reveal {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .slide.visible .reveal:nth-child(1) { transition-delay: 0.15s; }
+        .slide.visible .reveal:nth-child(2) { transition-delay: 0.35s; }
+        .slide.visible .reveal:nth-child(3) { transition-delay: 0.55s; }
+
+        h1 {
+            font-family: var(--font-display);
+            font-size: var(--title-size);
+            line-height: 1.1;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+        }
+
+        .subtitle {
+            font-size: var(--body-size);
+            font-weight: 500;
+            opacity: 0.9;
+            margin-top: var(--element-gap);
+        }
+
+        .tag {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.1);
+            padding: clamp(4px, 0.5vw, 8px) clamp(12px, 1.5vw, 20px);
+            border-radius: 100px;
+            font-size: var(--small-size);
+            font-weight: 500;
+            margin-bottom: clamp(1rem, 2vw, 1.5rem);
+        }
+
+        .grid-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <section class="slide visible">
+        <div class="grid-bg"></div>
+        <div class="slide-number">01</div>
+        <div class="slide-content" style="align-items: center; text-align: center;">
+            <div class="accent-card reveal">
+                <div class="tag reveal">RUST • CLI • GOOGLE SEARCH</div>
+                <h1 class="reveal">gsearch-cli</h1>
+                <p class="subtitle reveal">给 AI Agent 装上谷歌搜索能力</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('.slide').classList.add('visible');
+        });
+    </script>
+</body>
+</html>

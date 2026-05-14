@@ -5,6 +5,7 @@ tags: [AI Agent, iOS, 效率工具]
 category: AIHacks
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260512163703973.webp
 ---
 在电脑上用 Agents 很爽，但 **Agent 能随身带在手机里，直接调用你手机的所有能力呢？**
 
