@@ -57,7 +57,7 @@ C:\Users\Administrator\AISkills\UpdateCheck\SKILL.md
 | [WorkBuddy](../posts/AIHacks/WorkBuddy.md)                                                                               | 2026-05-11 22:02 |
 | [Claude Code 窗口接管](../posts/AIHacks/Claude%20Code%20%E7%AA%97%E5%8F%A3%E6%8E%A5%E7%AE%A1.md)                             | 2026-05-10 22:47 |
 | [win安装Codex App](../posts/AIHacks/win%E5%AE%89%E8%A3%85Codex%20App.md)                                                   | 2026-05-09 22:04 |
-| [最佳 SaaS 网页设计灵感](../posts/AIHacks/%E6%9C%80%E4%BD%B3%20SaaS%20%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1%E7%81%B5%E6%84%9F.md) | 2026-05-09 01:24 |
+| [网站UI设计参考](../posts/AIHacks/网站UI设计参考.md) | 2026-05-09 01:24 |
 | [本地部署LLM&硬件参数](../posts/AIHacks/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2LLM%26%E7%A1%AC%E4%BB%B6%E5%8F%82%E6%95%B0.md)       | 2026-05-07 19:16 |
 | [X新号蹭热点的方法](../posts/AIHacks/X%E6%96%B0%E5%8F%B7%E8%B9%AD%E7%83%AD%E7%82%B9%E7%9A%84%E6%96%B9%E6%B3%95.md)               | 2026-05-07 13:47 |
 | [GPT-Image-2](../posts/AIHacks/GPT-Image-2.md)                                                                           | 2026-05-07 12:38 |

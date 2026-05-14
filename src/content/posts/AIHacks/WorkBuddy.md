@@ -1,5 +1,5 @@
 ---
-title: WorkBuddy安装使用教程
+title: WorkBuddy安装与使用
 published: 2026-05-11
 tags: []
 category: AIHacks

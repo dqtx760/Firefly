@@ -1,5 +1,5 @@
 ---
-title: 全球2000个顶级产品的设计规范
+title: 网站UI设计参考
 published: 2026-05-09
 tags: []
 category: AIHacks

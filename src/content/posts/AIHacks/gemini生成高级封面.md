@@ -1,11 +1,11 @@
 ---
-title: gemini生成高级封面
+title: 高颜值封面Gem
 published: 2026-05-12
 tags: []
 category: AIHacks
 draft: false
 pinned: false
-image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260512005937832.webp
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260512011936477.webp
 ---
 最近在推特上找封面相关的提示词，偶然刷到极客杰尼老师的文章，我再整理一下，
 

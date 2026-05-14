@@ -1,5 +1,5 @@
 ---
-title: Codex 接入国产大模
+title: Codex App接入国产模型
 published: 2026-05-13
 description: 本地代理把 OpenAI Responses API 转成标准 Chat Completions API，Codex 桌面端可以直接用 DeepSeek、智谱 GLM、Kimi、通义千问、豆包。
 tags:

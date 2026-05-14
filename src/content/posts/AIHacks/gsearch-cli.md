@@ -1,5 +1,5 @@
 ---
-title: Google搜索CLI：给AI Agent装上谷歌搜索能力
+title: Gsearch-cli实现Agent调用谷歌
 published: 2026-05-14
 tags:
   - CLI
