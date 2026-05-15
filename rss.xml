@@ -299,6 +299,11 @@
 &lt;td&gt;开源桌面 AI 操作系统&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://cowagent.ai/&quot;&gt;CowAgent&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
 &lt;td&gt;&lt;a href=&quot;https://openai.com/zh-Hans-CN/codex/&quot;&gt;Codex&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;CLI + 桌面版&lt;/td&gt;
 &lt;td&gt;OpenAI 官方编程智能体&lt;/td&gt;
@@ -333,6 +338,7 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://pinchbench.com/&quot;&gt;大模型排行榜&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://relaypulse.top/&quot;&gt;全球大模型稳定性监测&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;../../Yoke/cll%E5%B7%A5%E5%85%B7%E5%90%88%E9%9B%86.md&quot;&gt;cll工具合集&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;其他&lt;/strong&gt;&lt;/p&gt;
 &lt;table&gt;
@@ -344,6 +350,31 @@
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Obsidian cli&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;lark-cli&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;github cli&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Open CLI&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;wx-cli&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;CC Switch&lt;/td&gt;
 &lt;td&gt;统一管理你的 AI 编程 CLI 工作流&lt;/td&gt;
@@ -456,29 +487,168 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/tech-shrimp&quot;&gt;tech-shrimp&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>Diskgenius扩容C盘</title><link>https://dqtx.cc/posts/software/diskgenius%E6%89%A9%E5%AE%B9c%E7%9B%98/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/diskgenius%E6%89%A9%E5%AE%B9c%E7%9B%98/</guid><pubDate>Sat, 16 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;日常使用电脑过程中，C 盘空间告急早已成为多数用户的常见困扰，系统运行卡顿、软件安装失败、更新无法完成等一系列问题接踵而至，严重影响整机使用体验。想要高效扩充 C 盘存储空间，无需重装系统、不用复杂分区命令，借助 DiskGenius 这款实用磁盘分区工具，便能轻松完成无损扩容操作。&lt;/p&gt;
+&lt;h3&gt;Diskgenius扩容&lt;/h3&gt;
+&lt;p&gt;扩容前
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260515150349299.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;扩容后
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260515155140523.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;点击C盘，右键扩容分区&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260515150429913.webp&quot; alt=&quot;844&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;弹出对话框，需要把哪个盘的容量划给C盘，就点击哪个盘。看个人需求划盘可以是E.F
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260515150529269.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;可以拉动中间位置，调整容量，也可以在分区前部的空间输出数字。&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⚠️注意：分区前部的空间输出的数字，是不包含原有容量的。
+D 盘分区前部划出 100.00GB，并选择合并到系统 (C:)。
+合并后的C盘容量直接相加：150 GB + 100 GB = 250 GB
+调整后 D 盘的总容量会从 781.1GB 减少到 681.09GB&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;扩容后 C 盘「剩余可用空间」公式：&lt;/strong&gt;
+扩容后C盘可用空间=扩容后C盘总容量−扩容前C盘已用空间
+250-（150−12.5）=112.5 GB（实际使用中，可能会因为系统保留空间、文件系统元数据占用，有 1-5GB 的微小误差，属于正常现象）
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260515151832790.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;精简系统会提示如下&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;由于某些系统精简过度或丢失相关组件导致无法直接创建DiskGenius的Windows PE环境，此时就需要下载Windows AIK或&lt;a href=&quot;https://www.diskgenius.cn/help/windows_aik_adk_installnotes.php?Version=0A000000&amp;amp;Build=26200&amp;amp;Lang=936&quot;&gt;ADK工具&lt;/a&gt;包来完成创建Windows PE环境。&lt;strong&gt;不过ADK安装比较慢，我习惯直接安装个PE环境操作很快。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260515152359368.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;手动扩容&lt;/h3&gt;
+&lt;p&gt;适用场景：你只有一个C盘，但需要一个D盘。&lt;/p&gt;
+&lt;p&gt;压缩卷-大小（NX1024）新建简单卷-D&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://www.kdocs.cn/api/v3/office/copy/LzBiQXRKMFdqYWpuVnhscUNzZUhwSzRKU3lEWlRtSjBpMTlCY2IzendML0xNY1NvNGJuRk12SnYzUlNXOUtib3dhbFI1MVFJc284dnlnOEo5UDNGeUJ1VVpxTjdYek1HMkphdHB2SVBqNDIvMTBKT0Fnc09mZU1DVWlHZlpPOU96U2hPdnNuRklERitsdERCOHF1MnpNKy9Nc1NyNVhpTU9uUGZJR1VVY0ZMemZZN09tdkdHQkc2V0tQd2t4aC82dGNHNGtaeC8vZzNrVFI5SUZFUkxRT2xiZW9Kc3dUSFFDMmN3OVNwblBpbHlLWWZ2OWtQbStXcU5Ta2QrZFlrNE9nOXdSWk9qZmpJPQ==/attach/object/ZGW2FLRAABQDY?&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;参考资料&lt;/h3&gt;
+&lt;p&gt;软件清理&lt;a href=&quot;https://qltc.lanzoue.com/i7S3e19fu89i&quot;&gt;https://qltc.lanzoue.com/i7S3e19fu89i&lt;/a&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.uy5.net/diskgenius/&quot;&gt;软件下载&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.bilibili.com/video/BV1AY4y1Y7wB/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=206031f494850e57fd6c92ace02b1bed&quot;&gt;操作教程&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</content:encoded></item><item><title>飞书开源CLI工具45天获万星</title><link>https://dqtx.cc/posts/aihacks/%E9%A3%9E%E4%B9%A6%E5%BC%80%E6%BA%90cli/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E9%A3%9E%E4%B9%A6%E5%BC%80%E6%BA%90cli/</guid><pubDate>Fri, 15 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;让人类和 AI Agent 都能在终端中操作飞书。覆盖消息、文档、多维表格、电子表格、幻灯片、日历、邮箱、任务、会议、Markdown 等核心业务域，提供 200+ 命令及 24 个 AI Agent &lt;a href=&quot;https://github.com/larksuite/cli/blob/main/skills&quot;&gt;Skills&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;项目地址
+https://github.com/larksuite/cli&lt;/p&gt;
+&lt;h3&gt;安装与配置&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;第 1 步 — 安装&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm install -g @larksuite/cli
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;第 2 步 — 配置应用凭证&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在后台运行此命令，命令会输出一个授权链接，提取该链接并发送给用户，用户在浏览器中完成配置后命令会自动退出。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;lark-cli config init --new
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;第 3 步 — 交互式登录&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;同上，后台运行，提取授权链接发给用户。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;lark-cli auth login
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260516004325433.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第 4 步 — 验证&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;lark-cli auth status
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;完整文档参考：
+https://github.com/larksuite/cli/blob/main/README.zh.md&lt;/p&gt;
+&lt;h3&gt;在Claude code使用&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;消息与沟通&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&quot;帮我搜下云文档里关于 XX 的文档&quot;&lt;/li&gt;
+&lt;li&gt;&quot;帮我搜下飞书技术笔记知识库里关于chrome的文档&quot;&lt;/li&gt;
+&lt;li&gt;&quot;给张三发送消息：明天的会议取消&quot;&lt;/li&gt;
+&lt;li&gt;&quot;查看我最近未读的消息&quot;&lt;/li&gt;
+&lt;li&gt;&quot;在某某群聊里发一条消息：本周五下午3点团建&quot;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;文档操作&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&quot;帮我创建一篇飞书文档&quot;&lt;/li&gt;
+&lt;li&gt;&quot;在飞书文档里插入这张图&quot;&lt;/li&gt;
+&lt;li&gt;&quot;帮我搜索所有包含&apos;项目计划&apos;的文档&quot;&lt;/li&gt;
+&lt;li&gt;&quot;把这段内容追加到我的笔记文档里&quot;&lt;/li&gt;
+&lt;li&gt;&quot;创建一个多维表格，包含姓名、部门、入职时间三个字段&quot;&lt;/li&gt;
+&lt;li&gt;&quot;读取我昨天创建的文档内容&quot;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;日程管理&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&quot;查下我今天的日程&quot;&lt;/li&gt;
+&lt;li&gt;&quot;明天下午3点帮我安排一个会议，参与人：张三、李四&quot;&lt;/li&gt;
+&lt;li&gt;&quot;查看本周所有的会议安排&quot;&lt;/li&gt;
+&lt;li&gt;&quot;取消后天的产品评审会议&quot;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;文件与云盘&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&quot;把这份PDF上传到我的云盘&quot;&lt;/li&gt;
+&lt;li&gt;&quot;在云盘搜索文件名包含&apos;报告&apos;的文件&quot;&lt;/li&gt;
+&lt;li&gt;&quot;创建一个共享文件夹，名字叫&apos;项目资料&apos;&quot;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;任务与协作&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&quot;创建一个任务：完成Q2总结报告，截止日期本周五&quot;&lt;/li&gt;
+&lt;li&gt;&quot;查看我负责的所有进行中的任务&quot;&lt;/li&gt;
+&lt;li&gt;&quot;把这份文档分享给整个团队&quot;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;整个过程自然流畅，AI直接执行，不需要你在多个工具之间来回切换。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;实际对话示例&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;你&lt;/strong&gt;：帮我搜下飞书技术笔记知识库里关于chrome的文档&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Claude&lt;/strong&gt;：好的，我来帮你搜索... 找到了3篇相关文档：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Chrome浏览器性能优化指南&lt;/li&gt;
+&lt;li&gt;Chrome开发者工具使用技巧&lt;/li&gt;
+&lt;li&gt;Chrome扩展开发文档
+需要我打开哪一篇？&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;你&lt;/strong&gt;：创建一个多维表格，记录团队值班安排，包含日期、姓名、备注三个字段&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Claude&lt;/strong&gt;：已创建完成！表格链接：https://xxx 需要我现在帮你填充这周的值班数据吗？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;缺点当然也有：每次添加新权限需要重新授权，飞书应用的管理也需要一点学习成本。&lt;/p&gt;
+&lt;p&gt;以上，既然看到这里了，如果你觉得内容不错，随手&lt;strong&gt;点个赞、在看、转发&lt;/strong&gt;三连吧！如果想第一时间收到推送，可以给我点个星标 ⭐～&lt;/p&gt;
+&lt;p&gt;谢谢你看我的文章，我们，下次再见。&lt;/p&gt;
+</content:encoded></item><item><title>rss工具</title><link>https://dqtx.cc/posts/software/rss/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/rss/</guid><pubDate>Fri, 15 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;AI 驱动的新闻聚合_阅__读__器_。&lt;em&gt;RSS&lt;/em&gt; 订_阅_ + AI 摘要 + 全文翻译。
+https://github.com/Zoroaaa/newspulse&lt;/p&gt;
+&lt;p&gt;基于RSS的资讯聚合工作台
+https://github.com/shawnxie94/infinitum&lt;/p&gt;
+&lt;p&gt;基于 GitHub Actions 和 Playwright 的全自动晨读 RSS 生成器，提供深度 DOM 清洗与纯净阅读排版。
+https://github.com/ALLCAPS-Droid/DailyRead&lt;/p&gt;
+&lt;p&gt;这里有一份 92 个 RSS 源的列表，都是 2025 年在 Hacker News 上最受欢迎的博客：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://gist.github.com/emschwartz/e6d2bf860ccc367fe37ff953ba6de66b&quot;&gt;https://gist.github.com/emschwartz/e6d2bf860ccc367fe37ff953ba6de66b&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://pingfanfan.github.io/AK-RSS/&quot;&gt;AK 信号台&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;提供长期稳定可用的微信公众号RSS服务
+https://wechat2rss.xlab.app/deploy/
+https://cky2005.github.io/RSS/&lt;/p&gt;
+&lt;p&gt;Telegram机器人，指定twitter ID，自动抓取推特消息并翻译成中文发给自己的Telegram账号。
+https://github.com/joeseesun/AIGC_Telegram_Bot/tree/main&lt;/p&gt;
+&lt;p&gt;推荐 10 个网页端 RSS 阅读器，目前在用第一个
+https://xiaoshuapp.com/blog/posts/10-web-rss-reader.html&lt;/p&gt;
+&lt;p&gt;karpathy大佬推荐的 RSS 优质信息源列表&lt;/p&gt;
 </content:encoded></item><item><title>Gemini cli 登录异常解法</title><link>https://dqtx.cc/posts/aihacks/gemini-cli-%E7%99%BB%E5%BD%95%E5%BC%82%E5%B8%B8%E8%A7%A3%E6%B3%95/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/gemini-cli-%E7%99%BB%E5%BD%95%E5%BC%82%E5%B8%B8%E8%A7%A3%E6%B3%95/</guid><pubDate>Thu, 14 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;事情是这样的。&lt;/p&gt;
 &lt;p&gt;今天下午，有个项目要用到 Gemini CLI，我想着那就登一下吧，反正之前也用过。&lt;/p&gt;
 &lt;p&gt;结果终端输完命令，点完授权，跳完浏览器，回到终端。&lt;/p&gt;
 &lt;p&gt;就给我看这个。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260514173105947.webp&quot; alt=&quot;844&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;嗯？&lt;/p&gt;
-&lt;p&gt;什么情况？&lt;/p&gt;
-&lt;p&gt;我以为是网络波动，重试了两次，还是一样。&lt;/p&gt;
+&lt;h3&gt;全网都在教你调代理&lt;/h3&gt;
+&lt;p&gt;嗯？什么情况？我以为是网络波动，重试了两次，还是一样。&lt;/p&gt;
 &lt;p&gt;于是我去搜了一下，好家伙，一搜才发现，这个问题已经爆了快一个月了。整个中文互联网搜 gemini cli 登不上，出来的帖子能翻十几页，从 CSDN 到知乎到 GitHub Issue，所有人都在骂。&lt;/p&gt;
 &lt;p&gt;然后你猜所有人给出的解决方案是什么？&lt;/p&gt;
-&lt;p&gt;清一色，检查代理。&lt;/p&gt;
-&lt;p&gt;什么检查环境变量啊，什么给 PowerShell 单独设置 WinHTTP 代理啊，什么用 proxychains 啊，还有说要在环境变量里配置谷歌云项目 ID 的。&lt;/p&gt;
+&lt;p&gt;清一色，检查代理。什么检查环境变量啊，&lt;/p&gt;
+&lt;p&gt;什么给 PowerShell 单独设置 WinHTTP 代理啊，什么用 proxychains 啊，还有说要在环境变量里配置谷歌云项目 ID 的。&lt;/p&gt;
 &lt;p&gt;我当时还真信了。&lt;/p&gt;
 &lt;p&gt;于是我照着网上的教程，一步一步来。&lt;/p&gt;
-&lt;p&gt;先在 PowerShell 里敲 &lt;code&gt;netsh winhttp show proxy&lt;/code&gt;，看看代理是不是生效。&lt;/p&gt;
+&lt;p&gt;先在 PowerShell 里敲&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;netsh winhttp show proxy
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;看看代理是不是生效。&lt;/p&gt;
 &lt;p&gt;显示正常。&lt;/p&gt;
-&lt;p&gt;不放心，又手动设了一遍 &lt;code&gt;netsh winhttp set proxy 127.0.0.1:7890&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;不放心，又手动设了一遍&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;netsh winhttp set proxy 127.0.0.1:7890
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;然后再去登。&lt;/p&gt;
 &lt;p&gt;还是失败。&lt;/p&gt;
 &lt;p&gt;我当时就有点懵了。&lt;/p&gt;
 &lt;p&gt;我甚至把代理关了又开，开了又关，节点换了好几个，从香港换到新加坡换到日本，甚至试了美国原生家宽。&lt;/p&gt;
 &lt;p&gt;没用，就是登不上。&lt;/p&gt;
 &lt;p&gt;。。。&lt;/p&gt;
+&lt;h3&gt;真正的原因，被所有人忽略了&lt;/h3&gt;
 &lt;p&gt;这个时候我突然想起一件事。&lt;/p&gt;
 &lt;p&gt;大概两周前，我发现 Google AI Studio 打不开了，浏览器里直接 403，当时以为是谷歌又封了什么区域，也没在意。&lt;/p&gt;
 &lt;p&gt;这两件事会不会有什么联系？&lt;/p&gt;
@@ -500,6 +670,7 @@
 &lt;p&gt;授权，跳转，确认。&lt;/p&gt;
 &lt;p&gt;成了。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260514205006826.webp&quot; alt=&quot;842&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;写在最后&lt;/h3&gt;
 &lt;p&gt;我当时坐在屏幕前，真的就是一声叹息。&lt;/p&gt;
 &lt;p&gt;你说这叫什么事啊。&lt;/p&gt;
 &lt;p&gt;整整一个月，整个中文互联网所有人都在教你怎么调代理，所有人都在骂谷歌的反人类网络设置。&lt;/p&gt;
@@ -519,7 +690,7 @@
 &lt;p&gt;信息差啊，朋友们。&lt;/p&gt;
 &lt;p&gt;有时候，你跟正确答案之间的距离，不是你不够努力，也不是你技术不够好。&lt;/p&gt;
 &lt;p&gt;就只是，没有人告诉你，真正的问题是什么。&lt;/p&gt;
-&lt;p&gt;以上，既然看到这里了，如果觉得不错，随手点个赞、在看、转发三连吧，如果想第一时间收到推送，也可以给我个星标⭐～&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;以上，既然看到这里了，如果觉得不错，随手点个赞、在看、转发三连吧，如果想第一时间收到推送，也可以给我个星标⭐～&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;谢谢你看我的文章，我们，下次再见。&lt;/p&gt;
 </content:encoded></item><item><title>Gsearch-cli实现Agent调用谷歌</title><link>https://dqtx.cc/posts/aihacks/gsearch-cli/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/gsearch-cli/</guid><pubDate>Thu, 14 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;AI Agent 不能联网真的太蛋疼了。试了五六种搜索工具，没有一个让人省心——要么要配 API Key，要么要跑后台服务，要么结果一塌糊涂。&lt;/p&gt;
 &lt;p&gt;直到发现 &lt;a href=&quot;https://github.com/aeroxy/gsearch-cli&quot;&gt;gsearch-cli&lt;/a&gt;。Rust 写的，单二进制，小得离谱，跑起来快得惊人。最妙的是它能直接复用 Gemini CLI 的 OAuth 认证，&lt;strong&gt;零配置，装完就能用&lt;/strong&gt;。&lt;/p&gt;
@@ -1276,6 +1447,16 @@ https://www.vibeui.studio/&lt;/p&gt;
 &lt;td&gt;实时检测 CPU/RAM/GPU/VRAM，结合模型数据库直接给出可运行模型及推荐量化版本&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/Andyyyy64/whichllm&quot;&gt;whichllm&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;CLI&lt;/td&gt;
+&lt;td&gt;这个工具把基准测试和硬件匹配做得像查配置表&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://x.com/berryxia/status/2054390836721553487&quot;&gt;BenchLoop&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;CLI&lt;/td&gt;
+&lt;td&gt;本地大模型进行基准测试&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
 &lt;td&gt;&lt;a href=&quot;https://github.com/random-llama/llm-capability-checker&quot;&gt;llm-capability-checker&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;gui&lt;/td&gt;
 &lt;td&gt;图形界面显示0-100分硬件评分，提供瓶颈分析，分级推荐模型|&lt;/td&gt;
@@ -1876,71 +2057,6 @@ https://github.com/zarazhangrui/beautiful-html-templates&lt;/p&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/jaywcjlove/quick-rss/issues&quot;&gt;jaywcjlove/quick-rss&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/ruanyf/weekly/issues&quot;&gt;ruanyf/weekly&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>一键推送Obsidian笔记到微信</title><link>https://dqtx.cc/posts/workflow/wechat-converter%E6%8F%92%E4%BB%B6/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/wechat-converter%E6%8F%92%E4%BB%B6/</guid><pubDate>Mon, 04 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近使用了一款叫「Wechat Converter」的 Obsidian 插件，觉得挺好用的，支持一键将 Obsidian 中的 Markdown 文档推送至微信公众号草稿箱。&lt;/p&gt;
-&lt;p&gt;但由于我网络 IP 经常变化，直接请求微信 API 会被拦截，本文将详细拆解配置代理流程，重点解决代理服务部署问题，让你顺利落地插件功能。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260504184445684.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;获取 AppID 与 AppSecret&lt;/h3&gt;
-&lt;p&gt;在&lt;strong&gt;微信开发者平台&lt;/strong&gt;获取公众号的核心凭证，用于插件与微信 API 对接：&lt;/p&gt;
-&lt;p&gt;进入「我的业务与服务 → 公众号 → 基础信息」，就可以看到「AppID」与「AppSecret」。&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h3&gt;部署 CF Worker 服务&lt;/h3&gt;
-&lt;h4&gt;第一步：创建 Cloudflare Worker&lt;/h4&gt;
-&lt;ol&gt;
-&lt;li&gt;登录 Cloudflare Dashboard。&lt;/li&gt;
-&lt;li&gt;左侧菜单 &lt;code&gt;计算&lt;/code&gt; → &lt;code&gt;Workers 和 Pages&lt;/code&gt; → &lt;code&gt;创建应用程序&lt;/code&gt; → &lt;code&gt;从 Hello World! 开始&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;为服务命名（建议命名为 &lt;code&gt;wechat-proxy&lt;/code&gt;），点击 &lt;code&gt;部署&lt;/code&gt; 部署初始版本。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr /&gt;
-&lt;h4&gt;第二步：编辑 Worker 代码&lt;/h4&gt;
-&lt;ol&gt;
-&lt;li&gt;前往此页面，点击复制 &lt;code&gt;Cloudflare Worker&lt;/code&gt; 方案的完整代理代码。&lt;/li&gt;
-&lt;li&gt;回到 Cloudflare 仪表盘，点击右上角 &lt;code&gt;编辑代码&lt;/code&gt;，&lt;code&gt;删除所有原有代码&lt;/code&gt;，粘贴复制的代码。&lt;/li&gt;
-&lt;li&gt;点击 &lt;code&gt;部署&lt;/code&gt;。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr /&gt;
-&lt;h4&gt;第三步：配置微信 IP 白名单&lt;/h4&gt;
-&lt;p&gt;你需要将 Cloudflare 的出口 IP 添加到微信公众号后台。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;登录微信公众号平台&lt;/li&gt;
-&lt;li&gt;进入 &lt;code&gt;设置与开发&lt;/code&gt; → &lt;code&gt;安全中心&lt;/code&gt; → &lt;code&gt;IP 白名单&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;复制以下 IP 列表，粘贴到输入框中并保存：&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;173.245.48.0/20
-103.21.244.0/22
-103.22.200.0/22
-103.31.4.0/22
-141.101.64.0/18
-108.162.192.0/18
-190.93.240.0/20
-188.114.96.0/20
-197.234.240.0/22
-198.41.128.0/17
-162.158.0.0/15
-104.16.0.0/13
-104.24.0.0/14
-172.64.0.0/13
-131.0.72.0/22
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;最终插件配置&lt;/h3&gt;
-&lt;p&gt;打开 Obsidian，进入本插件设置页。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;添加账号&lt;/code&gt;：填写「公众号名字」、「AppID」与「AppSecret」。&lt;/li&gt;
-&lt;li&gt;找到 &lt;code&gt;高级设置&lt;/code&gt; → &lt;code&gt;API 代理地址&lt;/code&gt;，填入你的代理 URL。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;注意事项：
-Cloudflare 的 IP 列表可能会偶发变动，若出现连接问题，请查阅 Cloudflare 官方 IP 列表，官方页面同时包含 IPv4 和 IPv6 列表，&lt;strong&gt;请仅复制 IPv4 列表&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;另外，Obsidian不要有 WebP 格式图片。如果你使用 PicList 并安装了压缩插件，图片可能会被自动转换为 WebP 格式，导致推送失败。还有就是正文中不要插入微信以外的超链接。&lt;/p&gt;
-&lt;h3&gt;相关资料&lt;/h3&gt;
-&lt;p&gt;→ Wechat Converter
-https://github.com/DavidLam-oss/obsidian-wechat-converter&lt;/p&gt;
-&lt;p&gt;→ 微信开发者平台
-https://developers.weixin.qq.com/&lt;/p&gt;
-&lt;p&gt;→ 部署替换代码
-https://xiaoweibox.top/chats/wechat-proxy.html&lt;/p&gt;
-&lt;p&gt;→ Cloudflare 官网
-https://dash.cloudflare.com/&lt;/p&gt;
-&lt;p&gt;→ Cloudflare 官方 IP 列表
-https://www.cloudflare.com/ips&lt;/p&gt;
 </content:encoded></item><item><title>网站CF加速配置指南</title><link>https://dqtx.cc/posts/technical/%E7%BD%91%E7%AB%99cf%E5%8A%A0%E9%80%9F%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E7%BD%91%E7%AB%99cf%E5%8A%A0%E9%80%9F%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/</guid><pubDate>Mon, 04 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;本文为通过 EdgeOne 部署的静态网站，提供一套完整、可直接落地的 Cloudflare（CF）优选配置方案，兼顾全球 CDN 加速、国内三网访问稳定性与安全防护，高效解决海外托管常见的延迟高、丢包问题。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260504162956507.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;一、基础 DNS 解析配置&lt;/h3&gt;
@@ -2028,6 +2144,71 @@ https://www.cloudflare.com/ips&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;nslookup www.dqtx.cc
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;解析结果若返回 Cloudflare 节点 IP，即代表 CDN 已成功启用。此时用户访问流程为「用户→CF 节点→源站」，网站访问速度、稳定性与安全性均得到全面提升。&lt;/p&gt;
+</content:encoded></item><item><title>一键推送Obsidian笔记到微信</title><link>https://dqtx.cc/posts/workflow/wechat-converter%E6%8F%92%E4%BB%B6/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/wechat-converter%E6%8F%92%E4%BB%B6/</guid><pubDate>Mon, 04 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近使用了一款叫「Wechat Converter」的 Obsidian 插件，觉得挺好用的，支持一键将 Obsidian 中的 Markdown 文档推送至微信公众号草稿箱。&lt;/p&gt;
+&lt;p&gt;但由于我网络 IP 经常变化，直接请求微信 API 会被拦截，本文将详细拆解配置代理流程，重点解决代理服务部署问题，让你顺利落地插件功能。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260504184445684.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;获取 AppID 与 AppSecret&lt;/h3&gt;
+&lt;p&gt;在&lt;strong&gt;微信开发者平台&lt;/strong&gt;获取公众号的核心凭证，用于插件与微信 API 对接：&lt;/p&gt;
+&lt;p&gt;进入「我的业务与服务 → 公众号 → 基础信息」，就可以看到「AppID」与「AppSecret」。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h3&gt;部署 CF Worker 服务&lt;/h3&gt;
+&lt;h4&gt;第一步：创建 Cloudflare Worker&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;登录 Cloudflare Dashboard。&lt;/li&gt;
+&lt;li&gt;左侧菜单 &lt;code&gt;计算&lt;/code&gt; → &lt;code&gt;Workers 和 Pages&lt;/code&gt; → &lt;code&gt;创建应用程序&lt;/code&gt; → &lt;code&gt;从 Hello World! 开始&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;为服务命名（建议命名为 &lt;code&gt;wechat-proxy&lt;/code&gt;），点击 &lt;code&gt;部署&lt;/code&gt; 部署初始版本。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;h4&gt;第二步：编辑 Worker 代码&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;前往此页面，点击复制 &lt;code&gt;Cloudflare Worker&lt;/code&gt; 方案的完整代理代码。&lt;/li&gt;
+&lt;li&gt;回到 Cloudflare 仪表盘，点击右上角 &lt;code&gt;编辑代码&lt;/code&gt;，&lt;code&gt;删除所有原有代码&lt;/code&gt;，粘贴复制的代码。&lt;/li&gt;
+&lt;li&gt;点击 &lt;code&gt;部署&lt;/code&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;h4&gt;第三步：配置微信 IP 白名单&lt;/h4&gt;
+&lt;p&gt;你需要将 Cloudflare 的出口 IP 添加到微信公众号后台。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;登录微信公众号平台&lt;/li&gt;
+&lt;li&gt;进入 &lt;code&gt;设置与开发&lt;/code&gt; → &lt;code&gt;安全中心&lt;/code&gt; → &lt;code&gt;IP 白名单&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;复制以下 IP 列表，粘贴到输入框中并保存：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;173.245.48.0/20
+103.21.244.0/22
+103.22.200.0/22
+103.31.4.0/22
+141.101.64.0/18
+108.162.192.0/18
+190.93.240.0/20
+188.114.96.0/20
+197.234.240.0/22
+198.41.128.0/17
+162.158.0.0/15
+104.16.0.0/13
+104.24.0.0/14
+172.64.0.0/13
+131.0.72.0/22
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;最终插件配置&lt;/h3&gt;
+&lt;p&gt;打开 Obsidian，进入本插件设置页。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;添加账号&lt;/code&gt;：填写「公众号名字」、「AppID」与「AppSecret」。&lt;/li&gt;
+&lt;li&gt;找到 &lt;code&gt;高级设置&lt;/code&gt; → &lt;code&gt;API 代理地址&lt;/code&gt;，填入你的代理 URL。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;注意事项：
+Cloudflare 的 IP 列表可能会偶发变动，若出现连接问题，请查阅 Cloudflare 官方 IP 列表，官方页面同时包含 IPv4 和 IPv6 列表，&lt;strong&gt;请仅复制 IPv4 列表&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;另外，Obsidian不要有 WebP 格式图片。如果你使用 PicList 并安装了压缩插件，图片可能会被自动转换为 WebP 格式，导致推送失败。还有就是正文中不要插入微信以外的超链接。&lt;/p&gt;
+&lt;h3&gt;相关资料&lt;/h3&gt;
+&lt;p&gt;→ Wechat Converter
+https://github.com/DavidLam-oss/obsidian-wechat-converter&lt;/p&gt;
+&lt;p&gt;→ 微信开发者平台
+https://developers.weixin.qq.com/&lt;/p&gt;
+&lt;p&gt;→ 部署替换代码
+https://xiaoweibox.top/chats/wechat-proxy.html&lt;/p&gt;
+&lt;p&gt;→ Cloudflare 官网
+https://dash.cloudflare.com/&lt;/p&gt;
+&lt;p&gt;→ Cloudflare 官方 IP 列表
+https://www.cloudflare.com/ips&lt;/p&gt;
 </content:encoded></item><item><title>Kami：专业排版技能</title><link>https://dqtx.cc/posts/aihacks/kami/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/kami/</guid><pubDate>Sun, 03 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;AI生成文档最大的问题不是内容差，而是排版千篇一律的灰色平庸。&lt;/p&gt;
 &lt;p&gt;Kami（紙）是一个面向AI Agent的文档排版设计系统，用一套约束语言让每份输出都像专业印刷品。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;项目地址&lt;/strong&gt;：https://github.com/tw93/kami&lt;/p&gt;
@@ -2121,29 +2302,48 @@ https://platform.xiaomimimo.com?ref=V4B9NJ&lt;/p&gt;
 &lt;li&gt;https://logseq.com/&lt;/li&gt;
 &lt;li&gt;https://obsidian.md/zh/&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>一键内容同步N媒体平台</title><link>https://dqtx.cc/posts/software/%E4%B8%80%E9%94%AE%E5%86%85%E5%AE%B9%E5%90%8C%E6%AD%A5n%E5%AA%92%E4%BD%93%E5%B9%B3%E5%8F%B0/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E4%B8%80%E9%94%AE%E5%86%85%E5%AE%B9%E5%90%8C%E6%AD%A5n%E5%AA%92%E4%BD%93%E5%B9%B3%E5%8F%B0/</guid><pubDate>Fri, 01 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天想跟大家分享四款内容同步的 Chrome 插件。&lt;/p&gt;
+</content:encoded></item><item><title>一键内容同步N媒体平台</title><link>https://dqtx.cc/posts/software/%E4%B8%80%E9%94%AE%E5%86%85%E5%AE%B9%E5%90%8C%E6%AD%A5n%E5%AA%92%E4%BD%93%E5%B9%B3%E5%8F%B0/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E4%B8%80%E9%94%AE%E5%86%85%E5%AE%B9%E5%90%8C%E6%AD%A5n%E5%AA%92%E4%BD%93%E5%B9%B3%E5%8F%B0/</guid><pubDate>Fri, 01 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天想跟大家分享几款内容同步的 Chrome 插件。&lt;/p&gt;
 &lt;hr /&gt;
-&lt;h3&gt;1. WechatSync&lt;/h3&gt;
+&lt;h3&gt;WechatSync-文章&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：仅针对文章同步，免费开源，无需注册&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;链接&lt;/strong&gt;：&lt;a href=&quot;https://github.com/wechatsync/Wechatsync&quot;&gt;GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;https://www.wechatsync.com/?utm_source=github_info
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260515171433575.webp&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;2. Postbot&lt;/h3&gt;
+&lt;h3&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/%E7%88%B1%E8%B4%9D%E5%A3%B3%E5%86%85%E5%AE%B9%E5%90%8C%E6%AD%A5%E5%8A%A9%E6%89%8B/jejejajkcbhejfiocemmddgbkdlhhngm?hl=zh-CN&amp;amp;utm_source=ext_sidebar&quot;&gt;爱贝壳内容同步助手&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：需注册登录，且需邀请码&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;链接&lt;/strong&gt;：&lt;a href=&quot;https://github.com/gitcoffee-os/postbot&quot;&gt;GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：非会员每天限同步 3 个平台、限 3 次使用；付费不限制，年费约 95 元&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;购买&lt;/strong&gt;：&lt;a href=&quot;https://lizhi.shop/products/aibeike-post-sync-assistant?cid=wbm93g4b&quot;&gt;点此购买&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;3. MultiPost&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;chrome-extension://jejejajkcbhejfiocemmddgbkdlhhngm/options.html
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260515170836495.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/%E4%BA%91%E8%AF%B4%E5%86%85%E5%AE%B9%E5%90%8C%E6%AD%A5%E5%8A%A9%E6%89%8B/nmabnfdflkbedckkibcfpijaaiolglad?hl=zh-CN&amp;amp;utm_source=ext_sidebar&quot;&gt;云说内容同步助手&lt;/a&gt;--视频&lt;/h3&gt;
+&lt;p&gt;chrome-extension://nmabnfdflkbedckkibcfpijaaiolglad/options.html
+免费方案：每天最多使用 2 次同步功能 每次最多同步到 2 个平台
+会员方案：&lt;a href=&quot;https://newcloud.fun/vip/&quot;&gt;点此购买&lt;/a&gt;  88/年
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260515170101833.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;MultiPost&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：支持文章与视频同步，注册即送 $0.5，GitHub 登录额外赠送 $1&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;链接&lt;/strong&gt;：&lt;a href=&quot;https://github.com/leaperone/MultiPost-Extension&quot;&gt;GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;https://multipost.app/&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;4. 爱贝壳内容同步助手&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260515171109763.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;Postbot&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：非会员每天限同步 3 个平台、限 3 次使用；付费不限制，年费约 90 元&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;购买&lt;/strong&gt;：&lt;a href=&quot;https://lizhi.shop/products/aibeike-post-sync-assistant?cid=wbm93g4b&quot;&gt;点此购买&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：需注册登录，且需邀请码 邀请码需要帮宣传获取&lt;a href=&quot;https://postbot.exmay.com/docs/usergroup&quot;&gt;参照&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;链接&lt;/strong&gt;：&lt;a href=&quot;https://github.com/gitcoffee-os/postbot&quot;&gt;GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;注册地址：https://postbot.exmay.com/exmay/ums/account/register&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260501153650839.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260515172614044.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;COSE - 多平台文章同步&lt;/h3&gt;
+&lt;p&gt;https://chromewebstore.google.com/detail/cose-%E5%A4%9A%E5%B9%B3%E5%8F%B0%E6%96%87%E7%AB%A0%E5%90%8C%E6%AD%A5/ilhikcdphhpjofhlnbojifbihhfmmhfk?hl=zh-CN&amp;amp;utm_source=ext_sidebar&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;https://md.doocs.org/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260515170816697.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 </content:encoded></item><item><title>HyperFrames：用HTML写视频框架</title><link>https://dqtx.cc/posts/aihacks/hyperframes%E7%94%9F%E6%88%90%E8%A7%86%E9%A2%91/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/hyperframes%E7%94%9F%E6%88%90%E8%A7%86%E9%A2%91/</guid><pubDate>Thu, 30 Apr 2026 16:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;引言&lt;/h3&gt;
 &lt;p&gt;做短视频最烦的是什么？写文案、找素材、调时间轴、配音乐、导出……每一步都是手动操作。&lt;/p&gt;
 &lt;p&gt;今天分享一个骚操作：&lt;strong&gt;直接丢一篇 Markdown 文章给 Claude Code，它自动帮你生成一个带动画、配乐的视频 MP4 文件。&lt;/strong&gt;&lt;/p&gt;
@@ -4036,6 +4236,74 @@ cd C:\Users\Administrator\AISkills
 &lt;/ol&gt;
 &lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;参考资料&lt;/strong&gt;：&lt;a href=&quot;https://mp.weixin.qq.com/s/XWS97jr_PwcbbmKkZVqbyw&quot;&gt;点此查看&lt;/a&gt;&lt;/p&gt;
+</content:encoded></item><item><title>我push博客时泄露了API</title><link>https://dqtx.cc/posts/technical/push%E6%B3%84%E9%9C%B2api/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/push%E6%B3%84%E9%9C%B2api/</guid><pubDate>Tue, 21 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天在推送 &lt;code&gt;fuwari&lt;/code&gt; 博客仓库到 GitHub 时，遭遇了一个意料之外但又在情理之中的拦截。GitHub 直接拒绝了我的推送，提示发现了「Secret（密钥）」泄露。经过排查和修复，两个仓库的 API Token 泄露风险已解除。写下这篇文章，既是复盘，也是给有类似经历的朋友一个参考。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260421233006929.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;事件回顾&lt;/h2&gt;
+&lt;p&gt;像往常一样，我在 Obsidian 中写完一篇博客后，执行 &lt;code&gt;git push&lt;/code&gt; 准备推送到 GitHub。然而这次推送失败了，错误信息如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;remote: error: GH013: Repository rule violations found for refs/heads/main.
+remote:
+remote: - Push cannot contain secrets
+remote:
+remote:  — Notion API Token ——————————————————————————————————
+remote:    locations:
+remote:      - commit: 25f1c5df1c410ba48f6890a8961371de5cf6cef8
+remote:        path: src/content/.obsidian/plugins/share-to-notionnext/data.json:29
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;GitHub 的 &lt;strong&gt;Push Protection（推送保护）&lt;/strong&gt; 功能检测到了我的 Notion API Token 泄露。问题出在 Obsidian 插件 &lt;code&gt;Share to NotionNext&lt;/code&gt; 的配置文件 &lt;code&gt;data.json&lt;/code&gt; 中，我配置了 Notion 的 API 密钥，而这个文件被 Git 跟踪并推送到了远程仓库。&lt;/p&gt;
+&lt;p&gt;有趣的是，同步排查另一个仓库 &lt;code&gt;zhishiku&lt;/code&gt; 时，我发现它虽然也安装了同样的插件、同样包含 API Token，却没有被拦截。这可能是因为 Token 格式（&lt;code&gt;ntn_&lt;/code&gt; 开头）的识别率不同，或者该仓库的 Push Protection 设置没有 fuwari 那么严格。但不管怎样，这确实是一个安全隐患。&lt;/p&gt;
+&lt;h2&gt;问题根因&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;为什么 API Token 会泄露到 GitHub？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;核心原因是：&lt;strong&gt;Obsidian 的 &lt;code&gt;.obsidian&lt;/code&gt; 目录被 Git 跟踪了。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;.obsidian&lt;/code&gt; 是 Obsidian 的配置目录，里面包含了插件配置、主题设置、工作区状态等信息。当我们安装像 &lt;code&gt;Share to NotionNext&lt;/code&gt; 这类需要 API 密钥的插件时，插件会把配置（包括 Token）保存在 &lt;code&gt;data.json&lt;/code&gt; 文件中。如果这个目录被 Git 跟踪，每次推送都会把这些敏感信息一起送到远程仓库。&lt;/p&gt;
+&lt;p&gt;GitHub 提供了 Secret Scanning（密钥扫描）功能，会自动扫描推送的内容，识别常见的密钥格式（如 AWS Key、Notion Token、OpenAI API Key 等），发现后会拦截推送并通知开发者。这就是为什么 fuwari 仓库被拦截的原因。&lt;/p&gt;
+&lt;h2&gt;解决方案&lt;/h2&gt;
+&lt;h3&gt;方案一：修改 .gitignore（推荐）&lt;/h3&gt;
+&lt;p&gt;最简单有效的方案是把 &lt;code&gt;.obsidian/&lt;/code&gt; 目录加入 &lt;code&gt;.gitignore&lt;/code&gt;，让 Git 忽略这个目录。具体步骤如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;在项目根目录的 &lt;code&gt;.gitignore&lt;/code&gt; 文件中添加：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.obsidian/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;从 Git 跟踪中移除已存在的 &lt;code&gt;.obsidian&lt;/code&gt; 目录：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git rm --cached -r .obsidian/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;提交并推送：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git add .gitignore
+git commit -m &quot;chore: ignore .obsidian directory&quot;
+git push
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这样操作后，&lt;code&gt;.obsidian&lt;/code&gt; 目录会保留在本地，但不会被 Git 跟踪，API Token 也就不会再泄露了。&lt;/p&gt;
+&lt;h3&gt;方案二：清理 Git 历史&lt;/h3&gt;
+&lt;p&gt;如果已经推送了包含 Token 的提交，需要从 Git 历史中彻底删除它。可以使用 &lt;code&gt;git filter-repo&lt;/code&gt; 工具：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# 安装工具
+pip install git-filter-repo
+
+# 从历史中移除指定文件
+git filter-repo --path .obsidian/plugins/share-to-notionnext/data.json --invert-paths --force
+
+# 重新添加 remote 并推送
+git remote add origin your-repo-url
+git push --force
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;注意：这种方法会重写 Git 历史，如果与其他开发者共享仓库，需要协调好。&lt;/p&gt;
+&lt;h3&gt;方案三：轮换 API Token&lt;/h3&gt;
+&lt;p&gt;无论采用哪种方案，都建议&lt;strong&gt;重新生成 API Token&lt;/strong&gt;。即使已经修复了泄露问题，旧的 Token 可能已经在某个时刻被恶意获取。前往相关服务的设置页面（如 Notion 集成设置）生成新的密钥，并更新本地配置。&lt;/p&gt;
+&lt;h2&gt;经验总结&lt;/h2&gt;
+&lt;p&gt;这次事件虽然是个「事故」，但也带来了几点有价值的思考：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第一，敏感配置一定要排除在 Git 跟踪之外。&lt;/strong&gt; 不只是 &lt;code&gt;.obsidian&lt;/code&gt;，任何包含 API Key、Token、密码的文件都应该加入 &lt;code&gt;.gitignore&lt;/code&gt;。常见的包括 &lt;code&gt;.env&lt;/code&gt;、&lt;code&gt;.env.local&lt;/code&gt;、&lt;code&gt;config/secrets.json&lt;/code&gt; 等。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第二，GitHub 的 Push Protection 是最后一道防线，而非第一道。&lt;/strong&gt; 这次能被拦截是幸运的，说明 GitHub 的密钥扫描确实在起作用。但并非所有格式的密钥都能被识别，这次 &lt;code&gt;zhishiku&lt;/code&gt; 仓库的 Token 就漏过了扫描。所以不能依赖 GitHub 的保护，自己做好防范才是根本。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第三，本地配置不影响使用。&lt;/strong&gt; 很多人担心忽略 &lt;code&gt;.obsidian&lt;/code&gt; 后会影响 Obsidian 的功能。实际上 &lt;code&gt;.gitignore&lt;/code&gt; 只是阻止 Git 跟踪，不影响文件的本地存在和使用。插件配置会正常读取本地文件，只是不会同步到远程仓库。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第四，定期排查仓库安全。&lt;/strong&gt; 建议定期检查自己的仓库是否有敏感信息泄露，可以用 GitHub 的「Secret scanning alerts」功能查看已泄露的密钥（如果有的话）。&lt;/p&gt;
+&lt;h2&gt;附：两个仓库的修复记录&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260422222241120.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;修复完成后，两个仓库都安全了，以后再也不用担心 API Token 泄露的问题。&lt;/p&gt;
+&lt;p&gt;文章来源：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;  远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/p&gt;
 </content:encoded></item><item><title>Obsidian 同步 Notion 神插件</title><link>https://dqtx.cc/posts/workflow/ob%E5%90%8C%E6%AD%A5notion%E6%8F%92%E4%BB%B6/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/ob%E5%90%8C%E6%AD%A5notion%E6%8F%92%E4%BB%B6/</guid><pubDate>Tue, 21 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;我最近发现了一个超好用的 Obsidian 神器，叫 Share to NotionNext！&lt;/p&gt;
 &lt;p&gt;可以直接把Obsidian里的Markdown同步到Notion数据库，还能自动生成NotionNext博客，告别复制粘贴、排版错乱，一篇文章秒发博客。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260421200259532.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
@@ -4139,74 +4407,6 @@ https://v.douyin.com/4K4Njgxq0Oc/&lt;/p&gt;
 https://mp.weixin.qq.com/s/kPjIpHmzciWY8_3ettEVsg&lt;/p&gt;
 &lt;p&gt;→NotionNext帮助手册：
 https://docs.tangly1024.com/about&lt;/p&gt;
-</content:encoded></item><item><title>我push博客时泄露了API</title><link>https://dqtx.cc/posts/technical/push%E6%B3%84%E9%9C%B2api/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/push%E6%B3%84%E9%9C%B2api/</guid><pubDate>Tue, 21 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天在推送 &lt;code&gt;fuwari&lt;/code&gt; 博客仓库到 GitHub 时，遭遇了一个意料之外但又在情理之中的拦截。GitHub 直接拒绝了我的推送，提示发现了「Secret（密钥）」泄露。经过排查和修复，两个仓库的 API Token 泄露风险已解除。写下这篇文章，既是复盘，也是给有类似经历的朋友一个参考。
-&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260421233006929.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;事件回顾&lt;/h2&gt;
-&lt;p&gt;像往常一样，我在 Obsidian 中写完一篇博客后，执行 &lt;code&gt;git push&lt;/code&gt; 准备推送到 GitHub。然而这次推送失败了，错误信息如下：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;remote: error: GH013: Repository rule violations found for refs/heads/main.
-remote:
-remote: - Push cannot contain secrets
-remote:
-remote:  — Notion API Token ——————————————————————————————————
-remote:    locations:
-remote:      - commit: 25f1c5df1c410ba48f6890a8961371de5cf6cef8
-remote:        path: src/content/.obsidian/plugins/share-to-notionnext/data.json:29
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;GitHub 的 &lt;strong&gt;Push Protection（推送保护）&lt;/strong&gt; 功能检测到了我的 Notion API Token 泄露。问题出在 Obsidian 插件 &lt;code&gt;Share to NotionNext&lt;/code&gt; 的配置文件 &lt;code&gt;data.json&lt;/code&gt; 中，我配置了 Notion 的 API 密钥，而这个文件被 Git 跟踪并推送到了远程仓库。&lt;/p&gt;
-&lt;p&gt;有趣的是，同步排查另一个仓库 &lt;code&gt;zhishiku&lt;/code&gt; 时，我发现它虽然也安装了同样的插件、同样包含 API Token，却没有被拦截。这可能是因为 Token 格式（&lt;code&gt;ntn_&lt;/code&gt; 开头）的识别率不同，或者该仓库的 Push Protection 设置没有 fuwari 那么严格。但不管怎样，这确实是一个安全隐患。&lt;/p&gt;
-&lt;h2&gt;问题根因&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;为什么 API Token 会泄露到 GitHub？&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;核心原因是：&lt;strong&gt;Obsidian 的 &lt;code&gt;.obsidian&lt;/code&gt; 目录被 Git 跟踪了。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;.obsidian&lt;/code&gt; 是 Obsidian 的配置目录，里面包含了插件配置、主题设置、工作区状态等信息。当我们安装像 &lt;code&gt;Share to NotionNext&lt;/code&gt; 这类需要 API 密钥的插件时，插件会把配置（包括 Token）保存在 &lt;code&gt;data.json&lt;/code&gt; 文件中。如果这个目录被 Git 跟踪，每次推送都会把这些敏感信息一起送到远程仓库。&lt;/p&gt;
-&lt;p&gt;GitHub 提供了 Secret Scanning（密钥扫描）功能，会自动扫描推送的内容，识别常见的密钥格式（如 AWS Key、Notion Token、OpenAI API Key 等），发现后会拦截推送并通知开发者。这就是为什么 fuwari 仓库被拦截的原因。&lt;/p&gt;
-&lt;h2&gt;解决方案&lt;/h2&gt;
-&lt;h3&gt;方案一：修改 .gitignore（推荐）&lt;/h3&gt;
-&lt;p&gt;最简单有效的方案是把 &lt;code&gt;.obsidian/&lt;/code&gt; 目录加入 &lt;code&gt;.gitignore&lt;/code&gt;，让 Git 忽略这个目录。具体步骤如下：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;在项目根目录的 &lt;code&gt;.gitignore&lt;/code&gt; 文件中添加：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;.obsidian/
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;从 Git 跟踪中移除已存在的 &lt;code&gt;.obsidian&lt;/code&gt; 目录：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;git rm --cached -r .obsidian/
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;提交并推送：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;git add .gitignore
-git commit -m &quot;chore: ignore .obsidian directory&quot;
-git push
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;这样操作后，&lt;code&gt;.obsidian&lt;/code&gt; 目录会保留在本地，但不会被 Git 跟踪，API Token 也就不会再泄露了。&lt;/p&gt;
-&lt;h3&gt;方案二：清理 Git 历史&lt;/h3&gt;
-&lt;p&gt;如果已经推送了包含 Token 的提交，需要从 Git 历史中彻底删除它。可以使用 &lt;code&gt;git filter-repo&lt;/code&gt; 工具：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# 安装工具
-pip install git-filter-repo
-
-# 从历史中移除指定文件
-git filter-repo --path .obsidian/plugins/share-to-notionnext/data.json --invert-paths --force
-
-# 重新添加 remote 并推送
-git remote add origin your-repo-url
-git push --force
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;注意：这种方法会重写 Git 历史，如果与其他开发者共享仓库，需要协调好。&lt;/p&gt;
-&lt;h3&gt;方案三：轮换 API Token&lt;/h3&gt;
-&lt;p&gt;无论采用哪种方案，都建议&lt;strong&gt;重新生成 API Token&lt;/strong&gt;。即使已经修复了泄露问题，旧的 Token 可能已经在某个时刻被恶意获取。前往相关服务的设置页面（如 Notion 集成设置）生成新的密钥，并更新本地配置。&lt;/p&gt;
-&lt;h2&gt;经验总结&lt;/h2&gt;
-&lt;p&gt;这次事件虽然是个「事故」，但也带来了几点有价值的思考：&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;第一，敏感配置一定要排除在 Git 跟踪之外。&lt;/strong&gt; 不只是 &lt;code&gt;.obsidian&lt;/code&gt;，任何包含 API Key、Token、密码的文件都应该加入 &lt;code&gt;.gitignore&lt;/code&gt;。常见的包括 &lt;code&gt;.env&lt;/code&gt;、&lt;code&gt;.env.local&lt;/code&gt;、&lt;code&gt;config/secrets.json&lt;/code&gt; 等。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;第二，GitHub 的 Push Protection 是最后一道防线，而非第一道。&lt;/strong&gt; 这次能被拦截是幸运的，说明 GitHub 的密钥扫描确实在起作用。但并非所有格式的密钥都能被识别，这次 &lt;code&gt;zhishiku&lt;/code&gt; 仓库的 Token 就漏过了扫描。所以不能依赖 GitHub 的保护，自己做好防范才是根本。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;第三，本地配置不影响使用。&lt;/strong&gt; 很多人担心忽略 &lt;code&gt;.obsidian&lt;/code&gt; 后会影响 Obsidian 的功能。实际上 &lt;code&gt;.gitignore&lt;/code&gt; 只是阻止 Git 跟踪，不影响文件的本地存在和使用。插件配置会正常读取本地文件，只是不会同步到远程仓库。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;第四，定期排查仓库安全。&lt;/strong&gt; 建议定期检查自己的仓库是否有敏感信息泄露，可以用 GitHub 的「Secret scanning alerts」功能查看已泄露的密钥（如果有的话）。&lt;/p&gt;
-&lt;h2&gt;附：两个仓库的修复记录&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260422222241120.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;修复完成后，两个仓库都安全了，以后再也不用担心 API Token 泄露的问题。&lt;/p&gt;
-&lt;p&gt;文章来源：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;  远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/p&gt;
 </content:encoded></item><item><title>谷歌新产品&amp;功能</title><link>https://dqtx.cc/posts/software/00google/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/00google/</guid><pubDate>Mon, 20 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这篇文章将在后续的时间里会持续更新谷歌最新推出的一些新产品，不限于各种新品或原本产品的新功能。&lt;/p&gt;
 &lt;h2&gt;产品-Google App&lt;/h2&gt;
 &lt;p&gt;Windows 版下载： &lt;strong&gt;&lt;a href=&quot;https://search.google/google-app/desktop/&quot;&gt;点击前往&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
@@ -6760,6 +6960,73 @@ opencli zhihu hot -f json       # 查看知乎热榜并以JSON格式输出
 &lt;/blockquote&gt;
 &lt;p&gt;OpenCLI 的安装非常直观，关键在于浏览器插件的桥接。一旦打通，你的终端就不再只是一个冷冰冰的控制台，而是通往整个 Web 世界的万能钥匙。&lt;/p&gt;
 &lt;p&gt;文章来源：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;  远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/p&gt;
+</content:encoded></item><item><title>Rustdesk定制编译工具</title><link>https://dqtx.cc/posts/technical/rustdesk/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/rustdesk/</guid><pubDate>Mon, 23 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;作为一名技术爱好者，偶然在闲鱼上刷到定制化的Rustdesk客户端，简洁的界面和实用的功能让我萌生了自研同款编译工具的想法。虽花费数百元向卖家请教却因对方忙碌无疾而终，但也坚定了我靠技术实现需求的决心——最终借助Codex从命令行版本起步，迭代出可视化网页面板的Rustdesk一键编译工具，现将整个开发过程与成果分享如下。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260323223059574.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;一、成品核心优势&lt;/h2&gt;
+&lt;p&gt;相较于原生Rustdesk，定制编译后的工具在使用体验上做了针对性优化：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;无感连接&lt;/strong&gt;：控制端与客户端建立连接时无感知，无需繁琐确认步骤；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;免安装特性&lt;/strong&gt;：客户端和控制端均为绿色单文件，无需安装即可运行；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;隐私化展示&lt;/strong&gt;：控制端界面隐藏设备ID，仅客户端显示ID，兼顾使用便捷性与设备安全性。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;二、开发环境准备&lt;/h2&gt;
+&lt;p&gt;为保证编译流程的稳定性和兼容性，需提前配置以下开发环境：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;脚本执行环境：PowerShell 7（推荐版本，兼容更多命令）；&lt;/li&gt;
+&lt;li&gt;主开发语言：Python 3.10+（适配第三方库及语法特性）；&lt;/li&gt;
+&lt;li&gt;底层编译依赖：Rust（通过rustup管理版本）、LLVM（clang编译器）；&lt;/li&gt;
+&lt;li&gt;依赖库管理：vcpkg（用于管理C/C++依赖库）；&lt;/li&gt;
+&lt;li&gt;代码拉取工具：Git（获取Rustdesk源码及依赖）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;三、项目结构梳理&lt;/h2&gt;
+&lt;p&gt;整个编译工具的目录结构清晰划分，便于维护和扩展：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;D:\project2026\rustdesk
+├─ tools\one_click_pack.ps1                     # 命令行版一键出包脚本（核心逻辑）
+├─ tools\pack_web_ui.py                         # 可视化网页面板核心代码
+├─ tools\start_pack_web_ui.ps1                  # 网页面板一键启动脚本
+├─ src\ui\index.tis / index.css / ab.tis        # Rustdesk UI定制化改动文件
+├─ libs\portable\generate.py                    # 便携包生成逻辑
+└─ target\release\rustdesk-portable-packer.exe  # 编译后生成的单文件打包器
+
+C:\Users\Administrator\rustdesk-build-platform\storage\artifacts
+├─ vfun-client-complete                         # 客户端打包素材（资源、配置模板等）
+└─ vfun-controller-complete                     # 控制端打包素材
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;四、编译流程解析&lt;/h2&gt;
+&lt;p&gt;整个编译过程实现全自动化，仅需输入核心参数即可生成定制化exe文件，流程如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入客户参数
+   ↓
+one_click_pack.ps1 / 网页面板
+   ↓
+生成 customer.json（client/controller）
+   ↓
+同步 UI 文件到 artifacts
+   ↓
+generate.py 打包
+   ↓
+输出 2 个 exe（客户端 + 控制端）
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;参数输入&lt;/strong&gt;：在命令行/网页面板中填写域名、公钥、品牌名称、访问密码等定制化参数；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;脚本触发&lt;/strong&gt;：执行&lt;code&gt;one_click_pack.ps1&lt;/code&gt;命令行脚本或通过网页面板触发编译；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;配置生成&lt;/strong&gt;：自动生成&lt;code&gt;customer.json&lt;/code&gt;配置文件（区分客户端/控制端参数）；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;资源同步&lt;/strong&gt;：将定制化UI文件同步到打包素材目录&lt;code&gt;artifacts&lt;/code&gt;；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;打包编译&lt;/strong&gt;：调用&lt;code&gt;generate.py&lt;/code&gt;执行便携包打包逻辑；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;成果输出&lt;/strong&gt;：最终生成2个独立exe文件（客户端+控制端）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;快速运行方式&lt;/h3&gt;
+&lt;p&gt;只需执行以下PowerShell命令，即可启动可视化网页面板：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;amp; &apos;D:\project2026\rustdesk\tools\start_pack_web_ui.ps1&apos;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;五、编译成果展示&lt;/h2&gt;
+&lt;p&gt;整个编译流程耗时约4分钟，最终输出按“品牌-类型-时间戳”命名的可执行文件，示例如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;大强同学-控制端-20260323-102318.exe&lt;/li&gt;
+&lt;li&gt;大强同学-客户端-20260323-102318.exe&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;目前该工具仅支持Windows版本的Rustdesk控制端/客户端编译，若有定制编译需求，可添加微信dqtx33交流。&lt;/p&gt;
+&lt;h2&gt;六、写在最后&lt;/h2&gt;
+&lt;p&gt;本次开发从闲鱼灵感出发，基于Python、PowerShell等技术栈实现了Rustdesk定制化编译工具，核心优化了连接体验、免安装和隐私展示三大特性；工具实现了从命令行到网页可视化面板的迭代，编译流程自动化，仅需输入核心参数即可快速生成定制化exe文件；项目结构清晰，依赖环境明确，编译耗时约4分钟，仅支持Windows版本的Rustdesk控制端/客户端编译。&lt;/p&gt;
 </content:encoded></item><item><title>NotebookLM封神指南</title><link>https://dqtx.cc/posts/workflow/notebooklm/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/notebooklm/</guid><pubDate>Mon, 23 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;在众多AI工具中，Google推出的NotebookLM正逐渐成为许多人每天离不开的“超级大脑”。简单来说，它是一个专门帮你消化大量、杂乱资料的私人助理。&lt;/p&gt;
 &lt;p&gt;与ChatGPT等依赖自身数据库或联网搜索的AI不同，NotebookLM最大的杀手锏在于**“零幻觉”**：&lt;/p&gt;
 &lt;p&gt;它只根据你上传的资料来回答问题。无论你丢给它网页、Google文档还是YouTube视频，它都能在几分钟内完成整合，并生成简报、数据表、信息图表甚至播客。&lt;/p&gt;
@@ -6911,73 +7178,6 @@ opencli zhihu hot -f json       # 查看知乎热榜并以JSON格式输出
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;写在最后&lt;/h2&gt;
 &lt;p&gt;当NotebookLM 把 1 小时的学习压缩到 15 分钟，把 3 天的调研缩短到 1 小时，效率差距已不再是努力程度，而是工具选择。从学生到科研人员，从产品经理到内容创作者，这款被《巴伦周刊》称为 “生成式 AI 杀手级应用” 的工具，正在重构知识工作的底层逻辑。现在登录 Google 账号即可免费体验，你的 10 倍效率革命，从上传第一份文档开始。&lt;/p&gt;
-</content:encoded></item><item><title>Rustdesk定制编译工具</title><link>https://dqtx.cc/posts/technical/rustdesk/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/rustdesk/</guid><pubDate>Mon, 23 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;作为一名技术爱好者，偶然在闲鱼上刷到定制化的Rustdesk客户端，简洁的界面和实用的功能让我萌生了自研同款编译工具的想法。虽花费数百元向卖家请教却因对方忙碌无疾而终，但也坚定了我靠技术实现需求的决心——最终借助Codex从命令行版本起步，迭代出可视化网页面板的Rustdesk一键编译工具，现将整个开发过程与成果分享如下。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260323223059574.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;一、成品核心优势&lt;/h2&gt;
-&lt;p&gt;相较于原生Rustdesk，定制编译后的工具在使用体验上做了针对性优化：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;无感连接&lt;/strong&gt;：控制端与客户端建立连接时无感知，无需繁琐确认步骤；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;免安装特性&lt;/strong&gt;：客户端和控制端均为绿色单文件，无需安装即可运行；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;隐私化展示&lt;/strong&gt;：控制端界面隐藏设备ID，仅客户端显示ID，兼顾使用便捷性与设备安全性。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2&gt;二、开发环境准备&lt;/h2&gt;
-&lt;p&gt;为保证编译流程的稳定性和兼容性，需提前配置以下开发环境：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;脚本执行环境：PowerShell 7（推荐版本，兼容更多命令）；&lt;/li&gt;
-&lt;li&gt;主开发语言：Python 3.10+（适配第三方库及语法特性）；&lt;/li&gt;
-&lt;li&gt;底层编译依赖：Rust（通过rustup管理版本）、LLVM（clang编译器）；&lt;/li&gt;
-&lt;li&gt;依赖库管理：vcpkg（用于管理C/C++依赖库）；&lt;/li&gt;
-&lt;li&gt;代码拉取工具：Git（获取Rustdesk源码及依赖）。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;三、项目结构梳理&lt;/h2&gt;
-&lt;p&gt;整个编译工具的目录结构清晰划分，便于维护和扩展：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;D:\project2026\rustdesk
-├─ tools\one_click_pack.ps1                     # 命令行版一键出包脚本（核心逻辑）
-├─ tools\pack_web_ui.py                         # 可视化网页面板核心代码
-├─ tools\start_pack_web_ui.ps1                  # 网页面板一键启动脚本
-├─ src\ui\index.tis / index.css / ab.tis        # Rustdesk UI定制化改动文件
-├─ libs\portable\generate.py                    # 便携包生成逻辑
-└─ target\release\rustdesk-portable-packer.exe  # 编译后生成的单文件打包器
-
-C:\Users\Administrator\rustdesk-build-platform\storage\artifacts
-├─ vfun-client-complete                         # 客户端打包素材（资源、配置模板等）
-└─ vfun-controller-complete                     # 控制端打包素材
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;四、编译流程解析&lt;/h2&gt;
-&lt;p&gt;整个编译过程实现全自动化，仅需输入核心参数即可生成定制化exe文件，流程如下：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;输入客户参数
-   ↓
-one_click_pack.ps1 / 网页面板
-   ↓
-生成 customer.json（client/controller）
-   ↓
-同步 UI 文件到 artifacts
-   ↓
-generate.py 打包
-   ↓
-输出 2 个 exe（客户端 + 控制端）
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;参数输入&lt;/strong&gt;：在命令行/网页面板中填写域名、公钥、品牌名称、访问密码等定制化参数；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;脚本触发&lt;/strong&gt;：执行&lt;code&gt;one_click_pack.ps1&lt;/code&gt;命令行脚本或通过网页面板触发编译；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;配置生成&lt;/strong&gt;：自动生成&lt;code&gt;customer.json&lt;/code&gt;配置文件（区分客户端/控制端参数）；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;资源同步&lt;/strong&gt;：将定制化UI文件同步到打包素材目录&lt;code&gt;artifacts&lt;/code&gt;；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;打包编译&lt;/strong&gt;：调用&lt;code&gt;generate.py&lt;/code&gt;执行便携包打包逻辑；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;成果输出&lt;/strong&gt;：最终生成2个独立exe文件（客户端+控制端）。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3&gt;快速运行方式&lt;/h3&gt;
-&lt;p&gt;只需执行以下PowerShell命令，即可启动可视化网页面板：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;amp; &apos;D:\project2026\rustdesk\tools\start_pack_web_ui.ps1&apos;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;五、编译成果展示&lt;/h2&gt;
-&lt;p&gt;整个编译流程耗时约4分钟，最终输出按“品牌-类型-时间戳”命名的可执行文件，示例如下：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;大强同学-控制端-20260323-102318.exe&lt;/li&gt;
-&lt;li&gt;大强同学-客户端-20260323-102318.exe&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;目前该工具仅支持Windows版本的Rustdesk控制端/客户端编译，若有定制编译需求，可添加微信dqtx33交流。&lt;/p&gt;
-&lt;h2&gt;六、写在最后&lt;/h2&gt;
-&lt;p&gt;本次开发从闲鱼灵感出发，基于Python、PowerShell等技术栈实现了Rustdesk定制化编译工具，核心优化了连接体验、免安装和隐私展示三大特性；工具实现了从命令行到网页可视化面板的迭代，编译流程自动化，仅需输入核心参数即可快速生成定制化exe文件；项目结构清晰，依赖环境明确，编译耗时约4分钟，仅支持Windows版本的Rustdesk控制端/客户端编译。&lt;/p&gt;
 </content:encoded></item><item><title>零成本搭建在线图床</title><link>https://dqtx.cc/posts/technical/%E5%9C%A8%E7%BA%BF%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E5%9C%A8%E7%BA%BF%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA/</guid><pubDate>Sun, 22 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;90%的博主都不知道！免费100G图床竟比付费的还稳定～ 写文章、做分享时，你是不是也总被图床问题折磨？免费的容量小得可怜，付费的一年要花几百块，更糟的是还常遇到文件失效、大文件传不了的坑，辛苦写的内容全白费！今天就分享一个零成本神方案——用GitHub 4k+星标的开源项目CloudFlare-ImgBed搭配HuggingFace，10分钟快速搭建100G免费图床，无需实名认证、支持大文件自动分片上传，不用额外买服务器，稳定又省心，自媒体、学生、打工人都能用～&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260122014636902.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;一、工具介绍：CloudFlare-ImgBed&lt;/h2&gt;
@@ -7452,122 +7652,372 @@ opkg install luci-i18n-passwall2-zh-cn
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
-</content:encoded></item><item><title>给AI装上“眼睛”：Agent-Reach真实体验</title><link>https://dqtx.cc/posts/aihacks/agent-reach/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/agent-reach/</guid><pubDate>Thu, 12 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;引言&lt;/h2&gt;
-&lt;p&gt;平时做AI开发或者找技术资料的时候，你是不是也经常遇到这种情况：想做一个OpenClaw的落地项目，得先开B站刷教程找实操步骤，开GitHub找相关的开源仓库和issue，开微信搜一搜翻公众号的踩坑经验，开推特看看海外开发者的最新玩法，来回切换七八个网站，半小时过去了还没整理好有用的信息。遇到需要翻墙的平台还得折腾代理，搜到的内容要么是HTML垃圾代码，要么是需要登录才能看，好不容易找到的信息还散落在各个平台，整理起来又要花半天时间。大多数人都以为跨平台找资料就是这么麻烦，只能自己慢慢折腾，但其实用Agent Reach，你只需要一句话，就能让AI帮你搞定14个主流内容平台的搜索和内容提取，10秒就能出结果，至少能帮你省90%的找资料时间。&lt;/p&gt;
+</content:encoded></item><item><title>给AI装上&quot;眼睛&quot;：Agent-Reach真实体验</title><link>https://dqtx.cc/posts/aihacks/agent-reach/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/agent-reach/</guid><pubDate>Thu, 12 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;引言&lt;/h3&gt;
+&lt;p&gt;平时用 AI Agent处理各类网络信息查询真的太闹心了，想要让 AI 去各大平台搜集内容屡屡碰壁。各类平台都有着各式各样的访问限制，挨个调试配置耗费超多时间精力，实在太耽误事。&lt;/p&gt;
+&lt;p&gt;这款 Agent Reach 完美适配各类 AI 智能代理，专门打通全网各类平台访问壁垒，轻松解决各类网络信息获取难题，大幅简化繁杂配置流程。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;项目地址&lt;/strong&gt;https://github.com/Panniantong/Agent-Reach&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/diaoy.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;为什么用它？&lt;/h2&gt;
-&lt;p&gt;AI Agent 写代码、改bug的能力已经很强了，但一涉及到网上找资料就总是抓瞎：看不了YouTube/B站的字幕内容、搜不了推特/小红书的用户讨论、爬回来的网页满是HTML垃圾代码、普通搜索引擎的结果质量差还广告多，而且每个平台都要单独装工具、调配置、搞登录认证，光是让AI能正常读个推特就得折腾大半天。Agent Reach 把这些选型和配置的活儿都提前做完了，你不需要懂技术细节，只需要一句话安装，装完直接让AI帮你搜遍14个平台，不用自己记任何命令。&lt;/p&gt;
-&lt;h2&gt;30秒快速安装&lt;/h2&gt;
-&lt;p&gt;✅ 支持 Claude Code / OpenClaw / Cursor / Windsurf 所有能跑命令行的AI Agent
-⚠️ OpenClaw用户注意：安装前先开启exec权限，运行&lt;code&gt;openclaw config set tools.profile &quot;coding&quot;&lt;/code&gt;即可，或者在&lt;code&gt;~/.openclaw/openclaw.json&lt;/code&gt;中设置&lt;code&gt;&quot;tools&quot;: { &quot;profile&quot;: &quot;coding&quot; }&lt;/code&gt;，设置后重启Gateway并开启新对话即可，其他平台的用户不需要做任何前置操作。&lt;/p&gt;
-&lt;p&gt;不需要手动敲复杂命令，直接给AI发这句话就行，全程自动安装依赖、配置环境，不用你动手操作：&lt;/p&gt;
+&lt;h3&gt;安装与更新&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;帮我安装 Agent Reach：https://raw.githubusercontent.com/Panniantong/agent-reach/main/docs/install.md
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;安装完成后可以让AI运行命令验证是否安装成功：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;帮我运行 agent-reach doctor 查看所有可用渠道
+&lt;pre&gt;&lt;code&gt;帮我更新 Agent Reach：https://raw.githubusercontent.com/Panniantong/agent-reach/main/docs/update.md
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;支持的平台&lt;/h2&gt;
+&lt;p&gt;所有工具开源、所有API 免费。Cookie 只存在你本地，不上传不外传。代码完全开源，随时可审查，底层工具（yt-dlp、twitter-cli、rdt-cli、Jina Reader 等）定期追踪更新到最新版，你不用自己盯&lt;/p&gt;
+&lt;h3&gt;支持的平台&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;平台&lt;/th&gt;
-&lt;th&gt;状态&lt;/th&gt;
-&lt;th&gt;功能&lt;/th&gt;
+&lt;th&gt;解锁&lt;/th&gt;
+&lt;th&gt;怎么配&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;任意网页&lt;/td&gt;
-&lt;td&gt;✅ 开箱即用&lt;/td&gt;
-&lt;td&gt;自动提取正文内容，过滤HTML垃圾代码&lt;/td&gt;
+&lt;td&gt;🌐 &lt;strong&gt;网页&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;阅读任意网页&lt;/td&gt;
+&lt;td&gt;无需配置&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
+&lt;td&gt;📺 &lt;strong&gt;YouTube&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;字幕提取 + 视频搜索&lt;/td&gt;
+&lt;td&gt;无需配置&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;📡 &lt;strong&gt;RSS&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;阅读任意 RSS/Atom 源&lt;/td&gt;
+&lt;td&gt;无需配置&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;💬 &lt;strong&gt;微信公众号&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;搜索 + 阅读公众号文章（全文 Markdown）&lt;/td&gt;
+&lt;td&gt;无需配置&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;📰 &lt;strong&gt;微博&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;热搜、搜索内容/用户/话题、用户动态、评论&lt;/td&gt;
+&lt;td&gt;无需配置&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;💻 &lt;strong&gt;V2EX&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;热门帖子、节点帖子、帖子详情+回复、用户信息&lt;/td&gt;
+&lt;td&gt;无需配置&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;🔍 &lt;strong&gt;全网搜索&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;全网语义搜索&lt;/td&gt;
-&lt;td&gt;✅ 开箱即用&lt;/td&gt;
-&lt;td&gt;AI语义搜索比普通搜索引擎精准10倍，完全免费无API调用限制&lt;/td&gt;
+&lt;td&gt;自动配置（MCP 接入，免费无需 Key）&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;YouTube/B站&lt;/td&gt;
-&lt;td&gt;✅ 开箱即用&lt;/td&gt;
-&lt;td&gt;自动提取视频字幕、按播放量搜索相关视频&lt;/td&gt;
+&lt;td&gt;📦 &lt;strong&gt;GitHub&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;私有仓库、提 Issue/PR、Fork&lt;/td&gt;
+&lt;td&gt;告诉 Agent「帮我登录 GitHub」&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;GitHub&lt;/td&gt;
-&lt;td&gt;✅ 开箱即用&lt;/td&gt;
-&lt;td&gt;搜索开源仓库、读取Issue和PR内容&lt;/td&gt;
+&lt;td&gt;🐦 &lt;strong&gt;Twitter/X&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;搜索推文、浏览时间线、发推&lt;/td&gt;
+&lt;td&gt;告诉 Agent「帮我配 Twitter」&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;微信公众号/微博&lt;/td&gt;
-&lt;td&gt;✅ 开箱即用&lt;/td&gt;
-&lt;td&gt;搜索相关文章、提取全文内容&lt;/td&gt;
+&lt;td&gt;📕 &lt;strong&gt;小红书&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;阅读、搜索、发帖、评论、点赞&lt;/td&gt;
+&lt;td&gt;告诉 Agent「帮我配小红书」&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;RSS订阅&lt;/td&gt;
-&lt;td&gt;✅ 开箱即用&lt;/td&gt;
-&lt;td&gt;订阅RSS源，有更新自动推送&lt;/td&gt;
+&lt;td&gt;📺 &lt;strong&gt;B站&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;本地：字幕提取 + 搜索&lt;/td&gt;
+&lt;td&gt;告诉 Agent「帮我配代理」&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;推特/小红书/抖音&lt;/td&gt;
-&lt;td&gt;⚙️ 简单配置&lt;/td&gt;
-&lt;td&gt;搜索内容、读取帖子、解析抖音无水印下载链接&lt;/td&gt;
+&lt;td&gt;📖 &lt;strong&gt;Reddit&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;搜索 + 读帖子和评论（通过 rdt-cli）&lt;/td&gt;
+&lt;td&gt;需要登录认证（&lt;code&gt;rdt login&lt;/code&gt;），详见 &lt;a href=&quot;https://github.com/public-clis/rdt-cli&quot;&gt;rdt-cli&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;Reddit/LinkedIn/小宇宙&lt;/td&gt;
-&lt;td&gt;⚙️ 简单配置&lt;/td&gt;
-&lt;td&gt;搜索帖子、读取用户Profile、播客音频转文字&lt;/td&gt;
+&lt;td&gt;🎵 &lt;strong&gt;抖音&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;视频解析、无水印下载链接获取&lt;/td&gt;
+&lt;td&gt;告诉 Agent「帮我配抖音」&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;🎙️ &lt;strong&gt;小宇宙播客&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;播客音频转文字（Whisper 转录，免费 Key）&lt;/td&gt;
+&lt;td&gt;告诉 Agent「帮我配小宇宙播客」&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;💼 &lt;strong&gt;LinkedIn&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Profile 详情、公司页面、职位搜索&lt;/td&gt;
+&lt;td&gt;告诉 Agent「帮我配 LinkedIn」&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;📈 &lt;strong&gt;雪球&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;股票行情、搜索股票、热门帖子、热门股票排行&lt;/td&gt;
+&lt;td&gt;告诉 Agent「帮我配雪球」&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;PS.需要 Cookie 的平台（Twitter、小红书等），&lt;strong&gt;优先使用&lt;/strong&gt; Chrome 插件 &lt;a href=&quot;https://chromewebstore.google.com/detail/cookie-editor/hlkenndednhfkekhgcdicdfddnkalmdm&quot;&gt;Cookie-Editor&lt;/a&gt; 导出 Cookie，发给 Agent 即可配置。流程统一：浏览器登录 → Cookie-Editor 导出 → 发给 Agent。比扫码更简单可靠。&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;🔒 安全提醒：需要登录的平台建议用小号导出Cookie配置，所有Cookie只会存在你本地设备，不会上传到任何第三方服务器，代码完全开源可审查。&lt;/p&gt;
-&lt;h2&gt;测试话术参考&lt;/h2&gt;
-&lt;p&gt;装完直接让AI执行就行，不用记任何命令：&lt;/p&gt;
+&lt;p&gt;PS.⚠️ &lt;strong&gt;封号风险提醒：&lt;/strong&gt; 使用 Cookie 登录的平台（Twitter、小红书等），通过脚本/API 调用&lt;strong&gt;存在被平台检测并封号的风险&lt;/strong&gt;。请务必使用&lt;strong&gt;专用小号&lt;/strong&gt;，不要用你的主账号。&lt;/p&gt;
+&lt;h3&gt;对应上游工具&lt;/h3&gt;
+&lt;p&gt;每个平台背后是一个独立的上游工具。每个渠道文件只负责检测对应上游工具是否可用&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;channels/
+├── web.py          → Jina Reader     ← 可以换成 Firecrawl、Crawl4AI……
+├── twitter.py      → twitter-cli       ← 可以换成官方 API……
+├── youtube.py      → yt-dlp          ← 可以换成 YouTube API、Whisper……
+├── github.py       → gh CLI          ← 可以换成 REST API、PyGithub……
+├── bilibili.py     → yt-dlp          ← 可以换成 bilibili-api……
+├── reddit.py       → rdt-cli         ← 搜索+阅读，需 Cookie 认证
+├── xiaohongshu.py  → mcporter MCP    ← 可以换成其他 XHS 工具……
+├── douyin.py       → mcporter MCP    ← 可以换成其他抖音工具……
+├── linkedin.py     → linkedin-mcp    ← 可以换成 LinkedIn API……
+├── wechat.py       → Exa (+ Camoufox) ← 搜索+阅读微信公众号文章
+├── rss.py          → feedparser      ← 可以换成 atoma……
+├── exa_search.py   → mcporter MCP    ← 可以换成 Tavily、SerpAPI……
+└── __init__.py     → 渠道注册（doctor 检测用）
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;实际的读取和搜索由 Agent 直接调用上游工具完成。&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;场景&lt;/th&gt;
-&lt;th&gt;话术&lt;/th&gt;
+&lt;th&gt;选型&lt;/th&gt;
+&lt;th&gt;为什么选它&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;搜B站视频&lt;/td&gt;
-&lt;td&gt;帮我搜B站上「OpenClaw教程」相关视频，按播放量列前5个&lt;/td&gt;
+&lt;td&gt;读网页&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/jina-ai/reader&quot;&gt;Jina Reader&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;9.8K Star，免费，不需要 API Key&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;全网搜资料&lt;/td&gt;
-&lt;td&gt;用语义搜索查一下2026年AI创业公司Top10&lt;/td&gt;
+&lt;td&gt;读推特&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/public-clis/twitter-cli&quot;&gt;twitter-cli&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;2.1K Star，Cookie 登录，搜索/读推文/时间线/长文&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;读公众号文章&lt;/td&gt;
-&lt;td&gt;搜「AI Agent落地」相关的最新公众号文章&lt;/td&gt;
+&lt;td&gt;GitHub&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://cli.github.com/&quot;&gt;gh CLI&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;官方工具，认证后完整 API 能力&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;搜GitHub代码&lt;/td&gt;
-&lt;td&gt;搜Star最高的MCP server开源项目&lt;/td&gt;
+&lt;td&gt;Reddit&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/public-clis/rdt-cli&quot;&gt;rdt-cli&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;304 Star，Cookie 认证，搜索+全文+评论&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;看视频内容&lt;/td&gt;
-&lt;td&gt;提取这个YouTube链接的字幕并总结核心内容&lt;/td&gt;
+&lt;td&gt;B站增强&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/public-clis/bilibili-cli&quot;&gt;bili-cli&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;590 Star，热门/排行/搜索/动态&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;小红书&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/jackwener/xiaohongshu-cli&quot;&gt;xhs-cli&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;1.5K Star，pipx 一行安装，搜索/阅读/评论/发帖&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;抖音&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/yzfly/douyin-mcp-server&quot;&gt;douyin-mcp-server&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;MCP 服务，无需登录，视频解析 + 无水印下载&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;视频字幕 + 搜索&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/yt-dlp/yt-dlp&quot;&gt;yt-dlp&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;154K Star，YouTube + B站 + 1800 站通吃&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;搜全网&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://exa.ai/&quot;&gt;Exa&lt;/a&gt; via &lt;a href=&quot;https://github.com/nicobailon/mcporter&quot;&gt;mcporter&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;AI 语义搜索，MCP 接入免 Key&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;读 RSS&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/kurtmckee/feedparser&quot;&gt;feedparser&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;Python 生态标准选择，2.3K Star&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;LinkedIn&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/stickerdaniel/linkedin-mcp-server&quot;&gt;linkedin-scraper-mcp&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;⭐1.2K，MCP 服务，浏览器自动化&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;微信公众号&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://exa.ai/&quot;&gt;Exa&lt;/a&gt;（搜索+阅读）+ &lt;a href=&quot;https://github.com/daijro/camoufox&quot;&gt;Camoufox&lt;/a&gt;（可选）&lt;/td&gt;
+&lt;td&gt;零配置搜索+全文阅读，Camoufox 可选增强&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2&gt;常见踩坑&lt;/h2&gt;
-&lt;h3&gt;1. Claude找不到agent-reach技能&lt;/h3&gt;
-&lt;p&gt;原因是Claude扫描技能只会识别根目录下的SKILL.md文件，而agent-reach默认的SKILL.md嵌套在&lt;code&gt;agent_reach/skill/&lt;/code&gt;目录下，Claude扫描不到，只需要把&lt;code&gt;~/.claude/skills/agent-reach/skill/SKILL.md&lt;/code&gt;复制一份到agent-reach根目录就能解决。&lt;/p&gt;
-&lt;h3&gt;2. 服务器访问B站/Reddit返回403&lt;/h3&gt;
-&lt;p&gt;这是因为平台会封锁数据中心IP，配置住宅代理就能解决：运行&lt;code&gt;agent-reach configure proxy http://user:pass@ip:port&lt;/code&gt;即可，本地家用网络使用不需要配置代理。&lt;/p&gt;
-&lt;h3&gt;3. 卸载&lt;/h3&gt;
-&lt;p&gt;如果不需要使用了，直接运行&lt;code&gt;agent-reach uninstall&lt;/code&gt;就能一键清除所有相关文件和配置，包括本地存储的Cookie信息。&lt;/p&gt;
-&lt;h2&gt;总结&lt;/h2&gt;
-&lt;p&gt;总的来说，Agent-Reach是一款专门为AI Agent打造的跨平台搜索神器，核心价值就是帮你省掉折腾各种工具、配置、代理的时间，让你能用最短的时间找到需要的高质量资料。不管你是AI开发者、技术博主、内容创作者还是普通的AI工具爱好者，都能零门槛快速上手，不用懂复杂的技术细节，一句话就能让AI帮你搞定全网14个平台的内容搜索。如果你平时经常需要跨平台找资料，一定要试试这个工具，至少能帮你提升10倍的找资料效率。&lt;/p&gt;
-&lt;p&gt;&amp;lt;u&amp;gt;&lt;strong&gt;以上，既然看到这里了，如果觉得教程对你有帮助，随手点个赞、收藏、转发三连吧！有任何问题，欢迎在留言区评论，我会逐一回复。👏👏&lt;/strong&gt;&amp;lt;/u&amp;gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;🛠️ 大远程技术支持&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;如果你在安装、配置或使用中遇到任何问题，不想自己折腾&lt;/p&gt;
-&lt;p&gt;随时可以找我提供 &lt;strong&gt;1 对 1 远程技术支持&lt;/strong&gt;：&lt;a href=&quot;742112.xyz&quot;&gt;742112.xyz&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;🚀 &lt;strong&gt;关于的知识星球&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;为了帮你节省更多时间，我把私藏的软件安装包、激活工具、效率工作流和独家教程，都整理进了我的知识星球「&amp;lt;u&amp;gt;大强・效率空间站&amp;lt;/u&amp;gt;」：68元/年，承包你一整年的效率提升。👇 微信扫码：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260306064028188.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;📌 这些都是「当前选型」。不满意？换掉对应文件就行。这正是脚手架的意义。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;10/16渠道可用&lt;/h3&gt;
+&lt;p&gt;经过完整配置后，实际可用渠道达到10个：&lt;/p&gt;
+&lt;p&gt;运行这条条命令告诉你哪个通、哪个不通、怎么修&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;agent-reach doctor
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;✅ 已配置可用（10个）&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Twitter/X - 搜索、时间线、发推全功能可用&lt;/li&gt;
+&lt;li&gt;小红书 - 搜索和读取笔记可用&lt;/li&gt;
+&lt;li&gt;GitHub - 开箱即用&lt;/li&gt;
+&lt;li&gt;YouTube - 开箱即用&lt;/li&gt;
+&lt;li&gt;B站 - 开箱即用&lt;/li&gt;
+&lt;li&gt;Exa全网搜索 - 开箱即用&lt;/li&gt;
+&lt;li&gt;微信公众号 - 开箱即用&lt;/li&gt;
+&lt;li&gt;V2EX - 开箱即用&lt;/li&gt;
+&lt;li&gt;RSS订阅 - 开箱即用&lt;/li&gt;
+&lt;li&gt;任意网页 - 开箱即用&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;⚙️ 待配置（6个）&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Reddit、LinkedIn、小宇宙、抖音、微博、Truth Social&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;测试话术参考&lt;/h3&gt;
+&lt;p&gt;装完直接让AI执行就行，不用记任何命令&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;平台&lt;/th&gt;
+&lt;th&gt;测试话术&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;🌐 网页&lt;/td&gt;
+&lt;td&gt;提取这个网页的正文内容：https://example.com&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;📺 YouTube&lt;/td&gt;
+&lt;td&gt;提取这个YouTube视频的字幕并总结核心内容&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;📡 RSS&lt;/td&gt;
+&lt;td&gt;订阅这个RSS源并读取最新5篇文章：https://example.com/feed.xml&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;🔍 全网搜索&lt;/td&gt;
+&lt;td&gt;用语义搜索查一下2026年AI创业公司Top10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;🐙 GitHub&lt;/td&gt;
+&lt;td&gt;搜Star最高的MCP server开源项目&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;🐦 Twitter/X&lt;/td&gt;
+&lt;td&gt;搜索Twitter上关于Claude Code的最新讨论&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;📺 B站&lt;/td&gt;
+&lt;td&gt;帮我搜B站上「OpenClaw教程」相关视频，按播放量列前5个&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;📖 Reddit&lt;/td&gt;
+&lt;td&gt;搜索Reddit上关于AI Agent的讨论帖子&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;📕 小红书&lt;/td&gt;
+&lt;td&gt;搜索小红书上关于AI写作的爆款笔记&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;🎵 抖音&lt;/td&gt;
+&lt;td&gt;解析这个抖音视频的无水印下载链接&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;💬 微信公众号&lt;/td&gt;
+&lt;td&gt;搜「AI Agent落地」相关的最新公众号文章&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;📰 微博&lt;/td&gt;
+&lt;td&gt;搜索微博上关于AI的最新热门话题&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;💻 V2EX&lt;/td&gt;
+&lt;td&gt;查看V2EX上关于编程的热门帖子&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;🎙️ 小宇宙播客&lt;/td&gt;
+&lt;td&gt;将这个播客音频转成文字：https://example.com/podcast&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;📈 雪球&lt;/td&gt;
+&lt;td&gt;搜索雪球上关于茅台股票的最新讨论&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;💼 LinkedIn&lt;/td&gt;
+&lt;td&gt;搜索LinkedIn上关于AI工程师的职位&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;类似的工具&lt;/h3&gt;
+&lt;p&gt;Agent-Reach 的目标是统一调用各类上游CLI工具，以下是与之相关的工具对比：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;工具&lt;/th&gt;
+&lt;th&gt;功能&lt;/th&gt;
+&lt;th&gt;优势&lt;/th&gt;
+&lt;th&gt;劣势&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Agent-Reach&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;统一入口，调用16个平台工具&lt;/td&gt;
+&lt;td&gt;一句话安装、自动配置、统一接口&lt;/td&gt;
+&lt;td&gt;需要配置部分平台的认证&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;lark-cli&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;飞书IM/文档/表格/日程等&lt;/td&gt;
+&lt;td&gt;官方支持、功能完整&lt;/td&gt;
+&lt;td&gt;仅限飞书生态&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;github-cli&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;GitHub仓库/Issue/PR管理&lt;/td&gt;
+&lt;td&gt;官方CLI、功能强大&lt;/td&gt;
+&lt;td&gt;仅限GitHub&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;twitter-cli&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Twitter搜索/发推&lt;/td&gt;
+&lt;td&gt;无需浏览器、后台认证&lt;/td&gt;
+&lt;td&gt;需手动配置Cookie&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;rdt-cli&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Reddit内容抓取&lt;/td&gt;
+&lt;td&gt;支持搜索和读取帖子&lt;/td&gt;
+&lt;td&gt;需登录认证&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;xhs-cli&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;小红书内容操作&lt;/td&gt;
+&lt;td&gt;支持搜索/发帖/评论&lt;/td&gt;
+&lt;td&gt;需配置Cookie&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;MCP Servers&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;各类平台MCP服务器&lt;/td&gt;
+&lt;td&gt;标准化接口&lt;/td&gt;
+&lt;td&gt;需单独安装配置每个平台&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;LangChain Tools&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;AI Agent工具集&lt;/td&gt;
+&lt;td&gt;功能丰富、可编程&lt;/td&gt;
+&lt;td&gt;需要写代码集成&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;写在最后&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Agent Reach 是一个脚手架（scaffolding），不是框架。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;你给一个新 Agent 装环境的时候，总要花时间去找工具、装依赖、调配置——Twitter 用什么读？Reddit 怎么绕封？YouTube 字幕怎么提取？每次都要重新踩一遍。&lt;/p&gt;
+&lt;p&gt;Agent Reach 做的事情很简单：&lt;strong&gt;帮你把这些选型和配置的活儿做完了。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;安装完成后，Agent 直接调用上游工具（twitter-cli、rdt-cli、xhs-cli、yt-dlp、mcporter、gh CLI 等），不需要经过 Agent Reach 的包装层。&lt;/p&gt;
 </content:encoded></item><item><title>用Claude搞定UI配色与排版指南</title><link>https://dqtx.cc/posts/aihacks/ui-ux-pro-max-skill/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/ui-ux-pro-max-skill/</guid><pubDate>Wed, 11 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;作为一个后端转全栈的开发者，我之前最大的痛点就是做UI：配色不协调、排版乱、组件间距不对，花几个小时做出来的界面还被产品吐槽像上个世纪的产物。直到最近挖到了这个Claude的神级技能ui-ux-pro-max，我直接把之前存的几十个UI设计素材库全删了。&lt;/p&gt;
 &lt;p&gt;项目地址：https://github.com/nextlevelbuilder/ui-ux-pro-max-skill&lt;/p&gt;
 &lt;p&gt;官方案例库：https://ui-ux-pro-max-skill.nextlevelbuilder.io/#styles&lt;/p&gt;
@@ -9097,66 +9547,6 @@ category: Technical
 &lt;h2&gt;网易爆米花（手机端/TV端）&lt;/h2&gt;
 &lt;p&gt;网易爆米花官网：&lt;a href=&quot;https://bmh.163.com/&quot;&gt;点此直达&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;添加WebDAV，自动刮削&lt;/p&gt;
-</content:encoded></item><item><title>OBS摄像头一键移动插件</title><link>https://dqtx.cc/posts/workflow/obs%E6%8F%92%E4%BB%B6%E6%91%84%E5%83%8F%E5%A4%B4%E7%A7%BB%E5%8A%A8/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/obs%E6%8F%92%E4%BB%B6%E6%91%84%E5%83%8F%E5%A4%B4%E7%A7%BB%E5%8A%A8/</guid><description>想让 OBS 摄像头实现「一键移动+一键复位」的平滑效果？不管是直播过场切换、录课构图调整，还是避免画面遮挡，motion-effect 插件都能轻松搞定！无需复杂操作，3 步就能实现精准位移，让你的...</description><pubDate>Thu, 15 Jan 2026 11:20:00 GMT</pubDate><content:encoded>&lt;p&gt;想让 OBS 摄像头实现「一键移动+一键复位」的平滑效果？不管是直播过场切换、录课构图调整，还是避免画面遮挡，motion-effect 插件都能轻松搞定！无需复杂操作，3 步就能实现精准位移，让你的画面切换更专业～&lt;/p&gt;
-&lt;h2&gt;一、插件简介&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;开发者：CatxFish（免费开源）&lt;/li&gt;
-&lt;li&gt;核心功能：画面平滑运动控制（平移、旋转、变焦等），支持往返触发&lt;/li&gt;
-&lt;li&gt;适配设备：绝大多数普通 USB 摄像头、部分 PTZ 摄像头&lt;/li&gt;
-&lt;li&gt;兼容系统：Windows、macOS、Linux&lt;/li&gt;
-&lt;li&gt;项目地址：https://github.com/CatxFish/motion-effect&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;二、安装步骤&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;下载对应系统安装包，解压后将文件放入 obs-studio 主文件夹&lt;/li&gt;
-&lt;li&gt;重启 OBS 完成生效&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2&gt;三、前置准备&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;场景名：教程（可自定义）&lt;/li&gt;
-&lt;li&gt;源：摄像头、显示器（按需添加）&lt;/li&gt;
-&lt;li&gt;目标效果：按快捷键 → 摄像头右下移动；再按快捷键 → 摄像头左上返回&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;四、配置流程&lt;/h2&gt;
-&lt;h3&gt;1. 记录初始坐标&lt;/h3&gt;
-&lt;p&gt;右键「源→摄像头」→ 变换→编辑变换，记录初始坐标（示例：1725, 489）&lt;/p&gt;
-&lt;h3&gt;2. 添加运动滤镜&lt;/h3&gt;
-&lt;p&gt;选中场景「教程」→ 右键→滤镜→效果滤镜→左下角「+」→ 选择「Motion」&lt;br /&gt;
-命名滤镜（自定义），核心参数配置：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Trigger Behavior 设为「Hotkey (Round trip)」（往返模式）&lt;/li&gt;
-&lt;li&gt;填写记录的初始坐标与目标坐标（示例目标：1735, 539）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260117005310134.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;3. 绑定快捷键&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;OBS 顶部→设置→快捷键&lt;/li&gt;
-&lt;li&gt;找到对应滤镜，为「Forward」和「Backward」绑定同一快捷键（示例：Alt+K）&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260117005511984.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;五、效果说明&lt;/h2&gt;
-&lt;p&gt;&lt;img alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;以上就是 motion-effect 插件的核心配置流程，全程聚焦「快速部署+实用效果」，无需多余步骤！插件轻量开源，兼容主流系统与摄像头，如需调整移动距离、速度或拓展多档位，直接修改坐标与参数即可。&lt;/p&gt;
-&lt;p&gt;✨ &lt;strong&gt;互动时间&lt;/strong&gt;&lt;br /&gt;
-你平时用 OBS 做直播/录课时，还遇到过哪些画面调整的难题？欢迎在评论区留言分享，我会一一解答～&lt;/p&gt;
-&lt;p&gt;如果觉得这篇教程对你有帮助，别忘了&lt;strong&gt;点赞+收藏+转发&lt;/strong&gt;三连呀！关注我，后续分享更多OBS 实用技巧、效率工具干货，下次见～ 👋&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;大强远程技术支持：742112.xyz&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;+86新注册电报，绕过sms收费
-1、换IP，建议，美 日 新 节点，不建议香港节点。
-2、换客户端，telegramx，或者这两个。
-[telegramx](https://github.com/TGX-Android/Telegram-X/releases) [第三方客户端](https://github.com/forkgram/TelegramAndroid/releases) [飞机旧版](https://www.apkmirror.com/uploads/?devcategory=telegram-fz-llc) 
-
-3、卡bug，可以邮箱验证优先邮箱验证。
-
-遇到付费解密强制重启app，多试几次有概率可以跳过。
-&lt;/code&gt;&lt;/pre&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;+86新注册电报，绕过sms收费&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;1、换IP，建议，美 日 新 节点，不建议香港节点。
-2、换客户端，telegramx，或者这两个。
-&lt;a href=&quot;https://github.com/TGX-Android/Telegram-X/releases&quot;&gt;telegramx&lt;/a&gt; &lt;a href=&quot;https://github.com/forkgram/TelegramAndroid/releases&quot;&gt;第三方客户端&lt;/a&gt; &lt;a href=&quot;https://www.apkmirror.com/uploads/?devcategory=telegram-fz-llc&quot;&gt;飞机旧版&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;3、卡bug，可以邮箱验证优先邮箱验证。遇到付费解密强制重启app，多试几次有概率可以跳过。&lt;/p&gt;
-&lt;/blockquote&gt;
 </content:encoded></item><item><title>Passkeys通行密钥</title><link>https://dqtx.cc/posts/technical/passkeys%E9%80%9A%E8%A1%8C%E5%AF%86%E9%92%A5/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/passkeys%E9%80%9A%E8%A1%8C%E5%AF%86%E9%92%A5/</guid><description>你是否厌倦了记密码？设个简单的不安全，设个复杂的记不住？每次登录还要翻找密码本、或者点那该死的&apos;忘记密码&apos;？这几天测试了一圈Passkeys（通行密钥），我只能...</description><pubDate>Thu, 15 Jan 2026 11:20:00 GMT</pubDate><content:encoded>&lt;p&gt;你是否厌倦了记密码？设个简单的不安全，设个复杂的记不住？每次登录还要翻找密码本、或者点那该死的&quot;忘记密码&quot;？这几天测试了一圈&lt;strong&gt;Passkeys（通行密钥）&lt;/strong&gt;，我只能说：**真TM牛逼！**以后再也不用记密码了，指纹一按、Face ID 一扫，直接登录，速度那叫一个快！今天就给大家分享这个让密码彻底淘汰的神仙技术。&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h2&gt;一、什么是 Passkeys？&lt;/h2&gt;
@@ -9319,6 +9709,66 @@ https://www.passkeys.com/websites-with-passkey-support-sites-directory&lt;/p&gt;
 &lt;li&gt;建议配合密码管理器使用，覆盖不支持的场景&lt;/li&gt;
 &lt;li&gt;多设备备份很重要，别只依赖单一设备&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>OBS摄像头一键移动插件</title><link>https://dqtx.cc/posts/workflow/obs%E6%8F%92%E4%BB%B6%E6%91%84%E5%83%8F%E5%A4%B4%E7%A7%BB%E5%8A%A8/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/obs%E6%8F%92%E4%BB%B6%E6%91%84%E5%83%8F%E5%A4%B4%E7%A7%BB%E5%8A%A8/</guid><description>想让 OBS 摄像头实现「一键移动+一键复位」的平滑效果？不管是直播过场切换、录课构图调整，还是避免画面遮挡，motion-effect 插件都能轻松搞定！无需复杂操作，3 步就能实现精准位移，让你的...</description><pubDate>Thu, 15 Jan 2026 11:20:00 GMT</pubDate><content:encoded>&lt;p&gt;想让 OBS 摄像头实现「一键移动+一键复位」的平滑效果？不管是直播过场切换、录课构图调整，还是避免画面遮挡，motion-effect 插件都能轻松搞定！无需复杂操作，3 步就能实现精准位移，让你的画面切换更专业～&lt;/p&gt;
+&lt;h2&gt;一、插件简介&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;开发者：CatxFish（免费开源）&lt;/li&gt;
+&lt;li&gt;核心功能：画面平滑运动控制（平移、旋转、变焦等），支持往返触发&lt;/li&gt;
+&lt;li&gt;适配设备：绝大多数普通 USB 摄像头、部分 PTZ 摄像头&lt;/li&gt;
+&lt;li&gt;兼容系统：Windows、macOS、Linux&lt;/li&gt;
+&lt;li&gt;项目地址：https://github.com/CatxFish/motion-effect&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;二、安装步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;下载对应系统安装包，解压后将文件放入 obs-studio 主文件夹&lt;/li&gt;
+&lt;li&gt;重启 OBS 完成生效&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;三、前置准备&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;场景名：教程（可自定义）&lt;/li&gt;
+&lt;li&gt;源：摄像头、显示器（按需添加）&lt;/li&gt;
+&lt;li&gt;目标效果：按快捷键 → 摄像头右下移动；再按快捷键 → 摄像头左上返回&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;四、配置流程&lt;/h2&gt;
+&lt;h3&gt;1. 记录初始坐标&lt;/h3&gt;
+&lt;p&gt;右键「源→摄像头」→ 变换→编辑变换，记录初始坐标（示例：1725, 489）&lt;/p&gt;
+&lt;h3&gt;2. 添加运动滤镜&lt;/h3&gt;
+&lt;p&gt;选中场景「教程」→ 右键→滤镜→效果滤镜→左下角「+」→ 选择「Motion」&lt;br /&gt;
+命名滤镜（自定义），核心参数配置：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Trigger Behavior 设为「Hotkey (Round trip)」（往返模式）&lt;/li&gt;
+&lt;li&gt;填写记录的初始坐标与目标坐标（示例目标：1735, 539）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260117005310134.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;3. 绑定快捷键&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;OBS 顶部→设置→快捷键&lt;/li&gt;
+&lt;li&gt;找到对应滤镜，为「Forward」和「Backward」绑定同一快捷键（示例：Alt+K）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260117005511984.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;五、效果说明&lt;/h2&gt;
+&lt;p&gt;&lt;img alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;以上就是 motion-effect 插件的核心配置流程，全程聚焦「快速部署+实用效果」，无需多余步骤！插件轻量开源，兼容主流系统与摄像头，如需调整移动距离、速度或拓展多档位，直接修改坐标与参数即可。&lt;/p&gt;
+&lt;p&gt;✨ &lt;strong&gt;互动时间&lt;/strong&gt;&lt;br /&gt;
+你平时用 OBS 做直播/录课时，还遇到过哪些画面调整的难题？欢迎在评论区留言分享，我会一一解答～&lt;/p&gt;
+&lt;p&gt;如果觉得这篇教程对你有帮助，别忘了&lt;strong&gt;点赞+收藏+转发&lt;/strong&gt;三连呀！关注我，后续分享更多OBS 实用技巧、效率工具干货，下次见～ 👋&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;大强远程技术支持：742112.xyz&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;+86新注册电报，绕过sms收费
+1、换IP，建议，美 日 新 节点，不建议香港节点。
+2、换客户端，telegramx，或者这两个。
+[telegramx](https://github.com/TGX-Android/Telegram-X/releases) [第三方客户端](https://github.com/forkgram/TelegramAndroid/releases) [飞机旧版](https://www.apkmirror.com/uploads/?devcategory=telegram-fz-llc) 
+
+3、卡bug，可以邮箱验证优先邮箱验证。
+
+遇到付费解密强制重启app，多试几次有概率可以跳过。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;+86新注册电报，绕过sms收费&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1、换IP，建议，美 日 新 节点，不建议香港节点。
+2、换客户端，telegramx，或者这两个。
+&lt;a href=&quot;https://github.com/TGX-Android/Telegram-X/releases&quot;&gt;telegramx&lt;/a&gt; &lt;a href=&quot;https://github.com/forkgram/TelegramAndroid/releases&quot;&gt;第三方客户端&lt;/a&gt; &lt;a href=&quot;https://www.apkmirror.com/uploads/?devcategory=telegram-fz-llc&quot;&gt;飞机旧版&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;3、卡bug，可以邮箱验证优先邮箱验证。遇到付费解密强制重启app，多试几次有概率可以跳过。&lt;/p&gt;
+&lt;/blockquote&gt;
 </content:encoded></item><item><title>API封装成Skill最佳实践</title><link>https://dqtx.cc/posts/workflow/api%E5%B0%81%E7%94%9F%E5%9B%BEskill/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/api%E5%B0%81%E7%94%9F%E5%9B%BEskill/</guid><description>最近被阿里巴巴通义MAI的Z-Image狠狠圈粉，不仅搭载了高效的 Z-Image-Turbo 模型，更关键的是每天能免费生 2000 张图，不管是生成文章视频...</description><pubDate>Sun, 30 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近被阿里巴巴通义MAI的Z-Image狠狠圈粉，不仅搭载了高效的 &lt;strong&gt;Z-Image-Turbo&lt;/strong&gt; 模型，更关键的是&lt;strong&gt;每天能免费生 2000 张图&lt;/strong&gt;，不管是生成文章视频封面还是异常创作，这个配额都完全够用。&lt;/p&gt;
 &lt;p&gt;恰巧这段时间我正在研究 Claude 的 Skills 功能，于是就萌生了一个想法：&lt;strong&gt;把 Z-Image 的免费生图能力和 Claude Skills 结合起来&lt;/strong&gt;，做一个专属生图 Skill，通过自然语言就可以生图到本地文件夹，既省时间又能充分利用免费配额。带着这个实操需求，我把整个创建过程整理成了这篇文章，希望能给同样喜欢折腾工具、需要生图功能的朋友提供一点参考～&lt;/p&gt;
 &lt;h2&gt;一.创建方法&lt;/h2&gt;
