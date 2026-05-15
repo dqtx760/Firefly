@@ -5,6 +5,7 @@ tags: []
 category: Software
 draft: false
 pinned: false
+image: 
 ---
 AI 驱动的新闻聚合_阅__读__器_。_RSS_ 订_阅_ + AI 摘要 + 全文翻译。
 https://github.com/Zoroaaa/newspulse

@@ -8,6 +8,7 @@ tags:
 category: AIHacks
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260516004325433.webp
 ---
 让人类和 AI Agent 都能在终端中操作飞书。覆盖消息、文档、多维表格、电子表格、幻灯片、日历、邮箱、任务、会议、Markdown 等核心业务域，提供 200+ 命令及 24 个 AI Agent [Skills](https://github.com/larksuite/cli/blob/main/skills)。
 

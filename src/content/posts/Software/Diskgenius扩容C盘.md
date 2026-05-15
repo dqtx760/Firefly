@@ -1,3 +1,14 @@
+---
+title: Diskgenius扩容C盘
+published: 2026-05-16
+tags:
+  - 软件推荐
+category: Software
+draft: false
+pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260515150349299.webp
+---
+日常使用电脑过程中，C 盘空间告急早已成为多数用户的常见困扰，系统运行卡顿、软件安装失败、更新无法完成等一系列问题接踵而至，严重影响整机使用体验。想要高效扩充 C 盘存储空间，无需重装系统、不用复杂分区命令，借助 DiskGenius 这款实用磁盘分区工具，便能轻松完成无损扩容操作。
 
 ### Diskgenius扩容
 扩容前
