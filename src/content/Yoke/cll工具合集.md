@@ -36,7 +36,8 @@ https://www.dqtx.cc/posts/aihacks/open-cli/
 https://github.com/stormzhang/token-tracker ![](https://pbs.twimg.com/media/HIKx4XnbYAESI7n.jpg)
 
 
-wx-cli，一个命令行工具，能让 Claude Code、Codex 这些 Agent 直接读取我们本地的微信数据，做查询、分析和总结。
+#### wx-cli
+一个命令行工具，能让 Claude Code、Codex 这些 Agent 直接读取我们本地的微信数据，做查询、分析和总结。
 - 全库聊天记录搜索，支持按时间、按群组过滤
 - 朋友圈历史回溯，点赞、评论、原帖都能翻
 - 聊天记录一键导出 Markdown 或 JSON
@@ -49,10 +50,11 @@ https://github.com/jackwener/wx-cli
 
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260514003259576.webp)
 
-hyperframes CLI
+#### hyperframes CLI
 把用纯 HTML 写的那个动效变成视频
 
-gcli，一个 Gmail 只读 CLI
+#### gcli
+一个 Gmail 只读 CLI
 [gcli，一个 Gmail 只读 CLI](../01_Raw/00_Clipings/gcli，一个%20Gmail%20只读%20CLI.md)
 
 ### 参考

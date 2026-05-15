@@ -126,6 +126,8 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/202605071911
 | 工具                                                                               | 类型  | 特点                                            |
 | -------------------------------------------------------------------------------- | --- | --------------------------------------------- |
 | [llmfit](https://github.com/AlexsJones/llmfit)                                   | CLI | 实时检测 CPU/RAM/GPU/VRAM，结合模型数据库直接给出可运行模型及推荐量化版本 |
+| [whichllm](https://github.com/Andyyyy64/whichllm)                                | CLI | 这个工具把基准测试和硬件匹配做得像查配置表                         |
+| [BenchLoop](https://x.com/berryxia/status/2054390836721553487)                   | CLI | 本地大模型进行基准测试                                   |
 | [llm-capability-checker](https://github.com/random-llama/llm-capability-checker) | gui | 图形界面显示0-100分硬件评分，提供瓶颈分析，分级推荐模型\|              |
 | [AIBase PC 检测](https://model.aibase.com/zh/tools/pc-check)                       | 在线  | 快速检查设备能否运行不同规模模型，无需安装                         |
 | [Can I Run AI?](https://www.canirun.ai/)                                         | 在线  | 主流大模型兼容性检查                                    |

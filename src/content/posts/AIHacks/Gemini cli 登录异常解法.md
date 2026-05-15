@@ -7,7 +7,6 @@ draft: false
 pinned: false
 image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260514173105947.webp
 ---
-
 事情是这样的。
 
 今天下午，有个项目要用到 Gemini CLI，我想着那就登一下吧，反正之前也用过。
@@ -18,30 +17,34 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/202605141731
 
 ![844](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260514173105947.webp)
 
-嗯？
+### 全网都在教你调代理
 
-什么情况？
-
-我以为是网络波动，重试了两次，还是一样。
+嗯？什么情况？我以为是网络波动，重试了两次，还是一样。
 
 于是我去搜了一下，好家伙，一搜才发现，这个问题已经爆了快一个月了。整个中文互联网搜 gemini cli 登不上，出来的帖子能翻十几页，从 CSDN 到知乎到 GitHub Issue，所有人都在骂。
 
 然后你猜所有人给出的解决方案是什么？
 
-清一色，检查代理。
+清一色，检查代理。什么检查环境变量啊，
 
-什么检查环境变量啊，什么给 PowerShell 单独设置 WinHTTP 代理啊，什么用 proxychains 啊，还有说要在环境变量里配置谷歌云项目 ID 的。
+什么给 PowerShell 单独设置 WinHTTP 代理啊，什么用 proxychains 啊，还有说要在环境变量里配置谷歌云项目 ID 的。
 
 我当时还真信了。
 
 于是我照着网上的教程，一步一步来。
 
-先在 PowerShell 里敲 `netsh winhttp show proxy`，看看代理是不是生效。
+先在 PowerShell 里敲 
+```
+netsh winhttp show proxy
+```
+看看代理是不是生效。
 
 显示正常。
 
-不放心，又手动设了一遍 `netsh winhttp set proxy 127.0.0.1:7890`。
-
+不放心，又手动设了一遍 
+```
+netsh winhttp set proxy 127.0.0.1:7890
+```
 然后再去登。
 
 还是失败。
@@ -53,6 +56,8 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/202605141731
 没用，就是登不上。
 
 。。。
+
+### 真正的原因，被所有人忽略了
 
 这个时候我突然想起一件事。
 
@@ -96,6 +101,8 @@ https://myaccount.google.com/age-verification
 
 ![842](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260514205006826.webp)
 
+### 写在最后
+
 我当时坐在屏幕前，真的就是一声叹息。
 
 你说这叫什么事啊。
@@ -134,6 +141,6 @@ https://myaccount.google.com/age-verification
 
 就只是，没有人告诉你，真正的问题是什么。
 
-以上，既然看到这里了，如果觉得不错，随手点个赞、在看、转发三连吧，如果想第一时间收到推送，也可以给我个星标⭐～
+**以上，既然看到这里了，如果觉得不错，随手点个赞、在看、转发三连吧，如果想第一时间收到推送，也可以给我个星标⭐～**
 
 谢谢你看我的文章，我们，下次再见。
