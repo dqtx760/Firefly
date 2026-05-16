@@ -1,5 +1,5 @@
 ---
-title: 给AI装上"眼睛"：Agent-Reach真实体验
+title: Agent-Reach安装与使用
 published: 2026-03-12
 tags:
   - skill
@@ -52,6 +52,7 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/diaoy.webp
 | 🎙️ **小宇宙播客**    | 播客音频转文字（Whisper 转录，免费 Key） | 告诉 Agent「帮我配小宇宙播客」                                                       |
 | 💼 **LinkedIn**  | Profile 详情、公司页面、职位搜索       | 告诉 Agent「帮我配 LinkedIn」                                                   |
 | 📈 **雪球**        | 股票行情、搜索股票、热门帖子、热门股票排行      | 告诉 Agent「帮我配雪球」                                                          |
+
 PS.需要 Cookie 的平台（Twitter、小红书等），**优先使用** Chrome 插件 [Cookie-Editor](https://chromewebstore.google.com/detail/cookie-editor/hlkenndednhfkekhgcdicdfddnkalmdm) 导出 Cookie，发给 Agent 即可配置。流程统一：浏览器登录 → Cookie-Editor 导出 → 发给 Agent。比扫码更简单可靠。
 
 PS.⚠️ **封号风险提醒：** 使用 Cookie 登录的平台（Twitter、小红书等），通过脚本/API 调用**存在被平台检测并封号的风险**。请务必使用**专用小号**，不要用你的主账号。
@@ -146,16 +147,19 @@ agent-reach doctor
 
 Agent-Reach 的目标是统一调用各类上游CLI工具，以下是与之相关的工具对比：
 
-| 工具                  | 功能                  | 优势              | 劣势          |
-| ------------------- | ------------------- | --------------- | ----------- |
-| **Agent-Reach**     | 统一入口，调用16个平台工具      | 一句话安装、自动配置、统一接口 | 需要配置部分平台的认证 |
-| **lark-cli**        | 飞书IM/文档/表格/日程等      | 官方支持、功能完整       | 仅限飞书生态      |
-| **github-cli**      | GitHub仓库/Issue/PR管理 | 官方CLI、功能强大      | 仅限GitHub    |
-| **twitter-cli**     | Twitter搜索/发推        | 无需浏览器、后台认证      | 需手动配置Cookie |
-| **rdt-cli**         | Reddit内容抓取          | 支持搜索和读取帖子       | 需登录认证       |
-| **xhs-cli**         | 小红书内容操作             | 支持搜索/发帖/评论      | 需配置Cookie   |
-| **MCP Servers**     | 各类平台MCP服务器          | 标准化接口           | 需单独安装配置每个平台 |
-| **LangChain Tools** | AI Agent工具集         | 功能丰富、可编程        | 需要写代码集成     |
+| 工具                                                                           | 功能                  | 优势              | 劣势          |
+| ---------------------------------------------------------------------------- | ------------------- | --------------- | ----------- |
+| **Agent-Reach**                                                              | 统一入口，调用16个平台工具      | 一句话安装、自动配置、统一接口 | 需要配置部分平台的认证 |
+| **lark-cli**                                                                 | 飞书IM/文档/表格/日程等      | 官方支持、功能完整       | 仅限飞书生态      |
+| **github-cli**                                                               | GitHub仓库/Issue/PR管理 | 官方CLI、功能强大      | 仅限GitHub    |
+| **twitter-cli**                                                              | Twitter搜索/发推        | 无需浏览器、后台认证      | 需手动配置Cookie |
+| **rdt-cli**                                                                  | Reddit内容抓取          | 支持搜索和读取帖子       | 需登录认证       |
+| **xhs-cli**                                                                  | 小红书内容操作             | 支持搜索/发帖/评论      | 需配置Cookie   |
+| **MCP Servers**                                                              | 各类平台MCP服务器          | 标准化接口           | 需单独安装配置每个平台 |
+| **LangChain Tools**                                                          | AI Agent工具集         | 功能丰富、可编程        | 需要写代码集成     |
+| [bb-browser](https://github.com/epiral/bb-browser/blob/main/README.zh-CN.md) |                     |                 |             |
+| [x-reader](https://github.com/runesleo/x-reader/blob/main/README.zh-CN.md)   |                     |                 |             |
+| [jike-web-cli](https://github.com/doublewater777/jike-web-cli)               |                     |                 |             |
 
 
 ### 写在最后

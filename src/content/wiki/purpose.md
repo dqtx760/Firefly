@@ -9,7 +9,7 @@
 
 ## 如何使用
 
-- 从 [index.md](../Zen/index.md) 开始浏览
+- 从 [index.md](../index.md) 开始浏览
 - 查看 [overview.md](overview.md) 了解博客全貌
 - 按分类阅读 [sources/](sources/aihacks.md) 目录
 - 深入概念参考 [concepts/](concepts/dataview-templates.md) 目录

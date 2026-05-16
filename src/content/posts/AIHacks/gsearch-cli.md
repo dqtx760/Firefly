@@ -17,7 +17,7 @@ AI Agent 不能联网真的太蛋疼了。试了五六种搜索工具，没有�
 
 现在 Claude Code 终于有真正的谷歌搜索能力了。
 
-![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260514195541715.webp)
+![209](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260514195541715.webp)
 
 ---
 

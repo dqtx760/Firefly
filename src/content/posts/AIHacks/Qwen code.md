@@ -16,8 +16,8 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-202604
 
 Qwen Code 是基于 Gemini Code 二次开发的**终端 AI 编程助手**，完美搭载**通义千问3.6 Plus 最新编程模型**，支持纯中文交互、代码生成/修复/Git 协作，**免费**提供**每日100次请求**额度完全满足日常开发需求。
 
-**开源地址**：https://github.com/QwenLM/qwen-code
-
+**开源地址**：
+https://github.com/QwenLM/qwen-code
 
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260414155118952.webp)
 
