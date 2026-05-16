@@ -487,6 +487,199 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/tech-shrimp&quot;&gt;tech-shrimp&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>文章封面&amp;配图技能</title><link>https://dqtx.cc/posts/aihacks/baoyu-article-illustrator%E6%94%B9%E9%80%A0/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/baoyu-article-illustrator%E6%94%B9%E9%80%A0/</guid><pubDate>Sun, 17 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;我写公众号文章，有两件事是刚需：&lt;strong&gt;文章内配图&lt;/strong&gt;和&lt;strong&gt;封面图&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;之前这两个需求分别用两个不同的技能来满足——&lt;code&gt;baoyu-article-illustrator&lt;/code&gt; 负责给正文配图，封面则靠手动折腾。最近我把它们统一到了同一个生图后端上，整个流程顺畅了不少。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-dual-pipeline-20260517-0153.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;先说起因&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;baoyu-article-illustrator&lt;/code&gt; 是个开源的文章自动配图技能，核心逻辑很清晰：分析文章结构 → 找到需要插图的位置 → 根据内容生成配图 prompt → 调用图片后端渲染 → 写入文章。&lt;/p&gt;
+&lt;p&gt;流程设计得不错，但它默认的生图后端有两个问题：一是生成的图片右下角强制附加「图片由 AI 生成」水印且无法关闭；二是图片只存本地相对路径，没法直接用于公众号。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;因此，我做了两件事。&lt;/strong&gt;&lt;/p&gt;
+&lt;h3&gt;改造baoyu-article-illustrator&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;换后端&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;把原生图像生成替换成了 &lt;strong&gt;GPT-Image-2&lt;/strong&gt;（&lt;a href=&quot;https://apimart.ai/register?aff=QVui&quot;&gt;Apimart&lt;/a&gt; 提供的第三方 API）。这个模型无水印、支持 16:9 横版、分辨率最高 4K，价格是 &lt;strong&gt;$0.005/张&lt;/strong&gt;——一美元能生成 200 张图，一篇公众号配 3~4 张图成本不到两毛钱。&lt;/p&gt;
+&lt;p&gt;PS.Apimart 是一个第三方 API 平台，除了 GPT-Image-2 还支持各种模型调用。我用了这段时间，速度和稳定性都不错，性价比很高。注册送额度，可以先试用再决定：&lt;a href=&quot;https://apimart.ai/register?aff=QVui&quot;&gt;apimart.ai/register?aff=QVui&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/03-scene-cost-warm.webp&quot; alt=&quot;成本优势&quot; /&gt;
+调用方式是异步的：提交 prompt → 拿到 task_id → 轮询状态 → 下载图片。我封装了一个 Python 小脚本 &lt;code&gt;gpt_image2_gen.py&lt;/code&gt;，传 prompt 和输出路径就行，轮询和下载全自动。&lt;/p&gt;
+&lt;p&gt;然后把这个脚本正式注册进了技能的后端选择体系里——在 SKILL.md 的 &lt;code&gt;## Image Generation Tools&lt;/code&gt; 段落新增了 &lt;code&gt;gpt-image-2&lt;/code&gt; 作为可选后端，优先级排在 Codex imagegen 之后。项目级 EXTEND.md 里把 &lt;code&gt;preferred_image_backend&lt;/code&gt; 直接锁定为 &lt;code&gt;gpt-image-2&lt;/code&gt;，以后调用配图技能就自动走这条管线，不用每次手动指定。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;加自动上传&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;原来的流程到「把图片写入文章」就结束了，图片路径还是本地的。我在 Step 6 后面新增了 &lt;strong&gt;Step 7: Upload to PicGo &amp;amp; Replace URLs&lt;/strong&gt;——图片生成完后自动 POST 到本地 PicGo Server（端口 36677），上传到 Gitee 图床，然后把文章里的本地路径替换成在线 URL。整条管线跑完，文章里的图片引用直接就是可访问的在线地址。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/01-scene-before-after.webp&quot; alt=&quot;改造前后对比&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;创建一个封面技能&lt;/h3&gt;
+&lt;p&gt;正文配图解决了，但封面图还是个痛点。市面上的方案要么不够灵活，要么风格不可控。于是我从零写了 &lt;strong&gt;article-cover-16x9&lt;/strong&gt;——一个专门生成 16:9 封面图的技能。&lt;/p&gt;
+&lt;p&gt;它的工作方式很简单：你给它一篇文章（或一段文本），它会提炼出主标题、副标题和一个视觉隐喻，构造一张电影感封面的 prompt，然后调用生图 API 渲染出来。输出默认保存到桌面，同时附带一份 &lt;code&gt;.prompt.md&lt;/code&gt; 记录文件，方便二次修改。&lt;/p&gt;
+&lt;p&gt;关键决策是：&lt;strong&gt;封面技能也复用 GPT-Image-2 这个 API&lt;/strong&gt;。同一个脚本、同一份 API Key、同一个无水印后端。这样两个技能共享同一套基础设施，维护成本低，账单也只有一份。&lt;/p&gt;
+&lt;h3&gt;现在的样子&lt;/h3&gt;
+&lt;p&gt;两条管线走的是同一个引擎：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/02-infographic-dual-pipeline.webp&quot; alt=&quot;双管线流程图&quot; /&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;baoyu-article-illustrator → 分析文章 → 生成配图 prompt → GPT-Image-2 → PicGo 上传 → 在线 URL
+article-cover-16x9       → 提炼标题 → 构造封面 prompt → GPT-Image-2      → 桌面 PNG
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;说一句话，正文配图和封面图都搞定了。中间不需要手动切换后端、不需要处理水印、不需要手动上传图床。&lt;/p&gt;
+&lt;p&gt;一美元 200 张图，一个月重度使用不到六块钱。换来的是每篇文章都有干净、高质量、风格统一的原创配图。&lt;/p&gt;
+</content:encoded></item><item><title>我的图文写作工作流</title><link>https://dqtx.cc/posts/aihacks/%E6%88%91%E7%9A%84%E5%9B%BE%E6%96%87%E5%86%99%E4%BD%9C%E5%B7%A5%E4%BD%9C%E6%B5%81/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E6%88%91%E7%9A%84%E5%9B%BE%E6%96%87%E5%86%99%E4%BD%9C%E5%B7%A5%E4%BD%9C%E6%B5%81/</guid><pubDate>Sun, 17 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;我做了一个完整内容创作工作流。&lt;/p&gt;
+&lt;p&gt;从选题到发布，一句话触发，剩下的全交给 AI。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h3&gt;第一步：选题&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;/aihot
+↓
+看今天 AI 圈有什么热点
+↓
+/content-topic-generator
+基于热点生成 3 个公众号选题（含大纲）+ 2 个即刻选题
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;选题确定后，进入写作。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h3&gt;第二步：写作&lt;/h3&gt;
+&lt;p&gt;根据文章类型选技能：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;文章类型&lt;/th&gt;
+&lt;th&gt;用哪个技能&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;软件教程 / GitHub 项目 / AI 工具指南&lt;/td&gt;
+&lt;td&gt;/daqiang-tutorial&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;观点文 / 行业评论 / 个人感悟&lt;/td&gt;
+&lt;td&gt;/khazix-writer&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;code&gt;/daqiang-tutorial&lt;/code&gt; 会自动判断是开源项目还是工具教程，按固定结构输出：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;引言（痛点 + 价值主张）
+↓
+准备工作（安装 / 配置）
+↓
+核心内容（步骤 1/2/3，每步有配图提示词）
+↓
+常见问题
+↓
+总结 + 延伸（blockquote 金句 + 吸粉文案）
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;h3&gt;第三步：全文处理&lt;/h3&gt;
+&lt;p&gt;写完文章，一句话触发，5 个 Agent 并行处理：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/ article-pack [文章路径或内容]
+│
+├─ Agent A → baoyu-article-illustrator（配图 + PicGo 上传）
+├─ Agent B → article-cover-16x9（封面，文字直接进图）
+├─ Agent C → 撰写标题（3 个爆款风格，回显到对话）
+├─ Agent D → x-post（即刻版 + X版，回显到对话）
+└─ Agent E → beautiful-slides（HTML 幻灯片）
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;文章类型自动判断&lt;/strong&gt;，配图和封面风格随之切换：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;文章类型&lt;/th&gt;
+&lt;th&gt;配图风格&lt;/th&gt;
+&lt;th&gt;封面风格&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;教程类（含代码/步骤/工具名）&lt;/td&gt;
+&lt;td&gt;infographic（清晰写实）&lt;/td&gt;
+&lt;td&gt;clean-tech（简洁科技感）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;观点类（议论/感悟）&lt;/td&gt;
+&lt;td&gt;scene（温暖插画）&lt;/td&gt;
+&lt;td&gt;warm-cinematic（温暖电影感）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr /&gt;
+&lt;h3&gt;成本&lt;/h3&gt;
+&lt;p&gt;配图和封面共用同一个后端：&lt;strong&gt;GPT-Image-2&lt;/strong&gt;（apimart.ai API）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;单价：&lt;code&gt;$0.005/张&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;一篇公众号配 3~4 张图 + 1 张封面 ≈ &lt;code&gt;$0.02~0.025&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;一美元能生成 200 张，&lt;code&gt;一个月重度使用不到六块钱&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;无水印、支持 16:9、分辨率最高 &lt;code&gt;1K&lt;/code&gt;，PicGo 自动上传 Gitee 图床。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h3&gt;完整流程图&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;你
+│
+├─ ① /aihot                     → 查今天热点
+├─ ② /content-topic-generator  → 生成选题（公众号 + 即刻）
+├─ ③ /daqiang-tutorial         → 写教程类文章
+│    或 /khazix-writer           → 写观点类文章
+│
+└─ ④ /article-pack             → 一站式处理
+     │
+     ├─ 配图 + 上传
+     ├─ 封面（文字进图）
+     ├─ 3 个爆款标题
+     ├─ 即刻版 + X版文案
+     └─ HTML 幻灯片
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;一句话，全文案处理完。&lt;/p&gt;
+</content:encoded></item><item><title>用 AI 两年，我劝你别太依赖它</title><link>https://dqtx.cc/posts/aihacks/%E7%94%A8-ai-%E4%B8%A4%E5%B9%B4%E6%88%91%E5%8A%9D%E4%BD%A0%E5%88%AB%E5%A4%AA%E4%BE%9D%E8%B5%96%E5%AE%83/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E7%94%A8-ai-%E4%B8%A4%E5%B9%B4%E6%88%91%E5%8A%9D%E4%BD%A0%E5%88%AB%E5%A4%AA%E4%BE%9D%E8%B5%96%E5%AE%83/</guid><pubDate>Sat, 16 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这两年，身边所有人都在聊 AI。&lt;/p&gt;
+&lt;p&gt;有人兴奋，说它能帮你写完整个项目；有人焦虑，怕自己明天就被取代；还有人已经用它月入十万，在知识星球里收徒授课。&lt;/p&gt;
+&lt;p&gt;我也在用 AI，每天都在用。但今天这篇，不是要给你打鸡血，也不是要告诉你怎么靠 AI 发财。我想聊点不一样的——聊聊这两年里，我自己走过的弯路，踩过的坑，以及那些「早知道就好了」的心得。&lt;/p&gt;
+&lt;p&gt;下面这六条，是我走到现在的样子。它们不一定对，但一定诚实。&lt;/p&gt;
+&lt;h3&gt;1️⃣ AI 不是工具，是镜子&lt;/h3&gt;
+&lt;p&gt;用 AI 这两年，最大感受不是它多强，是它总照出我的偷懒、模糊、自以为是。&lt;/p&gt;
+&lt;p&gt;你大概有过这时刻：丢给 AI 一个问题，它回你一堆看似正确但没用的东西。第一反应是骂它笨。后来发现，问题在我——我自己都没想清要什么，它怎么接得住？&lt;/p&gt;
+&lt;p&gt;AI 逼你精确。不是「把需求写到一百页」那种精确，是你能不能用一句话说清自己想要什么。说不清，它就给你个「说得过去」的东西，挑不出毛病，但就是不对。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;AI 不服务你的懒惰，它只放大你的清晰。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260516192455617.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;2️⃣ 越会提问的人，越不需要问&lt;/h3&gt;
+&lt;p&gt;刚开始我也收藏提示词模板。「角色扮演 + 任务描述 + 输出格式」，搞得像念咒语。&lt;/p&gt;
+&lt;p&gt;后来不用了。不是结构没用，是我发现自己慢慢变了——看到问题时，脑子里已有解答的轮廓。AI 只是帮我确认、补充、验证。&lt;/p&gt;
+&lt;p&gt;真正厉害的提问者，不是在问题上下功夫，是在思考上下功夫。问出口那一刻，心里已有七八分底。AI 的回应是碰撞，不是索取。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;提示词像拐杖——你得用它学会走路，然后扔掉。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;3️⃣ 快，是最容易被高估的价值&lt;/h3&gt;
+&lt;p&gt;AI 确实快。一分钟五百字，十分钟写完周报。但快之后呢？&lt;/p&gt;
+&lt;p&gt;我以前沉迷这种快感。直到有一天发现，自己写的东西越来越平——不是 AI 不行，是我只求「快点搞定」，没给自己留「慢下来想」的空间。&lt;/p&gt;
+&lt;p&gt;更危险的是：当你习惯了 AI 的速度，你会不知不觉放弃那些「看起来低效」但真正让你长本事的事。比如自己从头想一遍结构，比如写完之后反复读三遍，比如允许自己在某个卡壳的地方多待一会儿。&lt;/p&gt;
+&lt;p&gt;有个做文案的朋友，一开始让 AI 写初稿自己改。半年后发现自己改得越来越少——不是因为懒，是他发现 AI 写的某些地方确实比他自己想的好。&lt;/p&gt;
+&lt;p&gt;他慌过。后来想通了：&lt;strong&gt;被替代的不是你，是你身上那些可以被替代的部分。&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;快是红利，别让它变成陷阱。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/02-scene-speed-trap-sm.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;4️⃣ 放得下控制感的人，才真的会创造&lt;/h3&gt;
+&lt;p&gt;你知道 AI 画得比你好吗？知道。那你为什么还要自己调配色方案？&lt;/p&gt;
+&lt;p&gt;因为「亲手做的」那种感觉，放不下。&lt;/p&gt;
+&lt;p&gt;我花很久才接受一件事：真正的创造，不是每个像素都经你的手，是你脑子里那个判断——哪个对，哪个不对。手可以放，脑子不能放。&lt;/p&gt;
+&lt;p&gt;同样，总有人说「把重复的事交给 AI」。但有些重复，你得自己来。学语言背单词是重复的，练技能基础动作是重复的——这些重复里藏着肌肉记忆。AI 可以帮你跳过重复，但也跳过了那个让你「长在身上」的过程。&lt;/p&gt;
+&lt;p&gt;我的做法：先自己来几遍，摸到门道了，再交出去。这样你不会变成离了 AI 就不会走路的人。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;懂了再交，那叫信任；不懂就交，那叫甩锅。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;5️⃣ 承认自己不知道，比装知道重要一百倍&lt;/h3&gt;
+&lt;p&gt;AI 最危险的地方不是它会胡说，是它说得太像那么回事了。&lt;/p&gt;
+&lt;p&gt;我以前会被它唬住——引经据典，信誓旦旦，我能不信吗？后来吃了亏才知道：它越自信，我越要警惕。不是我比它聪明，是我得为自己的判断负责。&lt;/p&gt;
+&lt;p&gt;现在我用 AI 查东西，默认它可能错。这不是不信任，是清醒。它是个极快的检索器，但校验的责任永远在我。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;当 AI 变得无所不知，你最值钱的能力就是分辨真假。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;6️⃣ 你不是在用 AI，是在和它相处&lt;/h3&gt;
+&lt;p&gt;这两个字我想了很久。不是「使用」，是「相处」。&lt;/p&gt;
+&lt;p&gt;你每天跟它对话，它会摸到你的习惯；你越依赖它，它越容易猜你要什么；你哪天状态不好，它生成的东西也能看出来。&lt;/p&gt;
+&lt;p&gt;这不是拟人化，是事实。你和一个东西互动得足够多，它就会变成你的一部分。就像用了三年的键盘，敲下去的手感已经长在你手指里了。&lt;/p&gt;
+&lt;p&gt;所以别问「AI 会不会取代我了」，换个问题——&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;你和它，处成了什么样？&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260516192337017.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;上面这六条，不是我给你的答案，是我交出的作业。&lt;/p&gt;
+&lt;p&gt;用 AI 两年，我最大的变化不是输出变多了，是耐心变好了——愿意花时间想清楚再开口，愿意承认「我不知道」，愿意让 AI 做它擅长的事，而把自己钉在那些只有人能做的事上。&lt;/p&gt;
+&lt;p&gt;AI 不会取代你。但它会用一种很温柔的方式，帮你把所有凑合的部分一一暴露出来。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;然后你可以选择：修补它们，或者继续假装看不见。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这件事，跟 AI 没关系。跟你有关系。&lt;/p&gt;
 </content:encoded></item><item><title>Diskgenius扩容C盘</title><link>https://dqtx.cc/posts/software/diskgenius%E6%89%A9%E5%AE%B9c%E7%9B%98/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/diskgenius%E6%89%A9%E5%AE%B9c%E7%9B%98/</guid><pubDate>Sat, 16 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;日常使用电脑过程中，C 盘空间告急早已成为多数用户的常见困扰，系统运行卡顿、软件安装失败、更新无法完成等一系列问题接踵而至，严重影响整机使用体验。想要高效扩充 C 盘存储空间，无需重装系统、不用复杂分区命令，借助 DiskGenius 这款实用磁盘分区工具，便能轻松完成无损扩容操作。&lt;/p&gt;
 &lt;h3&gt;Diskgenius扩容&lt;/h3&gt;
 &lt;p&gt;扩容前
@@ -690,12 +883,10 @@ https://xiaoshuapp.com/blog/posts/10-web-rss-reader.html&lt;/p&gt;
 &lt;p&gt;信息差啊，朋友们。&lt;/p&gt;
 &lt;p&gt;有时候，你跟正确答案之间的距离，不是你不够努力，也不是你技术不够好。&lt;/p&gt;
 &lt;p&gt;就只是，没有人告诉你，真正的问题是什么。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;以上，既然看到这里了，如果觉得不错，随手点个赞、在看、转发三连吧，如果想第一时间收到推送，也可以给我个星标⭐～&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;谢谢你看我的文章，我们，下次再见。&lt;/p&gt;
 </content:encoded></item><item><title>Gsearch-cli实现Agent调用谷歌</title><link>https://dqtx.cc/posts/aihacks/gsearch-cli/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/gsearch-cli/</guid><pubDate>Thu, 14 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;AI Agent 不能联网真的太蛋疼了。试了五六种搜索工具，没有一个让人省心——要么要配 API Key，要么要跑后台服务，要么结果一塌糊涂。&lt;/p&gt;
 &lt;p&gt;直到发现 &lt;a href=&quot;https://github.com/aeroxy/gsearch-cli&quot;&gt;gsearch-cli&lt;/a&gt;。Rust 写的，单二进制，小得离谱，跑起来快得惊人。最妙的是它能直接复用 Gemini CLI 的 OAuth 认证，&lt;strong&gt;零配置，装完就能用&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;现在 Claude Code 终于有真正的谷歌搜索能力了。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260514195541715.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260514195541715.webp&quot; alt=&quot;209&quot; /&gt;&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h2&gt;安装&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;方式一：有 Rust 环境&lt;/strong&gt;&lt;/p&gt;
@@ -4810,7 +5001,8 @@ index.html → index.php → index.htm 等&lt;/p&gt;
 &lt;p&gt;多Agent团队协作才是Hermes Agent的正确打开方式。&lt;/p&gt;
 &lt;p&gt;https://x.com/Saccc_c/status/2044018336673964207&lt;/p&gt;
 </content:encoded></item><item><title>Qwen Code安装使用教程</title><link>https://dqtx.cc/posts/aihacks/qwen-code/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/qwen-code/</guid><pubDate>Tue, 14 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Qwen Code 是基于 Gemini Code 二次开发的&lt;strong&gt;终端 AI 编程助手&lt;/strong&gt;，完美搭载&lt;strong&gt;通义千问3.6 Plus 最新编程模型&lt;/strong&gt;，支持纯中文交互、代码生成/修复/Git 协作，&lt;strong&gt;免费&lt;/strong&gt;提供&lt;strong&gt;每日100次请求&lt;/strong&gt;额度完全满足日常开发需求。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;开源地址&lt;/strong&gt;：https://github.com/QwenLM/qwen-code&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;开源地址&lt;/strong&gt;：
+https://github.com/QwenLM/qwen-code&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260414155118952.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;一、前置准备&lt;/h2&gt;
 &lt;h3&gt;1. 环境说明&lt;/h3&gt;
@@ -7652,7 +7844,7 @@ opkg install luci-i18n-passwall2-zh-cn
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
-</content:encoded></item><item><title>给AI装上&quot;眼睛&quot;：Agent-Reach真实体验</title><link>https://dqtx.cc/posts/aihacks/agent-reach/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/agent-reach/</guid><pubDate>Thu, 12 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;引言&lt;/h3&gt;
+</content:encoded></item><item><title>Agent-Reach安装与使用</title><link>https://dqtx.cc/posts/aihacks/agent-reach/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/agent-reach/</guid><pubDate>Thu, 12 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;引言&lt;/h3&gt;
 &lt;p&gt;平时用 AI Agent处理各类网络信息查询真的太闹心了，想要让 AI 去各大平台搜集内容屡屡碰壁。各类平台都有着各式各样的访问限制，挨个调试配置耗费超多时间精力，实在太耽误事。&lt;/p&gt;
 &lt;p&gt;这款 Agent Reach 完美适配各类 AI 智能代理，专门打通全网各类平台访问壁垒，轻松解决各类网络信息获取难题，大幅简化繁杂配置流程。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;项目地址&lt;/strong&gt;https://github.com/Panniantong/Agent-Reach&lt;/p&gt;
@@ -7753,13 +7945,9 @@ opkg install luci-i18n-passwall2-zh-cn
 &lt;td&gt;股票行情、搜索股票、热门帖子、热门股票排行&lt;/td&gt;
 &lt;td&gt;告诉 Agent「帮我配雪球」&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;PS.需要 Cookie 的平台（Twitter、小红书等），&lt;strong&gt;优先使用&lt;/strong&gt; Chrome 插件 &lt;a href=&quot;https://chromewebstore.google.com/detail/cookie-editor/hlkenndednhfkekhgcdicdfddnkalmdm&quot;&gt;Cookie-Editor&lt;/a&gt; 导出 Cookie，发给 Agent 即可配置。流程统一：浏览器登录 → Cookie-Editor 导出 → 发给 Agent。比扫码更简单可靠。&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;p&gt;PS.需要 Cookie 的平台（Twitter、小红书等），&lt;strong&gt;优先使用&lt;/strong&gt; Chrome 插件 &lt;a href=&quot;https://chromewebstore.google.com/detail/cookie-editor/hlkenndednhfkekhgcdicdfddnkalmdm&quot;&gt;Cookie-Editor&lt;/a&gt; 导出 Cookie，发给 Agent 即可配置。流程统一：浏览器登录 → Cookie-Editor 导出 → 发给 Agent。比扫码更简单可靠。&lt;/p&gt;
 &lt;p&gt;PS.⚠️ &lt;strong&gt;封号风险提醒：&lt;/strong&gt; 使用 Cookie 登录的平台（Twitter、小红书等），通过脚本/API 调用&lt;strong&gt;存在被平台检测并封号的风险&lt;/strong&gt;。请务必使用&lt;strong&gt;专用小号&lt;/strong&gt;，不要用你的主账号。&lt;/p&gt;
 &lt;h3&gt;对应上游工具&lt;/h3&gt;
 &lt;p&gt;每个平台背后是一个独立的上游工具。每个渠道文件只负责检测对应上游工具是否可用&lt;/p&gt;
@@ -8010,6 +8198,24 @@ opkg install luci-i18n-passwall2-zh-cn
 &lt;td&gt;AI Agent工具集&lt;/td&gt;
 &lt;td&gt;功能丰富、可编程&lt;/td&gt;
 &lt;td&gt;需要写代码集成&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/epiral/bb-browser/blob/main/README.zh-CN.md&quot;&gt;bb-browser&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/runesleo/x-reader/blob/main/README.zh-CN.md&quot;&gt;x-reader&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/doublewater777/jike-web-cli&quot;&gt;jike-web-cli&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
