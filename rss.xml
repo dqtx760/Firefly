@@ -487,9 +487,169 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/tech-shrimp&quot;&gt;tech-shrimp&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>Custom Attachment Location 配置全流程</title><link>https://dqtx.cc/posts/software/custom-attachment-location-%E9%85%8D%E7%BD%AE%E5%85%A8%E6%B5%81%E7%A8%8B/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/custom-attachment-location-%E9%85%8D%E7%BD%AE%E5%85%A8%E6%B5%81%E7%A8%8B/</guid><pubDate>Wed, 20 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;笔记的生命力，藏在那些不会失效的附件里。&lt;/p&gt;
+&lt;p&gt;深耕 Obsidian 写作许久愈发察觉，最先乱掉的从不是文字内容，而是杂乱无章的图片附件。初期毫无察觉，日积月累文件增多，各类附件乱象接踵而至。&lt;/p&gt;
+&lt;p&gt;而 Custom Attachment Location 插件完美化解难题，统一规范图片为标准 Markdown 格式，适配各类编辑器与 GitHub 平台正常展示，让本地库附件井然有序，彻底告别路径错乱、链接失效等困扰。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260520181235152.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;插件设置&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;附件重命名模式→全部&lt;/li&gt;
+&lt;li&gt;是否重命名附件文件→开启✅&lt;/li&gt;
+&lt;li&gt;Markdown URL格式填写（位置在插件页底部位置）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;assets/${noteFileName}/${generatedAttachmentFileName}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;文件与链接&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;內部链接类型→基于当前笔记的相对路径&lt;/li&gt;
+&lt;li&gt;使用wiki链接→取消 (特别容易忽略)
+关闭后，在笔记中链接其他笔记或图像时，使用如[[文件名]]和!Ⅲ[图片名]]这样的Wiki链接，则默认使用标准的Markdown 超链接语法。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;说明：&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;删除笔记（含有图片），笔记不在→图依然在。&lt;/li&gt;
+&lt;li&gt;图片删除，笔记中的图片链接不在&lt;/li&gt;
+&lt;li&gt;对笔记进行重命名的时候，附件的子文件夹会进行重命名，图片链接也会自动进行更新&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⚠️注意：
+对笔记进行重命名后，附件的子文件夹未进行重命名，图片链接也未自动进行更新
+可尝试卸载重新安装插件再尝试。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260520181515751.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;补充：规则解释&lt;/h3&gt;
+&lt;h4&gt;新附件位置&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;./assets/${noteFileName}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;为每篇笔记创建独立的附件文件夹，格式为：当前笔记所在目录/assets/[笔记名]/&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;部分&lt;/th&gt;
+&lt;th&gt;含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;./&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;相对路径，代表&lt;strong&gt;当前笔记所在的文件夹&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;assets/&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;统一的附件根目录，所有笔记的附件都会放在这个文件夹下&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;${noteFileName}&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;插件变量，会自动替换为&lt;strong&gt;当前笔记的文件名&lt;/strong&gt;（不含 &lt;code&gt;.md&lt;/code&gt; 后缀）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4&gt;生成的附件文件名&lt;/h4&gt;
+&lt;p&gt;默认的&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;file-${date:{momentJsFormat:&apos;YYYYMMDDHHmmssSSS&apos;}}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;高级点&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;file-${date:{momentJsFormat:&amp;amp;#x27;YYYYMMDDHHmmssSSS&amp;amp;#x27;}}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;自动生成带毫秒时间戳的文件名，避免重名冲突&lt;/p&gt;
+&lt;h4&gt;Markdown URL 格式&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;assets/${noteFileName}/${generatedAttachmentFileName}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这个决定了笔记里怎么写图片链接。它必须和第一项“新附件位置”的实际存储路径保持一致。不然 Obsidian 能找到文件、但笔记里的链接指向了错误的位置，图片就显示不出来。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;以上，既然看到这里了，如果觉得不错，随手点个赞、在看、转发三连吧，如果想第一时间收到推送，也可以给我个星标⭐～&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;谢谢你看我的文章，我们，下次再见。&lt;/p&gt;
+&lt;p&gt;/ 作者：大强同学
+/ 更多干货，请访问：dqtx.cc&lt;/p&gt;
+</content:encoded></item><item><title>讯飞星辰Maas福利活动</title><link>https://dqtx.cc/posts/aihacks/%E8%AE%AF%E9%A3%9E%E6%98%9F%E8%BE%B0-maas%E7%A6%8F%E5%88%A9%E6%B4%BB%E5%8A%A839%E5%85%8330%E5%A4%A9api%E4%B8%8D%E9%99%90%E9%87%8F%E8%B0%83%E7%94%A8/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E8%AE%AF%E9%A3%9E%E6%98%9F%E8%BE%B0-maas%E7%A6%8F%E5%88%A9%E6%B4%BB%E5%8A%A839%E5%85%8330%E5%A4%A9api%E4%B8%8D%E9%99%90%E9%87%8F%E8%B0%83%E7%94%A8/</guid><pubDate>Mon, 18 May 2026 21:30:00 GMT</pubDate><content:encoded>&lt;p&gt;养过 OpenClaw（小龙虾）的都知道有多烧钱——后台 24 小时跑任务，按 Token 计费，一天上千块是常事。更坑的是哪怕没盯着它，AI 智能体也会在后台自动执行、默默消耗 Token，不知不觉账单就爆表了。&lt;/p&gt;
+&lt;p&gt;二手平台上现在有个魔幻现象：帮人卸载小龙虾的订单比安装的还火爆。十几块、几十块帮人卸载，第一批踩坑的人纷纷止损离场。&lt;/p&gt;
+&lt;p&gt;但科大讯飞旗下的讯飞星辰 MaaS 平台，直接把这个痛点给治了。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-iflytek-maas-20260518-230651.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;按请求次数收费&lt;/h3&gt;
+&lt;p&gt;以前所有 AI 平台都是 &lt;strong&gt;按 Token 收费&lt;/strong&gt;——写的内容越长、任务越复杂、跑的时间越长，费用蹭蹭往上涨。&lt;/p&gt;
+&lt;p&gt;讯飞星辰这次把计费模式从&quot;按 Token 收费&quot;改成了 &lt;strong&gt;&quot;按请求次数收费&quot;&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;听起来都是收费？差别巨大：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;对比项&lt;/th&gt;
+&lt;th&gt;按 Token 收费&lt;/th&gt;
+&lt;th&gt;按请求次数收费&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;复杂任务&lt;/td&gt;
+&lt;td&gt;Token 瞬间激增&lt;/td&gt;
+&lt;td&gt;只算 1 次&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;自动化任务&lt;/td&gt;
+&lt;td&gt;跑得越久越贵&lt;/td&gt;
+&lt;td&gt;不管跑多久都一样&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;成本可控性&lt;/td&gt;
+&lt;td&gt;完全不可控&lt;/td&gt;
+&lt;td&gt;一眼看得到底&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;做一整套番茄时钟网站也好、让 AI 每天定时搜集全网热点也罢，全程只消耗 1 次请求。&lt;/p&gt;
+&lt;h3&gt;3.9 元不限量&lt;/h3&gt;
+&lt;p&gt;平台整合了 &lt;strong&gt;60 多款热门大模型&lt;/strong&gt;：GLM5.1、Qwen3.5、Kimi2.5……一个入口随便切换，不用来回注册多个平台。&lt;/p&gt;
+&lt;p&gt;最狠的是现在的活动价：&lt;strong&gt;3.9 元 = 整个月不限量随便跑&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;一瓶可乐的钱，整个月随便用。不管任务多复杂、跑多少次自动化，成本完全锁定在 3.9 元以内。&lt;/p&gt;
+&lt;p&gt;职业开发者或企业用户还可以选专业版套餐，搭配 5 小时滑动窗口 + 周 / 月重置流控策略，专为 AI 智能体这类场景量身定制。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/dc95fed86e7d68bb23abde242db6146a.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;如何订阅&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;订阅地址&lt;/strong&gt;：
+https://maas.xfyun.cn/packageSubscription?inviteCode=MAAS-F75A78EC&lt;/p&gt;
+&lt;p&gt;订阅前填邀请码：&lt;strong&gt;MAAS-F75A78EC&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;填邀请码后双方都能拿到等额礼品卡，可直接抵扣 API 费用。相当于白嫖套餐。&lt;/p&gt;
+&lt;p&gt;限时活动，3.9 元解锁不限量套餐，手慢无。以前养虾像养吞金兽，现在一瓶可乐搞定一个月。&lt;/p&gt;
+&lt;p&gt;工具的意义不在于它有多牛，在于它让你把时间花在真正该花的地方。&lt;/p&gt;
+</content:encoded></item><item><title>Claude-code二改版</title><link>https://dqtx.cc/posts/aihacks/claude-code%E4%BA%8C%E6%94%B9%E7%89%88/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/claude-code%E4%BA%8C%E6%94%B9%E7%89%88/</guid><pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;分享市面上一些Claude code二改版&lt;/p&gt;
+&lt;h3&gt;CLI版本&lt;/h3&gt;
+&lt;h4&gt;MiniClaude&lt;/h4&gt;
+&lt;p&gt;Claude Code 在开发体验上做得不错，但内置了大量云服务逻辑。我做了一个精简版 MiniClaude ，保留 100% 核心功能，移除了所有不必要的部分。
+与 Claude Code 的区别
+• 删除了 OAuth 、遥测、设置同步、团队协作、速率限制、实验功能（-92000 行）
+• 不依赖 Anthropic 云服务，API Key 直连
+• 支持多 Provider：DeepSeek / Kiro 反代 / 任何 OpenAI 兼容端点
+• 新增 /provider 命令实现多 Provider 热切换，无需重启
+• 启用 ENABLE_PROMPT_CACHING_1H 可获得 1 小时缓存 TTL&lt;/p&gt;
+&lt;p&gt;来源地址：
+https://www.v2ex.com/t/1213338#reply10
+开源地址：
+https://github.com/txl16095/MiniClaude&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260517213248392.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;GUi版&lt;/h3&gt;
+&lt;h4&gt;claude-desktop-cn&lt;/h4&gt;
+&lt;p&gt;网页聊天只是入口，命令行工具门槛偏高；Claude Desktop CN 的价值，是把 AI 对话、本地项目、代码编辑、Git、命令执行、多 Agent 和插件能力，变成一个中文桌面工作台。&lt;/p&gt;
+&lt;p&gt;来源地址：
+https://www.bilibili.com/video/BV1Y2526tEzZ/?share_source=copy_web&amp;amp;vd_source=0ff53b7b59566dd33907b903ad936e21
+项目地址：
+https://github.com/Qiao-920/claude-desktop-cn
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260517215115491.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h4&gt;CodePilot&lt;/h4&gt;
+&lt;p&gt;开源地址：
+https://github.com/op7418/CodePilot&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260517214338508.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;小众agent&lt;/h3&gt;
+&lt;h4&gt;oh-my-openagent&lt;/h4&gt;
+&lt;p&gt;https://ohmyopenagent.com/zh
+https://github.com/code-yeongyu/oh-my-openagent/blob/dev/README.zh-cn.md
+https://github.com/newtype-01/newtype-os/blob/main/README.zh-cn.md（黄益贺）
+&lt;a href=&quot;newtype-os.md&quot;&gt;newtype-os&lt;/a&gt;&lt;/p&gt;
+&lt;h4&gt;Craft Agents&lt;/h4&gt;
+&lt;p&gt;来源
+https://web.okjike.com/u/5D79173A-D706-4D3F-BA50-6C4BB7C8E9EE/post/69eb4ddf4ef528349ce43c24
+开源地址：
+https://github.com/lukilabs/craft-agents-oss/
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260517214958350.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 </content:encoded></item><item><title>文章封面&amp;配图技能</title><link>https://dqtx.cc/posts/aihacks/baoyu-article-illustrator%E6%94%B9%E9%80%A0/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/baoyu-article-illustrator%E6%94%B9%E9%80%A0/</guid><pubDate>Sun, 17 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;我写公众号文章，有两件事是刚需：&lt;strong&gt;文章内配图&lt;/strong&gt;和&lt;strong&gt;封面图&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;之前这两个需求分别用两个不同的技能来满足——&lt;code&gt;baoyu-article-illustrator&lt;/code&gt; 负责给正文配图，封面则靠手动折腾。最近我把它们统一到了同一个生图后端上，整个流程顺畅了不少。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-dual-pipeline-20260517-0153.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/cshoutu.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;先说起因&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;baoyu-article-illustrator&lt;/code&gt; 是个开源的文章自动配图技能，核心逻辑很清晰：分析文章结构 → 找到需要插图的位置 → 根据内容生成配图 prompt → 调用图片后端渲染 → 写入文章。&lt;/p&gt;
 &lt;p&gt;流程设计得不错，但它默认的生图后端有两个问题：一是生成的图片右下角强制附加「图片由 AI 生成」水印且无法关闭；二是图片只存本地相对路径，没法直接用于公众号。&lt;/p&gt;
@@ -516,6 +676,10 @@ article-cover-16x9       → 提炼标题 → 构造封面 prompt → GPT-Image-
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;说一句话，正文配图和封面图都搞定了。中间不需要手动切换后端、不需要处理水印、不需要手动上传图床。&lt;/p&gt;
 &lt;p&gt;一美元 200 张图，一个月重度使用不到六块钱。换来的是每篇文章都有干净、高质量、风格统一的原创配图。&lt;/p&gt;
+&lt;p&gt;以上，既然看到这里了，如果觉得不错，随手点个赞、在看、转发三连吧，如果想第一时间收到推送，也可以给我个星标⭐～
+谢谢你看我的文章，我们，下次再见。&lt;/p&gt;
+&lt;p&gt;/ 作者：大强同学
+/ 更多干货，请访问：dqtx.cc&lt;/p&gt;
 </content:encoded></item><item><title>我的图文写作工作流</title><link>https://dqtx.cc/posts/aihacks/%E6%88%91%E7%9A%84%E5%9B%BE%E6%96%87%E5%86%99%E4%BD%9C%E5%B7%A5%E4%BD%9C%E6%B5%81/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E6%88%91%E7%9A%84%E5%9B%BE%E6%96%87%E5%86%99%E4%BD%9C%E5%B7%A5%E4%BD%9C%E6%B5%81/</guid><pubDate>Sun, 17 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;我做了一个完整内容创作工作流。&lt;/p&gt;
 &lt;p&gt;从选题到发布，一句话触发，剩下的全交给 AI。&lt;/p&gt;
 &lt;hr /&gt;
@@ -595,7 +759,9 @@ article-cover-16x9       → 提炼标题 → 构造封面 prompt → GPT-Image-
 &lt;/table&gt;
 &lt;hr /&gt;
 &lt;h3&gt;成本&lt;/h3&gt;
-&lt;p&gt;配图和封面共用同一个后端：&lt;strong&gt;GPT-Image-2&lt;/strong&gt;（apimart.ai API）&lt;/p&gt;
+&lt;p&gt;配图和封面共用同一个后端：&lt;strong&gt;GPT-Image-2&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;API 服务由&lt;strong&gt;Apimart&lt;/strong&gt;平台提供，访问
+https://apimart.ai/register?aff=QVui&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;单价：&lt;code&gt;$0.005/张&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;一篇公众号配 3~4 张图 + 1 张封面 ≈ &lt;code&gt;$0.02~0.025&lt;/code&gt;&lt;/li&gt;
@@ -620,6 +786,10 @@ article-cover-16x9       → 提炼标题 → 构造封面 prompt → GPT-Image-
      └─ HTML 幻灯片
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;一句话，全文案处理完。&lt;/p&gt;
+&lt;p&gt;以上，既然看到这里了，如果觉得不错，随手点个赞、在看、转发三连吧，如果想第一时间收到推送，也可以给我个星标⭐～&lt;/p&gt;
+&lt;p&gt;谢谢你看我的文章，我们，下次再见。&lt;/p&gt;
+&lt;p&gt;/ 作者：大强同学
+/ 更多干货，请访问：dqtx.cc&lt;/p&gt;
 </content:encoded></item><item><title>用 AI 两年，我劝你别太依赖它</title><link>https://dqtx.cc/posts/aihacks/%E7%94%A8-ai-%E4%B8%A4%E5%B9%B4%E6%88%91%E5%8A%9D%E4%BD%A0%E5%88%AB%E5%A4%AA%E4%BE%9D%E8%B5%96%E5%AE%83/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E7%94%A8-ai-%E4%B8%A4%E5%B9%B4%E6%88%91%E5%8A%9D%E4%BD%A0%E5%88%AB%E5%A4%AA%E4%BE%9D%E8%B5%96%E5%AE%83/</guid><pubDate>Sat, 16 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这两年，身边所有人都在聊 AI。&lt;/p&gt;
 &lt;p&gt;有人兴奋，说它能帮你写完整个项目；有人焦虑，怕自己明天就被取代；还有人已经用它月入十万，在知识星球里收徒授课。&lt;/p&gt;
 &lt;p&gt;我也在用 AI，每天都在用。但今天这篇，不是要给你打鸡血，也不是要告诉你怎么靠 AI 发财。我想聊点不一样的——聊聊这两年里，我自己走过的弯路，踩过的坑，以及那些「早知道就好了」的心得。&lt;/p&gt;
@@ -716,7 +886,9 @@ D 盘分区前部划出 100.00GB，并选择合并到系统 (C:)。
 &lt;li&gt;&lt;a href=&quot;https://www.uy5.net/diskgenius/&quot;&gt;软件下载&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.bilibili.com/video/BV1AY4y1Y7wB/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=206031f494850e57fd6c92ace02b1bed&quot;&gt;操作教程&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
-</content:encoded></item><item><title>飞书开源CLI工具45天获万星</title><link>https://dqtx.cc/posts/aihacks/%E9%A3%9E%E4%B9%A6%E5%BC%80%E6%BA%90cli/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E9%A3%9E%E4%B9%A6%E5%BC%80%E6%BA%90cli/</guid><pubDate>Fri, 15 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;让人类和 AI Agent 都能在终端中操作飞书。覆盖消息、文档、多维表格、电子表格、幻灯片、日历、邮箱、任务、会议、Markdown 等核心业务域，提供 200+ 命令及 24 个 AI Agent &lt;a href=&quot;https://github.com/larksuite/cli/blob/main/skills&quot;&gt;Skills&lt;/a&gt;。&lt;/p&gt;
+</content:encoded></item><item><title>飞书lark-cli，45天获万星！</title><link>https://dqtx.cc/posts/aihacks/%E9%A3%9E%E4%B9%A6%E5%BC%80%E6%BA%90cli/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E9%A3%9E%E4%B9%A6%E5%BC%80%E6%BA%90cli/</guid><pubDate>Fri, 15 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;一个让你和 AI Agent 都能在终端中操作飞书cli。覆盖消息、文档、多维表格、电子表格、幻灯片、日历、邮箱、任务、会议、Markdown 等核心业务域，提供 200+ 命令及 24 个 AI Agent &lt;a href=&quot;https://github.com/larksuite/cli/blob/main/skills&quot;&gt;Skills&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;想写这篇文章很久了，说实话，这个工具刚上线我就安装了，但当时很多功能根本用不了。这段时间，又有人频频推荐，于是我重新安装，实测发现所有功能都能正常使用了。这篇文章其实攒了很久，我真心推荐你去安装使用它。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/lark-cli.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;项目地址
 https://github.com/larksuite/cli&lt;/p&gt;
 &lt;h3&gt;安装与配置&lt;/h3&gt;
@@ -724,15 +896,11 @@ https://github.com/larksuite/cli&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;npm install -g @larksuite/cli
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;strong&gt;第 2 步 — 配置应用凭证&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
 &lt;p&gt;在后台运行此命令，命令会输出一个授权链接，提取该链接并发送给用户，用户在浏览器中完成配置后命令会自动退出。&lt;/p&gt;
-&lt;/blockquote&gt;
 &lt;pre&gt;&lt;code&gt;lark-cli config init --new
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;strong&gt;第 3 步 — 交互式登录&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
 &lt;p&gt;同上，后台运行，提取授权链接发给用户。&lt;/p&gt;
-&lt;/blockquote&gt;
 &lt;pre&gt;&lt;code&gt;lark-cli auth login
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260516004325433.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -742,60 +910,28 @@ https://github.com/larksuite/cli&lt;/p&gt;
 &lt;p&gt;完整文档参考：
 https://github.com/larksuite/cli/blob/main/README.zh.md&lt;/p&gt;
 &lt;h3&gt;在Claude code使用&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;消息与沟通&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&quot;帮我搜下云文档里关于 XX 的文档&quot;&lt;/li&gt;
-&lt;li&gt;&quot;帮我搜下飞书技术笔记知识库里关于chrome的文档&quot;&lt;/li&gt;
-&lt;li&gt;&quot;给张三发送消息：明天的会议取消&quot;&lt;/li&gt;
-&lt;li&gt;&quot;查看我最近未读的消息&quot;&lt;/li&gt;
-&lt;li&gt;&quot;在某某群聊里发一条消息：本周五下午3点团建&quot;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;文档操作&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&quot;帮我创建一篇飞书文档&quot;&lt;/li&gt;
-&lt;li&gt;&quot;在飞书文档里插入这张图&quot;&lt;/li&gt;
-&lt;li&gt;&quot;帮我搜索所有包含&apos;项目计划&apos;的文档&quot;&lt;/li&gt;
-&lt;li&gt;&quot;把这段内容追加到我的笔记文档里&quot;&lt;/li&gt;
-&lt;li&gt;&quot;创建一个多维表格，包含姓名、部门、入职时间三个字段&quot;&lt;/li&gt;
-&lt;li&gt;&quot;读取我昨天创建的文档内容&quot;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;日程管理&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&quot;查下我今天的日程&quot;&lt;/li&gt;
-&lt;li&gt;&quot;明天下午3点帮我安排一个会议，参与人：张三、李四&quot;&lt;/li&gt;
-&lt;li&gt;&quot;查看本周所有的会议安排&quot;&lt;/li&gt;
-&lt;li&gt;&quot;取消后天的产品评审会议&quot;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;文件与云盘&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&quot;把这份PDF上传到我的云盘&quot;&lt;/li&gt;
-&lt;li&gt;&quot;在云盘搜索文件名包含&apos;报告&apos;的文件&quot;&lt;/li&gt;
-&lt;li&gt;&quot;创建一个共享文件夹，名字叫&apos;项目资料&apos;&quot;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;任务与协作&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&quot;创建一个任务：完成Q2总结报告，截止日期本周五&quot;&lt;/li&gt;
-&lt;li&gt;&quot;查看我负责的所有进行中的任务&quot;&lt;/li&gt;
-&lt;li&gt;&quot;把这份文档分享给整个团队&quot;&lt;/li&gt;
+&lt;li&gt;帮我搜下云文档里关于 XX 的文档&lt;/li&gt;
+&lt;li&gt;帮我搜下飞书技术笔记知识库里关于chrome的文档&lt;/li&gt;
+&lt;li&gt;帮我创建一篇飞书文档&lt;/li&gt;
+&lt;li&gt;在飞书文档里插入这张图&lt;/li&gt;
+&lt;li&gt;帮我搜索所有包含&apos;项目计划&apos;的文档&lt;/li&gt;
+&lt;li&gt;把这段内容追加到我的笔记文档里&lt;/li&gt;
+&lt;li&gt;创建一个多维表格，包含姓名、部门、入职时间三个字段&lt;/li&gt;
+&lt;li&gt;读取我昨天创建的文档内容&lt;/li&gt;
+&lt;li&gt;把这份PDF上传到我的云盘&lt;/li&gt;
+&lt;li&gt;在云盘搜索文件名包含&apos;报告&apos;的文件&lt;/li&gt;
+&lt;li&gt;创建一个共享文件夹，名字叫&apos;项目资料&apos;&lt;/li&gt;
+&lt;li&gt;创建一个任务：完成Q2总结报告，截止日期本周五&lt;/li&gt;
+&lt;li&gt;查看我负责的所有进行中的任务&lt;/li&gt;
+&lt;li&gt;把这份文档分享给整个团队&lt;/li&gt;
+&lt;li&gt;创建一个多维表格，记录团队值班安排，包含日期、姓名、备注三个字段&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;整个过程自然流畅，AI直接执行，不需要你在多个工具之间来回切换。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;实际对话示例&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;你&lt;/strong&gt;：帮我搜下飞书技术笔记知识库里关于chrome的文档&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Claude&lt;/strong&gt;：好的，我来帮你搜索... 找到了3篇相关文档：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Chrome浏览器性能优化指南&lt;/li&gt;
-&lt;li&gt;Chrome开发者工具使用技巧&lt;/li&gt;
-&lt;li&gt;Chrome扩展开发文档
-需要我打开哪一篇？&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;你&lt;/strong&gt;：创建一个多维表格，记录团队值班安排，包含日期、姓名、备注三个字段&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Claude&lt;/strong&gt;：已创建完成！表格链接：https://xxx 需要我现在帮你填充这周的值班数据吗？&lt;/p&gt;
-&lt;/blockquote&gt;
 &lt;p&gt;缺点当然也有：每次添加新权限需要重新授权，飞书应用的管理也需要一点学习成本。&lt;/p&gt;
-&lt;p&gt;以上，既然看到这里了，如果你觉得内容不错，随手&lt;strong&gt;点个赞、在看、转发&lt;/strong&gt;三连吧！如果想第一时间收到推送，可以给我点个星标 ⭐～&lt;/p&gt;
+&lt;p&gt;PS.我整理一份Lark-cli完整命令手册，可保存下来给你的Agent看。
+https://www.cnblogs.com/dqtx33/p/20075301&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;以上，既然看到这里了，如果你觉得内容不错，随手点个赞、在看、转发三连吧！如果想第一时间收到推送，可以给我点个星标 ⭐～&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;谢谢你看我的文章，我们，下次再见。&lt;/p&gt;
 </content:encoded></item><item><title>rss工具</title><link>https://dqtx.cc/posts/software/rss/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/rss/</guid><pubDate>Fri, 15 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;AI 驱动的新闻聚合_阅__读__器_。&lt;em&gt;RSS&lt;/em&gt; 订_阅_ + AI 摘要 + 全文翻译。
 https://github.com/Zoroaaa/newspulse&lt;/p&gt;
@@ -814,8 +950,14 @@ https://github.com/joeseesun/AIGC_Telegram_Bot/tree/main&lt;/p&gt;
 &lt;p&gt;推荐 10 个网页端 RSS 阅读器，目前在用第一个
 https://xiaoshuapp.com/blog/posts/10-web-rss-reader.html&lt;/p&gt;
 &lt;p&gt;karpathy大佬推荐的 RSS 优质信息源列表&lt;/p&gt;
-</content:encoded></item><item><title>Gemini cli 登录异常解法</title><link>https://dqtx.cc/posts/aihacks/gemini-cli-%E7%99%BB%E5%BD%95%E5%BC%82%E5%B8%B8%E8%A7%A3%E6%B3%95/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/gemini-cli-%E7%99%BB%E5%BD%95%E5%BC%82%E5%B8%B8%E8%A7%A3%E6%B3%95/</guid><pubDate>Thu, 14 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;事情是这样的。&lt;/p&gt;
-&lt;p&gt;今天下午，有个项目要用到 Gemini CLI，我想着那就登一下吧，反正之前也用过。&lt;/p&gt;
+</content:encoded></item><item><title>Gemini cli 登录异常解法</title><link>https://dqtx.cc/posts/aihacks/gemini-cli-%E5%AE%89%E8%A3%85%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/gemini-cli-%E5%AE%89%E8%A3%85%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</guid><pubDate>Thu, 14 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;事情是这样的。&lt;/p&gt;
+&lt;p&gt;今天下午，有个项目要用到 Gemini CLI，显示打不开
+我就输入命令，重新安装了下&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm install -g @google/gemini-cli
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后启动&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;gemini -a -y
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;结果终端输完命令，点完授权，跳完浏览器，回到终端。&lt;/p&gt;
 &lt;p&gt;就给我看这个。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260514173105947.webp&quot; alt=&quot;844&quot; /&gt;&lt;/p&gt;
@@ -1175,7 +1317,7 @@ https://x.com/seekjourney/status/1977307327645835478&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260511220313821.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;下载&amp;amp;安装&lt;/h3&gt;
 &lt;p&gt;https://www.codebuddy.cn/home/&lt;/p&gt;
-&lt;p&gt;首次打开需要微信登录，手机验证后即可使用&lt;/p&gt;
+&lt;p&gt;首次打开需要微信登录，手机验证后即可使用s&lt;/p&gt;
 &lt;p&gt;新用户赠送2500个积分：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;基础体验包&lt;/li&gt;
@@ -1191,6 +1333,12 @@ https://www.codebuddy.cn/profile/plan&lt;/p&gt;
 &lt;p&gt;个人专业版一个月58元，一年696元。&lt;/p&gt;
 &lt;p&gt;也可以接入其他厂商模型&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260511180600420.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;连接器&lt;/h3&gt;
+&lt;p&gt;WorkBuddy 连接器，一键打通外部服务，让 AI 能力不再局限。&lt;/p&gt;
+&lt;p&gt;无需复杂配置，通过内置的多平台连接器，可快速对接 QQ 邮箱、腾讯文档、企业微信、GitHub、Notion 等工具的能，实现自然语言收发邮件、管理文档、协作开发、智能查询等操作。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260520002229390.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;我最近在整理客户案例，计划在金山文档建一个 “客户案例” 文件夹，要收集 100 个案例，每个客户单独建一个文档，还得给每个文档预填统一的模板框架。要是手动一个个创建、命名、填模板，少说也要花大半天。但用 WorkBuddy 的金山文档连接器，我只需要说清楚需求，它就能一次性帮我生成好 100 个按 “客户 001 - 张山、客户 002 - 李明” 规则命名的文档，每个文档里都提前填好了模板框架，我只需要专注写内容就行，完全不用在重复操作上浪费时间。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260520003100379.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;微信集成方法&lt;/h3&gt;
 &lt;p&gt;官网文档
 https://www.codebuddy.cn/docs/workbuddy/WeixinBot-Guide&lt;/p&gt;
@@ -3817,6 +3965,7 @@ https://github.com/victorchen96/deepseek_v4_rolepaly_instruct&lt;/p&gt;
 </content:encoded></item><item><title>Claude code 安装教程</title><link>https://dqtx.cc/posts/aihacks/claude-code-%E5%AE%89%E8%A3%85/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/claude-code-%E5%AE%89%E8%A3%85/</guid><pubDate>Fri, 24 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这篇文章是我整理的远程安装CC全套SOP文档，今天免费公开分享给大家。不止会手把手教你顺利安装CC，同时还会顺带讲解Obsidian相关配置，全程带大家实操学会 Cloud Code 的完整使用方法，一站式搞定部署与实操，新手也能直接跟着操作，方便大家直接上手使用。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260424220034771.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;一.安装Claude code&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/comeonzhj/easy-skills/releases/tag/v1.0.0&quot;&gt;easy-skills&lt;/a&gt;：全自动Claude code安装助手&lt;/p&gt;
 &lt;h3&gt;Node.js(&lt;a href=&quot;https://nodejs.org/en/download/&quot;&gt;安装包&lt;/a&gt;)&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;winget install OpenJS.NodeJS.LTS
 &lt;/code&gt;&lt;/pre&gt;
@@ -3851,10 +4000,12 @@ claude --dangerously-skip-permissions
 &lt;h3&gt;拉取仓库模板&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;get clone 
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;https://github.com/dqtx760/obsidian-vault-template
-https://github.com/jason-effi-lab/karpathy-llm-wiki-vault
-https://github.com/iBlinkQ/llm-wiki-obsidian-blink
-https://github.com/iamzhihuix/obsidian-ai-vault-template&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;https://github.com/dqtx760/obsidian-vault-template&lt;/li&gt;
+&lt;li&gt;https://github.com/jason-effi-lab/karpathy-llm-wiki-vault&lt;/li&gt;
+&lt;li&gt;https://github.com/iBlinkQ/llm-wiki-obsidian-blink&lt;/li&gt;
+&lt;li&gt;https://github.com/iamzhihuix/obsidian-ai-vault-template&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;一条命令自动搭建Andrej Karpathy 的 LLM Wiki AI 知识库：&lt;a href=&quot;https://github.com/eleven-net-cn/llm-wiki-starter/blob/main/README.zh-CN.md&quot;&gt;查看命令&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;Claudian出现报错&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;Claude code在终端使用正常， 但在Obsidian的插件中Claudian对话异常,帮我排除下原因
@@ -6110,40 +6261,31 @@ sort file.mtime asc
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260406201347691.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;一、先安装 3 个工具&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;h3&gt;WezTerm&lt;/h3&gt;
-&lt;p&gt;https://wezterm.org/install/windows.html
+&lt;h3&gt;1. WezTerm&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;https://wezterm.org/install/windows.html
 Windows (setup.exe)「推荐」
 会自动集成在鼠标右键上下文菜单中
-建议安装默认位置&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
+建议安装默认位置
+&lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;Nushell二进制文件&lt;/h3&gt;
-&lt;p&gt;https://github.com/nushell/nushell/releases
-下载nu-0.109.1-x86_64-pc-windows-msvc.msi&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
+&lt;pre&gt;&lt;code&gt;https://github.com/nushell/nushell/releases
+下载nu-0.109.1-x86_64-pc-windows-msvc.msi
+&lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;Starship&lt;/h3&gt;
-&lt;p&gt;https://github.com/starship/starship/releases/tag/v1.24.2
-下载starship-x86_64-pc-windows-msvc.msi&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;https://github.com/starship/starship/releases/tag/v1.24.2
+下载starship-x86_64-pc-windows-msvc.msi
+&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;strong&gt;附:winget下载安装命令&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;winget install wez.wezterm
 winget install Nushell.Nushell
 winget install Starship.Starship
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2&gt;二、核心配置&lt;/h2&gt;
-&lt;h3&gt;1. WezTerm 配置：默认启动 Nushell&lt;/h3&gt;
+&lt;h4&gt;1. WezTerm 配置：默认启动 Nushell&lt;/h4&gt;
 &lt;p&gt;新建：C:\Users\你的用户名.wezterm.lua
 自用配置文件：&lt;a href=&quot;https://github.com/dqtx760/cfg/blob/main/WezTerm/.wezterm.lua&quot;&gt;点此查看&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;快捷键&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;需要安装 &lt;code&gt;CaskaydiaCove Nerd Font&lt;/code&gt; 字体才能正常显示图标
-下面的是我自定义的一些快捷键&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3&gt;2. Nushell 配置：自动加载 Starship&lt;/h3&gt;
+&lt;p&gt;需要安装 &lt;code&gt;CaskaydiaCove Nerd Font&lt;/code&gt; 字体才能正常显示图标。&lt;/p&gt;
+&lt;h4&gt;2. Nushell 配置：自动加载 Starship&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;C:\Users\Administrator\AppData\Roaming\nushell\config.nu&lt;/p&gt;
@@ -6152,19 +6294,18 @@ winget install Starship.Starship
 &lt;p&gt;自用配置文件：&lt;a href=&quot;https://github.com/dqtx760/cfg/blob/main/WezTerm/config.nu&quot;&gt;点此查看&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;3. Starship 配置（可选美化）&lt;/h3&gt;
+&lt;h4&gt;3. Starship 配置（可选美化）&lt;/h4&gt;
 &lt;p&gt;我的使用的是&lt;a href=&quot;https://starship.rs/zh-CN/presets/pastel-powerline&quot;&gt;Pastel Powerline Preset&lt;/a&gt;主题
 一键创建配置文件（C:\Users\Administrator.config\starship.toml）&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;starship preset pastel-powerline -o ~/.config/starship.toml
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;自用配置文件：&lt;a href=&quot;https://github.com/dqtx760/cfg/blob/main/WezTerm/starship.toml&quot;&gt;点此查看&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;三、最终效果&lt;/h2&gt;
-&lt;h3&gt;配置说明&lt;/h3&gt;
+&lt;h2&gt;三、使用说明&lt;/h2&gt;
+&lt;h4&gt;最终效果&lt;/h4&gt;
 &lt;p&gt;这是一个高度自定义的 WezTerm 终端配置文件，专门针对日常开发、AI 聊天（如 Qwen Code）和美观体验进行了优化。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260420182653671.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260406171739845.webp&quot; alt=&quot;image.png&quot; /&gt;
-&lt;strong&gt;主要特点：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260406171739845.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;h4&gt;&lt;strong&gt;配置说明：&lt;/strong&gt;&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;使用 OneHalfDark 配色方案，文字颜色为柔和灰色（#D4D4D4），长时间阅读更护眼。&lt;/li&gt;
 &lt;li&gt;隐藏系统标题栏，仅保留可调整大小的边框，窗口顶部保留 30px 透明区域用于视觉美观。&lt;/li&gt;
@@ -6195,7 +6336,10 @@ winget install Starship.Starship
 &lt;li&gt;设置 bypass_mouse_reporting_modifiers 为 SHIFT，进一步提升在支持鼠标报告的程序中的兼容性。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;此配置兼顾了美观、实用性和 AI 聊天场景下的稳定性，适合需要高自定义终端的用户使用。&lt;/p&gt;
-&lt;h3&gt;快捷键总览&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;后续标签增删话术&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;C:\Users\Administrator\.wezterm.lua把启动区块从 4 个标签改成 3 个，并按顺序：Claude → Qwen → Shell。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;快捷键总览&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -6278,7 +6422,7 @@ winget install Starship.Starship
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h3&gt;鼠标快捷键&lt;/h3&gt;
+&lt;h4&gt;鼠标快捷键&lt;/h4&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -6609,6 +6753,9 @@ obsidian task:complete task=任务ID
 &lt;p&gt;写完之后自己都不想看第二遍，更别说发出来了？&lt;/p&gt;
 &lt;p&gt;我一直觉得，AI 时代最缺的已经不是「能帮你写东西的工具」了，而是&lt;strong&gt;一套完整的工作流&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;直到我发现了 &lt;strong&gt;newtype-os&lt;/strong&gt;。内核是一套 &lt;strong&gt;8 Agent 多层编排系统&lt;/strong&gt;，配备专业 Skills 和记忆系统，专为内容生产场景打造。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;项目地址&lt;/strong&gt;：
+https://github.com/newtype-01/newtype-os/blob/main/README.zh-cn.md&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Generated_Image_1zejbk1zejbk1zej.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;你可以把它理解为：&lt;strong&gt;一个驻扎在终端里的内容团队&lt;/strong&gt;。主编（Chief）负责与你对话、拆解需求；副主编（Deputy）调度执行；6 位专家各司其职——调研、核查、检索、提取、撰写、编辑。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;你 ↔ Chief（主编）—— 思考伙伴 + 任务协调
               ↓
@@ -6627,7 +6774,18 @@ obsidian task:complete task=任务ID
     ├─ Writer（撰稿人）—— 素材 → 结构化初稿
     └─ Editor（编辑）—— 润色、逻辑加固、风格统一
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;Agent 团队&lt;/h2&gt;
+&lt;h2&gt;01. 快速上手&lt;/h2&gt;
+&lt;h3&gt;安装&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;npm install -g @newtype-os/cli
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;安装完后先启动，初始化配置：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;nt         # 启动后直接说话
+nt init    # 初始化配置，注入技能到其他 AI 工具
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;配置 Agent 模型&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;C:\Users\Administrator\.config\newtype\newtype-profile.json
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Agent 团队&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -6679,7 +6837,7 @@ obsidian task:complete task=任务ID
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2&gt;内置 Skills 与 MCP 服务器&lt;/h2&gt;
+&lt;h3&gt;内置 Skills 与 MCP 服务器&lt;/h3&gt;
 &lt;p&gt;Agent 在执行任务时会自动加载对应的 Skill 框架：&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -6732,7 +6890,7 @@ obsidian task:complete task=任务ID
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2&gt;CLI 命令&lt;/h2&gt;
+&lt;h3&gt;CLI 命令&lt;/h3&gt;
 &lt;p&gt;除了 TUI 交互界面，newtype 还提供一组面向命令行和 AI Agent 调用的专业命令（均支持 &lt;code&gt;--json&lt;/code&gt; 输出）：&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -6825,17 +6983,7 @@ obsidian task:complete task=任务ID
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;strong&gt;项目地址&lt;/strong&gt;：https://github.com/newtype-01/newtype-os/blob/main/README.zh-cn.md&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Generated_Image_1zejbk1zejbk1zej.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;01. 快速上手&lt;/h2&gt;
-&lt;h3&gt;安装&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;npm install -g @newtype-os/cli
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;安装完后先启动，初始化配置：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;nt         # 启动后直接说话
-nt init    # 初始化配置，注入技能到其他 AI 工具
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;相关命令&lt;/h3&gt;
+&lt;h3&gt;交互命令&lt;/h3&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
