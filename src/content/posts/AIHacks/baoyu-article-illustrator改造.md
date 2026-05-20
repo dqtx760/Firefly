@@ -7,13 +7,13 @@ tags:
 category: AIHacks
 draft: false
 pinned: false
-image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-dual-pipeline-20260517-0153.webp
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/cshoutu.webp
 ---
 我写公众号文章，有两件事是刚需：**文章内配图**和**封面图**。
 
 之前这两个需求分别用两个不同的技能来满足——`baoyu-article-illustrator` 负责给正文配图，封面则靠手动折腾。最近我把它们统一到了同一个生图后端上，整个流程顺畅了不少。
 
-![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-dual-pipeline-20260517-0153.webp)
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/cshoutu.webp)
 
 
 ### 先说起因
@@ -66,5 +66,10 @@ article-cover-16x9       → 提炼标题 → 构造封面 prompt → GPT-Image-
 
  一美元 200 张图，一个月重度使用不到六块钱。换来的是每篇文章都有干净、高质量、风格统一的原创配图。
 
+以上，既然看到这里了，如果觉得不错，随手点个赞、在看、转发三连吧，如果想第一时间收到推送，也可以给我个星标⭐～
+谢谢你看我的文章，我们，下次再见。
+
+/ 作者：大强同学
+/ 更多干货，请访问：dqtx.cc
 
 

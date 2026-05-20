@@ -98,6 +98,9 @@ https://github.com/Ariestar/obsidian-dragger
 notion-block
 https://github.com/BCS1037/notion-block/releases/tag/1.0.0
 
+### 21.Custom Attachment Location 图片自定义
+https://www.cnblogs.com/dqtx33/p/20087607
+
 ----
 
 如果你也有什么私藏神器，欢迎在评论区留言推荐，互相种草！觉得有帮助的话，点个赞再走呗～

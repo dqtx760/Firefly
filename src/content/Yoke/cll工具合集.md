@@ -24,6 +24,11 @@ https://docs.github.com/en/github-cli/github-cli/quickstart#about-github-cli
 ### Office CLI
 https://x.com/manateelazycat/status/2054427205317616086?s=20
 
+### wx-cli
+https://github.com/jackwener/wx-cli
+
+
+
 
 ### Open CLI
 让 AI Agent 操作任意网站，wx-cli / tg-cli / discord-cli 全部接入。群消息、聊天记录、朋友圈、收藏夹——全部可以用 CLI 直接拿到。

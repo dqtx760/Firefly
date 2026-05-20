@@ -14,6 +14,9 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/202604242200
 
 ## 一.安装Claude code
 
+[easy-skills](https://github.com/comeonzhj/easy-skills/releases/tag/v1.0.0)：全自动Claude code安装助手
+
+
 ### Node.js([安装包](https://nodejs.org/en/download/))
 ```
 winget install OpenJS.NodeJS.LTS
@@ -75,10 +78,10 @@ winget install Git.Git
 get clone 
 ```
 
-https://github.com/dqtx760/obsidian-vault-template
-https://github.com/jason-effi-lab/karpathy-llm-wiki-vault
-https://github.com/iBlinkQ/llm-wiki-obsidian-blink
-https://github.com/iamzhihuix/obsidian-ai-vault-template
+- https://github.com/dqtx760/obsidian-vault-template
+- https://github.com/jason-effi-lab/karpathy-llm-wiki-vault
+- https://github.com/iBlinkQ/llm-wiki-obsidian-blink
+- https://github.com/iamzhihuix/obsidian-ai-vault-template
 
 一条命令自动搭建Andrej Karpathy 的 LLM Wiki AI 知识库：[查看命令](https://github.com/eleven-net-cn/llm-wiki-starter/blob/main/README.zh-CN.md)
 

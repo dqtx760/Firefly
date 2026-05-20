@@ -21,7 +21,7 @@ WorkBuddy 一击致命：先写需求、再挂技能，彻底杜绝误触；原�
 ### 下载&安装
 https://www.codebuddy.cn/home/
 
-首次打开需要微信登录，手机验证后即可使用
+首次打开需要微信登录，手机验证后即可使用s
 
 新用户赠送2500个积分：
 - 基础体验包
@@ -45,6 +45,16 @@ https://www.codebuddy.cn/profile/plan
 
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260511180600420.webp)
 
+### 连接器
+WorkBuddy 连接器，一键打通外部服务，让 AI 能力不再局限。
+
+无需复杂配置，通过内置的多平台连接器，可快速对接 QQ 邮箱、腾讯文档、企业微信、GitHub、Notion 等工具的能，实现自然语言收发邮件、管理文档、协作开发、智能查询等操作。
+
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260520002229390.webp)
+
+我最近在整理客户案例，计划在金山文档建一个 “客户案例” 文件夹，要收集 100 个案例，每个客户单独建一个文档，还得给每个文档预填统一的模板框架。要是手动一个个创建、命名、填模板，少说也要花大半天。但用 WorkBuddy 的金山文档连接器，我只需要说清楚需求，它就能一次性帮我生成好 100 个按 “客户 001 - 张山、客户 002 - 李明” 规则命名的文档，每个文档里都提前填好了模板框架，我只需要专注写内容就行，完全不用在重复操作上浪费时间。
+
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260520003100379.webp)
 
 
 ### 微信集成方法

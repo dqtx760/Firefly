@@ -9,7 +9,19 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/202605141731
 ---
 事情是这样的。
 
-今天下午，有个项目要用到 Gemini CLI，我想着那就登一下吧，反正之前也用过。
+今天下午，有个项目要用到 Gemini CLI，显示打不开
+我就输入命令，重新安装了下
+
+```
+npm install -g @google/gemini-cli
+```
+
+然后启动
+
+```
+gemini -a -y
+```
+
 
 结果终端输完命令，点完授权，跳完浏览器，回到终端。
 

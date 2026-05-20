@@ -8,9 +8,7 @@ draft: false
 pinned: false
 image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260406201347691.webp
 ---
-
 今天分享一套**颜值高、速度快、功能强**的终端组合：
-
 
 
 - **WezTerm**：GPU 加速终端模拟器
@@ -21,27 +19,23 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-202604
 
 ## 一、先安装 3 个工具
 
-1. ### WezTerm
+### 1. WezTerm
    
     https://wezterm.org/install/windows.html
     Windows (setup.exe)「推荐」
     会自动集成在鼠标右键上下文菜单中
     建议安装默认位置
 
-
-
-2. ### Nushell二进制文件
+###  Nushell二进制文件
    
     https://github.com/nushell/nushell/releases
     下载nu-0.109.1-x86_64-pc-windows-msvc.msi
 
 
-
-3. ### Starship
+### Starship
    
     https://github.com/starship/starship/releases/tag/v1.24.2
     下载starship-x86_64-pc-windows-msvc.msi
-
 
 
 **附:winget下载安装命令**
@@ -56,32 +50,23 @@ winget install Starship.Starship
 
 ## 二、核心配置
 
-### 1. WezTerm 配置：默认启动 Nushell
+#### 1. WezTerm 配置：默认启动 Nushell
 
- 新建：C:\Users\你的用户名.wezterm.lua
+新建：C:\Users\你的用户名.wezterm.lua
 自用配置文件：[点此查看](https://github.com/dqtx760/cfg/blob/main/WezTerm/.wezterm.lua)
 
- 
-
-**快捷键**
-
-> 需要安装 `CaskaydiaCove Nerd Font` 字体才能正常显示图标
->  下面的是我自定义的一些快捷键
+需要安装 `CaskaydiaCove Nerd Font` 字体才能正常显示图标。
 
 
 
-### 2. Nushell 配置：自动加载 Starship
+#### 2. Nushell 配置：自动加载 Starship
 
 - C:\Users\Administrator\AppData\Roaming\nushell\config.nu
 
 - 自用配置文件：[点此查看](https://github.com/dqtx760/cfg/blob/main/WezTerm/config.nu)
 
 
-
-
-### 3. Starship 配置（可选美化）
-
-
+#### 3. Starship 配置（可选美化）
 
  我的使用的是[Pastel Powerline Preset](https://starship.rs/zh-CN/presets/pastel-powerline)主题
  一键创建配置文件（C:\Users\Administrator.config\starship.toml）
@@ -92,17 +77,17 @@ starship preset pastel-powerline -o ~/.config/starship.toml
 
 自用配置文件：[点此查看](https://github.com/dqtx760/cfg/blob/main/WezTerm/starship.toml)
 
-## 三、最终效果
-### 配置说明
+## 三、使用说明
+#### 最终效果
 
 这是一个高度自定义的 WezTerm 终端配置文件，专门针对日常开发、AI 聊天（如 Qwen Code）和美观体验进行了优化。
 
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260420182653671.webp)
 
-![](D:\project2026\fuwari\src\content\posts\Software\assets\WezTerm\file-20260420152819253.png)
 
 ![image.png](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260406171739845.webp)
-**主要特点：**
+
+#### **配置说明：**
 
 - 使用 OneHalfDark 配色方案，文字颜色为柔和灰色（#D4D4D4），长时间阅读更护眼。
 - 隐藏系统标题栏，仅保留可调整大小的边框，窗口顶部保留 30px 透明区域用于视觉美观。
@@ -131,8 +116,12 @@ starship preset pastel-powerline -o ~/.config/starship.toml
 
 此配置兼顾了美观、实用性和 AI 聊天场景下的稳定性，适合需要高自定义终端的用户使用。
 
+**后续标签增删话术**
+```
+C:\Users\Administrator\.wezterm.lua把启动区块从 4 个标签改成 3 个，并按顺序：Claude → Qwen → Shell。
+```
 
-### 快捷键总览
+#### 快捷键总览
 
 | 快捷键               | 功能说明                      |
 | ----------------- | ------------------------- |
@@ -155,7 +144,7 @@ starship preset pastel-powerline -o ~/.config/starship.toml
 | `Ctrl + 7`        | 切换到标签页 7                  |
 | `Ctrl + 8`        | 切换到标签页 8                  |
 
-### 鼠标快捷键
+#### 鼠标快捷键
 
 | 操作                          | 功能说明                                      |
 |-------------------------------|-----------------------------------------------|

@@ -20,6 +20,11 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Gener
 
 直到我发现了 **newtype-os**。内核是一套 **8 Agent 多层编排系统**，配备专业 Skills 和记忆系统，专为内容生产场景打造。
 
+**项目地址**：
+https://github.com/newtype-01/newtype-os/blob/main/README.zh-cn.md
+
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Generated_Image_1zejbk1zejbk1zej.webp)
+
 你可以把它理解为：**一个驻扎在终端里的内容团队**。主编（Chief）负责与你对话、拆解需求；副主编（Deputy）调度执行；6 位专家各司其职——调研、核查、检索、提取、撰写、编辑。
 
 ```
@@ -41,7 +46,30 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Gener
     └─ Editor（编辑）—— 润色、逻辑加固、风格统一
 ```
 
-## Agent 团队
+
+
+## 01. 快速上手
+
+### 安装
+
+```bash
+npm install -g @newtype-os/cli
+```
+
+安装完后先启动，初始化配置：
+
+```bash
+nt         # 启动后直接说话
+nt init    # 初始化配置，注入技能到其他 AI 工具
+```
+
+### 配置 Agent 模型
+
+```
+C:\Users\Administrator\.config\newtype\newtype-profile.json
+```
+
+### Agent 团队
 
 | Agent            | 角色  | 职责                        |
 | ---------------- | --- | ------------------------- |
@@ -54,7 +82,7 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Gener
 | **Writer**       | 撰稿人 | 将素材转化为结构化初稿               |
 | **Editor**       | 编辑  | 语言润色、逻辑加固、风格统一            |
 
-## 内置 Skills 与 MCP 服务器
+### 内置 Skills 与 MCP 服务器
 
 Agent 在执行任务时会自动加载对应的 Skill 框架：
 
@@ -69,7 +97,7 @@ Agent 在执行任务时会自动加载对应的 Skill 框架：
 | **Super Obsidian**     | `/super-obsidian`     | Obsidian CLI 优先的笔记库操作：搜索、阅读、创建与管理笔记                         |
 | **MCP 集成**             | -                     | 内置微信桥接（WeClaw）、知识图谱、外部 API 等 MCP 服务器                        |
 
-## CLI 命令
+### CLI 命令
 
 除了 TUI 交互界面，newtype 还提供一组面向命令行和 AI Agent 调用的专业命令（均支持 `--json` 输出）：
 
@@ -92,26 +120,8 @@ Agent 在执行任务时会自动加载对应的 Skill 框架：
 | `nt doctor`                 | -                               | 环境诊断与健康检查                                      |
 | `nt update`                 | -                               | 检查并更新版本                                        |
 
-**项目地址**：https://github.com/newtype-01/newtype-os/blob/main/README.zh-cn.md
 
-![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Generated_Image_1zejbk1zejbk1zej.webp)
-
-## 01. 快速上手
-
-### 安装
-
-```bash
-npm install -g @newtype-os/cli
-```
-
-安装完后先启动，初始化配置：
-
-```bash
-nt         # 启动后直接说话
-nt init    # 初始化配置，注入技能到其他 AI 工具
-```
-
-### 相关命令
+### 交互命令
 
 | 命令              | 说明                             |
 | --------------- | ------------------------------ |
