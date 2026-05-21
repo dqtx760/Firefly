@@ -8,7 +8,7 @@ tags:
 category: AIHacks
 draft: false
 pinned: false
-image: /src/content/posts/AIHacks/images/cover-feishu-lark-cli-10k-stars-20260518-233600.png
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/lark-cli.webp
 ---
 一个让你和 AI Agent 都能在终端中操作飞书cli。覆盖消息、文档、多维表格、电子表格、幻灯片、日历、邮箱、任务、会议、Markdown 等核心业务域，提供 200+ 命令及 24 个 AI Agent [Skills](https://github.com/larksuite/cli/blob/main/skills)。
 

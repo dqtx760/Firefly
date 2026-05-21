@@ -55,7 +55,7 @@ C:\Users\Administrator\AISkills\UpdateCheck\SKILL.md
 | [手机Agent](../posts/AIHacks/%E6%89%8B%E6%9C%BAAgent.md)                                                                   | 2026-05-12 16:33 |
 | [gemini生成高级封面](../posts/AIHacks/gemini%E7%94%9F%E6%88%90%E9%AB%98%E7%BA%A7%E5%B0%81%E9%9D%A2.md)                         | 2026-05-12 00:54 |
 | [WorkBuddy](../posts/AIHacks/WorkBuddy.md)                                                                               | 2026-05-11 22:02 |
-| [Claude Code 窗口接管](../posts/AIHacks/Claude%20Code%20%E7%AA%97%E5%8F%A3%E6%8E%A5%E7%AE%A1.md)                             | 2026-05-10 22:47 |
+| [Claude Code 桥接工具](posts/AIHacks/Claude%20Code%20桥接工具.md)                             | 2026-05-10 22:47 |
 | [win安装Codex App](../posts/AIHacks/win%E5%AE%89%E8%A3%85Codex%20App.md)                                                   | 2026-05-09 22:04 |
 | [网站UI设计参考](../posts/AIHacks/网站UI设计参考.md) | 2026-05-09 01:24 |
 | [本地部署LLM&硬件参数](../posts/AIHacks/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2LLM%26%E7%A1%AC%E4%BB%B6%E5%8F%82%E6%95%B0.md)       | 2026-05-07 19:16 |
@@ -165,7 +165,7 @@ C:\Users\Administrator\AISkills\UpdateCheck\SKILL.md
 | [博客发布bat](../posts/Workflow/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B8%83bat.md) | 2026-04-14 12:41 |
 | [dataview脚本](../posts/Workflow/dataview%E8%84%9A%E6%9C%AC.md) | 2026-04-12 20:18 |
 | [Ob日记与模板](../posts/Workflow/Ob%E6%97%A5%E8%AE%B0%E4%B8%8E%E6%A8%A1%E6%9D%BF.md) | 2026-04-08 23:34 |
-| [NotebookLM](../posts/Workflow/NotebookLM.md) | 2026-03-23 00:23 |
+| [NotebookLM](posts/AIHacks/NotebookLM.md) | 2026-03-23 00:23 |
 | [博客工作流](../posts/Workflow/%E5%8D%9A%E5%AE%A2%E5%B7%A5%E4%BD%9C%E6%B5%81.md) | 2026-02-08 22:22 |
 | [OBS插件摄像头移动](../posts/Workflow/OBS%E6%8F%92%E4%BB%B6%E6%91%84%E5%83%8F%E5%A4%B4%E7%A7%BB%E5%8A%A8.md) | 2026-02-08 11:56 |
 | [API封生图Skill](../posts/Workflow/API%E5%B0%81%E7%94%9F%E5%9B%BESkill.md) | 2026-02-08 11:54 |

@@ -52,15 +52,17 @@ https://github.com/dqtx760/skills-manage
 | 23个专家角色  | [gstack](https://github.com/garrytan/gstack)       |     |       |
 
 #### 前端设计
-| 功能                  | skill开源地址                                                                                | 备注         | 使用&效果                                                     |
-| ------------------- | ---------------------------------------------------------------------------------------- | ---------- | --------------------------------------------------------- |
-| 前端设计去“AI味”统         | [frontend-design](https://github.com/anthropics/skills/tree/main/skills/frontend-design) | anthropics |                                                           |
-| 设计总监                | [ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)           |            | [styles](https://www.uupm.cc/#styles)                     |
-| skill 落地页           | [skill-site-generator](https://github.com/eze-is/skill-site-generator)                   | -泽Eze      | [效果示例](https://eze-is.github.io/skill-site-generator/)    |
-| 前端设计更出色             | [impeccable](https://github.com/pbakaus/impeccable/tree/main/.claude/skills/impeccable)  |            |                                                           |
-| 复刻大厂ui设计            | [Vawesome-design-md](https://github.com/VoltAgent/awesome-design-md)                     |            | [使用帮助](https://mp.weixin.qq.com/s/n0PNmmeBENxj5h2A3guWfg) |
-| 网站审计                | [Website-Audit](https://github.com/MarcinKilarski/Website-Audit)                         |            |                                                           |
-| 把飞书Wiki 知识库变成精美静态网站 | [feishu-doc-webify](https://github.com/wocha-xiaoli/feishu-doc-webify)                   |            |                                                           |
+| 功能                                | skill开源地址                                                                                   | 备注         | 使用&效果                                                     |
+| --------------------------------- | ------------------------------------------------------------------------------------------- | ---------- | --------------------------------------------------------- |
+| 前端设计去“AI味”统                       | [frontend-design](https://github.com/anthropics/skills/tree/main/skills/frontend-design)    | anthropics |                                                           |
+| 设计总监                              | [ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)              |            | [styles](https://www.uupm.cc/#styles)                     |
+| skill 落地页                         | [skill-site-generator](https://github.com/eze-is/skill-site-generator)                      | -泽Eze      | [效果示例](https://eze-is.github.io/skill-site-generator/)    |
+| 前端设计更出色                           | [impeccable](https://github.com/pbakaus/impeccable/tree/main/.claude/skills/impeccable)     |            |                                                           |
+| 复刻大厂ui设计                          | [Vawesome-design-md](https://github.com/VoltAgent/awesome-design-md)                        |            | [使用帮助](https://mp.weixin.qq.com/s/n0PNmmeBENxj5h2A3guWfg) |
+| 网站审计                              | [Website-Audit](https://github.com/MarcinKilarski/Website-Audit)                            |            |                                                           |
+| 把飞书Wiki 知识库变成精美静态网站               | [feishu-doc-webify](https://github.com/wocha-xiaoli/feishu-doc-webify)                      |            |                                                           |
+| **任何内容 → 播客 / PPT / 思维导图 / Quiz** | [qiaomu-anything-to-notebooklm](https://github.com/joeseesun/qiaomu-anything-to-notebooklm) |            |                                                           |
+|                                   |                                                                                             |            |                                                           |
 
 #### 内容创作
 

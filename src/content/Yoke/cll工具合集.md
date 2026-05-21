@@ -27,7 +27,8 @@ https://x.com/manateelazycat/status/2054427205317616086?s=20
 ### wx-cli
 https://github.com/jackwener/wx-cli
 
-
+### notebooklm-py
+https://github.com/teng-lin/notebooklm-py
 
 
 ### Open CLI
@@ -60,7 +61,7 @@ https://github.com/jackwener/wx-cli
 
 #### gcli
 一个 Gmail 只读 CLI
-[gcli，一个 Gmail 只读 CLI](../01_Raw/00_Clipings/gcli，一个%20Gmail%20只读%20CLI.md)
+[gcli，一个 Gmail 只读 CLI](../01-输入/0_Clipings/gcli，一个%20Gmail%20只读%20CLI.md)
 
 ### 参考
 cll工具导航

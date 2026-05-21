@@ -28,8 +28,16 @@ https://github.com/txl16095/MiniClaude
 
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260517213248392.webp)
 
+### Newtype-os
+**项目地址**：
+https://github.com/newtype-01/newtype-os/blob/main/README.zh-cn.md
 
-### GUi版
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260330163220785.webp)
+
+
+
+
+### GUI 形态
 #### claude-desktop-cn
 网页聊天只是入口，命令行工具门槛偏高；Claude Desktop CN 的价值，是把 AI 对话、本地项目、代码编辑、Git、命令执行、多 Agent 和插件能力，变成一个中文桌面工作台。
 
@@ -47,7 +55,6 @@ https://github.com/op7418/CodePilot
 
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260517214338508.webp)
 
-### 小众agent
 #### oh-my-openagent
 https://ohmyopenagent.com/zh
 https://github.com/code-yeongyu/oh-my-openagent/blob/dev/README.zh-cn.md
