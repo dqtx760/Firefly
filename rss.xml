@@ -487,6 +487,36 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/tech-shrimp&quot;&gt;tech-shrimp&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>阿里Qoder安装使用指南</title><link>https://dqtx.cc/posts/aihacks/%E9%98%BF%E9%87%8Cqoder/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E9%98%BF%E9%87%8Cqoder/</guid><pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;AI编程的进化速度，快得让人窒息。当大多数人还停留在让AI“辅助写两行代码”或者“帮忙寻找Bug”的阶段时，编程的下一步范式已经悄然迈向了“全自动托管与智能体自主开发”。&lt;/p&gt;
+&lt;p&gt;最近，阿里憋了几个月终于放出了 Qoder 1.0 正式版。相较于早期的测试版本，这次的1.0版可以说是直接推倒重做，带着极简克制的UI界面和极其强悍的自动化调度能力杀回了战场。&lt;/p&gt;
+&lt;p&gt;官网网站
+https://qoder.com/zh&lt;/p&gt;
+&lt;p&gt;有硬核开发者在短短两天内耗尽了一个Pro账号的所有积分，进行了深度的极压测试，得出的结论令人震撼：这不仅极大地吸收了各家之所长，更可能是目前体验最好、最推荐你亲自试一次的国产AI IDE。&lt;/p&gt;
+&lt;p&gt;如果你还在为改不完的Bug、写不完的文档以及繁琐的测试流程头秃，请务必静下心来看完这篇文章。因为它不仅是一个工具的更新，更可能彻底改变你接下来的工作方式。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/PixPin_2026-05-21_14-09-09.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;strong&gt;01 从“代码助手”到“全自动托管的虚拟专家团”&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;传统AI只是一个听指令办事的单体助手，但在 Qoder 1.0 中，你其实是拥有了一家高度协同的“虚拟科技公司”。&lt;/p&gt;
+&lt;p&gt;当你给出一个需求（如一份任务计划书 Spec）时，Qoder 独创的 Agent Harness 系统并不会盲目开写，而是会先派出一个“调研专家”来询问你关键细节（比如需要什么技术栈、什么设计风格）。确认后，系统会动态拉起一支包含十几个角色的“专家团”来并行工作。&lt;/p&gt;
+&lt;p&gt;例如，面对一个复杂的开发任务，系统可能瞬间实例化出3个调研员和1个全栈工程师。这3个调研员分工极其明确：一个专门去GitHub扒高星项目做竞品对标，一个去全网搜索行业指南，另一个甚至会直接去社交平台爬取真实的经验贴。这三者组合起来的调研深度和价值，远超普通大模型的 Deep Research 功能。&lt;/p&gt;
+&lt;p&gt;最令人惊喜的是，在这套多智能体协作框架的加持下，即便是调用 GLM 5.1 这样的国产大模型，也能爆发出惊人的任务推进能力，将长任务的审阅与人工介入体验做到了全新的高度。&lt;/p&gt;
+&lt;h3&gt;&lt;strong&gt;02 多任务并行与独创的“工作区隔离”模式&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;用AI进行长线开发最怕什么？怕几十上百分钟的任务把界面卡死，人只能在一旁干瞪眼。&lt;/p&gt;
+&lt;p&gt;Qoder 1.0 吸收了 Codex 简约克制的设计美学，将任务模式做成了独立的窗口。少则20分钟、多则40分钟的长任务，你完全可以随时切出去做别的事情。为了让你心中有数，系统提供了一个可视化的“专家全景图”看板，你可以像真正的项目经理一样，实时围观这十几名AI专家分别进展到了哪一步。&lt;/p&gt;
+&lt;p&gt;更具革命性的是其独创的“W模式（工作区隔离）”。AI 会在一个独立的隔离目录中进行开发工作，即使它在里面翻江倒海，也不会影响你的主干代码。只有当所有修改和测试确认无误后，再通过合并（Merge）的方式回到主分支。这种设计不仅永远保持核心代码库的干净整洁，更是将其变成了团队协作开发的绝佳神器。&lt;/p&gt;
+&lt;h3&gt;&lt;strong&gt;03 比领导还严格的代码审查与自动化测试&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;千万别以为AI只会瞎写代码不管售后。在 Qoder 1.0 的工作流里，写完代码仅仅是个开始。&lt;/p&gt;
+&lt;p&gt;系统内置了极其严格的“代码审查员”。在你提交代码前，它会全量排查潜在的逻辑错误和安全漏洞。如果你给的提示词不够专业，这个审查员甚至还会发点“小脾气”，吐槽你不够规范，体验感简直像极了帮你审查代码的严苛领导。&lt;/p&gt;
+&lt;p&gt;除了审查，Qoder 还在任务的最后一环配备了“测试工程师”。它会自动执行代码的 Lint 检查和本地构建验证。不管测试是成功还是失败，它都会给你提供详尽的原因报告并溯源相关文件。正如开发者所言：AI交付代码不应该直接丢给用户去试错，而是必须自己先跑一遍验证，这套自动验证机制理应成为未来所有 AI IDE 的标配。&lt;/p&gt;
+&lt;p&gt;同时，如果你发现UI界面有瑕疵，系统内置的浏览器还提供了“元素选择工具”。你可以直接框选页面上有问题的元素，AI会精准、快速地帮你修改代码，最大程度避免了无效沟通和不必要的Token消耗。&lt;/p&gt;
+&lt;h3&gt;&lt;strong&gt;04 越用越懂你的持久化记忆与自动Wiki&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;编程是一项长线工作，做产品、做内容同样如此。一个好的工具不能每次都像失忆一样从零开始。&lt;/p&gt;
+&lt;p&gt;Qoder 1.0 的“知识中心”功能解决了这个痛点。它可以一键从你的现有代码中读取架构逻辑，自动生成详尽的项目说明书（Wiki）。这份文档会自动存入项目目录，随着 Git 一起提交，让团队里的所有人都能随时共享这套知识和技术规范。&lt;/p&gt;
+&lt;p&gt;不仅如此，系统默认开启了智能的“持久化记忆”功能。它会不断学习你过往的对话习惯、代码风格以及项目特征。理论上，只要你用的时间越久，这个平台就会越懂你，真正成为你个人或团队不可替代的数字资产。&lt;/p&gt;
+&lt;h3&gt;05 写在最后：&lt;/h3&gt;
+&lt;p&gt;我们正在经历一场软件工程的范式转移。写代码不再是逐行敲击键盘的苦力活，而是变成了一项可以通过“管理和调度AI专家团”来推进的架构性工作。&lt;/p&gt;
+&lt;p&gt;Qoder 1.0 完美集百家之所长，交出了一份完成度极高、功能丰富且克制的答卷。未来，淘汰开发者的永远不会是AI本身，而是那些率先学会“指挥AI团队”的先行者。&lt;/p&gt;
+&lt;p&gt;强烈建议大家去官网下载体验一下这波生产力革命的震撼。也欢迎把这篇文章转发给你的程序员朋友、项目经理和团队主管，是时候一起重塑你们的工作流了。如果你对这套全新的开发模式有什么想法，我们在评论区见。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;标题：阿里悄悄扔出王炸！这款推倒重做的开发神器，或是目前最强的国产AI IDE&lt;/strong&gt;&lt;/p&gt;
 </content:encoded></item><item><title>Custom Attachment Location 配置全流程</title><link>https://dqtx.cc/posts/software/custom-attachment-location-%E9%85%8D%E7%BD%AE%E5%85%A8%E6%B5%81%E7%A8%8B/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/custom-attachment-location-%E9%85%8D%E7%BD%AE%E5%85%A8%E6%B5%81%E7%A8%8B/</guid><pubDate>Wed, 20 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;笔记的生命力，藏在那些不会失效的附件里。&lt;/p&gt;
 &lt;p&gt;深耕 Obsidian 写作许久愈发察觉，最先乱掉的从不是文字内容，而是杂乱无章的图片附件。初期毫无察觉，日积月累文件增多，各类附件乱象接踵而至。&lt;/p&gt;
 &lt;p&gt;而 Custom Attachment Location 插件完美化解难题，统一规范图片为标准 Markdown 格式，适配各类编辑器与 GitHub 平台正常展示，让本地库附件井然有序，彻底告别路径错乱、链接失效等困扰。&lt;/p&gt;
@@ -623,7 +653,11 @@ https://www.v2ex.com/t/1213338#reply10
 开源地址：
 https://github.com/txl16095/MiniClaude&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260517213248392.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;GUi版&lt;/h3&gt;
+&lt;h3&gt;Newtype-os&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;项目地址&lt;/strong&gt;：
+https://github.com/newtype-01/newtype-os/blob/main/README.zh-cn.md&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260330163220785.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;GUI 形态&lt;/h3&gt;
 &lt;h4&gt;claude-desktop-cn&lt;/h4&gt;
 &lt;p&gt;网页聊天只是入口，命令行工具门槛偏高；Claude Desktop CN 的价值，是把 AI 对话、本地项目、代码编辑、Git、命令执行、多 Agent 和插件能力，变成一个中文桌面工作台。&lt;/p&gt;
 &lt;p&gt;来源地址：
@@ -635,7 +669,6 @@ https://github.com/Qiao-920/claude-desktop-cn
 &lt;p&gt;开源地址：
 https://github.com/op7418/CodePilot&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260517214338508.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;小众agent&lt;/h3&gt;
 &lt;h4&gt;oh-my-openagent&lt;/h4&gt;
 &lt;p&gt;https://ohmyopenagent.com/zh
 https://github.com/code-yeongyu/oh-my-openagent/blob/dev/README.zh-cn.md
@@ -682,7 +715,7 @@ article-cover-16x9       → 提炼标题 → 构造封面 prompt → GPT-Image-
 / 更多干货，请访问：dqtx.cc&lt;/p&gt;
 </content:encoded></item><item><title>我的图文写作工作流</title><link>https://dqtx.cc/posts/aihacks/%E6%88%91%E7%9A%84%E5%9B%BE%E6%96%87%E5%86%99%E4%BD%9C%E5%B7%A5%E4%BD%9C%E6%B5%81/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E6%88%91%E7%9A%84%E5%9B%BE%E6%96%87%E5%86%99%E4%BD%9C%E5%B7%A5%E4%BD%9C%E6%B5%81/</guid><pubDate>Sun, 17 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;我做了一个完整内容创作工作流。&lt;/p&gt;
 &lt;p&gt;从选题到发布，一句话触发，剩下的全交给 AI。&lt;/p&gt;
-&lt;hr /&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260520185912038.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;第一步：选题&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;/aihot
 ↓
@@ -933,7 +966,9 @@ https://github.com/larksuite/cli/blob/main/README.zh.md&lt;/p&gt;
 https://www.cnblogs.com/dqtx33/p/20075301&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;以上，既然看到这里了，如果你觉得内容不错，随手点个赞、在看、转发三连吧！如果想第一时间收到推送，可以给我点个星标 ⭐～&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;谢谢你看我的文章，我们，下次再见。&lt;/p&gt;
-</content:encoded></item><item><title>rss工具</title><link>https://dqtx.cc/posts/software/rss/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/rss/</guid><pubDate>Fri, 15 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;AI 驱动的新闻聚合_阅__读__器_。&lt;em&gt;RSS&lt;/em&gt; 订_阅_ + AI 摘要 + 全文翻译。
+</content:encoded></item><item><title>rss工具</title><link>https://dqtx.cc/posts/software/rss/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/rss/</guid><pubDate>Fri, 15 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这篇文章持续更新我收集的RSS工具。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260520190454770.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;AI 驱动的新闻聚合_阅__读__器_。&lt;em&gt;RSS&lt;/em&gt; 订_阅_ + AI 摘要 + 全文翻译。
 https://github.com/Zoroaaa/newspulse&lt;/p&gt;
 &lt;p&gt;基于RSS的资讯聚合工作台
 https://github.com/shawnxie94/infinitum&lt;/p&gt;
@@ -1386,9 +1421,13 @@ mklink /D &quot;C:\Users\Administrator\.workbuddy\skills&quot; &quot;C:\Users\Ad
 &lt;p&gt;&lt;strong&gt;以上就是我个人对这款软件的使用感受。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;从「命令误触」到「先写需求再挂技能」，从「跨工具割裂」到「微信零配置打通」——WorkBuddy 把 AI Agent 从折腾的玩具变成了顺手的生产力工具。&lt;/p&gt;
 &lt;p&gt;如果你也有什么私藏神器，欢迎在评论区留言推荐，互相种草！觉得有帮助的话，点个赞再走呗～&lt;/p&gt;
-</content:encoded></item><item><title>Claude Code 窗口接管</title><link>https://dqtx.cc/posts/aihacks/claude-code-%E7%AA%97%E5%8F%A3%E6%8E%A5%E7%AE%A1/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/claude-code-%E7%AA%97%E5%8F%A3%E6%8E%A5%E7%AE%A1/</guid><pubDate>Sun, 10 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;很多开发者都有这样一个刚需：正在电脑上用 &lt;strong&gt;Claude Code&lt;/strong&gt; 开发项目，突然临时有事需要离开工位。 、&lt;/p&gt;
+</content:encoded></item><item><title>Claude Code 窗口接管</title><link>https://dqtx.cc/posts/aihacks/claude-code-%E6%A1%A5%E6%8E%A5%E5%B7%A5%E5%85%B7/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/claude-code-%E6%A1%A5%E6%8E%A5%E5%B7%A5%E5%85%B7/</guid><pubDate>Sun, 10 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;很多开发者都有这样一个刚需：正在电脑上用 &lt;strong&gt;Claude Code&lt;/strong&gt; 开发项目，突然临时有事需要离开工位。 、&lt;/p&gt;
 &lt;p&gt;人一走，就没法继续和电脑端的 Claude Code 交互跟进任务。其实现在已有不少解决方案，可以通过技能把 Claude Code 桥接到第三方平台，比如飞书、微信、Telegram。哪怕不在电脑旁，也能随时查看开发进度、远程下发指令操控。&lt;/p&gt;
-&lt;p&gt;https://github.com/hanxiao/claudecode-telegram&lt;/p&gt;
+&lt;p&gt;在 Telegram使用Claude code
+https://github.com/hanxiao/claudecode-telegram&lt;/p&gt;
+&lt;p&gt;将 Claude Code / Codex 桥接到 IM 平台 —— 在 Telegram、Discord、飞书、QQ 或微信中与 AI 编程代理对话
+https://github.com/op7418/Claude-to-IM/blob/main/README.zh-CN.md
+https://github.com/op7418/Claude-to-IM-skill/blob/main/README_CN.md&lt;/p&gt;
 </content:encoded></item><item><title>博客导航栏抖动修复记</title><link>https://dqtx.cc/posts/technical/%E5%AF%BC%E8%88%AA%E6%A0%8F%E6%8A%96%E5%8A%A8%E4%BF%AE%E5%A4%8D%E8%AE%B0/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E5%AF%BC%E8%88%AA%E6%A0%8F%E6%8A%96%E5%8A%A8%E4%BF%AE%E5%A4%8D%E8%AE%B0/</guid><pubDate>Sun, 10 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这个 bug 折磨了我好几天。每次点博客导航栏上的链接，其他几个文字就像被电了一下，集体向右哆嗦一下再弹回来。不像什么大问题，但每次看到都很难受。&lt;/p&gt;
 &lt;p&gt;我尝试了不同的模型去修复这个问题，都没有找到真正的元凶&lt;/p&gt;
 &lt;h2&gt;第一回合：怀疑字体&lt;/h2&gt;
@@ -7300,6 +7339,127 @@ opencli zhihu hot -f json       # 查看知乎热榜并以JSON格式输出
 &lt;/blockquote&gt;
 &lt;p&gt;OpenCLI 的安装非常直观，关键在于浏览器插件的桥接。一旦打通，你的终端就不再只是一个冷冰冰的控制台，而是通往整个 Web 世界的万能钥匙。&lt;/p&gt;
 &lt;p&gt;文章来源：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;  远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/p&gt;
+</content:encoded></item><item><title>NotebookLM封神指南</title><link>https://dqtx.cc/posts/aihacks/notebooklm/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/notebooklm/</guid><pubDate>Mon, 23 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;NotebookLM 是一个只根据你输入的信息思考的人工智能。 它不像 ChatGPT 那样引用整个互联网的信息，而是读取并回答“只提供你给我的材料”。&lt;/p&gt;
+&lt;p&gt;在咨询通用人工智能关于职业相关事务时，它可能会检测到年龄、工作类型和背景等负面因素，并无意中给出严厉的评价。 NotebookLM 不用担心这些。 他们只会给你你想要申诉的信息，所以他们只会考虑。&lt;/p&gt;
+&lt;p&gt;因此，你输入的信息质量和数量，将决定结果的质量。&lt;/p&gt;
+&lt;p&gt;我有时听到有人说，“我试过用它，但效果不好。” 通常是因为你输入的信息太少。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260323071304352.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;去水印&lt;/h3&gt;
+&lt;p&gt;https://www.notebooklmwatermark.com/
+支持小于等于50Mb大小的PDF文件。&lt;/p&gt;
+&lt;p&gt;https://geminiwatermarkremover.net
+PDF去水印。&lt;/p&gt;
+&lt;p&gt;https://clean.lazyso.com/notebooklm/
+信息图去水印&lt;/p&gt;
+&lt;h3&gt;相关Chrome插件&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;插件名字&lt;/th&gt;
+&lt;th&gt;作用&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/youtube-to-notebooklm/kobncfkmjelbefaoohoblamnbackjggk?hl=zh-CN&quot;&gt;&lt;strong&gt;YouTube to NotebookLM&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;将导入YouTube视频的步骤从繁琐的6步简化为2步，在视频下方直接提供专属快捷按钮，无需复制链接即可一键导入。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/notebooklm-%E7%BD%91%E9%A1%B5%E5%AF%BC%E5%85%A5%E5%99%A8/ijdefdijdmghafocfmmdojfghnpelnfn?hl=zh-CN&quot;&gt;&lt;strong&gt;NotebookLM Web Importer&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;专门用于将全网的优质图文网页、干货文章快速添加并转换为NotebookLM的资料库。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/bookshelf%EF%BC%9Anotebooklm-%E6%96%87%E4%BB%B6%E5%A4%B9%E7%AE%A1/ibjbgddbhlcookmdhehgljaneccjidik?hl=zh-CN&quot;&gt;&lt;strong&gt;Bookshelf&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;解决笔记本过多导致的杂乱问题，支持通过拖拽将笔记本归类到不同的文件夹（如工作、学习等），并能在不同笔记本之间作为快捷导航一键跳转。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/kortex-notebooklm/hdapplggdhndkblofffknpmnnnnbncbn?hl=zh-CN&quot;&gt;&lt;strong&gt;Kortex&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;作为笔记本里的内容管家，支持一键保存网页内容（包括ChatGPT等AI工具的聊天记录）、自动按格式分类信息源，并支持批量导出信息源和生成的对话内容。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/notebooklm-mindmap-export/jeaclciaoglkeohcfeobijdojpclkmkb?hl=zh-CN&quot;&gt;&lt;strong&gt;NotebookLM MindMap Exporter&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;解决系统自带思维导图生成后无法编辑的致命短板，支持将其复制或导入到专业工具中，从而自由修改、移动节点进行二次创作。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/notebooklm-ultra-exporter/afchokljnhhggkhedfbmkcmdagjmjchj?hl=zh-CN&quot;&gt;&lt;strong&gt;NotebookLM Ultra Exporter&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;补齐原生界面缺乏快捷导出按钮的缺陷，支持对笔记、PPT、图表、博客等各类内容进行一键导出，且导出格式自由、支持批量灵活导出。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/notebooklm-source-helper/mdmenpppkndcjiojaclnlceegloooeip?hl=zh-CN&quot;&gt;&lt;strong&gt;NotebookLM Source Helper&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;专为满足去水印的核心需求而设计，上传下载好的PDF文件后，可一键去除演示文稿（PPT）右下角自带的NotebookLM系统水印，方便工作汇报和演示。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/web-clipper-for-notebookl/ancgeemmgnlempppapnfkdpghghphgjb&quot;&gt;Web Clipper for NotebookLM&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;一键把网页、文章、研究报告剪藏到NotebookLM,帮你快速搭建高质量的资料库。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;相关 skill 技能&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;notebooklm-py：&lt;a href=&quot;https://github.com/teng-lin/notebooklm-py&quot;&gt;项目地址&lt;/a&gt;  用法：&lt;a href=&quot;https://blog.csdn.net/2402_82616859/article/details/159020470&quot;&gt;点此打开&lt;/a&gt;
+让Claude code操作notebooklm&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/joeseesun/qiaomu-anything-to-notebooklm&quot;&gt;qiaomu-anything-to-notebooklm&lt;/a&gt;
+用自然语言把&lt;strong&gt;任何内容&lt;/strong&gt;变成&lt;strong&gt;任何格式&lt;/strong&gt;。自动检测并绕过 300+ 付费新闻网站的付费墙。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;自己创建skill
+每次 notebooklm-mcp前先阅读我的个人介绍，我希望你每次创建完笔记本后，间隔5到10分钟，能够自动将搜索来源的信息进导，省去我额外动操作的步骤。请将这个要求更新到notebooLMk的skills面。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;notebooklm-mcp
+https://github.com/PleasePrompto/notebooklm-mcp
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260521155602282.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;我是一个完全零基础的AI小白，希望从几个不同维度学习AI，既能赶上时代潮流，也能在未来从事相关工作。结合2026年AI发展的趋势，请为我推荐3到4个必须彻底掌握的具体领域，以及1到2个未来需要进阶的潜在领域。请给出这5个不同方向的主题，并分别做出简要解释。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;请针对这5个主题，在NotebookLM上分别创建5个涵盖不同领域的独立笔记本。针对每个主题，都要使用其“源文件”（Sources）功能，并确保每个笔记本都包含内容丰富、来源多样的资料。同时，请务必注意信息的时效性与可靠性。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;帮我将你搜集到的内容全部自动导入到各自的笔记本里面，并且针对每一个笔记本都帮我制作一张信息图，并把链接也发过来让我可以直接点击
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;帮我检查NotebookLM的全部内容，然后在左侧帮我创建一份说明件，我需要概了解这些笔记本包含哪些内容及其来源。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;我目前比较关注AI医疗行业。同时我对AI硬件AI漫具等方向也非常的感兴趣。我每天可以拿出两个时时间学习AI，请根据我nbookLM里面的内容，帮我制定一个一个月的学习计划，包含我一定需要看到的youtube链接，并且我需要你帮我筛选一下视频的质量。我需要发布时间在6个月以内播放量在1万以上的视频。同时请直接在左侧的项目中帮我创建这份计划书。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;根据我从NotebookLM中提取的内容，这份以及这份学习计划，帮我创建一个可以交互的落地页，我需要简单的功能是可以进学习进度的追踪嗯，自由标记我的学习进度，页UI要好看，内部链接点击可以直接跳转。另外，有完善动画，登录界面，一键部署github，部署Vercel。搞完直接使用内部的浏览器帮我打开我要测试一下功能
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;帮我把这个文件上传到notebooklm里面，新建一个名为品牌指南的笔记本保存进去。@xxx.MD
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;我需要你调用notebooklm mcp，帮我找到关于品牌设计的笔记本，然后按照那份文件的要求重新设计当前落地页的ui界面，然后使用内部的浏览器帮我打开我要看下
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;相关提示词&lt;/h3&gt;
+&lt;p&gt;PPT&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;请根据我《红楼梦》课表的全部内容，成份约30到45页的PPT纲。
+我希望你完全根据我的课程内容、主题等元素进设计，要求重点明确。同时，PPT的设计格、样式及配图，请参考“戴敦邦新绘全本红楼梦”的艺术格。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;保存为笔记，作为来源。&lt;/p&gt;
+&lt;p&gt;3D风格ppt&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;你是一位专家级UI UX演示设计师，请生成高保真、未来科技感的16比9演示文稿幻灯片。请根据视觉平衡美学，自动在封面、网格布局或数据可视化中选择一种最完美的构图。 全局视觉语言方面，风格要无缝融合Apple Keynote的极简主义、现代SaaS产品设计和玻璃拟态风格。整体氛围需要高端、沉浸、洁净且有呼吸感。光照采用电影级体积光、柔和的光线追踪反射和环境光遮蔽。配色方案选择深邃的虚空黑或纯净的陶瓷白作为基底，并以流动的极光渐变色即霓虹紫、电光蓝、柔和珊瑚橙、青色作为背景和UI高光点缀。 关于画面内容模块，请智能整合以下元素： 1. 排版引擎采用Bento便当盒网格系统，将内容组织在模块化的圆角矩形容器中。容器材质必须是带有模糊效果的磨砂玻璃，具有精致的白色边缘和柔和的投影，并强制保留巨大的内部留白，避免拥挤。 2. 插入礼物质感的3D物体，渲染独特的高端抽象3D制品作为视觉锚点。它们的外观应像实体的昂贵礼物或收藏品，材质为抛光金属、幻彩亚克力、透明玻璃或软硅胶，形状可是悬浮胶囊、球体、盾牌、莫比乌斯环或流体波浪。 3. 字体与数据方面，使用干净的无衬线字体，建立高对比度。如果有图表，请使用发光的3D甜甜圈图、胶囊状进度条或悬浮数字，图表应看起来像发光的霓虹灯玩具。 构图逻辑参考： 如果生成封面，请在中心放置一个巨大的复杂3D玻璃物体，并覆盖粗体大字，背景有延伸的极光波浪。 如果生成内容页，请使用Bento网格布局，将3D图标放在小卡片中，文本放在大卡片中。 如果生成数据页，请使用分屏设计，左侧排版文字，右侧悬浮巨大的发光3D数据可视化图表。 渲染质量要求：虚幻引擎5渲染，8k分辨率，超细节纹理，UI设计感，UX界面，Dribbble热门趋势，设计奖获奖作品。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;这本书的核心论点是什么？用2句话清楚地说出来。然后列出5个最强的支持观点。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;将每一章浓缩成一年后值得记住的核心观点。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;将整本书转化为我在接下来30天内可以实施的10个具体行动。要具体且可衡量。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;审视所有文档后，识别缺口。具体：1)重要子主题未覆盖，2)缺少何种文献，3)哪些结论证据不足，4)需添加5个什么类型源使研究无懈可击？
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;提供：1)所有文档的3个核心主题，2)哪些地方一致/矛盾，3)最惊人的发现，4)文档提出但未完全回答的关键问题。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;联动Gemini&lt;/h3&gt;
+&lt;p&gt;这是一个极少人知道的隐藏神技，你可以把NotebookLM整理好的知识直接变成一个网站或App&lt;/p&gt;
+&lt;p&gt;在Gemini中直接添加NotebookLM作为文件来源，你的整个知识库就会进入Gemini&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;建构一个网站来可视化我的内容，使用日系极简风格
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;参考资料&lt;/h3&gt;
+&lt;p&gt;NotebookLM+Antigravity手把手教你开启上帝视角（插件Office Viewer）
+https://www.bilibili.com/video/BV1EDcSzxErw/?spm_id_from=333.1387.favlist.content.click&amp;amp;vd_source=206031f494850e57fd6c92ace02b1bed
+https://www.biji.com/mine/notes/WPKWeqx2wyV6g4QP&lt;/p&gt;
+&lt;h2&gt;写在最后&lt;/h2&gt;
+&lt;p&gt;当NotebookLM 把 1 小时的学习压缩到 15 分钟，把 3 天的调研缩短到 1 小时，效率差距已不再是努力程度，而是工具选择。从学生到科研人员，从产品经理到内容创作者，这款被《巴伦周刊》称为 “生成式 AI 杀手级应用” 的工具，正在重构知识工作的底层逻辑。现在登录 Google 账号即可免费体验，你的 10 倍效率革命，从上传第一份文档开始。&lt;/p&gt;
 </content:encoded></item><item><title>Rustdesk定制编译工具</title><link>https://dqtx.cc/posts/technical/rustdesk/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/rustdesk/</guid><pubDate>Mon, 23 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;作为一名技术爱好者，偶然在闲鱼上刷到定制化的Rustdesk客户端，简洁的界面和实用的功能让我萌生了自研同款编译工具的想法。虽花费数百元向卖家请教却因对方忙碌无疾而终，但也坚定了我靠技术实现需求的决心——最终借助Codex从命令行版本起步，迭代出可视化网页面板的Rustdesk一键编译工具，现将整个开发过程与成果分享如下。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260323223059574.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;一、成品核心优势&lt;/h2&gt;
@@ -7367,157 +7527,6 @@ generate.py 打包
 &lt;p&gt;目前该工具仅支持Windows版本的Rustdesk控制端/客户端编译，若有定制编译需求，可添加微信dqtx33交流。&lt;/p&gt;
 &lt;h2&gt;六、写在最后&lt;/h2&gt;
 &lt;p&gt;本次开发从闲鱼灵感出发，基于Python、PowerShell等技术栈实现了Rustdesk定制化编译工具，核心优化了连接体验、免安装和隐私展示三大特性；工具实现了从命令行到网页可视化面板的迭代，编译流程自动化，仅需输入核心参数即可快速生成定制化exe文件；项目结构清晰，依赖环境明确，编译耗时约4分钟，仅支持Windows版本的Rustdesk控制端/客户端编译。&lt;/p&gt;
-</content:encoded></item><item><title>NotebookLM封神指南</title><link>https://dqtx.cc/posts/workflow/notebooklm/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/notebooklm/</guid><pubDate>Mon, 23 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;在众多AI工具中，Google推出的NotebookLM正逐渐成为许多人每天离不开的“超级大脑”。简单来说，它是一个专门帮你消化大量、杂乱资料的私人助理。&lt;/p&gt;
-&lt;p&gt;与ChatGPT等依赖自身数据库或联网搜索的AI不同，NotebookLM最大的杀手锏在于**“零幻觉”**：&lt;/p&gt;
-&lt;p&gt;它只根据你上传的资料来回答问题。无论你丢给它网页、Google文档还是YouTube视频，它都能在几分钟内完成整合，并生成简报、数据表、信息图表甚至播客。&lt;/p&gt;
-&lt;p&gt;2025-2026 年持续迭代的 Audio Overview、跨文档整合、移动端离线功能，让它不仅征服了 Andrej Karpathy 等 AI 大神，更成为千万知识工作者的效率神器。本文将拆解其 10 大实战场景 + 核心功能，带你解锁 “1 小时工作 15 分钟完成” 的高效模式。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260323071304352.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;差异化优势&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;零幻觉的精准引用&lt;/strong&gt;：&lt;/p&gt;
-&lt;p&gt;区别于 ChatGPT 的生成式回复，所有结论均源自上传文档并标注来源，学术写作、商业分析零风险&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;多模态全场景覆盖&lt;/strong&gt;：&lt;/p&gt;
-&lt;p&gt;支持 PDF/Word/ 网页 / 音频 / YouTube 视频，从文字到语音无缝切换，通勤、健身都能学&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;跨文档深度整合&lt;/strong&gt;：&lt;/p&gt;
-&lt;p&gt;同时上传 10 + 份资料，AI 自动挖掘关联点，竞品分析、文献综述效率提升 40%+&lt;/p&gt;
-&lt;h2&gt;十大使用场景&lt;/h2&gt;
-&lt;p&gt;（一）入门级：3 分钟上手，新手秒变效率达人&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;场景 1：技术文档速通&lt;/strong&gt;：上传 Kubernetes、Python 官方文档，生成 15 分钟 Audio Overview，通勤路上 “听会” 核心架构，针对性提问直击重点，1 小时学习压缩至 15 分钟&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;场景 2：会议纪要自动化&lt;/strong&gt;：上传录音转文字稿，1-click 生成摘要 + 行动项清单，30 分钟整理工作缩短至 5 分钟，行动项遗漏率降低 80%&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;场景 3：读书笔记生成器&lt;/strong&gt;：上传电子书 PDF，自动生成知识点梳理 + 测试题，《思考，快与慢》500 页内容两周后记忆留存率 70%+&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;（二）进阶级：职场核心场景效率翻倍&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;场景 4：竞品分析加速器&lt;/strong&gt;：批量上传 4 份竞品报告 + 行业数据，提问 “共同用户痛点 TOP3”“定价策略差异”，AI 自动生成对比表格 + 洞察摘要&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;场景 5：论文综述神器&lt;/strong&gt;：10-20 篇论文一键上传，AI 梳理文献脉络、识别研究空白，3 周阅读时间缩短至 1 周&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;场景 6：培训材料打包&lt;/strong&gt;：整合产品手册 + FAQ，生成教程 + 情景模拟 + 测试题，新员工培训包 1 小时搞定&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;场景 7：内容创作引擎&lt;/strong&gt;：上传嘉宾资料 + 行业报告，AI 提炼 3 个爆款话题 + 故事线，播客 / 视频策划时间从 4 小时缩至 1 小时&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;（三）高阶级：打造个人 “第二大脑”&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;场景 8：结构化知识库&lt;/strong&gt;：按 “专业技能 / 个人成长 / 生活实用 / 项目档案” 分类上传资料，跨 Notebook 提问挖掘知识关联，实现复利式学习&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;场景 9：专业文档解读&lt;/strong&gt;：上传保险合同、体检报告，AI 用通俗语言解释条款，非专业人士也能轻松理解（注：仅作辅助，不构成专业建议）&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;场景 10：深度研究自动化&lt;/strong&gt;：启用 “Deep Research” 功能，输入研究问题，AI 自动爬取权威资源，生成结构化报告 + 参考文献，学术、商业调研全流程提速&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;为什么 NotebookLM 碾压 ChatGPT/Notion AI？&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;功能维度&lt;/th&gt;
-&lt;th&gt;NotebookLM&lt;/th&gt;
-&lt;th&gt;ChatGPT&lt;/th&gt;
-&lt;th&gt;Notion AI&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;资料引用&lt;/td&gt;
-&lt;td&gt;✅ 精准标注来源&lt;/td&gt;
-&lt;td&gt;❌ 无引用易幻觉&lt;/td&gt;
-&lt;td&gt;⚠️ 部分引用不完整&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;多文档整合&lt;/td&gt;
-&lt;td&gt;✅ 跨文档深度关联&lt;/td&gt;
-&lt;td&gt;❌ 单轮对话限制&lt;/td&gt;
-&lt;td&gt;⚠️ 有限整合能力&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;音频摘要&lt;/td&gt;
-&lt;td&gt;✅ 生成 Podcast + 离线播放&lt;/td&gt;
-&lt;td&gt;❌ 不支持&lt;/td&gt;
-&lt;td&gt;❌ 不支持&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;移动端体验&lt;/td&gt;
-&lt;td&gt;✅ 全功能 App + 背景播放&lt;/td&gt;
-&lt;td&gt;⚠️ 基础功能&lt;/td&gt;
-&lt;td&gt;⚠️ 网页适配为主&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;学习曲线&lt;/td&gt;
-&lt;td&gt;✅ 3 分钟上手&lt;/td&gt;
-&lt;td&gt;⚠️ 需要 Prompt 技巧&lt;/td&gt;
-&lt;td&gt;✅ 简单但功能有限&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2&gt;搭配7大Chrome插件&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;插件名字&lt;/th&gt;
-&lt;th&gt;作用&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/youtube-to-notebooklm/kobncfkmjelbefaoohoblamnbackjggk?hl=zh-CN&quot;&gt;&lt;strong&gt;YouTube to NotebookLM&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;将导入YouTube视频的步骤从繁琐的6步简化为2步，在视频下方直接提供专属快捷按钮，无需复制链接即可一键导入。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/notebooklm-%E7%BD%91%E9%A1%B5%E5%AF%BC%E5%85%A5%E5%99%A8/ijdefdijdmghafocfmmdojfghnpelnfn?hl=zh-CN&quot;&gt;&lt;strong&gt;NotebookLM Web Importer&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;专门用于将全网的优质图文网页、干货文章快速添加并转换为NotebookLM的资料库。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/bookshelf%EF%BC%9Anotebooklm-%E6%96%87%E4%BB%B6%E5%A4%B9%E7%AE%A1/ibjbgddbhlcookmdhehgljaneccjidik?hl=zh-CN&quot;&gt;&lt;strong&gt;Bookshelf&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;解决笔记本过多导致的杂乱问题，支持通过拖拽将笔记本归类到不同的文件夹（如工作、学习等），并能在不同笔记本之间作为快捷导航一键跳转。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/kortex-notebooklm/hdapplggdhndkblofffknpmnnnnbncbn?hl=zh-CN&quot;&gt;&lt;strong&gt;Kortex&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;作为笔记本里的内容管家，支持一键保存网页内容（包括ChatGPT等AI工具的聊天记录）、自动按格式分类信息源，并支持批量导出信息源和生成的对话内容。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/notebooklm-mindmap-export/jeaclciaoglkeohcfeobijdojpclkmkb?hl=zh-CN&quot;&gt;&lt;strong&gt;NotebookLM MindMap Exporter&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;解决系统自带思维导图生成后无法编辑的致命短板，支持将其复制或导入到专业工具中，从而自由修改、移动节点进行二次创作。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/notebooklm-ultra-exporter/afchokljnhhggkhedfbmkcmdagjmjchj?hl=zh-CN&quot;&gt;&lt;strong&gt;NotebookLM Ultra Exporter&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;补齐原生界面缺乏快捷导出按钮的缺陷，支持对笔记、PPT、图表、博客等各类内容进行一键导出，且导出格式自由、支持批量灵活导出。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;a href=&quot;https://chromewebstore.google.com/detail/notebooklm-source-helper/mdmenpppkndcjiojaclnlceegloooeip?hl=zh-CN&quot;&gt;&lt;strong&gt;NotebookLM Source Helper&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;专为满足去水印的核心需求而设计，上传下载好的PDF文件后，可一键去除演示文稿（PPT）右下角自带的NotebookLM系统水印，方便工作汇报和演示。&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2&gt;进阶玩法：联动 Gemini+NotebookLM-py&lt;/h2&gt;
-&lt;h3&gt;&lt;strong&gt;Claude skill&lt;/strong&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;notebooklm-py：&lt;a href=&quot;https://github.com/teng-lin/notebooklm-py&quot;&gt;项目地址&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;用法：&lt;a href=&quot;https://blog.csdn.net/2402_82616859/article/details/159020470&quot;&gt;点此打开&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;&lt;strong&gt;联动Gemini，零代码生成互动网站&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;这是一个极少人知道的隐藏神技，你可以把NotebookLM整理好的知识直接变成一个网站或App&lt;/p&gt;
-&lt;p&gt;在Gemini中直接添加NotebookLM作为文件来源，你的整个知识库就会进入Gemini&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;建构一个网站来可视化我的内容，使用日系极简风格
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;写在最后&lt;/h2&gt;
-&lt;p&gt;当NotebookLM 把 1 小时的学习压缩到 15 分钟，把 3 天的调研缩短到 1 小时，效率差距已不再是努力程度，而是工具选择。从学生到科研人员，从产品经理到内容创作者，这款被《巴伦周刊》称为 “生成式 AI 杀手级应用” 的工具，正在重构知识工作的底层逻辑。现在登录 Google 账号即可免费体验，你的 10 倍效率革命，从上传第一份文档开始。&lt;/p&gt;
 </content:encoded></item><item><title>零成本搭建在线图床</title><link>https://dqtx.cc/posts/technical/%E5%9C%A8%E7%BA%BF%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E5%9C%A8%E7%BA%BF%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA/</guid><pubDate>Sun, 22 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;90%的博主都不知道！免费100G图床竟比付费的还稳定～ 写文章、做分享时，你是不是也总被图床问题折磨？免费的容量小得可怜，付费的一年要花几百块，更糟的是还常遇到文件失效、大文件传不了的坑，辛苦写的内容全白费！今天就分享一个零成本神方案——用GitHub 4k+星标的开源项目CloudFlare-ImgBed搭配HuggingFace，10分钟快速搭建100G免费图床，无需实名认证、支持大文件自动分片上传，不用额外买服务器，稳定又省心，自媒体、学生、打工人都能用～&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260122014636902.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;一、工具介绍：CloudFlare-ImgBed&lt;/h2&gt;
@@ -11250,6 +11259,10 @@ https://ai.codefather.cn/mcp&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;h3&gt;参照资料&lt;/h3&gt;
+&lt;p&gt;手把手彻底学会 Antigravity！从想法到上线，手搓好莱坞片场生图App【小白教程】
+https://www.bilibili.com/video/BV15VFTzoEgm/?spm_id_from=333.1387.upload.video_card.click&amp;amp;vd_source=206031f494850e57fd6c92ace02b1bed
+https://my.feishu.cn/wiki/W9TgwBLs4ikbgckzsOccfcZmnTc&lt;/p&gt;
 </content:encoded></item><item><title>AntigravityTool使用教程</title><link>https://dqtx.cc/posts/aihacks/antigravitytool/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/antigravitytool/</guid><pubDate>Thu, 13 Feb 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Antigravity Tool 是一款智能代理项目，用于将Antigravity内的模型转换为不同协议标准 API，支持OpenAI 协议，Anthropic协议，Gemini 协议，本文主要演示供Claude使用。&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
