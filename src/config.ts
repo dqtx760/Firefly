@@ -97,12 +97,17 @@ export const navBarConfig: NavBarConfig = {
 			external: true,
 		},
 		{
+			name: "About",
+			url: "https://cv.dqtx.cc/",
+			external: true,
+		},
+		{
 			name: "友链",
 			url: "/friends/",
 			external: false,
 		},
 		{
-			name: "Remote",
+			name: "远程服务",
 			url: "https://www.742112.xyz/",
 			external: true,
 		},

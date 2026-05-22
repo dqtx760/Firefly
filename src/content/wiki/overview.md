@@ -3,57 +3,60 @@
 ## 博客基本信息
 
 - **主题**: Fuwari 静态站点生成器
+- **框架**: Astro 5 + Svelte + Tailwind CSS
 - **部署**: GitHub + EdgeOne 自动构建
-- **图床**: Gitee 
-- **作者**: 92 年生人，数字生产力玩家
-- **文章总数**: 105 篇
-- **分类数**: 6 个
+- **图床**: Gitee / PicGo / PicList
+- **作者**: Derek Zhao
+- **文章总数**: 121 篇
+- **分类数**: 4 个
+- **最近更新**: 2026-05-22
 
 ## 内容分布
 
-| 分类 | 文章数 | 占比 | 最近更新 |
-|------|--------|------|----------|
-| AIHacks | 37 | 35% | 2026-04-28 |
-| Software | 16 | 15% | 2026-05-01 |
-| Technical | 16 | 15% | 2026-03-16 |
-| Workflow | 15 | 14% | 2026-02-04 |
-| Xenia | 16 | 15% | 2024-11-30 |
-| Zen | 5 | 5% | 2026-03-26 |
+| 分类 | 文章数 | 占比 | 最近更新 | 分类页 |
+| --- | --- | --- | --- | --- |
+| AIHacks | 60 | 50% | 2026-05-21 | [aihacks.md](sources/aihacks.md) |
+| Software | 25 | 21% | 2026-05-22 | [software.md](sources/software.md) |
+| Technical | 21 | 17% | 2026-05-10 | [technical.md](sources/technical.md) |
+| Workflow | 15 | 12% | 2026-05-07 | [workflow.md](sources/workflow.md) |
 
 ## 核心主题
 
-### 1. AI 工具链 (AIHacks)
+### 1. AI 工具链（AIHacks）
 
-最大分类，覆盖 Claude Code 安装配置、MCP 服务集成、API 平台对比、Agent 技能开发等。反映作者对 AI 编程工具的深度探索。
+当前最大分类，覆盖 Claude Code、Codex、Gemini CLI、Qoder、MCP、Agent、Skill、模型 API 和 AI 内容生产。近期新增内容集中在 AI 编程工具、图文写作工作流、模型活动和本地/国产模型接入。
 
-### 2. 软件推荐 (Software)
+### 2. 软件与效率工具（Software）
 
-实用主义导向，聚焦截图录屏 (ShareX)、文件管理 (Listary)、终端 (WezTerm)、模拟器等效率工具。
+聚焦日常使用频率高的软件工具，包括图床、截图录屏、RSS、Markdown、Obsidian 插件、终端、磁盘管理和系统辅助工具。
 
-### 3. 技术基建 (Technical)
+### 3. 技术基础设施（Technical）
 
-OpenWrt 路由配置、图床搭建、远程桌面 (Rustdesk)、网盘挂载等基础设施教程。
+记录博客站点维护、导航栏修复、网盘挂载、OpenWrt/PassWall、远程桌面、API 安全、Passkeys、主机与系统异常处理等实践。
 
-### 4. 工作流自动化 (Workflow)
+### 4. 工作流自动化（Workflow）
 
-博客发布流程、bat 脚本、AutoHotkey、Obsidian 模板等，体现 "Build in Public" 理念。
+沉淀博客发布、Obsidian、Dataview、图床、脚本、OBS、API 生图和内容生产流程，支撑持续更新。
 
-### 5. 个人品牌 (Xenia)
+## 最近更新
 
-自我介绍、快捷键合集、插件盘点、博客规划，构建个人技术品牌。
-
-### 6. 知识管理 (Zen)
-
-Obsidian Dataview 查询模板，用于笔记生命周期管理。
-
-## 置顶文章
-
-- [个人说明书](../../content/posts/Xenia/自我介绍.md) — 作者介绍与服务范围
+- [Get笔记同步Obsidian插件](../../content/posts/Software/get笔记同步Obsidian.md) — Software / 2026-05-22
+- [阿里Qoder安装使用指南](../../content/posts/AIHacks/阿里Qoder.md) — AIHacks / 2026-05-21
+- [Custom Attachment Location 配置全流程](../../content/posts/Software/Custom Attachment Location 配置全流程.md) — Software / 2026-05-20
+- [Claude-code二改版](../../content/posts/AIHacks/Claude-code二改版.md) — AIHacks / 2026-05-18
+- [讯飞星辰Maas福利活动](../../content/posts/AIHacks/讯飞星辰 Maas福利活动.md) — AIHacks / 2026-05-18
+- [文章封面&配图技能](../../content/posts/AIHacks/baoyu-article-illustrator改造.md) — AIHacks / 2026-05-17
+- [我的图文写作工作流](../../content/posts/AIHacks/我的图文写作工作流.md) — AIHacks / 2026-05-17
+- [用 AI 两年，我劝你别太依赖它](../../content/posts/AIHacks/用 AI 两年，我劝你别太依赖它.md) — AIHacks / 2026-05-16
+- [Diskgenius扩容C盘](../../content/posts/Software/Diskgenius扩容C盘.md) — Software / 2026-05-16
+- [飞书lark-cli，45天获万星！](../../content/posts/AIHacks/飞书开源CLI.md) — AIHacks / 2026-05-15
+- [rss工具](../../content/posts/Software/rss.md) — Software / 2026-05-15
+- [Gemini cli 登录异常解法](../../content/posts/AIHacks/Gemini cli 安装&异常处理.md) — AIHacks / 2026-05-14
 
 ## 技术栈推断
 
-- **前端**: Fuwari (Astro 基础)
+- **前端**: Astro + Fuwari + Svelte + Tailwind CSS
 - **内容**: Markdown + YAML frontmatter
-- **部署**: GitHub Pages + EdgeOne CDN
-- **写作**: Typora + Obsidian
-- **图片**: Gitee 图床
+- **部署**: GitHub + EdgeOne CDN
+- **写作**: Obsidian + Typora + AI 协作
+- **图片**: PicGo / PicList + Gitee 图床

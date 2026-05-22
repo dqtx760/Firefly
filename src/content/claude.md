@@ -29,35 +29,58 @@ aliases: [claude规范, 写作规范]
 
 ```
 src/content/
-├── posts/            ← 博客文章（公开发布）
-│   ├── AIHacks/      ← AI 工具与自动化
-│   ├── Software/     ← 软件相关
-│   ├── Technical/    ← 技术类
-│   └── Workflow/     ← 工作流类
-├── wiki/             ← posts 的索引 wiki（公开发布，由 AI 维护）→ 博客导航栏 Notes
-├── Memoria/          ← 动态（公开发布）→ 博客导航栏 Notes
-├── Yoke/             ← 参考资料合集（非发布）
-├── Xenia/            ← 快捷键、命令参考（非发布）
-├── Zen/              ← Dataview 查询模板（非发布）
-├── 01_Raw/           ← 原始素材
-│   └── 00_Clipings/  ← 网页剪藏
-├── claude.md         ← 本规范文件
-└── index.md          ← 本地文章索引（自己用）
+├── 01-输入/                ← 原始输入、素材、选题与模板（不直接发布）
+│   ├── 0_Clipings/         ← 网页剪藏
+│   ├── Daily/              ← 日常记录
+│   ├── Template/           ← 模板
+│   ├── 口喷稿/             ← 口播/口喷稿
+│   ├── 研究/               ← 研究资料
+│   ├── 素材/               ← 原始素材
+│   └── 选题/               ← 选题池
+├── get/                    ← Get 笔记插件同步内容（不对外发布）
+│   ├── notes/              ← 同步过来的笔记正文
+│   ├── get attachment/     ← 同步附件、图片、音频等资源
+│   ├── Get Moments.md      ← Get Moments 汇总
+│   └── Get Canvas.canvas   ← Get Canvas 画布文件
+├── Memoria/                ← 动态内容（公开发布）→ 博客导航栏 Notes
+├── posts/                  ← 博客文章（公开发布）
+│   ├── AIHacks/            ← AI 工具与自动化
+│   ├── Software/           ← 软件相关
+│   ├── Technical/          ← 技术类
+│   └── Workflow/           ← 工作流类
+├── wiki/                   ← posts 的索引 wiki（公开发布，由 AI 维护）→ 博客导航栏 Wiki
+│   ├── index.md            ← Wiki 首页
+│   ├── 目录.md             ← Wiki 目录
+│   ├── overview.md         ← 内容总览
+│   ├── purpose.md          ← Wiki 目的说明
+│   ├── schema.md           ← Wiki 结构说明
+│   ├── meta.json.md        ← Wiki 元数据
+│   └── log.md              ← Wiki 维护日志
+├── Xenia/                  ← 快捷键、命令参考（非发布）
+├── Yoke/                   ← 参考资料合集（非发布）
+├── Zen/                    ← Dataview 查询模板（非发布）
+├── claude.md               ← 本规范文件
+└── index.md                ← 本地文章索引（自己用）
 ```
 
 ### 目录用途速查
 
-| 想做什么          | 去哪个目录                    |
-| ------------- | ------------------------ |
-| 写博客文章         | `posts/<分类>/`            |
-| 建文章索引（公开）     | `wiki/` → 博客导航栏 Wiki     |
-| 本地文章索引（自己用）   | `index.md`               |
-| 发动态           | `Memoria/` → 博客导航栏 Notes |
-| 存参考资料         | `Yoke/`                  |
-| 记快捷键/命令       | `Xenia/`                 |
-| 写 Dataview 查询 | `Zen/`                   |
-| 存网页剪藏         | `01_Raw/00_Clipings/`    |
-⚠️`index.md`更新专门的技能UpdateCheck
+| 想做什么          | 去哪个目录                               |
+| ------------- | ----------------------------------- |
+| 写博客文章         | `posts/<分类>/`                       |
+| 建文章索引（公开）     | `wiki/` → 博客导航栏 Wiki                |
+| 本地文章索引（自己用）   | `index.md`                          |
+| 发动态           | `Memoria/` → 博客导航栏 Notes            |
+| 存 Get 插件同步笔记  | `get/notes/`                        |
+| 存 Get 同步附件    | `get/get attachment/`               |
+| 存参考资料         | `Yoke/`                             |
+| 记快捷键/命令       | `Xenia/`                            |
+| 写 Dataview 查询 | `Zen/`                              |
+| 存网页剪藏         | `01-输入/0_Clipings/`                 |
+| 存选题/素材/研究     | `01-输入/选题/`、`01-输入/素材/`、`01-输入/研究/` |
+
+⚠️ `get/`、`01-输入/`、`Yoke/`、`Xenia/`、`Zen/` 主要是本地资料区，不直接作为博客文章发布。
+⚠️ `index.md` 更新专门使用技能 UpdateCheck。
 
 ---
 

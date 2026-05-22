@@ -18,6 +18,10 @@ let links: NavBarLink[] = navBarConfig.links.map(
 		return item;
 	},
 );
+const moreLinkNames = ["工坊", "远程服务", "赞助", "电视喵", "友链"];
+const moreLinks = moreLinkNames
+	.map((name) => links.find((link) => link.name === name))
+	.filter((link): link is NavBarLink => link !== undefined);
 ---
 <div id="navbar" class="z-50">
     <div class="absolute h-8 left-0 right-0 -top-8 bg-[var(--page-bg)] transition"></div> <!-- used for onload animation -->
@@ -32,7 +36,7 @@ let links: NavBarLink[] = navBarConfig.links.map(
         </a>
         <div class="hidden md:flex items-center gap-1">
             {/* 主链接：排除下拉菜单项和RSS */}
-            {links.filter(l => !['友链', '电视喵', '工坊', '赞助', 'RSS'].includes(l.name)).map((l) => (
+            {links.filter(l => ![...moreLinkNames, 'RSS'].includes(l.name)).map((l) => (
                 <a aria-label={l.name} href={l.external ? l.url : url(l.url)} target={l.external ? "_blank" : null}
                    class="btn-plain rounded-lg h-11 px-3 font-bold"
                 >
@@ -49,7 +53,7 @@ let links: NavBarLink[] = navBarConfig.links.map(
                     <Icon name="material-symbols:expand-more" class="text-[1.1rem] transition-transform" id="more-menu-arrow"></Icon>
                 </button>
                 <div id="more-menu-panel" class="float-panel float-panel-closed absolute top-full right-0 mt-1 min-w-[140px] p-2 flex flex-col gap-0.5">
-                    {links.filter(l => ['友链', '电视喵', '工坊', '赞助'].includes(l.name)).map((l) => (
+                    {moreLinks.map((l) => (
                         <a href={l.url} target="_blank" rel="noopener noreferrer" class="btn-plain rounded-lg h-10 px-4 font-bold flex items-center justify-between gap-2 text-sm">
                             <span>{l.name}</span>
                             <Icon name="fa6-solid:arrow-up-right-from-square" class="text-[0.7rem] text-black/20 dark:text-white/20" />

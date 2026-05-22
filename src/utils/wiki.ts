@@ -143,21 +143,33 @@ export function extractHeadings(
 	return headings;
 }
 
-// 缓存博客文章 slug 列表
-let cachedBlogSlugs: Set<string> | null = null;
+let cachedBlogSlugByPath: Map<string, string> | null = null;
 
-/**
- * 获取所有博客文章的 slug 列表
- */
-function getAllBlogSlugs(): Set<string> {
-	if (cachedBlogSlugs) {
-		return cachedBlogSlugs;
+function normalizePostSlugPart(value: string): string {
+	return value
+		.toLowerCase()
+		.replace(/\s+/g, "-")
+		.replace(/[^\w一-龥-]/g, "")
+		.replace(/-+/g, "-")
+		.replace(/^-/, "");
+}
+
+function normalizePostPath(value: string): string {
+	return decodeURI(value)
+		.replace(/\\/g, "/")
+		.replace(/^\/+/, "")
+		.replace(/\.md$/, "");
+}
+
+function getBlogSlugByPath(): Map<string, string> {
+	if (cachedBlogSlugByPath) {
+		return cachedBlogSlugByPath;
 	}
 
-	const slugs = new Set<string>();
+	const slugs = new Map<string, string>();
 
 	if (!fs.existsSync(POSTS_DIR)) {
-		cachedBlogSlugs = slugs;
+		cachedBlogSlugByPath = slugs;
 		return slugs;
 	}
 
@@ -170,42 +182,47 @@ function getAllBlogSlugs(): Set<string> {
 			if (entry.isDirectory()) {
 				scanDir(fullPath);
 			} else if (entry.isFile() && entry.name.endsWith(".md")) {
-				// 构建 slug: Category/文章标题
 				const relativePath = path.relative(POSTS_DIR, fullPath).replace(/\\/g, "/");
-				const slug = relativePath.replace(/\.md$/, "");
-				slugs.add(slug);
+				const normalizedPath = normalizePostPath(relativePath);
+				const slug = normalizedPath.split("/").map(normalizePostSlugPart).join("/");
+				slugs.set(normalizedPath, slug);
+				slugs.set(slug, slug);
 			}
 		}
 	}
 
 	scanDir(POSTS_DIR);
-	cachedBlogSlugs = slugs;
+	cachedBlogSlugByPath = slugs;
 	return slugs;
 }
 
-/**
- * 将 wiki 文章名转换为博客文章 slug
- * 例如: "Claude code 安装.md" -> "AIHacks/Claude code 安装"
- */
+function convertPostPathToBlogSlug(relativePath: string): string | null {
+	const normalizedPath = normalizePostPath(relativePath);
+	const blogSlugByPath = getBlogSlugByPath();
+	return blogSlugByPath.get(normalizedPath) ?? blogSlugByPath.get(normalizedPath.split("/").map(normalizePostSlugPart).join("/")) ?? null;
+}
+
 function convertWikiFileNameToBlogSlug(fileName: string): string | null {
-	// 移除 .md 后缀
 	const nameWithoutExt = fileName.replace(/\.md$/, "");
 
-	const blogSlugs = getAllBlogSlugs();
-
-	// 检查是否直接存在
-	for (const slug of blogSlugs) {
-		if (slug.endsWith(`/${nameWithoutExt}`)) {
-			// 分类名小写以匹配博客 URL 格式
-			const parts = slug.split("/");
-			if (parts.length >= 2) {
-				parts[0] = parts[0].toLowerCase();
-			}
-			return parts.join("/");
+	for (const [postPath, slug] of getBlogSlugByPath()) {
+		if (postPath.endsWith(`/${nameWithoutExt}`) || slug.endsWith(`/${normalizePostSlugPart(nameWithoutExt)}`)) {
+			return slug;
 		}
 	}
 
 	return null;
+}
+
+function preprocessPostLinks(content: string): string {
+	return content.replace(
+		/\]\(((?:\.\.\/)+content\/posts\/[^)]+?\.md)\)/g,
+		(match, href: string) => {
+			const postsMatch = href.match(/(?:\.\.\/)+content\/posts\/(.+)$/);
+			const slug = postsMatch ? convertPostPathToBlogSlug(postsMatch[1]) : null;
+			return slug ? `](/posts/${slug}/)` : match;
+		},
+	);
 }
 
 /**
@@ -290,18 +307,10 @@ export function createMarkdownParser(): markdownIt {
 			// 匹配任意深度的 content/posts/ 路径（如 ../../content/posts/ 或 ../../../content/posts/）
 			const postsMatch = href && href.match(/(?:\.\.\/)+content\/posts\/(.+)$/);
 			if (postsMatch) {
-				// 提取 Category/file.md 部分
-				const relativePath = postsMatch[1];
-				// 转换为 slug 格式: category/文章标题（分类名小写）
-				const slug = relativePath.replace(/\.md$/, "");
-				const parts = slug.split("/");
-				if (parts.length >= 2) {
-					parts[0] = parts[0].toLowerCase();
+				const slug = convertPostPathToBlogSlug(postsMatch[1]);
+				if (slug) {
+					token.attrs[hrefIndex][1] = `/posts/${slug}/`;
 				}
-				const normalizedSlug = parts.join("/");
-				// 转换为 URL 格式: /posts/category/文章标题/
-				const url = `/posts/${normalizedSlug}/`;
-				token.attrs[hrefIndex][1] = url;
 			}
 			// 处理 wiki 目录内的 .md 链接
 			else if (href && href.endsWith(".md") && !href.startsWith("http")) {
@@ -338,7 +347,7 @@ export function renderWikiContent(content: string): string {
 	// 移除开头的一级标题
 	const contentWithoutFirstH1 = content.replace(/^#\s+.+$/m, "").trim();
 	// 预处理内容
-	const preprocessedContent = preprocessWikiContent(contentWithoutFirstH1);
+	const preprocessedContent = preprocessWikiContent(preprocessPostLinks(contentWithoutFirstH1));
 	// 创建解析器
 	const md = createMarkdownParser();
 	// 渲染

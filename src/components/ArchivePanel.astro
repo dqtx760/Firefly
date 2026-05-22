@@ -104,7 +104,7 @@ const monthNames = [
                     
                     {/* 文章列表 */}
                     {monthGroup.posts.map(post => (
-                        <a href={getPostUrlBySlug(post.slug)}
+                        <a href={getPostUrlBySlug(post.id)}
                            aria-label={post.data.title}
                            class="group btn-plain !block h-10 w-full rounded-lg hover:text-[initial]"
                         >

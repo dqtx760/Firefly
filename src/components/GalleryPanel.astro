@@ -20,7 +20,7 @@ const postsWithCover = posts.filter(
     <div class="gallery-grid" style={`--cols: ${cols}`}>
         {postsWithCover.map(post => (
             <a 
-                href={getPostUrlBySlug(post.slug)}
+                href={getPostUrlBySlug(post.id)}
                 class="gallery-card group"
                 aria-label={post.data.title}
             >

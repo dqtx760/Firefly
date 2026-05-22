@@ -10,7 +10,8 @@ AI 编程工具链的完整生态，从 API 获取到 Agent 配置。
 
 - [OpenRouter](../../content/posts/AIHacks/OpenRouter.md) — 免费模型聚合
 - [NVIDIA-API申请](../../content/posts/AIHacks/NVIDIA-API申请.md)
-- [一些送API的平台](../../content/posts/AIHacks/一些送API的平台.md)
+- [魔搭社区免费token活动](../../content/posts/AIHacks/魔搭社区免费token活动.md)
+- [蚂蚁百灵大模型](../../content/posts/AIHacks/蚂蚁百灵大模型.md)
 
 ### 编程工具
 

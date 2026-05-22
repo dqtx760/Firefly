@@ -23,7 +23,7 @@ CDN 分发 (静态站点)
 | 组件 | 作用 | 相关文档 |
 |------|------|----------|
 | Fuwari | 静态站点生成器 (Astro 基础) | - |
-| GitHub | 代码托管 + Git 版本控制 | [Bash上传github命令](../../content/posts/Xenia/Bash上传github命令.md) |
+| GitHub | 代码托管 + Git 版本控制 | - |
 | EdgeOne | 自动构建 + CDN 分发 | [博客工作流](../../content/posts/Workflow/博客工作流.md) |
 | Gitee 图床 | 图片资源托管 | [Piclist图床](../../content/posts/Workflow/Piclist图床.md) |
 
@@ -40,4 +40,3 @@ CDN 分发 (静态站点)
 - [博客工作流](../../content/posts/Workflow/博客工作流.md)
 - [博客发布bat](../../content/posts/Workflow/博客发布bat.md)
 - [博客搭建](../../content/posts/Workflow/博客搭建.md)
-- [博客封面与画廊](../../content/posts/Xenia/博客封面与画廊.md)

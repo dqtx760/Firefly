@@ -46,7 +46,7 @@ const postsWithCover = await Promise.all(
 			title: entry.data.title,
 			published: entry.data.published,
 			updated: entry.data.updated,
-			url: getPostUrlBySlug(entry.slug),
+			url: getPostUrlBySlug(entry.id),
 			image: coverImage,
 			description: entry.data.description,
 			draft: entry.data.draft,
