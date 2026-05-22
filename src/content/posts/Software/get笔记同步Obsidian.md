@@ -1,5 +1,5 @@
 ---
-title: get笔记同步Obsidian插件
+title: Get笔记同步Obsidian插件
 published: 2026-05-22
 tags:
   - Obsidian插件

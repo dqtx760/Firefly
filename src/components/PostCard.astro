@@ -1,6 +1,6 @@
 ---
 import path from "node:path";
-import type { CollectionEntry } from "astro:content";
+import { render, type CollectionEntry } from "astro:content";
 import { Icon } from "astro-icon/components";
 
 import { umamiConfig } from "../config";
@@ -31,7 +31,7 @@ const hasCover = image !== undefined && image !== null && image !== "";
 
 const coverWidth = "28%";
 
-const { remarkPluginFrontmatter } = await entry.render();
+const { remarkPluginFrontmatter } = await render(entry);
 ---
 <div class:list={["card-base card-hover flex flex-col w-full relative", className]} style={style}>
     <div class:list={["pl-9 pr-2 pt-6 pb-6 relative", {"w-[calc(100%_-_52px_-_12px)]": !hasCover, "w-[calc(100%_-_var(--coverWidth)_-_12px)]": hasCover}]}>
