@@ -263,9 +263,14 @@ export default defineConfig({
 	vite: {
 		plugins: [
 			{
-				name: "ignore-canvas",
+				name: "ignore-canvas-and-attachments",
 				load(id) {
 					if (id.endsWith(".canvas")) return "export default {}";
+					// 忽略 get attachment 目录下无扩展名的附件文件，防止 Vite 当 JS 解析
+					if (id.includes("get attachment")) {
+						const fileName = id.split(/[\\/]/).pop();
+						if (fileName && !fileName.includes(".")) return "export default {}";
+					}
 				},
 			},
 		],
