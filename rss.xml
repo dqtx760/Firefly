@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>大强博客</title><description>技术分享与实践</description><link>https://dqtx.cc/</link><language>zh_CN</language><item><title>个人说明书</title><link>https://dqtx.cc/posts/technical/00%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/00%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/</guid><pubDate>Sat, 30 Nov 2024 16:45:00 GMT</pubDate><content:encoded>&lt;h2&gt;关于我&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>大强博客</title><description>技术分享与实践</description><link>https://dqtx.cc/</link><language>zh_CN</language><item><title>个人说明书</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Sat, 30 Nov 2024 16:45:00 GMT</pubDate><content:encoded>&lt;h2&gt;关于我&lt;/h2&gt;
 &lt;hr /&gt;
 &lt;p&gt;92年生人，数字生产力玩家、Build in Public 践行者、工作流构建者，效率工具挖掘、AI新鲜玩法探索、出海实操攻略研究，教你用AI干掉90%的重复劳动！提供可落地的定制化远程技术服务！&lt;/p&gt;
 &lt;p&gt;• 🛠️ 正在做 — 让 AI Coding Agent 的 Skills 跨平台管理变简单&lt;/p&gt;
@@ -487,7 +487,102 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/tech-shrimp&quot;&gt;tech-shrimp&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>阿里Qoder安装使用指南</title><link>https://dqtx.cc/posts/aihacks/%E9%98%BF%E9%87%8Cqoder/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E9%98%BF%E9%87%8Cqoder/</guid><pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;AI编程的进化速度，快得让人窒息。当大多数人还停留在让AI“辅助写两行代码”或者“帮忙寻找Bug”的阶段时，编程的下一步范式已经悄然迈向了“全自动托管与智能体自主开发”。&lt;/p&gt;
+</content:encoded></item><item><title>Get笔记同步Obsidian插件</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Fri, 22 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你在 Get 笔记中长期收藏却未整理，这种收藏夹囤积症持续多久了？&lt;/p&gt;
+&lt;p&gt;我用了大概半年。最开始觉得太棒了——看到好文章，丢进去；听到有意思的播客，丢进去；脑子里冒出什么想法，随手语音一下，也丢进去。AI 帮你摘要，帮你整理，感觉自己的知识库在飞速膨胀。&lt;/p&gt;
+&lt;p&gt;然后过了两个月，我打开 Get 笔记，里面已经有 400 多条笔记了。但真正&quot;用&quot;过的，可能不超过 20 条。&lt;/p&gt;
+&lt;p&gt;问题不在工具，在于 Get 笔记是个&quot;输入终点&quot;，但知识真正被用起来，需要的是&quot;加工和连接&quot;。而 Obsidian，恰好是干这件事的地方。&lt;/p&gt;
+&lt;p&gt;所以有人做了一个插件，把 Get 笔记的内容自动同步到 Obsidian 里。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;项目地址：&lt;/strong&gt;
+https://github.com/springrain1/get-to-obsidian&lt;/p&gt;
+&lt;p&gt;PS.如果遇到地址打不开，关注公众号「大强同学」，后台回复「get-obsidian」获取插件
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-get-to-obsidian-20260522-160900.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;准备工作&lt;/h3&gt;
+&lt;p&gt;在开始之前，你需要：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个已经在用的 &lt;strong&gt;Obsidian Vault&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;一个正在用的 &lt;strong&gt;Get 笔记账号&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;安装好 &lt;strong&gt;Node.js&lt;/strong&gt;（因为后面要跑 npx 命令，没有的话先装一下）&lt;/li&gt;
+&lt;li&gt;会用Obsidian 的插件市场，搜索安装BRAT 这个插件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;BRAT 是什么？简单说，它是一个能帮你安装&quot;还没上架插件市场&quot;的 Obsidian 插件工具。&lt;/p&gt;
+&lt;h3&gt;安装步骤&lt;/h3&gt;
+&lt;h4&gt;第一步：装 BRAT 插件&lt;/h4&gt;
+&lt;p&gt;打开 Obsidian，进「设置 → 第三方插件 → 浏览插件市场」，搜索 &lt;strong&gt;BRAT&lt;/strong&gt;，安装并启用。&lt;/p&gt;
+&lt;p&gt;这一步应该很顺，BRAT 是 Obsidian 社区里用得很广的工具，我自己装过的不下五六个插件都是靠它的。&lt;/p&gt;
+&lt;h4&gt;第二步：用 BRAT 安装 get-to-obsidian&lt;/h4&gt;
+&lt;p&gt;进入 BRAT 的设置页，找到「Add Beta plugin」，填入仓库地址：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;https://github.com/springrain1/get-to-obsidian
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;点确认，BRAT 会自动帮你拉取并安装插件。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260522151517689.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h4&gt;第三步：装 Playwright&lt;/h4&gt;
+&lt;p&gt;这块是容易漏掉的地方，官方也有写，但藏得比较深：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;装完插件后，还需要手动跑一条命令：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npx playwright@1.43.1 install
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;打开终端（Windows 用 PowerShell 或者 CMD 都行，Mac 直接用 Terminal），把这行粘进去跑一下。&lt;/p&gt;
+&lt;p&gt;Playwright 是一个浏览器自动化库，插件用它来抓取 Get 笔记里的内容。如果跳过这一步，后台自动同步那个功能就跑不起来。&lt;/p&gt;
+&lt;p&gt;我当时第一次配的时候就没注意这个，折腾了半个小时才发现。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260522155643986.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h4&gt;第四步：配置 Get 笔记账号&lt;/h4&gt;
+&lt;p&gt;安装完后，点击左侧边栏的笔记本图标 📓&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260522152241888.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;进入插件的设置页，建议勾选插件中
+☑️启动Obsidian时自动同步
+☑️每小时自动同步一次&lt;/p&gt;
+&lt;p&gt;最后点击点一次「自动同步」试试——如果 Obsidian Vault 里出现了新的文件夹，里面开始有笔记冒出来，说明连接成功了。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260522153016063.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;同步进来的笔记长什么样&lt;/h3&gt;
+&lt;p&gt;跑通之后，每条从 Get 笔记同步过来的笔记，都是一个独立的 Markdown 文件。&lt;/p&gt;
+&lt;p&gt;你的 Obsidian vault 会生成以下结构：
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260522160651760.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;notes文件中笔记，标题、时间、来源链接、标签，都在 Frontmatter 里，结构干净。&lt;/p&gt;
+&lt;p&gt;这意味着什么？意味着你可以：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用 &lt;strong&gt;Dataview&lt;/strong&gt; 按标签、日期、来源过滤笔记，做成动态看板&lt;/li&gt;
+&lt;li&gt;给任意一条笔记加上 &lt;code&gt;[[双链]]&lt;/code&gt;，把它跟 Obsidian 里的其他笔记连起来&lt;/li&gt;
+&lt;li&gt;把它丢进某个项目文件夹，让它参与你真正的知识系统&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;增量同步这一点也设计得挺合理——每次只拉取新增的内容，不会重复写入，不用担心跑几次之后 Vault 里一堆重复文件。&lt;/p&gt;
+&lt;h3&gt;同步完之后，别忘了这件事&lt;/h3&gt;
+&lt;p&gt;工具链再顺滑，也代替不了&quot;定期整理&quot;这个动作。&lt;/p&gt;
+&lt;p&gt;这是真的。我自己每周会专门找个时间，打开 Obsidian，把这一周同步进来的内容过一遍：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;有价值的&lt;/strong&gt;，加标签、加双链，融进知识网络&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;跟某个项目相关的&lt;/strong&gt;，移到对应的项目目录&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;读完摘要觉得不需要深挖的&lt;/strong&gt;，标记已读&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;确实没用的&lt;/strong&gt;，直接删掉&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;不要让 Obsidian 变成另一个收藏夹。Get 笔记负责&quot;接收&quot;，Obsidian 负责&quot;加工&quot;，定期回顾才是让这套系统真正转起来的关键。&lt;/p&gt;
+&lt;h3&gt;常见问题&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Q：手动同步能跑，但后台自动同步没反应？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;大概率是 Playwright 没装到位。回去重跑一遍 &lt;code&gt;npx playwright@1.43.1 install&lt;/code&gt;，确认跑完没有报错。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q：同步进来的笔记格式有点乱，比如换行符不对？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这个 springrain1 的 fork 版本专门修了 Windows 上的格式转换问题（原版这块确实有问题）。如果用的是原版而不是这个 fork，建议换过来。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q：装完 BRAT 找不到 get-to-obsidian？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;BRAT 拉取完之后，插件不会自动出现在列表里——需要手动去「设置 → 第三方插件」里找，然后打开那个开关。&lt;/p&gt;
+&lt;h3&gt;最后总结下&lt;/h3&gt;
+&lt;p&gt;收藏夹囤积症的解药，不是换一个更好的收藏夹，而是建立&quot;收进来之后要做什么&quot;的机制。&lt;/p&gt;
+&lt;p&gt;get-to-obsidian 解决的是&quot;把 Get 笔记的内容拉进来&quot;这一步。&lt;/p&gt;
+&lt;p&gt;真正让知识活起来的，是你装了双链之后那个整理的动作。&lt;/p&gt;
+&lt;p&gt;工具是桥，路还得自己走。&lt;/p&gt;
+&lt;p&gt;&amp;gt;&amp;gt;&amp;gt;&lt;strong&gt;延伸阅读&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/8kCbGmeXvB7cuJZGHaCdkw&quot;&gt;19 个 Obsidian 神仙插件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/24oTrC1tttUs18Qv7cRwRQ&quot;&gt;Obsidian同步Notion最佳实践&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/LvxZCJG99fzyYbgmDJ73fA&quot;&gt;Dataview与Templater插件联动&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/kPjIpHmzciWY8_3ettEVsg&quot;&gt;Obsidian日记半自动化&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/lgdJ7DYSqRIS1b13QQnk3A&quot;&gt;Obsidian附件图片管理插件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/45pUXcmcifTzTcdrlrTWHQ&quot;&gt;Obsidian插件LinkStowr最佳实践&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/pdbv5g8wGVga9z4n52homw&quot;&gt;Obsidian的插件Claudian报错&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/9qTRLHvoNQKUF2Ac2iVRvA&quot;&gt;Karpathy 的 LLM Wiki最佳实践&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/4SEsM-AWoEhPXiD49oNB9g&quot;&gt;Obsidian推送微信插件配置CF Worker代理方案&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以上，既然看到这里了，如果觉得不错，随手&lt;strong&gt;点个赞、在看、转发&lt;/strong&gt;三连吧，如果想第一时间收到推送，也可以给我个星标⭐️～&lt;/p&gt;
+&lt;p&gt;谢谢你看我的文章，我们，下次再见。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&amp;gt;/ 作者：大强同学&lt;/em&gt;
+&lt;em&gt;&amp;gt;/ 更多干货，请访问：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+</content:encoded></item><item><title>阿里Qoder安装使用指南</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;AI编程的进化速度，快得让人窒息。当大多数人还停留在让AI“辅助写两行代码”或者“帮忙寻找Bug”的阶段时，编程的下一步范式已经悄然迈向了“全自动托管与智能体自主开发”。&lt;/p&gt;
 &lt;p&gt;最近，阿里憋了几个月终于放出了 Qoder 1.0 正式版。相较于早期的测试版本，这次的1.0版可以说是直接推倒重做，带着极简克制的UI界面和极其强悍的自动化调度能力杀回了战场。&lt;/p&gt;
 &lt;p&gt;官网网站
 https://qoder.com/zh&lt;/p&gt;
@@ -517,7 +612,7 @@ https://qoder.com/zh&lt;/p&gt;
 &lt;p&gt;Qoder 1.0 完美集百家之所长，交出了一份完成度极高、功能丰富且克制的答卷。未来，淘汰开发者的永远不会是AI本身，而是那些率先学会“指挥AI团队”的先行者。&lt;/p&gt;
 &lt;p&gt;强烈建议大家去官网下载体验一下这波生产力革命的震撼。也欢迎把这篇文章转发给你的程序员朋友、项目经理和团队主管，是时候一起重塑你们的工作流了。如果你对这套全新的开发模式有什么想法，我们在评论区见。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;标题：阿里悄悄扔出王炸！这款推倒重做的开发神器，或是目前最强的国产AI IDE&lt;/strong&gt;&lt;/p&gt;
-</content:encoded></item><item><title>Custom Attachment Location 配置全流程</title><link>https://dqtx.cc/posts/software/custom-attachment-location-%E9%85%8D%E7%BD%AE%E5%85%A8%E6%B5%81%E7%A8%8B/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/custom-attachment-location-%E9%85%8D%E7%BD%AE%E5%85%A8%E6%B5%81%E7%A8%8B/</guid><pubDate>Wed, 20 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;笔记的生命力，藏在那些不会失效的附件里。&lt;/p&gt;
+</content:encoded></item><item><title>Custom Attachment Location 配置全流程</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Wed, 20 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;笔记的生命力，藏在那些不会失效的附件里。&lt;/p&gt;
 &lt;p&gt;深耕 Obsidian 写作许久愈发察觉，最先乱掉的从不是文字内容，而是杂乱无章的图片附件。初期毫无察觉，日积月累文件增多，各类附件乱象接踵而至。&lt;/p&gt;
 &lt;p&gt;而 Custom Attachment Location 插件完美化解难题，统一规范图片为标准 Markdown 格式，适配各类编辑器与 GitHub 平台正常展示，让本地库附件井然有序，彻底告别路径错乱、链接失效等困扰。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260520181235152.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -590,7 +685,7 @@ https://qoder.com/zh&lt;/p&gt;
 &lt;p&gt;谢谢你看我的文章，我们，下次再见。&lt;/p&gt;
 &lt;p&gt;/ 作者：大强同学
 / 更多干货，请访问：dqtx.cc&lt;/p&gt;
-</content:encoded></item><item><title>讯飞星辰Maas福利活动</title><link>https://dqtx.cc/posts/aihacks/%E8%AE%AF%E9%A3%9E%E6%98%9F%E8%BE%B0-maas%E7%A6%8F%E5%88%A9%E6%B4%BB%E5%8A%A839%E5%85%8330%E5%A4%A9api%E4%B8%8D%E9%99%90%E9%87%8F%E8%B0%83%E7%94%A8/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E8%AE%AF%E9%A3%9E%E6%98%9F%E8%BE%B0-maas%E7%A6%8F%E5%88%A9%E6%B4%BB%E5%8A%A839%E5%85%8330%E5%A4%A9api%E4%B8%8D%E9%99%90%E9%87%8F%E8%B0%83%E7%94%A8/</guid><pubDate>Mon, 18 May 2026 21:30:00 GMT</pubDate><content:encoded>&lt;p&gt;养过 OpenClaw（小龙虾）的都知道有多烧钱——后台 24 小时跑任务，按 Token 计费，一天上千块是常事。更坑的是哪怕没盯着它，AI 智能体也会在后台自动执行、默默消耗 Token，不知不觉账单就爆表了。&lt;/p&gt;
+</content:encoded></item><item><title>讯飞星辰Maas福利活动</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Mon, 18 May 2026 21:30:00 GMT</pubDate><content:encoded>&lt;p&gt;养过 OpenClaw（小龙虾）的都知道有多烧钱——后台 24 小时跑任务，按 Token 计费，一天上千块是常事。更坑的是哪怕没盯着它，AI 智能体也会在后台自动执行、默默消耗 Token，不知不觉账单就爆表了。&lt;/p&gt;
 &lt;p&gt;二手平台上现在有个魔幻现象：帮人卸载小龙虾的订单比安装的还火爆。十几块、几十块帮人卸载，第一批踩坑的人纷纷止损离场。&lt;/p&gt;
 &lt;p&gt;但科大讯飞旗下的讯飞星辰 MaaS 平台，直接把这个痛点给治了。
 &lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-iflytek-maas-20260518-230651.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -638,7 +733,7 @@ https://maas.xfyun.cn/packageSubscription?inviteCode=MAAS-F75A78EC&lt;/p&gt;
 &lt;p&gt;填邀请码后双方都能拿到等额礼品卡，可直接抵扣 API 费用。相当于白嫖套餐。&lt;/p&gt;
 &lt;p&gt;限时活动，3.9 元解锁不限量套餐，手慢无。以前养虾像养吞金兽，现在一瓶可乐搞定一个月。&lt;/p&gt;
 &lt;p&gt;工具的意义不在于它有多牛，在于它让你把时间花在真正该花的地方。&lt;/p&gt;
-</content:encoded></item><item><title>Claude-code二改版</title><link>https://dqtx.cc/posts/aihacks/claude-code%E4%BA%8C%E6%94%B9%E7%89%88/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/claude-code%E4%BA%8C%E6%94%B9%E7%89%88/</guid><pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;分享市面上一些Claude code二改版&lt;/p&gt;
+</content:encoded></item><item><title>Claude-code二改版</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Mon, 18 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;分享市面上一些Claude code二改版&lt;/p&gt;
 &lt;h3&gt;CLI版本&lt;/h3&gt;
 &lt;h4&gt;MiniClaude&lt;/h4&gt;
 &lt;p&gt;Claude Code 在开发体验上做得不错，但内置了大量云服务逻辑。我做了一个精简版 MiniClaude ，保留 100% 核心功能，移除了所有不必要的部分。
@@ -653,7 +748,7 @@ https://www.v2ex.com/t/1213338#reply10
 开源地址：
 https://github.com/txl16095/MiniClaude&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260517213248392.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;Newtype-os&lt;/h3&gt;
+&lt;h4&gt;Newtype-os&lt;/h4&gt;
 &lt;p&gt;&lt;strong&gt;项目地址&lt;/strong&gt;：
 https://github.com/newtype-01/newtype-os/blob/main/README.zh-cn.md&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260330163220785.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -680,7 +775,7 @@ https://web.okjike.com/u/5D79173A-D706-4D3F-BA50-6C4BB7C8E9EE/post/69eb4ddf4ef52
 开源地址：
 https://github.com/lukilabs/craft-agents-oss/
 &lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260517214958350.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-</content:encoded></item><item><title>文章封面&amp;配图技能</title><link>https://dqtx.cc/posts/aihacks/baoyu-article-illustrator%E6%94%B9%E9%80%A0/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/baoyu-article-illustrator%E6%94%B9%E9%80%A0/</guid><pubDate>Sun, 17 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;我写公众号文章，有两件事是刚需：&lt;strong&gt;文章内配图&lt;/strong&gt;和&lt;strong&gt;封面图&lt;/strong&gt;。&lt;/p&gt;
+</content:encoded></item><item><title>文章封面&amp;配图技能</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Sun, 17 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;我写公众号文章，有两件事是刚需：&lt;strong&gt;文章内配图&lt;/strong&gt;和&lt;strong&gt;封面图&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;之前这两个需求分别用两个不同的技能来满足——&lt;code&gt;baoyu-article-illustrator&lt;/code&gt; 负责给正文配图，封面则靠手动折腾。最近我把它们统一到了同一个生图后端上，整个流程顺畅了不少。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/cshoutu.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;先说起因&lt;/h3&gt;
@@ -713,9 +808,9 @@ article-cover-16x9       → 提炼标题 → 构造封面 prompt → GPT-Image-
 谢谢你看我的文章，我们，下次再见。&lt;/p&gt;
 &lt;p&gt;/ 作者：大强同学
 / 更多干货，请访问：dqtx.cc&lt;/p&gt;
-</content:encoded></item><item><title>我的图文写作工作流</title><link>https://dqtx.cc/posts/aihacks/%E6%88%91%E7%9A%84%E5%9B%BE%E6%96%87%E5%86%99%E4%BD%9C%E5%B7%A5%E4%BD%9C%E6%B5%81/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E6%88%91%E7%9A%84%E5%9B%BE%E6%96%87%E5%86%99%E4%BD%9C%E5%B7%A5%E4%BD%9C%E6%B5%81/</guid><pubDate>Sun, 17 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;我做了一个完整内容创作工作流。&lt;/p&gt;
+</content:encoded></item><item><title>我的图文写作工作流</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Sun, 17 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;我做了一个完整内容创作工作流。&lt;/p&gt;
 &lt;p&gt;从选题到发布，一句话触发，剩下的全交给 AI。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260520185912038.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260522142459828.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;第一步：选题&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;/aihot
 ↓
@@ -823,7 +918,7 @@ https://apimart.ai/register?aff=QVui&lt;/p&gt;
 &lt;p&gt;谢谢你看我的文章，我们，下次再见。&lt;/p&gt;
 &lt;p&gt;/ 作者：大强同学
 / 更多干货，请访问：dqtx.cc&lt;/p&gt;
-</content:encoded></item><item><title>用 AI 两年，我劝你别太依赖它</title><link>https://dqtx.cc/posts/aihacks/%E7%94%A8-ai-%E4%B8%A4%E5%B9%B4%E6%88%91%E5%8A%9D%E4%BD%A0%E5%88%AB%E5%A4%AA%E4%BE%9D%E8%B5%96%E5%AE%83/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E7%94%A8-ai-%E4%B8%A4%E5%B9%B4%E6%88%91%E5%8A%9D%E4%BD%A0%E5%88%AB%E5%A4%AA%E4%BE%9D%E8%B5%96%E5%AE%83/</guid><pubDate>Sat, 16 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这两年，身边所有人都在聊 AI。&lt;/p&gt;
+</content:encoded></item><item><title>用 AI 两年，我劝你别太依赖它</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Sat, 16 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这两年，身边所有人都在聊 AI。&lt;/p&gt;
 &lt;p&gt;有人兴奋，说它能帮你写完整个项目；有人焦虑，怕自己明天就被取代；还有人已经用它月入十万，在知识星球里收徒授课。&lt;/p&gt;
 &lt;p&gt;我也在用 AI，每天都在用。但今天这篇，不是要给你打鸡血，也不是要告诉你怎么靠 AI 发财。我想聊点不一样的——聊聊这两年里，我自己走过的弯路，踩过的坑，以及那些「早知道就好了」的心得。&lt;/p&gt;
 &lt;p&gt;下面这六条，是我走到现在的样子。它们不一定对，但一定诚实。&lt;/p&gt;
@@ -883,7 +978,7 @@ https://apimart.ai/register?aff=QVui&lt;/p&gt;
 &lt;p&gt;AI 不会取代你。但它会用一种很温柔的方式，帮你把所有凑合的部分一一暴露出来。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;然后你可以选择：修补它们，或者继续假装看不见。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;这件事，跟 AI 没关系。跟你有关系。&lt;/p&gt;
-</content:encoded></item><item><title>Diskgenius扩容C盘</title><link>https://dqtx.cc/posts/software/diskgenius%E6%89%A9%E5%AE%B9c%E7%9B%98/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/diskgenius%E6%89%A9%E5%AE%B9c%E7%9B%98/</guid><pubDate>Sat, 16 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;日常使用电脑过程中，C 盘空间告急早已成为多数用户的常见困扰，系统运行卡顿、软件安装失败、更新无法完成等一系列问题接踵而至，严重影响整机使用体验。想要高效扩充 C 盘存储空间，无需重装系统、不用复杂分区命令，借助 DiskGenius 这款实用磁盘分区工具，便能轻松完成无损扩容操作。&lt;/p&gt;
+</content:encoded></item><item><title>Diskgenius扩容C盘</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Sat, 16 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;日常使用电脑过程中，C 盘空间告急早已成为多数用户的常见困扰，系统运行卡顿、软件安装失败、更新无法完成等一系列问题接踵而至，严重影响整机使用体验。想要高效扩充 C 盘存储空间，无需重装系统、不用复杂分区命令，借助 DiskGenius 这款实用磁盘分区工具，便能轻松完成无损扩容操作。&lt;/p&gt;
 &lt;h3&gt;Diskgenius扩容&lt;/h3&gt;
 &lt;p&gt;扩容前
 &lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260515150349299.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -919,7 +1014,7 @@ D 盘分区前部划出 100.00GB，并选择合并到系统 (C:)。
 &lt;li&gt;&lt;a href=&quot;https://www.uy5.net/diskgenius/&quot;&gt;软件下载&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.bilibili.com/video/BV1AY4y1Y7wB/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=206031f494850e57fd6c92ace02b1bed&quot;&gt;操作教程&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
-</content:encoded></item><item><title>飞书lark-cli，45天获万星！</title><link>https://dqtx.cc/posts/aihacks/%E9%A3%9E%E4%B9%A6%E5%BC%80%E6%BA%90cli/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E9%A3%9E%E4%B9%A6%E5%BC%80%E6%BA%90cli/</guid><pubDate>Fri, 15 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;一个让你和 AI Agent 都能在终端中操作飞书cli。覆盖消息、文档、多维表格、电子表格、幻灯片、日历、邮箱、任务、会议、Markdown 等核心业务域，提供 200+ 命令及 24 个 AI Agent &lt;a href=&quot;https://github.com/larksuite/cli/blob/main/skills&quot;&gt;Skills&lt;/a&gt;。&lt;/p&gt;
+</content:encoded></item><item><title>飞书lark-cli，45天获万星！</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Fri, 15 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;一个让你和 AI Agent 都能在终端中操作飞书cli。覆盖消息、文档、多维表格、电子表格、幻灯片、日历、邮箱、任务、会议、Markdown 等核心业务域，提供 200+ 命令及 24 个 AI Agent &lt;a href=&quot;https://github.com/larksuite/cli/blob/main/skills&quot;&gt;Skills&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;想写这篇文章很久了，说实话，这个工具刚上线我就安装了，但当时很多功能根本用不了。这段时间，又有人频频推荐，于是我重新安装，实测发现所有功能都能正常使用了。这篇文章其实攒了很久，我真心推荐你去安装使用它。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/lark-cli.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;项目地址
@@ -966,7 +1061,7 @@ https://github.com/larksuite/cli/blob/main/README.zh.md&lt;/p&gt;
 https://www.cnblogs.com/dqtx33/p/20075301&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;以上，既然看到这里了，如果你觉得内容不错，随手点个赞、在看、转发三连吧！如果想第一时间收到推送，可以给我点个星标 ⭐～&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;谢谢你看我的文章，我们，下次再见。&lt;/p&gt;
-</content:encoded></item><item><title>rss工具</title><link>https://dqtx.cc/posts/software/rss/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/rss/</guid><pubDate>Fri, 15 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这篇文章持续更新我收集的RSS工具。&lt;/p&gt;
+</content:encoded></item><item><title>rss工具</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Fri, 15 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这篇文章持续更新我收集的RSS工具。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260520190454770.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;AI 驱动的新闻聚合_阅__读__器_。&lt;em&gt;RSS&lt;/em&gt; 订_阅_ + AI 摘要 + 全文翻译。
 https://github.com/Zoroaaa/newspulse&lt;/p&gt;
@@ -985,7 +1080,7 @@ https://github.com/joeseesun/AIGC_Telegram_Bot/tree/main&lt;/p&gt;
 &lt;p&gt;推荐 10 个网页端 RSS 阅读器，目前在用第一个
 https://xiaoshuapp.com/blog/posts/10-web-rss-reader.html&lt;/p&gt;
 &lt;p&gt;karpathy大佬推荐的 RSS 优质信息源列表&lt;/p&gt;
-</content:encoded></item><item><title>Gemini cli 登录异常解法</title><link>https://dqtx.cc/posts/aihacks/gemini-cli-%E5%AE%89%E8%A3%85%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/gemini-cli-%E5%AE%89%E8%A3%85%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</guid><pubDate>Thu, 14 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;事情是这样的。&lt;/p&gt;
+</content:encoded></item><item><title>Gemini cli 登录异常解法</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Thu, 14 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;事情是这样的。&lt;/p&gt;
 &lt;p&gt;今天下午，有个项目要用到 Gemini CLI，显示打不开
 我就输入命令，重新安装了下&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;npm install -g @google/gemini-cli
@@ -1060,7 +1155,7 @@ https://xiaoshuapp.com/blog/posts/10-web-rss-reader.html&lt;/p&gt;
 &lt;p&gt;信息差啊，朋友们。&lt;/p&gt;
 &lt;p&gt;有时候，你跟正确答案之间的距离，不是你不够努力，也不是你技术不够好。&lt;/p&gt;
 &lt;p&gt;就只是，没有人告诉你，真正的问题是什么。&lt;/p&gt;
-</content:encoded></item><item><title>Gsearch-cli实现Agent调用谷歌</title><link>https://dqtx.cc/posts/aihacks/gsearch-cli/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/gsearch-cli/</guid><pubDate>Thu, 14 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;AI Agent 不能联网真的太蛋疼了。试了五六种搜索工具，没有一个让人省心——要么要配 API Key，要么要跑后台服务，要么结果一塌糊涂。&lt;/p&gt;
+</content:encoded></item><item><title>Gsearch-cli实现Agent调用谷歌</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Thu, 14 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;AI Agent 不能联网真的太蛋疼了。试了五六种搜索工具，没有一个让人省心——要么要配 API Key，要么要跑后台服务，要么结果一塌糊涂。&lt;/p&gt;
 &lt;p&gt;直到发现 &lt;a href=&quot;https://github.com/aeroxy/gsearch-cli&quot;&gt;gsearch-cli&lt;/a&gt;。Rust 写的，单二进制，小得离谱，跑起来快得惊人。最妙的是它能直接复用 Gemini CLI 的 OAuth 认证，&lt;strong&gt;零配置，装完就能用&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;现在 Claude Code 终于有真正的谷歌搜索能力了。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260514195541715.webp&quot; alt=&quot;209&quot; /&gt;&lt;/p&gt;
@@ -1153,7 +1248,7 @@ cp gsearch-cli/skill/gsearch/SKILL.md ~/.claude/skills/gsearch/
 &lt;h2&gt;最后说两句&lt;/h2&gt;
 &lt;p&gt;不是什么惊天动地的大项目，但它把一个很小的问题解决得特别干净。没有花里胡哨的功能，没有复杂的配置，装完就能用。&lt;/p&gt;
 &lt;p&gt;对于折腾 AI Agent 的人来说，这玩意儿就是刚需——你的 Agent 终于能真正&quot;上网&quot;了。&lt;/p&gt;
-</content:encoded></item><item><title>Codex App接入国产模型</title><link>https://dqtx.cc/posts/aihacks/codex-cn-bridge/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/codex-cn-bridge/</guid><description>本地代理把 OpenAI Responses API 转成标准 Chat Completions API，Codex 桌面端可以直接用 DeepSeek、智谱 GLM、Kimi、通义千问、豆包。</description><pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Codex App 最近在推特上很火，但没 GPT Pro 会员就用不了，每月 200 刀也不便宜。能不能接国产模型？逛 GitHub 发现了 &lt;strong&gt;codex-cn-bridge&lt;/strong&gt;。&lt;/p&gt;
+</content:encoded></item><item><title>Codex App接入国产模型</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><description>本地代理把 OpenAI Responses API 转成标准 Chat Completions API，Codex 桌面端可以直接用 DeepSeek、智谱 GLM、Kimi、通义千问、豆包。</description><pubDate>Wed, 13 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Codex App 最近在推特上很火，但没 GPT Pro 会员就用不了，每月 200 刀也不便宜。能不能接国产模型？逛 GitHub 发现了 &lt;strong&gt;codex-cn-bridge&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;它是个本地代理，专门解决 Codex 只能用官方 GPT 的问题——把 OpenAI 的 &lt;code&gt;Responses API&lt;/code&gt; 翻译成标准 &lt;code&gt;Chat Completions API&lt;/code&gt;，让 Codex 桌面端、CLI、VS Code 插件都能直接用国产大模型。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;项目地址：&lt;/strong&gt;
 https://github.com/git-liu835/codex-cn-bridge&lt;/p&gt;
@@ -1220,7 +1315,7 @@ wire_api = &quot;responses&quot;
 &lt;p&gt;这个工具解决的就一件事：&lt;strong&gt;不想给 OpenAI 交钱，又想用 Codex&lt;/strong&gt;。国产模型的 coding 能力其实不差，DeepSeek V3、Kimi K2 写代码都是有口碑的，配上 Codex 的交互体验，日常开发够用了。&lt;/p&gt;
 &lt;p&gt;有个小提示：代理跑在本地 &lt;code&gt;127.0.0.1:8765&lt;/code&gt;，只监听本机，不用担心安全问题。但记得 API Key 别在别处泄露。&lt;/p&gt;
 &lt;p&gt;项目还在快速迭代，遇到 bug 去 GitHub Issues 反馈，作者响应挺快的。&lt;/p&gt;
-</content:encoded></item><item><title>高颜值封面Gem</title><link>https://dqtx.cc/posts/aihacks/gemini%E7%94%9F%E6%88%90%E9%AB%98%E7%BA%A7%E5%B0%81%E9%9D%A2/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/gemini%E7%94%9F%E6%88%90%E9%AB%98%E7%BA%A7%E5%B0%81%E9%9D%A2/</guid><pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近在推特上找封面相关的提示词，偶然刷到极客杰尼老师的文章，我再整理一下，&lt;/p&gt;
+</content:encoded></item><item><title>高颜值封面Gem</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近在推特上找封面相关的提示词，偶然刷到极客杰尼老师的文章，我再整理一下，&lt;/p&gt;
 &lt;p&gt;流程：主副标题→16:9海报提示词→即梦→图片&lt;/p&gt;
 &lt;h3&gt;从 Pinterest 找灵感&lt;/h3&gt;
 &lt;p&gt;https://jp.pinterest.com/search/pins/?q=%E6%96%87%E5%AD%97%E6%8E%92%E7%89%88&amp;amp;rs=typed&lt;/p&gt;
@@ -1262,7 +1357,7 @@ High contrast, cinematic lighting, futuristic atmosphere, 4K, left-text-right-gl
 &lt;h3&gt;文章来源&lt;/h3&gt;
 &lt;p&gt;https://mp.weixin.qq.com/s/g-uB-TmLD8Jk0P5I-0q_PA
 https://x.com/seekjourney/status/1977307327645835478&lt;/p&gt;
-</content:encoded></item><item><title>手机上的Agent软件</title><link>https://dqtx.cc/posts/aihacks/%E6%89%8B%E6%9C%BAagent/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E6%89%8B%E6%9C%BAagent/</guid><pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;在电脑上用 Agents 很爽，但 &lt;strong&gt;Agent 能随身带在手机里，直接调用你手机的所有能力呢？&lt;/strong&gt;&lt;/p&gt;
+</content:encoded></item><item><title>手机上的Agent软件</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;在电脑上用 Agents 很爽，但 &lt;strong&gt;Agent 能随身带在手机里，直接调用你手机的所有能力呢？&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;这就是 &lt;a href=&quot;https://openminis.app/&quot;&gt;Open Minis&lt;/a&gt; —— 一个真正把「端侧 AI Agent」做明白的产品。&lt;/p&gt;
 &lt;p&gt;这不是又一个聊天 App。它是一个完整的 AI Agent 运行时，跑在你的手机上。一句话：&lt;strong&gt;你的 AI 助手，真的能「用」你的手机了。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260512163703973.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -1339,7 +1434,7 @@ https://x.com/seekjourney/status/1977307327645835478&lt;/p&gt;
 &lt;p&gt;这不是「手机上的又一个 AI App」，这是 &lt;strong&gt;AI 终于能真正用你的手机了&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;之前的手机 AI 都停留在「聊天」层面，而 Open Minis 直接把 Agent 的触手伸进了系统层。日历、健康数据、智能家居、文件系统 —— AI 终于能以自然的方式访问和操作它们了。&lt;/p&gt;
 &lt;p&gt;如果你在电脑上已经体会过 Agents 带来的效率革命，把这种能力装进口袋的感觉，值得立刻去试一下。&lt;/p&gt;
-</content:encoded></item><item><title>WorkBuddy安装与使用</title><link>https://dqtx.cc/posts/aihacks/workbuddy/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/workbuddy/</guid><pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;使用 AI Agent 时，两大痛点让人抓狂：&lt;/p&gt;
+</content:encoded></item><item><title>WorkBuddy安装与使用</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Mon, 11 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;使用 AI Agent 时，两大痛点让人抓狂：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;命令交互反直觉&lt;/strong&gt;：斜杠命令一输就触发，需求还没写完，思路已被打断，反复修正苦不堪言。&lt;/p&gt;
@@ -1421,14 +1516,14 @@ mklink /D &quot;C:\Users\Administrator\.workbuddy\skills&quot; &quot;C:\Users\Ad
 &lt;p&gt;&lt;strong&gt;以上就是我个人对这款软件的使用感受。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;从「命令误触」到「先写需求再挂技能」，从「跨工具割裂」到「微信零配置打通」——WorkBuddy 把 AI Agent 从折腾的玩具变成了顺手的生产力工具。&lt;/p&gt;
 &lt;p&gt;如果你也有什么私藏神器，欢迎在评论区留言推荐，互相种草！觉得有帮助的话，点个赞再走呗～&lt;/p&gt;
-</content:encoded></item><item><title>Claude Code 窗口接管</title><link>https://dqtx.cc/posts/aihacks/claude-code-%E6%A1%A5%E6%8E%A5%E5%B7%A5%E5%85%B7/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/claude-code-%E6%A1%A5%E6%8E%A5%E5%B7%A5%E5%85%B7/</guid><pubDate>Sun, 10 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;很多开发者都有这样一个刚需：正在电脑上用 &lt;strong&gt;Claude Code&lt;/strong&gt; 开发项目，突然临时有事需要离开工位。 、&lt;/p&gt;
+</content:encoded></item><item><title>Claude Code 窗口接管</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Sun, 10 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;很多开发者都有这样一个刚需：正在电脑上用 &lt;strong&gt;Claude Code&lt;/strong&gt; 开发项目，突然临时有事需要离开工位。 、&lt;/p&gt;
 &lt;p&gt;人一走，就没法继续和电脑端的 Claude Code 交互跟进任务。其实现在已有不少解决方案，可以通过技能把 Claude Code 桥接到第三方平台，比如飞书、微信、Telegram。哪怕不在电脑旁，也能随时查看开发进度、远程下发指令操控。&lt;/p&gt;
 &lt;p&gt;在 Telegram使用Claude code
 https://github.com/hanxiao/claudecode-telegram&lt;/p&gt;
 &lt;p&gt;将 Claude Code / Codex 桥接到 IM 平台 —— 在 Telegram、Discord、飞书、QQ 或微信中与 AI 编程代理对话
 https://github.com/op7418/Claude-to-IM/blob/main/README.zh-CN.md
 https://github.com/op7418/Claude-to-IM-skill/blob/main/README_CN.md&lt;/p&gt;
-</content:encoded></item><item><title>博客导航栏抖动修复记</title><link>https://dqtx.cc/posts/technical/%E5%AF%BC%E8%88%AA%E6%A0%8F%E6%8A%96%E5%8A%A8%E4%BF%AE%E5%A4%8D%E8%AE%B0/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E5%AF%BC%E8%88%AA%E6%A0%8F%E6%8A%96%E5%8A%A8%E4%BF%AE%E5%A4%8D%E8%AE%B0/</guid><pubDate>Sun, 10 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这个 bug 折磨了我好几天。每次点博客导航栏上的链接，其他几个文字就像被电了一下，集体向右哆嗦一下再弹回来。不像什么大问题，但每次看到都很难受。&lt;/p&gt;
+</content:encoded></item><item><title>博客导航栏抖动修复记</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Sun, 10 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这个 bug 折磨了我好几天。每次点博客导航栏上的链接，其他几个文字就像被电了一下，集体向右哆嗦一下再弹回来。不像什么大问题，但每次看到都很难受。&lt;/p&gt;
 &lt;p&gt;我尝试了不同的模型去修复这个问题，都没有找到真正的元凶&lt;/p&gt;
 &lt;h2&gt;第一回合：怀疑字体&lt;/h2&gt;
 &lt;p&gt;我用的霞鹜文楷是 web font，&lt;code&gt;font-display: swap&lt;/code&gt; 意味着页面先用系统字体渲染，等霞鹜文楷下载完了再替换。两种字体对同一个字母的宽度不一样——&quot;Home&quot;在 Roboto 下可能 42px 宽，霞鹜文楷下变成 47px。这 5px 的差距在 flex 布局里足以把旁边的元素挤开。&lt;/p&gt;
@@ -1452,7 +1547,7 @@ https://github.com/op7418/Claude-to-IM-skill/blob/main/README_CN.md&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;不管 Svelte 初始化了没有，这个容器的宽度永远是 176px。布局从一开始就是稳定的。&lt;/p&gt;
 &lt;p&gt;一个宽度的差异，修了好几天。&lt;/p&gt;
-</content:encoded></item><item><title>离线安装微软商城应用</title><link>https://dqtx.cc/posts/aihacks/win%E5%AE%89%E8%A3%85codex-app/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/win%E5%AE%89%E8%A3%85codex-app/</guid><pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;很多朋友安装了精简版 Windows，却遭遇致命痛点：想装个应用，系统却强行跳转微软商城？&lt;/p&gt;
+</content:encoded></item><item><title>离线安装微软商城应用</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;很多朋友安装了精简版 Windows，却遭遇致命痛点：想装个应用，系统却强行跳转微软商城？&lt;/p&gt;
 &lt;p&gt;Microsoft Store 打不开、下载失败、寸步难行！今天以 &lt;strong&gt;Codex&lt;/strong&gt; 为例，手把手教你离线安装微软商城应用&lt;/p&gt;
 &lt;p&gt;这不仅是解决 Codex 的方案，更是&lt;strong&gt;破解所有微软商城应用安装僵局的终极钥匙&lt;/strong&gt;！&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260509221703981.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -1483,7 +1578,7 @@ https://github.com/op7418/Claude-to-IM-skill/blob/main/README_CN.md&lt;/p&gt;
 &lt;p&gt;这个方法不仅能装 Codex，其他人任何微软商城应用都可以用这种方式离线安装，只需要替换对应的商城链接即可！&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;有用的话，欢迎收藏转发！&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;文章来源：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;  远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/p&gt;
-</content:encoded></item><item><title>网站UI设计参考</title><link>https://dqtx.cc/posts/aihacks/%E7%BD%91%E7%AB%99ui%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E7%BD%91%E7%AB%99ui%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83/</guid><pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;分享几个我日常做前端落地页用到的灵感设计网站&lt;/p&gt;
+</content:encoded></item><item><title>网站UI设计参考</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;分享几个我日常做前端落地页用到的灵感设计网站&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260509012552321.png&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;https://styles.refero.design/
 这个网站直接把全球2000个顶级产品的设计规范打包成DESIGN.md文件&lt;/p&gt;
@@ -1497,7 +1592,7 @@ https://www.designprompts.dev/&lt;/p&gt;
 https://saaspo.com/&lt;/p&gt;
 &lt;p&gt;用于 AI 构建的 AI 生成 UI 应用
 https://www.vibeui.studio/&lt;/p&gt;
-</content:encoded></item><item><title>picgo/Piclist图床</title><link>https://dqtx.cc/posts/software/picgo/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/picgo/</guid><pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;微信官方上传普遍要求图片小于 5MB，但超过 1~2MB 基本就开始体验变差了，后台容易抽风或重压缩，微信后台服务器在拉图时非常挑，有时候&lt;strong&gt;Pcigo 返回的图床 URL 微信抓不到&lt;/strong&gt;，还有GIF 对微信极不友好，公众号对 GIF 容忍度很差。&lt;/p&gt;
+</content:encoded></item><item><title>picgo/Piclist图床</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;微信官方上传普遍要求图片小于 5MB，但超过 1~2MB 基本就开始体验变差了，后台容易抽风或重压缩，微信后台服务器在拉图时非常挑，有时候&lt;strong&gt;Pcigo 返回的图床 URL 微信抓不到&lt;/strong&gt;，还有GIF 对微信极不友好，公众号对 GIF 容忍度很差。&lt;/p&gt;
 &lt;h3&gt;相关链接&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -1542,7 +1637,7 @@ https://www.vibeui.studio/&lt;/p&gt;
 &lt;li&gt;目前常用好几个图片压缩的插件，微信后台服务器在拉图时拉不到&lt;/li&gt;
 &lt;li&gt;目前使用picgo，可以上传GIF，但压缩使用webp 1.0.0插件，GIF也就无缘了&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>GPT-Image-2参考资料</title><link>https://dqtx.cc/posts/aihacks/gpt-image-2/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/gpt-image-2/</guid><pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;分享几个市场免费使用的网站，以及我自己整理收藏的提示词合集。&lt;/p&gt;
+</content:encoded></item><item><title>GPT-Image-2参考资料</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;分享几个市场免费使用的网站，以及我自己整理收藏的提示词合集。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260510170448902.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;第三方网站&lt;/h3&gt;
 &lt;ul&gt;
@@ -1570,7 +1665,7 @@ https://www.vibeui.studio/&lt;/p&gt;
 &lt;li&gt;&lt;a href=&quot;https://x.com/MenglinZhao3/status/2050200293309047047&quot;&gt;帮做职业类证件照&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;../../Yoke/GPT%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%90%88%E9%9B%86.md&quot;&gt;GPT提示词合集&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>X新号蹭热点的方法</title><link>https://dqtx.cc/posts/aihacks/x%E6%96%B0%E5%8F%B7%E8%B9%AD%E7%83%AD%E7%82%B9%E7%9A%84%E6%96%B9%E6%B3%95/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/x%E6%96%B0%E5%8F%B7%E8%B9%AD%E7%83%AD%E7%82%B9%E7%9A%84%E6%96%B9%E6%B3%95/</guid><pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天这篇文章想跟大家分享一种X蹭热点引流的思路，整理了几个找热点的爆款帖子网站，此外，评论时还需使用一款Chrome插件，可自动发布评论。&lt;/p&gt;
+</content:encoded></item><item><title>X新号蹭热点的方法</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天这篇文章想跟大家分享一种X蹭热点引流的思路，整理了几个找热点的爆款帖子网站，此外，评论时还需使用一款Chrome插件，可自动发布评论。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260510170127279.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;抓取&lt;/h3&gt;
 &lt;table&gt;
@@ -1641,7 +1736,7 @@ https://www.vibeui.studio/&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-</content:encoded></item><item><title>本地部署LLM&amp;硬件参数</title><link>https://dqtx.cc/posts/aihacks/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2llm%E7%A1%AC%E4%BB%B6%E5%8F%82%E6%95%B0/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2llm%E7%A1%AC%E4%BB%B6%E5%8F%82%E6%95%B0/</guid><pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+</content:encoded></item><item><title>本地部署LLM&amp;硬件参数</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;随着大语言模型的开源生态日趋成熟，本地部署不再是极客的专属游戏。本文精选&lt;strong&gt;国产开源大模型&lt;/strong&gt;，按显卡显存分档，给出硬件建议与部署方案。无论你是想用 RTX 4060 Ti 跑日常文案，还是用 RTX 4090 跑编程 Agent，都能找到适合的配置。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260507191110816.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -1863,7 +1958,7 @@ https://www.vibeui.studio/&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;提示&lt;/strong&gt;：实际显存需求受量化精度、上下文长度、batch size 影响。本文数据基于 INT4 量化、单 batch、默认上下文长度估算。如需长上下文（64K+），建议显存预留额外 4-8GB。MoE 模型的显存占用需同时考虑总参数量和激活参数量，建议使用 vLLM 或 SGLang 以获得最佳效率。&lt;/p&gt;
 &lt;/blockquote&gt;
-</content:encoded></item><item><title>Warp终端测评记录</title><link>https://dqtx.cc/posts/software/warp/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/warp/</guid><pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;10小时GitHub狂揽3万星，OpenAI亲自下场成为Founding Sponsor，由Rust原生打造的Warp终端，正在以颠覆性的方式，彻底改写开发者对命令行工具的认知。&lt;/p&gt;
+</content:encoded></item><item><title>Warp终端测评记录</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;10小时GitHub狂揽3万星，OpenAI亲自下场成为Founding Sponsor，由Rust原生打造的Warp终端，正在以颠覆性的方式，彻底改写开发者对命令行工具的认知。&lt;/p&gt;
 &lt;h3&gt;安装&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;官网：warp.dev&lt;/li&gt;
@@ -1946,7 +2041,7 @@ function cc { claude --dangerously-skip-permissions }
 &lt;p&gt;体验下来，Warp 的垂直侧边标签体验格外出色，多开 AI Agent 会话一目了然，批量切换工作流也十分顺手。&lt;/p&gt;
 &lt;p&gt;唯一小小的遗憾就是，软件默认右键无法直接一键粘贴，稍微影响日常操作的流畅度。&lt;/p&gt;
 &lt;p&gt;即便有这点小瑕疵，也完全不影响它作为终端工具的综合实力，侧边标签加持下的多会话管理，依旧是重度多开、常驻 AI Agent 用户的绝佳选择。&lt;/p&gt;
-</content:encoded></item><item><title>几个推特有关的插件</title><link>https://dqtx.cc/posts/software/%E5%87%A0%E4%B8%AA%E6%8E%A8%E7%89%B9%E6%9C%89%E5%85%B3%E7%9A%84%E6%8F%92%E4%BB%B6/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E5%87%A0%E4%B8%AA%E6%8E%A8%E7%89%B9%E6%9C%89%E5%85%B3%E7%9A%84%E6%8F%92%E4%BB%B6/</guid><pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Twitter Video&lt;/h3&gt;
+</content:encoded></item><item><title>几个推特有关的插件</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Twitter Video&lt;/h3&gt;
 &lt;p&gt;下载推特视频
 https://chromewebstore.google.com/detail/twitter-videogif-download/lpfalnepgkapbckncailhheiabcjlbje?hl=zh-CN&amp;amp;utm_source=ext_sidebar
 &lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260507004604717.png&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
@@ -1976,7 +2071,7 @@ https://x.com/0x17B/status/1497889044227067904&lt;/p&gt;
 &lt;h3&gt;# Minimal&lt;/h3&gt;
 &lt;p&gt;自定义界面，消除干扰，获得更简约的外观，在使用 Twitter 时更加专注和高效
 https://chromewebstore.google.com/detail/minimal-theme-for-twitter/pobhoodpcipjmedfenaigbeloiidbflp&lt;/p&gt;
-</content:encoded></item><item><title>复现Karpathy的LLM Wiki</title><link>https://dqtx.cc/posts/workflow/%E5%A4%8D%E7%8E%B0karpathy%E7%9A%84llm-wiki/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/%E5%A4%8D%E7%8E%B0karpathy%E7%9A%84llm-wiki/</guid><pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;AI 时代最大的讽刺：我们拥有了最强大的知识处理工具，却仍在用最原始的方式管理知识。&lt;/p&gt;
+</content:encoded></item><item><title>复现Karpathy的LLM Wiki</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;AI 时代最大的讽刺：我们拥有了最强大的知识处理工具，却仍在用最原始的方式管理知识。&lt;/p&gt;
 &lt;p&gt;前 Tesla AI 总监 Karpathy 给出了他的答案——&lt;strong&gt;LLM Wiki&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;这套框架近期在 GitHub 上引发广泛关注。仔细研读后，我发现它的核心价值不在于技术实现，而在于一套关于&lt;strong&gt;知识组织的理念与行为准则&lt;/strong&gt;——门槛极低，却能带来质的飞跃。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260507230429547.png&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
@@ -2171,7 +2266,7 @@ updated: &quot;2026-05-07&quot;
 &lt;p&gt;Karpathy 的 LLM Wiki 框架，本质是把知识管理从&quot;每次查询时重新派生&quot;变成&quot;编译一次，保持最新&quot;。&lt;/p&gt;
 &lt;p&gt;这才是真正的&lt;strong&gt;可复利&lt;/strong&gt;知识层。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;工具会变，但这套方法论值得长期践行!&lt;/strong&gt;&lt;/p&gt;
-</content:encoded></item><item><title>张咋啦html模板库</title><link>https://dqtx.cc/posts/aihacks/ai-%E5%B9%BB%E7%81%AF%E7%89%87%E6%A8%A1%E6%9D%BF%E5%BA%93/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/ai-%E5%B9%BB%E7%81%AF%E7%89%87%E6%A8%A1%E6%9D%BF%E5%BA%93/</guid><pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+</content:encoded></item><item><title>张咋啦html模板库</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;AI 时代的 HTML 幻灯片模板库，让任何 AI Agent 都能为用户生成精美的演示文稿。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;GitHub地址
@@ -2363,7 +2458,7 @@ https://github.com/zarazhangrui/beautiful-html-templates&lt;/p&gt;
 &lt;li&gt;&lt;strong&gt;下载使用&lt;/strong&gt; — 下载 HTML 文件自行整合&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;作为展示页&lt;/strong&gt; — 作为独立的演示/作品集页面&lt;/li&gt;
 &lt;/ol&gt;
-</content:encoded></item><item><title>几款录屏软件整理</title><link>https://dqtx.cc/posts/software/%E5%87%A0%E6%AC%BE%E5%BD%95%E5%B1%8F%E8%BD%AF%E4%BB%B6/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E5%87%A0%E6%AC%BE%E5%BD%95%E5%B1%8F%E8%BD%AF%E4%BB%B6/</guid><pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;复盘下市面的上的录屏工具&lt;/p&gt;
+</content:encoded></item><item><title>几款录屏软件整理</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;复盘下市面的上的录屏工具&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260510171509451.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;免费开源软件&lt;/h2&gt;
 &lt;table&gt;
@@ -2435,7 +2530,7 @@ https://github.com/zarazhangrui/beautiful-html-templates&lt;/p&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/jaywcjlove/quick-rss/issues&quot;&gt;jaywcjlove/quick-rss&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/ruanyf/weekly/issues&quot;&gt;ruanyf/weekly&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>网站CF加速配置指南</title><link>https://dqtx.cc/posts/technical/%E7%BD%91%E7%AB%99cf%E5%8A%A0%E9%80%9F%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E7%BD%91%E7%AB%99cf%E5%8A%A0%E9%80%9F%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/</guid><pubDate>Mon, 04 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;本文为通过 EdgeOne 部署的静态网站，提供一套完整、可直接落地的 Cloudflare（CF）优选配置方案，兼顾全球 CDN 加速、国内三网访问稳定性与安全防护，高效解决海外托管常见的延迟高、丢包问题。&lt;/p&gt;
+</content:encoded></item><item><title>网站CF加速配置指南</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Mon, 04 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;本文为通过 EdgeOne 部署的静态网站，提供一套完整、可直接落地的 Cloudflare（CF）优选配置方案，兼顾全球 CDN 加速、国内三网访问稳定性与安全防护，高效解决海外托管常见的延迟高、丢包问题。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260504162956507.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;一、基础 DNS 解析配置&lt;/h3&gt;
 &lt;p&gt;Cloudflare 后台添加域名后，按如下方式配置 DNS 记录，开启 CF 代理模式：&lt;/p&gt;
@@ -2522,7 +2617,7 @@ https://github.com/zarazhangrui/beautiful-html-templates&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;nslookup www.dqtx.cc
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;解析结果若返回 Cloudflare 节点 IP，即代表 CDN 已成功启用。此时用户访问流程为「用户→CF 节点→源站」，网站访问速度、稳定性与安全性均得到全面提升。&lt;/p&gt;
-</content:encoded></item><item><title>一键推送Obsidian笔记到微信</title><link>https://dqtx.cc/posts/workflow/wechat-converter%E6%8F%92%E4%BB%B6/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/wechat-converter%E6%8F%92%E4%BB%B6/</guid><pubDate>Mon, 04 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近使用了一款叫「Wechat Converter」的 Obsidian 插件，觉得挺好用的，支持一键将 Obsidian 中的 Markdown 文档推送至微信公众号草稿箱。&lt;/p&gt;
+</content:encoded></item><item><title>一键推送Obsidian笔记到微信</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Mon, 04 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近使用了一款叫「Wechat Converter」的 Obsidian 插件，觉得挺好用的，支持一键将 Obsidian 中的 Markdown 文档推送至微信公众号草稿箱。&lt;/p&gt;
 &lt;p&gt;但由于我网络 IP 经常变化，直接请求微信 API 会被拦截，本文将详细拆解配置代理流程，重点解决代理服务部署问题，让你顺利落地插件功能。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260504184445684.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;获取 AppID 与 AppSecret&lt;/h3&gt;
@@ -2587,7 +2682,7 @@ https://xiaoweibox.top/chats/wechat-proxy.html&lt;/p&gt;
 https://dash.cloudflare.com/&lt;/p&gt;
 &lt;p&gt;→ Cloudflare 官方 IP 列表
 https://www.cloudflare.com/ips&lt;/p&gt;
-</content:encoded></item><item><title>Kami：专业排版技能</title><link>https://dqtx.cc/posts/aihacks/kami/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/kami/</guid><pubDate>Sun, 03 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;AI生成文档最大的问题不是内容差，而是排版千篇一律的灰色平庸。&lt;/p&gt;
+</content:encoded></item><item><title>Kami：专业排版技能</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Sun, 03 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;AI生成文档最大的问题不是内容差，而是排版千篇一律的灰色平庸。&lt;/p&gt;
 &lt;p&gt;Kami（紙）是一个面向AI Agent的文档排版设计系统，用一套约束语言让每份输出都像专业印刷品。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;项目地址&lt;/strong&gt;：https://github.com/tw93/kami&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260503212707072.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
@@ -2645,7 +2740,7 @@ https://www.cloudflare.com/ips&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260503213507841.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;作者 Tw93 是淘宝前端工程师，他是从每次让Claude写美股研报时受不了默认排版开始，一步步提炼出这套设计约束。&lt;/p&gt;
 &lt;p&gt;Kami 是 Kaku（写代码）、Waza（练技能）、Kami（做文档）三部曲的最后一环。&lt;/p&gt;
-</content:encoded></item><item><title>小米MiMo V2.5 邀请码 V4B9NJ</title><link>https://dqtx.cc/posts/aihacks/mimo-v25-%E9%82%80%E8%AF%B7%E7%A0%81-v4b9nj/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/mimo-v25-%E9%82%80%E8%AF%B7%E7%A0%81-v4b9nj/</guid><pubDate>Fri, 01 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;近日，小米 MiMo V2.5 开放平台正式公测，平台特别推出新用户福利：填写&lt;strong&gt;邀请码 V4B9NJ&lt;/strong&gt; 即可领取 ¥10 API 体验金&lt;/p&gt;
+</content:encoded></item><item><title>小米MiMo V2.5 邀请码 V4B9NJ</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Fri, 01 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;近日，小米 MiMo V2.5 开放平台正式公测，平台特别推出新用户福利：填写&lt;strong&gt;邀请码 V4B9NJ&lt;/strong&gt; 即可领取 ¥10 API 体验金&lt;/p&gt;
 &lt;p&gt;叠加 100 万亿 Token 免费申领计划，这场兼顾技术深度与普惠性的 AI 盛宴，正在重新定义专业场景的 AI 应用边界。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260501171535698.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;🎁 新用户专享福利&lt;/h3&gt;
@@ -2664,7 +2759,7 @@ https://platform.xiaomimimo.com?ref=V4B9NJ&lt;/p&gt;
 ✅ 免费API体验金 40 天有效
 ✅ 邀请名额仅 &lt;strong&gt;20 位&lt;/strong&gt;，先到先得&lt;/p&gt;
 &lt;p&gt;填码即到账 · 尽情释放你的卓越创造力&lt;/p&gt;
-</content:encoded></item><item><title>两款mrkdown编辑器</title><link>https://dqtx.cc/posts/software/mrkdown%E7%BC%96%E8%BE%91%E5%99%A8/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/mrkdown%E7%BC%96%E8%BE%91%E5%99%A8/</guid><pubDate>Fri, 01 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;ColaMD&lt;/h3&gt;
+</content:encoded></item><item><title>两款mrkdown编辑器</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Fri, 01 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;ColaMD&lt;/h3&gt;
 &lt;p&gt;实时显示 AI agent 编辑状态的 Agent Native 编辑器&lt;/p&gt;
 &lt;p&gt;https://github.com/marswaveai/ColaMD&lt;/p&gt;
 &lt;h3&gt;Moraya&lt;/h3&gt;
@@ -2680,7 +2775,7 @@ https://platform.xiaomimimo.com?ref=V4B9NJ&lt;/p&gt;
 &lt;li&gt;https://logseq.com/&lt;/li&gt;
 &lt;li&gt;https://obsidian.md/zh/&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>一键内容同步N媒体平台</title><link>https://dqtx.cc/posts/software/%E4%B8%80%E9%94%AE%E5%86%85%E5%AE%B9%E5%90%8C%E6%AD%A5n%E5%AA%92%E4%BD%93%E5%B9%B3%E5%8F%B0/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E4%B8%80%E9%94%AE%E5%86%85%E5%AE%B9%E5%90%8C%E6%AD%A5n%E5%AA%92%E4%BD%93%E5%B9%B3%E5%8F%B0/</guid><pubDate>Fri, 01 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天想跟大家分享几款内容同步的 Chrome 插件。&lt;/p&gt;
+</content:encoded></item><item><title>一键内容同步N媒体平台</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Fri, 01 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天想跟大家分享几款内容同步的 Chrome 插件。&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h3&gt;WechatSync-文章&lt;/h3&gt;
 &lt;ul&gt;
@@ -2722,7 +2817,7 @@ https://platform.xiaomimimo.com?ref=V4B9NJ&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;https://md.doocs.org/
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260515170816697.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-</content:encoded></item><item><title>HyperFrames：用HTML写视频框架</title><link>https://dqtx.cc/posts/aihacks/hyperframes%E7%94%9F%E6%88%90%E8%A7%86%E9%A2%91/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/hyperframes%E7%94%9F%E6%88%90%E8%A7%86%E9%A2%91/</guid><pubDate>Thu, 30 Apr 2026 16:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;引言&lt;/h3&gt;
+</content:encoded></item><item><title>HyperFrames：用HTML写视频框架</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Thu, 30 Apr 2026 16:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;引言&lt;/h3&gt;
 &lt;p&gt;做短视频最烦的是什么？写文案、找素材、调时间轴、配音乐、导出……每一步都是手动操作。&lt;/p&gt;
 &lt;p&gt;今天分享一个骚操作：&lt;strong&gt;直接丢一篇 Markdown 文章给 Claude Code，它自动帮你生成一个带动画、配乐的视频 MP4 文件。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;整个过程我全程没碰任何剪辑软件，全靠一条命令搞定。&lt;/p&gt;
@@ -3027,7 +3122,7 @@ tl.to(&quot;#title&quot;, {
 &lt;li&gt;项目地址：https://github.com/heygen-com/hyperframes&lt;/li&gt;
 &lt;li&gt;作者推文：https://x.com/liu8in/status/2044827628700684463&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>CLAUDE.md与MEMORY.md</title><link>https://dqtx.cc/posts/aihacks/claudemd%E4%B8%8Ememorymd/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/claudemd%E4%B8%8Ememorymd/</guid><description>一个给 AI 看，一个给 AI 记。搞混了，你的 AI 助手就废了。</description><pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;很多人用 Claude Code 写了上百篇文章，但99%的人从来没搞清楚一个最基本的问题：&lt;/p&gt;
+</content:encoded></item><item><title>CLAUDE.md与MEMORY.md</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><description>一个给 AI 看，一个给 AI 记。搞混了，你的 AI 助手就废了。</description><pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;很多人用 Claude Code 写了上百篇文章，但99%的人从来没搞清楚一个最基本的问题：&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;CLAUDE.md 和 MEMORY.md 到底有什么区别？&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;今天用一张表、一个比喻，彻底讲清楚。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260430235845976.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
@@ -3180,7 +3275,7 @@ tl.to(&quot;#title&quot;, {
 &lt;p&gt;&lt;strong&gt;CLAUDE.md 告诉 Claude &quot;你是什么&quot;，MEMORY.md 记住 Claude &quot;做过什么&quot;。&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;一个是项目说明书，一个是 AI 笔记本。搞清楚这个区别，你的 Claude Code 用起来才能真正&quot;越用越聪明&quot;。&lt;/p&gt;
-</content:encoded></item><item><title>Karpathy大神CLAUDE.md</title><link>https://dqtx.cc/posts/aihacks/karpathy%E5%A4%A7%E7%A5%9Eclaudemd/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/karpathy%E5%A4%A7%E7%A5%9Eclaudemd/</guid><pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Andrej Karpathy，OpenAI 创始成员、前 Tesla AI 总监，在 GitHub 扔出一份 &lt;code&gt;CLAUDE.md&lt;/code&gt;。&lt;/p&gt;
+</content:encoded></item><item><title>Karpathy大神CLAUDE.md</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Andrej Karpathy，OpenAI 创始成员、前 Tesla AI 总监，在 GitHub 扔出一份 &lt;code&gt;CLAUDE.md&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;结果一周狂揽 44k star，总星直接飙到 &lt;strong&gt;98k star&lt;/strong&gt;。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;这是什么概念？Stack Overflow 都没这么火过。&lt;/p&gt;
@@ -3377,7 +3472,7 @@ curl -o ~/.claude/CLAUDE.md \
 &lt;p&gt;Karpathy 的核心洞察就一句话：&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;别告诉 AI 怎么做，告诉它什么算做完，然后放手让它跑。&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-</content:encoded></item><item><title>ShareX截屏录屏教程！</title><link>https://dqtx.cc/posts/software/sharex/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/sharex/</guid><pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;关闭通知&lt;/h3&gt;
+</content:encoded></item><item><title>ShareX截屏录屏教程！</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;关闭通知&lt;/h3&gt;
 &lt;p&gt;位置：动作设置→通知
 建议把“任务完成后显示短暂通知”取消打勾
 &lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260430225229066.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
@@ -3405,7 +3500,7 @@ https://mp.weixin.qq.com/s/npeJO3MccOCS0QSTIWYefw
 https://utgd.net/article/20685
 一个软件，满足你所有的截图需求：ShareX
 https://sspai.com/post/43937&lt;/p&gt;
-</content:encoded></item><item><title>一个信息追踪 Python 脚本</title><link>https://dqtx.cc/posts/technical/%E4%B8%80%E4%B8%AA%E4%BF%A1%E6%81%AF%E8%BF%BD%E8%B8%AA-python-%E8%84%9A%E6%9C%AC/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E4%B8%80%E4%B8%AA%E4%BF%A1%E6%81%AF%E8%BF%BD%E8%B8%AA-python-%E8%84%9A%E6%9C%AC/</guid><pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这个开源项目，你丢一个名字/手机号/IP给它，得到关联的社交媒体账号、归属地、地理位置信息。&lt;/p&gt;
+</content:encoded></item><item><title>一个信息追踪 Python 脚本</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这个开源项目，你丢一个名字/手机号/IP给它，得到关联的社交媒体账号、归属地、地理位置信息。&lt;/p&gt;
 &lt;p&gt;在 GitHub 已获取 11.8k star。
 项目地址
 https://github.com/HunxByts/GhostTrack&lt;/p&gt;
@@ -3420,7 +3515,7 @@ Username Tracker：输入用户名，跨多个平台搜索公开账号信息，�
 CTF 比赛中需要快速做信息侦察的选手
 对信息安全和数据关联分析感兴趣的开发者&lt;/p&gt;
 &lt;p&gt;⚠️ 需要强调：该工具仅用于合法授权的安全研究与学习用途，禁止用于任何未经授权的个人追踪或隐私侵犯行为。&lt;/p&gt;
-</content:encoded></item><item><title>Xiaomi MiMo百万亿 Token 激励计划</title><link>https://dqtx.cc/posts/aihacks/xiaomi-mimo%E7%99%BE%E4%B8%87%E4%BA%BFtoken/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/xiaomi-mimo%E7%99%BE%E4%B8%87%E4%BA%BFtoken/</guid><pubDate>Wed, 29 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Xiaomi MiMo 将面向全球 AI 用户进行免费 Token 发放，我们将在 30 天内发放总计 100 万亿（100T） Token 权益，赠完即止。&lt;/p&gt;
+</content:encoded></item><item><title>Xiaomi MiMo百万亿 Token 激励计划</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Wed, 29 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Xiaomi MiMo 将面向全球 AI 用户进行免费 Token 发放，我们将在 30 天内发放总计 100 万亿（100T） Token 权益，赠完即止。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260429164836641.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;活动说明&lt;/h3&gt;
 &lt;p&gt;活动时间：北京时间 2026 年 4 月 28 日 00:00 至 5 月 28 日 00:00
@@ -3496,7 +3591,7 @@ API Key：填你的专属API&lt;/p&gt;
 &lt;p&gt;以上是本次激励计划的免费领取步骤，以及接入两个常用AI Agent的流程，但需要注意的事项较多。&lt;/p&gt;
 &lt;p&gt;你的&lt;strong&gt;订阅管理&lt;/strong&gt;中已为你准备好专属的 API key 和 Base url，切勿自行创建，因为免费额度仅适用于系统提供的专属配置，自行创建将产生额外费用。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Source来源&lt;/strong&gt;：&lt;a href=&quot;www.dqtx.cc&quot;&gt;www.dqtx.cc&lt;/a&gt;&lt;/p&gt;
-</content:encoded></item><item><title>OpenRouter免费模型食用指南</title><link>https://dqtx.cc/posts/aihacks/openrouter/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/openrouter/</guid><pubDate>Tue, 28 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;介绍一种零成本使用 Claude Code 的方案：通过 OpenRouter 上的免费模型 Ling-2.6-1T，配合 CC Switch 这款可视化管理工具，一键切换 API 提供商，实现完全免费的 AI 编程体验。&lt;/p&gt;
+</content:encoded></item><item><title>OpenRouter免费模型食用指南</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Tue, 28 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;介绍一种零成本使用 Claude Code 的方案：通过 OpenRouter 上的免费模型 Ling-2.6-1T，配合 CC Switch 这款可视化管理工具，一键切换 API 提供商，实现完全免费的 AI 编程体验。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260428232049626.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;接入流程&lt;/h3&gt;
 &lt;p&gt;OpenRouter 提供了免费模型，CC Switch 让你一键把这些模型接入 Claude Code，不用手动改配置文件，全程可视化操作。&lt;/p&gt;
@@ -3555,7 +3650,7 @@ https://zhuanlan.zhihu.com/p/1902150269241893722&lt;/li&gt;
 &lt;li&gt;创建API入口
 https://openrouter.ai/workspaces/default/keys&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>蚂蚁百灵大Api活动</title><link>https://dqtx.cc/posts/aihacks/%E8%9A%82%E8%9A%81%E7%99%BE%E7%81%B5%E5%A4%A7%E6%A8%A1%E5%9E%8B/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E8%9A%82%E8%9A%81%E7%99%BE%E7%81%B5%E5%A4%A7%E6%A8%A1%E5%9E%8B/</guid><pubDate>Tue, 28 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;引言&lt;/h2&gt;
+</content:encoded></item><item><title>蚂蚁百灵大Api活动</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Tue, 28 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;引言&lt;/h2&gt;
 &lt;p&gt;蚂蚁百灵大模型是蚂蚁集团自主研发的大语言模型，具备强大的自然语言处理能力和丰富的知识储备。该模型在中文理解、代码生成、逻辑推理等方面表现出色，特别适合中文场景下的各类AI应用。&lt;/p&gt;
 &lt;p&gt;最近有一个活动，每天在02:00前会赠送当日50万token的免费额度，当日未使用完的额度不结转至次日。这篇文章将演示如何接入你的千Qwen code使用。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -3821,7 +3916,7 @@ ANTHROPIC_DEFAULT_HAIKU_MODEL=Ling-2.6-flash
 &lt;/table&gt;
 &lt;h2&gt;写在最后&lt;/h2&gt;
 &lt;p&gt;蚂蚁百灵大模型为开发者提供了强大的AI辅助能力。通过合理的模型选择和配置，可以显著提升开发效率。建议根据实际使用场景灵活切换模型，充分利用每日免费额度，同时注意API安全和使用成本控制。&lt;/p&gt;
-</content:encoded></item><item><title>Obsidian链接收藏自动化</title><link>https://dqtx.cc/posts/workflow/obsidian%E9%93%BE%E6%8E%A5%E6%94%B6%E8%97%8F%E8%87%AA%E5%8A%A8%E5%8C%96/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/obsidian%E9%93%BE%E6%8E%A5%E6%94%B6%E8%97%8F%E8%87%AA%E5%8A%A8%E5%8C%96/</guid><pubDate>Mon, 27 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你有没有过这样的困扰？刷到优质干货、实用工具、优质教程，随手存入浏览器书签，想着日后回看。久而久之，书签越堆越多、杂乱无序，想要检索复用却无从下手，大量优质资源最终沦为闲置的无效数据。&lt;/p&gt;
+</content:encoded></item><item><title>Obsidian链接收藏自动化</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Mon, 27 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你有没有过这样的困扰？刷到优质干货、实用工具、优质教程，随手存入浏览器书签，想着日后回看。久而久之，书签越堆越多、杂乱无序，想要检索复用却无从下手，大量优质资源最终沦为闲置的无效数据。&lt;/p&gt;
 &lt;p&gt;为此，我搭建了一套&lt;strong&gt;轻量化全自动链接收藏工作流&lt;/strong&gt;，依靠 &lt;strong&gt;LinkStowr + Obsidian + Dataview&lt;/strong&gt; 三方联动，实现：&lt;/p&gt;
 &lt;p&gt;一键收藏网页、云端中转同步、本地自动归档、标签分类索引，彻底告别杂乱书签，轻松沉淀全网优质资源。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260427195504528.webp&quot; alt=&quot;大强同学「www.dqtx.cc&quot; /&gt;&lt;/p&gt;
@@ -3932,7 +4027,7 @@ SORT date DESC
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;这套工作流不仅解决了我链接杂乱的问题，更让每一次收藏都变成了对数字资产的有效沉淀。&lt;/p&gt;
 &lt;p&gt;如果你也被杂乱的书签困扰，不妨试试 LinkShelf + Obsidian 这套组合，让你的链接管理从此告别手动，走向自动化。&lt;/p&gt;
-</content:encoded></item><item><title>Flipbook 可视化搜索</title><link>https://dqtx.cc/posts/aihacks/flipbook%E5%8F%AF%E8%A7%86%E5%8C%96%E6%90%9C%E7%B4%A2/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/flipbook%E5%8F%AF%E8%A7%86%E5%8C%96%E6%90%9C%E7%B4%A2/</guid><pubDate>Sun, 26 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近刷到一个叫缘缘博主说：&lt;/p&gt;
+</content:encoded></item><item><title>Flipbook 可视化搜索</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Sun, 26 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近刷到一个叫缘缘博主说：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;我这两天被这个爆火的Flipbook刷屏并被震撼到，现在的UI界面也许会在不久的将来彻底改变。&lt;/p&gt;
 &lt;p&gt;Flipbook是三星工程师(前OpenAl) Zain Shah和另外两个伙伴做的一个无限视觉浏览器，根据你的搜索词，实时用像素生成一张类似百科全书里的动态插画，连文字也是像素组成，没有代码，没有HTML，画面上的任何区域你都可以点击，生成这块区域的进一步画面。&lt;/p&gt;
@@ -3950,7 +4045,7 @@ SORT date DESC
 &lt;p&gt;&lt;strong&gt;参考资料：&lt;/strong&gt;
 Zain Shah：
 https://x.com/zan2434&lt;/p&gt;
-</content:encoded></item><item><title>短短30天，AI圈炸了！</title><link>https://dqtx.cc/posts/aihacks/4%E6%9C%88ai%E6%97%B6%E9%97%B4%E7%BA%BF/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/4%E6%9C%88ai%E6%97%B6%E9%97%B4%E7%BA%BF/</guid><pubDate>Sat, 25 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近一个月，AI圈直接“炸”了。&lt;/p&gt;
+</content:encoded></item><item><title>短短30天，AI圈炸了！</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Sat, 25 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近一个月，AI圈直接“炸”了。&lt;/p&gt;
 &lt;p&gt;先是 GPT-Image-2 横空出世，生出的图片质量高到刷屏朋友圈，真假难辨；紧接着短短几天内，OpenAI 与国产开源势力前后脚连放大招——闭源旗舰和开源顶流正面硬刚，把整个4月推向高潮。&lt;/p&gt;
 &lt;p&gt;从编程智能体到桌面原生应用，从超长上下文到图像生成，AI产品迭代速度快得让人喘不过气。下面用最直白的方式，带你快速梳理4月核心亮点：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260425221420240.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -4001,7 +4096,7 @@ https://api-docs.deepseek.com/zh-cn/quick_start/pricing
 https://github.com/victorchen96/deepseek_v4_rolepaly_instruct&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;整体来看，这个月确实非常疯狂。Claude 4.7 与 Kimi K2.6 / DeepSeek V4 的直接对刚，Qwen3.6 系列跟进！&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;4 月下旬中美开源与闭源模型密集对刚，编程与 Agent 能力成为新焦点，AI 工具链迭代速度远超预期。&lt;/p&gt;
-</content:encoded></item><item><title>Claude code 安装教程</title><link>https://dqtx.cc/posts/aihacks/claude-code-%E5%AE%89%E8%A3%85/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/claude-code-%E5%AE%89%E8%A3%85/</guid><pubDate>Fri, 24 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这篇文章是我整理的远程安装CC全套SOP文档，今天免费公开分享给大家。不止会手把手教你顺利安装CC，同时还会顺带讲解Obsidian相关配置，全程带大家实操学会 Cloud Code 的完整使用方法，一站式搞定部署与实操，新手也能直接跟着操作，方便大家直接上手使用。&lt;/p&gt;
+</content:encoded></item><item><title>Claude code 安装教程</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Fri, 24 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这篇文章是我整理的远程安装CC全套SOP文档，今天免费公开分享给大家。不止会手把手教你顺利安装CC，同时还会顺带讲解Obsidian相关配置，全程带大家实操学会 Cloud Code 的完整使用方法，一站式搞定部署与实操，新手也能直接跟着操作，方便大家直接上手使用。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260424220034771.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;一.安装Claude code&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/comeonzhj/easy-skills/releases/tag/v1.0.0&quot;&gt;easy-skills&lt;/a&gt;：全自动Claude code安装助手&lt;/p&gt;
@@ -4161,7 +4256,7 @@ $env:ANTHROPIC_API_KEY=&quot;你的API Key&quot;
 &lt;h3&gt;~/.claude.json&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;  &quot;hasCompletedOnboarding&quot;: true
 &lt;/code&gt;&lt;/pre&gt;
-</content:encoded></item><item><title>free-claude-code 代理使用指南</title><link>https://dqtx.cc/posts/aihacks/free-claude-code/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/free-claude-code/</guid><pubDate>Fri, 24 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;如果你正在寻找免费使用 Claude Code 的方法，那么 &lt;strong&gt;free-claude-code&lt;/strong&gt; 这个开源项目绝对值得关注。它能让 Claude Code 完美对接 NVIDIA NIM、OpenRouter、DeepSeek 等多种免费或低成本的大模型服务，同时保留 Claude Code 原生的工程能力。&lt;/p&gt;
+</content:encoded></item><item><title>free-claude-code 代理使用指南</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Fri, 24 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;如果你正在寻找免费使用 Claude Code 的方法，那么 &lt;strong&gt;free-claude-code&lt;/strong&gt; 这个开源项目绝对值得关注。它能让 Claude Code 完美对接 NVIDIA NIM、OpenRouter、DeepSeek 等多种免费或低成本的大模型服务，同时保留 Claude Code 原生的工程能力。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260424141510353.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;为什么选择 free-claude-code？&lt;/h2&gt;
 &lt;p&gt;作为 Claude Code 用户，我们都知道它强大的工程能力：上下文管理、记忆系统、Skill 封装、工具调用、Subagent 控制等。但官方 API 价格不菲，国内使用还有各种限制。&lt;/p&gt;
@@ -4379,7 +4474,7 @@ MODEL=&quot;nvidia_nim/moonshotai/kimi-k2-thinking&quot;  # Kimi K2
 &lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/A-FwkXui7Wby2zIjAw4sJg&quot;&gt;NVIDIA免费API的申请流程&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/WjG8-UV8sGBCR26_MFgzTg&quot;&gt;零成本接管 Nvidia 算力的本地部署方案&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>Skills-Link完全使用指南!</title><link>https://dqtx.cc/posts/aihacks/skills-link/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/skills-link/</guid><pubDate>Fri, 24 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你是否也有这样的困扰？在多个 AI 工具里安装了同样的技能（Skills），修改一次要同步多次，麻烦！&lt;/p&gt;
+</content:encoded></item><item><title>Skills-Link完全使用指南!</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Fri, 24 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你是否也有这样的困扰？在多个 AI 工具里安装了同样的技能（Skills），修改一次要同步多次，麻烦！&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Skills-Link&lt;/strong&gt; 就是来解决这个问题的 —— 让所有 AI 编程工具共享同一个 Skills 文件夹。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;相关文档&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;https://github.com/shanliuling/skills-link/blob/main/README.zh.md&lt;/p&gt;
@@ -4571,7 +4666,7 @@ cd C:\Users\Administrator\AISkills
 &lt;p&gt;全局卸载&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;npm uninstall skills-link --global
 &lt;/code&gt;&lt;/pre&gt;
-</content:encoded></item><item><title>英伟达免费 API 申请流程</title><link>https://dqtx.cc/posts/aihacks/nvidia-api%E7%94%B3%E8%AF%B7/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/nvidia-api%E7%94%B3%E8%AF%B7/</guid><pubDate>Thu, 23 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;英伟达免费 API 一年（12个月）使用权，可以直接调用 GLM 5.1、Gemma 4、MiniMax 等 193 款主流大模型，这羊毛必须薅！&lt;/p&gt;
+</content:encoded></item><item><title>英伟达免费 API 申请流程</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Thu, 23 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;英伟达免费 API 一年（12个月）使用权，可以直接调用 GLM 5.1、Gemma 4、MiniMax 等 193 款主流大模型，这羊毛必须薅！&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260423232339562.webp&quot; alt=&quot;yingwen&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;01.访问官方网站&lt;/h2&gt;
 &lt;p&gt;打开浏览器，访问 &lt;a href=&quot;https://build.nvidia.com/&quot;&gt;https://build.nvidia.com/&lt;/a&gt;，点击注册账号。&lt;/p&gt;
@@ -4617,7 +4712,7 @@ cd C:\Users\Administrator\AISkills
 &lt;/ol&gt;
 &lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;参考资料&lt;/strong&gt;：&lt;a href=&quot;https://mp.weixin.qq.com/s/XWS97jr_PwcbbmKkZVqbyw&quot;&gt;点此查看&lt;/a&gt;&lt;/p&gt;
-</content:encoded></item><item><title>我push博客时泄露了API</title><link>https://dqtx.cc/posts/technical/push%E6%B3%84%E9%9C%B2api/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/push%E6%B3%84%E9%9C%B2api/</guid><pubDate>Tue, 21 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天在推送 &lt;code&gt;fuwari&lt;/code&gt; 博客仓库到 GitHub 时，遭遇了一个意料之外但又在情理之中的拦截。GitHub 直接拒绝了我的推送，提示发现了「Secret（密钥）」泄露。经过排查和修复，两个仓库的 API Token 泄露风险已解除。写下这篇文章，既是复盘，也是给有类似经历的朋友一个参考。
+</content:encoded></item><item><title>我push博客时泄露了API</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Tue, 21 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天在推送 &lt;code&gt;fuwari&lt;/code&gt; 博客仓库到 GitHub 时，遭遇了一个意料之外但又在情理之中的拦截。GitHub 直接拒绝了我的推送，提示发现了「Secret（密钥）」泄露。经过排查和修复，两个仓库的 API Token 泄露风险已解除。写下这篇文章，既是复盘，也是给有类似经历的朋友一个参考。
 &lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260421233006929.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;事件回顾&lt;/h2&gt;
 &lt;p&gt;像往常一样，我在 Obsidian 中写完一篇博客后，执行 &lt;code&gt;git push&lt;/code&gt; 准备推送到 GitHub。然而这次推送失败了，错误信息如下：&lt;/p&gt;
@@ -4685,7 +4780,7 @@ git push --force
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260422222241120.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;修复完成后，两个仓库都安全了，以后再也不用担心 API Token 泄露的问题。&lt;/p&gt;
 &lt;p&gt;文章来源：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;  远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/p&gt;
-</content:encoded></item><item><title>Obsidian 同步 Notion 神插件</title><link>https://dqtx.cc/posts/workflow/ob%E5%90%8C%E6%AD%A5notion%E6%8F%92%E4%BB%B6/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/ob%E5%90%8C%E6%AD%A5notion%E6%8F%92%E4%BB%B6/</guid><pubDate>Tue, 21 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;我最近发现了一个超好用的 Obsidian 神器，叫 Share to NotionNext！&lt;/p&gt;
+</content:encoded></item><item><title>Obsidian 同步 Notion 神插件</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Tue, 21 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;我最近发现了一个超好用的 Obsidian 神器，叫 Share to NotionNext！&lt;/p&gt;
 &lt;p&gt;可以直接把Obsidian里的Markdown同步到Notion数据库，还能自动生成NotionNext博客，告别复制粘贴、排版错乱，一篇文章秒发博客。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260421200259532.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;01.前置准备&lt;/h3&gt;
@@ -4788,7 +4883,7 @@ https://v.douyin.com/4K4Njgxq0Oc/&lt;/p&gt;
 https://mp.weixin.qq.com/s/kPjIpHmzciWY8_3ettEVsg&lt;/p&gt;
 &lt;p&gt;→NotionNext帮助手册：
 https://docs.tangly1024.com/about&lt;/p&gt;
-</content:encoded></item><item><title>谷歌新产品&amp;功能</title><link>https://dqtx.cc/posts/software/00google/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/00google/</guid><pubDate>Mon, 20 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这篇文章将在后续的时间里会持续更新谷歌最新推出的一些新产品，不限于各种新品或原本产品的新功能。&lt;/p&gt;
+</content:encoded></item><item><title>谷歌新产品&amp;功能</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Mon, 20 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这篇文章将在后续的时间里会持续更新谷歌最新推出的一些新产品，不限于各种新品或原本产品的新功能。&lt;/p&gt;
 &lt;h2&gt;产品-Google App&lt;/h2&gt;
 &lt;p&gt;Windows 版下载： &lt;strong&gt;&lt;a href=&quot;https://search.google/google-app/desktop/&quot;&gt;点击前往&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;内置的AI模型是Google最新最强的Gemini 3模型，同时内置了AI生图功能，使用的是 Google 最强的Nano Banana 2 模型，可以自由切换需要的功能！&lt;/p&gt;
@@ -4819,7 +4914,7 @@ https://docs.tangly1024.com/about&lt;/p&gt;
 &lt;p&gt;https://x.com/liyue_ai/status/2017259163127304623&lt;/p&gt;
 &lt;p&gt;https://www.youtube.com/watch?v=4Gz2Sxgpv20&lt;/p&gt;
 &lt;p&gt;https://x.com/linxiaobei888/status/2017061177311056343&lt;/p&gt;
-</content:encoded></item><item><title>Dos命令mklink详解</title><link>https://dqtx.cc/posts/workflow/mklink%E5%91%BD%E4%BB%A4/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/mklink%E5%91%BD%E4%BB%A4/</guid><pubDate>Mon, 20 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你是否遇到过这些问题：想让软件从A目录读取文件，但文件实际存放在B目录？&lt;/p&gt;
+</content:encoded></item><item><title>Dos命令mklink详解</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Mon, 20 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你是否遇到过这些问题：想让软件从A目录读取文件，但文件实际存放在B目录？&lt;/p&gt;
 &lt;p&gt;想在多个位置同步同一个文件，又不想每次手动复制？或是想给文件夹创建&quot;替身&quot;，让不同程序都能访问？&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Windows 自带的 mklink 命令，就是解决这些问题的神器。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260420172844734.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -4860,7 +4955,7 @@ mklink /h &quot;D:\project2026\zhishiku\QWEN\知识库规范.md&quot; &quot;D:\p
 &lt;li&gt;如果你需要跨盘操作，选择软链接；如果只在同盘内使用，硬链接更稳定&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;掌握这四个命令，你就是Windows文件管理的高手了。&lt;/strong&gt;&lt;/p&gt;
-</content:encoded></item><item><title>Cc-sync：多电脑CC配置同步</title><link>https://dqtx.cc/posts/aihacks/cc-sync/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/cc-sync/</guid><pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+</content:encoded></item><item><title>Cc-sync：多电脑CC配置同步</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;换电脑后，你最怕什么？不是装机，而是你和 Claude 聊了半天的代码、需求、方案——全没了。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;直到我发现 cc-sync，这个问题终于解决了。&lt;/p&gt;
@@ -4933,7 +5028,7 @@ bash ~/.claude/uninstall.sh
 &lt;p&gt;你和 Claude 聊了半小时的需求、写的代码片段——换台电脑全没了。&lt;/p&gt;
 &lt;p&gt;cc-sync 让你&lt;strong&gt;永远从上次停下的地方继续&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;工具不帮你做事，但帮你少重复做事。&lt;/strong&gt;&lt;/p&gt;
-</content:encoded></item><item><title>包管理工具UniGetU</title><link>https://dqtx.cc/posts/software/unigetui/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/unigetui/</guid><pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;重装系统最烦的就是一个个装软件？UniGetUI 直接帮你一键搞定。&lt;/p&gt;
+</content:encoded></item><item><title>包管理工具UniGetU</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;重装系统最烦的就是一个个装软件？UniGetUI 直接帮你一键搞定。&lt;/p&gt;
 &lt;p&gt;UniGetUI 是一款开源 GUI 包管理工具，专为 Windows 10/11 设计，统一整合 WinGet、Scoop、Chocolatey、pip、npm、.NET Tool、PowerShell Gallery 等常用命令行包管理器，可视化操作更简单。&lt;/p&gt;
 &lt;p&gt;开源地址：https://github.com/Devolutions/UniGetUI&lt;/p&gt;
 &lt;h2&gt;软件界面&lt;/h2&gt;
@@ -4958,7 +5053,7 @@ bash ~/.claude/uninstall.sh
 &lt;p&gt;换新设备后，同样在备份设置中，直接从云端还原即可。&lt;/p&gt;
 &lt;p&gt;以上就是本期全部内容。如果本教程对你有帮助，欢迎点赞、收藏、转发三连，你的支持是我持续更新的动力。&lt;/p&gt;
 &lt;p&gt;Ps. 想要学习AI、提升数字化效率、打造全自动工作流，也欢迎加入我的专属社群：https://t.zsxq.com/d4zSX&lt;/p&gt;
-</content:encoded></item><item><title>Karpathy Wiki方法论实践</title><link>https://dqtx.cc/posts/workflow/karpathy/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/karpathy/</guid><pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+</content:encoded></item><item><title>Karpathy Wiki方法论实践</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;告别一盘散沙的笔记，AI让知识真正&quot;活&quot;起来。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;你有没有这种感觉？&lt;/p&gt;
@@ -5070,7 +5165,7 @@ AI 维护的知识库，包括摘要、概念页面、关联链接。AI 编写�
 &lt;p&gt;&lt;strong&gt;人类的工作是筛选来源、提出好问题、思考意义。&lt;/strong&gt;
 &lt;strong&gt;其他一切，交给 AI。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;你有自己的知识管理方法吗？评论区聊聊 👇&lt;/em&gt;&lt;/p&gt;
-</content:encoded></item><item><title>免费云主机建站指南</title><link>https://dqtx.cc/posts/technical/%E7%BA%A2%E9%83%BD%E4%B8%BB%E6%9C%BA%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E7%BA%A2%E9%83%BD%E4%B8%BB%E6%9C%BA%E6%95%99%E7%A8%8B/</guid><pubDate>Thu, 16 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近上网冲浪的时候，偶然发现了红都主机 —— 一个提供永久免费 PHP 虚拟主机的国内服务商!&lt;/p&gt;
+</content:encoded></item><item><title>免费云主机建站指南</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Thu, 16 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近上网冲浪的时候，偶然发现了红都主机 —— 一个提供永久免费 PHP 虚拟主机的国内服务商!&lt;/p&gt;
 &lt;p&gt;不用花一分钱就能开通稳定的云虚拟主机，对学生党、个人开发者和想做轻量小站的朋友来说太友好了。&lt;/p&gt;
 &lt;p&gt;今天这篇文章，我就从注册激活到网站上线，手把手教大家用红都主机从零搭建一个属于自己的网站，全程零成本，新手也能轻松上手。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260416010122712.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -5118,7 +5213,7 @@ index.html → index.php → index.htm 等&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;如果新上传的文件不是index.html（比如你图里的 elon-musk-resume.html），服务器就找不到默认首页，直接返回 403。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;以上就是本期全部内容。如果本教程对你有所帮助，欢迎点赞、收藏、转发三连，你的支持是我持续输出优质内容的核心动力。&lt;/p&gt;
 &lt;p&gt;Ps. 想要学习AI、提升数字化效率、打造全自动工作流，也欢迎加入我的专属社群：https://t.zsxq.com/d4zSX&lt;/p&gt;
-</content:encoded></item><item><title>Hermes Agent上手指南。</title><link>https://dqtx.cc/posts/aihacks/hermes-agent/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/hermes-agent/</guid><pubDate>Wed, 15 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近叫Hermes Agent的开源项目，短短两个月GitHub星标冲到8万+，被无数开发者称为&quot;OpenClaw的真正对手&quot;。它不是又一个聊天机器人，也不是IDE里的代码助手，而是一个真正会随着你一起成长、越用越聪明的自主AI Agent。&lt;/p&gt;
+</content:encoded></item><item><title>Hermes Agent上手指南。</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Wed, 15 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近叫Hermes Agent的开源项目，短短两个月GitHub星标冲到8万+，被无数开发者称为&quot;OpenClaw的真正对手&quot;。它不是又一个聊天机器人，也不是IDE里的代码助手，而是一个真正会随着你一起成长、越用越聪明的自主AI Agent。&lt;/p&gt;
 &lt;p&gt;项目地址：https://github.com/NousResearch/hermes-agent&lt;/p&gt;
 &lt;p&gt;最近很多养虾的朋友，安装了Hermes Agent&lt;/p&gt;
 &lt;h2&gt;01.安装步骤&lt;/h2&gt;
@@ -5190,7 +5285,7 @@ index.html → index.php → index.htm 等&lt;/p&gt;
 &lt;p&gt;https://github.com/mayukh4/linux-android&lt;/p&gt;
 &lt;p&gt;多Agent团队协作才是Hermes Agent的正确打开方式。&lt;/p&gt;
 &lt;p&gt;https://x.com/Saccc_c/status/2044018336673964207&lt;/p&gt;
-</content:encoded></item><item><title>Qwen Code安装使用教程</title><link>https://dqtx.cc/posts/aihacks/qwen-code/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/qwen-code/</guid><pubDate>Tue, 14 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Qwen Code 是基于 Gemini Code 二次开发的&lt;strong&gt;终端 AI 编程助手&lt;/strong&gt;，完美搭载&lt;strong&gt;通义千问3.6 Plus 最新编程模型&lt;/strong&gt;，支持纯中文交互、代码生成/修复/Git 协作，&lt;strong&gt;免费&lt;/strong&gt;提供&lt;strong&gt;每日100次请求&lt;/strong&gt;额度完全满足日常开发需求。&lt;/p&gt;
+</content:encoded></item><item><title>Qwen Code安装使用教程</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Tue, 14 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Qwen Code 是基于 Gemini Code 二次开发的&lt;strong&gt;终端 AI 编程助手&lt;/strong&gt;，完美搭载&lt;strong&gt;通义千问3.6 Plus 最新编程模型&lt;/strong&gt;，支持纯中文交互、代码生成/修复/Git 协作，&lt;strong&gt;免费&lt;/strong&gt;提供&lt;strong&gt;每日100次请求&lt;/strong&gt;额度完全满足日常开发需求。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;开源地址&lt;/strong&gt;：
 https://github.com/QwenLM/qwen-code&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260414155118952.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -5383,7 +5478,7 @@ qwen -y
   ]
 }
 &lt;/code&gt;&lt;/pre&gt;
-</content:encoded></item><item><title>我的博客工作流bat</title><link>https://dqtx.cc/posts/workflow/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B8%83bat/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B8%83bat/</guid><pubDate>Tue, 14 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;优化了下我的博客发布工作流bat脚本&lt;/p&gt;
+</content:encoded></item><item><title>我的博客工作流bat</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Tue, 14 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;优化了下我的博客发布工作流bat脚本&lt;/p&gt;
 &lt;p&gt;这是一个典型的&lt;a href=&quot;https://www.doubao.com/thread/wad1cb0794ccb7f0c&quot;&gt;DevOps 流程&lt;/a&gt;在博客环境中的应用&lt;/p&gt;
 &lt;h2&gt;工作流程&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260414140439305.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -5522,7 +5617,7 @@ exit
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260414141249639.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;很多人可能没注意到：在桌面或任意文件夹里，想通过 Listary 搜索、打开文件时，不用先双击 Ctrl，直接敲键盘输入关键词就行，能省下不少操作时间。&lt;/p&gt;
 &lt;p&gt;写完文章，直接敲键盘输入gt，然后回车&lt;/p&gt;
-</content:encoded></item><item><title>Listary完全使用指南！</title><link>https://dqtx.cc/posts/workflow/listary%E8%BF%9B%E9%98%B6/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/listary%E8%BF%9B%E9%98%B6/</guid><pubDate>Sun, 12 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Listary是一款知名的效率工具，以用户友好，使用方式简单而备受好评。&lt;/p&gt;
+</content:encoded></item><item><title>Listary完全使用指南！</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Sun, 12 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Listary是一款知名的效率工具，以用户友好，使用方式简单而备受好评。&lt;/p&gt;
 &lt;p&gt;单论文件搜索，Listary 和 Everything 属于同一梯队，在搜索速度和内存占用上秒杀任何其他软件。&lt;/p&gt;
 &lt;p&gt;任何文件，只要你知道他的名称（或者部分名称），就能迅速找到并打开。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;官方网站&lt;/strong&gt;：https://www.listary.netdownload&lt;/p&gt;
@@ -5749,7 +5844,7 @@ C:\Users%username%\AppData\Roaming\Listary\UserProfile\Settings\Preferences.json
 &lt;p&gt;&lt;em&gt;ps&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;大强同学：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;远程服务:&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-</content:encoded></item><item><title>Dataview与Templater插件联动示例</title><link>https://dqtx.cc/posts/workflow/dataview%E8%84%9A%E6%9C%AC/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/dataview%E8%84%9A%E6%9C%AC/</guid><pubDate>Sun, 12 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;很多 Obsidian 深度用户在积累了上千篇笔记后，都会面临一个共同的痛点：&lt;strong&gt;存入容易，提取困难。&lt;/strong&gt; 知识库逐渐变成了一个只进不出的“数据黑洞”。&lt;/p&gt;
+</content:encoded></item><item><title>Dataview与Templater插件联动示例</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Sun, 12 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;很多 Obsidian 深度用户在积累了上千篇笔记后，都会面临一个共同的痛点：&lt;strong&gt;存入容易，提取困难。&lt;/strong&gt; 知识库逐渐变成了一个只进不出的“数据黑洞”。&lt;/p&gt;
 &lt;p&gt;如果你还在使用基础的文件夹和标签管理笔记，那你就错过了 Obsidian 最强大的黑魔法。&lt;/p&gt;
 &lt;p&gt;今天，我们将结合 Obsidian 生态中的两大超神插件——&lt;strong&gt;Dataview&lt;/strong&gt;（数据查询引擎）和 &lt;strong&gt;Templater&lt;/strong&gt;（动态模板引擎），为你展示 6 个开箱即用的高级自动化脚本。&lt;/p&gt;
 &lt;p&gt;这 6 个案例将把你的 Obsidian 从“静态的纯文本仓库”彻底升级为&lt;strong&gt;带有弹窗交互、自动化整理和数据可视化分析的私人应用程序&lt;/strong&gt;。&lt;/p&gt;
@@ -5994,7 +6089,7 @@ if (confirm.toUpperCase() === &apos;Y&apos;) {
 &lt;p&gt;&lt;em&gt;ps&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;大强同学：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;远程服务:&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-</content:encoded></item><item><title>记录一次装系统糟心经历！</title><link>https://dqtx.cc/posts/technical/%E8%A3%85%E7%B3%BB%E7%BB%9F%E5%BC%82%E5%B8%B8/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E8%A3%85%E7%B3%BB%E7%BB%9F%E5%BC%82%E5%B8%B8/</guid><pubDate>Sat, 11 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天想和大家分享一下我最近装系统的糟心经历，前前后后耽误了整整三天时间，最后才找到问题根源，也算是给自己上了一课。&lt;/p&gt;
+</content:encoded></item><item><title>记录一次装系统糟心经历！</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Sat, 11 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天想和大家分享一下我最近装系统的糟心经历，前前后后耽误了整整三天时间，最后才找到问题根源，也算是给自己上了一课。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/2026-04-11-23-55.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;第三方镜像连续报错&lt;/h2&gt;
 &lt;p&gt;事情的起因是我想给电脑重装系统，平时我也经常帮身边人装系统，自认为还算有经验，就去远景论坛找系统镜像，看到两款标注为Windows26H1精简优化镜像，就直接下载下来准备安装。&lt;/p&gt;
@@ -6016,7 +6111,7 @@ https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/bug-check-0x
 &lt;p&gt;正是因为一直死磕这两款不兼容的镜像，才导致反复安装失败，白白耽误了三天时间。&lt;/p&gt;
 &lt;p&gt;这件事也让我彻底明白了一个道理：&lt;strong&gt;自己装系统的时候，如果遇到安装失败的问题，不要第一时间就认定是PE工具不行，也不要盲目怀疑电脑硬件故障，很有可能是你使用的系统镜像，和电脑硬件不兼容，归根结底就是镜像本身的问题&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;也希望把我的这次踩坑经历分享给大家，以后装系统尽量选择官方原版镜像，别再像我一样，在第三方镜像上浪费时间，走不必要的弯路了。&lt;/p&gt;
-</content:encoded></item><item><title>在chrome上编辑本地md拓展</title><link>https://dqtx.cc/posts/software/chrome%E4%B8%8A%E7%BC%96%E8%BE%91%E6%9C%AC%E5%9C%B0mrkdown/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/chrome%E4%B8%8A%E7%BC%96%E8%BE%91%E6%9C%AC%E5%9C%B0mrkdown/</guid><pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;平时用 Markdown 写笔记、存文档，总被两个问题困扰：要么打开笨重的专用编辑器占内存，要么拖进浏览器只能看纯文本乱码；尤其是管理 Obsidian 仓库、本地项目文档时，多文件切换来回找路径，效率大打折扣。&lt;/p&gt;
+</content:encoded></item><item><title>在chrome上编辑本地md拓展</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;平时用 Markdown 写笔记、存文档，总被两个问题困扰：要么打开笨重的专用编辑器占内存，要么拖进浏览器只能看纯文本乱码；尤其是管理 Obsidian 仓库、本地项目文档时，多文件切换来回找路径，效率大打折扣。&lt;/p&gt;
 &lt;p&gt;这款开源的 Chrome Markdown Editor 插件完美解决了这些问题，让浏览器变身轻量本地编辑器，数据不上云、操作零门槛，Obsidian 用户和开发者都能直接冲！&lt;/p&gt;
 &lt;p&gt;项目地址：https://github.com/yishu-ziyu/chrome-md-editor&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260410181036614.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -6046,7 +6141,7 @@ https://learn.microsoft.com/en-us/windows-hardware/drivers/debugger/bug-check-0x
 &lt;li&gt;编辑预览效果的CSS尤其是代码块太丑&lt;/li&gt;
 &lt;li&gt;最左边的文件增加一个新建文件&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>Zed安装使用教程</title><link>https://dqtx.cc/posts/aihacks/zed/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/zed/</guid><pubDate>Thu, 09 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;近期代码圈掀起热潮，不少深耕VS Code、Sublime的开发者，纷纷转向Zed编辑器。&lt;/p&gt;
+</content:encoded></item><item><title>Zed安装使用教程</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Thu, 09 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;近期代码圈掀起热潮，不少深耕VS Code、Sublime的开发者，纷纷转向Zed编辑器。&lt;/p&gt;
 &lt;p&gt;起初我并未在意，亲身试用一周便彻底舍弃旧工具，这款编辑器精准拿捏了程序员的核心需求。依托Rust构建，它性能拉满，打开大容量代码库、函数跳转、全局搜索均无延迟，告别卡顿与加载等待，极致丝滑的编写体验，让人用过便难以割舍。&lt;/p&gt;
 &lt;p&gt;定价：基础编辑器永久免费（无 AI 功能）；&lt;/p&gt;
 &lt;p&gt;Zed Pro 含免费额度，付费版 20 美元 / 月（500 次提示），协作功能全用户免费&lt;/p&gt;
@@ -6195,7 +6290,7 @@ AI 生成 PPT/幻灯片&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-</content:encoded></item><item><title>Obsidian日记半自动化流程</title><link>https://dqtx.cc/posts/workflow/ob%E6%97%A5%E8%AE%B0%E4%B8%8E%E6%A8%A1%E6%9D%BF/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/ob%E6%97%A5%E8%AE%B0%E4%B8%8E%E6%A8%A1%E6%9D%BF/</guid><pubDate>Wed, 08 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;在 Obsidian 打造高效日记自动化，核心插件是基础，模板是骨架，辅助插件是关键。&lt;/p&gt;
+</content:encoded></item><item><title>Obsidian日记半自动化流程</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Wed, 08 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;在 Obsidian 打造高效日记自动化，核心插件是基础，模板是骨架，辅助插件是关键。&lt;/p&gt;
 &lt;p&gt;本文聚焦 Calendar、Templater、Dataview 三大插件，带你从 0 到 1 搭建模板、配置自动调用，实现日记一键生成、结构统一。&lt;/p&gt;
 &lt;p&gt;额外分享两款实用工具，拉满创建效率与体验，一站式打通 Obsidian 日记工作流闭环，让记录更轻松、复盘更高效。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260408235725942.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -6232,7 +6327,7 @@ sort file.mtime asc
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;以上。Obsidian 日记自动化的核心配置就全部完成了！&lt;/p&gt;
 &lt;p&gt;通过核心插件与3个增强插件的组合，我们实现了：一键新建日记、模板自动套用、内容动态汇总、复盘数据化」的完整工作流。&lt;/p&gt;
-</content:encoded></item><item><title>秘塔回响语音输入法</title><link>https://dqtx.cc/posts/aihacks/%E7%A7%98%E5%A1%94%E5%9B%9E%E5%93%8D/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E7%A7%98%E5%A1%94%E5%9B%9E%E5%93%8D/</guid><pubDate>Tue, 07 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;大多数人以为，AI语音输入法的功能就是把语音变成文字。&lt;/p&gt;
+</content:encoded></item><item><title>秘塔回响语音输入法</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Tue, 07 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;大多数人以为，AI语音输入法的功能就是把语音变成文字。&lt;/p&gt;
 &lt;p&gt;但真相是，&lt;strong&gt;最好的AI语音输入法，根本不需要你动手。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;今天只讲一个工具——秘塔科技刚发布的「秘塔回响」。&lt;/p&gt;
 &lt;p&gt;它不是输入法。&lt;/p&gt;
@@ -6292,7 +6387,7 @@ sort file.mtime asc
 &lt;p&gt;「好工具的本质，不是让你学会更多操作，而是让你少操作。」&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;下载地址&lt;/strong&gt;：https://metaso.cn/echo&lt;/p&gt;
 &lt;p&gt;用一次你就会明白，什么叫「回不去」。&lt;/p&gt;
-</content:encoded></item><item><title>WezTerm终端配置指南</title><link>https://dqtx.cc/posts/software/wezterm/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/wezterm/</guid><pubDate>Mon, 06 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天分享一套&lt;strong&gt;颜值高、速度快、功能强&lt;/strong&gt;的终端组合：&lt;/p&gt;
+</content:encoded></item><item><title>WezTerm终端配置指南</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Mon, 06 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天分享一套&lt;strong&gt;颜值高、速度快、功能强&lt;/strong&gt;的终端组合：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;WezTerm&lt;/strong&gt;：GPU 加速终端模拟器&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Nushell&lt;/strong&gt;：现代化、结构化、跨平台 Shell&lt;/li&gt;
@@ -6517,7 +6612,7 @@ A8：删除或重命名 &lt;code&gt;wezterm.lua&lt;/code&gt; 文件，然后重�
 &lt;p&gt;直接替换成：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;config.default_prog = { &apos;powershell.exe&apos;, &apos;-NoLogo&apos; }
 &lt;/code&gt;&lt;/pre&gt;
-</content:encoded></item><item><title>Obsidian CLI终端管理笔记指南</title><link>https://dqtx.cc/posts/aihacks/obsidian-cli/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/obsidian-cli/</guid><pubDate>Sun, 05 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;2026年2月27日，Obsidian 1.12.4正式发布官方CLI。&lt;/p&gt;
+</content:encoded></item><item><title>Obsidian CLI终端管理笔记指南</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Sun, 05 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;2026年2月27日，Obsidian 1.12.4正式发布官方CLI。&lt;/p&gt;
 &lt;p&gt;这是Obsidian有史以来最重要的功能更新之一，意味着你的笔记库不再只是一个需要手动点开的应用，而变成了随时可调用的基础设施。&lt;/p&gt;
 &lt;p&gt;无论你是想快速捕获一个想法、批量处理上百篇笔记、还是让AI帮你分析和整理知识库——一切都变得前所未有的简单。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260405214553243.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -6695,7 +6790,7 @@ obsidian task:complete task=任务ID
 &lt;p&gt;第一，打开Obsidian设置，启用CLI；&lt;/p&gt;
 &lt;p&gt;第二，下载 Claudian 插件，体验在笔记里直接用AI的快感。&lt;/p&gt;
 &lt;p&gt;从 &lt;code&gt;obsidian daily&lt;/code&gt; 开始，从一个命令开始，你会发现一个全新的Obsidian。&lt;/p&gt;
-</content:encoded></item><item><title>Claude Code泄露后，程序员们疯了!</title><link>https://dqtx.cc/posts/aihacks/claude-code%E6%BA%90%E7%A0%81%E6%B3%84%E9%9C%B2/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/claude-code%E6%BA%90%E7%A0%81%E6%B3%84%E9%9C%B2/</guid><pubDate>Wed, 01 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;就在昨天（2026年3月31日），一场波及整个AI编程圈的“核弹级”事件突然引爆——Anthropic旗下最神秘的AI编程助手Claude Code的&lt;strong&gt;完整源码&lt;/strong&gt;，疑似通过npm source map意外泄露！&lt;/p&gt;
+</content:encoded></item><item><title>Claude Code泄露后，程序员们疯了!</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Wed, 01 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;就在昨天（2026年3月31日），一场波及整个AI编程圈的“核弹级”事件突然引爆——Anthropic旗下最神秘的AI编程助手Claude Code的&lt;strong&gt;完整源码&lt;/strong&gt;，疑似通过npm source map意外泄露！&lt;/p&gt;
 &lt;p&gt;一夜之间，87个被封印的隐藏功能、108个失踪模块、44个内部feature flag、完整的Agent调度系统……全部暴露在光天化日之下。&lt;/p&gt;
 &lt;p&gt;这场轰动全球技术圈的“代码狂欢”，不仅让无数开发者第一次窥见Claude Code的底层架构，更像打开了潘多拉魔盒&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Anthropic在AI Agent领域的全部野心与路线图，被撕开了最后的遮羞布。&lt;/strong&gt;&lt;/p&gt;
@@ -6786,7 +6881,7 @@ obsidian task:complete task=任务ID
 &lt;p&gt;https://x.com/altryne/status/2038676458026189225&lt;/p&gt;
 &lt;p&gt;泄露的 Claude Code 源代码包含 44 个隐藏功能标志和 20 多个未发布的功能。&lt;/p&gt;
 &lt;p&gt;https://x.com/RoundtableSpace/status/2038960753458438156&lt;/p&gt;
-</content:encoded></item><item><title>Newtype-os完整工作流指南</title><link>https://dqtx.cc/posts/aihacks/newtype-os/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/newtype-os/</guid><pubDate>Mon, 30 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你有没有过这样的经历：&lt;/p&gt;
+</content:encoded></item><item><title>Newtype-os完整工作流指南</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Mon, 30 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你有没有过这样的经历：&lt;/p&gt;
 &lt;p&gt;想写一篇深度文章，但光是调研就花了一整天？&lt;/p&gt;
 &lt;p&gt;网上资料查了一堆，结果自己先搞乱了？&lt;/p&gt;
 &lt;p&gt;写完之后自己都不想看第二遍，更别说发出来了？&lt;/p&gt;
@@ -7223,7 +7318,7 @@ nt wechat start    # 启动桥接守护进程
 &lt;p&gt;用了一段时间，最大的感受是：&lt;strong&gt;终于可以把「创作」这件事，真正变成一件只需要动嘴不动手的事。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;以前写一篇文章，要自己查资料、自己整理、自己写、自己改，来来回回折腾好几遍。现在只需要告诉 Chief 要写什么，它会把后面的事情全部安排好。&lt;/p&gt;
 &lt;p&gt;当然，它不是完美的。生成的内容还是需要自己过一遍，核心观点还是需要自己把控。但至少，&lt;strong&gt;那些繁琐的体力活，有人帮你干了。&lt;/strong&gt;&lt;/p&gt;
-</content:encoded></item><item><title>Claude联网神器：Web Access</title><link>https://dqtx.cc/posts/aihacks/web-access/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/web-access/</guid><pubDate>Thu, 26 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;前言&lt;/h2&gt;
+</content:encoded></item><item><title>Claude联网神器：Web Access</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Thu, 26 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;前言&lt;/h2&gt;
 &lt;p&gt;过去的 AI 联网超 &quot;死板&quot;：要么用搜索引擎瞎找非公开内容，要么打不开需要登录的动态网页，还得单独给 AI 登各个平台，开多个网页就卡，踩过的坑下次还踩，甚至会跟人抢浏览器控制权，用着特别费劲。&lt;/p&gt;
 &lt;p&gt;最近发现了 &lt;a href=&quot;https://github.com/eze-is/web-access&quot;&gt;Web Access&lt;/a&gt; 这个 Skill，能把 AI Agent 的联网、操作浏览器的能力直接拉满。它用的是&lt;strong&gt;你自己已经登录的 Chrome&lt;/strong&gt;，不管是查信息、扒内容，还是交互操作，都能自动搞定，兼容 Claude Code、OpenClaw 等主流 AI Agent，普通人也能轻松上手。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Generated_Image_f1to39f1to39f1to.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -7279,7 +7374,7 @@ nt wechat start    # 启动桥接守护进程
 &lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/rps5YVB6TchT9npAaIWKCw&quot;&gt;Web Access 原作者介绍文章&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/eze-is/web-access&quot;&gt;GitHub 仓库&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>迅雷v25.0.3.1096绿色精简版</title><link>https://dqtx.cc/posts/software/xunlei/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/xunlei/</guid><pubDate>Wed, 25 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;迅雷&lt;/strong&gt;Thunder 2025 v25.0.3.1096 去广告&lt;strong&gt;绿色&lt;/strong&gt;精简版，注意是Windows版本，可以直接搜索，分享资料可以复制仅单个URL，但是没有深色模式切换按钮，不过界面确实干净清爽！&lt;/p&gt;
+</content:encoded></item><item><title>迅雷v25.0.3.1096绿色精简版</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Wed, 25 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;迅雷&lt;/strong&gt;Thunder 2025 v25.0.3.1096 去广告&lt;strong&gt;绿色&lt;/strong&gt;精简版，注意是Windows版本，可以直接搜索，分享资料可以复制仅单个URL，但是没有深色模式切换按钮，不过界面确实干净清爽！&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260325135455961.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;🔥 核心亮点&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;彻底去广告：&lt;/strong&gt;&lt;/p&gt;
@@ -7305,7 +7400,7 @@ nt wechat start    # 启动桥接守护进程
 &lt;/ul&gt;
 &lt;p&gt;PS.该版本为绿色精简版，仅供学习交流，建议 24 小时内删除&lt;/p&gt;
 &lt;p&gt;长期使用请支持官方正版。有迅雷会员可解锁更佳加速体验～&lt;/p&gt;
-</content:encoded></item><item><title>OpenCLI安装与配置全攻略</title><link>https://dqtx.cc/posts/aihacks/open-cli/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/open-cli/</guid><pubDate>Tue, 24 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;在AI Agent时代，大模型最缺的是“操作能力”。&lt;a href=&quot;https://github.com/jackwener/opencli&quot;&gt;OpenCLI&lt;/a&gt; 巧妙地解决了这个问题：它通过复用你本地 Chrome 的登录状态，让 AI 能够像调用 API 一样在终端直接查热搜、发动态或抓取数据。&lt;/p&gt;
+</content:encoded></item><item><title>OpenCLI安装与配置全攻略</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Tue, 24 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;在AI Agent时代，大模型最缺的是“操作能力”。&lt;a href=&quot;https://github.com/jackwener/opencli&quot;&gt;OpenCLI&lt;/a&gt; 巧妙地解决了这个问题：它通过复用你本地 Chrome 的登录状态，让 AI 能够像调用 API 一样在终端直接查热搜、发动态或抓取数据。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Generated_Image_ioq7uwioq7uwioq7.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;&lt;strong&gt;环境准备&lt;/strong&gt;&lt;/h2&gt;
 &lt;ul&gt;
@@ -7339,7 +7434,7 @@ opencli zhihu hot -f json       # 查看知乎热榜并以JSON格式输出
 &lt;/blockquote&gt;
 &lt;p&gt;OpenCLI 的安装非常直观，关键在于浏览器插件的桥接。一旦打通，你的终端就不再只是一个冷冰冰的控制台，而是通往整个 Web 世界的万能钥匙。&lt;/p&gt;
 &lt;p&gt;文章来源：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;  远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/p&gt;
-</content:encoded></item><item><title>NotebookLM封神指南</title><link>https://dqtx.cc/posts/aihacks/notebooklm/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/notebooklm/</guid><pubDate>Mon, 23 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;NotebookLM 是一个只根据你输入的信息思考的人工智能。 它不像 ChatGPT 那样引用整个互联网的信息，而是读取并回答“只提供你给我的材料”。&lt;/p&gt;
+</content:encoded></item><item><title>NotebookLM封神指南</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Mon, 23 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;NotebookLM 是一个只根据你输入的信息思考的人工智能。 它不像 ChatGPT 那样引用整个互联网的信息，而是读取并回答“只提供你给我的材料”。&lt;/p&gt;
 &lt;p&gt;在咨询通用人工智能关于职业相关事务时，它可能会检测到年龄、工作类型和背景等负面因素，并无意中给出严厉的评价。 NotebookLM 不用担心这些。 他们只会给你你想要申诉的信息，所以他们只会考虑。&lt;/p&gt;
 &lt;p&gt;因此，你输入的信息质量和数量，将决定结果的质量。&lt;/p&gt;
 &lt;p&gt;我有时听到有人说，“我试过用它，但效果不好。” 通常是因为你输入的信息太少。
@@ -7460,7 +7555,7 @@ https://www.bilibili.com/video/BV1EDcSzxErw/?spm_id_from=333.1387.favlist.conten
 https://www.biji.com/mine/notes/WPKWeqx2wyV6g4QP&lt;/p&gt;
 &lt;h2&gt;写在最后&lt;/h2&gt;
 &lt;p&gt;当NotebookLM 把 1 小时的学习压缩到 15 分钟，把 3 天的调研缩短到 1 小时，效率差距已不再是努力程度，而是工具选择。从学生到科研人员，从产品经理到内容创作者，这款被《巴伦周刊》称为 “生成式 AI 杀手级应用” 的工具，正在重构知识工作的底层逻辑。现在登录 Google 账号即可免费体验，你的 10 倍效率革命，从上传第一份文档开始。&lt;/p&gt;
-</content:encoded></item><item><title>Rustdesk定制编译工具</title><link>https://dqtx.cc/posts/technical/rustdesk/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/rustdesk/</guid><pubDate>Mon, 23 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;作为一名技术爱好者，偶然在闲鱼上刷到定制化的Rustdesk客户端，简洁的界面和实用的功能让我萌生了自研同款编译工具的想法。虽花费数百元向卖家请教却因对方忙碌无疾而终，但也坚定了我靠技术实现需求的决心——最终借助Codex从命令行版本起步，迭代出可视化网页面板的Rustdesk一键编译工具，现将整个开发过程与成果分享如下。&lt;/p&gt;
+</content:encoded></item><item><title>Rustdesk定制编译工具</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Mon, 23 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;作为一名技术爱好者，偶然在闲鱼上刷到定制化的Rustdesk客户端，简洁的界面和实用的功能让我萌生了自研同款编译工具的想法。虽花费数百元向卖家请教却因对方忙碌无疾而终，但也坚定了我靠技术实现需求的决心——最终借助Codex从命令行版本起步，迭代出可视化网页面板的Rustdesk一键编译工具，现将整个开发过程与成果分享如下。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260323223059574.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;一、成品核心优势&lt;/h2&gt;
 &lt;p&gt;相较于原生Rustdesk，定制编译后的工具在使用体验上做了针对性优化：&lt;/p&gt;
@@ -7527,7 +7622,7 @@ generate.py 打包
 &lt;p&gt;目前该工具仅支持Windows版本的Rustdesk控制端/客户端编译，若有定制编译需求，可添加微信dqtx33交流。&lt;/p&gt;
 &lt;h2&gt;六、写在最后&lt;/h2&gt;
 &lt;p&gt;本次开发从闲鱼灵感出发，基于Python、PowerShell等技术栈实现了Rustdesk定制化编译工具，核心优化了连接体验、免安装和隐私展示三大特性；工具实现了从命令行到网页可视化面板的迭代，编译流程自动化，仅需输入核心参数即可快速生成定制化exe文件；项目结构清晰，依赖环境明确，编译耗时约4分钟，仅支持Windows版本的Rustdesk控制端/客户端编译。&lt;/p&gt;
-</content:encoded></item><item><title>零成本搭建在线图床</title><link>https://dqtx.cc/posts/technical/%E5%9C%A8%E7%BA%BF%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E5%9C%A8%E7%BA%BF%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA/</guid><pubDate>Sun, 22 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;90%的博主都不知道！免费100G图床竟比付费的还稳定～ 写文章、做分享时，你是不是也总被图床问题折磨？免费的容量小得可怜，付费的一年要花几百块，更糟的是还常遇到文件失效、大文件传不了的坑，辛苦写的内容全白费！今天就分享一个零成本神方案——用GitHub 4k+星标的开源项目CloudFlare-ImgBed搭配HuggingFace，10分钟快速搭建100G免费图床，无需实名认证、支持大文件自动分片上传，不用额外买服务器，稳定又省心，自媒体、学生、打工人都能用～&lt;/p&gt;
+</content:encoded></item><item><title>零成本搭建在线图床</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Sun, 22 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;90%的博主都不知道！免费100G图床竟比付费的还稳定～ 写文章、做分享时，你是不是也总被图床问题折磨？免费的容量小得可怜，付费的一年要花几百块，更糟的是还常遇到文件失效、大文件传不了的坑，辛苦写的内容全白费！今天就分享一个零成本神方案——用GitHub 4k+星标的开源项目CloudFlare-ImgBed搭配HuggingFace，10分钟快速搭建100G免费图床，无需实名认证、支持大文件自动分片上传，不用额外买服务器，稳定又省心，自媒体、学生、打工人都能用～&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260122014636902.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;一、工具介绍：CloudFlare-ImgBed&lt;/h2&gt;
 &lt;p&gt;这是一个 GitHub 星标 4k + 的开源项目，基于 Cloudflare Pages 构建，核心优势：&lt;/p&gt;
@@ -7631,7 +7726,7 @@ KV命名空间：img_url
 &lt;hr /&gt;
 &lt;p&gt;帮你省了几百块付费图床钱，觉得有用的话，别忘了&lt;strong&gt;点赞 + 收藏 + 转发&lt;/strong&gt;三连呀！转发给需要图床的朋友，一起薅这 100G 免费资源～ 关注我，后续分享更多「免费存储方案、效率工具实操、技术教程干货」，下次见～ 👋&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;大强远程技术支持：742112.xyz&lt;/strong&gt;&lt;/p&gt;
-</content:encoded></item><item><title>GiffGaff从0到1实操与保号指南</title><link>https://dqtx.cc/posts/technical/giffgaff/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/giffgaff/</guid><pubDate>Sat, 21 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;对于身在大陆的用户而言，拥有一张海外手机卡是注册海外软件、打通跨境出海的第一步。然而，常见的方案如Club SIM必须要求实名（KYC）认证，而Google Voice等虚拟号码则容易被App识别并屏蔽，甚至导致封号。相比之下，&lt;strong&gt;英国的GiffGaff手机卡凭借极低的门槛和保号成本，成为了备受推荐的“海外保号神卡”。&lt;/strong&gt;&lt;/p&gt;
+</content:encoded></item><item><title>GiffGaff从0到1实操与保号指南</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Sat, 21 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;对于身在大陆的用户而言，拥有一张海外手机卡是注册海外软件、打通跨境出海的第一步。然而，常见的方案如Club SIM必须要求实名（KYC）认证，而Google Voice等虚拟号码则容易被App识别并屏蔽，甚至导致封号。相比之下，&lt;strong&gt;英国的GiffGaff手机卡凭借极低的门槛和保号成本，成为了备受推荐的“海外保号神卡”。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;以下是关于GiffGaff手机卡的全面介绍、操作指南及注意事项：&lt;/p&gt;
 &lt;h3&gt;一、 GiffGaff 是什么？&lt;/h3&gt;
 &lt;p&gt;GiffGaff是一家英国的虚拟移动运营商，其背后是英国三大运营商之一的O2全资子公司。它没有实体营业厅和电话客服，主要依靠社区用户互助来降低运营成本，从而为用户提供更便宜的价格。由于背靠大企业，其稳定性和安全性非常有保障，基本没有“跑路”的风险。&lt;/p&gt;
@@ -7699,7 +7794,7 @@ KV命名空间：img_url
 &lt;p&gt;&lt;strong&gt;✅关于知识星球&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;我做了一个轻量社群，把私藏的精品软件，技术教程，AI智能体学习笔记 都整理进了进去，68元/年，感兴趣的可👇 微信扫码：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/51111118145244T4.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-</content:encoded></item><item><title>weclaw：微信桥接Agent工具</title><link>https://dqtx.cc/posts/aihacks/weclaw/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/weclaw/</guid><pubDate>Fri, 20 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近微信推出了clawBot插件，找个几个微信桥接器Claude项目，最终都失败了，就在刚刷即刻突然看到艾逗笔大佬的&lt;strong&gt;weclaw&lt;/strong&gt;，让我眼前一亮.&lt;/p&gt;
+</content:encoded></item><item><title>weclaw：微信桥接Agent工具</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Fri, 20 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近微信推出了clawBot插件，找个几个微信桥接器Claude项目，最终都失败了，就在刚刷即刻突然看到艾逗笔大佬的&lt;strong&gt;weclaw&lt;/strong&gt;，让我眼前一亮.&lt;/p&gt;
 &lt;p&gt;只需一行命令就可以桥接给微信，安装后自动检测已安装的AI Agent（Claude、Codex、Gemini 等），重要的是这个项目不是逆向实现的桥接服务，无封号风险。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Generated_Image_qb64vqqb64vqqb64.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;1.安装weclaw&lt;/h2&gt;
@@ -7755,7 +7850,7 @@ dmesg | grep -i kill  # 是否有 OOM kill&lt;/p&gt;
 &lt;p&gt;https://github.com/cyhhao/vibe-remote&lt;/p&gt;
 &lt;p&gt;https://github.com/qufei1993/cc-weixin&lt;/p&gt;
 &lt;p&gt;PS.如需远程配置，联系&lt;strong&gt;微信：dqtx33&lt;/strong&gt;  远程客户端下载网址：&lt;a href=&quot;742112.xyz&quot;&gt;742112.xyz&lt;/a&gt;&lt;/p&gt;
-</content:encoded></item><item><title>效率神器！MFCMouseEffect</title><link>https://dqtx.cc/posts/software/00mfcmouseeffect/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/00mfcmouseeffect/</guid><pubDate>Thu, 19 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这是一款能灵活自定义鼠标动作、手势映射的跨平台工具&lt;/p&gt;
+</content:encoded></item><item><title>效率神器！MFCMouseEffect</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Thu, 19 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这是一款能灵活自定义鼠标动作、手势映射的跨平台工具&lt;/p&gt;
 &lt;p&gt;MFCMouseEffect，它不仅能实现鼠标点击、拖尾等炫酷的输入可视化特效，更能通过自动化映射打造专属的鼠标快捷操作体系，把桌面操作效率拉满，Windows 和 Mac 用户都能轻松上手！&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/shub.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;1.软件下载&lt;/h2&gt;
@@ -7796,7 +7891,7 @@ dmesg | grep -i kill  # 是否有 OOM kill&lt;/p&gt;
 &lt;p&gt;且开源免费、支持自定义扩展，无论是普通用户想提升桌面操作效率，还是开发者想定制专属桌面交互效果，都能满足需求，目前该项目还在持续更新迭代。&lt;/p&gt;
 &lt;p&gt;PS.以上就是本期内容，安装使用有任何问题，我提供一对一远程服务，手把手帮你解决，高效上手不踩坑。咱们下期见！&lt;/p&gt;
 &lt;p&gt;大强远程技术支持：742112.xyz&lt;/p&gt;
-</content:encoded></item><item><title>PassWall2双栈无忧配置指南</title><link>https://dqtx.cc/posts/technical/passwall2/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/passwall2/</guid><pubDate>Tue, 17 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;在OpenWrt 路由器上部署科学上网工具时，许多用户都希望实现一套“最省心”的方案：既能彻底杜绝 DNS 泄露与污染，又能完美兼容 IPv4/IPv6 双栈环境，同时自带可靠的去广告功能，PassWall2 正是目前最接近这一理想状态的插件之一。它基于 Xray/Sing-box 核心，内置强大的分流引擎和 DNS 处理能力，经过合理配置后，能在不关闭 IPv6、不强制禁用 AAAA 记录的前提下，实现干净、稳定、高效的上网体验。&lt;/p&gt;
+</content:encoded></item><item><title>PassWall2双栈无忧配置指南</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Tue, 17 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;在OpenWrt 路由器上部署科学上网工具时，许多用户都希望实现一套“最省心”的方案：既能彻底杜绝 DNS 泄露与污染，又能完美兼容 IPv4/IPv6 双栈环境，同时自带可靠的去广告功能，PassWall2 正是目前最接近这一理想状态的插件之一。它基于 Xray/Sing-box 核心，内置强大的分流引擎和 DNS 处理能力，经过合理配置后，能在不关闭 IPv6、不强制禁用 AAAA 记录的前提下，实现干净、稳定、高效的上网体验。&lt;/p&gt;
 &lt;p&gt;本文将详细分享一套经过实践验证的 PassWall2 配置流程，按照此方案配置完成后，你将获得：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;无 DNS 泄露、无明显污染&lt;/li&gt;
@@ -7880,7 +7975,7 @@ geosite:geolocation-!cn
 &lt;p&gt;&lt;a href=&quot;https://mtom.top/archives/Pass-Wall2%E8%A7%A3%E5%86%B3DNS%E6%B3%84%E9%9C%B2IPv4-IPv6%E5%8F%8C%E6%A0%88%E5%85%B1%E5%AD%98%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/?highlight=%E5%8F%8C&quot;&gt;Pass Wall2解决DNS泄露IPv4+IPv6双栈共存配置&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/Openwrt-Passwall/openwrt-passwall2/discussions/234&quot;&gt;关于passwall2更新节点后分流消失的问题&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/Openwrt-Passwall/openwrt-passwall2/issues/965&quot;&gt;Geo规则的问题，导致无法正常访问Gemini&lt;/a&gt;&lt;/p&gt;
-</content:encoded></item><item><title>360T7刷FanchmWrt教程</title><link>https://dqtx.cc/posts/technical/fanchmwrt/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/fanchmwrt/</guid><pubDate>Mon, 16 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;FanchmWrt是一款完全开源的家庭防火墙系统，基于官方 OpenWrt 同源开发（代码已全开源，GitHub 可查），但它在内核层做了大量针对家用场景的深度优化，内置了许多原本只有企业级软路由或专业防火墙才有的功能。简单来说，它把 OpenWrt 的极致可玩性 + 企业级网络管控能力，塞进了一套对普通家庭用户更友好的界面和体验。&lt;/p&gt;
+</content:encoded></item><item><title>360T7刷FanchmWrt教程</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Mon, 16 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;FanchmWrt是一款完全开源的家庭防火墙系统，基于官方 OpenWrt 同源开发（代码已全开源，GitHub 可查），但它在内核层做了大量针对家用场景的深度优化，内置了许多原本只有企业级软路由或专业防火墙才有的功能。简单来说，它把 OpenWrt 的极致可玩性 + 企业级网络管控能力，塞进了一套对普通家庭用户更友好的界面和体验。&lt;/p&gt;
 &lt;p&gt;FanchmWrt官网：www.fanchmwrt.com/&lt;/p&gt;
 &lt;p&gt;最近闲来无事，给自己的 360T7从现有OpenWrt直接刷了 FanchmWrt，实际体验非常不错——配置简单、功能齐全、稳定性高。下面分享完整刷机步骤（以 Breed 不死 Uboot 方式为主，最安全、零变砖风险）。&lt;/p&gt;
 &lt;p&gt;（以 Breed 不死 Uboot 方式为主，最安全、零变砖风险）。&lt;/p&gt;
@@ -7950,7 +8045,7 @@ geosite:geolocation-!cn
 &lt;p&gt;&lt;strong&gt;最新passwall安装&lt;/strong&gt;：https://www.dqtx.cc/posts/technical/passwall/&lt;/p&gt;
 &lt;p&gt;以上，如刷机过程中遇到任何问题欢迎评论区留言&lt;/p&gt;
 &lt;p&gt;大强远程技术支持→&lt;a href=&quot;742112.xyz&quot;&gt;742112.xyz&lt;/a&gt;&lt;/p&gt;
-</content:encoded></item><item><title>最新passwall安装教程</title><link>https://dqtx.cc/posts/technical/passwall/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/passwall/</guid><pubDate>Mon, 16 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;网传passwall删库跑路，实则是换库而已。目前passwall2还是可以用之前的方式升级安装，但也可以用下面的方式升级。&lt;/p&gt;
+</content:encoded></item><item><title>最新passwall安装教程</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Mon, 16 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;网传passwall删库跑路，实则是换库而已。目前passwall2还是可以用之前的方式升级安装，但也可以用下面的方式升级。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/passw.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;一、登录软路由后台&lt;/h2&gt;
 &lt;p&gt;如果你软路由有终端，也可以直接在终端登录，效果一样。&lt;/p&gt;
@@ -8001,7 +8096,7 @@ opkg install luci-i18n-passwall2-zh-cn
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
-</content:encoded></item><item><title>Agent-Reach安装与使用</title><link>https://dqtx.cc/posts/aihacks/agent-reach/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/agent-reach/</guid><pubDate>Thu, 12 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;引言&lt;/h3&gt;
+</content:encoded></item><item><title>Agent-Reach安装与使用</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Thu, 12 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;引言&lt;/h3&gt;
 &lt;p&gt;平时用 AI Agent处理各类网络信息查询真的太闹心了，想要让 AI 去各大平台搜集内容屡屡碰壁。各类平台都有着各式各样的访问限制，挨个调试配置耗费超多时间精力，实在太耽误事。&lt;/p&gt;
 &lt;p&gt;这款 Agent Reach 完美适配各类 AI 智能代理，专门打通全网各类平台访问壁垒，轻松解决各类网络信息获取难题，大幅简化繁杂配置流程。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;项目地址&lt;/strong&gt;https://github.com/Panniantong/Agent-Reach&lt;/p&gt;
@@ -8381,7 +8476,7 @@ opkg install luci-i18n-passwall2-zh-cn
 &lt;p&gt;你给一个新 Agent 装环境的时候，总要花时间去找工具、装依赖、调配置——Twitter 用什么读？Reddit 怎么绕封？YouTube 字幕怎么提取？每次都要重新踩一遍。&lt;/p&gt;
 &lt;p&gt;Agent Reach 做的事情很简单：&lt;strong&gt;帮你把这些选型和配置的活儿做完了。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;安装完成后，Agent 直接调用上游工具（twitter-cli、rdt-cli、xhs-cli、yt-dlp、mcporter、gh CLI 等），不需要经过 Agent Reach 的包装层。&lt;/p&gt;
-</content:encoded></item><item><title>用Claude搞定UI配色与排版指南</title><link>https://dqtx.cc/posts/aihacks/ui-ux-pro-max-skill/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/ui-ux-pro-max-skill/</guid><pubDate>Wed, 11 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;作为一个后端转全栈的开发者，我之前最大的痛点就是做UI：配色不协调、排版乱、组件间距不对，花几个小时做出来的界面还被产品吐槽像上个世纪的产物。直到最近挖到了这个Claude的神级技能ui-ux-pro-max，我直接把之前存的几十个UI设计素材库全删了。&lt;/p&gt;
+</content:encoded></item><item><title>用Claude搞定UI配色与排版指南</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Wed, 11 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;作为一个后端转全栈的开发者，我之前最大的痛点就是做UI：配色不协调、排版乱、组件间距不对，花几个小时做出来的界面还被产品吐槽像上个世纪的产物。直到最近挖到了这个Claude的神级技能ui-ux-pro-max，我直接把之前存的几十个UI设计素材库全删了。&lt;/p&gt;
 &lt;p&gt;项目地址：https://github.com/nextlevelbuilder/ui-ux-pro-max-skill&lt;/p&gt;
 &lt;p&gt;官方案例库：https://ui-ux-pro-max-skill.nextlevelbuilder.io/#styles&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Generated_Image_xup9zzxup9zzxup9.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -8466,7 +8561,7 @@ opkg install luci-i18n-passwall2-zh-cn
 &lt;p&gt;🚀 &lt;strong&gt;关于的知识星球&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;为了帮你节省更多时间，我把私藏的软件安装包、激活工具、效率工作流和独家教程，都整理进了我的知识星球「&amp;lt;u&amp;gt;大强・效率空间站&amp;lt;/u&amp;gt;」：68元/年，承包你一整年的效率提升。👇 微信扫码：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260306064028188.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-</content:encoded></item><item><title>Chrome官方MCP：chrome-devtools-mcp</title><link>https://dqtx.cc/posts/aihacks/chrome-devtools-mcp/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/chrome-devtools-mcp/</guid><pubDate>Tue, 10 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;前端开发中的网页性能分析、重复交互操作、多场景调试，向来是耗时又繁琐的工作。而Chrome DevTools MCP的出现，打通了AI助手与Chrome浏览器的通信链路，让开发者仅凭自然语言指令，就能实现浏览器自动化控制、性能诊断、页面调试等操作，直接把前端开发与调试效率拉满。&lt;/p&gt;
+</content:encoded></item><item><title>Chrome官方MCP：chrome-devtools-mcp</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Tue, 10 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;前端开发中的网页性能分析、重复交互操作、多场景调试，向来是耗时又繁琐的工作。而Chrome DevTools MCP的出现，打通了AI助手与Chrome浏览器的通信链路，让开发者仅凭自然语言指令，就能实现浏览器自动化控制、性能诊断、页面调试等操作，直接把前端开发与调试效率拉满。&lt;/p&gt;
 &lt;p&gt;项目地址：https://github.com/ChromeDevTools/chrome-devtools-mcp&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260311185030784.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;一、快速上手：三步配置，即刻使用&lt;/h2&gt;
@@ -8566,7 +8661,7 @@ opkg install luci-i18n-passwall2-zh-cn
 &lt;/ul&gt;
 &lt;p&gt;从重复的页面操作到专业的性能诊断，Chrome DevTools MCP让AI成为前端开发者的「左膀右臂」，把开发者从繁琐的机械工作中解放出来，更专注于核心的开发与创意工作。&lt;/p&gt;
 &lt;p&gt;这就是Chrome官方推出的MCP插件，一个让AI真正接管浏览器，重构前端开发效率的实用工具，现在就配置起来，体验AI操控浏览器的便捷吧！&lt;/p&gt;
-</content:encoded></item><item><title>CodePilot安装使用教程</title><link>https://dqtx.cc/posts/aihacks/codepilot/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/codepilot/</guid><pubDate>Sat, 07 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;CodePilot 是一款功能强大的 Claude 第三方客户端，近期上线的飞书桥接功能，实现了 Claude 能力与飞书生态的深度打通。完成接入配置后，你可以直接在飞书内使用 Claude 完成以下场景的工作：&lt;/p&gt;
+</content:encoded></item><item><title>CodePilot安装使用教程</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Sat, 07 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;CodePilot 是一款功能强大的 Claude 第三方客户端，近期上线的飞书桥接功能，实现了 Claude 能力与飞书生态的深度打通。完成接入配置后，你可以直接在飞书内使用 Claude 完成以下场景的工作：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;无需切换客户端，在飞书聊天窗口直接与 Claude 对话咨询问题&lt;/li&gt;
 &lt;li&gt;直接读取、总结飞书文档/多维表/电子表格的内容，高效处理办公文档&lt;/li&gt;
@@ -8801,7 +8896,7 @@ opkg install luci-i18n-passwall2-zh-cn
 &lt;h2&gt;三、相关资源&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/hBCmiClrTG5TjQQbryxJCg&quot;&gt;Happy：给Claude一双翅膀&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;https://github.com/xvirobotics/metabot&lt;/p&gt;
-</content:encoded></item><item><title>Claude配置飞书MCP教程</title><link>https://dqtx.cc/posts/aihacks/feish-umcp/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/feish-umcp/</guid><pubDate>Fri, 06 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;平时用飞书文档做笔记、整理资料、写方案的朋友，一定要试试这个&lt;strong&gt;超好用的&lt;/strong&gt;组合 ——Claude + 飞书 MCP**。&lt;strong&gt;它就像给飞书文档装了个&lt;/strong&gt;智能外挂**，不用复杂操作，&lt;strong&gt;你只要在 Claude 里说一句话，内容就能自动同步、推送到飞书文档&lt;/strong&gt;，，还能直接生成、写入多维表格。&lt;/p&gt;
+</content:encoded></item><item><title>Claude配置飞书MCP教程</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Fri, 06 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;平时用飞书文档做笔记、整理资料、写方案的朋友，一定要试试这个&lt;strong&gt;超好用的&lt;/strong&gt;组合 ——Claude + 飞书 MCP**。&lt;strong&gt;它就像给飞书文档装了个&lt;/strong&gt;智能外挂**，不用复杂操作，&lt;strong&gt;你只要在 Claude 里说一句话，内容就能自动同步、推送到飞书文档&lt;/strong&gt;，，还能直接生成、写入多维表格。&lt;/p&gt;
 &lt;p&gt;配置好以后，写文档、做总结、搞自动化效率直接翻倍，真正实现&lt;strong&gt;AI 帮你打工&lt;/strong&gt;。今天就把完整配置教程分享给大家，看完就能上手。&lt;/p&gt;
 &lt;h2&gt;一.准备阶段&lt;/h2&gt;
 &lt;ol&gt;
@@ -8876,7 +8971,7 @@ https://xodnytdcaw.feishu.cn/wiki/TTedwAniUiXTm9kYwb6cDJL0nsf?fromScene=spaceOve
 &lt;p&gt;如果觉得这篇教程对你有帮助，别忘了&lt;strong&gt;点赞+收藏+转发&lt;/strong&gt;三连呀！关注我，后续分享更多实用技巧、效率工具干货，下次见～ 👋&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;大强远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260306064028188.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-</content:encoded></item><item><title>ljg-card 信息卡片生成技能</title><link>https://dqtx.cc/posts/aihacks/ljg-card/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/ljg-card/</guid><pubDate>Sun, 01 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;ljg-card 是一个将内容铸造成 PNG 信息卡片的技能。输入文字或链接，输出高质量的视觉卡片。&lt;/p&gt;
+</content:encoded></item><item><title>ljg-card 信息卡片生成技能</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Sun, 01 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;ljg-card 是一个将内容铸造成 PNG 信息卡片的技能。输入文字或链接，输出高质量的视觉卡片。&lt;/p&gt;
 &lt;p&gt;技能地址：https://github.com/lijigang/ljg-skills/tree/master/skills/ljg-card&lt;/p&gt;
 &lt;h3&gt;目录结构&lt;/h3&gt;
 &lt;pre&gt;&lt;code&gt;~/.claude/skills/ljg-card/
@@ -9012,7 +9107,7 @@ https://xodnytdcaw.feishu.cn/wiki/TTedwAniUiXTm9kYwb6cDJL0nsf?fromScene=spaceOve
 &lt;li&gt;&lt;strong&gt;矩阵分析&lt;/strong&gt; — 2×2 或多格矩阵 + 象限标签&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/MiMo_%E7%99%BD%E6%9D%BF.webp&quot; alt=&quot;MiMo_白板.png&quot; /&gt;&lt;/p&gt;
-</content:encoded></item><item><title>Terminal 安装与美化配置指南</title><link>https://dqtx.cc/posts/software/terminal-/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/terminal-/</guid><pubDate>Sun, 15 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;运维工作中高频的命令行操作，向来因 Windows 原生命令提示符、PowerShell 的功能局限受掣肘。而 Windows Terminal 的推出完美解决这一痛点，它的多标签页设计是核心亮点：可以同时打开多个独立会话，像 Claude、OpenCode 这类工具都能在不同标签页中并行运行，无需频繁切换窗口；同时还能无缝集成 Command Prompt、PowerShell、WSL 等各类环境，大幅提升运维终端操作效率，是运维人员打造高效、美观、多功能终端环境的优质选择&lt;/p&gt;
+</content:encoded></item><item><title>Terminal 安装与美化配置指南</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Sun, 15 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;运维工作中高频的命令行操作，向来因 Windows 原生命令提示符、PowerShell 的功能局限受掣肘。而 Windows Terminal 的推出完美解决这一痛点，它的多标签页设计是核心亮点：可以同时打开多个独立会话，像 Claude、OpenCode 这类工具都能在不同标签页中并行运行，无需频繁切换窗口；同时还能无缝集成 Command Prompt、PowerShell、WSL 等各类环境，大幅提升运维终端操作效率，是运维人员打造高效、美观、多功能终端环境的优质选择&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260306070237226.webp&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;一、下载与安装&lt;/h2&gt;
 &lt;h3&gt;winget方式&lt;/h3&gt;
@@ -9276,7 +9371,7 @@ Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
 &lt;p&gt;https://www.warp.dev/&lt;/p&gt;
 &lt;h3&gt;WezTerm&lt;/h3&gt;
 &lt;p&gt;https://www.dqtx.cc/posts/software/wezterm/&lt;/p&gt;
-</content:encoded></item><item><title>Happy：给Claude一双翅膀</title><link>https://dqtx.cc/posts/aihacks/cc-happy/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/cc-happy/</guid><pubDate>Sat, 14 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;我之前用AI编程一直特别拧巴：Claude Code明明能自己干活，可我必须守在电脑前，它每走一步都要等我确认才能继续。直到我用上了 Happy，它直接把电脑上的 Claude Code 实时映射到手机，不把代码文件上传云端，数据全程端到端加密，不用经过第三方服务器，既能随时随地查看和控制，安全感也拉满，彻底摆脱了必须坐在电脑前的束缚。&lt;/p&gt;
+</content:encoded></item><item><title>Happy：给Claude一双翅膀</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Sat, 14 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;我之前用AI编程一直特别拧巴：Claude Code明明能自己干活，可我必须守在电脑前，它每走一步都要等我确认才能继续。直到我用上了 Happy，它直接把电脑上的 Claude Code 实时映射到手机，不把代码文件上传云端，数据全程端到端加密，不用经过第三方服务器，既能随时随地查看和控制，安全感也拉满，彻底摆脱了必须坐在电脑前的束缚。&lt;/p&gt;
 &lt;h2&gt;什么是Happy&lt;/h2&gt;
 &lt;p&gt;一个让你用手机远程控制和实时查看电脑上Claude或Codex编程过程的工具。它通过将电脑上的 Claude Code 或 Codex 实时映射到手机，解决了需要守在电脑前被动等待的痛点，它让用户从“必须坐在电脑前等待指令”的束缚中解放出来，可以随时随地了解 AI 的工作进展并能随时介入，实现了“无需一直盯着，但一切尽在掌握”的流畅协作体验。&lt;/p&gt;
 &lt;p&gt;项目地址&lt;/p&gt;
@@ -9323,7 +9418,7 @@ happy codex  # 启动Codex
 &lt;p&gt;&lt;strong&gt;如果觉得这篇教程对你有帮助，别忘了点赞+收藏+转发三连呀！关注我，后续分享更多实用技巧、效率工具干货，下次见～ 👋&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;大强远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260306064028188.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-</content:encoded></item><item><title>三步搞定软件汉化</title><link>https://dqtx.cc/posts/technical/%E8%BD%AF%E4%BB%B6%E6%B1%89%E5%8C%96/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E8%BD%AF%E4%BB%B6%E6%B1%89%E5%8C%96/</guid><pubDate>Thu, 12 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;还在为英文软件界面发愁吗？下载的中文版广告满天飞，还可能暗藏木马。今天教你用Resource Hacker工具，三步搞定软件汉化，安全又实用！&lt;/p&gt;
+</content:encoded></item><item><title>三步搞定软件汉化</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Thu, 12 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;还在为英文软件界面发愁吗？下载的中文版广告满天飞，还可能暗藏木马。今天教你用Resource Hacker工具，三步搞定软件汉化，安全又实用！&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/hanhua.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;第一步：准备工作&lt;/h2&gt;
 &lt;ol&gt;
@@ -9363,7 +9458,7 @@ happy codex  # 启动Codex
 &lt;li&gt;右键菜单特殊处理：重命名原文件 → 粘贴修改版 → 注销电脑重新加载资源&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;掌握了这个方法，你就能轻松汉化各种英文软件，告别广告和木马困扰，享受纯净的中文界面。记得操作前一定要备份原文件，安全第一！快去试试吧，让你的软件使用体验更上一层楼&lt;/p&gt;
-</content:encoded></item><item><title>酷9：webview 食用方法</title><link>https://dqtx.cc/posts/technical/%E9%85%B79%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E9%85%B79%E6%95%99%E7%A8%8B/</guid><pubDate>Wed, 11 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;KU9（酷 9）是基于 TVBox 开发的高自由度直播空壳软件，其 WebView 功能是突破直播源兼容性的核心 —— 通过嵌入浏览器内核直接渲染网页端直播内容，从根源解决常规 m3u/txt 源频繁失效的痛点。&lt;/p&gt;
+</content:encoded></item><item><title>酷9：webview 食用方法</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Wed, 11 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;KU9（酷 9）是基于 TVBox 开发的高自由度直播空壳软件，其 WebView 功能是突破直播源兼容性的核心 —— 通过嵌入浏览器内核直接渲染网页端直播内容，从根源解决常规 m3u/txt 源频繁失效的痛点。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/KU9.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;配置步骤&lt;/h2&gt;
 &lt;ol&gt;
@@ -9417,7 +9512,7 @@ happy codex  # 启动Codex
 &lt;li&gt;其他设置：分组类型～传统分组&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;PS,模拟器可以借助MT管理器操作，内部储存--酷9&lt;/p&gt;
-</content:encoded></item><item><title>OpenClaw完整安装指南</title><link>https://dqtx.cc/posts/aihacks/openclaw/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/openclaw/</guid><pubDate>Sun, 08 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近爆火的开源机械爪控制工具库OpenClaw，凭借轻量适配、无缝对接ROS/ROS2的优势，成为机器人抓取项目的刚需选择，但网上热议的大多是功能应用，却鲜有完整的安装配置指南——如果您正被依赖缺失、编译报错、环境不生效、launch文件启动失败等问题卡住，搜遍教程要么简略要么过时，那这篇超详细、可直接复制命令、新手也能照做的OpenClaw安装配置教程，绝对能帮您一步跑通，Ubuntu 20.04/22.04通用，全程无跳步直接抄作业。&lt;/p&gt;
+</content:encoded></item><item><title>OpenClaw完整安装指南</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Sun, 08 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近爆火的开源机械爪控制工具库OpenClaw，凭借轻量适配、无缝对接ROS/ROS2的优势，成为机器人抓取项目的刚需选择，但网上热议的大多是功能应用，却鲜有完整的安装配置指南——如果您正被依赖缺失、编译报错、环境不生效、launch文件启动失败等问题卡住，搜遍教程要么简略要么过时，那这篇超详细、可直接复制命令、新手也能照做的OpenClaw安装配置教程，绝对能帮您一步跑通，Ubuntu 20.04/22.04通用，全程无跳步直接抄作业。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260208013915419.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;官网网站&lt;/strong&gt;：
 https://openclaw.ai/&lt;/p&gt;
@@ -9489,7 +9584,7 @@ source ~/catkin_ws/devel/setup.bash
 &lt;h2&gt;参考资料&lt;/h2&gt;
 &lt;p&gt;openclaw接入飞书教程&lt;/p&gt;
 &lt;p&gt;https://x.com/0xValkyrie_ai/status/2020330035652227360&lt;/p&gt;
-</content:encoded></item><item><title>workany：桌面Agent产品</title><link>https://dqtx.cc/posts/aihacks/workany/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/workany/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;WorkAny&lt;/strong&gt; 是一款基于 Claude 3.5 Sonnet 模型构建的智能工作助手平台。它不仅能与你自然对话，更拥有强大的文件处理、代码编写、文档创建等实用能力。简单来说，它就像给 AI 装上了&quot;双手&quot;——不仅能思考，还能真正帮你&lt;strong&gt;动手完成工作&lt;/strong&gt;。&lt;/p&gt;
+</content:encoded></item><item><title>workany：桌面Agent产品</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;WorkAny&lt;/strong&gt; 是一款基于 Claude 3.5 Sonnet 模型构建的智能工作助手平台。它不仅能与你自然对话，更拥有强大的文件处理、代码编写、文档创建等实用能力。简单来说，它就像给 AI 装上了&quot;双手&quot;——不仅能思考，还能真正帮你&lt;strong&gt;动手完成工作&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/workany_coding_1280x720.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;✨ 核心功能一览&lt;/h2&gt;
 &lt;h3&gt;💻 代码开发&lt;/h3&gt;
@@ -9667,7 +9762,7 @@ source ~/catkin_ws/devel/setup.bash
 &lt;p&gt;下载地址：https://workany.ai/zh&lt;/p&gt;
 &lt;p&gt;如果觉得这篇教程对你有帮助，别忘了&lt;strong&gt;点赞+收藏+转发&lt;/strong&gt;三连呀！关注我，后续分享更多实用技巧、效率工具干货，下次见～ 👋&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;大强远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-</content:encoded></item><item><title>闪电说：端侧AI语音输入法</title><link>https://dqtx.cc/posts/software/%E9%97%AA%E7%94%B5%E8%AF%B4/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E9%97%AA%E7%94%B5%E8%AF%B4/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;闪电说是由武汉团队打造的&lt;strong&gt;国产 AI 语音输入法&lt;/strong&gt;，前身为代体输入法，以 “端侧本地处理” 为核心特色，实现毫秒级语音转文字体验。它打破传统云端语音输入的延迟与隐私痛点，通过本地 AI 引擎构建 “即说即显、思维同步” 的输入模式，兼容 Windows 和 macOS 全平台，是一款完全免费的系统级输入工具，被观猹平台评为 8.6 分高分产品。&lt;/p&gt;
+</content:encoded></item><item><title>闪电说：端侧AI语音输入法</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;闪电说是由武汉团队打造的&lt;strong&gt;国产 AI 语音输入法&lt;/strong&gt;，前身为代体输入法，以 “端侧本地处理” 为核心特色，实现毫秒级语音转文字体验。它打破传统云端语音输入的延迟与隐私痛点，通过本地 AI 引擎构建 “即说即显、思维同步” 的输入模式，兼容 Windows 和 macOS 全平台，是一款完全免费的系统级输入工具，被观猹平台评为 8.6 分高分产品。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260204111254949.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;上手指南&lt;/h2&gt;
 &lt;ol&gt;
@@ -9682,7 +9777,7 @@ source ~/catkin_ws/devel/setup.bash
 &lt;li&gt;秘塔回响&lt;/li&gt;
 &lt;li&gt;OpenLess&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>干货教程：我的博客发布工作流</title><link>https://dqtx.cc/posts/workflow/%E5%8D%9A%E5%AE%A2%E5%B7%A5%E4%BD%9C%E6%B5%81/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/%E5%8D%9A%E5%AE%A2%E5%B7%A5%E4%BD%9C%E6%B5%81/</guid><description>分享我的无服务器博客发布流程：使用 GitHub 托管 + EdgeOne 自动部署，配合 Typora 和脚本实现高效的文章发布工作流。</description><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天想跟大家分享一下我的博客发布工作流。我的博客没有服务器，只有一个域名通过 GitHub 进行托管，配合 EdgeOne 实现自动构建部署。整个过程非常高效，下面就来详细介绍！&lt;/p&gt;
+</content:encoded></item><item><title>干货教程：我的博客发布工作流</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><description>分享我的无服务器博客发布流程：使用 GitHub 托管 + EdgeOne 自动部署，配合 Typora 和脚本实现高效的文章发布工作流。</description><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天想跟大家分享一下我的博客发布工作流。我的博客没有服务器，只有一个域名通过 GitHub 进行托管，配合 EdgeOne 实现自动构建部署。整个过程非常高效，下面就来详细介绍！&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260208222439485.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;创建文章&lt;/h2&gt;
 &lt;h3&gt;1. 新建 Markdown 文件&lt;/h3&gt;
@@ -9894,7 +9989,7 @@ category: Technical
 &lt;hr /&gt;
 &lt;p&gt;以上就是我的博客发布工作流了。虽然博客没有服务器，但通过 GitHub + EdgeOne 的组合，配合一些小脚本，依然可以实现高效的自动化发布。&lt;/p&gt;
 &lt;p&gt;欢迎大家交流讨论，有问题评论区留言！&lt;/p&gt;
-</content:encoded></item><item><title>轻松打造家庭影视库，实现4K观影自由</title><link>https://dqtx.cc/posts/technical/vidhub%E6%8C%82%E8%BD%BD115%E7%BD%91%E7%9B%98/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/vidhub%E6%8C%82%E8%BD%BD115%E7%BD%91%E7%9B%98/</guid><description>如果你想拥有个人家庭影视库，追求 4K 观影体验，但觉得爱优腾会员贵、NAS 设备成本又高，那今天这期视频，我去将手把手教你花小钱，轻松打造自己的家庭影视库，拥...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;p&gt;如果你想拥有个人家庭影视库，追求 4K 观影体验，但觉得爱优腾会员贵、NAS 设备成本又高，那今天这期视频，我去将手把手教你花小钱，轻松打造自己的家庭影视库，拥有海量资源，实现 4K 观影自由！&lt;/p&gt;
+</content:encoded></item><item><title>轻松打造家庭影视库，实现4K观影自由</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><description>如果你想拥有个人家庭影视库，追求 4K 观影体验，但觉得爱优腾会员贵、NAS 设备成本又高，那今天这期视频，我去将手把手教你花小钱，轻松打造自己的家庭影视库，拥...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;p&gt;如果你想拥有个人家庭影视库，追求 4K 观影体验，但觉得爱优腾会员贵、NAS 设备成本又高，那今天这期视频，我去将手把手教你花小钱，轻松打造自己的家庭影视库，拥有海量资源，实现 4K 观影自由！&lt;/p&gt;
 &lt;h2&gt;115 网盘（存影视资源）&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -9910,7 +10005,7 @@ category: Technical
 &lt;h2&gt;网易爆米花（手机端/TV端）&lt;/h2&gt;
 &lt;p&gt;网易爆米花官网：&lt;a href=&quot;https://bmh.163.com/&quot;&gt;点此直达&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;添加WebDAV，自动刮削&lt;/p&gt;
-</content:encoded></item><item><title>Passkeys通行密钥</title><link>https://dqtx.cc/posts/technical/passkeys%E9%80%9A%E8%A1%8C%E5%AF%86%E9%92%A5/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/passkeys%E9%80%9A%E8%A1%8C%E5%AF%86%E9%92%A5/</guid><description>你是否厌倦了记密码？设个简单的不安全，设个复杂的记不住？每次登录还要翻找密码本、或者点那该死的&apos;忘记密码&apos;？这几天测试了一圈Passkeys（通行密钥），我只能...</description><pubDate>Thu, 15 Jan 2026 11:20:00 GMT</pubDate><content:encoded>&lt;p&gt;你是否厌倦了记密码？设个简单的不安全，设个复杂的记不住？每次登录还要翻找密码本、或者点那该死的&quot;忘记密码&quot;？这几天测试了一圈&lt;strong&gt;Passkeys（通行密钥）&lt;/strong&gt;，我只能说：**真TM牛逼！**以后再也不用记密码了，指纹一按、Face ID 一扫，直接登录，速度那叫一个快！今天就给大家分享这个让密码彻底淘汰的神仙技术。&lt;/p&gt;
+</content:encoded></item><item><title>Passkeys通行密钥</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><description>你是否厌倦了记密码？设个简单的不安全，设个复杂的记不住？每次登录还要翻找密码本、或者点那该死的&apos;忘记密码&apos;？这几天测试了一圈Passkeys（通行密钥），我只能...</description><pubDate>Thu, 15 Jan 2026 11:20:00 GMT</pubDate><content:encoded>&lt;p&gt;你是否厌倦了记密码？设个简单的不安全，设个复杂的记不住？每次登录还要翻找密码本、或者点那该死的&quot;忘记密码&quot;？这几天测试了一圈&lt;strong&gt;Passkeys（通行密钥）&lt;/strong&gt;，我只能说：**真TM牛逼！**以后再也不用记密码了，指纹一按、Face ID 一扫，直接登录，速度那叫一个快！今天就给大家分享这个让密码彻底淘汰的神仙技术。&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h2&gt;一、什么是 Passkeys？&lt;/h2&gt;
 &lt;p&gt;简单说，&lt;strong&gt;Passkeys 就是用你的生物特征（指纹、面部识别）代替密码&lt;/strong&gt;。&lt;/p&gt;
@@ -10072,7 +10167,7 @@ https://www.passkeys.com/websites-with-passkey-support-sites-directory&lt;/p&gt;
 &lt;li&gt;建议配合密码管理器使用，覆盖不支持的场景&lt;/li&gt;
 &lt;li&gt;多设备备份很重要，别只依赖单一设备&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>OBS摄像头一键移动插件</title><link>https://dqtx.cc/posts/workflow/obs%E6%8F%92%E4%BB%B6%E6%91%84%E5%83%8F%E5%A4%B4%E7%A7%BB%E5%8A%A8/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/obs%E6%8F%92%E4%BB%B6%E6%91%84%E5%83%8F%E5%A4%B4%E7%A7%BB%E5%8A%A8/</guid><description>想让 OBS 摄像头实现「一键移动+一键复位」的平滑效果？不管是直播过场切换、录课构图调整，还是避免画面遮挡，motion-effect 插件都能轻松搞定！无需复杂操作，3 步就能实现精准位移，让你的...</description><pubDate>Thu, 15 Jan 2026 11:20:00 GMT</pubDate><content:encoded>&lt;p&gt;想让 OBS 摄像头实现「一键移动+一键复位」的平滑效果？不管是直播过场切换、录课构图调整，还是避免画面遮挡，motion-effect 插件都能轻松搞定！无需复杂操作，3 步就能实现精准位移，让你的画面切换更专业～&lt;/p&gt;
+</content:encoded></item><item><title>OBS摄像头一键移动插件</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><description>想让 OBS 摄像头实现「一键移动+一键复位」的平滑效果？不管是直播过场切换、录课构图调整，还是避免画面遮挡，motion-effect 插件都能轻松搞定！无需复杂操作，3 步就能实现精准位移，让你的...</description><pubDate>Thu, 15 Jan 2026 11:20:00 GMT</pubDate><content:encoded>&lt;p&gt;想让 OBS 摄像头实现「一键移动+一键复位」的平滑效果？不管是直播过场切换、录课构图调整，还是避免画面遮挡，motion-effect 插件都能轻松搞定！无需复杂操作，3 步就能实现精准位移，让你的画面切换更专业～&lt;/p&gt;
 &lt;h2&gt;一、插件简介&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;开发者：CatxFish（免费开源）&lt;/li&gt;
@@ -10132,7 +10227,7 @@ https://www.passkeys.com/websites-with-passkey-support-sites-directory&lt;/p&gt;
 &lt;a href=&quot;https://github.com/TGX-Android/Telegram-X/releases&quot;&gt;telegramx&lt;/a&gt; &lt;a href=&quot;https://github.com/forkgram/TelegramAndroid/releases&quot;&gt;第三方客户端&lt;/a&gt; &lt;a href=&quot;https://www.apkmirror.com/uploads/?devcategory=telegram-fz-llc&quot;&gt;飞机旧版&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;3、卡bug，可以邮箱验证优先邮箱验证。遇到付费解密强制重启app，多试几次有概率可以跳过。&lt;/p&gt;
 &lt;/blockquote&gt;
-</content:encoded></item><item><title>API封装成Skill最佳实践</title><link>https://dqtx.cc/posts/workflow/api%E5%B0%81%E7%94%9F%E5%9B%BEskill/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/api%E5%B0%81%E7%94%9F%E5%9B%BEskill/</guid><description>最近被阿里巴巴通义MAI的Z-Image狠狠圈粉，不仅搭载了高效的 Z-Image-Turbo 模型，更关键的是每天能免费生 2000 张图，不管是生成文章视频...</description><pubDate>Sun, 30 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近被阿里巴巴通义MAI的Z-Image狠狠圈粉，不仅搭载了高效的 &lt;strong&gt;Z-Image-Turbo&lt;/strong&gt; 模型，更关键的是&lt;strong&gt;每天能免费生 2000 张图&lt;/strong&gt;，不管是生成文章视频封面还是异常创作，这个配额都完全够用。&lt;/p&gt;
+</content:encoded></item><item><title>API封装成Skill最佳实践</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><description>最近被阿里巴巴通义MAI的Z-Image狠狠圈粉，不仅搭载了高效的 Z-Image-Turbo 模型，更关键的是每天能免费生 2000 张图，不管是生成文章视频...</description><pubDate>Sun, 30 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近被阿里巴巴通义MAI的Z-Image狠狠圈粉，不仅搭载了高效的 &lt;strong&gt;Z-Image-Turbo&lt;/strong&gt; 模型，更关键的是&lt;strong&gt;每天能免费生 2000 张图&lt;/strong&gt;，不管是生成文章视频封面还是异常创作，这个配额都完全够用。&lt;/p&gt;
 &lt;p&gt;恰巧这段时间我正在研究 Claude 的 Skills 功能，于是就萌生了一个想法：&lt;strong&gt;把 Z-Image 的免费生图能力和 Claude Skills 结合起来&lt;/strong&gt;，做一个专属生图 Skill，通过自然语言就可以生图到本地文件夹，既省时间又能充分利用免费配额。带着这个实操需求，我把整个创建过程整理成了这篇文章，希望能给同样喜欢折腾工具、需要生图功能的朋友提供一点参考～&lt;/p&gt;
 &lt;h2&gt;一.创建方法&lt;/h2&gt;
 &lt;p&gt;登录（可用GitHub）魔搭社区，打开下方地址，点击“查看代码范例”进去复制API代码&lt;/p&gt;
@@ -10210,7 +10305,7 @@ https://www.passkeys.com/websites-with-passkey-support-sites-directory&lt;/p&gt;
 &lt;/table&gt;
 &lt;h2&gt;三.写在最后&lt;/h2&gt;
 &lt;p&gt;通过上面的例子可以看出，其实不仅是 API，任何你过往用过的优质提示词，都可以让 Claude 帮你封装成一个个 Skills，Skills 的调用方式更简单，也更有优势：你不用每次都跟 AI 详细说明要怎么做，只要用自然语言表达需求，Claude 就会自动判断并调用合适的 Skills，而且多个 Skills 还可以协同工作，组合出更复杂、更完整的工作流。&lt;/p&gt;
-</content:encoded></item><item><title>未来博客发展计划</title><link>https://dqtx.cc/posts/technical/%E5%8D%9A%E5%AE%A2%E6%9C%AA%E6%9D%A5%E8%AE%A1%E5%88%92/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E5%8D%9A%E5%AE%A2%E6%9C%AA%E6%9D%A5%E8%AE%A1%E5%88%92/</guid><pubDate>Sat, 29 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+</content:encoded></item><item><title>未来博客发展计划</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Sat, 29 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;📝 记录博客未来的功能规划和技术升级方向，持续更新中...&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260423010418260.webp&quot; alt=&quot;我的博客未来计划&quot; /&gt;&lt;/p&gt;
@@ -10465,7 +10560,7 @@ https://www.passkeys.com/websites-with-passkey-support-sites-directory&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;2025.11.29：初版，记录开发计划&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>封面与画廊规则详解</title><link>https://dqtx.cc/posts/technical/%E5%8D%9A%E5%AE%A2%E5%B0%81%E9%9D%A2%E4%B8%8E%E7%94%BB%E5%BB%8A/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E5%8D%9A%E5%AE%A2%E5%B0%81%E9%9D%A2%E4%B8%8E%E7%94%BB%E5%BB%8A/</guid><pubDate>Fri, 28 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;一、背景&lt;/h2&gt;
+</content:encoded></item><item><title>封面与画廊规则详解</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Fri, 28 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;一、背景&lt;/h2&gt;
 &lt;p&gt;博客最初设计时，文章详情页会自动提取文章第一张图片作为封面。但这种隐式逻辑存在以下问题：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;无法手动指定喜欢的图片作为封面&lt;/li&gt;
@@ -10680,7 +10775,7 @@ function extractFirstImageIgnoreFrontmatter(content) {
 &lt;li&gt;访问 &lt;code&gt;/gallery/&lt;/code&gt; 查看是否显示&lt;/li&gt;
 &lt;li&gt;构建测试：&lt;code&gt;pnpm build&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
-</content:encoded></item><item><title>OpenList挂载阿里云盘</title><link>https://dqtx.cc/posts/technical/openlist-%E9%98%BF%E9%87%8C/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/openlist-%E9%98%BF%E9%87%8C/</guid><pubDate>Wed, 22 Oct 2025 14:20:00 GMT</pubDate><content:encoded>&lt;p&gt;很多人使用 OpenList 搭建网盘聚合时，希望接入阿里云盘，实现文件集中管理与在线播放。本文将手把手教你如何在 OpenList 中添加阿里云盘存储，从获取 Token 到配置参数，简单几步即可完成接入。&lt;/p&gt;
+</content:encoded></item><item><title>OpenList挂载阿里云盘</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Wed, 22 Oct 2025 14:20:00 GMT</pubDate><content:encoded>&lt;p&gt;很多人使用 OpenList 搭建网盘聚合时，希望接入阿里云盘，实现文件集中管理与在线播放。本文将手把手教你如何在 OpenList 中添加阿里云盘存储，从获取 Token 到配置参数，简单几步即可完成接入。&lt;/p&gt;
 &lt;h2&gt;教程步骤&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;访问&lt;/strong&gt;&lt;/li&gt;
@@ -10723,7 +10818,7 @@ function extractFirstImageIgnoreFrontmatter(content) {
 &lt;/ol&gt;
 &lt;p&gt;填写完成后，滑到页面底部点击 &lt;strong&gt;保存&lt;/strong&gt; 即可。&lt;/p&gt;
 &lt;p&gt;✅至此，阿里云盘已成功接入 OpenList，可在前台正常浏览、预览与播放文件。&lt;/p&gt;
-</content:encoded></item><item><title>OpenList挂载豆包云盘</title><link>https://dqtx.cc/posts/technical/openlist-%E8%B1%86%E5%8C%85/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/openlist-%E8%B1%86%E5%8C%85/</guid><pubDate>Thu, 18 Sep 2025 10:30:00 GMT</pubDate><content:encoded>&lt;p&gt;本篇文章将教你如何把&lt;strong&gt;豆包网盘&lt;/strong&gt;接入 OpenList，通过 WebDAV 方式实现挂载与访问。只需按照以下步骤操作，即可实现豆包网盘文件管理、本地读取与在线播放。&lt;/p&gt;
+</content:encoded></item><item><title>OpenList挂载豆包云盘</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Thu, 18 Sep 2025 10:30:00 GMT</pubDate><content:encoded>&lt;p&gt;本篇文章将教你如何把&lt;strong&gt;豆包网盘&lt;/strong&gt;接入 OpenList，通过 WebDAV 方式实现挂载与访问。只需按照以下步骤操作，即可实现豆包网盘文件管理、本地读取与在线播放。&lt;/p&gt;
 &lt;h2&gt;一、挂载方式&lt;/h2&gt;
 &lt;p&gt;在 OpenList 的存储策略里：&lt;/p&gt;
 &lt;p&gt;选择 &lt;strong&gt;WebDAV&lt;/strong&gt;策略使用 &lt;strong&gt;本地代理&lt;/strong&gt;&lt;/p&gt;
@@ -10754,7 +10849,7 @@ function extractFirstImageIgnoreFrontmatter(content) {
 &lt;p&gt;以上，一个稳定、可管理、可在线播放的豆包网盘就成功接入了 OpenList。&lt;/p&gt;
 &lt;p&gt;如果觉得这篇教程对你有帮助，别忘了&lt;strong&gt;点赞+收藏+转发&lt;/strong&gt;三连呀！关注我，后续分享更多实用技巧、效率工具干货，下次见～ 👋&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;大强远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-</content:encoded></item><item><title>魔搭社区免费token活动</title><link>https://dqtx.cc/posts/aihacks/%E9%AD%94%E6%90%AD%E7%A4%BE%E5%8C%BA%E5%85%8D%E8%B4%B9token%E6%B4%BB%E5%8A%A8/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E9%AD%94%E6%90%AD%E7%A4%BE%E5%8C%BA%E5%85%8D%E8%B4%B9token%E6%B4%BB%E5%8A%A8/</guid><pubDate>Mon, 18 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;近日,国内领先的 AI 模型开源社区——&lt;strong&gt;魔搭社区（ModelScope）&lt;/strong&gt; 传来重磅消息：其免费 API 接口已正式支持 Anthropic API 协议！免费享用每天 &lt;strong&gt;2000 次调用额度&lt;/strong&gt;（单模型 500 次），基本够日常使用了。&lt;/p&gt;
+</content:encoded></item><item><title>魔搭社区免费token活动</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Mon, 18 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;近日,国内领先的 AI 模型开源社区——&lt;strong&gt;魔搭社区（ModelScope）&lt;/strong&gt; 传来重磅消息：其免费 API 接口已正式支持 Anthropic API 协议！免费享用每天 &lt;strong&gt;2000 次调用额度&lt;/strong&gt;（单模型 500 次），基本够日常使用了。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260506001907821.png&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;操作步骤&lt;/h3&gt;
 &lt;p&gt;下面说下详细操作步骤：&lt;/p&gt;
@@ -10815,14 +10910,14 @@ function extractFirstImageIgnoreFrontmatter(content) {
 &lt;li&gt;&lt;a href=&quot;https://modelscope.csdn.net/68e774a18867235e138f1912.html&quot;&gt;魔搭社区免费提供2000次Claude Code调用&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/x9zLFZEu96Dx3XDVrCp_Xg&quot;&gt;魔搭社区免费API封装生图skill&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>基于yt-dlp构建油管下载工具</title><link>https://dqtx.cc/posts/software/%E6%B2%B9%E7%AE%A1%E4%B8%8B%E8%BD%BD%E5%B7%A5%E5%85%B7/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E6%B2%B9%E7%AE%A1%E4%B8%8B%E8%BD%BD%E5%B7%A5%E5%85%B7/</guid><description>https://vidbee.org/ https://github.com/oop7/YTSage https://github.com/aandrew-me...</description><pubDate>Thu, 12 Jun 2025 15:40:00 GMT</pubDate><content:encoded>&lt;p&gt;https://vidbee.org/&lt;/p&gt;
+</content:encoded></item><item><title>基于yt-dlp构建油管下载工具</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><description>https://vidbee.org/ https://github.com/oop7/YTSage https://github.com/aandrew-me...</description><pubDate>Thu, 12 Jun 2025 15:40:00 GMT</pubDate><content:encoded>&lt;p&gt;https://vidbee.org/&lt;/p&gt;
 &lt;p&gt;https://github.com/oop7/YTSage&lt;/p&gt;
 &lt;p&gt;https://github.com/aandrew-me/ytDownloader&lt;/p&gt;
 &lt;p&gt;https://423down.lanzouo.com/b03fkcmb9e&lt;/p&gt;
 &lt;p&gt;一个用 Rust 写的 CLI/TUI 下载工具，支持千+平台视频下载、BT 种子和 P2P 传输。
 https://github.com/julesklord/mangofetch
 &lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260514005811067.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-</content:encoded></item><item><title>软件打包自解压方法</title><link>https://dqtx.cc/posts/software/7z%E5%8E%8B%E7%BC%A9%E5%8C%85%E8%87%AA%E8%A7%A3%E5%8E%8B%E5%88%B6%E4%BD%9C%E5%B7%A5%E5%85%B7/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/7z%E5%8E%8B%E7%BC%A9%E5%8C%85%E8%87%AA%E8%A7%A3%E5%8E%8B%E5%88%B6%E4%BD%9C%E5%B7%A5%E5%85%B7/</guid><description>你是不是也遇到过这种困扰？把文件打包成 7Z 压缩包发给别人，对方却不会解压，要么找不到合适的解压软件，要么对着压缩包手足无措；自己想给压缩包加个专属设置，普通...</description><pubDate>Tue, 20 May 2025 10:15:00 GMT</pubDate><content:encoded>&lt;p&gt;你是不是也遇到过这种困扰？把文件打包成 7Z 压缩包发给别人，对方却不会解压，要么找不到合适的解压软件，要么对着压缩包手足无措；自己想给压缩包加个专属设置，普通打包工具又满足不了需求。今天给大家安利一款超实用的 7Z 压缩包自解压制作工具，下面是使用教程！&lt;/p&gt;
+</content:encoded></item><item><title>软件打包自解压方法</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><description>你是不是也遇到过这种困扰？把文件打包成 7Z 压缩包发给别人，对方却不会解压，要么找不到合适的解压软件，要么对着压缩包手足无措；自己想给压缩包加个专属设置，普通...</description><pubDate>Tue, 20 May 2025 10:15:00 GMT</pubDate><content:encoded>&lt;p&gt;你是不是也遇到过这种困扰？把文件打包成 7Z 压缩包发给别人，对方却不会解压，要么找不到合适的解压软件，要么对着压缩包手足无措；自己想给压缩包加个专属设置，普通打包工具又满足不了需求。今天给大家安利一款超实用的 7Z 压缩包自解压制作工具，下面是使用教程！&lt;/p&gt;
 &lt;h2&gt;基本设置&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;这里我会首先导入配置，如果你是第一次用这个软件，跟着操作完，然后保存配置，后续直接导入配置即可，非常方便。&lt;/p&gt;
@@ -10853,7 +10948,7 @@ https://github.com/julesklord/mangofetch
 &lt;p&gt;首次设置完后，点击一键制作即可&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260109235318496.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;软件下载&lt;/h2&gt;
-</content:encoded></item><item><title>配置打包自解压方法</title><link>https://dqtx.cc/posts/software/00makesfx%E8%87%AA%E8%A7%A3%E5%8E%8B%E4%B8%BB%E9%A2%98/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/00makesfx%E8%87%AA%E8%A7%A3%E5%8E%8B%E4%B8%BB%E9%A2%98/</guid><description>实际路径与环境变量路径 | 环境变量路径（代号） | 实际路径（你的电脑） | 核心用途（小白易懂） | | ----------------------- |...</description><pubDate>Sun, 18 May 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;打包工具：Make SFX 5.6&lt;/h2&gt;
+</content:encoded></item><item><title>配置打包自解压方法</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><description>实际路径与环境变量路径 | 环境变量路径（代号） | 实际路径（你的电脑） | 核心用途（小白易懂） | | ----------------------- |...</description><pubDate>Sun, 18 May 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;打包工具：Make SFX 5.6&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260109211141738.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;实际路径与环境变量路径&lt;/h2&gt;
 &lt;table&gt;
@@ -10998,7 +11093,7 @@ https://github.com/julesklord/mangofetch
 备选方案：  
 - %windir%\Resources\
 &lt;/code&gt;&lt;/pre&gt;
-</content:encoded></item><item><title>10个MCP清单</title><link>https://dqtx.cc/posts/aihacks/mcp%E6%B8%85%E5%8D%95/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/mcp%E6%B8%85%E5%8D%95/</guid><pubDate>Thu, 24 Apr 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;随着 MCP（Model Context Protocol）生态快速普及，AI 工具不再局限于纯文本对话。&lt;/p&gt;
+</content:encoded></item><item><title>10个MCP清单</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Thu, 24 Apr 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;随着 MCP（Model Context Protocol）生态快速普及，AI 工具不再局限于纯文本对话。&lt;/p&gt;
 &lt;p&gt;通过挂载各类 MCP 服务，可让 Claude、Cursor、TRAE 等工具打通本地文件、代码仓库、浏览器、实时搜索、数据库、设计稿等全链路能力，彻底告别手动复制粘贴、信息滞后、答案幻觉等痛点。&lt;/p&gt;
 &lt;p&gt;下面整理社区装机率最高、实用性拉满的10个必装MCP，兼顾日常开发、内容创作、数据处理、自动化办公等多元需求，附核心作用、安装价值与完整可直接复制的配置代码，一键落地部署。&lt;/p&gt;
 &lt;h2&gt;一、十大核心MCP详细介绍&lt;/h2&gt;
@@ -11140,7 +11235,7 @@ https://ai.codefather.cn/mcp&lt;/p&gt;
     }
   }
 }&lt;/code&gt;&lt;/pre&gt;
-</content:encoded></item><item><title>Typora图床完整配置教程</title><link>https://dqtx.cc/posts/workflow/piclist%E5%9B%BE%E5%BA%8A/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/piclist%E5%9B%BE%E5%BA%8A/</guid><description>如果你经常写 Markdown 文档，那么 Typora 是一款非常好用的编辑器。而在图片管理方面，推荐搭配免费的图床工具 PicList，它支持一键上传图片到...</description><pubDate>Mon, 10 Mar 2025 16:20:00 GMT</pubDate><content:encoded>&lt;h2&gt;Typora + PicList + Gitee 图床完整配置教程&lt;/h2&gt;
+</content:encoded></item><item><title>Typora图床完整配置教程</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><description>如果你经常写 Markdown 文档，那么 Typora 是一款非常好用的编辑器。而在图片管理方面，推荐搭配免费的图床工具 PicList，它支持一键上传图片到...</description><pubDate>Mon, 10 Mar 2025 16:20:00 GMT</pubDate><content:encoded>&lt;h2&gt;Typora + PicList + Gitee 图床完整配置教程&lt;/h2&gt;
 &lt;p&gt;如果你经常写 Markdown 文档，那么 &lt;strong&gt;Typora&lt;/strong&gt; 是一款非常好用的编辑器。而在图片管理方面，推荐搭配免费的图床工具 &lt;strong&gt;PicList&lt;/strong&gt;，它支持一键上传图片到各类图床。我自己的方案是：&lt;strong&gt;Typora + PicList + Gitee&lt;/strong&gt;，写作体验非常流畅。&lt;/p&gt;
 &lt;h2&gt;Typora设置&lt;/h2&gt;
 &lt;p&gt;打开 &lt;strong&gt;Typora&lt;/strong&gt;，依次进入 &lt;code&gt;文件 → 偏好设置 → 图像&lt;/code&gt;，在上传服务中选择 &lt;strong&gt;PicList&lt;/strong&gt;。
@@ -11209,7 +11304,7 @@ https://ai.codefather.cn/mcp&lt;/p&gt;
 &lt;p&gt;视频教程：https://www.youtube.com/watch?v=vD6ns5UEETs&lt;/p&gt;
 &lt;h2&gt;拓展：搭建一个在线图床&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://88.dqtx.cc/main.html#/article/%E9%9B%B6%E6%88%90%E6%9C%AC%E6%90%AD%E5%BB%BA%E5%9C%A8%E7%BA%BF%E5%9B%BE%E5%BA%8A&quot;&gt;零成本！100G 免费图床搭建，小白 10 分钟搞定&lt;/a&gt;&lt;/p&gt;
-</content:encoded></item><item><title>Antigravity安装使用教程</title><link>https://dqtx.cc/posts/aihacks/antigravity/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/antigravity/</guid><pubDate>Sat, 15 Feb 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Google Antigravity 是 DeepMind 推出的 AI 编程 IDE（2025-11-18 与 Gemini 3 同步发布），基于 VS Code 内核，核心是 “智能代理（Agentic）” 开发范式，能让 AI 自主规划、执行、验证编程任务，支持多智能体并行协作，适配复杂全栈开发场景&lt;/p&gt;
+</content:encoded></item><item><title>Antigravity安装使用教程</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Sat, 15 Feb 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Google Antigravity 是 DeepMind 推出的 AI 编程 IDE（2025-11-18 与 Gemini 3 同步发布），基于 VS Code 内核，核心是 “智能代理（Agentic）” 开发范式，能让 AI 自主规划、执行、验证编程任务，支持多智能体并行协作，适配复杂全栈开发场景&lt;/p&gt;
 &lt;h2&gt;软件下载安装&lt;/h2&gt;
 &lt;p&gt;官方地址https://antigravity.google/&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260124223748577.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -11263,7 +11358,7 @@ https://ai.codefather.cn/mcp&lt;/p&gt;
 &lt;p&gt;手把手彻底学会 Antigravity！从想法到上线，手搓好莱坞片场生图App【小白教程】
 https://www.bilibili.com/video/BV15VFTzoEgm/?spm_id_from=333.1387.upload.video_card.click&amp;amp;vd_source=206031f494850e57fd6c92ace02b1bed
 https://my.feishu.cn/wiki/W9TgwBLs4ikbgckzsOccfcZmnTc&lt;/p&gt;
-</content:encoded></item><item><title>AntigravityTool使用教程</title><link>https://dqtx.cc/posts/aihacks/antigravitytool/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/antigravitytool/</guid><pubDate>Thu, 13 Feb 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Antigravity Tool 是一款智能代理项目，用于将Antigravity内的模型转换为不同协议标准 API，支持OpenAI 协议，Anthropic协议，Gemini 协议，本文主要演示供Claude使用。&lt;/p&gt;
+</content:encoded></item><item><title>AntigravityTool使用教程</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Thu, 13 Feb 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Antigravity Tool 是一款智能代理项目，用于将Antigravity内的模型转换为不同协议标准 API，支持OpenAI 协议，Anthropic协议，Gemini 协议，本文主要演示供Claude使用。&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -11329,7 +11424,7 @@ Claude
 &lt;h2&gt;写在最后&lt;/h2&gt;
 &lt;p&gt;Antigravity Tools可以添加多个 Google 账号，每个账号都有一定的 Antigravity 模型额度，如果额度不够可点击切换账号，智能切换到额度足够的账号。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;大强远程技术支持：742112.xyz&lt;/strong&gt;&lt;/p&gt;
-</content:encoded></item><item><title>GitHub + EdgeOne 搭建个人博客的过程</title><link>https://dqtx.cc/posts/workflow/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</guid><pubDate>Sat, 08 Feb 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+</content:encoded></item><item><title>GitHub + EdgeOne 搭建个人博客的过程</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Sat, 08 Feb 2025 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;想要一个属于自己的博客，但不知道从哪里开始？本文详细记录了从零开始搭建个人博客的全过程，包括踩过的各种坑和解决方案。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2&gt;为什么选择 Fuwari 主题？&lt;/h2&gt;
@@ -11971,7 +12066,7 @@ node scripts/update-categories.cjs
 &lt;li&gt;集成统计工具（如 Umami）&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;祝你搭建顺利！有任何问题欢迎在评论区留言。&lt;/p&gt;
-</content:encoded></item><item><title>PixPin截图配置指南</title><link>https://dqtx.cc/posts/software/pixpin/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/pixpin/</guid><description>使用PixPin有段时间了，集截图、长截图、贴图、标注、OCR 识别、屏幕录制等功能都有，但是我发现这个软件的快捷键/动作才是王炸，比如我自己配置的 ，截图并复...</description><pubDate>Wed, 15 Jan 2025 14:30:00 GMT</pubDate><content:encoded>&lt;p&gt;使用PixPin有段时间了，集截图、长截图、贴图、标注、OCR 识别、屏幕录制等功能都有，但是我发现这个软件的快捷键/动作才是王炸，比如我自己配置的 ，截图并复制OCR，截图并翻译，下面看下教程！&lt;/p&gt;
+</content:encoded></item><item><title>PixPin截图配置指南</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><description>使用PixPin有段时间了，集截图、长截图、贴图、标注、OCR 识别、屏幕录制等功能都有，但是我发现这个软件的快捷键/动作才是王炸，比如我自己配置的 ，截图并复...</description><pubDate>Wed, 15 Jan 2025 14:30:00 GMT</pubDate><content:encoded>&lt;p&gt;使用PixPin有段时间了，集截图、长截图、贴图、标注、OCR 识别、屏幕录制等功能都有，但是我发现这个软件的快捷键/动作才是王炸，比如我自己配置的 ，截图并复制OCR，截图并翻译，下面看下教程！&lt;/p&gt;
 &lt;h2&gt;一.软件下载&lt;/h2&gt;
 &lt;p&gt;官网：https://pixpin.cn/&lt;/p&gt;
 &lt;p&gt;数码荔枝折专属折扣：&lt;a href=&quot;https://lizhi.shop/products/pixpin?cid=wbm93g4b&quot;&gt;点此购买&lt;/a&gt;&lt;/p&gt;
@@ -12000,7 +12095,7 @@ node scripts/update-categories.cjs
 &lt;p&gt;夸克网盘链接：https://pan.quark.cn/s/a85dc83604bc&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;如果觉得这篇教程对你有帮助，别忘了&lt;strong&gt;点赞+收藏+转发&lt;/strong&gt;三连呀！关注我，后续分享更多OBS 实用技巧、效率工具干货，下次见～ 👋&lt;/p&gt;
-</content:encoded></item><item><title>AutoHotkey打包exe完全指南！</title><link>https://dqtx.cc/posts/software/01autohotkey%E6%89%93%E5%8C%85exe/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/01autohotkey%E6%89%93%E5%8C%85exe/</guid><description>AutoHotkey（AHK）是一种强大的自动化脚本语言，能够帮助用户简化日常计算机操作。将AHK脚本转换为可执行文件（.exe）不仅可以分发和使用，还能保护脚...</description><pubDate>Fri, 15 Nov 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;AutoHotkey（AHK）是一种强大的自动化脚本语言，能够帮助用户简化日常计算机操作。将AHK脚本转换为可执行文件（.exe）不仅可以分发和使用，还能保护脚本代码不被轻易查看。本文将详细介绍如何使用AutoHotkey将代码转换为EXE文件的完整流程。&lt;/p&gt;
+</content:encoded></item><item><title>AutoHotkey打包exe完全指南！</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><description>AutoHotkey（AHK）是一种强大的自动化脚本语言，能够帮助用户简化日常计算机操作。将AHK脚本转换为可执行文件（.exe）不仅可以分发和使用，还能保护脚...</description><pubDate>Fri, 15 Nov 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;AutoHotkey（AHK）是一种强大的自动化脚本语言，能够帮助用户简化日常计算机操作。将AHK脚本转换为可执行文件（.exe）不仅可以分发和使用，还能保护脚本代码不被轻易查看。本文将详细介绍如何使用AutoHotkey将代码转换为EXE文件的完整流程。&lt;/p&gt;
 &lt;h2&gt;&lt;strong&gt;一、安装AutoHotkey&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;在开始转换之前，首先需要安装AutoHotkey软件。&lt;/p&gt;
 &lt;ol&gt;
@@ -12128,7 +12223,7 @@ pyinstaller --onefile --windowed edit_hosts.py
 &lt;p&gt;将AutoHotkey脚本转换为EXE文件是一个简单而强大的功能，它使脚本更加容易分发和使用，同时保护了代码的安全性。通过本文介绍的步骤，您可以轻松完成从脚本脚本到EXE生成的全过程。无论是用于个人自动化还是商业应用，AutoHotkey的EXE编译功能都能满足您的需求。&lt;/p&gt;
 &lt;p&gt;如果觉得这篇教程对你有帮助，别忘了&lt;strong&gt;点赞+收藏+转发&lt;/strong&gt;三连呀！关注我，后续分享更多实用技巧、效率工具干货，下次见～ 👋&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;大强远程技术支持：&lt;a href=&quot;742112.xyz&quot;&gt;742112.xyz&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-</content:encoded></item><item><title>MuMu模拟器</title><link>https://dqtx.cc/posts/software/mumu%E6%A8%A1%E6%8B%9F%E5%99%A8/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/mumu%E6%A8%A1%E6%8B%9F%E5%99%A8/</guid><pubDate>Thu, 22 Aug 2024 14:20:00 GMT</pubDate><content:encoded>&lt;p&gt;MuMu模拟器作为市面上兼容性和稳定性极佳的安卓模拟器，一直是玩手游、刷视频及跑脚本用户的首选。不过默认设置下它会有一些开屏广告、桌面广告，本文将手把手教你：**最新版 MuMu 5.9 下载、广告屏蔽、壁纸自定义、快捷技巧等。**建议收藏转发.&lt;/p&gt;
+</content:encoded></item><item><title>MuMu模拟器</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Thu, 22 Aug 2024 14:20:00 GMT</pubDate><content:encoded>&lt;p&gt;MuMu模拟器作为市面上兼容性和稳定性极佳的安卓模拟器，一直是玩手游、刷视频及跑脚本用户的首选。不过默认设置下它会有一些开屏广告、桌面广告，本文将手把手教你：**最新版 MuMu 5.9 下载、广告屏蔽、壁纸自定义、快捷技巧等。**建议收藏转发.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20251130144036028.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;一.软件下载&lt;/h2&gt;
 &lt;p&gt;MuMu模拟器官网：
@@ -12174,7 +12269,7 @@ https://mumu.163.com/&lt;/p&gt;
 &lt;p&gt;点击模拟器桌面的设置-壁纸，然后更换即可&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20251130144137855.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;经过这些配置之后，MuMu 就会变成一个干净优雅的虚拟空间，使用 MuMu 的过程中遇到任何问题，或者有更好用的优化技巧，欢迎在评论区交流分享。&lt;/p&gt;
-</content:encoded></item><item><title>CLIProxyAPI教程</title><link>https://dqtx.cc/posts/aihacks/cliproxyapi/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/cliproxyapi/</guid><pubDate>Sun, 14 Feb 0202 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这就是个能让你绕过官方限制，把各大 AI 客户端额度无缝转成标准 API 的本地代理。 平时你开了 ChatGPT Plus、Claude Pro 或者用免费的 Gemini 2.5 Pro，官方只让在网页或自家的 CLI 工具里用。&lt;/p&gt;
+</content:encoded></item><item><title>CLIProxyAPI教程</title><link>https://dqtx.cc/posts/undefined/</link><guid isPermaLink="true">https://dqtx.cc/posts/undefined/</guid><pubDate>Sun, 14 Feb 0202 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这就是个能让你绕过官方限制，把各大 AI 客户端额度无缝转成标准 API 的本地代理。 平时你开了 ChatGPT Plus、Claude Pro 或者用免费的 Gemini 2.5 Pro，官方只让在网页或自家的 CLI 工具里用。&lt;/p&gt;
 &lt;p&gt;这工具的骚操作在于，它直接拿你账号的 OAuth 登录态，在本地原地吐出一个标准的 OpenAI/Claude 兼容接口。&lt;/p&gt;
 &lt;p&gt;项目地址
 https://github.com/router-for-me/CLIProxyAPI&lt;/p&gt;
