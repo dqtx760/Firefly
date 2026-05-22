@@ -31,6 +31,13 @@ created: 2026-05-13
 - [RCuts](https://www.rcuts.com/)
 
 ## ⚡自用快捷键
+```
+小红书去水印快捷指令
+https://www.icloud.com/shortcuts/fa3486423ce348a99522b9ef17e8a413
+```
+
+
+
 
 ## 🔧 描述文件
 

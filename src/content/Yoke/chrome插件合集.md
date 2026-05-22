@@ -104,7 +104,8 @@ https://xodnytdcaw.feishu.cn/wiki/HX6vwjSdQi3v8ckZZeLcclIknEf?from=space_search
 
 https://xodnytdcaw.feishu.cn/wiki/MD5FwKyfEiH7P8kvPvjcZ0znnIb
 
-
+乔木油猴脚本
+https://github.com/joeseesun/qiaomu-userscripts
 
 以上就是本次分享的全部 Chrome 插件推荐。这些插件我会持续使用、测试和补充，后续发现更好用、更实用的工具，也会继续更新这份清单，和大家一起把浏览器用得更顺手、更高效。
 
