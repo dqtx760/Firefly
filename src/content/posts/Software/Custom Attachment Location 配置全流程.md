@@ -1,7 +1,8 @@
 ---
 title: Custom Attachment Location 配置全流程
 published: 2026-05-20
-tags: []
+tags:
+  - Obsidian插件
 category: Software
 draft: false
 pinned: false

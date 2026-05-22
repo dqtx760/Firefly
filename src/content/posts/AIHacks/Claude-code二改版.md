@@ -28,7 +28,7 @@ https://github.com/txl16095/MiniClaude
 
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260517213248392.webp)
 
-### Newtype-os
+#### Newtype-os
 **项目地址**：
 https://github.com/newtype-01/newtype-os/blob/main/README.zh-cn.md
 

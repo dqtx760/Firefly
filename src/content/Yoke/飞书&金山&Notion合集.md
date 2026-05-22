@@ -2,12 +2,15 @@
 ----
 #### [我收集的chrome插/脚本推荐](https://www.notion.so/chrome-19b351994e40800db8fcd988348f533a)
 #### [我安装的全部skill | Notion](https://www.notion.so/skill-347351994e408091a13be04d19c62d1e)
+微信文章
+https://discreet-ringer-ef6.notion.site/1f5351994e4080a29899ec97e76e10a7
 
 ### 金山文档
 ---
 #### [网盘拉新资源合集](https://www.kdocs.cn/mine/522382678363)
 #### [ 2026最新：网盘推广拉新最全教程！](https://www.kdocs.cn/l/ccFL1c93XVEY)
 #### [电脑必备软件库（持续更新）](https://www.kdocs.cn/l/caJ1tpr71s8d)
+#### [公众号文章附件](https://www.kdocs.cn/l/cgxU61rCruRb)
 #### [100个客户案例](https://www.kdocs.cn/mine/522813081093)
 
 ### 飞书文档
