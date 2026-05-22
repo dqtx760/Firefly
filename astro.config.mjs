@@ -272,6 +272,12 @@ export default defineConfig({
 						if (fileName && !fileName.includes(".")) return "export default {}";
 					}
 				},
+				// 忽略 get/ 目录下 md 文件引用的本地图片，防止 Rollup 解析失败
+				resolveId(source, importer) {
+					if (importer && importer.includes("content/get") && source.includes("get/")) {
+						return { id: source, external: true };
+					}
+				},
 			},
 		],
 		server: {
