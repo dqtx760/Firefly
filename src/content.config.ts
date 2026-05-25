@@ -41,7 +41,6 @@ export const collections = {
 	posts: postsCollection,
 	wiki: wikiCollection,
 	// 阻止自动创建 collection 的空定义
-	get: emptyGlob("get"),
 	Zen: emptyGlob("Zen"),
 	"01-输入": emptyGlob("01-输入"),
 	Xenia: emptyGlob("Xenia"),
