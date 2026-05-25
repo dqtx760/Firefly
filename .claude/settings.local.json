@@ -21,7 +21,9 @@
       "Bash(do sed:*)",
       "Bash(done)",
       "Bash(npm run dev:*)",
-      "Bash(start http://localhost:4323/)"
+      "Bash(start http://localhost:4323/)",
+      "mcp__fetch__fetch",
+      "PowerShell(Get-Content -Path \"C:\\\\Users\\\\Administrator\\\\Desktop\\\\微信桥接.bat\" -Encoding Byte -TotalCount 3 | ForEach-Object { \"{0:X2}\" -f $_ })"
     ]
   }
 }

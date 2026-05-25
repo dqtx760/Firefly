@@ -121,22 +121,6 @@ notes文件中笔记，标题、时间、来源链接、标签，都在 Frontmat
 
 不要让 Obsidian 变成另一个收藏夹。Get 笔记负责"接收"，Obsidian 负责"加工"，定期回顾才是让这套系统真正转起来的关键。
 
-
-
-### 常见问题
-
-**Q：手动同步能跑，但后台自动同步没反应？**
-
-大概率是 Playwright 没装到位。回去重跑一遍 `npx playwright@1.43.1 install`，确认跑完没有报错。
-
-**Q：同步进来的笔记格式有点乱，比如换行符不对？**
-
-这个 springrain1 的 fork 版本专门修了 Windows 上的格式转换问题（原版这块确实有问题）。如果用的是原版而不是这个 fork，建议换过来。
-
-**Q：装完 BRAT 找不到 get-to-obsidian？**
-
-BRAT 拉取完之后，插件不会自动出现在列表里——需要手动去「设置 → 第三方插件」里找，然后打开那个开关。
-
 ### 最后总结下
 
 收藏夹囤积症的解药，不是换一个更好的收藏夹，而是建立"收进来之后要做什么"的机制。
@@ -166,3 +150,17 @@ get-to-obsidian 解决的是"把 Get 笔记的内容拉进来"这一步。
 *\>/ 更多干货，请访问：[dqtx.cc](https://www.dqtx.cc/)*
 
 
+### 补充：
+GET笔记导入为 markdown，使用 tauri 实现的跨平台客户端
+https://github.com/Duosl/biji2md_tauri
+打开get笔记刷新网页，安装以下步骤操作拿到Bearer后面的内容就是token
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260526010012622.webp)
+
+软件界面如下，同步之前，进去设置，建议导出目录结构**按主标签分组**或者**平铺**
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260526010140943.webp)
+
+相比第一个有个没有来源
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260526011705005.webp)
+
+参考教程
+https://my.feishu.cn/wiki/FOBBw4Y5PisOU4k842VcIu0Sndb

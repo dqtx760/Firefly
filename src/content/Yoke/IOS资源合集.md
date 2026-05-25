@@ -47,7 +47,7 @@ https://www.icloud.com/shortcuts/fa3486423ce348a99522b9ef17e8a413
 https://hk.gh-proxy.org/https://github.com/womingxiaozu/img/blob/dd6f19956435baa7577b7973634f6fd678f2810f/tvOS26_iOS26.mobileconfig
 ```
 
-## 📊 苹果产品参数查询
+## 📊 在线网址
 
 - [Apple 产品参数查询](https://hubweb.cn/)
 
@@ -86,3 +86,4 @@ https://xinstore.org/
 
 - [绿米 Aqara](https://www.aqara.com/homekit)
 - [yeelight](https://www.yeelight.com/zh_CN/consumer-grade)
+

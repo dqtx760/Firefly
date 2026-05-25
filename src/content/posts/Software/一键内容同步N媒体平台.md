@@ -48,6 +48,11 @@ chrome-extension://nmabnfdflkbedckkibcfpijaaiolglad/options.html
 
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260515171109763.webp)
 
+### auto-upload
+本地 Web 工作台中完成，项目需要自己编译
+按 `抖音 -> 视频号 -> B站 -> 小红书 -> 快手`的顺序执行多平台发布准备
+https://github.com/s840207702/auto-upload
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260526013028391.webp)
 
 
 ### Postbot

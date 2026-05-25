@@ -49,18 +49,18 @@
 
 ## 三、做 PPT → 录屏 → 社交媒体视频
 
-| 命令 | 说明 | 复制即用 |
-|------|------|----------|
-| /guizang-ppt-skill | 横向翻页网页 PPT（WebGL 背景） | 用 guizang-ppt-skill 做一个关于 xxx 的 PPT |
-| /beautiful-slides | 专业设计模板 HTML 幻灯片 | 用 beautiful-slides 做 10 页专业幻灯片 |
-| /frontend-slides | 动画丰富 HTML 演示文稿 | 用 frontend-slides 做一个带动画的演示 |
-| /huashu-design | 高保真原型 / Demo / 幻灯片 / 动画 | 用 huashu-design 做一个高保真原型页面 |
-| /mindmap-ppt-builder | 思维导图风格静态演示 | 用思维导图形式展示 xxx 的结构 |
-| /ian-handdrawn-ppt | 手绘技术风格 PPT 页面图片 | 用手绘风格做一页技术讲解 PPT |
-| /mermaid-visualizer | 文本 → Mermaid 图表 | 把这段流程图画成 Mermaid 图 |
-| /excalidraw-diagram | 文本 → Excalidraw 手绘风图 | 用 Excalidraw 画一个 xxx 的架构图 |
-| /obsidian-canvas-creator | 内容 → Obsidian 画布 | 把这些内容整理成 Obsidian 画布 |
-| /hyperframes | 视频合成 / 动画 / 字幕 / 特效 | 用 hyperframes 做一个 xxx 的短视频 |
+| 命令                       | 说明                      | 复制即用                                |
+| ------------------------ | ----------------------- | ----------------------------------- |
+| /guizang-ppt-skill       | 横向翻页网页 PPT（WebGL 背景）    | 用 guizang-ppt-skill 做一个关于 xxx 的 PPT |
+| /beautiful-slides        | 专业设计模板 HTML 幻灯片         | 用 beautiful-slides 做 10 页专业幻灯片      |
+| /frontend-slides         | 动画丰富 HTML 演示文稿          | 用 frontend-slides 做一个带动画的演示         |
+| /huashu-design           | 高保真原型 / Demo / 幻灯片 / 动画 | 用 huashu-design 做一个高保真原型页面          |
+| /mindmap-ppt-builder     | 思维导图风格静态演示              | 用思维导图形式展示 xxx 的结构                   |
+| /ian-handdrawn-ppt       | 手绘技术风格 PPT 页面图片         | 用手绘风格做一页技术讲解 PPT                    |
+| /mermaid-visualizer      | 文本 → Mermaid 图表         | 把这段流程图画成 Mermaid 图                  |
+| /excalidraw-diagram      | 文本 → Excalidraw 手绘风图    | 用 Excalidraw 画一个 xxx 的架构图           |
+| /obsidian-canvas-creator | 内容 → Obsidian 画布        | 把这些内容整理成 Obsidian 画布                |
+| /hyperframes             | 视频合成 / 动画 / 字幕 / 特效     | 用 hyperframes 做一个 xxx 的短视频          |
 
 ---
 
@@ -180,40 +180,40 @@
 
 ## 快速索引
 
-| 我想... | 直接说 |
-|---------|--------|
-| **写文案** | | 
-| 写公众号长文 | 用 khazix-writer 写一篇关于 xxx 的长文 |
-| 写千字短评 | 帮我用 ljg-writes 写一段关于 xxx 的千字观点 |
-| 起爆款标题 | 给我这篇文章起 10 个爆款标题 |
-| 看 AI 热点 | 帮我看看今天 AI 圈有什么热点可以写 |
-| 从素材拆选题 | 把这段素材帮我拆成 5 个公众号选题 |
-| 去 AI 味 | 帮我把下面这段去一下 AI 味 |
-| 走完整流程 | 用 wewrite 走一遍公众号发布全流程 |
-| **做图** | | 
-| 文章配插画 | 调用 baoyu-article-illustrator 给这篇文章配插画 |
-| 生成封面图 | 用 article-cover-16x9 生成一张封面，标题是 xxx |
-| 文章转卡片 | 用 ljg-card 把这段文字转成一张卡片图 |
-| 一站式打包 | 用 article-pack 一步完成配图+封面+标题 |
-| **做 PPT / 视频** | | 
-| 做 PPT | 用 guizang-ppt-skill 做一个关于 xxx 的 PPT |
-| 高保真 Demo | 用 huashu-design 做一个高保真原型页面 |
-| 手绘风 PPT | 用手绘风格做一页技术讲解 PPT |
-| 画图表 | 把这段流程图画成 Mermaid 图 |
-| 做短视频 | 用 hyperframes 做一个 xxx 的短视频 |
-| **发布 & 社交** | | 
-| 发即刻 | 帮我用 jike-web-cli 发一条即刻：xxx |
-| 发推特 | 帮我用 twitter-cli 发一条推：xxx |
-| **连接器 & 抓取** | | 
-| 操作飞书 | 用 lark 搜索飞书文档里关于 xxx 的笔记 |
-| 读写 Notion | 在 Notion 里查一下 xxx 数据库的最新记录 |
-| 公众号抓取 | 用 cc-weixin 抓取 xxx 公众号最新文章 |
-| 搜 Google | 用 gsearch 搜索 xxx 最新资讯 |
-| 抓网页 | 用 xfetch 抓取 https://xxx.com 的内容 |
-| AI 搜索 | 用 mcporter 深度检索 xxx 相关信息 |
-| 下载视频 | 用 yt-dlp 下载这个视频的字幕 |
-| **专家视角** | | 
-| 以 xxx 视角分析 | 用 xxx-perspective 分析这件事 |
+| 我想...          | 直接说                                   |     |
+| -------------- | ------------------------------------- | --- |
+| **写文案**        |                                       |     |
+| 写公众号长文         | 用 khazix-writer 写一篇关于 xxx 的长文         |     |
+| 写千字短评          | 帮我用 ljg-writes 写一段关于 xxx 的千字观点        |     |
+| 起爆款标题          | 给我这篇文章起 10 个爆款标题                      |     |
+| 看 AI 热点        | 帮我看看今天 AI 圈有什么热点可以写                   |     |
+| 从素材拆选题         | 把这段素材帮我拆成 5 个公众号选题                    |     |
+| 去 AI 味         | 帮我把下面这段去一下 AI 味                       |     |
+| 走完整流程          | 用 wewrite 走一遍公众号发布全流程                 |     |
+| **做图**         |                                       |     |
+| 文章配插画          | 调用 baoyu-article-illustrator 给这篇文章配插画 |     |
+| 生成封面图          | 用 article-cover-16x9 生成一张封面，标题是 xxx   |     |
+| 文章转卡片          | 用 ljg-card 把这段文字转成一张卡片图               |     |
+| 一站式打包          | 用 article-pack 一步完成配图+封面+标题           |     |
+| **做 PPT / 视频** |                                       |     |
+| 做 PPT          | 用 guizang-ppt-skill 做一个关于 xxx 的 PPT   |     |
+| 高保真 Demo       | 用 huashu-design 做一个高保真原型页面            |     |
+| 手绘风 PPT        | 用手绘风格做一页技术讲解 PPT                      |     |
+| 画图表            | 把这段流程图画成 Mermaid 图                    |     |
+| 做短视频           | 用 hyperframes 做一个 xxx 的短视频            |     |
+| **发布 & 社交**    |                                       |     |
+| 发即刻            | 帮我用 jike-web-cli 发一条即刻：xxx            |     |
+| 发推特            | 帮我用 twitter-cli 发一条推：xxx              |     |
+| **连接器 & 抓取**   |                                       |     |
+| 操作飞书           | 用 lark 搜索飞书文档里关于 xxx 的笔记              |     |
+| 读写 Notion      | 在 Notion 里查一下 xxx 数据库的最新记录            |     |
+| 公众号抓取          | 用 cc-weixin 抓取 xxx 公众号最新文章            |     |
+| 搜 Google       | 用 gsearch 搜索 xxx 最新资讯                 |     |
+| 抓网页            | 用 xfetch 抓取 https://xxx.com 的内容       |     |
+| AI 搜索          | 用 mcporter 深度检索 xxx 相关信息              |     |
+| 下载视频           | 用 yt-dlp 下载这个视频的字幕                    |     |
+| **专家视角**       |                                       |     |
+| 以 xxx 视角分析     | 用 xxx-perspective 分析这件事               |     |
 
 ---
 

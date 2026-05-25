@@ -18,8 +18,6 @@ https://github.com/dqtx760/skills-manage
 
 ### 参照：[斜杠命令合集](斜杠命令合集.md)
 
-![image.png](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260422191135966.webp)
-
 
 ## 我推荐的Skills列表
 ---

@@ -16,7 +16,7 @@ C:\Users\Administrator\AISkills\UpdateCheck\SKILL.md
 
 
 ### Zen
-- [00今日新建与更新](../Zen/00今日新建与更新.md)
+- [00今日新建与更新](Zen/00今日新建与更新.md)
 - [01最近3天创建笔记](../Zen/01最近3天创建笔记.md)
 - [02系列笔记](../Zen/02系列笔记.md)
 - [03无tags笔记](../Zen/03无tags笔记.md)

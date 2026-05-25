@@ -75,7 +75,7 @@ winget install Git.Git
 ### 拉取仓库模板
 
 ```
-get clone 
+d: && mkdir project2026 && cd project2026 && git clone https://github.com/dqtx760/obsidian-vault-template.git
 ```
 
 - https://github.com/dqtx760/obsidian-vault-template
