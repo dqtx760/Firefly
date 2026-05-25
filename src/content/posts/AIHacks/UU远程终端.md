@@ -1,5 +1,5 @@
 ---
-title: UU远程终端——手机上丝滑用Claude Code
+title: UU远程手机终端操作CC
 published: 2026-05-25
 tags:
   - cli
