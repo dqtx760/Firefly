@@ -487,6 +487,290 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/tech-shrimp&quot;&gt;tech-shrimp&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>Deskflow键盘鼠标共享工具</title><link>https://dqtx.cc/posts/software/deskflow%E9%94%AE%E7%9B%98%E9%BC%A0%E6%A0%87%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%85%B7/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/deskflow%E9%94%AE%E7%9B%98%E9%BC%A0%E6%A0%87%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%85%B7/</guid><pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;多台电脑同时干活，桌上摆几套键鼠又占地方又割裂。最近找到一款&lt;strong&gt;Deskflow&lt;/strong&gt;软件，支持 Windows 和 macOS，一套键鼠就能控制多台设备，局域网即连即用。&lt;/p&gt;
+&lt;p&gt;鼠标移动到屏幕边缘自动滑到另一台电脑，就像多显示器一样自然。同时支持&lt;strong&gt;剪贴板共享&lt;/strong&gt;，在一台设备复制文字，另一台直接粘贴。&lt;/p&gt;
+&lt;h3&gt;配置步骤&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;前置条件&lt;/strong&gt;：所有设备连在同一个局域网。&lt;/p&gt;
+&lt;p&gt;一、在&lt;strong&gt;常用键鼠的那台电脑&lt;/strong&gt;上，选择 默认项目，点启动。记下界面显示的 IP 地址。&lt;/p&gt;
+&lt;p&gt;二、在&lt;strong&gt;被控制的电脑&lt;/strong&gt;上，选择 第个项目 模式，输入刚才的 IP，点连接。&lt;/p&gt;
+&lt;p&gt;三、连接成功后，鼠标就能在两台设备间自由移动了，剪贴板也自动共享。&lt;/p&gt;
+&lt;h3&gt;下载&lt;/h3&gt;
+&lt;p&gt;链接：https://pan.xunlei.com/x/VOtVDBvm_M2lkqwih56aHFY8A1?pwd=25xa# 复制这段内容后打开「迅雷浏览器 App」即可获取。&lt;/p&gt;
+&lt;h3&gt;常见问题&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;连不上？&lt;/strong&gt; 两个检查点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;关闭防火墙试试&lt;/li&gt;
+&lt;li&gt;在设置 → 首选项里关闭 TLS 加密&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;工具自带简体中文，在高级设置里切换，mac 版也一样，唯一的短板是不支持文件拖拽传输，但这属于锦上添花，日常操作已经够用了。&lt;/p&gt;
+</content:encoded></item><item><title>微信内容同步到 Obsidian：灵感随手记，自动入库</title><link>https://dqtx.cc/posts/software/%E5%BE%AE%E4%BF%A1%E5%86%85%E5%AE%B9%E5%90%8C%E6%AD%A5obsidian/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E5%BE%AE%E4%BF%A1%E5%86%85%E5%AE%B9%E5%90%8C%E6%AD%A5obsidian/</guid><pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;微信里看到的好文章、一闪而过的灵感、随手录的语音备忘——怎么快速存进 Obsidian？&lt;/p&gt;
+&lt;p&gt;网上有人用 vib coding 做了一个「Obsidian 内容同步助手」，微信小程序 + Obsidian 插件配合，支持剪贴板、录音、网页链接、文件同步。实测可用，流程很轻。&lt;/p&gt;
+&lt;h3&gt;操作步骤&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;一步：绑定小程序&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;微信搜索小程序「Obsidian 内容同步助手」→ 首页点击「绑定 Obsidian」→ 复制 6 位绑定码。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/IMG_1177.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;二步：安装插件&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在 Obsidian 社区插件市场搜索 &lt;strong&gt;WeChat Inbox Sync&lt;/strong&gt;，安装后进入设置，粘贴绑定码，点击「立即绑定」。记得勾选「启动时自动同步」。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260526003152490.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;使用体验&lt;/h3&gt;
+&lt;p&gt;整体流畅，两个小槽点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;非实时同步&lt;/strong&gt;：微信复制链接后打开小程序点「读取网页链接」，不会立即推送到 Obsidian，需要手动点击插件里的同步按钮&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;开屏广告&lt;/strong&gt;：小程序有广告，毕竟作者花时间开发，可以理解&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;好消息是每次重新打开 Obsidian 会自动拉取未同步的内容，日常使用影响不大。&lt;/p&gt;
+&lt;p&gt;参考：&lt;a href=&quot;https://my.feishu.cn/wiki/EPHhwqRobijHqfkAqjMcDEgvnlf&quot;&gt;飞书教程：WeChat Inbox Sync&lt;/a&gt;&lt;/p&gt;
+</content:encoded></item><item><title>UU远程终端——手机上丝滑用Claude Code</title><link>https://dqtx.cc/posts/aihacks/uu%E8%BF%9C%E7%A8%8B/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/uu%E8%BF%9C%E7%A8%8B/</guid><pubDate>Mon, 25 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;用手机操控电脑终端，这事以前要么折腾 SSH，要么忍着 TeamViewer 的笨重。现在 UU 远程一个功能就解决了——&lt;strong&gt;手机直接打开电脑的 cmd 终端&lt;/strong&gt;，丝滑敲 CLI。&lt;/p&gt;
+&lt;p&gt;这意味着你可以在手机上随时随地用 Codex、Claude Code 这些命令行 AI 工具，真正把开发环境装进口袋。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-uu-remote-v1.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;准备工作&lt;/h3&gt;
+&lt;p&gt;手机和电脑都下载 UU 远程：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;电脑版：https://uuyc.163.com/&lt;/li&gt;
+&lt;li&gt;手机版：各应用商店搜&quot;UU远程&quot;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;操作步骤&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;两个设备登录同一账号&lt;/li&gt;
+&lt;li&gt;电脑上打开 UU 远程&lt;/li&gt;
+&lt;li&gt;手机底部「我的设备」就能看到在线电脑&lt;/li&gt;
+&lt;li&gt;点击「更多 → 终端」，直接弹出电脑的 cmd 窗口&lt;/li&gt;
+&lt;li&gt;然后就跟在电脑前一样，自热语言对话就行
+对话&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/IMG_1157.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;实际体验&lt;/h3&gt;
+&lt;p&gt;延迟很低，几乎无感。手机上打字虽然不如键盘快，但应对 CLI 这种短命令场景完全够用。对于需要临时调个代码、跑个脚本、或者在外面想看看训练进度，这个方案比背着笔记本出门方便太多。&lt;/p&gt;
+&lt;p&gt;目前唯一槽点是只支持 cmd，对习惯 PowerShell 或 WSL 的用户不太友好。不过既然是刚出的功能，后续大概率会支持更多终端类型。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/a40746dd7c4aef1a757eedac61ca79e9.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/hBCmiClrTG5TjQQbryxJCg&quot;&gt;手机远程控制Claude code神器Happy&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/CpQwDMncijej-Z_rjyMiIA&quot;&gt;手机上的Agent软件-Open Minis&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;p&gt;以上，既然看到这里了，如果觉得不错，随手&lt;strong&gt;点个赞、在看、转发&lt;/strong&gt;三连吧，想第一时间收到推送，可以给我个星标⭐️～&lt;/p&gt;
+&lt;p&gt;谢谢你看我的文章，我们，下次再见。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/%E6%9C%AA%E5%91%BD%E5%90%8D%E7%9A%84%E8%AE%BE%E8%AE%A1.webp&quot; alt=&quot;&quot; /&gt;
+&lt;em&gt;&amp;gt;/ 作者：大强同学&lt;/em&gt;
+&lt;em&gt;&amp;gt;/ 更多干货，请访问：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+</content:encoded></item><item><title>Obsidian+Git备份指南</title><link>https://dqtx.cc/posts/software/obsidian--git-%E5%A4%87%E4%BB%BD%E5%85%A8%E6%B5%81%E7%A8%8B%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/obsidian--git-%E5%A4%87%E4%BB%BD%E5%85%A8%E6%B5%81%E7%A8%8B%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/</guid><pubDate>Sun, 24 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Obsidian 的核心价值在于「本地优先」——你的笔记数据完全归你所有。但「本地优先」也意味着你需要自己兜底数据安全：写了几百天的笔记，可能因为一次硬盘故障、误删、代码翻车甚至电脑丢失就全部消失。&lt;/p&gt;
+&lt;p&gt;而这套 Git 备份方案，用不到 15 分钟就能让你的知识库拥有：&lt;strong&gt;定时自动备份 + 完整历史版本控制 + 免费远程存储&lt;/strong&gt;。电脑坏了就换新电脑，一条 &lt;code&gt;git clone&lt;/code&gt; 就能完整恢复——不需要额外付费，不需要复杂操作，一次配置终身受用。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-obsidian-git-backup-20260524-195651.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;一、前期准备：安装必备工具&lt;/h3&gt;
+&lt;h3&gt;1. 安装 Git 与 GitHub CLI&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;前往 &lt;a href=&quot;https://git-scm.com/&quot;&gt;Git 官网&lt;/a&gt; 下载并安装 Git，安装时保持默认选项即可。&lt;/li&gt;
+&lt;li&gt;前往 &lt;a href=&quot;https://cli.github.com/&quot;&gt;GitHub CLI 官网&lt;/a&gt; 下载并安装 GitHub CLI。&lt;/li&gt;
+&lt;li&gt;安装完成后，打开终端验证是否安装成功：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;2. 在 Obsidian 中安装核心插件&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;打开 Obsidian → 设置 → 第三方插件，关闭「安全模式」。&lt;/li&gt;
+&lt;li&gt;进入「社区插件市场」，安装以下两个插件：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Obsidian Git&lt;/strong&gt;：核心备份插件，负责自动提交与推送。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Terminal&lt;/strong&gt;：终端插件，可直接在 Obsidian 中执行 Git 命令。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;安装完成后启用插件，在 Terminal 插件设置中开启「整合式终端」。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;二、初始化本地 Git 仓库&lt;/h3&gt;
+&lt;p&gt;如果你的 Obsidian 本地仓库还不是一个 Git 仓库，需要先完成初始化：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;打开 Terminal 插件（Obsidian 左侧边栏或命令面板中启动）。&lt;/li&gt;
+&lt;li&gt;在终端中输入以下命令，初始化本地仓库：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;git init
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;三、创建 GitHub 远程仓库&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;前往 GitHub 官网，新建一个 &lt;strong&gt;private（私人）仓库&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;注意：本地数据一定要选择不公开，这个仓库就是你 Obsidian 的远程备份空间。&lt;/li&gt;
+&lt;li&gt;它的核心作用是：一旦本地发生错误，可以随时回退到历史版本。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260524200529686.webp&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;四、连接本地仓库与 GitHub&lt;/h3&gt;
+&lt;p&gt;直接使用下面这段提示词，发给 AI 帮你一键配置：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;我已安装 Obsidian Git 插件，初始化了本地仓库，
+并在 GitHub 创建了 private 仓库。
+
+我的 GitHub 仓库地址是：xxx（你的仓库地址）
+
+请帮我完成以下配置：
+1. 添加远程仓库地址
+2. 配置 Git 用户信息（名字：Your Name，邮箱：your@email.com）
+3. 创建第一次提交：git add . &amp;amp;&amp;amp; git commit -m &quot;Initial commit&quot;
+4. 推送到 GitHub：git push -u origin main
+5. 验证连接是否成功
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;五、配置 Obsidian Git 自动备份&lt;/h3&gt;
+&lt;p&gt;连接成功后，在 Obsidian 的「设置 → Git 插件」中：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260524200937180.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;自动提交和同步间隔（分钟）设置为 1-10 分钟（或你觉得合适的时间）。&lt;/li&gt;
+&lt;li&gt;停件编辑后自动提交和同步开启✅&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;示例图解释：&lt;strong&gt;当我们停止编写文件1分钟以后，git插件就会尝试自动往GitHub上面同步一次&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;所以，日常使用无需手动操作，每隔几分钟插件就会自动提交并推送到 GitHub。你的知识库会拥有一个&lt;strong&gt;实时备份 + 完整历史版本控制&lt;/strong&gt;的安全兜底。&lt;/p&gt;
+&lt;p&gt;另外，✅开启Pull on startup&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260524201534262.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;意思是：每当你启动Obsidian的时间，插件会先去Github上面pull一下，看看有没有新的改动，保证我们的本地文件跟Github上面的同步&lt;/p&gt;
+&lt;h3&gt;六、进阶优化与排错建议&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;GitHub CLI 认证（可选推荐）&lt;/strong&gt;：
+安装 GitHub CLI 后，在终端运行以下命令完成认证，避免推送时反复输入账号密码：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;gh auth login
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;按提示选择 HTTPS 方式登录，绑定你的 GitHub 账号即可。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;遇到问题直接交给 Ai&lt;/strong&gt;：
+如果配置过程中出现报错，直接把报错信息或这段完整文档发给 AI，让它帮你根据 Git 版本控制内容进行针对性配置与修复。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;到这里，你的 Obsidian 知识库就已经拥有了全自动的 Git 备份能力。整个过程的核心思路其实很简单：本地 Git 记录每一次改动，GitHub 做远程备份，Obsidian Git 插件让它变成全自动。&lt;/p&gt;
+&lt;p&gt;从此之后，你只管写笔记，备份这件事不用再操心。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/a40746dd7c4aef1a757eedac61ca79e9.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/2eqmgz77JXHaYgL6-TWBdA&quot;&gt;一键把 Get 笔记同步到 Obsidian&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/24oTrC1tttUs18Qv7cRwRQ&quot;&gt;Obsidian同步Notion最佳实践&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/lgdJ7DYSqRIS1b13QQnk3A&quot;&gt;Obsidian附件图片管理插件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/45pUXcmcifTzTcdrlrTWHQ&quot;&gt;Obsidian插件LinkStowr最佳实践&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/LvxZCJG99fzyYbgmDJ73fA&quot;&gt;Dataview与Templater插件联动&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/kPjIpHmzciWY8_3ettEVsg&quot;&gt;Obsidian日记半自动化&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/pdbv5g8wGVga9z4n52homw&quot;&gt;Obsidian的插件Claudian报错&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/9qTRLHvoNQKUF2Ac2iVRvA&quot;&gt;Karpathy 的 LLM Wiki最佳实践&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/4SEsM-AWoEhPXiD49oNB9g&quot;&gt;Obsidian推送微信插件配置CF Worker代理方案&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/8kCbGmeXvB7cuJZGHaCdkw&quot;&gt;19 个 Obsidian 神仙插件&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以上，既然看到这里了，如果觉得不错，随手&lt;strong&gt;点个赞、在看、转发&lt;/strong&gt;三连吧，如果想第一时间收到推送，也可以给我个星标⭐️～&lt;/p&gt;
+&lt;p&gt;谢谢你看我的文章，我们，下次再见。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/%E6%9C%AA%E5%91%BD%E5%90%8D%E7%9A%84%E8%AE%BE%E8%AE%A1.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&amp;gt;/ 作者：大强同学&lt;/em&gt;
+&lt;em&gt;&amp;gt;/ 更多干货，请访问：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+</content:encoded></item><item><title>Obsidian插件Terminal配置</title><link>https://dqtx.cc/posts/software/obsidian%E6%8F%92%E4%BB%B6terminal%E9%85%8D%E7%BD%AE/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/obsidian%E6%8F%92%E4%BB%B6terminal%E9%85%8D%E7%BD%AE/</guid><pubDate>Sun, 24 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;打开 Obsidian 设置，进入「Terminal」插件的「配置」页面。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;选择任意兼容预设，点击「编辑」，命名为「PowerShell 整合式」，前置选择「powershell: 整合式」。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260524152702768.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;点击「参数」前的加号，添加参数 &lt;code&gt;-NoLogo&lt;/code&gt;；将默认 &lt;code&gt;python3&lt;/code&gt; 替换为系统真实 Python 路径。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;-NoLogo
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;C:\Users\Administrator\AppData\Local\Programs\Python\Python314\python.exe
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;点击「检查」验证配置，若提示依赖异常，按提示安装/升级对应依赖。
+我这边报错了所以需要安装两个依赖包。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;pip install psutil&amp;gt;=5.9.5 pywinctl&amp;gt;=0.0.50
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;返回设置页面，将该配置设为默认，重启 Obsidian 后即可正常使用终端。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/a40746dd7c4aef1a757eedac61ca79e9.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/8kCbGmeXvB7cuJZGHaCdkw&quot;&gt;19 个 Obsidian 神仙插件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/2eqmgz77JXHaYgL6-TWBdA&quot;&gt;一键把 Get 笔记同步到 Obsidian&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/24oTrC1tttUs18Qv7cRwRQ&quot;&gt;Obsidian同步Notion最佳实践&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/LvxZCJG99fzyYbgmDJ73fA&quot;&gt;Dataview与Templater插件联动&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/kPjIpHmzciWY8_3ettEVsg&quot;&gt;Obsidian日记半自动化&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/lgdJ7DYSqRIS1b13QQnk3A&quot;&gt;Obsidian附件图片管理插件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/45pUXcmcifTzTcdrlrTWHQ&quot;&gt;Obsidian插件LinkStowr最佳实践&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/pdbv5g8wGVga9z4n52homw&quot;&gt;Obsidian的插件Claudian报错&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/9qTRLHvoNQKUF2Ac2iVRvA&quot;&gt;Karpathy 的 LLM Wiki最佳实践&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/4SEsM-AWoEhPXiD49oNB9g&quot;&gt;Obsidian推送微信插件配置CF Worker代理方案&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;以上，既然看到这里了，如果觉得不错，随手点个赞、在看、转发三连吧，如果想第一时间收到推送，也可以给我个星标⭐️～&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;谢谢你看我的文章，我们，下次再见。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&amp;gt;/ 作者：大强同学&lt;/em&gt;
+&lt;em&gt;&amp;gt;/ 更多干货，请访问：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+</content:encoded></item><item><title>右键菜单管理工具</title><link>https://dqtx.cc/posts/software/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E7%AE%A1%E7%90%86/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E7%AE%A1%E7%90%86/</guid><pubDate>Sun, 24 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你有没有遇到过，装了一批软件之后，右键菜单突然多了十几个不知道从哪来的选项？&lt;/p&gt;
+&lt;p&gt;我遇到过。某次重装系统，装完常用软件打开右键一看——压缩、截屏、用 XX 打开、XX 分享……密密麻麻，找个常用操作要扫半天。&lt;/p&gt;
+&lt;p&gt;气的不是条目多，是那些条目根本没问过我就进来了。&lt;/p&gt;
+&lt;p&gt;这个工具就是专门拦这件事的。&lt;/p&gt;
+&lt;p&gt;地址：https://github.com/PLFJY/ContextMenuMgr&lt;/p&gt;
+&lt;h3&gt;为什么右键菜单总会被塞满&lt;/h3&gt;
+&lt;p&gt;说真的，这不是哪个软件坏，是 Windows 的设计就这样。&lt;/p&gt;
+&lt;p&gt;右键菜单的本质是注册表里几个固定路径的映射：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;HKEY_CLASSES_ROOT\*\shell&lt;/code&gt;（对所有文件生效）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HKEY_CLASSES_ROOT\Directory\shell&lt;/code&gt;（文件夹）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HKEY_CLASSES_ROOT\Directory\Background\shell&lt;/code&gt;（桌面/目录背景右键）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;任何软件安装时，往这几个路径写入键值，菜单项就出现了。Windows 不做拦截，不问你，默认放行。&lt;/p&gt;
+&lt;p&gt;你甚至不会收到通知。软件装完，菜单静悄悄地多了几项，整个过程你不知情。&lt;/p&gt;
+&lt;p&gt;这就是为什么每次装完一批软件，右键菜单就变了个样。&lt;/p&gt;
+&lt;h3&gt;现有方案哪里不够&lt;/h3&gt;
+&lt;p&gt;我以前的处理方式是手动删注册表。确实能删，但容易删错，而且每次装新软件都要重复一遍。也用过一些传统的右键菜单管理器，可以手动禁用/删除已有的条目，但根本问题没解决——&lt;/p&gt;
+&lt;p&gt;新菜单项还是会跑进来，你还是事后才知道。&lt;/p&gt;
+&lt;p&gt;没有任何工具在菜单项写入之前问你一句：这个，你要不要？&lt;/p&gt;
+&lt;h3&gt;ContextMenuMgr Plus 的核心思路&lt;/h3&gt;
+&lt;p&gt;这个工具的设计逻辑反过来了：&lt;strong&gt;新菜单项先禁用，进审核队列，等你批准。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;不是让你事后清理，是在它进门之前就拦住。&lt;/p&gt;
+&lt;p&gt;&amp;lt;!-- 配图：审核队列流程示意图，新菜单项→拦截禁用→待审核队列→用户决策（允许/禁用/移除），infographic 风格，16:9 --&amp;gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;工具地址：https://github.com/PLFJY/ContextMenuMgr
+如果访问有问题，关注公众号「大强同学」，后台回复「右键菜单」获取备用链接。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;安装与初次使用&lt;/h3&gt;
+&lt;p&gt;去 GitHub Releases 页面下载最新的安装包，当前是 v1.6.4。&lt;/p&gt;
+&lt;p&gt;安装完成后，软件会自动注册后台服务（&lt;code&gt;ContextMenuManagerPlus.Service.exe&lt;/code&gt;），开机自启。&lt;/p&gt;
+&lt;p&gt;托盘区会出现图标，这说明服务已经在跑了。&lt;/p&gt;
+&lt;p&gt;&amp;lt;!-- 配图：Windows 托盘区出现 ContextMenuMgr 图标，clean 截图风格，16:9 --&amp;gt;&lt;/p&gt;
+&lt;h3&gt;核心功能演示&lt;/h3&gt;
+&lt;h4&gt;审核队列：新菜单项怎么处理&lt;/h4&gt;
+&lt;p&gt;装完工具之后，再安装任何软件，如果那个软件往注册表写了菜单项，你会收到系统通知。&lt;/p&gt;
+&lt;p&gt;点通知，直接跳转到审核页。&lt;/p&gt;
+&lt;p&gt;&amp;lt;!-- 配图：Windows 系统通知弹出&quot;发现新菜单项&quot;的提示，截图风格，16:9 --&amp;gt;&lt;/p&gt;
+&lt;p&gt;审核页里，每个待审核条目有三个选项：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;允许&lt;/strong&gt;：正常启用，菜单里出现&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;保持禁用&lt;/strong&gt;：条目保留但不显示，以后可以随时改&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;移除&lt;/strong&gt;：直接删掉&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这块设计我觉得挺合理——不是非黑即白，&quot;保持禁用&quot;给了你一个缓冲，不确定要不要的先挂着。&lt;/p&gt;
+&lt;p&gt;&amp;lt;!-- 配图：审核页界面截图，显示待审核菜单项列表和三个操作按钮，截图风格，16:9 --&amp;gt;&lt;/p&gt;
+&lt;h4&gt;已有菜单项的管理&lt;/h4&gt;
+&lt;p&gt;左侧导航按分类组织：文件、文件夹、目录背景、桌面背景、磁盘分区、此电脑、回收站……基本覆盖 Windows 日常右键的所有场景。&lt;/p&gt;
+&lt;p&gt;进入任意分类，可以看到当前已有的所有菜单项，支持搜索、启用/禁用、删除、撤销删除。&lt;/p&gt;
+&lt;p&gt;&amp;lt;!-- 配图：主界面按分类显示菜单项的截图，左侧分类导航，右侧菜单列表，截图风格，16:9 --&amp;gt;&lt;/p&gt;
+&lt;h4&gt;三个进程，各有分工&lt;/h4&gt;
+&lt;p&gt;这个架构我觉得值得提一下，因为它直接影响使用体验：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Service.exe&lt;/code&gt;：后台服务，真正的核心，监控注册表、执行审核、维护状态，一直在跑&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;TrayHost.exe&lt;/code&gt;：托盘宿主，弹通知、打开前端，每个登录用户各跑一个&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ContextMenuManagerPlus.exe&lt;/code&gt;：纯 UI，按需打开，关掉就退出，不后台常驻&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;好处是前端完全轻量，关掉之后不占资源，后台服务该干嘛干嘛，互不影响。进程间用 Named Pipe 做 JSON 通信。&lt;/p&gt;
+&lt;h4&gt;进阶：文件类型规则与自定义路径&lt;/h4&gt;
+&lt;p&gt;设置页里有几个进阶选项，普通用户可以跳过，有需求的可以看看：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;自定义扩展名的菜单规则&lt;/li&gt;
+&lt;li&gt;增强菜单管理&lt;/li&gt;
+&lt;li&gt;自定义注册表路径（针对非标准路径的菜单项）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;还有注册表保护增强开关，可以进一步限制软件写入。&lt;/p&gt;
+&lt;h3&gt;常见问题&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Q：安装后发现之前的烂菜单项还在，怎么清？&lt;/strong&gt;
+已有的条目不会自动删，在主界面按分类找到，手动禁用或删除就行。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q：软件卸载了，菜单项还在怎么办？&lt;/strong&gt;
+很常见。软件卸载不代表它写的注册表键值会被清理，在主界面找到对应条目删掉就行。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q：service 没起来怎么排查？&lt;/strong&gt;
+进设置页，找&quot;安装/修复服务&quot;点一下，或者打开日志目录看具体报错。&lt;/p&gt;
+&lt;h3&gt;总结&lt;/h3&gt;
+&lt;p&gt;用了一段时间，说几点实际感受：&lt;/p&gt;
+&lt;p&gt;审核队列这个思路是真的好用，装软件不再需要事后去查右键菜单里多了什么，软件会主动来找你。&lt;/p&gt;
+&lt;p&gt;三进程分离的架构让前端足够轻，不担心打开个管理界面就常驻后台。&lt;/p&gt;
+&lt;p&gt;项目活跃度不错，v1.6.4 就在上周发的，有问题可以提 Issue。&lt;/p&gt;
+&lt;p&gt;你的系统环境，应该由你说了算。&lt;/p&gt;
+&lt;p&gt;&amp;gt;&amp;gt;&amp;gt;&lt;strong&gt;延伸阅读&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;以上，既然看到这里了，如果觉得不错，随手&lt;strong&gt;点个赞、在看、转发&lt;/strong&gt;三连吧，如果想第一时间收到推送，也可以给我个星标⭐️～&lt;/p&gt;
+&lt;p&gt;谢谢你看我的文章，我们，下次再见。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&amp;gt;/ 作者：大强同学&lt;/em&gt;
+&lt;em&gt;&amp;gt;/ 更多干货，请访问：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 </content:encoded></item><item><title>Karpathy的CLAUDE.md没那么神</title><link>https://dqtx.cc/posts/aihacks/karpathy%E7%9A%84claudemd%E8%A7%A3%E8%AF%BB/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/karpathy%E7%9A%84claudemd%E8%A7%A3%E8%AF%BB/</guid><pubDate>Sat, 23 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近这两天，程序员圈子都在传一个数字：&lt;strong&gt;94%&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;不是考试分数，不是股票涨幅，是AI编程的准确率。从65%拉到94%，靠一个65行的文件。&lt;/p&gt;
 &lt;p&gt;这个文件叫CLAUDE.md，作者Andrej Karpathy。前Tesla Autopilot负责人，OpenAI联合创始人，现在加入 Anthropic 了。他把文件往GitHub上一丢，22万星标，直接登顶趋势榜。
@@ -611,6 +895,119 @@ https://github.com/multica-ai/andrej-karpathy-skills，&lt;/p&gt;
 &lt;p&gt;谢谢你看我的文章，我们，下次再见。&lt;/p&gt;
 &lt;p&gt;&amp;gt;/ &lt;em&gt;作者：大强同学&lt;/em&gt;
 &amp;gt;/ &lt;em&gt;更多干货，请访问：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+</content:encoded></item><item><title>在飞书里和 Claude 对话</title><link>https://dqtx.cc/posts/aihacks/%E5%9C%A8%E9%A3%9E%E4%B9%A6%E9%87%8C%E9%A3%9E%E4%B9%A6%E5%92%8C-claude-%E5%AF%B9%E8%AF%9D/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E5%9C%A8%E9%A3%9E%E4%B9%A6%E9%87%8C%E9%A3%9E%E4%B9%A6%E5%92%8C-claude-%E5%AF%B9%E8%AF%9D/</guid><pubDate>Sat, 23 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;我是Claude Code重度用户，但有个问题一直没解决——我人是在微信/飞书里的，但 Claude Code 跑在终端上。每次要给它发个需求、传个文件，都得切回终端敲命令。一天切几十次，真的烦。&lt;/p&gt;
+&lt;p&gt;后来找到了 &lt;a href=&quot;https://github.com/lc2panda/claude-plugin-wechat&quot;&gt;lc2panda/claude-plugin-wechat&lt;/a&gt; 这个项目，能把 Claude Code 接到微信和飞书上，在聊天框里直接跟它对话。支持：文字、图片、文件、语音、视频、远程权限审批、飞书文档，这个项目有两种模式：&lt;strong&gt;Channel 模式&lt;/strong&gt;和 &lt;strong&gt;ACP 模式&lt;/strong&gt;。这篇只讲 ACP 模式，我相信大多数人的 Claude Code 都接的是 国产API Key&lt;/p&gt;
+&lt;p&gt;项目地址：
+https://github.com/lc2panda/claude-plugin-wechat
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/IMG_1145.webp&quot; alt=&quot;745&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;准备工作&lt;/h3&gt;
+&lt;p&gt;动手之前，先确认你的环境到位了。&lt;/p&gt;
+&lt;h4&gt;环境要求&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Bun&lt;/strong&gt;：运行时依赖，必须有&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;飞书应用&lt;/strong&gt;（可选）：只用微信的话不需要&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;装 Bun 就一行：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;curl -fsSL https://bun.sh/install | bash
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;装完验证一下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;bun --version
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;说实话我也不确定你是不是已经有 Bun 了，如果已经装过可以跳过这步。&lt;/p&gt;
+&lt;h3&gt;微信配置&lt;/h3&gt;
+&lt;p&gt;先讲微信的，因为微信简单——不需要配任何应用，装完扫码就完事。&lt;/p&gt;
+&lt;h4&gt;全局安装&lt;/h4&gt;
+&lt;p&gt;ACP 模式是独立运行的，全局安装就行：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;bun add -g github:lc2panda/claude-plugin-wechat
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这个过程取决于网速，有些地方访问 GitHub 比较慢，可能会等个一两分钟。我当时配这个的时候，第一次装卡住了，重试了一次才成功。&lt;/p&gt;
+&lt;h4&gt;微信 · 启动 ACP&lt;/h4&gt;
+&lt;p&gt;安装完直接启动：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;wechat-acp
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;其他启动方式：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;wechat-acp --cwd /项目路径          # 指定工作目录
+ACP_AGENT=gemini wechat-acp        # 切换 Agent
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;第一次启动会自动弹出二维码，拿出手机微信扫码确认，就登录好了。&lt;/p&gt;
+&lt;p&gt;之后如果重新登录（比如换了设备），加个 &lt;code&gt;--login&lt;/code&gt; 参数：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;wechat-acp --login
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;微信 · 验证&lt;/h4&gt;
+&lt;p&gt;拿手机给文件传输助手发条消息试试。如果 Claude 回了，就成了。&lt;/p&gt;
+&lt;p&gt;这里注意：&lt;strong&gt;谁扫码登录的微信号，谁自动获得授权&lt;/strong&gt;。想让别的微信用户也能用，他们第一次发消息会收到一个 6 位配对码，你拿到配对码后在终端执行：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/wechat:access pair &amp;lt;配对码&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;微信 ACP 本身就支持这些内置 Agent：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ACP_AGENT=gemini wechat-acp   # 切换成 Gemini
+ACP_AGENT=qwen wechat-acp     # 切换成通义千问
+ACP_AGENT=copilot wechat-acp  # 切换成 GitHub Copilot
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;不设环境变量的话，默认用的是 Claude。&lt;/p&gt;
+&lt;h3&gt;飞书&lt;/h3&gt;
+&lt;h4&gt;全局安装&lt;/h4&gt;
+&lt;p&gt;微信跑通了？那飞书也一样，装一次就够了（前面已经全局装过的话这步跳过）：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;bun add -g github:lc2panda/claude-plugin-wechat
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;飞书 · 配置应用&lt;/h4&gt;
+&lt;p&gt;飞书比微信多一步，得先有个飞书应用跟 ACP 对接。如果你之前已经为 Channel 模式配过，凭据通用，直接跳到启动就行。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第一步：创建应用&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;去&lt;a href=&quot;https://open.feishu.cn&quot;&gt;飞书开放平台&lt;/a&gt;创建一个自建应用。Lark 用户（海外版）用 &lt;code&gt;open.larksuite.com&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第二步：配置权限&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&quot;权限管理&quot; → &quot;批量导入&quot;，贴这段 JSON：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{
+  &quot;scopes&quot;: {
+    &quot;tenant&quot;: [
+      &quot;im:message&quot;,
+      &quot;im:message.p2p_msg:readonly&quot;,
+      &quot;im:message.group_at_msg:readonly&quot;,
+      &quot;im:message:send_as_bot&quot;,
+      &quot;im:resource&quot;
+    ]
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;第三步：开启长连接&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&quot;事件与回调&quot; → &quot;订阅方式&quot; → 选择&lt;strong&gt;使用长连接接收事件&lt;/strong&gt;，添加事件 &lt;code&gt;im.message.receive_v1&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;这一步有点绕，我第一次配的时候找了半天。官方文档写得不清楚，是我自己试出来的——选了长连接之后，下面会出现一个添加事件的框，搜 &lt;code&gt;im.message.receive_v1&lt;/code&gt; 加上就行。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第四步：发布应用&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&quot;版本管理&quot; → 创建版本 → 填写版本号和说明 → 发布。&lt;/p&gt;
+&lt;p&gt;发布之后拿到 &lt;strong&gt;App ID&lt;/strong&gt; 和 &lt;strong&gt;App Secret&lt;/strong&gt;，这俩是后面登录要用的。&lt;/p&gt;
+&lt;h4&gt;飞书 · 启动 ACP&lt;/h4&gt;
+&lt;p&gt;凭据到手，启动：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;feishu-acp
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;第一次启动会让你输入 App ID 和 App Secret，就是刚才拿到的。验证通过后 ACP 就跑起来了。之后再启动会自动记住凭据。&lt;/p&gt;
+&lt;h4&gt;飞书 · 验证&lt;/h4&gt;
+&lt;p&gt;去飞书找到你的机器人，发条消息试试。收到回复就通了。&lt;/p&gt;
+&lt;p&gt;飞书也支持切换 Agent，跟微信一样：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ACP_AGENT=gemini feishu-acp
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;在聊天里随时发 &lt;code&gt;/cwd /新路径&lt;/code&gt; 能切换工作目录。&lt;/p&gt;
+&lt;p&gt;&amp;lt;!-- 配图：终端运行 feishu-acp 启动成功的截图，warm 风格，16:9 --&amp;gt;&lt;/p&gt;
+&lt;h3&gt;常见问题&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Q：bun add -g 装不上，一直卡着怎么办？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;国内网络访问 GitHub 确实慢。可以试试挂代理，或者多等一会儿。实在不行换个时间段再试。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q：微信扫码之后没反应？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;检查终端是不是支持二维码显示。有些终端（比如 Windows 自带的 cmd）显示不了二维码，建议用 Windows Terminal 或 iTerm2。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q：飞书发了消息没收到回复？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;先检查应用有没有发布成功，权限有没有配全。常见的有两个坑：一是忘记加 &lt;code&gt;im.message.receive_v1&lt;/code&gt; 事件，二是忘记在版本管理里点&quot;发布&quot;。这两个坑我当时都踩过。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q：wechat-acp 和 feishu-acp 可以同时跑吗？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;可以。两个是独立的进程，互不冲突。一个终端跑微信，另一个跑飞书，俩都能用。&lt;/p&gt;
+&lt;h3&gt;总结&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;ACP 模式一条命令启动，比 Channel 模式省事太多&lt;/li&gt;
+&lt;li&gt;微信最简单，装完扫码就完事&lt;/li&gt;
+&lt;li&gt;飞书需要配应用，配一次以后也不用管了&lt;/li&gt;
+&lt;li&gt;支持 Claude、Gemini、Qwen 等多种 Agent 后端&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;说真的，自从把 Claude Code 接上微信和飞书，我在手机上也随时能给它丢任务了。午休躺床上突然想到一个方向，掏出手机发条消息，回去电脑前代码都写好了。&lt;/p&gt;
+&lt;p&gt;那感觉，想想就觉得爽。&lt;/p&gt;
+&lt;p&gt;&amp;gt;&amp;gt;&amp;gt;&lt;strong&gt;延伸阅读&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;以上，既然看到这里了，如果觉得不错，随手&lt;strong&gt;点个赞、在看、转发&lt;/strong&gt;三连吧，如果想第一时间收到推送，也可以给我个星标⭐️～&lt;/p&gt;
+&lt;p&gt;谢谢你看我的文章，我们，下次再见。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&amp;gt;/ 作者：大强同学&lt;/em&gt;
+&lt;em&gt;&amp;gt;/ 更多干货，请访问：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 </content:encoded></item><item><title>Get笔记同步Obsidian插件</title><link>https://dqtx.cc/posts/software/get%E7%AC%94%E8%AE%B0%E5%90%8C%E6%AD%A5obsidian/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/get%E7%AC%94%E8%AE%B0%E5%90%8C%E6%AD%A5obsidian/</guid><pubDate>Fri, 22 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你在 Get 笔记中长期收藏却未整理，这种收藏夹囤积症持续多久了？&lt;/p&gt;
 &lt;p&gt;我用了大概半年。最开始觉得太棒了——看到好文章，丢进去；听到有意思的播客，丢进去；脑子里冒出什么想法，随手语音一下，也丢进去。AI 帮你摘要，帮你整理，感觉自己的知识库在飞速膨胀。&lt;/p&gt;
 &lt;p&gt;然后过了两个月，我打开 Get 笔记，里面已经有 400 多条笔记了。但真正&quot;用&quot;过的，可能不超过 20 条。&lt;/p&gt;
@@ -678,13 +1075,6 @@ https://github.com/springrain1/get-to-obsidian&lt;/p&gt;
 &lt;li&gt;&lt;strong&gt;确实没用的&lt;/strong&gt;，直接删掉&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;不要让 Obsidian 变成另一个收藏夹。Get 笔记负责&quot;接收&quot;，Obsidian 负责&quot;加工&quot;，定期回顾才是让这套系统真正转起来的关键。&lt;/p&gt;
-&lt;h3&gt;常见问题&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Q：手动同步能跑，但后台自动同步没反应？&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;大概率是 Playwright 没装到位。回去重跑一遍 &lt;code&gt;npx playwright@1.43.1 install&lt;/code&gt;，确认跑完没有报错。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Q：同步进来的笔记格式有点乱，比如换行符不对？&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;这个 springrain1 的 fork 版本专门修了 Windows 上的格式转换问题（原版这块确实有问题）。如果用的是原版而不是这个 fork，建议换过来。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Q：装完 BRAT 找不到 get-to-obsidian？&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;BRAT 拉取完之后，插件不会自动出现在列表里——需要手动去「设置 → 第三方插件」里找，然后打开那个开关。&lt;/p&gt;
 &lt;h3&gt;最后总结下&lt;/h3&gt;
 &lt;p&gt;收藏夹囤积症的解药，不是换一个更好的收藏夹，而是建立&quot;收进来之后要做什么&quot;的机制。&lt;/p&gt;
 &lt;p&gt;get-to-obsidian 解决的是&quot;把 Get 笔记的内容拉进来&quot;这一步。&lt;/p&gt;
@@ -706,6 +1096,17 @@ https://github.com/springrain1/get-to-obsidian&lt;/p&gt;
 &lt;p&gt;谢谢你看我的文章，我们，下次再见。&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&amp;gt;/ 作者：大强同学&lt;/em&gt;
 &lt;em&gt;&amp;gt;/ 更多干货，请访问：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h3&gt;补充：&lt;/h3&gt;
+&lt;p&gt;GET笔记导入为 markdown，使用 tauri 实现的跨平台客户端
+https://github.com/Duosl/biji2md_tauri
+打开get笔记刷新网页，安装以下步骤操作拿到Bearer后面的内容就是token
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260526010012622.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;软件界面如下，同步之前，进去设置，建议导出目录结构&lt;strong&gt;按主标签分组&lt;/strong&gt;或者&lt;strong&gt;平铺&lt;/strong&gt;
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260526010140943.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;相比第一个有个没有来源
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260526011705005.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;参考教程
+https://my.feishu.cn/wiki/FOBBw4Y5PisOU4k842VcIu0Sndb&lt;/p&gt;
 </content:encoded></item><item><title>阿里Qoder安装使用指南</title><link>https://dqtx.cc/posts/aihacks/%E9%98%BF%E9%87%8Cqoder/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E9%98%BF%E9%87%8Cqoder/</guid><pubDate>Thu, 21 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;AI编程的进化速度，快得让人窒息。当大多数人还停留在让AI“辅助写两行代码”或者“帮忙寻找Bug”的阶段时，编程的下一步范式已经悄然迈向了“全自动托管与智能体自主开发”。&lt;/p&gt;
 &lt;p&gt;最近，阿里憋了几个月终于放出了 Qoder 1.0 正式版。相较于早期的测试版本，这次的1.0版可以说是直接推倒重做，带着极简克制的UI界面和极其强悍的自动化调度能力杀回了战场。&lt;/p&gt;
 &lt;p&gt;官网网站
@@ -1642,11 +2043,64 @@ mklink /D &quot;C:\Users\Administrator\.workbuddy\skills&quot; &quot;C:\Users\Ad
 &lt;p&gt;如果你也有什么私藏神器，欢迎在评论区留言推荐，互相种草！觉得有帮助的话，点个赞再走呗～&lt;/p&gt;
 </content:encoded></item><item><title>Claude Code 窗口接管</title><link>https://dqtx.cc/posts/aihacks/claude-code-%E6%A1%A5%E6%8E%A5%E5%B7%A5%E5%85%B7/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/claude-code-%E6%A1%A5%E6%8E%A5%E5%B7%A5%E5%85%B7/</guid><pubDate>Sun, 10 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;很多开发者都有这样一个刚需：正在电脑上用 &lt;strong&gt;Claude Code&lt;/strong&gt; 开发项目，突然临时有事需要离开工位。 、&lt;/p&gt;
 &lt;p&gt;人一走，就没法继续和电脑端的 Claude Code 交互跟进任务。其实现在已有不少解决方案，可以通过技能把 Claude Code 桥接到第三方平台，比如飞书、微信、Telegram。哪怕不在电脑旁，也能随时查看开发进度、远程下发指令操控。&lt;/p&gt;
+&lt;p&gt;weclaw
+微信 AI Agent 桥接器 — 将微信消息接入 AI Agent（Claude、Codex、Gemini、Kimi 等）。
+https://github.com/fastclaw-ai/weclaw/blob/main/README_CN.md&lt;/p&gt;
 &lt;p&gt;在 Telegram使用Claude code
 https://github.com/hanxiao/claudecode-telegram&lt;/p&gt;
 &lt;p&gt;将 Claude Code / Codex 桥接到 IM 平台 —— 在 Telegram、Discord、飞书、QQ 或微信中与 AI 编程代理对话
 https://github.com/op7418/Claude-to-IM/blob/main/README.zh-CN.md
 https://github.com/op7418/Claude-to-IM-skill/blob/main/README_CN.md&lt;/p&gt;
+&lt;p&gt;将飞书即时通讯平台与 Claude Code CLI 桥接消息持续刷新，实时展示 Claude 的执行过程 - 工具调用、文件操作一目了然：
+https://github.com/Hanson/claude-client&lt;/p&gt;
+&lt;p&gt;微信桥接Claude code
+https://github.com/anxiong2025/wechat-ai
+https://mp.weixin.qq.com/s/6kdQgFr6xDccFxLkJhS1CA
+wechat-ai  微信官方 iLink API  高&lt;/p&gt;
+&lt;p&gt;微信、飞书桥接的Claude code
+https://github.com/lc2panda/claude-plugin-wechat&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;方案&lt;/th&gt;
+&lt;th&gt;原理&lt;/th&gt;
+&lt;th&gt;稳定性&lt;/th&gt;
+&lt;th&gt;封号风险&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;wechat-ai&lt;/td&gt;
+&lt;td&gt;微信官方 iLink API&lt;/td&gt;
+&lt;td&gt;高&lt;/td&gt;
+&lt;td&gt;几乎没有&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cc-connect&lt;/td&gt;
+&lt;td&gt;WebSocket 转发&lt;/td&gt;
+&lt;td&gt;中&lt;/td&gt;
+&lt;td&gt;低&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;逆向协议类&lt;/td&gt;
+&lt;td&gt;协议逆向&lt;/td&gt;
+&lt;td&gt;不确定&lt;/td&gt;
+&lt;td&gt;偏高&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;微信 iLink Bot API 通信协议规范&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;https://github.com/epiral/weixin-bot/blob/main/docs/protocol-spec.md&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 </content:encoded></item><item><title>博客导航栏抖动修复记</title><link>https://dqtx.cc/posts/technical/%E5%AF%BC%E8%88%AA%E6%A0%8F%E6%8A%96%E5%8A%A8%E4%BF%AE%E5%A4%8D%E8%AE%B0/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E5%AF%BC%E8%88%AA%E6%A0%8F%E6%8A%96%E5%8A%A8%E4%BF%AE%E5%A4%8D%E8%AE%B0/</guid><pubDate>Sun, 10 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这个 bug 折磨了我好几天。每次点博客导航栏上的链接，其他几个文字就像被电了一下，集体向右哆嗦一下再弹回来。不像什么大问题，但每次看到都很难受。&lt;/p&gt;
 &lt;p&gt;我尝试了不同的模型去修复这个问题，都没有找到真正的元凶&lt;/p&gt;
 &lt;h2&gt;第一回合：怀疑字体&lt;/h2&gt;
@@ -2928,6 +3382,11 @@ https://platform.xiaomimimo.com?ref=V4B9NJ&lt;/p&gt;
 &lt;li&gt;https://multipost.app/&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260515171109763.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;auto-upload&lt;/h3&gt;
+&lt;p&gt;本地 Web 工作台中完成，项目需要自己编译
+按 &lt;code&gt;抖音 -&amp;gt; 视频号 -&amp;gt; B站 -&amp;gt; 小红书 -&amp;gt; 快手&lt;/code&gt;的顺序执行多平台发布准备
+https://github.com/s840207702/auto-upload
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260526013028391.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;Postbot&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;特点&lt;/strong&gt;：需注册登录，且需邀请码 邀请码需要帮宣传获取&lt;a href=&quot;https://postbot.exmay.com/docs/usergroup&quot;&gt;参照&lt;/a&gt;&lt;/li&gt;
@@ -4256,7 +4715,7 @@ claude --dangerously-skip-permissions
 &lt;pre&gt;&lt;code&gt;winget install Git.Git
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;拉取仓库模板&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;get clone 
+&lt;pre&gt;&lt;code&gt;d: &amp;amp;&amp;amp; mkdir project2026 &amp;amp;&amp;amp; cd project2026 &amp;amp;&amp;amp; git clone https://github.com/dqtx760/obsidian-vault-template.git
 &lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
 &lt;li&gt;https://github.com/dqtx760/obsidian-vault-template&lt;/li&gt;
