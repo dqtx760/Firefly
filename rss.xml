@@ -503,24 +503,111 @@
 &lt;li&gt;在设置 → 首选项里关闭 TLS 加密&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;工具自带简体中文，在高级设置里切换，mac 版也一样，唯一的短板是不支持文件拖拽传输，但这属于锦上添花，日常操作已经够用了。&lt;/p&gt;
-</content:encoded></item><item><title>微信内容同步到 Obsidian：灵感随手记，自动入库</title><link>https://dqtx.cc/posts/software/%E5%BE%AE%E4%BF%A1%E5%86%85%E5%AE%B9%E5%90%8C%E6%AD%A5obsidian/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E5%BE%AE%E4%BF%A1%E5%86%85%E5%AE%B9%E5%90%8C%E6%AD%A5obsidian/</guid><pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;微信里看到的好文章、一闪而过的灵感、随手录的语音备忘——怎么快速存进 Obsidian？&lt;/p&gt;
-&lt;p&gt;网上有人用 vib coding 做了一个「Obsidian 内容同步助手」，微信小程序 + Obsidian 插件配合，支持剪贴板、录音、网页链接、文件同步。实测可用，流程很轻。&lt;/p&gt;
-&lt;h3&gt;操作步骤&lt;/h3&gt;
+</content:encoded></item><item><title>微信内容同步到Obsidian方案</title><link>https://dqtx.cc/posts/software/%E5%BE%AE%E4%BF%A1%E5%86%85%E5%AE%B9%E5%90%8C%E6%AD%A5obsidian/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E5%BE%AE%E4%BF%A1%E5%86%85%E5%AE%B9%E5%90%8C%E6%AD%A5obsidian/</guid><pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;微信里看到的好文章、一闪而过的灵感、随手录的语音备忘——怎么快速存进 Obsidian？本文介绍两种实测可用的同步方案。&lt;/p&gt;
+&lt;h3&gt;方案一：笔记同步助手&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;绑定流程&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;公众号关注「笔记同步助手」→ 点击左下角自定义菜单→开始使用「使用Obsidian」→获取密钥 、在微信中添加 Obsidian 为好友 → 复制密钥待会用。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;安装插件&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Obsidian 社区插件市场搜索 &lt;code&gt;Biji Tongbu&lt;/code&gt;，安装启用后粘贴密钥，建议勾选「启动时同步（本设备）」。&lt;/p&gt;
+&lt;p&gt;我的设置供参考：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;消息合并模式：仅合并消息&lt;/li&gt;
+&lt;li&gt;消息文件夹：&lt;code&gt;01-输入/微信&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;文章文件夹：&lt;code&gt;01-输入/微信&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;图片储存文件夹：&lt;code&gt;01-输入/微信/images&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;消息文件夹模板：&lt;code&gt;消息_{{{date}}}&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果想用 AI 帮你改插件设置，可以发送这段 Prompt：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;请先读 https://www.bijitongbu.site/tutorials/ai-settings-guide/ ，我安装了 Biji Tongbu 这个插件，帮我改下插件设置，然后帮我把笔记按年月分文件夹
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;📖 官网文档：https://www.bijitongbu.site/tutorials/obsidian-tutorial/&lt;/p&gt;
+&lt;h3&gt;方案二：Obsidian 内容同步助手&lt;/h3&gt;
+&lt;p&gt;有人用 vib coding 做了一个「Obsidian 内容同步助手」，微信小程序 + Obsidian 插件配合，支持剪贴板、录音、网页链接、文件同步。实测可用，流程很轻。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;操作步骤&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;一步：绑定小程序&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;微信搜索小程序「Obsidian 内容同步助手」→ 首页点击「绑定 Obsidian」→ 复制 6 位绑定码。&lt;/p&gt;
+&lt;p&gt;微信搜索小程序「Obsidian 内容同步助手」→ 首页点击「绑定 Obsidian」→ 复制 6 位绑定码。默认赠送 8 天会员试用。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/IMG_1177.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;二步：安装插件&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;在 Obsidian 社区插件市场搜索 &lt;strong&gt;WeChat Inbox Sync&lt;/strong&gt;，安装后进入设置，粘贴绑定码，点击「立即绑定」。记得勾选「启动时自动同步」。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260526003152490.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;使用体验&lt;/h3&gt;
+&lt;h4&gt;使用体验&lt;/h4&gt;
 &lt;p&gt;整体流畅，两个小槽点：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;非实时同步&lt;/strong&gt;：微信复制链接后打开小程序点「读取网页链接」，不会立即推送到 Obsidian，需要手动点击插件里的同步按钮&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;开屏广告&lt;/strong&gt;：小程序有广告，毕竟作者花时间开发，可以理解&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;开屏广告&lt;/strong&gt;：小程序有广告&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;好消息是每次重新打开 Obsidian 会自动拉取未同步的内容，日常使用影响不大。&lt;/p&gt;
 &lt;p&gt;参考：&lt;a href=&quot;https://my.feishu.cn/wiki/EPHhwqRobijHqfkAqjMcDEgvnlf&quot;&gt;飞书教程：WeChat Inbox Sync&lt;/a&gt;&lt;/p&gt;
-</content:encoded></item><item><title>UU远程终端——手机上丝滑用Claude Code</title><link>https://dqtx.cc/posts/aihacks/uu%E8%BF%9C%E7%A8%8B/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/uu%E8%BF%9C%E7%A8%8B/</guid><pubDate>Mon, 25 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;用手机操控电脑终端，这事以前要么折腾 SSH，要么忍着 TeamViewer 的笨重。现在 UU 远程一个功能就解决了——&lt;strong&gt;手机直接打开电脑的 cmd 终端&lt;/strong&gt;，丝滑敲 CLI。&lt;/p&gt;
+&lt;h3&gt;写在最后&lt;/h3&gt;
+&lt;p&gt;以上就是微信内容同步到 Obsidian 的两种方案。方案一免费但配置稍多，方案二更轻量但有小程序广告。按需选择即可。&lt;/p&gt;
+</content:encoded></item><item><title>微信读书同步Obsidian</title><link>https://dqtx.cc/posts/software/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6%E5%90%8C%E6%AD%A5obsidian/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6%E5%90%8C%E6%AD%A5obsidian/</guid><pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你在微信读书里划过多少条线？写过多少条想法？上一次回去翻它们又是什么时候？&lt;/p&gt;
+&lt;p&gt;我用了微信读书四年，划线 2000 多条，笔记写了上百条。说实话，99% 的内容画完就忘了——微信读书的笔记入口藏得太深，每次想回顾都要点好几层菜单，体验很差。&lt;/p&gt;
+&lt;p&gt;但问题是，这些划线笔记不是没用。它们是我读过的每一本书里最精华的片段，是我当时觉得&quot;这句话说得太对了&quot;才动手划下来的。&lt;/p&gt;
+&lt;p&gt;它们只是缺一个能被真正用起来的地方。&lt;/p&gt;
+&lt;p&gt;而 Obsidian，刚好是那个地方，&lt;/p&gt;
+&lt;h3&gt;Weread功能亮点&lt;/h3&gt;
+&lt;p&gt;功能很简单：&lt;strong&gt;把你的微信读书划线、笔记、书评，全部同步到 Obsidian 里&lt;/strong&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;划线&lt;/strong&gt;：你在任何书里划过的段落&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;想法/笔记&lt;/strong&gt;：读书时随手写的批注&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;热门划线&lt;/strong&gt;：别人划线最多的段落（可选关闭）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;书籍元数据&lt;/strong&gt;：书名、作者、封面、阅读时长&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;同步进来的内容以 Markdown 格式存储，带完整的 Frontmatter，支持 Dataview 查询，可以和 Obsidian 笔记做双链关联。&lt;/p&gt;
+&lt;h3&gt;安装插件&lt;/h3&gt;
+&lt;p&gt;进 Obsidian「&lt;strong&gt;设置 → 第三方插件 → 浏览插件市场&lt;/strong&gt;」，搜索 &lt;strong&gt;Weread&lt;/strong&gt;，安装并启用。&lt;/p&gt;
+&lt;h3&gt;账号绑定&lt;/h3&gt;
+&lt;p&gt;装好之后，进入插件设置页：&lt;/p&gt;
+&lt;p&gt;一、点击「&lt;strong&gt;登录&lt;/strong&gt;」按钮，会弹出微信读书网页版登录页，扫码就能绑定。&lt;/p&gt;
+&lt;p&gt;二、登录成功后，下拉找到「&lt;strong&gt;笔记文件夹分类&lt;/strong&gt;」这个选项，建议改成 &lt;strong&gt;图书分类&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;默认是按日期分类的（&lt;code&gt;2026-05-26/书名.md&lt;/code&gt;），改成图书分类后会变成 &lt;code&gt;书名/章节.md&lt;/code&gt;——一本书一个文件夹，结构更直观，也方便后续用 Dataview 按书名筛选。&lt;/p&gt;
+&lt;p&gt;三、其他选项按需调整：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;同步热门划线&lt;/strong&gt;：如果你只想看自己的笔记，可以关掉&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;同步元数据&lt;/strong&gt;：建议开着，书名、作者、封面等信息都会写进 Frontmatter&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;最小划线数&lt;/strong&gt;：一本书至少有几条划线才同步，设成 0 就是全部同步&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;一键同步&lt;/h3&gt;
+&lt;p&gt;配置好之后，在左侧边栏点微信读书图标。&lt;/p&gt;
+&lt;p&gt;打开面板，点右上角的「&lt;strong&gt;同步&lt;/strong&gt;」按钮。&lt;/p&gt;
+&lt;p&gt;第一次同步会比较慢，取决于你微信读书里有多少本书。我 400 多本书，第一次同步跑了大概两分钟。之后每次增量同步就很快了，十几秒搞定。&lt;/p&gt;
+&lt;p&gt;同步完成后，你的 Obsidian Vault 里会出现一个 &lt;code&gt;Weread&lt;/code&gt; 文件夹（或你自定义的文件夹名），里面按书名排列着所有你划过线的书。&lt;/p&gt;
+&lt;h3&gt;同步进来的笔记长什么样&lt;/h3&gt;
+&lt;p&gt;每本书是一个 Markdown 文件，Frontmatter 里包含：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+bookName: 书名
+author: 作者
+cover: 封面图URL
+readingTime: 阅读时长
+category: 分类
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;正文里，每条划线按章节排列，带发布时间、划线内容、你的批注。格式干净，可以直接用 Dataview 做查询。&lt;/p&gt;
+&lt;p&gt;举个例子，你可以建一个 Dataview 面板：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;TABLE author, readingTime
+FROM &quot;Weread&quot;
+SORT readingTime DESC
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这样就能一眼看到你读过哪些书、花了多长时间。&lt;/p&gt;
+&lt;p&gt;更实用的玩法是：&lt;strong&gt;把划线和批注用双链连接到你自己的笔记里&lt;/strong&gt;。比如你正在写一篇关于&quot;写作方法论&quot;的文章，可以在任意一条划线里 &lt;code&gt;[[写作方法论]]&lt;/code&gt; 把它关联进去——知识网络就这么慢慢建立起来了。&lt;/p&gt;
+&lt;h3&gt;总结&lt;/h3&gt;
+&lt;p&gt;总结一下，Get 笔记同步一样，&lt;strong&gt;工具只是把内容搬过来，整理还是得自己做&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;微信读书划线这个功能，很多人用了就忘了。Weread 插件干的活就是帮你把这些碎片内容从微信读书里&quot;救出来&quot;，放进一个真正能加工的地方。&lt;/p&gt;
+&lt;p&gt;但救出来之后怎么用，取决于你有没有动手去翻、去连、去写。&lt;/p&gt;
+&lt;p&gt;工具是把钥匙，门还得自己开。&lt;/p&gt;
+&lt;p&gt;&amp;gt;&amp;gt;&amp;gt;&lt;strong&gt;延伸阅读&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.dqtx.cc/posts/get-to-obsidian&quot;&gt;Get笔记同步Obsidian插件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/8kCbGmeXvB7cuJZGHaCdkw&quot;&gt;19 个 Obsidian 神仙插件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/LvxZCJG99fzyYbgmDJ73fA&quot;&gt;Dataview与Templater插件联动&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/kPjIpHmzciWY8_3ettEVsg&quot;&gt;Obsidian日记半自动化&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/lgdJ7DYSqRIS1b13QQnk3A&quot;&gt;Obsidian附件图片管理插件&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以上，既然看到这里了，如果觉得不错，随手&lt;strong&gt;点个赞、在看、转发&lt;/strong&gt;三连吧，如果想第一时间收到推送，也可以给我个星标⭐️～&lt;/p&gt;
+&lt;p&gt;谢谢你看我的文章，我们，下次再见。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&amp;gt;/ 作者：大强同学&lt;/em&gt;
+&lt;em&gt;&amp;gt;/ 更多干货，请访问：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+</content:encoded></item><item><title>UU远程手机终端操作CC</title><link>https://dqtx.cc/posts/aihacks/uu%E8%BF%9C%E7%A8%8B%E7%BB%88%E7%AB%AF/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/uu%E8%BF%9C%E7%A8%8B%E7%BB%88%E7%AB%AF/</guid><pubDate>Mon, 25 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;用手机操控电脑终端，这事以前要么折腾 SSH，要么忍着 TeamViewer 的笨重。现在 UU 远程一个功能就解决了——&lt;strong&gt;手机直接打开电脑的 cmd 终端&lt;/strong&gt;，丝滑敲 CLI。&lt;/p&gt;
 &lt;p&gt;这意味着你可以在手机上随时随地用 Codex、Claude Code 这些命令行 AI 工具，真正把开发环境装进口袋。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-uu-remote-v1.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;准备工作&lt;/h3&gt;
@@ -4055,6 +4142,21 @@ curl -o ~/.claude/CLAUDE.md \
 &lt;p&gt;Karpathy 的核心洞察就一句话：&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;别告诉 AI 怎么做，告诉它什么算做完，然后放手让它跑。&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
+</content:encoded></item><item><title>一个信息追踪 Python 脚本</title><link>https://dqtx.cc/posts/technical/%E4%B8%80%E4%B8%AA%E4%BF%A1%E6%81%AF%E8%BF%BD%E8%B8%AA-python-%E8%84%9A%E6%9C%AC/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E4%B8%80%E4%B8%AA%E4%BF%A1%E6%81%AF%E8%BF%BD%E8%B8%AA-python-%E8%84%9A%E6%9C%AC/</guid><pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这个开源项目，你丢一个名字/手机号/IP给它，得到关联的社交媒体账号、归属地、地理位置信息。&lt;/p&gt;
+&lt;p&gt;在 GitHub 已获取 11.8k star。
+项目地址
+https://github.com/HunxByts/GhostTrack&lt;/p&gt;
+&lt;p&gt;仅仅一个 Python 脚本，用来做 IP / 手机号 / 用户名的基础 OSINT 信息收集。&lt;/p&gt;
+&lt;p&gt;三个模块，覆盖常见情报场景：&lt;/p&gt;
+&lt;p&gt;IP Tracker：输入目标 IP，可获取基础地理位置信息，也可以结合 Seeker 等工具做进一步关联分析（例如辅助反查真实 IP）
+Phone Tracker：手机号归属地、运营商信息查询，属于 OSINT 中很常见的基础能力
+Username Tracker：输入用户名，跨多个平台搜索公开账号信息，把分散的社交媒体痕迹拼接起来&lt;/p&gt;
+&lt;p&gt;适合人群：&lt;/p&gt;
+&lt;p&gt;做渗透测试前期信息收集的安全工程师
+学习 OSINT 方法论的安全方向学生
+CTF 比赛中需要快速做信息侦察的选手
+对信息安全和数据关联分析感兴趣的开发者&lt;/p&gt;
+&lt;p&gt;⚠️ 需要强调：该工具仅用于合法授权的安全研究与学习用途，禁止用于任何未经授权的个人追踪或隐私侵犯行为。&lt;/p&gt;
 </content:encoded></item><item><title>ShareX截屏录屏教程！</title><link>https://dqtx.cc/posts/software/sharex/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/sharex/</guid><pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;关闭通知&lt;/h3&gt;
 &lt;p&gt;位置：动作设置→通知
 建议把“任务完成后显示短暂通知”取消打勾
@@ -4083,21 +4185,6 @@ https://mp.weixin.qq.com/s/npeJO3MccOCS0QSTIWYefw
 https://utgd.net/article/20685
 一个软件，满足你所有的截图需求：ShareX
 https://sspai.com/post/43937&lt;/p&gt;
-</content:encoded></item><item><title>一个信息追踪 Python 脚本</title><link>https://dqtx.cc/posts/technical/%E4%B8%80%E4%B8%AA%E4%BF%A1%E6%81%AF%E8%BF%BD%E8%B8%AA-python-%E8%84%9A%E6%9C%AC/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E4%B8%80%E4%B8%AA%E4%BF%A1%E6%81%AF%E8%BF%BD%E8%B8%AA-python-%E8%84%9A%E6%9C%AC/</guid><pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这个开源项目，你丢一个名字/手机号/IP给它，得到关联的社交媒体账号、归属地、地理位置信息。&lt;/p&gt;
-&lt;p&gt;在 GitHub 已获取 11.8k star。
-项目地址
-https://github.com/HunxByts/GhostTrack&lt;/p&gt;
-&lt;p&gt;仅仅一个 Python 脚本，用来做 IP / 手机号 / 用户名的基础 OSINT 信息收集。&lt;/p&gt;
-&lt;p&gt;三个模块，覆盖常见情报场景：&lt;/p&gt;
-&lt;p&gt;IP Tracker：输入目标 IP，可获取基础地理位置信息，也可以结合 Seeker 等工具做进一步关联分析（例如辅助反查真实 IP）
-Phone Tracker：手机号归属地、运营商信息查询，属于 OSINT 中很常见的基础能力
-Username Tracker：输入用户名，跨多个平台搜索公开账号信息，把分散的社交媒体痕迹拼接起来&lt;/p&gt;
-&lt;p&gt;适合人群：&lt;/p&gt;
-&lt;p&gt;做渗透测试前期信息收集的安全工程师
-学习 OSINT 方法论的安全方向学生
-CTF 比赛中需要快速做信息侦察的选手
-对信息安全和数据关联分析感兴趣的开发者&lt;/p&gt;
-&lt;p&gt;⚠️ 需要强调：该工具仅用于合法授权的安全研究与学习用途，禁止用于任何未经授权的个人追踪或隐私侵犯行为。&lt;/p&gt;
 </content:encoded></item><item><title>Xiaomi MiMo百万亿 Token 激励计划</title><link>https://dqtx.cc/posts/aihacks/xiaomi-mimo%E7%99%BE%E4%B8%87%E4%BA%BFtoken/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/xiaomi-mimo%E7%99%BE%E4%B8%87%E4%BA%BFtoken/</guid><pubDate>Wed, 29 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Xiaomi MiMo 将面向全球 AI 用户进行免费 Token 发放，我们将在 30 天内发放总计 100 万亿（100T） Token 权益，赠完即止。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260429164836641.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;活动说明&lt;/h3&gt;
