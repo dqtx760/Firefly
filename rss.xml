@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>大强博客</title><description>技术分享与实践</description><link>https://dqtx.cc/</link><language>zh_CN</language><item><title>个人说明书</title><link>https://dqtx.cc/posts/technical/00%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/00%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/</guid><pubDate>Sat, 30 Nov 2024 16:45:00 GMT</pubDate><content:encoded>&lt;h2&gt;关于我&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>大强博客</title><description>大强同学｜AI 探索与技术分享</description><link>https://dqtx.cc/</link><language>zh_CN</language><item><title>个人说明书</title><link>https://dqtx.cc/posts/technical/00%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/00%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/</guid><pubDate>Sat, 30 Nov 2024 16:45:00 GMT</pubDate><content:encoded>&lt;h2&gt;关于我&lt;/h2&gt;
 &lt;hr /&gt;
 &lt;p&gt;92年生人，数字生产力玩家、Build in Public 践行者、工作流构建者，效率工具挖掘、AI新鲜玩法探索、出海实操攻略研究，教你用AI干掉90%的重复劳动！提供可落地的定制化远程技术服务！&lt;/p&gt;
 &lt;p&gt;• 🛠️ 正在做 — 让 AI Coding Agent 的 Skills 跨平台管理变简单&lt;/p&gt;
@@ -503,7 +503,41 @@
 &lt;li&gt;在设置 → 首选项里关闭 TLS 加密&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;工具自带简体中文，在高级设置里切换，mac 版也一样，唯一的短板是不支持文件拖拽传输，但这属于锦上添花，日常操作已经够用了。&lt;/p&gt;
+</content:encoded></item><item><title>Obsidian联动notebooklm</title><link>https://dqtx.cc/posts/software/obsidian%E8%81%94%E5%8A%A8notebooklm/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/obsidian%E8%81%94%E5%8A%A8notebooklm/</guid><pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;NotebookLM 的 AI 能力对 Obsidian 是极好的补充——Deep Research、Audio Overview、PPT 生成，每一样都实用。但问题是每次都要开网页、手动传文件，笔记一多简直是灾难。&lt;/p&gt;
+&lt;p&gt;今天教你用 Claude Code 把 NotebookLM 的全部功能塞进 Obsidian。不用打开浏览器，不用花一分钱 API Token，在笔记库里一句话就能跑 Deep Research、自动生成 PPT 和播客音频。&lt;/p&gt;
+&lt;h3&gt;环境准备&lt;/h3&gt;
+&lt;p&gt;开始之前，确保你的环境有以下东西：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Claude Code&lt;/strong&gt;：https://claude.com/product/claude-code&lt;/li&gt;
+&lt;li&gt;**NotebookLM-py：https://github.com/teng-lin/notebooklm-py&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Obsidian&lt;/strong&gt;：https://obsidian.md/zh/&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;装上之后，你只需要在 Claude Code 中用自然语言描述需求，剩下的全自动——创建笔记本、导入资料、生成内容、导出文件，全在 Obsidian 内部完成。&lt;/p&gt;
+&lt;p&gt;下面用三个案例，从简单到复杂，展示这套工作流的实际威力。&lt;/p&gt;
+&lt;h3&gt;场景案例&lt;/h3&gt;
+&lt;h4&gt;案例一：Deep Research + 自动生成 PPT&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;使用 notebooklm skill，对 &apos;OpenClaw vs Hermes Agent&apos; 进行Web深度研究（Deep Research）。将搜集到的相关信源自动建立 NotebookLM，把所有被引用文献的全文（Markdown 格式）导出并存放到 /notebooklm/research/ 目录，最后生成一份演示文稿（Slide Deck），存入当前项目的根目录。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;案例二：本地笔记 → 测验 + 播客 + 信息图&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;读取我本地 /notes/ 文件夹下的所有有关 claude code 的笔记。使用 notebooklm skill，利用这些笔记在 NotebookLM 中创建一个笔记本，并生成一套困难难度的 Quiz 测验，一部辩论格式的音频（Audio Overview），和一份资讯图表（Infographic），将生成的测验以 Markdown 格式保存到项目根目录中，将生成的音频和资讯图表下载到项目根目录中。注意：测验、音频和资讯图表都要使用中文。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;案例三：零基础 AI 学习——从规划到落地页全自动&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;我是一个完全零基础的AI小白，希望从几个不同维度学习AI，既能赶上时代潮流，也能在未来从事相关工作。结合2026年AI发展的趋势，请为我推荐3到4个必须彻底掌握的具体领域，以及1到2个未来需要进阶的潜在领域。请给出这5个不同方向的主题，并分别做出简要解释。
+
+同时在NotebookLM上分别创建5个涵盖不同领域的独立笔记本。针对每个主题，都要使用其“源文件”（Sources）功能，并确保每个笔记本都包含内容丰富、来源多样的资料。同时，请务必注意信息的时效性与可靠性。
+
+帮我将你搜集到的内容全部自动导入到各自的笔记本里面，并且针对每一个笔记本都帮我制作一张信息图，并把链接也发过来让我可以直接点击
+
+另外，请根据我nbookLM里面的内容，帮我制定一个一个月的学习计划，包含我一定需要看到的youtube链接，并且我需要你帮我筛选一下视频的质量。我需要发布时间在6个月以内播放量在1万以上的视频。同时请直接在左侧的项目中帮我创建这份计划书。
+
+同时根据我从NotebookLM中提取的内容，这份以及这份学习计划，帮我创建一个可以交互的落地页，我需要简单的功能是可以进学习进度的追踪，自由标记我的学习进度，页UI要好看，内部链接点击可以直接跳转。另外，有完善动画，登录界面，一键部署github，部署Vercel。搞完直接使用内部的浏览器帮我打开我要测试一下功能
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;写在最后&lt;/h3&gt;
+&lt;p&gt;三个案例，从简单到复杂，核心就一句话：&lt;strong&gt;把「手动操作网页」变成「一句话指令」&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;以前用 NotebookLM：打开浏览器 → 登录 → 创建笔记本 → 一个一个上传文件 → 手动点生成 → 手动点导出。笔记多了以后，光管理笔记本就能把你耗死。&lt;/p&gt;
+&lt;p&gt;现在你只需要在 Obsidian 里敲一行自然语言，Claude Code 帮你跑完所有步骤。&lt;/p&gt;
 </content:encoded></item><item><title>微信内容同步到Obsidian方案</title><link>https://dqtx.cc/posts/software/%E5%BE%AE%E4%BF%A1%E5%86%85%E5%AE%B9%E5%90%8C%E6%AD%A5obsidian/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E5%BE%AE%E4%BF%A1%E5%86%85%E5%AE%B9%E5%90%8C%E6%AD%A5obsidian/</guid><pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;微信里看到的好文章、一闪而过的灵感、随手录的语音备忘——怎么快速存进 Obsidian？本文介绍两种实测可用的同步方案。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-wechat-obsidian-20260526-174500.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;方案一：笔记同步助手&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;绑定流程&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;公众号关注「笔记同步助手」→ 点击左下角自定义菜单→开始使用「使用Obsidian」→获取密钥 、在微信中添加 Obsidian 为好友 → 复制密钥待会用。&lt;/p&gt;
@@ -520,7 +554,8 @@
 &lt;p&gt;如果想用 AI 帮你改插件设置，可以发送这段 Prompt：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;请先读 https://www.bijitongbu.site/tutorials/ai-settings-guide/ ，我安装了 Biji Tongbu 这个插件，帮我改下插件设置，然后帮我把笔记按年月分文件夹
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;📖 官网文档：https://www.bijitongbu.site/tutorials/obsidian-tutorial/&lt;/p&gt;
+&lt;p&gt;📖 官网文档：
+https://www.bijitongbu.site/tutorials/obsidian-tutorial/&lt;/p&gt;
 &lt;h3&gt;方案二：Obsidian 内容同步助手&lt;/h3&gt;
 &lt;p&gt;有人用 vib coding 做了一个「Obsidian 内容同步助手」，微信小程序 + Obsidian 插件配合，支持剪贴板、录音、网页链接、文件同步。实测可用，流程很轻。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;操作步骤&lt;/strong&gt;&lt;/p&gt;
@@ -540,6 +575,16 @@
 &lt;p&gt;参考：&lt;a href=&quot;https://my.feishu.cn/wiki/EPHhwqRobijHqfkAqjMcDEgvnlf&quot;&gt;飞书教程：WeChat Inbox Sync&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;写在最后&lt;/h3&gt;
 &lt;p&gt;以上就是微信内容同步到 Obsidian 的两种方案。方案一免费但配置稍多，方案二更轻量但有小程序广告。按需选择即可。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/a40746dd7c4aef1a757eedac61ca79e9.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/2eqmgz77JXHaYgL6-TWBdA&quot;&gt;一键把 Get 笔记同步到 Obsidian&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;p&gt;那么，既然看到这里了，如果觉得不错，随手&lt;strong&gt;点个赞、在看、转发&lt;/strong&gt;三连吧！想第一时间收到推送，可以给我个星标⭐️～&lt;/p&gt;
+&lt;p&gt;谢谢你看我的文章，我们，下次再见。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/%E6%9C%AA%E5%91%BD%E5%90%8D%E7%9A%84%E8%AE%BE%E8%AE%A1.webp&quot; alt=&quot;&quot; /&gt;
+&lt;em&gt;&amp;gt;/ 作者：大强同学&lt;/em&gt;
+&lt;em&gt;&amp;gt;/ 更多干货，请访问：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 </content:encoded></item><item><title>微信读书同步Obsidian</title><link>https://dqtx.cc/posts/software/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6%E5%90%8C%E6%AD%A5obsidian/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6%E5%90%8C%E6%AD%A5obsidian/</guid><pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你在微信读书里划过多少条线？写过多少条想法？上一次回去翻它们又是什么时候？&lt;/p&gt;
 &lt;p&gt;我用了微信读书四年，划线 2000 多条，笔记写了上百条。说实话，99% 的内容画完就忘了——微信读书的笔记入口藏得太深，每次想回顾都要点好几层菜单，体验很差。&lt;/p&gt;
 &lt;p&gt;但问题是，这些划线笔记不是没用。它们是我读过的每一本书里最精华的片段，是我当时觉得&quot;这句话说得太对了&quot;才动手划下来的。&lt;/p&gt;
@@ -606,6 +651,65 @@ SORT readingTime DESC
 &lt;p&gt;以上，既然看到这里了，如果觉得不错，随手&lt;strong&gt;点个赞、在看、转发&lt;/strong&gt;三连吧，如果想第一时间收到推送，也可以给我个星标⭐️～&lt;/p&gt;
 &lt;p&gt;谢谢你看我的文章，我们，下次再见。&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&amp;gt;/ 作者：大强同学&lt;/em&gt;
+&lt;em&gt;&amp;gt;/ 更多干货，请访问：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+</content:encoded></item><item><title>chrome插件Obsidian Web Clipper</title><link>https://dqtx.cc/posts/software/%E7%BD%91%E9%A1%B5%E5%89%AA%E8%97%8Fobsidian/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E7%BD%91%E9%A1%B5%E5%89%AA%E8%97%8Fobsidian/</guid><pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天给使用 Obsidian 的朋友推荐一款 Chrome 插件——&lt;strong&gt;Obsidian Web Clipper&lt;/strong&gt;，可以把网页上的任何内容一键剪藏到你的 Obsidian 知识库。&lt;/p&gt;
+&lt;p&gt;Chrome 商店直接搜 &lt;strong&gt;Obsidian Web Clipper&lt;/strong&gt; 即可安装。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-obsidian-clipper-20260527-175000.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;安装与设置&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;资源&lt;/th&gt;
+&lt;th&gt;链接&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Chrome 插件&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://9lnk.io/tr0g&quot;&gt;https://9lnk.io/tr0g&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;开源地址&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/obsidianmd/obsidian-clipper&quot;&gt;https://github.com/obsidianmd/obsidian-clipper&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4&gt;设置语言&lt;/h4&gt;
+&lt;p&gt;安装完插件后，第一件事设置语言：&lt;/p&gt;
+&lt;p&gt;依次点击 &lt;strong&gt;General → Language&lt;/strong&gt;，选择&lt;strong&gt;中文简体&lt;/strong&gt;。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260526223221463.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h4&gt;模板配置&lt;/h4&gt;
+&lt;p&gt;想简单写，点击 &lt;strong&gt;Default&lt;/strong&gt;，笔记位置填写个相对路径，内容属性填写3条：来源、日期、标签。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260526224433776.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;想复杂点，点击模板 &lt;strong&gt;Default&lt;/strong&gt;→导入（右上角），导入模板后把默认模板 Default 删除即可。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260526223231361.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;自用模板可关注公众号&lt;strong&gt;大强同学&lt;/strong&gt;，回复「clippings」获取。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260526223319188.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h4&gt;配置 API 解释器&lt;/h4&gt;
+&lt;p&gt;打开&lt;strong&gt;启用解释器&lt;/strong&gt;，开启&lt;strong&gt;行为 → 自动运行&lt;/strong&gt;，提供商选择 &lt;strong&gt;OpenRouter&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260526223338173.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;剪藏场景&lt;/h3&gt;
+&lt;p&gt;使用前建议先把插件固定到工具栏，后面一键就能用。&lt;/p&gt;
+&lt;h4&gt;整页剪藏&lt;/h4&gt;
+&lt;p&gt;看到一篇好文章想存下来慢慢看？点一下插件图标，再点&lt;strong&gt;添加到 Obsidian&lt;/strong&gt;，文章就进库了。&lt;/p&gt;
+&lt;h4&gt;片段剪藏&lt;/h4&gt;
+&lt;p&gt;只想存某几段话？划选文字 → 右键 &lt;strong&gt;Obsidian Web Clipper&lt;/strong&gt; → 在页面中打开 → 添加到 Obsidian。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260526225434965.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;这个插件是Obsidian出品的，整体在电脑网页阅读场景做剪藏，非常丝滑，不仅仅是任何文章内容，还可以划选文字。&lt;/p&gt;
+&lt;p&gt;但是有个问题，他剪藏的X推文链接不完整，我借助的插件是XViral Monitor可以直接复制推文mrkdown
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260526230246894.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&amp;gt;&amp;gt;&amp;gt;&lt;strong&gt;延伸阅读&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/o4_lH_v8DvhWsJ6ExAt2ZA&quot;&gt;一键把微信微信文章同步Obsidian&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/2eqmgz77JXHaYgL6-TWBdA&quot;&gt;一键把Get笔记同步到 Obsidian&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;p&gt;以上，既然看到这里了，如果觉得不错，随手&lt;strong&gt;点个赞、在看、转发&lt;/strong&gt;三连吧！想第一时间收到推送，可以给我个星标⭐️～&lt;/p&gt;
+&lt;p&gt;谢谢你看我的文章，我们，下次再见。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/%E6%9C%AA%E5%91%BD%E5%90%8D%E7%9A%84%E8%AE%BE%E8%AE%A1.webp&quot; alt=&quot;&quot; /&gt;
+&lt;em&gt;&amp;gt;/ 作者：大强同学&lt;/em&gt;
 &lt;em&gt;&amp;gt;/ 更多干货，请访问：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 </content:encoded></item><item><title>UU远程手机终端操作CC</title><link>https://dqtx.cc/posts/aihacks/uu%E8%BF%9C%E7%A8%8B%E7%BB%88%E7%AB%AF/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/uu%E8%BF%9C%E7%A8%8B%E7%BB%88%E7%AB%AF/</guid><pubDate>Mon, 25 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;用手机操控电脑终端，这事以前要么折腾 SSH，要么忍着 TeamViewer 的笨重。现在 UU 远程一个功能就解决了——&lt;strong&gt;手机直接打开电脑的 cmd 终端&lt;/strong&gt;，丝滑敲 CLI。&lt;/p&gt;
 &lt;p&gt;这意味着你可以在手机上随时随地用 Codex、Claude Code 这些命令行 AI 工具，真正把开发环境装进口袋。&lt;/p&gt;
@@ -4142,21 +4246,6 @@ curl -o ~/.claude/CLAUDE.md \
 &lt;p&gt;Karpathy 的核心洞察就一句话：&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;别告诉 AI 怎么做，告诉它什么算做完，然后放手让它跑。&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-</content:encoded></item><item><title>一个信息追踪 Python 脚本</title><link>https://dqtx.cc/posts/technical/%E4%B8%80%E4%B8%AA%E4%BF%A1%E6%81%AF%E8%BF%BD%E8%B8%AA-python-%E8%84%9A%E6%9C%AC/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E4%B8%80%E4%B8%AA%E4%BF%A1%E6%81%AF%E8%BF%BD%E8%B8%AA-python-%E8%84%9A%E6%9C%AC/</guid><pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这个开源项目，你丢一个名字/手机号/IP给它，得到关联的社交媒体账号、归属地、地理位置信息。&lt;/p&gt;
-&lt;p&gt;在 GitHub 已获取 11.8k star。
-项目地址
-https://github.com/HunxByts/GhostTrack&lt;/p&gt;
-&lt;p&gt;仅仅一个 Python 脚本，用来做 IP / 手机号 / 用户名的基础 OSINT 信息收集。&lt;/p&gt;
-&lt;p&gt;三个模块，覆盖常见情报场景：&lt;/p&gt;
-&lt;p&gt;IP Tracker：输入目标 IP，可获取基础地理位置信息，也可以结合 Seeker 等工具做进一步关联分析（例如辅助反查真实 IP）
-Phone Tracker：手机号归属地、运营商信息查询，属于 OSINT 中很常见的基础能力
-Username Tracker：输入用户名，跨多个平台搜索公开账号信息，把分散的社交媒体痕迹拼接起来&lt;/p&gt;
-&lt;p&gt;适合人群：&lt;/p&gt;
-&lt;p&gt;做渗透测试前期信息收集的安全工程师
-学习 OSINT 方法论的安全方向学生
-CTF 比赛中需要快速做信息侦察的选手
-对信息安全和数据关联分析感兴趣的开发者&lt;/p&gt;
-&lt;p&gt;⚠️ 需要强调：该工具仅用于合法授权的安全研究与学习用途，禁止用于任何未经授权的个人追踪或隐私侵犯行为。&lt;/p&gt;
 </content:encoded></item><item><title>ShareX截屏录屏教程！</title><link>https://dqtx.cc/posts/software/sharex/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/sharex/</guid><pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;关闭通知&lt;/h3&gt;
 &lt;p&gt;位置：动作设置→通知
 建议把“任务完成后显示短暂通知”取消打勾
@@ -4185,6 +4274,21 @@ https://mp.weixin.qq.com/s/npeJO3MccOCS0QSTIWYefw
 https://utgd.net/article/20685
 一个软件，满足你所有的截图需求：ShareX
 https://sspai.com/post/43937&lt;/p&gt;
+</content:encoded></item><item><title>一个信息追踪 Python 脚本</title><link>https://dqtx.cc/posts/technical/%E4%B8%80%E4%B8%AA%E4%BF%A1%E6%81%AF%E8%BF%BD%E8%B8%AA-python-%E8%84%9A%E6%9C%AC/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E4%B8%80%E4%B8%AA%E4%BF%A1%E6%81%AF%E8%BF%BD%E8%B8%AA-python-%E8%84%9A%E6%9C%AC/</guid><pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这个开源项目，你丢一个名字/手机号/IP给它，得到关联的社交媒体账号、归属地、地理位置信息。&lt;/p&gt;
+&lt;p&gt;在 GitHub 已获取 11.8k star。
+项目地址
+https://github.com/HunxByts/GhostTrack&lt;/p&gt;
+&lt;p&gt;仅仅一个 Python 脚本，用来做 IP / 手机号 / 用户名的基础 OSINT 信息收集。&lt;/p&gt;
+&lt;p&gt;三个模块，覆盖常见情报场景：&lt;/p&gt;
+&lt;p&gt;IP Tracker：输入目标 IP，可获取基础地理位置信息，也可以结合 Seeker 等工具做进一步关联分析（例如辅助反查真实 IP）
+Phone Tracker：手机号归属地、运营商信息查询，属于 OSINT 中很常见的基础能力
+Username Tracker：输入用户名，跨多个平台搜索公开账号信息，把分散的社交媒体痕迹拼接起来&lt;/p&gt;
+&lt;p&gt;适合人群：&lt;/p&gt;
+&lt;p&gt;做渗透测试前期信息收集的安全工程师
+学习 OSINT 方法论的安全方向学生
+CTF 比赛中需要快速做信息侦察的选手
+对信息安全和数据关联分析感兴趣的开发者&lt;/p&gt;
+&lt;p&gt;⚠️ 需要强调：该工具仅用于合法授权的安全研究与学习用途，禁止用于任何未经授权的个人追踪或隐私侵犯行为。&lt;/p&gt;
 </content:encoded></item><item><title>Xiaomi MiMo百万亿 Token 激励计划</title><link>https://dqtx.cc/posts/aihacks/xiaomi-mimo%E7%99%BE%E4%B8%87%E4%BA%BFtoken/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/xiaomi-mimo%E7%99%BE%E4%B8%87%E4%BA%BFtoken/</guid><pubDate>Wed, 29 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Xiaomi MiMo 将面向全球 AI 用户进行免费 Token 发放，我们将在 30 天内发放总计 100 万亿（100T） Token 权益，赠完即止。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260429164836641.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;活动说明&lt;/h3&gt;
@@ -8189,7 +8293,7 @@ https://github.com/PleasePrompto/notebooklm-mcp
 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;我目前比较关注AI医疗行业。同时我对AI硬件AI漫具等方向也非常的感兴趣。我每天可以拿出两个时时间学习AI，请根据我nbookLM里面的内容，帮我制定一个一个月的学习计划，包含我一定需要看到的youtube链接，并且我需要你帮我筛选一下视频的质量。我需要发布时间在6个月以内播放量在1万以上的视频。同时请直接在左侧的项目中帮我创建这份计划书。
 &lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;根据我从NotebookLM中提取的内容，这份以及这份学习计划，帮我创建一个可以交互的落地页，我需要简单的功能是可以进学习进度的追踪嗯，自由标记我的学习进度，页UI要好看，内部链接点击可以直接跳转。另外，有完善动画，登录界面，一键部署github，部署Vercel。搞完直接使用内部的浏览器帮我打开我要测试一下功能
+&lt;pre&gt;&lt;code&gt;根据我从NotebookLM中提取的内容，这份以及这份学习计划，帮我创建一个可以交互的落地页，我需要简单的功能是可以进学习进度的追踪，自由标记我的学习进度，页UI要好看，内部链接点击可以直接跳转。另外，有完善动画，登录界面，一键部署github，部署Vercel。搞完直接使用内部的浏览器帮我打开我要测试一下功能
 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;帮我把这个文件上传到notebooklm里面，新建一个名为品牌指南的笔记本保存进去。@xxx.MD
 &lt;/code&gt;&lt;/pre&gt;
@@ -9135,6 +9239,12 @@ opkg install luci-i18n-passwall2-zh-cn
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td&gt;&lt;a href=&quot;https://github.com/doublewater777/jike-web-cli&quot;&gt;jike-web-cli&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/huohuoer/wechat-cli&quot;&gt;wechat-cli&lt;/a&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
 &lt;td&gt;&lt;/td&gt;
