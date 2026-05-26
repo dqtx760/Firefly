@@ -19,11 +19,11 @@ export const noticeConfig: NoticeConfig = {
 
 export const siteConfig: SiteConfig = {
 	title: "大强博客",
-	subtitle: "技术分享与实践",
+	subtitle: "大强同学｜AI 探索与技术分享",
 	description:
-		"分享网络技术、服务器部署、内网穿透、静态网站搭建、CDN优化、容器化部署等技术教程与实践经验的个人技术博客，专注于云原生、无服务器架构和前后端开发，作者为Derek Zhao",
+		"大强同学(Derek Zhao)的个人技术博客，分享网络技术、服务器部署、内网穿透、静态网站搭建、CDN优化、容器化部署等技术教程与实践经验，专注于云原生、无服务器架构和前后端开发。",
 
-	keywords: [],
+	keywords: ["大强博客", "大强同学", "Derek Zhao", "dqtx", "技术博客"],
 	lang: "zh_CN", // 'en', 'zh_CN', 'zh_TW', 'ja', 'ko', 'es', 'th'
 	themeColor: {
 		hue: 250, // 纯蓝色系 - 天蓝色调
@@ -132,7 +132,7 @@ export const navBarConfig: NavBarConfig = {
 export const profileConfig: ProfileConfig = {
 	avatar: "/avatar.jpg", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
 	name: "Derek Zhao",
-	bio: "Build in Public 践行者<br>AI探索 · 效率工具 · 出海实操<br>提供定制化远程技术服务",
+	bio: "大强同学 Derek Zhao<br>Build in Public 践行者<br>AI探索 · 效率工具 · 出海实操",
 	links: [
 		{
 			name: "微信",

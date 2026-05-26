@@ -12,6 +12,8 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/IMG_1177.web
 ---
 微信里看到的好文章、一闪而过的灵感、随手录的语音备忘——怎么快速存进 Obsidian？本文介绍两种实测可用的同步方案。
 
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-wechat-obsidian-20260526-174500.webp)
+
 
 ### 方案一：笔记同步助手
 
@@ -37,7 +39,8 @@ Obsidian 社区插件市场搜索 `Biji Tongbu`，安装启用后粘贴密钥，
 请先读 https://www.bijitongbu.site/tutorials/ai-settings-guide/ ，我安装了 Biji Tongbu 这个插件，帮我改下插件设置，然后帮我把笔记按年月分文件夹
 ```
 
-📖 官网文档：https://www.bijitongbu.site/tutorials/obsidian-tutorial/
+📖 官网文档：
+https://www.bijitongbu.site/tutorials/obsidian-tutorial/
 
 
 ### 方案二：Obsidian 内容同步助手
@@ -72,3 +75,15 @@ Obsidian 社区插件市场搜索 `Biji Tongbu`，安装启用后粘贴密钥，
 ### 写在最后
 
 以上就是微信内容同步到 Obsidian 的两种方案。方案一免费但配置稍多，方案二更轻量但有小程序广告。按需选择即可。
+
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/a40746dd7c4aef1a757eedac61ca79e9.webp)
+
+- [一键把 Get 笔记同步到 Obsidian](https://mp.weixin.qq.com/s/2eqmgz77JXHaYgL6-TWBdA)
+
+---
+那么，既然看到这里了，如果觉得不错，随手**点个赞、在看、转发**三连吧！想第一时间收到推送，可以给我个星标⭐️～
+
+谢谢你看我的文章，我们，下次再见。
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/未命名的设计.webp)
+*\>/ 作者：大强同学*
+*\>/ 更多干货，请访问：[dqtx.cc](https://www.dqtx.cc/)*

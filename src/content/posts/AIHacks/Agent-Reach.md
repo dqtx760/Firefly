@@ -160,6 +160,7 @@ Agent-Reach 的目标是统一调用各类上游CLI工具，以下是与之相�
 | [bb-browser](https://github.com/epiral/bb-browser/blob/main/README.zh-CN.md) |                     |                 |             |
 | [x-reader](https://github.com/runesleo/x-reader/blob/main/README.zh-CN.md)   |                     |                 |             |
 | [jike-web-cli](https://github.com/doublewater777/jike-web-cli)               |                     |                 |             |
+| [wechat-cli](https://github.com/huohuoer/wechat-cli)                         |                     |                 |             |
 
 
 ### 写在最后

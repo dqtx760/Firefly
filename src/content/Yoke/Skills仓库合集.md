@@ -87,6 +87,7 @@ https://github.com/dqtx760/skills-manage
 | 文章去AI味                    | [humanizer](https://github.com/blader/humanizer)                                                               |     |                                                               |
 | 卡兹克风格创作                   | [khazix-skills](https://github.com/KKKKhazix/khazix-skills)                                                    |     |                                                               |
 | 剪映SRT校对员                  | [SRT-Proofreader](https://clawhub.ai/kapiai/srt-proofreader#versions)                                          |     |                                                               |
+| 剪映                        | https://github.com/Ceeon/videocut-skills/tree/main                                                             |     |                                                               |
 
 [Notion备份](https://www.notion.so/skill-347351994e408091a13be04d19c62d1e)
 

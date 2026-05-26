@@ -77,6 +77,20 @@ const bannerOffsetByPosition = {
 };
 const bannerOffset =
 	bannerOffsetByPosition[siteConfig.banner.position || "center"];
+
+const homePageSchema = isHomePage ? JSON.stringify({
+	"@context": "https://schema.org",
+	"@type": "WebSite",
+	"name": siteConfig.title,
+	"url": Astro.site?.href || "https://dqtx.cc",
+	"description": siteConfig.description,
+	"author": {
+		"@type": "Person",
+		"name": profileConfig.name,
+		"url": Astro.site?.href || "https://dqtx.cc",
+		"description": "大强同学，Derek Zhao，Build in Public 践行者",
+	},
+}) : null;
 ---
 
 <!DOCTYPE html>
@@ -111,6 +125,8 @@ const bannerOffset =
 
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+	        <link rel="canonical" href={Astro.url}>
+        {homePageSchema && <script type="application/ld+json" set:html={homePageSchema}></script>}
         <link rel="preconnect" href="https://pic1.acofork.com" />
         <link rel="preconnect" href="https://umami.acofork.com" />
         <link rel="preconnect" href="https://support.nodeget.com" />
