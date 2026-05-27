@@ -5,7 +5,7 @@ tags: []
 category: Software
 draft: false
 pinned: false
-image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/a40746dd7c4aef1a757eedac61ca79e9.webp
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-obsidian-git-backup-20260524-195651.webp
 ---
 Obsidian 的核心价值在于「本地优先」——你的笔记数据完全归你所有。但「本地优先」也意味着你需要自己兜底数据安全：写了几百天的笔记，可能因为一次硬盘故障、误删、代码翻车甚至电脑丢失就全部消失。
 

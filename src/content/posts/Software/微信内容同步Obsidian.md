@@ -8,7 +8,7 @@ tags:
 category: Software
 draft: false
 pinned: false
-image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/IMG_1177.webp
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-wechat-obsidian-20260526-174500.webp
 ---
 微信里看到的好文章、一闪而过的灵感、随手录的语音备忘——怎么快速存进 Obsidian？本文介绍两种实测可用的同步方案。
 
