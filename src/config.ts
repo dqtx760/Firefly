@@ -98,7 +98,7 @@ export const navBarConfig: NavBarConfig = {
 		},
 		{
 			name: "About",
-			url: "https://cv.dqtx.cc/",
+			url: "https://ai.dqtx.cc/",
 			external: true,
 		},
 		{
