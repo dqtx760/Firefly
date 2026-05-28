@@ -35,10 +35,10 @@ wechat-ai  微信官方 iLink API  高
 微信、飞书桥接的Claude code
 https://github.com/lc2panda/claude-plugin-wechat
 
-|方案|原理|稳定性|封号风险|
-|---|---|---|---|
-|wechat-ai|微信官方 iLink API|高|几乎没有|
-|cc-connect|WebSocket 转发|中|低|
-|逆向协议类|协议逆向|不确定|偏高|
+| 方案         | 原理             | 稳定性 | 封号风险 |
+| ---------- | -------------- | --- | ---- |
+| wechat-ai  | 微信官方 iLink API | 高   | 几乎没有 |
+| cc-connect | WebSocket 转发   | 中   | 低    |
+| 逆向协议类      | 协议逆向           | 不确定 | 偏高   |
 微信 iLink Bot API 通信协议规范
 https://github.com/epiral/weixin-bot/blob/main/docs/protocol-spec.md

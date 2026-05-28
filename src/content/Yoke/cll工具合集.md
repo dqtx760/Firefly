@@ -61,7 +61,7 @@ https://github.com/jackwener/wx-cli
 
 #### gcli
 一个 Gmail 只读 CLI
-[gcli，一个 Gmail 只读 CLI](../01-输入/0_Clipings/gcli，一个%20Gmail%20只读%20CLI.md)
+[gcli，一个 Gmail 只读 CLI](../01-输入/01-Clipings/gcli，一个%20Gmail%20只读%20CLI.md)
 
 ### 参考
 cll工具导航
