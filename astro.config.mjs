@@ -276,9 +276,9 @@ export default defineConfig({
 						return "export default {}";
 					}
 				},
-				// 忽略 get/ 或 get笔记 目录下 md 文件引用的本地图片，防止 Rollup 解析失败
+				// 忽略 get/、get attachment 或 get笔记 目录下 md 文件引用的本地图片，防止 Rollup 解析失败
 				resolveId(source, importer) {
-					if (importer && (importer.includes("content/get") || importer.includes("get笔记")) && source.includes("get/")) {
+					if (importer && (importer.includes("content/get") || importer.includes("get笔记")) && (source.includes("get/") || source.includes("get attachment"))) {
 						return { id: source, external: true };
 					}
 				},

@@ -5,7 +5,7 @@ tags: []
 category: AIHacks
 draft: false
 pinned: false
-image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/64dcc692ed675c02cdbead093fb090bc.webp
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-claude-code-dida365-20260529-143000.webp
 ---
 
 今天发生了一件事，让我觉得必须写下来。
