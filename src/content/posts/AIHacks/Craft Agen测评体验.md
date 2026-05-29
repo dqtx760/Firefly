@@ -1,5 +1,5 @@
 ---
-title: "Craft Agent 的任务面板，治好了我的 AI 焦虑"
+title: Craft Agent上手测评
 published: 2026-05-28
 tags:
   - ai-tool
@@ -8,7 +8,7 @@ tags:
 category: AIHacks
 draft: false
 pinned: false
-image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/craft-agent-task-panel.webp
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260529172953083.webp
 ---
 
 你有没有这种感觉。
@@ -22,6 +22,8 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/craft-agent-
 说实话，这个问题困扰我挺久的。Claude Code 好用是好用，但它的对话就是一条时间线，没有状态，没有分类，更别说什么归档了。用久了之后，你的历史对话就像一个巨大的垃圾桶，什么都往里扔，什么都找不到。
 
 直到我最近试了一下 Craft Agent。
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260529172953083.webp)
+
 
 ### 任务面板这个东西，用过就回不去了
 

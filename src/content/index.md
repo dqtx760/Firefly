@@ -26,9 +26,14 @@ C:\Users\Administrator\AISkills\UpdateCheck\SKILL.md
 
 
 ### Xenia
-- [杠命令&工具速查](Xenia/%E6%9D%A0%E5%91%BD%E4%BB%A4%26%E5%B7%A5%E5%85%B7%E9%80%9F%E6%9F%A5.md)
-- [AI眼中的我](Xenia/AI%E7%9C%BC%E4%B8%AD%E7%9A%84%E6%88%91.md)
+- [知识库管理斜杠命令](Xenia/%E7%9F%A5%E8%AF%86%E5%BA%93%E7%AE%A1%E7%90%86%E6%96%9C%E6%9D%A0%E5%91%BD%E4%BB%A4.md)
+- [3D风格PPT风格](Xenia/3D%E9%A3%8E%E6%A0%BCPPT%E9%A3%8E%E6%A0%BC.md)
+- [金句](Xenia/%E9%87%91%E5%8F%A5.md)
 - [AI眼中的我2.0](Xenia/AI%E7%9C%BC%E4%B8%AD%E7%9A%84%E6%88%912.0.md)
+- [文末mrkdown](Xenia/%E6%96%87%E6%9C%ABmrkdown.md)
+- [花叔21个斜杠命令](Xenia/%E8%8A%B1%E5%8F%9421%E4%B8%AA%E6%96%9C%E6%9D%A0%E5%91%BD%E4%BB%A4.md)
+- [杠命令&cli工具速查](Xenia/%E6%9D%A0%E5%91%BD%E4%BB%A4%26cli%E5%B7%A5%E5%85%B7%E9%80%9F%E6%9F%A5.md)
+- [AI眼中的我](Xenia/AI%E7%9C%BC%E4%B8%AD%E7%9A%84%E6%88%91.md)
 - [twitter-cli](Xenia/twitter-cli.md)
 - [github-cli命令](Xenia/github-cli%E5%91%BD%E4%BB%A4.md)
 - [Lark-cli 命令](Xenia/Lark-cli%20%E5%91%BD%E4%BB%A4.md)
@@ -43,16 +48,24 @@ C:\Users\Administrator\AISkills\UpdateCheck\SKILL.md
 ### AlHacks
 | 日期 | 文件 |
 |------|------|
+| 2026/05/28 | [我vib coding一个Obsidian插件](posts/AIHacks/%E6%88%91vib%20coding%E4%B8%80%E4%B8%AAObsidian%E6%8F%92%E4%BB%B6.md) |
+| 2026/05/28(2) | [网站UI设计参考](posts/AIHacks/%E7%BD%91%E7%AB%99UI%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83.md) |
+| 2026/05/28(3) | [Obsidian联动notebooklm](posts/AIHacks/Obsidian%E8%81%94%E5%8A%A8notebooklm.md) |
+| 2026/05/28(4) | [Craft Agen测评体验](posts/AIHacks/Craft%20Agen%E6%B5%8B%E8%AF%84%E4%BD%93%E9%AA%8C.md) |
+| 2026/05/27 | [Claude Code 桥接工具](posts/AIHacks/Claude%20Code%20%E6%A1%A5%E6%8E%A5%E5%B7%A5%E5%85%B7.md) |
+| 2026/05/27(2) | [在飞微信、飞书和 Claude 对话](posts/AIHacks/%E5%9C%A8%E9%A3%9E%E5%BE%AE%E4%BF%A1%E3%80%81%E9%A3%9E%E4%B9%A6%E5%92%8C%20Claude%20%E5%AF%B9%E8%AF%9D.md) |
+| 2026/05/27(3) | [UU远程终端](posts/AIHacks/UU%E8%BF%9C%E7%A8%8B%E7%BB%88%E7%AB%AF.md) |
+| 2026/05/26 | [NotebookLM](posts/AIHacks/NotebookLM.md) |
+| 2026/05/26(2) | [Agent-Reach](posts/AIHacks/Agent-Reach.md) |
+| 2026/05/25 | [Claude code 安装](posts/AIHacks/Claude%20code%20%E5%AE%89%E8%A3%85.md) |
+| 2026/05/23 | [Karpathy的CLAUDE.md解读](posts/AIHacks/Karpathy%E7%9A%84CLAUDE.md%E8%A7%A3%E8%AF%BB.md) |
 | 2026/05/22 | [我的图文写作工作流](posts/AIHacks/%E6%88%91%E7%9A%84%E5%9B%BE%E6%96%87%E5%86%99%E4%BD%9C%E5%B7%A5%E4%BD%9C%E6%B5%81.md) |
 | 2026/05/22(2) | [Claude-code二改版](posts/AIHacks/Claude-code%E4%BA%8C%E6%94%B9%E7%89%88.md) |
 | 2026/05/21 | [普通人的AI破局之路](posts/AIHacks/%E6%99%AE%E9%80%9A%E4%BA%BA%E7%9A%84AI%E7%A0%B4%E5%B1%80%E4%B9%8B%E8%B7%AF.md) |
 | 2026/05/21(2) | [阿里Qoder](posts/AIHacks/%E9%98%BF%E9%87%8CQoder.md) |
 | 2026/05/21(3) | [Antigravity](posts/AIHacks/Antigravity.md) |
-| 2026/05/21(4) | [NotebookLM](posts/AIHacks/NotebookLM.md) |
-| 2026/05/20 | [Claude Code 桥接工具](posts/AIHacks/Claude%20Code%20%E6%A1%A5%E6%8E%A5%E5%B7%A5%E5%85%B7.md) |
-| 2026/05/20(2) | [飞书开源CLI](posts/AIHacks/%E9%A3%9E%E4%B9%A6%E5%BC%80%E6%BA%90CLI.md) |
-| 2026/05/20(3) | [Claude code 安装](posts/AIHacks/Claude%20code%20%E5%AE%89%E8%A3%85.md) |
-| 2026/05/20(4) | [WorkBuddy](posts/AIHacks/WorkBuddy.md) |
+| 2026/05/20 | [飞书开源CLI](posts/AIHacks/%E9%A3%9E%E4%B9%A6%E5%BC%80%E6%BA%90CLI.md) |
+| 2026/05/20(2) | [WorkBuddy](posts/AIHacks/WorkBuddy.md) |
 | 2026/05/19 | [baoyu-article-illustrator改造](posts/AIHacks/baoyu-article-illustrator%E6%94%B9%E9%80%A0.md) |
 | 2026/05/18 | [讯飞星辰 Maas福利活动](posts/AIHacks/%E8%AE%AF%E9%A3%9E%E6%98%9F%E8%BE%B0%20Maas%E7%A6%8F%E5%88%A9%E6%B4%BB%E5%8A%A8.md) |
 | 2026/05/18(2) | [newtype-os](posts/AIHacks/newtype-os.md) |
@@ -61,11 +74,9 @@ C:\Users\Administrator\AISkills\UpdateCheck\SKILL.md
 | 2026/05/16 | [用 AI 两年，我劝你别太依赖它](posts/AIHacks/%E7%94%A8%20AI%20%E4%B8%A4%E5%B9%B4%EF%BC%8C%E6%88%91%E5%8A%9D%E4%BD%A0%E5%88%AB%E5%A4%AA%E4%BE%9D%E8%B5%96%E5%AE%83.md) |
 | 2026/05/16(2) | [手机Agent](posts/AIHacks/%E6%89%8B%E6%9C%BAAgent.md) |
 | 2026/05/16(3) | [gsearch-cli](posts/AIHacks/gsearch-cli.md) |
-| 2026/05/16(4) | [Agent-Reach](posts/AIHacks/Agent-Reach.md) |
-| 2026/05/16(5) | [本地部署LLM&硬件参数](posts/AIHacks/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2LLM%26%E7%A1%AC%E4%BB%B6%E5%8F%82%E6%95%B0.md) |
-| 2026/05/15 | [网站UI设计参考](posts/AIHacks/%E7%BD%91%E7%AB%99UI%E8%AE%BE%E8%AE%A1%E5%8F%82%E8%80%83.md) |
-| 2026/05/15(2) | [gemini生成高级封面](posts/AIHacks/gemini%E7%94%9F%E6%88%90%E9%AB%98%E7%BA%A7%E5%B0%81%E9%9D%A2.md) |
-| 2026/05/15(3) | [codex-cn-bridge](posts/AIHacks/codex-cn-bridge.md) |
+| 2026/05/16(4) | [本地部署LLM&硬件参数](posts/AIHacks/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2LLM%26%E7%A1%AC%E4%BB%B6%E5%8F%82%E6%95%B0.md) |
+| 2026/05/15 | [gemini生成高级封面](posts/AIHacks/gemini%E7%94%9F%E6%88%90%E9%AB%98%E7%BA%A7%E5%B0%81%E9%9D%A2.md) |
+| 2026/05/15(2) | [codex-cn-bridge](posts/AIHacks/codex-cn-bridge.md) |
 | 2026/05/14 | [GPT-Image-2](posts/AIHacks/GPT-Image-2.md) |
 | 2026/05/13 | [CodePilot](posts/AIHacks/CodePilot.md) |
 | 2026/05/12 | [X新号蹭热点的方法](posts/AIHacks/X%E6%96%B0%E5%8F%B7%E8%B9%AD%E7%83%AD%E7%82%B9%E7%9A%84%E6%96%B9%E6%B3%95.md) |
@@ -108,13 +119,20 @@ C:\Users\Administrator\AISkills\UpdateCheck\SKILL.md
 ### Software
 | 日期 | 文件 |
 |------|------|
-| 2026/05/23 | [get笔记同步Obsidian](posts/Software/get%E7%AC%94%E8%AE%B0%E5%90%8C%E6%AD%A5Obsidian.md) |
+| 2026/05/27 | [微信内容同步Obsidian](posts/Software/%E5%BE%AE%E4%BF%A1%E5%86%85%E5%AE%B9%E5%90%8C%E6%AD%A5Obsidian.md) |
+| 2026/05/27(2) | [Obsidian + Git 备份全流程配置指南](posts/Software/Obsidian%20%2B%20Git%20%E5%A4%87%E4%BB%BD%E5%85%A8%E6%B5%81%E7%A8%8B%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97.md) |
+| 2026/05/26 | [网页剪藏Obsidian](posts/Software/%E7%BD%91%E9%A1%B5%E5%89%AA%E8%97%8FObsidian.md) |
+| 2026/05/26(2) | [微信读书同步Obsidian](posts/Software/%E5%BE%AE%E4%BF%A1%E8%AF%BB%E4%B9%A6%E5%90%8C%E6%AD%A5Obsidian.md) |
+| 2026/05/26(3) | [Deskflow键盘鼠标共享工具](posts/Software/Deskflow%E9%94%AE%E7%9B%98%E9%BC%A0%E6%A0%87%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%85%B7.md) |
+| 2026/05/26(4) | [一键内容同步N媒体平台](posts/Software/%E4%B8%80%E9%94%AE%E5%86%85%E5%AE%B9%E5%90%8C%E6%AD%A5N%E5%AA%92%E4%BD%93%E5%B9%B3%E5%8F%B0.md) |
+| 2026/05/26(5) | [get笔记同步Obsidian](posts/Software/get%E7%AC%94%E8%AE%B0%E5%90%8C%E6%AD%A5Obsidian.md) |
+| 2026/05/24 | [Obsidian插件Terminal配置](posts/Software/Obsidian%E6%8F%92%E4%BB%B6Terminal%E9%85%8D%E7%BD%AE.md) |
+| 2026/05/24(2) | [右键菜单管理](posts/Software/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E7%AE%A1%E7%90%86.md) |
 | 2026/05/22 | [Custom Attachment Location 配置全流程](posts/Software/Custom%20Attachment%20Location%20%E9%85%8D%E7%BD%AE%E5%85%A8%E6%B5%81%E7%A8%8B.md) |
 | 2026/05/20 | [rss](posts/Software/rss.md) |
 | 2026/05/18 | [WezTerm](posts/Software/WezTerm.md) |
 | 2026/05/16 | [Diskgenius扩容C盘](posts/Software/Diskgenius%E6%89%A9%E5%AE%B9C%E7%9B%98.md) |
-| 2026/05/15 | [一键内容同步N媒体平台](posts/Software/%E4%B8%80%E9%94%AE%E5%86%85%E5%AE%B9%E5%90%8C%E6%AD%A5N%E5%AA%92%E4%BD%93%E5%B9%B3%E5%8F%B0.md) |
-| 2026/05/15(2) | [picgo+](posts/Software/picgo%2B.md) |
+| 2026/05/15 | [picgo+](posts/Software/picgo%2B.md) |
 | 2026/05/14 | [油管下载工具](posts/Software/%E6%B2%B9%E7%AE%A1%E4%B8%8B%E8%BD%BD%E5%B7%A5%E5%85%B7.md) |
 | 2026/05/10 | [Warp](posts/Software/Warp.md) |
 | 2026/05/10(2) | [几款录屏软件](posts/Software/%E5%87%A0%E6%AC%BE%E5%BD%95%E5%B1%8F%E8%BD%AF%E4%BB%B6.md) |

@@ -23,4 +23,5 @@ last_updated: 2026-05-27
 ## 关联连接
 
 - [[摘要-20个宝藏Skills推荐]] — 来源引用
+- [[guizang-social-card-skill]] — 姊妹项目，共享美学语言
 - [[huashu-skills]] — 花叔的 PPTX 方案（互补关系）

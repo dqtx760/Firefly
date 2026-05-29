@@ -28,5 +28,7 @@ last_updated: 2026-05-27
 - [[khazix-writer]] — 卡兹克写作 Skill
 - [[videocut-skills]] — 视频剪辑 Skill
 - [[obsidian-skills]] — Obsidian 官方 Skill
+- [[guizang-social-card-skill]] — 归藏社交卡片 Skill
+- [[摘要-归藏社交卡片Skill]] — 社交卡片 Skill 来源摘要
 - [[摘要-四个好玩的开源Skills]] — 来源引用
 - [[摘要-20个宝藏Skills推荐]] — 来源引用

@@ -11,6 +11,10 @@
 - [[摘要-karpathy-lolm-wiki]] — Karpathy 的 lolm wiki AI 知识管理框架解读
 - [[摘要-本地知识库大模型实践]] — 580 万字本地知识库 + 大模型实践
 
+### 2026-05-29 编译新增
+- [[摘要-ClaudeCode-GrepOverRAG最佳实践]] — Claude Code 放弃 RAG 用 Grep 搜索代码的设计哲学与最佳实践
+- [[摘要-归藏社交卡片Skill]] — 归藏 guizang-social-card-skill：小红书图文与公众号封面对生成
+
 ### 2026-05-27 并行编译新增
 - [[摘要-Windows安装Codex App问题解决]] — Windows 无法安装 Codex App 的三个问题及解决
 - [[摘要-Codex手机号验证问题解决]] — Codex 注册手机号验证问题的最新图文教程
@@ -77,6 +81,7 @@
 - [[huashu-skills]] — 花叔内容创作 21 合 1
 - [[khazix-writer]] — 卡兹克公众号长文 Skill
 - [[guizang-ppt-skill]] — 归藏电子杂志风 PPT
+- [[guizang-social-card-skill]] — 归藏小红书图文与公众号封面对 Skill
 - [[obsidian-skills]] — Obsidian CEO 亲做的 Skills
 - [[soul.skill]] — 灵魂蒸馏 Skill
 - [[impeccable]] — 设计反模式词典
@@ -112,6 +117,9 @@
 - [[AI_Agent邮件处理]] — AI Agent 自动处理邮件
 - [[并行Agent开发]] — 多 Agent 并行开发模式
 - [[知识同步工作流]] — 跨平台知识同步方案
+- [[GrepOverRAG设计哲学]] — Claude Code 的代码搜索设计哲学
+- [[ContextWindow管理]] — AI Agent Context 工程方法论
+- [[ClaudeCode最佳实践]] — 大型代码库使用最佳实践
 
 ### 知识管理
 - [[碎片知识系统化]] — 四象限分类法：碎片信息嵌入认知网络的方法论
@@ -147,4 +155,4 @@
 
 ---
 
-*最后更新：2026-05-28（单文件编译：Craft Agent）*
+*最后更新：2026-05-29（并行编译：Claude Code GrepOverRAG + 归藏社交卡片 Skill）*

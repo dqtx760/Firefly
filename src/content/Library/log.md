@@ -140,3 +140,22 @@
 ## [2026-05-28] query | 了解 Craft Agent
 - **检索页面**: [[Craft Agent]], [[摘要-Craft-Agent使用演示]], [[普通人AI工具选型]]
 - **输出**: 直接回答，综合产品介绍、功能对比、使用场景
+
+## [2026-05-29] ingest | 并行编译 2 篇有效内容（3 篇跳过）
+- **处理文件**:
+  - `01-输入/01-Clipings/Claude Code 为什么放弃 RAG 用 Grep 搜索代码？大型代码库最佳实践全解析.md`
+  - `01-输入/03-微信/GitHub - op7418-guizang-social-card-skill- 🪧 Claude Code - Codex skill — generate Xiaohongshu car....md`
+- **跳过文件**:
+  - `01-输入/03-微信/效率狂飙！我珍藏的10个苹果神级快捷指令.md`（纯工具合集，低知识密度）
+  - `01-输入/03-微信/消息_2026-05-26.md`（系统同步消息，无知识内容）
+  - `01-输入/07-Daily/2026-05-28.md`（空模板，无实际内容）
+- **创建页面**:
+  - Sources (2): [[摘要-ClaudeCode-GrepOverRAG最佳实践]], [[摘要-归藏社交卡片Skill]]
+  - Entities (1): [[guizang-social-card-skill]]
+  - Concepts (3): [[GrepOverRAG设计哲学]], [[ContextWindow管理]], [[ClaudeCode最佳实践]]
+- **更新页面**:
+  - [[Claude_Code]]（新增关联：GrepOverRAG设计哲学、ContextWindow管理、ClaudeCode最佳实践）
+  - [[guizang-ppt-skill]]（新增关联：guizang-social-card-skill 姊妹项目）
+  - [[Claude-Code-Skills生态]]（新增关联：guizang-social-card-skill）
+- **冲突**: 无
+- **归档**: 已完成（2 篇编译文件移入 01-输入/archive/）

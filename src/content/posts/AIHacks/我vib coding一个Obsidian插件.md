@@ -1,5 +1,5 @@
 ---
-title: 我用Vibe Coding给Obsidian搓了个首页控制台
+title: Obsidian首页控制台插件
 published: 2026-05-28
 tags:
   - obsidian

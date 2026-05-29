@@ -26,6 +26,9 @@ Claude Code（文中称 Cloud Code）是 Anthropic 推出的全自主代理型 A
 ## 关联连接
 
 - [[摘要-Cloud-Code深度应用]] — 详细来源摘要
+- [[摘要-ClaudeCode-GrepOverRAG最佳实践]] — Grep Over RAG 设计哲学与最佳实践
+- [[GrepOverRAG设计哲学]] — 代码搜索的设计哲学
+- [[ClaudeCode最佳实践]] — 大型代码库最佳实践
 - [[MCP协议]] — 使用的模型上下文协议
 - [[Obsidian加AI自动化内容创作]] — 在内容创作中的应用
 - [[AI_Knowledge_Management]] — AI 知识管理中的核心工具

@@ -20,8 +20,8 @@
 
 ## Sources（文章分类）
 
-- [AIHacks](sources/aihacks.md) — AI 工具与自动化（60 篇）
-- [Software](sources/software.md) — 软件推荐与使用（25 篇）
+- [AIHacks](sources/aihacks.md) — AI 工具与自动化（66 篇）
+- [Software](sources/software.md) — 软件推荐与使用（32 篇）
 - [Technical](sources/technical.md) — 技术教程与基础设施（21 篇）
 - [Workflow](sources/workflow.md) — 工作流与自动化（15 篇）
 

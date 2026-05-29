@@ -9,7 +9,6 @@ draft: false
 pinned: false
 image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/weread-obsidian-cover.webp
 ---
-
 你在微信读书里划过多少条线？写过多少条想法？上一次回去翻它们又是什么时候？
 
 我用了微信读书四年，划线 2000 多条，笔记写了上百条。说实话，99% 的内容画完就忘了——微信读书的笔记入口藏得太深，每次想回顾都要点好几层菜单，体验很差。

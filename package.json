@@ -42,6 +42,7 @@
 		"katex": "^0.16.22",
 		"lxgw-wenkai-webfont": "^1.7.0",
 		"overlayscrollbars": "^2.11.1",
+		"playwright": "^1.60.0",
 		"puppeteer": "^24.38.0",
 		"rehype-autolink-headings": "^7.1.0",
 		"rehype-components": "^0.3.0",

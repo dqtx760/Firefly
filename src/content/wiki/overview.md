@@ -7,32 +7,32 @@
 - **部署**: GitHub + EdgeOne 自动构建
 - **图床**: Gitee / PicGo / PicList
 - **作者**: Derek Zhao
-- **文章总数**: 121 篇
+- **文章总数**: 134 篇
 - **分类数**: 4 个
-- **最近更新**: 2026-05-22
+- **最近更新**: 2026-05-28
 
 ## 内容分布
 
 | 分类 | 文章数 | 占比 | 最近更新 | 分类页 |
 | --- | --- | --- | --- | --- |
-| AIHacks | 60 | 50% | 2026-05-21 | [aihacks.md](sources/aihacks.md) |
-| Software | 25 | 21% | 2026-05-22 | [software.md](sources/software.md) |
-| Technical | 21 | 17% | 2026-05-10 | [technical.md](sources/technical.md) |
-| Workflow | 15 | 12% | 2026-05-07 | [workflow.md](sources/workflow.md) |
+| AIHacks | 66 | 49% | 2026-05-28 | [aihacks.md](sources/aihacks.md) |
+| Software | 32 | 24% | 2026-05-26 | [software.md](sources/software.md) |
+| Technical | 21 | 16% | 2026-05-10 | [technical.md](sources/technical.md) |
+| Workflow | 15 | 11% | 2026-05-07 | [workflow.md](sources/workflow.md) |
 
 ## 核心主题
 
 ### 1. AI 工具链（AIHacks）
 
-当前最大分类，覆盖 Claude Code、Codex、Gemini CLI、Qoder、MCP、Agent、Skill、模型 API 和 AI 内容生产。近期新增内容集中在 AI 编程工具、图文写作工作流、模型活动和本地/国产模型接入。
+当前最大分类，覆盖 Claude Code、Codex、Gemini CLI、Qoder、MCP、Agent、Skill、模型 API 和 AI 内容生产。近期新增 Vibe Coding、Obsidian 插件开发、飞书对话集成、Craft Agent 测评等内容。
 
 ### 2. 软件与效率工具（Software）
 
-聚焦日常使用频率高的软件工具，包括图床、截图录屏、RSS、Markdown、Obsidian 插件、终端、磁盘管理和系统辅助工具。
+聚焦日常使用频率高的软件工具，包括 Obsidian 插件生态（Git备份、Terminal配置、剪藏、同步）、图床、截图录屏、RSS、终端、磁盘管理和系统辅助工具。
 
 ### 3. 技术基础设施（Technical）
 
-记录博客站点维护、导航栏修复、网盘挂载、OpenWrt/PassWall、远程桌面、API 安全、Passkeys、主机与系统异常处理等实践。
+记录博客站点维护、导航栏修复、网盘挂载、OpenWrt/PassWall、远程桌面、API 安全、Passkeys、Python 脚本追踪、主机与系统异常处理等实践。
 
 ### 4. 工作流自动化（Workflow）
 
@@ -40,18 +40,16 @@
 
 ## 最近更新
 
-- [Get笔记同步Obsidian插件](../../content/posts/Software/get笔记同步Obsidian.md) — Software / 2026-05-22
+- [我用Vibe Coding给Obsidian搓了个首页控制台](../../content/posts/AIHacks/我vib coding一个Obsidian插件.md) — AIHacks / 2026-05-28
+- [Craft Agent 的任务面板，治好了我的 AI 焦虑](../../content/posts/AIHacks/Craft Agen测评体验.md) — AIHacks / 2026-05-28
+- [Obsidian联动notebooklm](../../content/posts/AIHacks/Obsidian联动notebooklm.md) — AIHacks / 2026-05-26
+- [UU远程手机终端操作CC](../../content/posts/AIHacks/UU远程终端.md) — AIHacks / 2026-05-25
+- [微信内容同步到Obsidian方案](../../content/posts/Software/微信内容同步Obsidian.md) — Software / 2026-05-26
+- [微信读书同步Obsidian](../../content/posts/Software/微信读书同步Obsidian.md) — Software / 2026-05-26
+- [Karpathy的CLAUDE.md没那么神](../../content/posts/AIHacks/Karpathy的CLAUDE.md解读.md) — AIHacks / 2026-05-23
+- [在飞书里和 Claude 对话](../../content/posts/AIHacks/在飞微信、飞书和 Claude 对话.md) — AIHacks / 2026-05-23
 - [阿里Qoder安装使用指南](../../content/posts/AIHacks/阿里Qoder.md) — AIHacks / 2026-05-21
-- [Custom Attachment Location 配置全流程](../../content/posts/Software/Custom Attachment Location 配置全流程.md) — Software / 2026-05-20
-- [Claude-code二改版](../../content/posts/AIHacks/Claude-code二改版.md) — AIHacks / 2026-05-18
 - [讯飞星辰Maas福利活动](../../content/posts/AIHacks/讯飞星辰 Maas福利活动.md) — AIHacks / 2026-05-18
-- [文章封面&配图技能](../../content/posts/AIHacks/baoyu-article-illustrator改造.md) — AIHacks / 2026-05-17
-- [我的图文写作工作流](../../content/posts/AIHacks/我的图文写作工作流.md) — AIHacks / 2026-05-17
-- [用 AI 两年，我劝你别太依赖它](../../content/posts/AIHacks/用 AI 两年，我劝你别太依赖它.md) — AIHacks / 2026-05-16
-- [Diskgenius扩容C盘](../../content/posts/Software/Diskgenius扩容C盘.md) — Software / 2026-05-16
-- [飞书lark-cli，45天获万星！](../../content/posts/AIHacks/飞书开源CLI.md) — AIHacks / 2026-05-15
-- [rss工具](../../content/posts/Software/rss.md) — Software / 2026-05-15
-- [Gemini cli 登录异常解法](../../content/posts/AIHacks/Gemini cli 安装&异常处理.md) — AIHacks / 2026-05-14
 
 ## 技术栈推断
 
