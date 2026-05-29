@@ -337,7 +337,9 @@
 &lt;/table&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://pinchbench.com/&quot;&gt;大模型排行榜&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://relaypulse.top/&quot;&gt;全球大模型稳定性监测&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.helpaio.com/transit/table&quot;&gt;AI中转站评测比价&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://relaypulse.top/&quot;&gt;全球大模型稳定性监测&lt;/a&gt;
+-&lt;a href=&quot;https://www.helpaio.com/transit/availability&quot;&gt; AI中转站可用性监测&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;../../Yoke/cll%E5%B7%A5%E5%85%B7%E5%90%88%E9%9B%86.md&quot;&gt;cll工具合集&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;其他&lt;/strong&gt;&lt;/p&gt;
@@ -487,6 +489,248 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/tech-shrimp&quot;&gt;tech-shrimp&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>Claude Code&amp;滴答清单</title><link>https://dqtx.cc/posts/aihacks/claude-code%E6%BB%B4%E7%AD%94%E6%B8%85%E5%8D%95/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/claude-code%E6%BB%B4%E7%AD%94%E6%B8%85%E5%8D%95/</guid><pubDate>Fri, 29 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天发生了一件事，让我觉得必须写下来。&lt;/p&gt;
+&lt;p&gt;一个朋友问我，他是个AI小白，想学AI，让我帮他规划一下学习路径。&lt;/p&gt;
+&lt;p&gt;我就根据2026年的趋势，给他推荐了几个方向。推荐完之后，我突然想到，光说没用啊，得让他能执行才行。&lt;/p&gt;
+&lt;p&gt;于是我说，要不我帮你写进滴答清单吧。&lt;/p&gt;
+&lt;p&gt;他说好啊。&lt;/p&gt;
+&lt;p&gt;然后我就在终端里敲了几句话，Claude Code自动调用滴答清单的API，帮他创建了一个项目，6个任务，带优先级，带标签，带具体的落地步骤。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/64dcc692ed675c02cdbead093fb090bc.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;全自动。&lt;/p&gt;
+&lt;p&gt;他去手机上打开滴答清单，项目在，任务在，直接就能开始执行。&lt;/p&gt;
+&lt;p&gt;整个过程，我从头到尾没打开过滴答清单的APP、网页。&lt;/p&gt;
+&lt;h3&gt;这事的核心是什么&lt;/h3&gt;
+&lt;p&gt;你想想看，我们平时有一个想法，想把它记下来，要经历什么？&lt;/p&gt;
+&lt;p&gt;打开手机，找到滴答清单，点新建，选项目，填标题，写内容，设优先级，打标签。一个简单的学习计划，可能要花十分钟才能录完。&lt;/p&gt;
+&lt;p&gt;但如果你正在跟Claude Code聊天，突然想到一个事，你可以直接说，帮我写进滴答清单。&lt;/p&gt;
+&lt;p&gt;它就帮你写进去了。&lt;/p&gt;
+&lt;p&gt;你甚至不需要切换应用，不需要打开滴答清单，不需要手动输入任何东西。你只需要专注于「我到底想干什么」，具体怎么执行，AI帮你搞定。&lt;/p&gt;
+&lt;p&gt;然后你拿起手机，打开滴答清单，该做的事情都在那里了。&lt;/p&gt;
+&lt;p&gt;这种感觉怎么说呢，就像你脑子里的想法，直接「传送」到了你的任务清单里。&lt;/p&gt;
+&lt;h3&gt;怎么做到的&lt;/h3&gt;
+&lt;p&gt;配置过程其实没那么复杂，大概十分钟。&lt;/p&gt;
+&lt;p&gt;你需要先装好Claude Code，然后在终端里运行这个命令：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;claude mcp add --transport http dida365 https://mcp.dida365.com
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;运行之后，Claude Code会弹出一个OAuth授权窗口，你点一下同意就行。&lt;/p&gt;
+&lt;p&gt;授权完成后，Claude Code就具备了操作你滴答清单的能力。&lt;/p&gt;
+&lt;p&gt;如果你有自己的Bearer Token，也可以用这种方式配置：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;claude mcp add --transport http dida365 https://mcp.dida365.com --header &quot;Authorization: Bearer YOUR_TOKEN_HERE&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;配置完之后，你可以在Claude Code里输入&lt;code&gt;/mcp&lt;/code&gt;，看看滴答清单的连接状态是不是显示成功。如果成功了，就可以开始用了。&lt;/p&gt;
+&lt;p&gt;整个过程真的十分钟，不需要你懂代码，照着来就行。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260529140417850.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;详细的滴答清单MCP官方文档&lt;/strong&gt;
+https://help.dida365.com/articles/7438132116019216384&lt;/p&gt;
+&lt;h3&gt;刚才那个案例是怎么回事&lt;/h3&gt;
+&lt;p&gt;回到我朋友那个事。&lt;/p&gt;
+&lt;p&gt;他问我学AI怎么入门，我给他推荐了6个方向，每个方向都写了具体的落地任务。&lt;/p&gt;
+&lt;p&gt;然后我直接在Claude Code里说，帮我写进滴答清单，项目名叫「AI学习计划 - 零基础入门」。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/1071706eb3d1d924fc5529c7e9608de5.webp&quot; alt=&quot;&quot; /&gt;
+Claude Code就开始工作了。它先调用滴答清单的API，创建了一个新项目。然后批量创建了6个任务，每个任务都有标题、内容、优先级、标签。&lt;/p&gt;
+&lt;p&gt;内容写得还挺详细的，每个任务都包含「为什么必须学」和「落地任务」两个部分。比如第一个任务是「AI提示工程基础」，落地任务是「注册ChatGPT/Claude账号，完成10次基础对话练习」「学习提示词模板：角色扮演、分步指令、输出格式控制」「完成一个实际项目：用AI写一份工作汇报」「建立个人提示词库，收集10个常用模板」。&lt;/p&gt;
+&lt;p&gt;这种任务，你拿到手就能直接执行，不需要再花时间想「我该从哪里开始」。&lt;/p&gt;
+&lt;p&gt;朋友去手机上打开滴答清单，项目在，任务在，他直接开始做第一个任务就行了。&lt;/p&gt;
+&lt;h3&gt;为什么我觉得这事挺重要的&lt;/h3&gt;
+&lt;p&gt;你知道吗，我们每天有很多想法，但真正被记录下来的，可能不到十分之一。&lt;/p&gt;
+&lt;p&gt;不是因为懒，是因为记录的成本太高了。你要打开应用，要组织语言，要选分类，要设提醒。很多想法就在这个过程中被放弃了。&lt;/p&gt;
+&lt;p&gt;但如果你在终端里跟Claude Code聊天，随时想到什么，直接说一句「帮我写进滴答清单」，这个成本就几乎为零了。&lt;/p&gt;
+&lt;p&gt;你想想看，这意味着什么。&lt;/p&gt;
+&lt;p&gt;你在写代码的时候，突然想到明天要买个什么东西，直接说一句，它就帮你记下来了。你在分析数据的时候，突然想到一个学习计划，直接说一句，它就帮你安排好了。你在处理工作的时候，突然想到一个创意，直接说一句，它就帮你存起来了。&lt;/p&gt;
+&lt;p&gt;你的注意力可以完全集中在「思考」上，而不是「记录」上。&lt;/p&gt;
+&lt;p&gt;这才是AI助手应该做的事情，不是陪你聊天，而是帮你把想法变成行动。&lt;/p&gt;
+&lt;h3&gt;目前的局限&lt;/h3&gt;
+&lt;p&gt;当然，这玩意现在还不完美。&lt;/p&gt;
+&lt;p&gt;我今天就遇到了一个问题，API返回的项目列表报错了，因为我朋友旧项目有个字段有问题。这种情况下，AI也搞不定，还是得他自己去检查修复。&lt;/p&gt;
+&lt;p&gt;另外，配置过程对纯小白来说可能还是有点门槛，虽然我说了「十分钟搞定」，但前提是你要知道怎么打开命令行，怎么运行命令。如果你连终端都没打开过，那可能得先补一下基础知识。&lt;/p&gt;
+&lt;p&gt;还有就是，AI生成的内容不一定完全符合你的预期。比如我今天创建的任务，优先级是我根据经验设的，但也许你觉得那个方向对你来说更重要或者更不重要，这时候你还是得手动调整。&lt;/p&gt;
+&lt;p&gt;但总体来说，瑕不掩瑜。&lt;/p&gt;
+&lt;h3&gt;这只是开始&lt;/h3&gt;
+&lt;p&gt;我有时候觉得，我们现在正处在一个特别有意思的阶段。&lt;/p&gt;
+&lt;p&gt;AI已经不只是一个聊天窗口了，它正在变成一个能真正帮你干活的助手。你有一个想法，它帮你记录；你有一个任务，它帮你安排；你有一个目标，它帮你规划。&lt;/p&gt;
+&lt;p&gt;今天是滴答清单，明天可能是你的日历、邮箱、笔记软件、项目管理工具。当这些都连起来之后，你可以想象一下，你只需要跟AI说一句「帮我安排一下明天的工作」，它就能自动查你的日历、看你的任务列表、发邮件确认会议、在笔记里记录要点。&lt;/p&gt;
+&lt;p&gt;这不是科幻，这是正在发生的事情。&lt;/p&gt;
+&lt;p&gt;我只是觉得，这种变化来得比我们想象的要快。&lt;/p&gt;
+&lt;p&gt;屏幕前的你，如果还没试过Claude Code加上MCP，我真的建议你花十分钟配一下。不是为了赶时髦，是为了让你自己体验一下，当AI不只是陪你聊天，而是真的能帮你把想法变成行动的时候，那种感觉是什么样的。&lt;/p&gt;
+&lt;p&gt;你会惊讶的。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&amp;gt;&amp;gt;&amp;gt;&lt;strong&gt;延伸阅读&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/x4sm7GXpoUoIepKmtooKAw&quot;&gt;Obsidian CLI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/kN-_KSwWkOlpZDXAURgcEA&quot;&gt;飞书lark-cli&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/XT5r6yFaXHa63T3Qg_Oi7w&quot;&gt;Agent-Reach最佳实践&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/KuUW39zVqqq_xcxPiT7_jA&quot;&gt;gsearch-cli最佳实践&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;p&gt;以上，既然看到这里了，如果觉得不错，随手&lt;strong&gt;点个赞、在看、转发&lt;/strong&gt;三连吧！想第一时间收到推送，可以给我个星标⭐️～&lt;/p&gt;
+&lt;p&gt;谢谢你看我的文章，我们，下次再见。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/%E6%9C%AA%E5%91%BD%E5%90%8D%E7%9A%84%E8%AE%BE%E8%AE%A1.webp&quot; alt=&quot;&quot; /&gt;
+&lt;em&gt;&amp;gt;/ 作者：大强同学&lt;/em&gt;
+&lt;em&gt;&amp;gt;/ 更多干货，请访问：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+</content:encoded></item><item><title>Craft Agent上手测评</title><link>https://dqtx.cc/posts/aihacks/craft-agen%E6%B5%8B%E8%AF%84%E4%BD%93%E9%AA%8C/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/craft-agen%E6%B5%8B%E8%AF%84%E4%BD%93%E9%AA%8C/</guid><pubDate>Thu, 28 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你有没有这种感觉。&lt;/p&gt;
+&lt;p&gt;让 AI 帮你干了一件挺漂亮的事，整理了个文件夹，写了个方案，搞了个数据分析。干完之后你挺满意，关掉对话窗口，过了两天想翻出来看看。&lt;/p&gt;
+&lt;p&gt;找不到了。&lt;/p&gt;
+&lt;p&gt;对话记录淹没在一堆历史会话里，你往上翻了十分钟，眼都花了，还是没找到那次到底聊了啥。&lt;/p&gt;
+&lt;p&gt;说实话，这个问题困扰我挺久的。Claude Code 好用是好用，但它的对话就是一条时间线，没有状态，没有分类，更别说什么归档了。用久了之后，你的历史对话就像一个巨大的垃圾桶，什么都往里扔，什么都找不到。&lt;/p&gt;
+&lt;p&gt;直到我最近试了一下 Craft Agent。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260529172953083.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;任务面板这个东西，用过就回不去了&lt;/h3&gt;
+&lt;p&gt;Craft Agent 的界面是三栏布局，左边是功能栏，中间是任务列表，右边是对话框。&lt;/p&gt;
+&lt;p&gt;听起来好像没什么特别的对吧。&lt;/p&gt;
+&lt;p&gt;但你仔细想想，中间那个任务列表，才是这个工具真正牛逼的地方。&lt;/p&gt;
+&lt;p&gt;每个任务是一张独立的卡片。你可以给它打标签，可以标记状态，可以筛选。进行中的，已完成的，已取消的，一眼就能分清楚。&lt;/p&gt;
+&lt;p&gt;我跟你说，就这一个功能，直接治好了我的 AI 焦虑。&lt;/p&gt;
+&lt;p&gt;以前用 Claude Code 的时候，我的对话窗口里堆了几十个会话，什么「帮我改一下这个文件」「分析一下这个数据」「写个周报」，全混在一起。想找两周前让 AI 整理的那个方案？祝你好运。&lt;/p&gt;
+&lt;p&gt;现在呢，打开 Craft Agent，切到「已完成」筛选，两秒钟就找到了。&lt;/p&gt;
+&lt;p&gt;就这么简单。&lt;/p&gt;
+&lt;h3&gt;标签，跨项目管理的救星&lt;/h3&gt;
+&lt;p&gt;说到打标签这块，我觉得这个设计是真的用心了。&lt;/p&gt;
+&lt;p&gt;你可以给每个任务打自定义标签。比如我现在的工作区里，「内容」是一类，「代码」是一类，「杂活」又是一类。&lt;/p&gt;
+&lt;p&gt;以前不管是用 Cursor 还是 Claude Code，所有对话都是一锅粥。今天写公众号排版是用 AI，明天改代码 bug 也是用 AI，后天让它帮我整理文件还是用 AI。三条线全搅在一起。&lt;/p&gt;
+&lt;p&gt;有了标签之后，点一下「内容」，所有跟写文章相关的任务都出来了。点一下「代码」，所有跟开发相关的也出来了。&lt;/p&gt;
+&lt;p&gt;这个东西，用之前觉得没什么，用之后你会觉得，以前自己是怎么忍过来的。&lt;/p&gt;
+&lt;h3&gt;执行模式，让你对 AI 的掌控感拉满&lt;/h3&gt;
+&lt;p&gt;Craft Agent 有三种执行模式，EXPLORE、ASK 和 EXECUTE。&lt;/p&gt;
+&lt;p&gt;EXPLORE 是只读模式，AI 只能看不能动你的文件。ASK 是每次要写文件的时候弹出来让你确认。EXECUTE 是全自动，AI 自己干。&lt;/p&gt;
+&lt;p&gt;关键是，每个任务可以单独设置执行模式。&lt;/p&gt;
+&lt;p&gt;这点很重要。你让 AI 整理下载文件夹，这种操作你可以放心开 EXECUTE 让它自己搞。但如果你让 AI 改一个重要的配置文件，你可以切到 ASK，每次写之前都过一眼。&lt;/p&gt;
+&lt;p&gt;这种掌控感，说实话，在同类工具里是很少见的。&lt;/p&gt;
+&lt;p&gt;Claude Code 默认就是全权委托，你把任务丢出去就只能等结果。Hotword 和 Z Code 更简单粗暴，连任务状态都看不到。&lt;/p&gt;
+&lt;h3&gt;我自己也还在摸索&lt;/h3&gt;
+&lt;p&gt;坦率的讲，Craft Agent 不是完美的。改了工作目录里的文件之后，工具里没法直接刷新看到变化，得去本地文件夹看。右键打开技能目录那个功能，我试了好几次都没反应，应该是 bug。&lt;/p&gt;
+&lt;p&gt;但怎么说呢，瑕不掩瑜。&lt;/p&gt;
+&lt;p&gt;我始终觉得，AI 工具的下一站，不是更聪明的模型。&lt;/p&gt;
+&lt;p&gt;模型已经够聪明了。&lt;/p&gt;
+&lt;p&gt;下一站，是谁能帮普通人把 AI 干的活管理好。任务面板、标签系统、状态筛选，这些东西听起来不性感，但它们才是让你愿意每天打开这个工具的原因。&lt;/p&gt;
+&lt;p&gt;Craft Agent 至少让我看到了这个方向。&lt;/p&gt;
+&lt;p&gt;&amp;gt;&amp;gt;&amp;gt;&lt;strong&gt;延伸阅读&lt;/strong&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;以上，既然看到这里了，如果觉得不错，随手&lt;strong&gt;点个赞、在看、转发&lt;/strong&gt;三连吧！想第一时间收到推送，可以给我个星标⭐️～&lt;/p&gt;
+&lt;p&gt;谢谢你看我的文章，我们，下次再见。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/%E6%9C%AA%E5%91%BD%E5%90%8D%E7%9A%84%E8%AE%BE%E8%AE%A1.webp&quot; alt=&quot;&quot; /&gt;
+&lt;em&gt;&amp;gt;/ 作者：大强同学&lt;/em&gt;
+&lt;em&gt;&amp;gt;/ 更多干货，请访问：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+</content:encoded></item><item><title>Obsidian首页控制台插件</title><link>https://dqtx.cc/posts/aihacks/%E6%88%91vib-coding%E4%B8%80%E4%B8%AAobsidian%E6%8F%92%E4%BB%B6/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E6%88%91vib-coding%E4%B8%80%E4%B8%AAobsidian%E6%8F%92%E4%BB%B6/</guid><pubDate>Thu, 28 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;算起来，我用Obsidian记也有好几年了，随着时间推移，文件越来越多，Claude Code里安装的skill也越来越多。&lt;/p&gt;
+&lt;p&gt;然后我就发现了一个很尴尬的问题。&lt;/p&gt;
+&lt;p&gt;我想调用一个skill，但死活想不起来那个斜杠命令叫什么。是&lt;code&gt;/khazix-writer&lt;/code&gt;还是&lt;code&gt;/wewrite&lt;/code&gt;？是&lt;code&gt;/up-Library-ingest&lt;/code&gt;还是&lt;code&gt;/Library-lint&lt;/code&gt;？每次都要去翻&lt;code&gt;知识库管理斜杠命令.md&lt;/code&gt;那个文件，翻完复制，再去终端粘贴。&lt;/p&gt;
+&lt;p&gt;找笔记也是。文件散落在&lt;code&gt;01-输入/&lt;/code&gt;、&lt;code&gt;posts/&lt;/code&gt;、&lt;code&gt;Library/&lt;/code&gt;、&lt;code&gt;Xenia/&lt;/code&gt;、&lt;code&gt;Yoke/&lt;/code&gt;、&lt;code&gt;Zen/&lt;/code&gt;六个大目录下面，每个目录又有子目录。我想看看最近创建了什么笔记，得一个一个目录点进去看。&lt;/p&gt;
+&lt;p&gt;还有快速创建&lt;strong&gt;日记&lt;/strong&gt;和&lt;strong&gt;笔记&lt;/strong&gt;。每天想记点东西，得先新建文件，选目录，写frontmatter，再开始写内容。流程不长，但每天都来一遍就很烦。&lt;/p&gt;
+&lt;p&gt;三个问题，本质上都是同一个问题。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Obsidian缺一个控制台。&lt;/strong&gt;
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260528174551686.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;灵感来自一张截图&lt;/h3&gt;
+&lt;p&gt;前两天在网上刷到一张图，是一个人做的Obsidian首页仪表盘。&lt;/p&gt;
+&lt;p&gt;深色界面，顶部是统计卡片，中间是skill按钮栏，下面是tab面板。点击一个按钮就能直接执行对应的skill命令。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/7545851ed95b5dcaaa35d94b632e3a11.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;我当时就觉得，这玩意我也能搞。&lt;/p&gt;
+&lt;p&gt;但我不是程序员，不会写TypeScript，更不会写Obsidian插件。&lt;/p&gt;
+&lt;p&gt;不过，我会用Claude Code。&lt;/p&gt;
+&lt;h3&gt;开始Vibe Coding&lt;/h3&gt;
+&lt;p&gt;说真的，一开始我也不知道能不能搞成。我的想法很简单，跟Claude Code说清楚我要什么，它来写代码，我来看效果。&lt;/p&gt;
+&lt;p&gt;我把我的需求甩给了Claude Code，包括我的目录结构、skill列表、想要的界面布局。然后就开始了。&lt;/p&gt;
+&lt;p&gt;过程怎么说呢，比我想象的顺利，但也踩了不少坑。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第一个坑是「终端集成」&lt;/strong&gt;。我想让点击skill按钮后自动在Obsidian的终端里输入命令，而不是只复制到剪贴板。为了搞清楚polyipseity Terminal插件的API，Claude Code把插件的minified代码翻了个底朝天，最后发现它的view type是动态生成的，根本写不死。&lt;/p&gt;
+&lt;p&gt;试了三种方案，最后发现最靠谱的还是复制到剪贴板。虽然不是一键执行，但至少不用每次去翻那个命令文件了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第二个坑是CSS&lt;/strong&gt;。我想要一个很酷的暗色主题，参考了PHOENIX仪表盘和Slash设计系统的设计语言。Claude Code帮我把CSS从最初的简陋版本迭代了四五个版本，从纯黑背景到金色强调色，从普通按钮到pill形状，从硬编码颜色到跟随Obsidian主题变量。&lt;/p&gt;
+&lt;p&gt;现在回头看，整个开发过程大概就是这样的：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;我描述需求 → Claude Code写代码 → 我截图看效果 → 我说「这个不对」「那个要改」 → Claude Code改 → 我再看 → 直到满意。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;整个过程大概花了两个小时。&lt;/p&gt;
+&lt;h3&gt;最终效果&lt;/h3&gt;
+&lt;p&gt;现在打开Obsidian，左侧栏有个仪表盘图标，点进去就是一个Home Console面板。&lt;/p&gt;
+&lt;p&gt;顶部是skill按钮栏，分了五个组，每个组都有自己的颜色标签。新建组有日记和笔记两个按钮，点日记自动创建今天的Daily Note并打开，点笔记弹出目录选择让你选保存到哪个文件夹。&lt;/p&gt;
+&lt;p&gt;文案组有选题生成、写文章、写教程、引流文案、去AI味、审校、标题七个按钮。制图组有配图、封面、卡片、PPT。查询组有查知识库，点击后会弹一个输入框，你输入关键词，它就帮你拼好&lt;code&gt;/Library-query 你的问题&lt;/code&gt;然后复制到剪贴板。整理组有Library编译、Wiki编译、index编译、全量同步。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260528174330534.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;下面是六个Tab面板。输入池显示&lt;code&gt;01-输入/&lt;/code&gt;下面各目录有多少待处理的素材。知识库显示Library的分类分布和最新页面，还有快捷入口可以直接打开&lt;code&gt;index.md&lt;/code&gt;和&lt;code&gt;log.md&lt;/code&gt;。博客文章Tab左侧是分类分布和文章概况，右侧是最近创建的笔记列表，带搜索过滤。Dataview、命令和快捷键、资料合集三个Tab分别对应Zen、Xenia、Yoke三个目录的文件列表，也都有搜索框。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260528175023790.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;说真的，我自己用了两天，最大的感受是。&lt;/p&gt;
+&lt;p&gt;以前每次要用一个skill，脑子里要过一遍「那个命令叫什么来着」，现在不用了。按钮就在那里，点一下就复制好了，去终端粘贴就行。&lt;/p&gt;
+&lt;p&gt;这种感觉就像，你以前每次炒菜都要先翻一遍菜谱找调料在哪，现在调料瓶全部摆在灶台边上，伸手就够到。&lt;/p&gt;
+&lt;h3&gt;这件事让我想到的&lt;/h3&gt;
+&lt;p&gt;其实整个开发过程最让我兴奋的不是最终做出来了什么，而是这个过程本身。&lt;/p&gt;
+&lt;p&gt;我一个不会写TypeScript的人，两个小时，从零开始搞出了一个能用的Obsidian插件。这在一年前是不可想象的。&lt;/p&gt;
+&lt;p&gt;Vibe coding这个词很准确。你不是在「编程」，你是在跟一个懂编程的伙伴聊天。你说你的想法，它帮你实现。你说「这个不对」，它帮你改。你说「参考一下这个设计」，它帮你对标。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;你做的事情是思考、判断、审美。代码实现是AI的事情。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这不是说以后程序员就没用了。恰恰相反，正是因为有Claude Code这样的工具在，我才能把精力集中在「我要什么」而不是「怎么实现」上面。&lt;/p&gt;
+&lt;p&gt;就像我跟Claude Code头脑风暴的时候，它帮我分析了终端插件的API、分析了xterm.js的输入机制、帮我把22个skill按钮按工作流分了五个组。这些东西如果靠我自己去研究，可能一周都搞不完。&lt;/p&gt;
+&lt;p&gt;但有了AI，它研究，我决策。&lt;/p&gt;
+&lt;p&gt;它说「终端插件的view type是动态的，建议用剪贴板桥接」，我判断「可以，先用剪贴板，以后再优化」。它说「统计栏可以显示收件箱数量和死链数量」，我判断「不要，太多了，简洁一点」。&lt;/p&gt;
+&lt;p&gt;这才是AI时代正确的协作方式。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;不是让AI替你做所有事，而是让AI帮你做你做不到的事，然后你来做判断。&lt;/strong&gt;&lt;/p&gt;
+&lt;h3&gt;写在最后&lt;/h3&gt;
+&lt;p&gt;如果你也是Obsidian重度用户，也在为笔记太多找不到、skill命令记不住而烦恼，不妨试试自己搞一个Home Console。&lt;/p&gt;
+&lt;p&gt;你不需要会写代码。你只需要有Claude Code，和一个想解决问题的心。&lt;/p&gt;
+&lt;p&gt;就像我一样。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&amp;gt;&amp;gt;&amp;gt;&lt;strong&gt;延伸阅读&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/qJIDXo-CqusOzWWXHBMPYA&quot;&gt;全程借助 Vibe Coding 开发，打造出 Rustdesk 一键定制编译方案。&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;p&gt;以上，既然看到这里了，如果觉得不错，随手&lt;strong&gt;点个赞、在看、转发&lt;/strong&gt;三连吧！想第一时间收到推送，可以给我个星标⭐️～&lt;/p&gt;
+&lt;p&gt;谢谢你看我的文章，我们，下次再见。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/%E6%9C%AA%E5%91%BD%E5%90%8D%E7%9A%84%E8%AE%BE%E8%AE%A1.webp&quot; alt=&quot;&quot; /&gt;
+&lt;em&gt;&amp;gt;/ 作者：大强同学&lt;/em&gt;
+&lt;em&gt;&amp;gt;/ 更多干货，请访问：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+</content:encoded></item><item><title>Obsidian联动notebooklm</title><link>https://dqtx.cc/posts/aihacks/obsidian%E8%81%94%E5%8A%A8notebooklm/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/obsidian%E8%81%94%E5%8A%A8notebooklm/</guid><pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;NotebookLM 的 AI 能力对 Obsidian 是极好的补充——Deep Research、Audio Overview、PPT 生成，每一样都实用。但问题是每次都要开网页、手动传文件，笔记一多简直是灾难。今天教你用 Claude Code 把 NotebookLM 的全部功能塞进 Obsidian。不用打开浏览器，不用花一分钱 API Token，在笔记库里一句话就能跑 Deep Research、自动生成 PPT 和播客音频。&lt;/p&gt;
+&lt;h3&gt;notebooklm可以做什么&lt;/h3&gt;
+&lt;p&gt;我开始之前，我们现回顾一下，notebooklm到底可以做什么？首先，它的定位是一个AI研究助理。&lt;strong&gt;只在你上传的资料里做问答、总结、分析、生成播客 / 脑图 / 报告，全程可溯源、幻觉极低&lt;/strong&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;音频概览---播客&lt;/li&gt;
+&lt;li&gt;演示文稿---PPT&lt;/li&gt;
+&lt;li&gt;视频概览---讲解视频&lt;/li&gt;
+&lt;li&gt;思维导图---结构化脑图&lt;/li&gt;
+&lt;li&gt;报告---完整分析报告&lt;/li&gt;
+&lt;li&gt;闪卡---记忆卡片&lt;/li&gt;
+&lt;li&gt;测验---自测题/试卷&lt;/li&gt;
+&lt;li&gt;信息图---可视化图表方案&lt;/li&gt;
+&lt;li&gt;数据表格---结构化数据表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260529150213345.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;环境准备&lt;/h3&gt;
+&lt;p&gt;开始之前，确保你的环境有以下东西：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://claude.com/product/claude-code&quot;&gt;Claude Code&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/teng-lin/notebooklm-py&quot;&gt;NotebookLM-py&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://obsidian.md/zh/&quot;&gt;Obsidian&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;装上之后，你只需要在 Claude Code 中用自然语言描述需求，剩下的全自动——创建笔记本、导入资料、生成内容、导出文件，全在 Obsidian 内部完成。下面用三个案例，从简单到复杂，展示这套工作流的实际威力。&lt;/p&gt;
+&lt;h3&gt;场景案例&lt;/h3&gt;
+&lt;h4&gt;案例一：Deep Research + 自动生成 PPT&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;使用 notebooklm skill，对 &apos;Claude code vs Hermes Agent&apos; 进行Web深度研究（Deep Research）。将搜集到的相关信源自动建立 NotebookLM，把所有被引用文献的全文（Markdown 格式）导出并存放到 01-输入/Notebooklm/Claude code vs Hermes Agent目录，最后生成一份中文演示文稿（Slide Deck），存入我桌面
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Claude code开始执行，最后的产出清单&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;01-输入/Notebooklm/下面单文件夹，10个mrkdown文献全网&lt;/li&gt;
+&lt;li&gt;桌面一份中文的演示PPT
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260528030245156.webp&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;跑通后，我想到这样的事情，以后我会经常干，于是我马上让他创建了一个工作流，就是skill，以后我主要给他主题，就可以了。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;帮我创建一个技能，名字叫Notebooklm-DeepResearch-ppt 让我给你一个研究主题，你需要调用notebooklm skill 对给出的主题进行Web深度研究（Deep Research）。将搜集到的相关信源自动建立 NotebookLM，把所有被引用文献的全文（Markdown 格式）导出并存放到 01-输入/Notebooklm/ 单独文件文件夹（创建一个主题名字） 最后使用提示词Xenia/3D风格PPT风格&quot;生成一份中文演示文稿（Slide Deck），存入我桌面
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;案例二：零基础 AI 学习——从规划到落地页全自动&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;我是一个完全零基础的AI小白，希望从几个不同维度学习AI，既能赶上时代潮流，也能在未来从事相关工作。结合2026年AI发展的趋势，请为我推荐3到4个必须彻底掌握的具体领域，以及1到2个未来需要进阶的潜在领域。请给出这5个不同方向的主题，并分别做出简要解释。
+
+同时请使用notebooklm py在NotebookLM上分别创建5个涵盖不同领域的独立笔记本。针对每个主题，都要使用其“源文件”（Sources）功能，并确保每个笔记本都包含内容丰富、来源多样的资料。同时，请务必注意信息的时效性与可靠性。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260529150910343.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;帮我将你搜集到的内容全部自动导入到各自的笔记本里面，并且针对每一个笔记本都帮我制作一张中文信息图，下载到我桌面
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/wezterm-gui_QLGAdQbH2z.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;另外，请根据我nbookLM里面的内容，帮我在01-输入/Learning制定一个一个月的学习计划，包含我一定需要看到的youtube链接，并且我需要你帮我筛选一下视频的质量。我需要发布时间在6个月以内播放量在1万以上的视频。同时请直接在左侧的项目中帮我创建这份计划书。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260529162354004.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;根据我从NotebookLM中提取的内容，这份学习计划，帮我创建一个可以交互的落地页，我需要简单的功能是可以进学习进度的追踪，自由标记我的学习进度，页UI要好看，内部链接点击可以直接跳转。搞完直接使用内部的浏览器帮我打开我要测试一下功能
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260529162705398.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h4&gt;案例三：本地笔记 → 测验 + 播客 + 信息图&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;读取我本地 01-输入 文件夹下的所有有关 claude code 的笔记。使用 notebooklm skill，利用这些笔记在 NotebookLM 中创建一个笔记本，并生成一套困难难度的 Quiz 测验，一部辩论格式的音频（Audio Overview），和一份资讯图表（Infographic），将生成的测验以 Markdown 格式保存到项目根目录中，将生成的音频和资讯图表下载到项目根目录中。注意：测验、音频和资讯图表都要使用中文。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这个留给你作为作业，自己去体验。&lt;/p&gt;
+&lt;h3&gt;写在最后&lt;/h3&gt;
+&lt;p&gt;三个案例，从简单到复杂，核心就一句话：&lt;strong&gt;把「手动操作网页」变成「一句话指令」&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;以前用 NotebookLM：打开浏览器 → 登录 → 创建笔记本 → 一个一个上传文件 → 手动点生成 → 手动点导出。笔记多了以后，光管理笔记本就能把你耗死。&lt;/p&gt;
+&lt;p&gt;现在你只需要在 Obsidian 里敲一行自然语言，Claude Code 帮你跑完所有步骤。&lt;/p&gt;
 </content:encoded></item><item><title>Deskflow键盘鼠标共享工具</title><link>https://dqtx.cc/posts/software/deskflow%E9%94%AE%E7%9B%98%E9%BC%A0%E6%A0%87%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%85%B7/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/deskflow%E9%94%AE%E7%9B%98%E9%BC%A0%E6%A0%87%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%85%B7/</guid><pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;多台电脑同时干活，桌上摆几套键鼠又占地方又割裂。最近找到一款&lt;strong&gt;Deskflow&lt;/strong&gt;软件，支持 Windows 和 macOS，一套键鼠就能控制多台设备，局域网即连即用。&lt;/p&gt;
 &lt;p&gt;鼠标移动到屏幕边缘自动滑到另一台电脑，就像多显示器一样自然。同时支持&lt;strong&gt;剪贴板共享&lt;/strong&gt;，在一台设备复制文字，另一台直接粘贴。&lt;/p&gt;
 &lt;h3&gt;配置步骤&lt;/h3&gt;
@@ -503,39 +747,6 @@
 &lt;li&gt;在设置 → 首选项里关闭 TLS 加密&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;工具自带简体中文，在高级设置里切换，mac 版也一样，唯一的短板是不支持文件拖拽传输，但这属于锦上添花，日常操作已经够用了。&lt;/p&gt;
-</content:encoded></item><item><title>Obsidian联动notebooklm</title><link>https://dqtx.cc/posts/software/obsidian%E8%81%94%E5%8A%A8notebooklm/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/obsidian%E8%81%94%E5%8A%A8notebooklm/</guid><pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;NotebookLM 的 AI 能力对 Obsidian 是极好的补充——Deep Research、Audio Overview、PPT 生成，每一样都实用。但问题是每次都要开网页、手动传文件，笔记一多简直是灾难。&lt;/p&gt;
-&lt;p&gt;今天教你用 Claude Code 把 NotebookLM 的全部功能塞进 Obsidian。不用打开浏览器，不用花一分钱 API Token，在笔记库里一句话就能跑 Deep Research、自动生成 PPT 和播客音频。&lt;/p&gt;
-&lt;h3&gt;环境准备&lt;/h3&gt;
-&lt;p&gt;开始之前，确保你的环境有以下东西：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Claude Code&lt;/strong&gt;：https://claude.com/product/claude-code&lt;/li&gt;
-&lt;li&gt;**NotebookLM-py：https://github.com/teng-lin/notebooklm-py&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Obsidian&lt;/strong&gt;：https://obsidian.md/zh/&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;装上之后，你只需要在 Claude Code 中用自然语言描述需求，剩下的全自动——创建笔记本、导入资料、生成内容、导出文件，全在 Obsidian 内部完成。&lt;/p&gt;
-&lt;p&gt;下面用三个案例，从简单到复杂，展示这套工作流的实际威力。&lt;/p&gt;
-&lt;h3&gt;场景案例&lt;/h3&gt;
-&lt;h4&gt;案例一：Deep Research + 自动生成 PPT&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;使用 notebooklm skill，对 &apos;OpenClaw vs Hermes Agent&apos; 进行Web深度研究（Deep Research）。将搜集到的相关信源自动建立 NotebookLM，把所有被引用文献的全文（Markdown 格式）导出并存放到 /notebooklm/research/ 目录，最后生成一份演示文稿（Slide Deck），存入当前项目的根目录。
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4&gt;案例二：本地笔记 → 测验 + 播客 + 信息图&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;读取我本地 /notes/ 文件夹下的所有有关 claude code 的笔记。使用 notebooklm skill，利用这些笔记在 NotebookLM 中创建一个笔记本，并生成一套困难难度的 Quiz 测验，一部辩论格式的音频（Audio Overview），和一份资讯图表（Infographic），将生成的测验以 Markdown 格式保存到项目根目录中，将生成的音频和资讯图表下载到项目根目录中。注意：测验、音频和资讯图表都要使用中文。
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4&gt;案例三：零基础 AI 学习——从规划到落地页全自动&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;我是一个完全零基础的AI小白，希望从几个不同维度学习AI，既能赶上时代潮流，也能在未来从事相关工作。结合2026年AI发展的趋势，请为我推荐3到4个必须彻底掌握的具体领域，以及1到2个未来需要进阶的潜在领域。请给出这5个不同方向的主题，并分别做出简要解释。
-
-同时在NotebookLM上分别创建5个涵盖不同领域的独立笔记本。针对每个主题，都要使用其“源文件”（Sources）功能，并确保每个笔记本都包含内容丰富、来源多样的资料。同时，请务必注意信息的时效性与可靠性。
-
-帮我将你搜集到的内容全部自动导入到各自的笔记本里面，并且针对每一个笔记本都帮我制作一张信息图，并把链接也发过来让我可以直接点击
-
-另外，请根据我nbookLM里面的内容，帮我制定一个一个月的学习计划，包含我一定需要看到的youtube链接，并且我需要你帮我筛选一下视频的质量。我需要发布时间在6个月以内播放量在1万以上的视频。同时请直接在左侧的项目中帮我创建这份计划书。
-
-同时根据我从NotebookLM中提取的内容，这份以及这份学习计划，帮我创建一个可以交互的落地页，我需要简单的功能是可以进学习进度的追踪，自由标记我的学习进度，页UI要好看，内部链接点击可以直接跳转。另外，有完善动画，登录界面，一键部署github，部署Vercel。搞完直接使用内部的浏览器帮我打开我要测试一下功能
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;写在最后&lt;/h3&gt;
-&lt;p&gt;三个案例，从简单到复杂，核心就一句话：&lt;strong&gt;把「手动操作网页」变成「一句话指令」&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;以前用 NotebookLM：打开浏览器 → 登录 → 创建笔记本 → 一个一个上传文件 → 手动点生成 → 手动点导出。笔记多了以后，光管理笔记本就能把你耗死。&lt;/p&gt;
-&lt;p&gt;现在你只需要在 Obsidian 里敲一行自然语言，Claude Code 帮你跑完所有步骤。&lt;/p&gt;
 </content:encoded></item><item><title>微信内容同步到Obsidian方案</title><link>https://dqtx.cc/posts/software/%E5%BE%AE%E4%BF%A1%E5%86%85%E5%AE%B9%E5%90%8C%E6%AD%A5obsidian/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E5%BE%AE%E4%BF%A1%E5%86%85%E5%AE%B9%E5%90%8C%E6%AD%A5obsidian/</guid><pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;微信里看到的好文章、一闪而过的灵感、随手录的语音备忘——怎么快速存进 Obsidian？本文介绍两种实测可用的同步方案。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-wechat-obsidian-20260526-174500.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;方案一：笔记同步助手&lt;/h3&gt;
@@ -581,6 +792,65 @@ https://www.bijitongbu.site/tutorials/obsidian-tutorial/&lt;/p&gt;
 &lt;/ul&gt;
 &lt;hr /&gt;
 &lt;p&gt;那么，既然看到这里了，如果觉得不错，随手&lt;strong&gt;点个赞、在看、转发&lt;/strong&gt;三连吧！想第一时间收到推送，可以给我个星标⭐️～&lt;/p&gt;
+&lt;p&gt;谢谢你看我的文章，我们，下次再见。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/%E6%9C%AA%E5%91%BD%E5%90%8D%E7%9A%84%E8%AE%BE%E8%AE%A1.webp&quot; alt=&quot;&quot; /&gt;
+&lt;em&gt;&amp;gt;/ 作者：大强同学&lt;/em&gt;
+&lt;em&gt;&amp;gt;/ 更多干货，请访问：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+</content:encoded></item><item><title>chrome插件Obsidian Web Clipper</title><link>https://dqtx.cc/posts/software/%E7%BD%91%E9%A1%B5%E5%89%AA%E8%97%8Fobsidian/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E7%BD%91%E9%A1%B5%E5%89%AA%E8%97%8Fobsidian/</guid><pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天给使用 Obsidian 的朋友推荐一款 Chrome 插件——&lt;strong&gt;Obsidian Web Clipper&lt;/strong&gt;，可以把网页上的任何内容一键剪藏到你的 Obsidian 知识库。&lt;/p&gt;
+&lt;p&gt;Chrome 商店直接搜 &lt;strong&gt;Obsidian Web Clipper&lt;/strong&gt; 即可安装。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-obsidian-clipper-20260527-175000.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;安装与设置&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;资源&lt;/th&gt;
+&lt;th&gt;链接&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Chrome 插件&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://9lnk.io/tr0g&quot;&gt;https://9lnk.io/tr0g&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;开源地址&lt;/td&gt;
+&lt;td&gt;&lt;a href=&quot;https://github.com/obsidianmd/obsidian-clipper&quot;&gt;https://github.com/obsidianmd/obsidian-clipper&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4&gt;设置语言&lt;/h4&gt;
+&lt;p&gt;安装完插件后，第一件事设置语言：&lt;/p&gt;
+&lt;p&gt;依次点击 &lt;strong&gt;General → Language&lt;/strong&gt;，选择&lt;strong&gt;中文简体&lt;/strong&gt;。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260526223221463.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h4&gt;模板配置&lt;/h4&gt;
+&lt;p&gt;想简单写，点击 &lt;strong&gt;Default&lt;/strong&gt;，笔记位置填写个相对路径，内容属性填写3条：来源、日期、标签。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260526224433776.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;想复杂点，点击模板 &lt;strong&gt;Default&lt;/strong&gt;→导入（右上角），导入模板后把默认模板 Default 删除即可。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260526223231361.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;自用模板可关注公众号&lt;strong&gt;大强同学&lt;/strong&gt;，回复「clippings」获取。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260526223319188.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h4&gt;配置 API 解释器&lt;/h4&gt;
+&lt;p&gt;打开&lt;strong&gt;启用解释器&lt;/strong&gt;，开启&lt;strong&gt;行为 → 自动运行&lt;/strong&gt;，提供商选择 &lt;strong&gt;OpenRouter&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260526223338173.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;剪藏场景&lt;/h3&gt;
+&lt;p&gt;使用前建议先把插件固定到工具栏，后面一键就能用。&lt;/p&gt;
+&lt;h4&gt;整页剪藏&lt;/h4&gt;
+&lt;p&gt;看到一篇好文章想存下来慢慢看？点一下插件图标，再点&lt;strong&gt;添加到 Obsidian&lt;/strong&gt;，文章就进库了。&lt;/p&gt;
+&lt;h4&gt;片段剪藏&lt;/h4&gt;
+&lt;p&gt;只想存某几段话？划选文字 → 右键 &lt;strong&gt;Obsidian Web Clipper&lt;/strong&gt; → 在页面中打开 → 添加到 Obsidian。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260526225434965.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;这个插件是Obsidian出品的，整体在电脑网页阅读场景做剪藏，非常丝滑，不仅仅是任何文章内容，还可以划选文字。&lt;/p&gt;
+&lt;p&gt;但是有个问题，他剪藏的X推文链接不完整，我借助的插件是XViral Monitor可以直接复制推文mrkdown
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260526230246894.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&amp;gt;&amp;gt;&amp;gt;&lt;strong&gt;延伸阅读&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/o4_lH_v8DvhWsJ6ExAt2ZA&quot;&gt;一键把微信微信文章同步Obsidian&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/2eqmgz77JXHaYgL6-TWBdA&quot;&gt;一键把Get笔记同步到 Obsidian&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;p&gt;以上，既然看到这里了，如果觉得不错，随手&lt;strong&gt;点个赞、在看、转发&lt;/strong&gt;三连吧！想第一时间收到推送，可以给我个星标⭐️～&lt;/p&gt;
 &lt;p&gt;谢谢你看我的文章，我们，下次再见。
 &lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/%E6%9C%AA%E5%91%BD%E5%90%8D%E7%9A%84%E8%AE%BE%E8%AE%A1.webp&quot; alt=&quot;&quot; /&gt;
 &lt;em&gt;&amp;gt;/ 作者：大强同学&lt;/em&gt;
@@ -651,65 +921,6 @@ SORT readingTime DESC
 &lt;p&gt;以上，既然看到这里了，如果觉得不错，随手&lt;strong&gt;点个赞、在看、转发&lt;/strong&gt;三连吧，如果想第一时间收到推送，也可以给我个星标⭐️～&lt;/p&gt;
 &lt;p&gt;谢谢你看我的文章，我们，下次再见。&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&amp;gt;/ 作者：大强同学&lt;/em&gt;
-&lt;em&gt;&amp;gt;/ 更多干货，请访问：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-</content:encoded></item><item><title>chrome插件Obsidian Web Clipper</title><link>https://dqtx.cc/posts/software/%E7%BD%91%E9%A1%B5%E5%89%AA%E8%97%8Fobsidian/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E7%BD%91%E9%A1%B5%E5%89%AA%E8%97%8Fobsidian/</guid><pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天给使用 Obsidian 的朋友推荐一款 Chrome 插件——&lt;strong&gt;Obsidian Web Clipper&lt;/strong&gt;，可以把网页上的任何内容一键剪藏到你的 Obsidian 知识库。&lt;/p&gt;
-&lt;p&gt;Chrome 商店直接搜 &lt;strong&gt;Obsidian Web Clipper&lt;/strong&gt; 即可安装。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-obsidian-clipper-20260527-175000.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;安装与设置&lt;/h3&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;资源&lt;/th&gt;
-&lt;th&gt;链接&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Chrome 插件&lt;/td&gt;
-&lt;td&gt;&lt;a href=&quot;https://9lnk.io/tr0g&quot;&gt;https://9lnk.io/tr0g&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;开源地址&lt;/td&gt;
-&lt;td&gt;&lt;a href=&quot;https://github.com/obsidianmd/obsidian-clipper&quot;&gt;https://github.com/obsidianmd/obsidian-clipper&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h4&gt;设置语言&lt;/h4&gt;
-&lt;p&gt;安装完插件后，第一件事设置语言：&lt;/p&gt;
-&lt;p&gt;依次点击 &lt;strong&gt;General → Language&lt;/strong&gt;，选择&lt;strong&gt;中文简体&lt;/strong&gt;。
-&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260526223221463.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h4&gt;模板配置&lt;/h4&gt;
-&lt;p&gt;想简单写，点击 &lt;strong&gt;Default&lt;/strong&gt;，笔记位置填写个相对路径，内容属性填写3条：来源、日期、标签。
-&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260526224433776.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;想复杂点，点击模板 &lt;strong&gt;Default&lt;/strong&gt;→导入（右上角），导入模板后把默认模板 Default 删除即可。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260526223231361.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;自用模板可关注公众号&lt;strong&gt;大强同学&lt;/strong&gt;，回复「clippings」获取。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260526223319188.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h4&gt;配置 API 解释器&lt;/h4&gt;
-&lt;p&gt;打开&lt;strong&gt;启用解释器&lt;/strong&gt;，开启&lt;strong&gt;行为 → 自动运行&lt;/strong&gt;，提供商选择 &lt;strong&gt;OpenRouter&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260526223338173.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;剪藏场景&lt;/h3&gt;
-&lt;p&gt;使用前建议先把插件固定到工具栏，后面一键就能用。&lt;/p&gt;
-&lt;h4&gt;整页剪藏&lt;/h4&gt;
-&lt;p&gt;看到一篇好文章想存下来慢慢看？点一下插件图标，再点&lt;strong&gt;添加到 Obsidian&lt;/strong&gt;，文章就进库了。&lt;/p&gt;
-&lt;h4&gt;片段剪藏&lt;/h4&gt;
-&lt;p&gt;只想存某几段话？划选文字 → 右键 &lt;strong&gt;Obsidian Web Clipper&lt;/strong&gt; → 在页面中打开 → 添加到 Obsidian。
-&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260526225434965.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;这个插件是Obsidian出品的，整体在电脑网页阅读场景做剪藏，非常丝滑，不仅仅是任何文章内容，还可以划选文字。&lt;/p&gt;
-&lt;p&gt;但是有个问题，他剪藏的X推文链接不完整，我借助的插件是XViral Monitor可以直接复制推文mrkdown
-&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260526230246894.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&amp;gt;&amp;gt;&amp;gt;&lt;strong&gt;延伸阅读&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/o4_lH_v8DvhWsJ6ExAt2ZA&quot;&gt;一键把微信微信文章同步Obsidian&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/2eqmgz77JXHaYgL6-TWBdA&quot;&gt;一键把Get笔记同步到 Obsidian&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;p&gt;以上，既然看到这里了，如果觉得不错，随手&lt;strong&gt;点个赞、在看、转发&lt;/strong&gt;三连吧！想第一时间收到推送，可以给我个星标⭐️～&lt;/p&gt;
-&lt;p&gt;谢谢你看我的文章，我们，下次再见。
-&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/%E6%9C%AA%E5%91%BD%E5%90%8D%E7%9A%84%E8%AE%BE%E8%AE%A1.webp&quot; alt=&quot;&quot; /&gt;
-&lt;em&gt;&amp;gt;/ 作者：大强同学&lt;/em&gt;
 &lt;em&gt;&amp;gt;/ 更多干货，请访问：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 </content:encoded></item><item><title>UU远程手机终端操作CC</title><link>https://dqtx.cc/posts/aihacks/uu%E8%BF%9C%E7%A8%8B%E7%BB%88%E7%AB%AF/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/uu%E8%BF%9C%E7%A8%8B%E7%BB%88%E7%AB%AF/</guid><pubDate>Mon, 25 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;用手机操控电脑终端，这事以前要么折腾 SSH，要么忍着 TeamViewer 的笨重。现在 UU 远程一个功能就解决了——&lt;strong&gt;手机直接打开电脑的 cmd 终端&lt;/strong&gt;，丝滑敲 CLI。&lt;/p&gt;
 &lt;p&gt;这意味着你可以在手机上随时随地用 Codex、Claude Code 这些命令行 AI 工具，真正把开发环境装进口袋。&lt;/p&gt;
@@ -1086,7 +1297,7 @@ https://github.com/multica-ai/andrej-karpathy-skills，&lt;/p&gt;
 &lt;p&gt;谢谢你看我的文章，我们，下次再见。&lt;/p&gt;
 &lt;p&gt;&amp;gt;/ &lt;em&gt;作者：大强同学&lt;/em&gt;
 &amp;gt;/ &lt;em&gt;更多干货，请访问：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-</content:encoded></item><item><title>在飞书里和 Claude 对话</title><link>https://dqtx.cc/posts/aihacks/%E5%9C%A8%E9%A3%9E%E4%B9%A6%E9%87%8C%E9%A3%9E%E4%B9%A6%E5%92%8C-claude-%E5%AF%B9%E8%AF%9D/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E5%9C%A8%E9%A3%9E%E4%B9%A6%E9%87%8C%E9%A3%9E%E4%B9%A6%E5%92%8C-claude-%E5%AF%B9%E8%AF%9D/</guid><pubDate>Sat, 23 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;我是Claude Code重度用户，但有个问题一直没解决——我人是在微信/飞书里的，但 Claude Code 跑在终端上。每次要给它发个需求、传个文件，都得切回终端敲命令。一天切几十次，真的烦。&lt;/p&gt;
+</content:encoded></item><item><title>在飞书里和 Claude 对话</title><link>https://dqtx.cc/posts/aihacks/%E5%9C%A8%E9%A3%9E%E5%BE%AE%E4%BF%A1%E9%A3%9E%E4%B9%A6%E5%92%8C-claude-%E5%AF%B9%E8%AF%9D/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E5%9C%A8%E9%A3%9E%E5%BE%AE%E4%BF%A1%E9%A3%9E%E4%B9%A6%E5%92%8C-claude-%E5%AF%B9%E8%AF%9D/</guid><pubDate>Sat, 23 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;我是Claude Code重度用户，但有个问题一直没解决——我人是在微信/飞书里的，但 Claude Code 跑在终端上。每次要给它发个需求、传个文件，都得切回终端敲命令。一天切几十次，真的烦。&lt;/p&gt;
 &lt;p&gt;后来找到了 &lt;a href=&quot;https://github.com/lc2panda/claude-plugin-wechat&quot;&gt;lc2panda/claude-plugin-wechat&lt;/a&gt; 这个项目，能把 Claude Code 接到微信和飞书上，在聊天框里直接跟它对话。支持：文字、图片、文件、语音、视频、远程权限审批、飞书文档，这个项目有两种模式：&lt;strong&gt;Channel 模式&lt;/strong&gt;和 &lt;strong&gt;ACP 模式&lt;/strong&gt;。这篇只讲 ACP 模式，我相信大多数人的 Claude Code 都接的是 国产API Key&lt;/p&gt;
 &lt;p&gt;项目地址：
 https://github.com/lc2panda/claude-plugin-wechat
@@ -1175,26 +1386,10 @@ ACP_AGENT=copilot wechat-acp  # 切换成 GitHub Copilot
 &lt;pre&gt;&lt;code&gt;ACP_AGENT=gemini feishu-acp
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;在聊天里随时发 &lt;code&gt;/cwd /新路径&lt;/code&gt; 能切换工作目录。&lt;/p&gt;
-&lt;p&gt;&amp;lt;!-- 配图：终端运行 feishu-acp 启动成功的截图，warm 风格，16:9 --&amp;gt;&lt;/p&gt;
-&lt;h3&gt;常见问题&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Q：bun add -g 装不上，一直卡着怎么办？&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;国内网络访问 GitHub 确实慢。可以试试挂代理，或者多等一会儿。实在不行换个时间段再试。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Q：微信扫码之后没反应？&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;检查终端是不是支持二维码显示。有些终端（比如 Windows 自带的 cmd）显示不了二维码，建议用 Windows Terminal 或 iTerm2。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Q：飞书发了消息没收到回复？&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;先检查应用有没有发布成功，权限有没有配全。常见的有两个坑：一是忘记加 &lt;code&gt;im.message.receive_v1&lt;/code&gt; 事件，二是忘记在版本管理里点&quot;发布&quot;。这两个坑我当时都踩过。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Q：wechat-acp 和 feishu-acp 可以同时跑吗？&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;可以。两个是独立的进程，互不冲突。一个终端跑微信，另一个跑飞书，俩都能用。&lt;/p&gt;
-&lt;h3&gt;总结&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;ACP 模式一条命令启动，比 Channel 模式省事太多&lt;/li&gt;
-&lt;li&gt;微信最简单，装完扫码就完事&lt;/li&gt;
-&lt;li&gt;飞书需要配应用，配一次以后也不用管了&lt;/li&gt;
-&lt;li&gt;支持 Claude、Gemini、Qwen 等多种 Agent 后端&lt;/li&gt;
-&lt;/ul&gt;
+&lt;h3&gt;写在最后&lt;/h3&gt;
 &lt;p&gt;说真的，自从把 Claude Code 接上微信和飞书，我在手机上也随时能给它丢任务了。午休躺床上突然想到一个方向，掏出手机发条消息，回去电脑前代码都写好了。&lt;/p&gt;
 &lt;p&gt;那感觉，想想就觉得爽。&lt;/p&gt;
-&lt;p&gt;&amp;gt;&amp;gt;&amp;gt;&lt;strong&gt;延伸阅读&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;⚠️不过这个项目他是相当于单项启动Claude code，双下远程控制看下Wangnov/gewe-cc。&lt;/p&gt;
 &lt;p&gt;以上，既然看到这里了，如果觉得不错，随手&lt;strong&gt;点个赞、在看、转发&lt;/strong&gt;三连吧，如果想第一时间收到推送，也可以给我个星标⭐️～&lt;/p&gt;
 &lt;p&gt;谢谢你看我的文章，我们，下次再见。&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&amp;gt;/ 作者：大强同学&lt;/em&gt;
@@ -2361,6 +2556,8 @@ https://www.designprompts.dev/&lt;/p&gt;
 https://saaspo.com/&lt;/p&gt;
 &lt;p&gt;用于 AI 构建的 AI 生成 UI 应用
 https://www.vibeui.studio/&lt;/p&gt;
+&lt;p&gt;uI设计参考
+https://dribbble.com/search/dashboard&lt;/p&gt;
 </content:encoded></item><item><title>picgo/Piclist图床</title><link>https://dqtx.cc/posts/software/picgo/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/picgo/</guid><pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;微信官方上传普遍要求图片小于 5MB，但超过 1~2MB 基本就开始体验变差了，后台容易抽风或重压缩，微信后台服务器在拉图时非常挑，有时候&lt;strong&gt;Pcigo 返回的图床 URL 微信抓不到&lt;/strong&gt;，还有GIF 对微信极不友好，公众号对 GIF 容忍度很差。&lt;/p&gt;
 &lt;h3&gt;相关链接&lt;/h3&gt;
 &lt;ul&gt;
