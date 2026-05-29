@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN" class="bg-[var(--page-bg)] text-[12px] md:text-[16px] dark" data-overlayscrollbars-initialize data-astro-cid-sckkx6r4 style="--bannerOffset: 15vh;--banner-height-home: 65vh;--banner-height: 35vh;--configHue: 250;--page-width: 75rem;--bg-url: none;--bg-enable: 0;--bg-position: center;--bg-size: cover;--bg-repeat: no-repeat;--bg-attachment: fixed;--bg-opacity: 1;--configHue: 250;"> <!-- 手机端适配 --> <head><title>Claude Code&amp;滴答清单 - 大强博客</title><meta name="referrer" content="no-referrer"><meta charset="UTF-8"><meta name="description" content="大强同学(Derek Zhao)的个人技术博客，分享网络技术、服务器部署、内网穿透、静态网站搭建、CDN优化、容器化部署等技术教程与实践经验，专注于云原生、无服务器架构和前后端开发。"><meta name="author" content="Derek Zhao"><meta name="keywords" content="大强博客, 大强同学, Derek Zhao, dqtx, 技术博客"><meta property="og:site_name" content="大强博客"><meta property="og:url" content="https://dqtx.cc/posts/aihacks/claude-code%E6%BB%B4%E7%AD%94%E6%B8%85%E5%8D%95/"><meta property="og:title" content="Claude Code&#38;滴答清单 - 大强博客"><meta property="og:description" content="大强同学(Derek Zhao)的个人技术博客，分享网络技术、服务器部署、内网穿透、静态网站搭建、CDN优化、容器化部署等技术教程与实践经验，专注于云原生、无服务器架构和前后端开发。"><meta property="og:type" content="article"><meta name="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://dqtx.cc/posts/aihacks/claude-code%E6%BB%B4%E7%AD%94%E6%B8%85%E5%8D%95/"><meta name="twitter:title" content="Claude Code&#38;滴答清单 - 大强博客"><meta name="twitter:description" content="大强同学(Derek Zhao)的个人技术博客，分享网络技术、服务器部署、内网穿透、静态网站搭建、CDN优化、容器化部署等技术教程与实践经验，专注于云原生、无服务器架构和前后端开发。"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.7.9"><link rel="canonical" href="https://dqtx.cc/posts/aihacks/claude-code%E6%BB%B4%E7%AD%94%E6%B8%85%E5%8D%95/"><link rel="preconnect" href="https://pic1.acofork.com"><link rel="preconnect" href="https://umami.acofork.com"><link rel="preconnect" href="https://support.nodeget.com"><!-- 霞鹜文楷字体已通过 npm 本地化 --><script src="/js/umami-share.js" defer></script><link rel="icon" href="/avatar.jpg" sizes="32x32"><!-- Set the theme before the page is rendered to avoid a flash --><script>(function(){const DEFAULT_THEME = "auto";
+<!DOCTYPE html><html lang="zh-CN" class="bg-[var(--page-bg)] text-[12px] md:text-[16px] dark" data-overlayscrollbars-initialize data-astro-cid-sckkx6r4 style="--bannerOffset: 15vh;--banner-height-home: 65vh;--banner-height: 35vh;--configHue: 250;--page-width: 75rem;--bg-url: none;--bg-enable: 0;--bg-position: center;--bg-size: cover;--bg-repeat: no-repeat;--bg-attachment: fixed;--bg-opacity: 1;--configHue: 250;"> <!-- 手机端适配 --> <head><title>滴答清单MCP配置 - 大强博客</title><meta name="referrer" content="no-referrer"><meta charset="UTF-8"><meta name="description" content="大强同学(Derek Zhao)的个人技术博客，分享网络技术、服务器部署、内网穿透、静态网站搭建、CDN优化、容器化部署等技术教程与实践经验，专注于云原生、无服务器架构和前后端开发。"><meta name="author" content="Derek Zhao"><meta name="keywords" content="大强博客, 大强同学, Derek Zhao, dqtx, 技术博客"><meta property="og:site_name" content="大强博客"><meta property="og:url" content="https://dqtx.cc/posts/aihacks/claude-code%E6%BB%B4%E7%AD%94%E6%B8%85%E5%8D%95/"><meta property="og:title" content="滴答清单MCP配置 - 大强博客"><meta property="og:description" content="大强同学(Derek Zhao)的个人技术博客，分享网络技术、服务器部署、内网穿透、静态网站搭建、CDN优化、容器化部署等技术教程与实践经验，专注于云原生、无服务器架构和前后端开发。"><meta property="og:type" content="article"><meta name="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://dqtx.cc/posts/aihacks/claude-code%E6%BB%B4%E7%AD%94%E6%B8%85%E5%8D%95/"><meta name="twitter:title" content="滴答清单MCP配置 - 大强博客"><meta name="twitter:description" content="大强同学(Derek Zhao)的个人技术博客，分享网络技术、服务器部署、内网穿透、静态网站搭建、CDN优化、容器化部署等技术教程与实践经验，专注于云原生、无服务器架构和前后端开发。"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.7.9"><link rel="canonical" href="https://dqtx.cc/posts/aihacks/claude-code%E6%BB%B4%E7%AD%94%E6%B8%85%E5%8D%95/"><link rel="preconnect" href="https://pic1.acofork.com"><link rel="preconnect" href="https://umami.acofork.com"><link rel="preconnect" href="https://support.nodeget.com"><!-- 霞鹜文楷字体已通过 npm 本地化 --><script src="/js/umami-share.js" defer></script><link rel="icon" href="/avatar.jpg" sizes="32x32"><!-- Set the theme before the page is rendered to avoid a flash --><script>(function(){const DEFAULT_THEME = "auto";
 const LIGHT_MODE = "light";
 const DARK_MODE = "dark";
 const AUTO_MODE = "auto";
@@ -91,7 +91,7 @@ const forceDarkMode = false;
 			html.dark #bg-box {
 				background-color: #0A0A0A !important;
 			}
-		</style><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Claude Code&滴答清单","description":"Claude Code&滴答清单","author":{"@type":"Person","name":"Derek Zhao","url":"https://dqtx.cc/"},"datePublished":"2026-05-29","inLanguage":"zh-CN"}</script><link rel="alternate" type="application/rss+xml" title="Derek Zhao" href="https://dqtx.cc/rss.xml"><link rel="stylesheet" href="/_astro/Layout.BuewHHUq.css">
+		</style><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"滴答清单MCP配置","description":"滴答清单MCP配置","author":{"@type":"Person","name":"Derek Zhao","url":"https://dqtx.cc/"},"datePublished":"2026-05-29","inLanguage":"zh-CN"}</script><link rel="alternate" type="application/rss+xml" title="Derek Zhao" href="https://dqtx.cc/rss.xml"><link rel="stylesheet" href="/_astro/Layout.BuewHHUq.css">
 <link rel="stylesheet" href="/_astro/Layout.Ds13mcav.css">
 <link rel="stylesheet" href="/_astro/_slug_.Bf2USRy1.css">
 <link rel="stylesheet" href="/_astro/_page_.CBHYhapf.css">
@@ -254,137 +254,137 @@ More
 </script> <div class="image-decoration-wrapper" data-astro-cid-n2ckqmjb> <div class="image-decoration" data-astro-cid-n2ckqmjb> <img src="https://gitee.com/da-qiang-classmate/typora/raw/master/image/weix1.webp" alt="装饰图片" class="image-decoration-img img-primary" data-astro-cid-n2ckqmjb> <img src="https://gitee.com/da-qiang-classmate/typora/raw/master/image/weix2.webp" alt="装饰图片" class="image-decoration-img img-hover" data-astro-cid-n2ckqmjb> </div> </div>  <div class="category-list" data-astro-cid-6z4ofoif> <div class="category-header" data-astro-cid-6z4ofoif> <div class="decoration-line" data-astro-cid-6z4ofoif></div> </div> <div class="flex flex-col gap-2" data-astro-cid-6z4ofoif> <a href="/categories/Software/" class="category-item group" data-astro-cid-6z4ofoif> <div class="category-card" data-astro-cid-6z4ofoif> <span class="category-name" data-astro-cid-6z4ofoif>Software</span> <span class="category-count" data-astro-cid-6z4ofoif>32</span> </div> </a><a href="/categories/Technical/" class="category-item group" data-astro-cid-6z4ofoif> <div class="category-card" data-astro-cid-6z4ofoif> <span class="category-name" data-astro-cid-6z4ofoif>Technical</span> <span class="category-count" data-astro-cid-6z4ofoif>21</span> </div> </a><a href="/categories/AIHacks/" class="category-item group" data-astro-cid-6z4ofoif> <div class="category-card" data-astro-cid-6z4ofoif> <span class="category-name" data-astro-cid-6z4ofoif>AIHacks</span> <span class="category-count" data-astro-cid-6z4ofoif>67</span> </div> </a><a href="/categories/Workflow/" class="category-item group" data-astro-cid-6z4ofoif> <div class="category-card" data-astro-cid-6z4ofoif> <span class="category-name" data-astro-cid-6z4ofoif>Workflow</span> <span class="category-count" data-astro-cid-6z4ofoif>15</span> </div> </a> </div> </div>  <div class="firefly-container" data-astro-cid-tdsynljt> <div class="tech-bg" data-astro-cid-tdsynljt> <!-- 科技网格 --> <div class="tech-grid" data-astro-cid-tdsynljt></div> <!-- 中心光晕 --> <div class="center-glow" data-astro-cid-tdsynljt></div> </div> <!-- 萤火虫标签 --> <a href="/tags/软件推荐/" class="firefly" style="
                 --start-x: 5px; 
                 --start-y: 0px;
-                --float-x: 56.26333983639335px;
+                --float-x: 66.11546011852958px;
                 --float-y: 0px;
-                --delay: 1.1706345255981527s;
-                --duration: 4.103491134102078s;
+                --delay: 1.7297123192243542s;
+                --duration: 6.27199269008581s;
                 --hue: 0;
             " data-astro-cid-tdsynljt> <span class="firefly-glow" data-astro-cid-tdsynljt></span> <span class="firefly-text" data-astro-cid-tdsynljt>软件推荐</span> </a><a href="/tags/AI/" class="firefly" style="
                 --start-x: 4.619397662556434px; 
                 --start-y: 1.913417161825449px;
-                --float-x: 72.78734686137655px;
-                --float-y: 16.54027724119223px;
-                --delay: 0.7106422331833189s;
-                --duration: 6.302863387209572s;
+                --float-x: 57.761178742640034px;
+                --float-y: 22.090299684778316px;
+                --delay: 0.7844538048308056s;
+                --duration: 6.305606871847137s;
                 --hue: 30;
             " data-astro-cid-tdsynljt> <span class="firefly-glow" data-astro-cid-tdsynljt></span> <span class="firefly-text" data-astro-cid-tdsynljt>AI</span> </a><a href="/tags/skill/" class="firefly" style="
                 --start-x: 3.5355339059327378px; 
                 --start-y: 3.5355339059327373px;
-                --float-x: 36.82069536592004px;
-                --float-y: 43.88171185389568px;
-                --delay: 0.5778586209931986s;
-                --duration: 5.08604358052944s;
+                --float-x: 39.24333919214103px;
+                --float-y: 44.06868549735455px;
+                --delay: 1.6742339396863062s;
+                --duration: 6.5849717608248275s;
                 --hue: 60;
             " data-astro-cid-tdsynljt> <span class="firefly-glow" data-astro-cid-tdsynljt></span> <span class="firefly-text" data-astro-cid-tdsynljt>skill</span> </a><a href="/tags/技术教程/" class="firefly" style="
                 --start-x: 1.9134171618254492px; 
                 --start-y: 4.619397662556434px;
-                --float-x: 29.0505308145393px;
-                --float-y: 55.7911345690962px;
-                --delay: 0.6422160565221207s;
-                --duration: 5.625714075232438s;
+                --float-x: 29.984160346690523px;
+                --float-y: 52.98195714902612px;
+                --delay: 1.369977935250959s;
+                --duration: 5.266363662079328s;
                 --hue: 90;
             " data-astro-cid-tdsynljt> <span class="firefly-glow" data-astro-cid-tdsynljt></span> <span class="firefly-text" data-astro-cid-tdsynljt>技术教程</span> </a><a href="/tags/Claudecode/" class="firefly" style="
                 --start-x: 3.061616997868383e-16px; 
                 --start-y: 5px;
-                --float-x: 4.398129112344011e-15px;
-                --float-y: 50.09693545780837px;
-                --delay: 1.348320828462363s;
-                --duration: 5.529813749918056s;
+                --float-x: 3.32878435651325e-15px;
+                --float-y: 61.22063804890085px;
+                --delay: 0.5427941615267793s;
+                --duration: 5.124852930834361s;
                 --hue: 120;
             " data-astro-cid-tdsynljt> <span class="firefly-glow" data-astro-cid-tdsynljt></span> <span class="firefly-text" data-astro-cid-tdsynljt>Claudecode</span> </a><a href="/tags/Agent/" class="firefly" style="
                 --start-x: -1.9134171618254485px; 
                 --start-y: 4.619397662556434px;
-                --float-x: -23.46387607263684px;
-                --float-y: 56.10191328313271px;
-                --delay: 1.8104706583593528s;
-                --duration: 6.621988388066873s;
+                --float-x: -22.817862626231225px;
+                --float-y: 37.038201222543854px;
+                --delay: 0.7258558405131614s;
+                --duration: 6.2949536887465705s;
                 --hue: 150;
             " data-astro-cid-tdsynljt> <span class="firefly-glow" data-astro-cid-tdsynljt></span> <span class="firefly-text" data-astro-cid-tdsynljt>Agent</span> </a><a href="/tags/工作流/" class="firefly" style="
                 --start-x: -3.5355339059327373px; 
                 --start-y: 3.5355339059327378px;
-                --float-x: -48.85885704991021px;
-                --float-y: 38.12795230168961px;
-                --delay: 1.7154949609789671s;
-                --duration: 4.840522076883153s;
+                --float-x: -41.824006560582px;
+                --float-y: 30.012826579882166px;
+                --delay: 1.806606096724518s;
+                --duration: 4.275676696128257s;
                 --hue: 180;
             " data-astro-cid-tdsynljt> <span class="firefly-glow" data-astro-cid-tdsynljt></span> <span class="firefly-text" data-astro-cid-tdsynljt>工作流</span> </a><a href="/tags/Obsidian插件/" class="firefly" style="
                 --start-x: -4.619397662556434px; 
                 --start-y: 1.9134171618254494px;
-                --float-x: -48.3743016017106px;
-                --float-y: 20.425050271791118px;
-                --delay: 1.6317837946570029s;
-                --duration: 4.757913623723323s;
+                --float-x: -73.89509808536685px;
+                --float-y: 15.80378481144289px;
+                --delay: 0.5696396180242105s;
+                --duration: 4.6622948010629095s;
                 --hue: 210;
             " data-astro-cid-tdsynljt> <span class="firefly-glow" data-astro-cid-tdsynljt></span> <span class="firefly-text" data-astro-cid-tdsynljt>Obsidian插件</span> </a><a href="/tags/博客/" class="firefly" style="
                 --start-x: -5px; 
                 --start-y: 6.123233995736766e-16px;
-                --float-x: -64.90327215802566px;
-                --float-y: 4.921460155212034e-15px;
-                --delay: 0.5310078237562652s;
-                --duration: 5.147108605062385s;
+                --float-x: -53.413695431767835px;
+                --float-y: 5.666440925917386e-15px;
+                --delay: 0.4590774549509469s;
+                --duration: 4.019185834558389s;
                 --hue: 240;
             " data-astro-cid-tdsynljt> <span class="firefly-glow" data-astro-cid-tdsynljt></span> <span class="firefly-text" data-astro-cid-tdsynljt>博客</span> </a><a href="/tags/chrome插件/" class="firefly" style="
                 --start-x: -4.619397662556434px; 
                 --start-y: -1.9134171618254483px;
-                --float-x: -68.81873442682662px;
-                --float-y: -16.910055423039164px;
-                --delay: 0.02690719945408837s;
-                --duration: 6.221464363879103s;
+                --float-x: -70.02526125077148px;
+                --float-y: -21.807881623340084px;
+                --delay: 1.747905178313156s;
+                --duration: 5.60764490914876s;
                 --hue: 270;
             " data-astro-cid-tdsynljt> <span class="firefly-glow" data-astro-cid-tdsynljt></span> <span class="firefly-text" data-astro-cid-tdsynljt>chrome插件</span> </a><a href="/tags/Obsidian/" class="firefly" style="
                 --start-x: -3.5355339059327386px; 
                 --start-y: -3.5355339059327373px;
-                --float-x: -41.736532805191636px;
-                --float-y: -32.31928786162727px;
-                --delay: 1.5234693777086168s;
-                --duration: 6.6982669073863885s;
+                --float-x: -48.060944393553534px;
+                --float-y: -37.36941551993442px;
+                --delay: 0.2443628362480288s;
+                --duration: 6.7673002867235885s;
                 --hue: 300;
             " data-astro-cid-tdsynljt> <span class="firefly-glow" data-astro-cid-tdsynljt></span> <span class="firefly-text" data-astro-cid-tdsynljt>Obsidian</span> </a><a href="/tags/Windows/" class="firefly" style="
                 --start-x: -1.9134171618254516px; 
                 --start-y: -4.619397662556432px;
-                --float-x: -29.625828221157494px;
-                --float-y: -58.472128198834824px;
-                --delay: 0.15770222584296079s;
-                --duration: 6.8196432741497865s;
+                --float-x: -29.2941115399977px;
+                --float-y: -49.385574847647945px;
+                --delay: 1.3638455326200347s;
+                --duration: 4.463560820818735s;
                 --hue: 330;
             " data-astro-cid-tdsynljt> <span class="firefly-glow" data-astro-cid-tdsynljt></span> <span class="firefly-text" data-astro-cid-tdsynljt>Windows</span> </a><a href="/tags/API/" class="firefly" style="
                 --start-x: -9.184850993605148e-16px; 
                 --start-y: -5px;
-                --float-x: -1.0602351582251667e-14px;
-                --float-y: -58.595791039817286px;
-                --delay: 1.1129046545863197s;
-                --duration: 4.76676324959185s;
+                --float-x: -1.4192554547203404e-14px;
+                --float-y: -52.21490113556244px;
+                --delay: 0.8335430614923283s;
+                --duration: 4.40729637452375s;
                 --hue: 0;
             " data-astro-cid-tdsynljt> <span class="firefly-glow" data-astro-cid-tdsynljt></span> <span class="firefly-text" data-astro-cid-tdsynljt>API</span> </a><a href="/tags/workflow/" class="firefly" style="
                 --start-x: 1.91341716182545px; 
                 --start-y: -4.619397662556433px;
-                --float-x: 29.853645664278478px;
-                --float-y: -38.88449284598905px;
-                --delay: 0.43903726557561384s;
-                --duration: 6.324699849442457s;
+                --float-x: 26.419960582491285px;
+                --float-y: -42.92667954389087px;
+                --delay: 1.1543828133569112s;
+                --duration: 5.2351736024201205s;
                 --hue: 30;
             " data-astro-cid-tdsynljt> <span class="firefly-glow" data-astro-cid-tdsynljt></span> <span class="firefly-text" data-astro-cid-tdsynljt>workflow</span> </a><a href="/tags/obsidian/" class="firefly" style="
                 --start-x: 3.535533905932737px; 
                 --start-y: -3.5355339059327386px;
-                --float-x: 47.429003714895515px;
-                --float-y: -33.871710622359px;
-                --delay: 1.8290903971127679s;
-                --duration: 5.441422971839797s;
+                --float-x: 36.576929099574755px;
+                --float-y: -34.429058901923206px;
+                --delay: 1.6074267881980342s;
+                --duration: 4.708847997599378s;
                 --hue: 60;
             " data-astro-cid-tdsynljt> <span class="firefly-glow" data-astro-cid-tdsynljt></span> <span class="firefly-text" data-astro-cid-tdsynljt>obsidian</span> </a><a href="/tags/命令行工具/" class="firefly" style="
                 --start-x: 4.619397662556432px; 
                 --start-y: -1.913417161825452px;
-                --float-x: 52.136449409599805px;
-                --float-y: -21.661237389733223px;
-                --delay: 1.5609143629351423s;
-                --duration: 4.803364930584407s;
+                --float-x: 71.37624195840895px;
+                --float-y: -15.93961990909848px;
+                --delay: 0.8254705833761395s;
+                --duration: 4.672886938082852s;
                 --hue: 90;
             " data-astro-cid-tdsynljt> <span class="firefly-glow" data-astro-cid-tdsynljt></span> <span class="firefly-text" data-astro-cid-tdsynljt>命令行工具</span> </a> </div>  </div> <div id="sidebar-sticky" class="transition-all duration-700 flex flex-col w-full gap-4 top-4 sticky top-4"></div> </div> <main id="swup-container" class="row-start-1 col-span-2 lg:row-start-1 lg:col-span-1 overflow-visible min-w-0" data-astro-cid-haiuh7kc style=""> <div id="content-wrapper" class="onload-animation" data-astro-cid-haiuh7kc style=""> <!-- the overflow-hidden here prevent long text break the layout--> <!-- content wrapper -->    <div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative mb-4" data-astro-cid-egg7nqdx> <div id="post-container" class="card-base z-10 px-6 md:px-9 pt-6 pb-4 relative w-full" data-astro-cid-egg7nqdx> <!-- title --> <div class="relative onload-animation" data-astro-cid-egg7nqdx> <div data-pagefind-body data-pagefind-weight="10" data-pagefind-meta="title" class="transition w-full flex items-center font-bold mb-3
                     text-3xl md:text-[2.25rem]/[2.75rem]
                     text-black/90 dark:text-white/90
                     md:before:w-1 before:h-5 before:rounded-md before:bg-[var(--primary)]
                     before:absolute before:top-[0.75rem] before:left-[-1.125rem]
-                " data-astro-cid-egg7nqdx> <span data-astro-cid-egg7nqdx>Claude Code&amp;滴答清单</span> </div> </div> <!-- description/excerpt - 已隐藏，避免与文章开头重复 --> <!-- {(entry.data.description || remarkPluginFrontmatter.excerpt) && (
+                " data-astro-cid-egg7nqdx> <span data-astro-cid-egg7nqdx>滴答清单MCP配置</span> </div> </div> <!-- description/excerpt - 已隐藏，避免与文章开头重复 --> <!-- {(entry.data.description || remarkPluginFrontmatter.excerpt) && (
                 <div class="onload-animation mb-4">
                     <div class="text-black/75 dark:text-white/75 text-sm leading-relaxed">
                         {entry.data.description || remarkPluginFrontmatter.excerpt}
