@@ -7,11 +7,13 @@ tags:
 category: Software
 draft: false
 pinned: false
-image: 
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-deskflow-keyboard-sharing-20260529-202419.webp
 ---
 多台电脑同时干活，桌上摆几套键鼠又占地方又割裂。最近找到一款**Deskflow**软件，支持 Windows 和 macOS，一套键鼠就能控制多台设备，局域网即连即用。
 
 鼠标移动到屏幕边缘自动滑到另一台电脑，就像多显示器一样自然。同时支持**剪贴板共享**，在一台设备复制文字，另一台直接粘贴。
+
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-deskflow-keyboard-sharing-20260529-202419.webp)
 
 ### 配置步骤
 

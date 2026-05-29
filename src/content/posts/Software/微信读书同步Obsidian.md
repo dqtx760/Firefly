@@ -1,5 +1,5 @@
 ---
-title: 微信读书同步Obsidian
+title: 如何将微信读书同步Obsidian？
 published: 2026-05-26
 tags:
   - Obsidian插件
@@ -7,7 +7,7 @@ tags:
 category: Software
 draft: false
 pinned: false
-image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/weread-obsidian-cover.webp
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-weread-obsidian-20260529-202317.webp
 ---
 你在微信读书里划过多少条线？写过多少条想法？上一次回去翻它们又是什么时候？
 
@@ -18,6 +18,8 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/weread-obsid
 它们只是缺一个能被真正用起来的地方。
 
 而 Obsidian，刚好是那个地方，
+
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-weread-obsidian-20260529-202317.webp)
 
 ### Weread功能亮点
 

@@ -1,5 +1,5 @@
 ---
-title: Claude Code&滴答清单
+title: 滴答清单MCP配置
 published: 2026-05-29
 tags: []
 category: AIHacks
