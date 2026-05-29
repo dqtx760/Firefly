@@ -271,8 +271,8 @@ export default defineConfig({
 						const fileName = id.split(/[\\/]/).pop();
 						if (fileName && !fileName.includes(".")) return "export default {}";
 					}
-					// 忽略 content 目录下 .mjs 配置文件，防止 Rollup 尝试解析外部依赖
-					if (id.includes("content/") && id.endsWith(".mjs")) {
+					// 忽略 content 目录下代码项目的 JS/TS 文件，防止 Rollup 尝试解析外部依赖
+					if (id.includes("obsidian-home-console") && /\.(mjs|js|ts|cjs)$/.test(id)) {
 						return "export default {}";
 					}
 				},
