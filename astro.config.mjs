@@ -271,6 +271,10 @@ export default defineConfig({
 						const fileName = id.split(/[\\/]/).pop();
 						if (fileName && !fileName.includes(".")) return "export default {}";
 					}
+					// 忽略 content 目录下非内容文件（JS/MJS 配置文件等），防止 Rollup 尝试解析外部依赖
+					if (id.includes("content/") && /\.(mjs|js|ts|cjs)$/.test(id)) {
+						return "export default {}";
+					}
 				},
 				// 忽略 get/ 或 get笔记 目录下 md 文件引用的本地图片，防止 Rollup 解析失败
 				resolveId(source, importer) {
