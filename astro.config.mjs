@@ -271,8 +271,8 @@ export default defineConfig({
 						const fileName = id.split(/[\\/]/).pop();
 						if (fileName && !fileName.includes(".")) return "export default {}";
 					}
-					// 忽略 content 目录下非内容文件（JS/MJS 配置文件等），防止 Rollup 尝试解析外部依赖
-					if (id.includes("content/") && /\.(mjs|js|ts|cjs)$/.test(id)) {
+					// 忽略 content 目录下 .mjs 配置文件，防止 Rollup 尝试解析外部依赖
+					if (id.includes("content/") && id.endsWith(".mjs")) {
 						return "export default {}";
 					}
 				},
