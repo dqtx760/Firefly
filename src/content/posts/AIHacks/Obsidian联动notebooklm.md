@@ -10,8 +10,11 @@ draft: false
 pinned: false
 image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/wezterm-gui_QLGAdQbH2z.webp
 ---
-NotebookLM 的 AI 能力对 Obsidian 是极好的补充——Deep Research、Audio Overview、PPT 生成，每一样都实用。但问题是每次都要开网页、手动传文件，笔记一多简直是灾难。今天教你用 Claude Code 把 NotebookLM 的全部功能塞进 Obsidian。不用打开浏览器，不用花一分钱 API Token，在笔记库里一句话就能跑 Deep Research、自动生成 PPT 和播客音频。
+NotebookLM 的 AI 能力对 Obsidian 是极好的补充——Deep Research、Audio Overview、PPT 生成，每一样都实用。但问题是每次都要开网页、手动传文件，笔记一多简直是灾难。
 
+今天教你用 Claude Code 把 NotebookLM 的全部功能塞进 Obsidian。不用打开浏览器，不用花一分钱 API Token，在笔记库里一句话就能跑 Deep Research、自动生成 PPT 和播客音频。
+
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-obsidian-notebooklm-20260530-132958.webp)
 
 ### notebooklm可以做什么
 
@@ -27,7 +30,6 @@ NotebookLM 的 AI 能力对 Obsidian 是极好的补充——Deep Research、Aud
 - 信息图---可视化图表方案
 - 数据表格---结构化数据表
 
----
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260529150213345.webp)
 
 ### 环境准备
@@ -42,7 +44,7 @@ NotebookLM 的 AI 能力对 Obsidian 是极好的补充——Deep Research、Aud
 
 ### 场景案例
 
-#### 案例一：Deep Research + 自动生成 PPT
+#### 01：Deep Research + 自动生成 PPT
 
 ```
 使用 notebooklm skill，对 'Claude code vs Hermes Agent' 进行Web深度研究（Deep Research）。将搜集到的相关信源自动建立 NotebookLM，把所有被引用文献的全文（Markdown 格式）导出并存放到 01-输入/Notebooklm/Claude code vs Hermes Agent目录，最后生成一份中文演示文稿（Slide Deck），存入我桌面
@@ -61,7 +63,7 @@ NotebookLM 的 AI 能力对 Obsidian 是极好的补充——Deep Research、Aud
 
 
 
-#### 案例二：零基础 AI 学习——从规划到落地页全自动
+#### 02：零基础 AI 学习——从规划到落地页全自动
 
 ```
 我是一个完全零基础的AI小白，希望从几个不同维度学习AI，既能赶上时代潮流，也能在未来从事相关工作。结合2026年AI发展的趋势，请为我推荐3到4个必须彻底掌握的具体领域，以及1到2个未来需要进阶的潜在领域。请给出这5个不同方向的主题，并分别做出简要解释。
@@ -90,7 +92,7 @@ NotebookLM 的 AI 能力对 Obsidian 是极好的补充——Deep Research、Aud
 
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260529162705398.webp)
 
-#### 案例三：本地笔记 → 测验 + 播客 + 信息图
+#### 03：本地笔记 → 测验 + 播客 + 信息图
 
 ```
 读取我本地 01-输入 文件夹下的所有有关 claude code 的笔记。使用 notebooklm skill，利用这些笔记在 NotebookLM 中创建一个笔记本，并生成一套困难难度的 Quiz 测验，一部辩论格式的音频（Audio Overview），和一份资讯图表（Infographic），将生成的测验以 Markdown 格式保存到项目根目录中，将生成的音频和资讯图表下载到项目根目录中。注意：测验、音频和资讯图表都要使用中文。
@@ -107,3 +109,17 @@ NotebookLM 的 AI 能力对 Obsidian 是极好的补充——Deep Research、Aud
 
 现在你只需要在 Obsidian 里敲一行自然语言，Claude Code 帮你跑完所有步骤。
 
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/a40746dd7c4aef1a757eedac61ca79e9.webp)
+
+\>>>**延伸阅读**
+- [Obsidian CLI](https://mp.weixin.qq.com/s/x4sm7GXpoUoIepKmtooKAw)
+- [飞书lark-cli](https://mp.weixin.qq.com/s/kN-_KSwWkOlpZDXAURgcEA)
+- [滴答清单Mcp](https://mp.weixin.qq.com/s/SzknpTNdxzXLYvfw_VjW9w)
+- [Agent-Reach最佳实践](https://mp.weixin.qq.com/s/XT5r6yFaXHa63T3Qg_Oi7w)
+---
+以上，既然看到这里了，如果觉得不错，随手**点个赞、在看、转发**三连吧！想第一时间收到推送，可以给我个星标⭐️～
+
+谢谢你看我的文章，我们，下次再见。
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/未命名的设计.webp)
+*\>/ 作者：大强同学*
+*\>/ 更多干货，请访问：[dqtx.cc](https://www.dqtx.cc/)*

@@ -6,6 +6,13 @@ tags:
   - 资源
 created: 2026-05-13
 ---
+### 教程
+
+苹果账号修改邮箱/密码/安全问题的方法
+https://getappleid.net/modify-apple-account-information/
+出海账号教程
+https://2fa.forum/chjc/
+
 
 ## 📱 付费App 推荐
 
@@ -16,6 +23,7 @@ created: 2026-05-13
 | ivcam        | 摄像头应用            | -                                                   |
 | Shadowrocket | 网络代理工具           | -                                                   |
 | IPTV         |                  |                                                     |
+| FyTube       | 无广告YouTube播放器    | 4.99                                                |
 ## 🆓 限免 APP 资源
 
 - [即刻限免话题](https://web.okjike.com/topic/553f5868e4b0982012ea70d3/square)
@@ -34,6 +42,32 @@ created: 2026-05-13
 ```
 小红书去水印快捷指令
 https://www.icloud.com/shortcuts/fa3486423ce348a99522b9ef17e8a413
+
+超级按钮
+https://www.icloud.com/shortcuts/37d416697e0a494f9429c04442cb2514
+
+一键切换 Apple ID
+https://www.icloud.com/shortcuts/73c9cc1bbd244225ae73fb9becb3e806
+
+全网视频解析
+https://www.icloud.com/shortcuts/ea84365c938b4e33afa1681242cc9718
+
+
+快捷控制中心
+https://www.icloud.com/shortcuts/b163042e7ce343cfb0ab156f8ce32213
+
+4G / 5G 秒切菜单（单卡版）
+https://www.icloud.com/shortcuts/30b2bb9fa9584043b544d4da617856bc
+
+4G / 5G 秒切菜单（双卡版）
+https://www.icloud.com/shortcuts/7142197c5b44455499a9a18e07eda4ed
+
+提取网页图片
+https://www.icloud.com/shortcuts/9154ea571ba044d7b2f7a7ecfc93290d
+
+专属捷径库管理
+https://www.icloud.com/shortcuts/39ebd166078e41a5bcadcf7a9aa66ee7
+
 ```
 
 
