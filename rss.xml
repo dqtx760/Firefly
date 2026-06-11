@@ -489,6 +489,803 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/tech-shrimp&quot;&gt;tech-shrimp&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>MiMo Code 2.5 限免中</title><link>https://dqtx.cc/posts/aihacks/mimo-code-25-%E9%99%90%E5%85%8D/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/mimo-code-25-%E9%99%90%E5%85%8D/</guid><pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;小米的 MiMo Code 2.5 目前 &lt;strong&gt;限时免费&lt;/strong&gt; 中，开启 MiMo Auto 模式就能零配置匿名使用，不需要绑 API Key，适合尝鲜。&lt;/p&gt;
+&lt;p&gt;项目地址：
+https://github.com/XiaomiMiMo/MiMo-Code&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260611143527424.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;安装方式&lt;/h3&gt;
+&lt;p&gt;两种方法：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# 一键脚本
+curl -fsSL https://mimo.xiaomi.com/install | bash
+
+# 或 npm 全局安装
+npm install -g @mimo-ai/cli
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;装完启动报错&lt;/h3&gt;
+&lt;p&gt;如果你在 Windows 上通过 npm 安装，装完敲 &lt;code&gt;mimo&lt;/code&gt; 大概率会看到这个：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;It seems that your package manager failed to install the right version
+of the mimocode CLI for your platform.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;原因很简单：&lt;code&gt;@mimo-ai/cli@0.1.0&lt;/code&gt; 依赖 &lt;code&gt;@mimo-ai/mimocode-windows-x64@0.1.0&lt;/code&gt;，但这个 Windows 原生包在 npm 上只有 &lt;code&gt;0.1.0-preview.1&lt;/code&gt; 版本，正式版根本没发布。&lt;/p&gt;
+&lt;p&gt;因为是 optionalDependencies，npm 安装时静默失败，不会报错，但二进制文件没装上去，启动就跪了。&lt;/p&gt;
+&lt;h3&gt;解决方法&lt;/h3&gt;
+&lt;p&gt;卸载正式版，安装版本匹配的 preview 版：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm uninstall -g @mimo-ai/cli
+npm install -g @mimo-ai/cli@0.1.0-preview.1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;装完再敲 &lt;code&gt;mimo&lt;/code&gt; 就能正常启动了。&lt;/p&gt;
+&lt;h3&gt;总结&lt;/h3&gt;
+&lt;p&gt;这种问题在 CLI 工具里不算少见 —— 多平台发布时版本号没对齐。遇到类似报错，先看看 native 依赖包的版本是否存在，通常降级或升级到对应的 preview 版就能解决。&lt;/p&gt;
+&lt;p&gt;如需远程协助，可通过向日葵或 ToDesk 远程处理。加&lt;strong&gt;维信dqtx33&lt;/strong&gt;&lt;br /&gt;
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/0beb8bef640f4e87d2d2cdc56be71bfa.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+</content:encoded></item><item><title>Windows系统Codex APP 启动崩溃</title><link>https://dqtx.cc/posts/aihacks/codex%E5%90%AF%E5%8A%A8%E5%A5%94%E6%BA%83/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/codex%E5%90%AF%E5%8A%A8%E5%A5%94%E6%BA%83/</guid><pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Codex 桌面版（Windows App）启动时崩溃，错误信息：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;如下图所示：&lt;/strong&gt;
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/dc54be601b8edb2fb49406fd55838454.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;根本原因&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Astrill VPN 的 LSP（Layered Service Provider，分层服务程序）导致。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Astrill 安装时会往 Windows 网络栈里插入一个名为 &lt;strong&gt;ASProxy&lt;/strong&gt;（ASProxy64.dll / ASProxy.dll）的 LSP 组件。这个 LSP 会被注入到所有网络进程中，包括 Codex 的 app-server，触发 aws-lc-rs 加密库初始化崩溃。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;你的网络像一条快递传送带：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;正常情况：包裹（网络数据）从程序 → 传送带 → 网卡 → 互联网&lt;/li&gt;
+&lt;li&gt;装了 Astrill 后：Astrill 在传送带中间&lt;strong&gt;硬塞了一个自己的检查站&lt;/strong&gt;（LSP），每个包裹都要经过它&lt;/li&gt;
+&lt;li&gt;这个检查站（ASProxy.dll）在某些 CPU/系统组合下会&quot;卡死崩溃&quot;，导致 Codex 启动失败&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;解决方案&lt;/h3&gt;
+&lt;p&gt;重置 Winsock，清除第三方 LSP（含 Astrill 的 ASProxy），将网络栈恢复为 Windows 默认状态。&lt;/p&gt;
+&lt;p&gt;如需远程协助，可通过向日葵或 ToDesk 远程处理。加&lt;strong&gt;维信dqtx33&lt;/strong&gt;&lt;/p&gt;
+</content:encoded></item><item><title>高考第1天AI时代的人才洗牌拉开帷幕！</title><link>https://dqtx.cc/posts/aihacks/%E9%AB%98%E8%80%83-ai/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E9%AB%98%E8%80%83-ai/</guid><pubDate>Mon, 08 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;昨天下午五点，数学交卷铃声响完不到十分钟，微博热搜就炸了。&lt;/p&gt;
+&lt;p&gt;不是那种慢慢爬上来的热度，是直接冲到第一的那种炸。&lt;/p&gt;
+&lt;p&gt;题型全变了。练了三年的套路，一个都没用上。大题第一问就读不懂。有考生出了考场蹲在路边哭，说自己这三年到底在刷什么。&lt;/p&gt;
+&lt;p&gt;坦率的讲，看到这些消息的时候，我第一反应也是难受。但冷静下来想了一晚上，发现一个更残酷的事实。&lt;/p&gt;
+&lt;p&gt;这根本不是一次简单的难度提升。&lt;/p&gt;
+&lt;p&gt;这是一场蓄谋已久的人才筛选逻辑重置。而AI，只是按下了加速键。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-gaokao-ai-era-20260608.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;01. AI已经能替他们考满分了&lt;/h3&gt;
+&lt;p&gt;我先说一个让考生和家长更崩溃的数据。&lt;/p&gt;
+&lt;p&gt;现在的GPT-4o和Claude，语文作文能力已经超过了99%的人类考生。你给它一道高考作文题，一秒出全文，论点清晰，文笔流畅，引经据典一样不落。数学更是降维打击，去年全国卷的压轴题，AI十秒出答案，附带六种不同解法。&lt;/p&gt;
+&lt;p&gt;Claude Code写代码已经比大多数初级程序员快了，Deepresearch做文献综述的速度是研究生的几十倍。这些不是一个两个实验室里的demo，是此时此刻正在发生的现实。&lt;/p&gt;
+&lt;p&gt;那你想想，如果高考还在考谁刷题多、谁套路熟、谁模板背得全，选出来的会是什么人。&lt;/p&gt;
+&lt;p&gt;是AI三秒就能替代的做题机器。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/01-infographic-ai-vs-human.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;教育部的人不傻。他们看得比谁都清楚。所以才有了今年的「反套路」风暴。&lt;/p&gt;
+&lt;h3&gt;02. 筛选标准被彻底重置了&lt;/h3&gt;
+&lt;p&gt;很多人说今年题目太怪。语文阅读材料是从最新学术期刊上扒下来的，数学大题全是真实场景建模，没有一道是能靠背题型搞定的。&lt;/p&gt;
+&lt;p&gt;说真的，我看到题目的第一反应不是「好难」，是「终于对了」。&lt;/p&gt;
+&lt;p&gt;语文考的是复杂文本理解能力和独立思辨能力。你读不读得懂前沿学术论述，你有没有自己的判断，你敢不敢在材料面前站住自己的立场。这些东西，AI写不出来。AI可以总结，可以归纳，可以模仿，但它没有「自己的立场」。&lt;/p&gt;
+&lt;p&gt;数学考的是场景建模和创新拆解。给你一个真实世界的问题，你能不能把它翻译成数学语言，能不能找到拆解的路径。AI可以帮你算，但它不知道什么问题值得算。&lt;/p&gt;
+&lt;p&gt;高考在筛选的，是AI最不擅长的那些能力。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/02-scene-selection-reset.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;03. 国家在下一盘很大的棋&lt;/h3&gt;
+&lt;p&gt;顺着这个逻辑往深处想，你会发现这场改革不是教育部一个部门的事。&lt;/p&gt;
+&lt;p&gt;过去四十年，中国经济需要的是标准化劳动力。听话，熟练，能快速上手。高考选的就是这种人，刷题刷出来的，恰恰最符合工业化时代的需求。&lt;/p&gt;
+&lt;p&gt;但现在不一样了。&lt;/p&gt;
+&lt;p&gt;芯片被卡脖子，AI大模型被人抢跑，国际话语权处处被动。国家需要的不是更多的标准化零件，是能突破科技瓶颈的人，是能用中国文化跟世界对话的人，是能在无人区找到路的人。&lt;/p&gt;
+&lt;p&gt;今年的语文卷选了学术前沿材料，数学卷设置了大量真实场景题。这不是刁难考生，这是在给未来的创新者做思维压力测试。&lt;/p&gt;
+&lt;p&gt;你跟不跟得上这种思维节奏，决定了你能不能拿到AI时代的入场券。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/03-scene-national-strategy.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;04. 最意外的赢家可能是寒门&lt;/h3&gt;
+&lt;p&gt;聊到这里的时候，我自己也被这个推论震了一下。&lt;/p&gt;
+&lt;p&gt;按理说题目越难、越活，教育资源越好的人越占优势，对吧。但你往深一层想，会发现反过来了。&lt;/p&gt;
+&lt;p&gt;以前的内卷拼的是什么。拼的是谁砸的钱多，谁进的补习班好，谁刷的题库全。这些东西背后全是家庭资源。寒门学子拿什么跟人家拼，你连县城都出不去，人家在北京海淀从小学就开始卷了。&lt;/p&gt;
+&lt;p&gt;但今年这种题，刷题库不好使了，背模板不好使了，砸钱补课也不好使了。&lt;/p&gt;
+&lt;p&gt;好使的是什么。&lt;/p&gt;
+&lt;p&gt;是真正的思考习惯。是你对世界有没有好奇心，是你遇到一个问题会不会自己琢磨三天，是你读了一本书之后能不能形成自己的判断。&lt;/p&gt;
+&lt;p&gt;这些东西，跟钱的关系没那么大。&lt;/p&gt;
+&lt;p&gt;一个在乡下翻着旧书但真正在思考的孩子，跟一个在海淀上了三年天价补习班但只会套模板的孩子，在这种考试面前，谁更有优势。&lt;/p&gt;
+&lt;p&gt;我想答案不言自明。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/04-scene-rural-student-hope.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;05. 三条路，给还没上考场的人&lt;/h3&gt;
+&lt;p&gt;文章写到这里，如果你家里有孩子，或者你自己就是学生，你可能已经在想一个问题了。&lt;/p&gt;
+&lt;p&gt;那到底该怎么办。&lt;/p&gt;
+&lt;p&gt;坦率的讲，我自己没有标准答案。但根据我对这场改革逻辑的理解，有三条路是相对清晰的。&lt;/p&gt;
+&lt;p&gt;第一，把模板撕了。不管是作文的万能开头，还是数学的固定套路，全部扔掉。遇到一个问题，先自己想一想，再去看答案。哪怕想的全是错的，这个过程本身就是最有价值的训练。&lt;/p&gt;
+&lt;p&gt;第二，把刷题时间砍一半，拿去读真正有密度的东西。学术文章、长篇报道、跨领域的书。读懂多少不重要，重要的是你在读的过程中有没有在思考，有没有在跟作者对话。&lt;/p&gt;
+&lt;p&gt;第三，重新定义学习的意义。语文不是在学答题，是在学怎么思考和表达。数学不是在学计算，是在学怎么把一个模糊的现实问题变成清晰的逻辑模型。这个认知一旦转变，你学东西的动力和效果会完全不一样。&lt;/p&gt;
+&lt;p&gt;我知道这些话听起来有点虚。但说真的，在AI时代，虚的东西才是真正硬的东西。&lt;/p&gt;
+&lt;p&gt;知识会贬值，技能会过时，工具会迭代。唯一不会贬值的，是你独立思考的能力和你对世界的好奇心。&lt;/p&gt;
+&lt;p&gt;昨天晚上刷微博的时候，看到一条评论让我想了很久。&lt;/p&gt;
+&lt;p&gt;一个考生说，考完之后他发现，这三年学到的最没用的东西，恰好是他花时间最多的东西。&lt;/p&gt;
+&lt;p&gt;这话太扎心了。&lt;/p&gt;
+&lt;p&gt;但也可能是这届考生，在AI时代收到的第一份真正有价值的成人礼。&lt;/p&gt;
+&lt;p&gt;时代变了。学习的逻辑，真的该变了。&lt;/p&gt;
+&lt;p&gt;&amp;gt;&amp;gt;&amp;gt;&lt;strong&gt;延伸阅读&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/gDc91f1ydP0ULf8Xxd_msg&quot;&gt;普通人在AI时代的破局之路&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/O1MJOQz9gxfJXwfgYNkbjw&quot;&gt;用 AI 两年，我劝你别太依赖它&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;p&gt;以上，既然看到这里了，如果觉得不错，随手&lt;strong&gt;点个赞、在看、转发&lt;/strong&gt;三连吧！想第一时间收到推送，可以给我个星标⭐️～&lt;/p&gt;
+&lt;p&gt;谢谢你看我的文章，我们，下次再见。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/%E6%9C%AA%E5%91%BD%E5%90%8D%E7%9A%84%E8%AE%BE%E8%AE%A1.webp&quot; alt=&quot;&quot; /&gt;
+&lt;em&gt;&amp;gt;/ 作者：大强同学&lt;/em&gt;
+&lt;em&gt;&amp;gt;/ 更多干货，请访问：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+</content:encoded></item><item><title>把Obsidian笔记变成博客</title><link>https://dqtx.cc/posts/software/%E6%8A%8A%E7%AC%94%E8%AE%B0%E5%8F%98%E6%88%90%E5%8D%9A%E5%AE%A2/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E6%8A%8A%E7%AC%94%E8%AE%B0%E5%8F%98%E6%88%90%E5%8D%9A%E5%AE%A2/</guid><pubDate>Sun, 07 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;写博客最烦的不是写——是写完之后的发布流程。打开后台、粘贴 Markdown、调格式、配封面图、处理图片链接……一套下来，写作的热情早磨没了。&lt;/p&gt;
+&lt;p&gt;后来我把这个问题彻底干掉了。现在的流程一句话就能说完：&lt;strong&gt;在 Obsidian 里写笔记，Git push 一下，博客自动更新。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这篇文章记录这套方案的搭建过程。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-notes-to-blog-20260607.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;核心思路&lt;/h3&gt;
+&lt;p&gt;传统博客工作流的瓶颈不在「写」，在「发布」—— 作者要同时管内容生产和内容分发两件事。&lt;/p&gt;
+&lt;p&gt;OCD 方案（Obsidian + Claude Code → Sync）把这两件事解耦了：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;你只管写&lt;/strong&gt;：在 Obsidian 里正常记笔记&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;系统负责发&lt;/strong&gt;：Git push 之后，Cloudflare 自动构建部署&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;不需要登录博客后台，不需要复制粘贴，不需要手动处理图片。笔记写好的那一刻，它就已经是博客文章了。&lt;/p&gt;
+&lt;p&gt;项目地址：
+https://github.com/dqtx760/ocdsync&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260607222658502.webp&quot; alt=&quot;&quot; /&gt;
+和传统方案对比：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;传统方案&lt;/th&gt;
+&lt;th&gt;OCD 方案&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;编辑器&lt;/td&gt;
+&lt;td&gt;博客后台 / 本地 MD 编辑器&lt;/td&gt;
+&lt;td&gt;Obsidian&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;发布&lt;/td&gt;
+&lt;td&gt;手动登录、粘贴、配图&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;git push&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;维护&lt;/td&gt;
+&lt;td&gt;后台 + 文章两套系统&lt;/td&gt;
+&lt;td&gt;笔记即文章，一套就够了&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;图片&lt;/td&gt;
+&lt;td&gt;手动上传图床&lt;/td&gt;
+&lt;td&gt;本地 &lt;code&gt;assets/&lt;/code&gt; 随 Git 提交，或继续用图床&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;技术选型&lt;/h3&gt;
+&lt;p&gt;选这五个组件不是因为它们「最好」，而是各取所长，组合起来刚好覆盖全流程：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;组件&lt;/th&gt;
+&lt;th&gt;为什么选它&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Obsidian&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;本地 Markdown 编辑器里体验最好的一个，插件生态成熟&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;VitePress&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;比 VuePress 更快，原生支持 Obsidian 的 &lt;code&gt;[[双链]]&lt;/code&gt; 语法&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;GitHub&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;免费，Git 推送触发自动部署，不需要额外 CI 配置&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Cloudflare Pages&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;免费额度够用，国内访问速度比 Vercel 快，自带 CDN&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Markdown&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;笔记和博客共享同一套源文件，零转换成本&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;核心选型判断是 &lt;strong&gt;Cloudflare Pages vs Vercel&lt;/strong&gt;。Vercel 的免费额度对个人博客也够用，但 Cloudflare Pages 在国内的访问延迟更低。如果你的读者主要在海外，Vercel 也没问题。&lt;/p&gt;
+&lt;h3&gt;目录结构&lt;/h3&gt;
+&lt;p&gt;笔记按主题分目录，VitePress 自动把它们映射成博客页面：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;笔记/
+├── Claude code/           → /claude-code/
+├── Codex/                 → /codex/
+├── Obsidian/              → /obsidian/
+├── github/                → /github/
+└── Wiki/                  → /wiki/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;每个文件夹就是一个导航分类，新增笔记直接往对应目录里丢 Markdown 文件就行。&lt;/p&gt;
+&lt;h3&gt;搭建（三步）&lt;/h3&gt;
+&lt;h5&gt;第一步：推送到 GitHub&lt;/h5&gt;
+&lt;p&gt;仓库初始化，一条龙过去：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git init
+git add .
+git commit -m &quot;init&quot;
+git remote add origin https://github.com/你的用户名/仓库名.git
+git push -u origin main
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h5&gt;第二步：连接 Cloudflare Pages&lt;/h5&gt;
+&lt;p&gt;打开 &lt;a href=&quot;https://dash.cloudflare.com/&quot;&gt;Cloudflare Dashboard&lt;/a&gt; → Workers 和 Pages → Pages → &lt;strong&gt;连接到 Git&lt;/strong&gt;，选择刚才的仓库。&lt;/p&gt;
+&lt;p&gt;构建设置这里有个坑：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;配置项&lt;/th&gt;
+&lt;th&gt;正确填法&lt;/th&gt;
+&lt;th&gt;注意&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;框架预设&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;None&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;不要选自动检测，会识别错&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;构建命令&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;pnpm run build&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;输出目录&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;.vitepress/dist&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;不是 &lt;code&gt;dist&lt;/code&gt;，少了前缀构建会失败&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h5&gt;第三步：加环境变量&lt;/h5&gt;
+&lt;p&gt;在 Pages 设置 → 环境变量里加一条：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;变量名&lt;/th&gt;
+&lt;th&gt;值&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;NODE_VERSION&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;22&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;不加这个 Cloudflare 默认用旧版 Node.js，VitePress 构建会报兼容性错误。&lt;/p&gt;
+&lt;p&gt;搞定。以后每次 &lt;code&gt;git push&lt;/code&gt;，Cloudflare 自动拉取、构建、部署。&lt;/p&gt;
+&lt;h3&gt;日常使用经验&lt;/h3&gt;
+&lt;h5&gt;Frontmatter：文章身份证&lt;/h5&gt;
+&lt;p&gt;每篇笔记头部必须有的字段：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;---
+title: 文章标题       # 页面标题和导航栏显示
+time: 2026-06-07     # 发布日期
+tags:                # 可选，分类和搜索用
+  - claude
+  - AI工具
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;title&lt;/code&gt; 和 &lt;code&gt;time&lt;/code&gt; 是必填，缺了 VitePress 会报错。&lt;/p&gt;
+&lt;h5&gt;文件命名&lt;/h5&gt;
+&lt;p&gt;几条实践出来的规则：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用数字前缀控制排序：&lt;code&gt;01-安装.md&lt;/code&gt;、&lt;code&gt;02-配置.md&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;别在文件名里用 &lt;code&gt;&amp;amp;&lt;/code&gt;、&lt;code&gt;！&lt;/code&gt;、&lt;code&gt;、&lt;/code&gt; 这些特殊字符——URL 编码后很难看&lt;/li&gt;
+&lt;li&gt;中英文文件名都可以，不需要刻意翻译&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5&gt;图片&lt;/h5&gt;
+&lt;p&gt;两种方式都行：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;图床引用&lt;/strong&gt;：&lt;code&gt;![描述](https://图床URL)&lt;/code&gt;，干净，推荐&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;本地文件&lt;/strong&gt;：放 &lt;code&gt;assets/&lt;/code&gt; 目录，随 Git 提交，好处是离线也能看到&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我平时用图床（Gitee + PicGo），不用管图片的 Git 管理。&lt;/p&gt;
+&lt;h5&gt;双向链接&lt;/h5&gt;
+&lt;p&gt;Obsidian 的 &lt;code&gt;[[Wiki链接]]&lt;/code&gt; 在 VitePress 里会被解析成可点击链接，这个功能意外地好用——笔记之间的关联关系在博客上自动保留了。唯一要注意的是链接目标页面必须存在，否则控制台会有警告。&lt;/p&gt;
+&lt;h5&gt;本地预览&lt;/h5&gt;
+&lt;p&gt;写笔记时跑个开发服务器，边写边看效果：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pnpm dev
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;浏览器打开 &lt;code&gt;http://localhost:5173&lt;/code&gt;，所见即所得。&lt;/p&gt;
+&lt;h3&gt;总结&lt;/h3&gt;
+&lt;p&gt;这套方案我用了有一阵了，最大的感受是：&lt;strong&gt;发布摩擦力降到零之后，更新频率自然就上去了。&lt;/strong&gt; 以前一个月写一篇都嫌麻烦，现在想写就写，push 完就完事。&lt;/p&gt;
+&lt;p&gt;适合谁：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;已经在用 Obsidian 记笔记的人——零额外成本，笔记自动变博客&lt;/li&gt;
+&lt;li&gt;想搭个人博客但不想折腾后台系统的人——整个方案一个下午就能跑起来&lt;/li&gt;
+&lt;li&gt;对国内访问速度有要求的人——Cloudflare Pages 的表现还行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;不适合谁：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;需要复杂博客功能（评论系统、全文搜索、多作者）的人——VitePress 偏轻量，这些不是它的长处&lt;/li&gt;
+&lt;li&gt;笔记里大量使用 Obsidian 专属插件语法的人——部分语法在 VitePress 里不兼容&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果你已经在用 Obsidian，给这套方案一个下午的时间试试，大概率回不去了。&lt;/p&gt;
+&lt;p&gt;以上，既然看到这里了，如果觉得不错，随手&lt;strong&gt;点个赞、在看、转发&lt;/strong&gt;三连吧！想第一时间收到推送，可以给我个星标⭐️～&lt;/p&gt;
+&lt;p&gt;谢谢你看我的文章，我们，下次再见。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/%E6%9C%AA%E5%91%BD%E5%90%8D%E7%9A%84%E8%AE%BE%E8%AE%A1.webp&quot; alt=&quot;&quot; /&gt;
+&lt;em&gt;&amp;gt;/ 作者：大强同学&lt;/em&gt;
+&lt;em&gt;&amp;gt;/ 更多干货，请访问：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+</content:encoded></item><item><title>5个抓取AI skill</title><link>https://dqtx.cc/posts/aihacks/5%E4%B8%AA%E6%8A%93%E5%8F%96ai-skill/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/5%E4%B8%AA%E6%8A%93%E5%8F%96ai-skill/</guid><pubDate>Sat, 06 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;凌晨四点，我让Claude Code帮我扒一个课程网站，文档、视频、自动翻译、加字幕、存进Obsidian，全流程自动跑完。那一刻我意识到一件事，给AI配上正确的Skill，它真的能爬遍全网。&lt;/p&gt;
+&lt;p&gt;不是夸张，是真的。但关键在于，你得知道什么场景用什么工具。&lt;/p&gt;
+&lt;p&gt;我试了5个Skill，按从轻到重排个序，你直接拿去用就行。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-claude-code-5-skills-web-scrape-20260606-223341.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;01. Agent-reach&lt;/h3&gt;
+&lt;p&gt;小红书、X、抖音、YouTube、公众号、Reddit，基本上主流社媒全覆盖了。&lt;/p&gt;
+&lt;p&gt;Agent-reach是一个开源的AI脚手架，装好CLI工具、配好搜索引擎，你的Agent就能直接访问这些平台的API。不用开浏览器，不用模拟登录，API直接拿数据。&lt;/p&gt;
+&lt;p&gt;我扒课程网站那次，大头就是靠Agent-reach搞定的。&lt;/p&gt;
+&lt;p&gt;项目地址在github.com/Panniantong/agent-reach&lt;/p&gt;
+&lt;h3&gt;02. Scrapling&lt;/h3&gt;
+&lt;p&gt;公开网页想批量抓数据，又怕被反爬拦住，Scrapling就是干这个的。&lt;/p&gt;
+&lt;p&gt;它是自适应网页抓取框架，内置三种抓取器，静态的、JS渲染的、反爬隐身的，覆盖从单次请求到全量爬取。最骚的是网页改版之后，它能自动重新定位元素，不会因为你换个页面结构就直接挂掉。&lt;/p&gt;
+&lt;p&gt;我碰到过Cloudflare拦截的情况，开了隐身抓取器直接过去了，网页改版也不怕失效，真的就是「我自己会适应」。&lt;/p&gt;
+&lt;p&gt;项目地址在github.com/D4Vinci/Scrapling。&lt;/p&gt;
+&lt;h3&gt;03. Browser-use&lt;/h3&gt;
+&lt;p&gt;有些页面需要登录态才能访问，比如后台管理、付费课程、企业内网，这时候API和爬虫都搞不定，得让AI像人一样操作浏览器。&lt;/p&gt;
+&lt;p&gt;Browser-use就是干这个的，开源的浏览器自动化框架，LLM驱动，你给它一个模型，它自己帮你填表、点击、操作后台。关键是它能复用你Chrome里已登录的状态，不用重新登录。&lt;/p&gt;
+&lt;p&gt;缺点是每次都要打开浏览器窗口，比较吃资源，但偶尔需要操作登录后的页面，这玩意确实好使。&lt;/p&gt;
+&lt;p&gt;项目地址在github.com/browser-use/browser-use。&lt;/p&gt;
+&lt;h3&gt;04. Claude in Chrome&lt;/h3&gt;
+&lt;p&gt;有时候不是操作复杂，是你就是想盯着它干，或者认证流程特别复杂，怕它搞不定。&lt;/p&gt;
+&lt;p&gt;Claude in Chrome是Anthropic官方出的浏览器扩展，直接把Claude装进你真实的Chrome，你能亲眼看到它在页面里点击、填写、操作。没有API接口，但胜在直觉，特别适合那些认证步骤多到你自己都头晕的页面。&lt;/p&gt;
+&lt;p&gt;官网在claude.ai/chrome。&lt;/p&gt;
+&lt;h3&gt;05. Web-access&lt;/h3&gt;
+&lt;p&gt;最后一个，也是覆盖面最广的一个。&lt;/p&gt;
+&lt;p&gt;Web-access是一个开源的Agent联网Skill，从公开搜索到登录后操作全覆盖。它会自动在WebSearch、WebFetch、curl、CDP之间择优选择，你不需要操心该用哪个工具。还能用CDP接管你日常的Chrome，天然带登录态，检索书签和历史也不在话下。&lt;/p&gt;
+&lt;p&gt;如果说前四个是各自解决一个场景，Web-access就是试图把所有场景打包成一个Skill。&lt;/p&gt;
+&lt;p&gt;项目地址在github.com/eze-is/web-access。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;这五个Skill，从轻到重，够用就停，能不开浏览器就别开。&lt;/p&gt;
+&lt;p&gt;Agent-reach能搞定的，就别开Scrapling。Scrapling能搞定的，就别开Browser-use。浏览器能搞定的，就别上CDP。&lt;/p&gt;
+&lt;p&gt;轻的快、省资源，重的慢、吃资源，优先级往下走就行。&lt;/p&gt;
+&lt;p&gt;就像凌晨四点那次，Agent-reach加上Scrapling已经贼爽了，浏览器压根没开过。&lt;/p&gt;
+&lt;p&gt;记住这个原则，工具才是你的能力延伸，不是你的负担。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;参考资料&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Agent-reach:
+github.com/Panniantong/agent-reach&lt;/li&gt;
+&lt;li&gt;Scrapling:
+github.com/D4Vinci/Scrapling&lt;/li&gt;
+&lt;li&gt;Browser-use:
+github.com/browser-use/browser-use&lt;/li&gt;
+&lt;li&gt;Claude in Chrome:
+claude.ai/chrome&lt;/li&gt;
+&lt;li&gt;Web-access:
+github.com/eze-is/web-access&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;p&gt;以上，既然看到这里了，如果觉得不错，随手&lt;strong&gt;点个赞、在看、转发&lt;/strong&gt;三连吧！想第一时间收到推送，可以给我个星标⭐️～&lt;/p&gt;
+&lt;p&gt;谢谢你看我的文章，我们，下次再见。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/%E6%9C%AA%E5%91%BD%E5%90%8D%E7%9A%84%E8%AE%BE%E8%AE%A1.webp&quot; alt=&quot;&quot; /&gt;
+&lt;em&gt;&amp;gt;/ 作者：大强同学&lt;/em&gt;
+&lt;em&gt;&amp;gt;/ 更多干货，请访问：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+</content:encoded></item><item><title>Anthropic：当 AI 开始构建自身</title><link>https://dqtx.cc/posts/aihacks/anthropic%E5%BD%93-ai-%E5%BC%80%E5%A7%8B%E6%9E%84%E5%BB%BA%E8%87%AA%E8%BA%AB/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/anthropic%E5%BD%93-ai-%E5%BC%80%E5%A7%8B%E6%9E%84%E5%BB%BA%E8%87%AA%E8%BA%AB/</guid><pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Anthropic，做 Claude 的那家公司，昨天发了一篇长文。&lt;/p&gt;
+&lt;p&gt;读完之后我愣了很久。这他妈不是技术博客，是一封写给全世界的警告信。&lt;/p&gt;
+&lt;p&gt;他们的 CEO Dario 几天前刚喊话全球暂缓 AI 研发，昨天直接甩出一堆从未公开过的内部数据。不是喊口号，是用数字告诉你，事情比你想的严重。&lt;/p&gt;
+&lt;p&gt;原文地址https://9lnk.io/rgZD
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-ai-builds-itself-20260605-215215.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;01. 超过 80% 的代码，是 AI 写的&lt;/h3&gt;
+&lt;p&gt;截至今年 5 月，Anthropic 生产环境里超过 80% 的合并代码是 Claude 写的。工程师人均代码产出是两年前的 8 倍。&lt;/p&gt;
+&lt;p&gt;有员工原话，已经 5 个月没自己写过代码了。&lt;/p&gt;
+&lt;p&gt;工程师这个角色正在变，从写代码的人，变成指挥 AI 写代码的人。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260605220347879.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;02. AI 能独立工作 16 小时&lt;/h3&gt;
+&lt;p&gt;AI 能独立完成的任务时长在疯狂翻倍。&lt;/p&gt;
+&lt;p&gt;2024 年，Claude 能搞定人类 4 分钟的活。2025 年，一个半小时。2026 年，16 小时。&lt;/p&gt;
+&lt;p&gt;16 小时什么概念？METR 说这已经是他们测量能力的上限了，再长的任务他们手里没有了。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260605220201254.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;03. 最后的护城河，也在被磨掉&lt;/h3&gt;
+&lt;p&gt;我一直觉得，判断力是人类最后的优势。选什么问题研究，什么方向是死胡同，这种 research taste AI 拿不走。&lt;/p&gt;
+&lt;p&gt;但 Anthropic 的数据打脸了。&lt;/p&gt;
+&lt;p&gt;他们用历史会话做了测试，Claude 在研究方向上的判断力，从 2025 年底的 51% 胜率涨到了 2026 年 4 月的 64%。&lt;/p&gt;
+&lt;p&gt;连「该研究什么」这件事，AI 都开始超过人了。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260605220039864.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;04. 一个 AI 公司，把自己的技术比作核武器&lt;/h3&gt;
+&lt;p&gt;Anthropic 呼吁全球暂停前沿 AI 研发，甚至拿核不扩散条约做类比。&lt;/p&gt;
+&lt;p&gt;但真正让我心里一沉的是他们说的那句话，「如果有可信的全球协调机制，我们会放慢或暂停，前提是别人也停。」&lt;/p&gt;
+&lt;p&gt;这不就是囚徒困境吗？想停，停不下来。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260605220612283.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;Edison 说天才是 1% 灵感加 99% 汗水。Anthropic 说 99% 的汗水正在被自动化。&lt;/p&gt;
+&lt;p&gt;那 1% 呢？他们不确定。我们也不确定。&lt;/p&gt;
+&lt;p&gt;但这个不确定的时间窗口，可能比所有人想象的都要短。&lt;/p&gt;
+&lt;p&gt;大时代啊，朋友们。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&amp;gt;&amp;gt;&amp;gt;&lt;strong&gt;延伸阅读&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/Lwjd1THaHhSKdtX4ZbnZeg&quot;&gt;ChatGPT月活破10亿，但我。。。&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/jhLsGu6zlaLNZrRv1Hll2g&quot;&gt;ChatGPT的下一站&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/gDc91f1ydP0ULf8Xxd_msg&quot;&gt;普通人在AI时代的破局之路&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;p&gt;以上，既然看到这里了，如果觉得不错，随手&lt;strong&gt;点个赞、在看、转发&lt;/strong&gt;三连吧！想第一时间收到推送，可以给我个星标⭐️～&lt;/p&gt;
+&lt;p&gt;谢谢你看我的文章，我们，下次再见。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/%E6%9C%AA%E5%91%BD%E5%90%8D%E7%9A%84%E8%AE%BE%E8%AE%A1.webp&quot; alt=&quot;&quot; /&gt;
+&lt;em&gt;&amp;gt;/ 作者：大强同学&lt;/em&gt;
+&lt;em&gt;&amp;gt;/ 更多干货，请访问：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+</content:encoded></item><item><title>ChatGPT Plus 现在可以当 Python 库来调用</title><link>https://dqtx.cc/posts/aihacks/codex-python-sdk/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/codex-python-sdk/</guid><pubDate>Thu, 04 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;昨天 OpenAI 悄悄发了个Python SDK，没上热搜，但我看到之后直接愣住了。&lt;/p&gt;
+&lt;p&gt;你花 20 美元/月的 ChatGPT Plus，突然能干一件之前干不了的事。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-ai-one-line-20260604-230136.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;一句话说清楚：ChatGPT Plus 现在可以当 Python 库来调用了。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;以前你用 ChatGPT，就像打电话给客服，说一句它回一句。现在 OpenAI 把 Codex 的全部能力打包成了一个 Python 库，你可以直接写代码调用它，让它自动帮你读代码、分析数据、写文档，全程不用打开网页。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260604225624259.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;你不需要额外花钱，复用你的订阅&lt;/h3&gt;
+&lt;p&gt;这是最狠的地方。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;你不需要单独买 API key，它直接用你的 ChatGPT Plus 登录态。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;打个比方，以前你想请一个顶级程序员帮你干活，要么按小时付费（API key），贵得要命。要么自己守在电脑前指挥他（CLI 终端）。现在，你花 20 美元办了张「员工卡」（ChatGPT Plus），这个员工就住在你电脑里，你写几行代码就能让他干活。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;它不是聊天，是干活。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;安装就一行命令&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pip install openai-codex
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260604225657491.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;为什么不用 Codex 桌面版或 CLI&lt;/h3&gt;
+&lt;p&gt;你可能会问，Codex 本身就有桌面版和命令行工具了，为什么还要用 Python？&lt;/p&gt;
+&lt;p&gt;打个比方，Codex 桌面版就像一个翻译官，你每次都要亲自去找他，说一句他翻一句。但如果你会写代码，你可以把翻译官的能力接到你的工作流里，让他自动帮你翻译一整批文件，你去喝杯咖啡回来活就干完了。&lt;/p&gt;
+&lt;p&gt;CLI 也是一样，你得守在终端前一条条输入指令。Python SDK 的意思是：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;你可以把 Codex 嵌进任何自动化脚本里，批量处理、定时执行、甚至做成一个自己的小产品。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这是 CLI 做不到的。&lt;/p&gt;
+&lt;p&gt;比如：你在 Python 里写一句「帮我分析这个项目的代码结构」，Codex 会在后台自动打开你的代码仓库，一行一行读，理解整个项目的架构，然后把分析结果直接返回到你的 Python 变量里。&lt;/p&gt;
+&lt;p&gt;你拿到的就是一份现成的报告，全程没打开 ChatGPT 网页，没手动复制粘贴任何东西。那种感觉有点像作弊，但又觉得这才是 AI 该有的样子。&lt;/p&gt;
+&lt;h3&gt;两个坑，我替你踩了&lt;/h3&gt;
+&lt;p&gt;第一个，&lt;strong&gt;如果你同时在用 Claude Code，或者两台机器同时跑 Codex，两边的记忆会打架，谁后写谁覆盖。&lt;/strong&gt; 我真的踩过这个坑。&lt;/p&gt;
+&lt;p&gt;第二个，&lt;strong&gt;新手接入前建议先测三件事：本地目录访问权限、失败重试机制、生成文件是否可审计。&lt;/strong&gt; 听起来不起眼，但真出了问题你可能连 AI 改了你哪个文件都不知道。&lt;/p&gt;
+&lt;p&gt;当然现在还是 Beta 阶段，登录态偶尔不灵，文档也不完善。但方向已经很清楚了，&lt;strong&gt;AI 正在从「一个聊天窗口」变成「一行代码」。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;你花 20 美元买的不是聊天机器人，&lt;strong&gt;是一整个 AI 基础设施。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;gt;&amp;gt;&amp;gt;&lt;strong&gt;参考资料&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;OpenAI Codex Python SDK（PyPI）
+https://pypi.org/project/openai-codex/&lt;/li&gt;
+&lt;li&gt;OpenAI Codex GitHub 仓库
+https://github.com/openai/codex&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;p&gt;以上，既然看到这里了，如果觉得不错，随手&lt;strong&gt;点个赞、在看、转发&lt;/strong&gt;三连吧！想第一时间收到推送，可以给我个星标⭐️～&lt;/p&gt;
+&lt;p&gt;谢谢你看我的文章，我们，下次再见。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/%E6%9C%AA%E5%91%BD%E5%90%8D%E7%9A%84%E8%AE%BE%E8%AE%A1.webp&quot; alt=&quot;&quot; /&gt;
+&lt;em&gt;&amp;gt;/ 作者：大强同学&lt;/em&gt;
+&lt;em&gt;&amp;gt;/ 更多干货，请访问：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+</content:encoded></item><item><title>OpenAI终于下场做机器人了！</title><link>https://dqtx.cc/posts/aihacks/openai%E7%BB%88%E4%BA%8E%E4%B8%8B%E5%9C%BA%E5%81%9A%E6%9C%BA%E5%99%A8%E4%BA%BA/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/openai%E7%BB%88%E4%BA%8E%E4%B8%8B%E5%9C%BA%E5%81%9A%E6%9C%BA%E5%99%A8%E4%BA%BA/</guid><pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;事情是这样的。&lt;/p&gt;
+&lt;p&gt;今天我刷到 Sam Altman 发了一条很短的动态。&lt;/p&gt;
+&lt;p&gt;OpenAI Robotics is hiring。&lt;/p&gt;
+&lt;p&gt;OpenAI 的机器人团队开始招人了。&lt;/p&gt;
+&lt;p&gt;就这么一句话。&lt;/p&gt;
+&lt;p&gt;但是我看到的时候，脑子里还是咯噔了一下。&lt;/p&gt;
+&lt;p&gt;因为这句话如果单独看，好像只是 OpenAI 又开了一个招聘岗位，招几个硬件工程师，招几个机器学习工程师，正常。&lt;/p&gt;
+&lt;p&gt;但是如果你把今天 AI 圈发生的几件事放在一起看，这个味道就完全不一样了。&lt;/p&gt;
+&lt;p&gt;NVIDIA 今天在讲 AI 工厂。&lt;/p&gt;
+&lt;p&gt;Runway 今天在讲世界模型。&lt;/p&gt;
+&lt;p&gt;NVIDIA Cosmos 3 在讲物理 AI。&lt;/p&gt;
+&lt;p&gt;上海的规划里也写到了多模态智能体和具身智能。&lt;/p&gt;
+&lt;p&gt;MWC 上海甚至要办人形机器人点球大战。&lt;/p&gt;
+&lt;p&gt;然后 OpenAI 在这个时间点说，我也要做机器人了。&lt;/p&gt;
+&lt;p&gt;朋友们，这事儿就不是一个招聘启事那么简单了。&lt;/p&gt;
+&lt;p&gt;我自己的感受是，AI 行业正在从一个阶段切到另一个阶段。&lt;/p&gt;
+&lt;p&gt;过去几年，我们一直在看 AI 怎么说话，怎么写文章，怎么画图，怎么写代码。&lt;/p&gt;
+&lt;p&gt;但接下来，它可能真的要开始动手了。&lt;/p&gt;
+&lt;p&gt;不是比喻意义上的动手。&lt;/p&gt;
+&lt;p&gt;是真的，有一个身体，能走到你面前，能拿起东西，能修设备，能进工厂，能进仓库，能进入现实世界。&lt;/p&gt;
+&lt;p&gt;这一下就有点吓人，也有点让人兴奋。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/01-scene-ai-grows-body.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;OpenAI 为什么现在要做机器人&lt;/h3&gt;
+&lt;p&gt;很多朋友可能会觉得奇怪。&lt;/p&gt;
+&lt;p&gt;OpenAI 不是做 ChatGPT 的吗？&lt;/p&gt;
+&lt;p&gt;不是做大模型的吗？&lt;/p&gt;
+&lt;p&gt;怎么突然又开始做机器人了？&lt;/p&gt;
+&lt;p&gt;其实吧，这件事一点都不突然。&lt;/p&gt;
+&lt;p&gt;你可以把 ChatGPT 理解成一个很聪明的大脑。&lt;/p&gt;
+&lt;p&gt;它会聊天，会写代码，会总结文档，会分析问题，会帮你规划任务。&lt;/p&gt;
+&lt;p&gt;但是它一直有一个很尴尬的问题。&lt;/p&gt;
+&lt;p&gt;它没有身体。&lt;/p&gt;
+&lt;p&gt;你让它帮你写一份方案，可以。&lt;/p&gt;
+&lt;p&gt;你让它帮你分析一段代码，可以。&lt;/p&gt;
+&lt;p&gt;你让它帮你做一个 PPT，可以。&lt;/p&gt;
+&lt;p&gt;但是你让它帮你把桌上的杯子拿过来。&lt;/p&gt;
+&lt;p&gt;不行。&lt;/p&gt;
+&lt;p&gt;它只能告诉你，理论上应该先伸手，再握住杯子，然后保持平衡，再移动到目标位置。&lt;/p&gt;
+&lt;p&gt;听着挺聪明。&lt;/p&gt;
+&lt;p&gt;但杯子还在那儿。&lt;/p&gt;
+&lt;p&gt;这就是今天 AI 最大的边界之一。&lt;/p&gt;
+&lt;p&gt;它能在屏幕里完成很多事情，但一旦离开屏幕，进入真实世界，事情就变得非常麻烦。&lt;/p&gt;
+&lt;p&gt;真实世界不是一段干净的文本。&lt;/p&gt;
+&lt;p&gt;真实世界有摩擦，有重量，有光线变化，有人突然从旁边走过，有桌子边缘，有地面打滑，有杯子里的水会晃。&lt;/p&gt;
+&lt;p&gt;你在电脑里复制一段文字，永远不会因为手抖复制到一半。&lt;/p&gt;
+&lt;p&gt;但机器人拿杯子，真的会手抖。&lt;/p&gt;
+&lt;p&gt;这就是为什么机器人很难。&lt;/p&gt;
+&lt;p&gt;也是为什么 OpenAI 迟早会碰这件事。&lt;/p&gt;
+&lt;p&gt;因为如果一个 AI 公司真的相信自己在做通用智能，那它最后一定会问一个问题。&lt;/p&gt;
+&lt;p&gt;这个智能，只能待在聊天框里吗？&lt;/p&gt;
+&lt;p&gt;如果只能待在聊天框里，那它再聪明，也还是一个屏幕里的东西。&lt;/p&gt;
+&lt;p&gt;但如果它能进入现实世界，那性质就变了。&lt;/p&gt;
+&lt;p&gt;ChatGPT 是一个会说话的大脑。&lt;/p&gt;
+&lt;p&gt;机器人，是给这个大脑装上身体。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/02-scene-chatgpt-needs-body.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;这次 OpenAI 的信号，不只是招聘&lt;/h3&gt;
+&lt;p&gt;Sam Altman 这条动态里提到，他们在找全栈硬件、系统、运维和机器学习工程师。&lt;/p&gt;
+&lt;p&gt;这个组合其实很有意思。&lt;/p&gt;
+&lt;p&gt;如果只是做一个软件产品，你不会这么招人。&lt;/p&gt;
+&lt;p&gt;硬件，系统，运维，机器学习，全都要。&lt;/p&gt;
+&lt;p&gt;这更像是在搭一条完整的机器人研发链路。&lt;/p&gt;
+&lt;p&gt;而且他还提到，这个项目由 Aditya Ramesh 领导。&lt;/p&gt;
+&lt;p&gt;这个名字很多人可能不熟，但他之前和 DALL-E 有很深关系，也参与过世界模拟相关研究。&lt;/p&gt;
+&lt;p&gt;这块就很关键。&lt;/p&gt;
+&lt;p&gt;因为机器人不是简单地把大模型塞进一个铁壳子里。&lt;/p&gt;
+&lt;p&gt;不是说，你给一个机械臂接上 GPT，它就会帮你做饭。&lt;/p&gt;
+&lt;p&gt;没这么简单。&lt;/p&gt;
+&lt;p&gt;机器人需要理解世界。&lt;/p&gt;
+&lt;p&gt;它要知道一个杯子不是一张图片里的像素块，而是一个有重量、有形状、会被碰倒的物体。&lt;/p&gt;
+&lt;p&gt;它要知道门把手可以转，抽屉可以拉，玻璃杯容易碎，热水会烫。&lt;/p&gt;
+&lt;p&gt;这些东西对人来说太自然了。&lt;/p&gt;
+&lt;p&gt;自然到我们根本不觉得这是知识。&lt;/p&gt;
+&lt;p&gt;但对 AI 来说，这些都是要学的。&lt;/p&gt;
+&lt;p&gt;有时候我觉得，人类小孩真的太牛逼了。&lt;/p&gt;
+&lt;p&gt;一个两三岁的小孩，可能还说不清什么叫摩擦力，什么叫重心，什么叫物体恒存。&lt;/p&gt;
+&lt;p&gt;但是他知道杯子推到桌子边缘会掉下去。&lt;/p&gt;
+&lt;p&gt;他知道球滚到沙发底下不是消失了。&lt;/p&gt;
+&lt;p&gt;他知道妈妈把玩具藏到背后，玩具还在。&lt;/p&gt;
+&lt;p&gt;这些听着很幼稚的常识，恰恰是机器人进入现实世界最难补的课。&lt;/p&gt;
+&lt;p&gt;OpenAI 现在下场做机器人，我觉得很大一部分原因，就是大模型已经开始撞到这个边界了。&lt;/p&gt;
+&lt;p&gt;语言能力再强，如果没有对物理世界的理解，它就很难真正干活。&lt;/p&gt;
+&lt;h3&gt;今天最关键的词，其实是世界模型&lt;/h3&gt;
+&lt;p&gt;说到这里，就得把 Runway 和 NVIDIA 今天的动作放进来了。&lt;/p&gt;
+&lt;p&gt;Runway 宣布加入 Cosmos Coalition，和 NVIDIA 以及其他 AI 实验室一起做面向物理 AI 的开放世界模型。&lt;/p&gt;
+&lt;p&gt;NVIDIA 也在推 Cosmos 3，强调物理推理、世界理解和行动生成。&lt;/p&gt;
+&lt;p&gt;这些词听起来有点硬。&lt;/p&gt;
+&lt;p&gt;我用大白话讲。&lt;/p&gt;
+&lt;p&gt;世界模型，就是让 AI 在脑子里先模拟一下现实世界会怎么变化。&lt;/p&gt;
+&lt;p&gt;你要拿一个杯子。&lt;/p&gt;
+&lt;p&gt;手伸过去，碰到杯子，杯子会不会滑？&lt;/p&gt;
+&lt;p&gt;你用多大力，杯子会不会碎？&lt;/p&gt;
+&lt;p&gt;你拿起来之后，里面的水会不会洒？&lt;/p&gt;
+&lt;p&gt;你往左走一步，会不会撞到桌角？&lt;/p&gt;
+&lt;p&gt;人类做这些事的时候，脑子里其实一直在做预测。&lt;/p&gt;
+&lt;p&gt;只是我们太习惯了，所以没感觉。&lt;/p&gt;
+&lt;p&gt;机器人要进入现实世界，也必须有这种能力。&lt;/p&gt;
+&lt;p&gt;它不能每一步都靠试错。&lt;/p&gt;
+&lt;p&gt;因为在真实世界里，试错是有成本的。&lt;/p&gt;
+&lt;p&gt;自动驾驶试错，可能撞车。&lt;/p&gt;
+&lt;p&gt;工厂机器人试错，可能损坏设备。&lt;/p&gt;
+&lt;p&gt;家庭机器人试错，可能把你的猫吓飞。&lt;/p&gt;
+&lt;p&gt;所以它需要先在自己的「脑子」里模拟。&lt;/p&gt;
+&lt;p&gt;这也是为什么视频生成公司 Runway 会突然和世界模型挂上关系。&lt;/p&gt;
+&lt;p&gt;表面上看，视频生成是在生成一段好看的画面。&lt;/p&gt;
+&lt;p&gt;但再往深一层看，视频其实是时间里的世界变化。&lt;/p&gt;
+&lt;p&gt;一个人走路，衣服会摆动。&lt;/p&gt;
+&lt;p&gt;一个球落地，会反弹。&lt;/p&gt;
+&lt;p&gt;一辆车转弯，轮胎和地面会产生摩擦。&lt;/p&gt;
+&lt;p&gt;如果一个模型真的能生成符合物理规律的视频，那它某种程度上就在学习世界怎么运转。&lt;/p&gt;
+&lt;p&gt;这就从「生成视频」变成了「模拟世界」。&lt;/p&gt;
+&lt;p&gt;这一步很重要。&lt;/p&gt;
+&lt;p&gt;我甚至觉得，未来回头看，大家可能会发现，视频生成不是终点，而是世界模型的训练场。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/03-scene-world-model.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;NVIDIA 也在把 AI 往现实世界里推&lt;/h3&gt;
+&lt;p&gt;今天 NVIDIA 的动作也非常密集。&lt;/p&gt;
+&lt;p&gt;FOX 工厂运营蓝图，DSX OS，Vera CPU，RTX Spark，本地 AI Agent。&lt;/p&gt;
+&lt;p&gt;名字很多，听着也复杂。&lt;/p&gt;
+&lt;p&gt;但它们其实都在讲一件事。&lt;/p&gt;
+&lt;p&gt;AI 不能只待在网页里，它要进入真实的生产系统。&lt;/p&gt;
+&lt;p&gt;工厂就是一个非常典型的场景。&lt;/p&gt;
+&lt;p&gt;一条产线每天有大量机器信号，有质量数据，有传感器报警，有人员调度，有维修计划。&lt;/p&gt;
+&lt;p&gt;过去这些东西要靠人看屏幕，靠老师傅经验判断，靠工程师排查。&lt;/p&gt;
+&lt;p&gt;但是如果有一个工厂里的 AI 大脑，它能实时看所有数据，发现异常，调度不同的智能体去分析原因，再给出处理方案。&lt;/p&gt;
+&lt;p&gt;这就不是聊天机器人了。&lt;/p&gt;
+&lt;p&gt;这是一个数字工厂主管。&lt;/p&gt;
+&lt;p&gt;有点科幻。&lt;/p&gt;
+&lt;p&gt;但你看 NVIDIA 的表述，他们已经在往这个方向包装了。&lt;/p&gt;
+&lt;p&gt;富士康用 FOX 和 NemoClaw 做多智能体系统，目标是把根因分析时间缩短 80%，劳动生产率提高 15%。&lt;/p&gt;
+&lt;p&gt;这个数字到底最后能不能完全跑出来，我不知道。&lt;/p&gt;
+&lt;p&gt;说实话我们还得看真实落地。&lt;/p&gt;
+&lt;p&gt;但是这个方向本身已经非常清楚了。&lt;/p&gt;
+&lt;p&gt;过去 AI Agent 讨论最多的是写代码。&lt;/p&gt;
+&lt;p&gt;Claude Code，Codex，Cursor，大家都在说一个 AI 程序员能干多少活。&lt;/p&gt;
+&lt;p&gt;但 NVIDIA 今天给的暗示是，AI Agent 不只会写代码。&lt;/p&gt;
+&lt;p&gt;它也可以进工厂。&lt;/p&gt;
+&lt;p&gt;它可以看机器。&lt;/p&gt;
+&lt;p&gt;它可以排故障。&lt;/p&gt;
+&lt;p&gt;它可以调度真实世界里的流程。&lt;/p&gt;
+&lt;p&gt;这尼玛就很有意思了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/04-scene-ai-factory-agent.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;因为一旦 AI Agent 从办公室软件进入工业系统，它的价值计算方式就完全变了。&lt;/p&gt;
+&lt;p&gt;它不再是帮你省一个小时写文档。&lt;/p&gt;
+&lt;p&gt;它可能是帮一条产线少停机十分钟。&lt;/p&gt;
+&lt;p&gt;而在工业场景里，十分钟有时候就是钱。&lt;/p&gt;
+&lt;p&gt;很多钱。&lt;/p&gt;
+&lt;h3&gt;机器人为什么会成为下一个大叙事&lt;/h3&gt;
+&lt;p&gt;你如果顺着这个逻辑往下想，就会发现机器人几乎是不可避免的。&lt;/p&gt;
+&lt;p&gt;因为 AI 要进入现实世界，最终一定需要某种执行器。&lt;/p&gt;
+&lt;p&gt;在软件里，执行器是 API。&lt;/p&gt;
+&lt;p&gt;你让 Agent 调接口，发邮件，查数据库，改代码。&lt;/p&gt;
+&lt;p&gt;在现实世界里，执行器是什么？&lt;/p&gt;
+&lt;p&gt;就是机器人。&lt;/p&gt;
+&lt;p&gt;可以是机械臂。&lt;/p&gt;
+&lt;p&gt;可以是自动驾驶车。&lt;/p&gt;
+&lt;p&gt;可以是仓储机器人。&lt;/p&gt;
+&lt;p&gt;可以是人形机器人。&lt;/p&gt;
+&lt;p&gt;也可以是一堆不那么像人的专用设备。&lt;/p&gt;
+&lt;p&gt;我知道很多人一听机器人，就会想到科幻电影里那种人形机器人，走进你家，端茶倒水，陪你聊天。&lt;/p&gt;
+&lt;p&gt;那个画面当然很有传播性。&lt;/p&gt;
+&lt;p&gt;但我觉得，第一波真正有价值的机器人，不一定长得像人。&lt;/p&gt;
+&lt;p&gt;它可能长得很丑。&lt;/p&gt;
+&lt;p&gt;可能就是仓库里一个会搬货的盒子。&lt;/p&gt;
+&lt;p&gt;可能就是工厂里一条会自我调整的机械臂。&lt;/p&gt;
+&lt;p&gt;可能就是医院里一个专门送药的移动平台。&lt;/p&gt;
+&lt;p&gt;可能就是农田里一个会识别杂草和病虫害的机器。&lt;/p&gt;
+&lt;p&gt;它不需要像人。&lt;/p&gt;
+&lt;p&gt;它只需要真的能干活。&lt;/p&gt;
+&lt;p&gt;这块我觉得很多人会有一个误区。&lt;/p&gt;
+&lt;p&gt;大家总想象机器人是一个「通用人类替代品」。&lt;/p&gt;
+&lt;p&gt;但现实里更可能先出现的是大量「窄场景机器人」。&lt;/p&gt;
+&lt;p&gt;它只会干一件事。&lt;/p&gt;
+&lt;p&gt;但这件事干得非常稳定，非常便宜，非常不知疲倦。&lt;/p&gt;
+&lt;p&gt;这就够了。&lt;/p&gt;
+&lt;p&gt;你想想看，工厂老板真的需要一个会聊天的机器人吗？&lt;/p&gt;
+&lt;p&gt;不需要。&lt;/p&gt;
+&lt;p&gt;他需要的是设备坏了能提前报警，物料缺了能自动调度，产线异常能快速定位。&lt;/p&gt;
+&lt;p&gt;养老院真的一开始就需要一个像真人一样的机器人吗？&lt;/p&gt;
+&lt;p&gt;也不一定。&lt;/p&gt;
+&lt;p&gt;可能先需要的是一个能安全送药、能提醒老人、能发现跌倒的系统。&lt;/p&gt;
+&lt;p&gt;所以我觉得 OpenAI 做机器人这件事，大家不要只盯着「人形机器人」四个字。&lt;/p&gt;
+&lt;p&gt;更大的问题是，AI 终于要开始从「理解任务」走向「执行任务」。&lt;/p&gt;
+&lt;p&gt;这才是关键。&lt;/p&gt;
+&lt;h3&gt;苹果、上海、MWC 上海，也都在同一条线上&lt;/h3&gt;
+&lt;p&gt;比较骚的事是，今天不只是 OpenAI 和 NVIDIA 在讲这个方向。&lt;/p&gt;
+&lt;p&gt;苹果那边也有消息，说 WWDC 可能会展示设备端 AI 升级，用从 Gemini 蒸馏的小模型在 iPhone 本地跑，复杂任务再路由到 Google Cloud。&lt;/p&gt;
+&lt;p&gt;这个消息如果是真的，其实说明另一个趋势。&lt;/p&gt;
+&lt;p&gt;AI 会越来越多地从云端走向设备端。&lt;/p&gt;
+&lt;p&gt;手机，电脑，机器人，车，工厂设备。&lt;/p&gt;
+&lt;p&gt;它们都需要在本地做一部分判断。&lt;/p&gt;
+&lt;p&gt;因为现实世界等不了太久。&lt;/p&gt;
+&lt;p&gt;你让一个聊天机器人慢两秒回答，最多是体验差一点。&lt;/p&gt;
+&lt;p&gt;但你让一个机器人慢两秒判断，可能就撞上了。&lt;/p&gt;
+&lt;p&gt;所以本地 AI 和物理 AI 是绑在一起的。&lt;/p&gt;
+&lt;p&gt;NVIDIA 推 RTX Spark，也是在讲这个方向。&lt;/p&gt;
+&lt;p&gt;1 petaflops AI 算力，128GB 统一内存，听起来像参数堆料。&lt;/p&gt;
+&lt;p&gt;但它真正想卖的不是参数。&lt;/p&gt;
+&lt;p&gt;它想卖的是，本地也能跑智能体。&lt;/p&gt;
+&lt;p&gt;你的电脑不再只是一个等待你点击的机器。&lt;/p&gt;
+&lt;p&gt;它可以自己观察，自己规划，自己执行。&lt;/p&gt;
+&lt;p&gt;再看国内。&lt;/p&gt;
+&lt;p&gt;上海的服务业规划里，已经明确写到了多模态智能体、智能驾驶、MaaS、具身智能、家庭养老文旅场景。&lt;/p&gt;
+&lt;p&gt;这种东西一旦进入地方产业规划，就说明它不再只是实验室里的漂亮 demo。&lt;/p&gt;
+&lt;p&gt;它开始变成产业政策、园区招商、资本布局和企业项目了。&lt;/p&gt;
+&lt;p&gt;还有 MWC 上海的人形机器人点球大战。&lt;/p&gt;
+&lt;p&gt;说真的，这个形式很妙。&lt;/p&gt;
+&lt;p&gt;因为机器人技术很多时候太抽象了。&lt;/p&gt;
+&lt;p&gt;你跟普通人讲动态平衡、自主决策、精准控制，大家听完就忘。&lt;/p&gt;
+&lt;p&gt;但是你让 8 支人形机器人队伍去踢点球。&lt;/p&gt;
+&lt;p&gt;大家一下就懂了。&lt;/p&gt;
+&lt;p&gt;它会不会摔？&lt;/p&gt;
+&lt;p&gt;它能不能判断球的位置？&lt;/p&gt;
+&lt;p&gt;它能不能踢准？&lt;/p&gt;
+&lt;p&gt;它能不能在没有人遥控的情况下完成动作？&lt;/p&gt;
+&lt;p&gt;这就是技术传播最好的方式。&lt;/p&gt;
+&lt;p&gt;把复杂技术变成一个普通人能看懂的比赛。&lt;/p&gt;
+&lt;p&gt;所以你看，OpenAI 机器人，NVIDIA 物理 AI，苹果本地模型，上海具身智能，MWC 机器人比赛。&lt;/p&gt;
+&lt;p&gt;它们表面上是几条新闻。&lt;/p&gt;
+&lt;p&gt;但背后其实是同一个方向。&lt;/p&gt;
+&lt;p&gt;AI 正在长出手脚。&lt;/p&gt;
+&lt;h3&gt;当然，别太快进入科幻片&lt;/h3&gt;
+&lt;p&gt;讲到这里，可能有人会开始兴奋。&lt;/p&gt;
+&lt;p&gt;是不是明年家里就有机器人了？&lt;/p&gt;
+&lt;p&gt;是不是马上就有一个 ChatGPT 机器人给我洗衣做饭带娃了？&lt;/p&gt;
+&lt;p&gt;我觉得别急。&lt;/p&gt;
+&lt;p&gt;真的别急。&lt;/p&gt;
+&lt;p&gt;机器人这事儿，历史上已经热过很多轮了。&lt;/p&gt;
+&lt;p&gt;每一轮都说马上进入家庭。&lt;/p&gt;
+&lt;p&gt;然后每一轮都被现实教育。&lt;/p&gt;
+&lt;p&gt;原因很简单。&lt;/p&gt;
+&lt;p&gt;家庭是一个极其混乱的环境。&lt;/p&gt;
+&lt;p&gt;每家的家具不一样，光线不一样，地面不一样，人的习惯不一样，孩子和宠物还会随机捣乱。&lt;/p&gt;
+&lt;p&gt;工厂虽然看起来复杂，但它至少是可控环境。&lt;/p&gt;
+&lt;p&gt;家庭反而是地狱难度。&lt;/p&gt;
+&lt;p&gt;所以我不觉得 OpenAI 一做机器人，我们明年就能买到一个通用家务机器人。&lt;/p&gt;
+&lt;p&gt;没那么快。&lt;/p&gt;
+&lt;p&gt;而且机器人还牵涉硬件成本、供应链、安全标准、售后维护、责任归属。&lt;/p&gt;
+&lt;p&gt;这些都不是发一个模型 API 能解决的。&lt;/p&gt;
+&lt;p&gt;大模型迭代可以很快。&lt;/p&gt;
+&lt;p&gt;机器人迭代没那么快。&lt;/p&gt;
+&lt;p&gt;一个软件 bug，最多重启。&lt;/p&gt;
+&lt;p&gt;一个机器人 bug，可能真的砸到脚。&lt;/p&gt;
+&lt;p&gt;这就是现实世界的残酷。&lt;/p&gt;
+&lt;p&gt;但是，慢不代表不重要。&lt;/p&gt;
+&lt;p&gt;相反，正因为难，所以谁先把这条路跑通，谁的壁垒就会非常厚。&lt;/p&gt;
+&lt;p&gt;软件产品可以被复制。&lt;/p&gt;
+&lt;p&gt;一个机器人系统如果真的能在工厂、仓库、医院、养老院稳定跑起来，那里面积累的是数据、硬件、流程、场景、运维、客户信任。&lt;/p&gt;
+&lt;p&gt;这东西不是一个周末 vibe coding 出来的。&lt;/p&gt;
+&lt;p&gt;这也是为什么我觉得 OpenAI 现在开始做机器人是合理的。&lt;/p&gt;
+&lt;p&gt;不是因为它已经准备好了一个终极机器人。&lt;/p&gt;
+&lt;p&gt;而是因为如果它再不开始积累现实世界数据和硬件经验，未来可能会发现自己只有大脑，没有身体。&lt;/p&gt;
+&lt;h3&gt;对普通人来说，这事儿跟我有什么关系&lt;/h3&gt;
+&lt;p&gt;可能有朋友看到这里会想。&lt;/p&gt;
+&lt;p&gt;这些都是 OpenAI、NVIDIA、Runway、上海、富士康的事。&lt;/p&gt;
+&lt;p&gt;跟我有什么关系？&lt;/p&gt;
+&lt;p&gt;我非常理解这种感觉。&lt;/p&gt;
+&lt;p&gt;你不是机器人公司老板。&lt;/p&gt;
+&lt;p&gt;你不是硬件工程师。&lt;/p&gt;
+&lt;p&gt;你也不在工厂里做自动化改造。&lt;/p&gt;
+&lt;p&gt;你就是一个普通的内容创作者、设计师、开发者、运营、创业者，或者只是一个每天被 AI 新闻轰炸到麻木的普通人。&lt;/p&gt;
+&lt;p&gt;那你要看什么？&lt;/p&gt;
+&lt;p&gt;我觉得看三件事就够了。&lt;/p&gt;
+&lt;p&gt;第一，看 AI 的能力边界正在从信息处理扩展到任务执行。&lt;/p&gt;
+&lt;p&gt;以前 AI 的核心价值是帮你处理信息。&lt;/p&gt;
+&lt;p&gt;写文章，做总结，查资料，生成图片，写代码。&lt;/p&gt;
+&lt;p&gt;未来它会越来越多地参与执行。&lt;/p&gt;
+&lt;p&gt;帮你操作电脑，帮你管理流程，帮你调度设备，甚至帮你控制机器人。&lt;/p&gt;
+&lt;p&gt;这会改变很多工作的定义。&lt;/p&gt;
+&lt;p&gt;第二，看本地 AI 会越来越重要。&lt;/p&gt;
+&lt;p&gt;只要 AI 进入现实世界，就不能所有事都等云端回复。&lt;/p&gt;
+&lt;p&gt;低延迟，隐私，安全，离线能力，都会变得重要。&lt;/p&gt;
+&lt;p&gt;所以 AI PC、本地 Agent、小模型、边缘计算这些词，未来会反复出现。&lt;/p&gt;
+&lt;p&gt;第三，看世界模型和具身智能会变成新的内容富矿。&lt;/p&gt;
+&lt;p&gt;过去讲 AI，大家讲 Prompt，讲大模型，讲 Agent。&lt;/p&gt;
+&lt;p&gt;接下来讲 AI，可能要讲机器人、自动驾驶、工厂、智能空间、家庭设备。&lt;/p&gt;
+&lt;p&gt;这对内容创作者来说，其实是机会。&lt;/p&gt;
+&lt;p&gt;因为大众对这块非常陌生。&lt;/p&gt;
+&lt;p&gt;他们需要有人把这些硬词翻译成人话。&lt;/p&gt;
+&lt;p&gt;什么叫世界模型？&lt;/p&gt;
+&lt;p&gt;什么叫物理 AI？&lt;/p&gt;
+&lt;p&gt;什么叫具身智能？&lt;/p&gt;
+&lt;p&gt;为什么机器人比聊天机器人难这么多？&lt;/p&gt;
+&lt;p&gt;为什么 NVIDIA 要讲 AI 工厂？&lt;/p&gt;
+&lt;p&gt;这些问题如果讲清楚，都是很好的内容。&lt;/p&gt;
+&lt;p&gt;而且它们不只是新闻。&lt;/p&gt;
+&lt;p&gt;它们是未来几年 AI 叙事的底层变化。&lt;/p&gt;
+&lt;h3&gt;我真正兴奋的地方&lt;/h3&gt;
+&lt;p&gt;说实话，我真正兴奋的不是 OpenAI 做机器人这件事本身。&lt;/p&gt;
+&lt;p&gt;大公司做机器人，不新鲜。&lt;/p&gt;
+&lt;p&gt;Google 做过，Tesla 在做，Figure 在做，宇树在做，波士顿动力更是做了好多年。&lt;/p&gt;
+&lt;p&gt;OpenAI 进来，只是让这件事的关注度一下子被拉高。&lt;/p&gt;
+&lt;p&gt;我真正兴奋的是，这些线终于开始接上了。&lt;/p&gt;
+&lt;p&gt;大模型给了 AI 一个大脑。&lt;/p&gt;
+&lt;p&gt;世界模型让它理解现实。&lt;/p&gt;
+&lt;p&gt;本地算力让它能快速反应。&lt;/p&gt;
+&lt;p&gt;机器人给它一个身体。&lt;/p&gt;
+&lt;p&gt;工厂、仓库、汽车、家庭，给它真实的任务场景。&lt;/p&gt;
+&lt;p&gt;这些东西如果单独看，都有点散。&lt;/p&gt;
+&lt;p&gt;但今天放在一起看，突然就像拼图一样，咔哒一下对上了。&lt;/p&gt;
+&lt;p&gt;那种感觉挺奇妙的。&lt;/p&gt;
+&lt;p&gt;就像过去几年我们一直在看一个孩子学说话。&lt;/p&gt;
+&lt;p&gt;它会背诗，会写作文，会解题，会跟你聊天。&lt;/p&gt;
+&lt;p&gt;我们已经觉得很厉害了。&lt;/p&gt;
+&lt;p&gt;但是现在，它开始学走路了。&lt;/p&gt;
+&lt;p&gt;走得肯定很笨。&lt;/p&gt;
+&lt;p&gt;会摔。&lt;/p&gt;
+&lt;p&gt;会撞墙。&lt;/p&gt;
+&lt;p&gt;会把杯子打翻。&lt;/p&gt;
+&lt;p&gt;甚至很长一段时间里，它看起来都不如一个两岁小孩。&lt;/p&gt;
+&lt;p&gt;但是只要它开始学走路，这件事的性质就不一样了。&lt;/p&gt;
+&lt;p&gt;因为一个会说话的 AI，是工具。&lt;/p&gt;
+&lt;p&gt;一个会行动的 AI，可能就是新物种的雏形。&lt;/p&gt;
+&lt;p&gt;我说新物种不是为了吓人。&lt;/p&gt;
+&lt;p&gt;只是怎么说呢，当智能开始从屏幕里溢出来，进入桌面、工厂、街道、车间和家里，我们对 AI 的想象就会被迫更新。&lt;/p&gt;
+&lt;p&gt;它不再只是一个窗口。&lt;/p&gt;
+&lt;p&gt;它会变成环境的一部分。&lt;/p&gt;
+&lt;h3&gt;最后&lt;/h3&gt;
+&lt;p&gt;我不知道 OpenAI 的机器人项目会做到什么程度。&lt;/p&gt;
+&lt;p&gt;也不知道第一代产品会不会翻车。&lt;/p&gt;
+&lt;p&gt;甚至说实话，我觉得翻车概率不低。&lt;/p&gt;
+&lt;p&gt;机器人太难了。&lt;/p&gt;
+&lt;p&gt;硬件太难了。&lt;/p&gt;
+&lt;p&gt;现实世界太难了。&lt;/p&gt;
+&lt;p&gt;但是我依然觉得这条新闻值得认真看。&lt;/p&gt;
+&lt;p&gt;因为它不是在告诉我们，明天就会有一个 ChatGPT 机器人走进家门。&lt;/p&gt;
+&lt;p&gt;它是在告诉我们，AI 行业的想象力正在换地方。&lt;/p&gt;
+&lt;p&gt;从聊天框，换到现实世界。&lt;/p&gt;
+&lt;p&gt;从写一段话，换到做一件事。&lt;/p&gt;
+&lt;p&gt;从回答问题，换到真正执行。&lt;/p&gt;
+&lt;p&gt;大时代啊，朋友们。&lt;/p&gt;
+&lt;p&gt;永远对世界保持好奇。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&amp;gt;&amp;gt;&amp;gt;&lt;strong&gt;相关资料&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;OpenAI Robotics 招聘动态
+https://x.com/sama/status/2061117302528188712&lt;/li&gt;
+&lt;li&gt;NVIDIA Cosmos 3
+https://developer.nvidia.com/blog/develop-physical-ai-reasoning-world-and-action-models-with-nvidia-cosmos-3&lt;/li&gt;
+&lt;li&gt;Runway Cosmos Coalition
+https://runwayml.com/news/introducing-cosmos-coalition&lt;/li&gt;
+&lt;li&gt;NVIDIA FOX 工厂运营蓝图
+https://blogs.nvidia.com/blog/factory-operations-fox-blueprint-ai-brain&lt;/li&gt;
+&lt;li&gt;上海服务业十五五规划相关报道
+https://www.ithome.com/0/957/985.htm&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;p&gt;以上，既然看到这里了，如果觉得不错，随手&lt;strong&gt;点个赞、在看、转发&lt;/strong&gt;三连吧！想第一时间收到推送，可以给我个星标⭐️～&lt;/p&gt;
+&lt;p&gt;谢谢你看我的文章，我们，下次再见。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/%E6%9C%AA%E5%91%BD%E5%90%8D%E7%9A%84%E8%AE%BE%E8%AE%A1.webp&quot; alt=&quot;&quot; /&gt;
+&lt;em&gt;&amp;gt;/ 作者：大强同学&lt;/em&gt;
+&lt;em&gt;&amp;gt;/ 更多干货，请访问：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 </content:encoded></item><item><title>滴答清单MCP配置</title><link>https://dqtx.cc/posts/aihacks/claude-code%E6%BB%B4%E7%AD%94%E6%B8%85%E5%8D%95/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/claude-code%E6%BB%B4%E7%AD%94%E6%B8%85%E5%8D%95/</guid><pubDate>Fri, 29 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天发生了一件事，让我觉得必须写下来。&lt;/p&gt;
 &lt;p&gt;一个朋友问我，他是个AI小白，想学AI，让我帮他规划一下学习路径。&lt;/p&gt;
 &lt;p&gt;我就根据2026年的趋势，给他推荐了几个方向。推荐完之后，我突然想到，光说没用啊，得让他能执行才行。&lt;/p&gt;
@@ -671,7 +1468,9 @@ Claude Code就开始工作了。它先调用滴答清单的API，创建了一个
 &lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/%E6%9C%AA%E5%91%BD%E5%90%8D%E7%9A%84%E8%AE%BE%E8%AE%A1.webp&quot; alt=&quot;&quot; /&gt;
 &lt;em&gt;&amp;gt;/ 作者：大强同学&lt;/em&gt;
 &lt;em&gt;&amp;gt;/ 更多干货，请访问：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-</content:encoded></item><item><title>Obsidian联动notebooklm</title><link>https://dqtx.cc/posts/aihacks/obsidian%E8%81%94%E5%8A%A8notebooklm/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/obsidian%E8%81%94%E5%8A%A8notebooklm/</guid><pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;NotebookLM 的 AI 能力对 Obsidian 是极好的补充——Deep Research、Audio Overview、PPT 生成，每一样都实用。但问题是每次都要开网页、手动传文件，笔记一多简直是灾难。今天教你用 Claude Code 把 NotebookLM 的全部功能塞进 Obsidian。不用打开浏览器，不用花一分钱 API Token，在笔记库里一句话就能跑 Deep Research、自动生成 PPT 和播客音频。&lt;/p&gt;
+</content:encoded></item><item><title>Obsidian联动notebooklm</title><link>https://dqtx.cc/posts/aihacks/obsidian%E8%81%94%E5%8A%A8notebooklm/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/obsidian%E8%81%94%E5%8A%A8notebooklm/</guid><pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;NotebookLM 的 AI 能力对 Obsidian 是极好的补充——Deep Research、Audio Overview、PPT 生成，每一样都实用。但问题是每次都要开网页、手动传文件，笔记一多简直是灾难。&lt;/p&gt;
+&lt;p&gt;今天教你用 Claude Code 把 NotebookLM 的全部功能塞进 Obsidian。不用打开浏览器，不用花一分钱 API Token，在笔记库里一句话就能跑 Deep Research、自动生成 PPT 和播客音频。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-obsidian-notebooklm-20260530-132958.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;notebooklm可以做什么&lt;/h3&gt;
 &lt;p&gt;我开始之前，我们现回顾一下，notebooklm到底可以做什么？首先，它的定位是一个AI研究助理。&lt;strong&gt;只在你上传的资料里做问答、总结、分析、生成播客 / 脑图 / 报告，全程可溯源、幻觉极低&lt;/strong&gt;。&lt;/p&gt;
 &lt;ul&gt;
@@ -685,7 +1484,6 @@ Claude Code就开始工作了。它先调用滴答清单的API，创建了一个
 &lt;li&gt;信息图---可视化图表方案&lt;/li&gt;
 &lt;li&gt;数据表格---结构化数据表&lt;/li&gt;
 &lt;/ul&gt;
-&lt;hr /&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260529150213345.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;环境准备&lt;/h3&gt;
 &lt;p&gt;开始之前，确保你的环境有以下东西：&lt;/p&gt;
@@ -696,7 +1494,7 @@ Claude Code就开始工作了。它先调用滴答清单的API，创建了一个
 &lt;/ul&gt;
 &lt;p&gt;装上之后，你只需要在 Claude Code 中用自然语言描述需求，剩下的全自动——创建笔记本、导入资料、生成内容、导出文件，全在 Obsidian 内部完成。下面用三个案例，从简单到复杂，展示这套工作流的实际威力。&lt;/p&gt;
 &lt;h3&gt;场景案例&lt;/h3&gt;
-&lt;h4&gt;案例一：Deep Research + 自动生成 PPT&lt;/h4&gt;
+&lt;h4&gt;01：Deep Research + 自动生成 PPT&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;使用 notebooklm skill，对 &apos;Claude code vs Hermes Agent&apos; 进行Web深度研究（Deep Research）。将搜集到的相关信源自动建立 NotebookLM，把所有被引用文献的全文（Markdown 格式）导出并存放到 01-输入/Notebooklm/Claude code vs Hermes Agent目录，最后生成一份中文演示文稿（Slide Deck），存入我桌面
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;strong&gt;Claude code开始执行，最后的产出清单&lt;/strong&gt;&lt;/p&gt;
@@ -708,7 +1506,7 @@ Claude Code就开始工作了。它先调用滴答清单的API，创建了一个
 &lt;p&gt;跑通后，我想到这样的事情，以后我会经常干，于是我马上让他创建了一个工作流，就是skill，以后我主要给他主题，就可以了。&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;帮我创建一个技能，名字叫Notebooklm-DeepResearch-ppt 让我给你一个研究主题，你需要调用notebooklm skill 对给出的主题进行Web深度研究（Deep Research）。将搜集到的相关信源自动建立 NotebookLM，把所有被引用文献的全文（Markdown 格式）导出并存放到 01-输入/Notebooklm/ 单独文件文件夹（创建一个主题名字） 最后使用提示词Xenia/3D风格PPT风格&quot;生成一份中文演示文稿（Slide Deck），存入我桌面
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4&gt;案例二：零基础 AI 学习——从规划到落地页全自动&lt;/h4&gt;
+&lt;h4&gt;02：零基础 AI 学习——从规划到落地页全自动&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;我是一个完全零基础的AI小白，希望从几个不同维度学习AI，既能赶上时代潮流，也能在未来从事相关工作。结合2026年AI发展的趋势，请为我推荐3到4个必须彻底掌握的具体领域，以及1到2个未来需要进阶的潜在领域。请给出这5个不同方向的主题，并分别做出简要解释。
 
 同时请使用notebooklm py在NotebookLM上分别创建5个涵盖不同领域的独立笔记本。针对每个主题，都要使用其“源文件”（Sources）功能，并确保每个笔记本都包含内容丰富、来源多样的资料。同时，请务必注意信息的时效性与可靠性。
@@ -723,7 +1521,7 @@ Claude Code就开始工作了。它先调用滴答清单的API，创建了一个
 &lt;pre&gt;&lt;code&gt;根据我从NotebookLM中提取的内容，这份学习计划，帮我创建一个可以交互的落地页，我需要简单的功能是可以进学习进度的追踪，自由标记我的学习进度，页UI要好看，内部链接点击可以直接跳转。搞完直接使用内部的浏览器帮我打开我要测试一下功能
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260529162705398.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h4&gt;案例三：本地笔记 → 测验 + 播客 + 信息图&lt;/h4&gt;
+&lt;h4&gt;03：本地笔记 → 测验 + 播客 + 信息图&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;读取我本地 01-输入 文件夹下的所有有关 claude code 的笔记。使用 notebooklm skill，利用这些笔记在 NotebookLM 中创建一个笔记本，并生成一套困难难度的 Quiz 测验，一部辩论格式的音频（Audio Overview），和一份资讯图表（Infographic），将生成的测验以 Markdown 格式保存到项目根目录中，将生成的音频和资讯图表下载到项目根目录中。注意：测验、音频和资讯图表都要使用中文。
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;这个留给你作为作业，自己去体验。&lt;/p&gt;
@@ -731,23 +1529,58 @@ Claude Code就开始工作了。它先调用滴答清单的API，创建了一个
 &lt;p&gt;三个案例，从简单到复杂，核心就一句话：&lt;strong&gt;把「手动操作网页」变成「一句话指令」&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;以前用 NotebookLM：打开浏览器 → 登录 → 创建笔记本 → 一个一个上传文件 → 手动点生成 → 手动点导出。笔记多了以后，光管理笔记本就能把你耗死。&lt;/p&gt;
 &lt;p&gt;现在你只需要在 Obsidian 里敲一行自然语言，Claude Code 帮你跑完所有步骤。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/a40746dd7c4aef1a757eedac61ca79e9.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&amp;gt;&amp;gt;&amp;gt;&lt;strong&gt;延伸阅读&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/x4sm7GXpoUoIepKmtooKAw&quot;&gt;Obsidian CLI&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/kN-_KSwWkOlpZDXAURgcEA&quot;&gt;飞书lark-cli&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/SzknpTNdxzXLYvfw_VjW9w&quot;&gt;滴答清单Mcp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/XT5r6yFaXHa63T3Qg_Oi7w&quot;&gt;Agent-Reach最佳实践&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;p&gt;以上，既然看到这里了，如果觉得不错，随手&lt;strong&gt;点个赞、在看、转发&lt;/strong&gt;三连吧！想第一时间收到推送，可以给我个星标⭐️～&lt;/p&gt;
+&lt;p&gt;谢谢你看我的文章，我们，下次再见。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/%E6%9C%AA%E5%91%BD%E5%90%8D%E7%9A%84%E8%AE%BE%E8%AE%A1.webp&quot; alt=&quot;&quot; /&gt;
+&lt;em&gt;&amp;gt;/ 作者：大强同学&lt;/em&gt;
+&lt;em&gt;&amp;gt;/ 更多干货，请访问：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 </content:encoded></item><item><title>Deskflow键盘鼠标共享工具</title><link>https://dqtx.cc/posts/software/deskflow%E9%94%AE%E7%9B%98%E9%BC%A0%E6%A0%87%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%85%B7/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/deskflow%E9%94%AE%E7%9B%98%E9%BC%A0%E6%A0%87%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%85%B7/</guid><pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;多台电脑同时干活，桌上摆几套键鼠又占地方又割裂。最近找到一款&lt;strong&gt;Deskflow&lt;/strong&gt;软件，支持 Windows 和 macOS，一套键鼠就能控制多台设备，局域网即连即用。&lt;/p&gt;
-&lt;p&gt;鼠标移动到屏幕边缘自动滑到另一台电脑，就像多显示器一样自然。同时支持&lt;strong&gt;剪贴板共享&lt;/strong&gt;，在一台设备复制文字，另一台直接粘贴。&lt;/p&gt;
+&lt;p&gt;鼠标移动到屏幕边缘自动滑到另一台电脑，就像多显示器一样自然。同时支持&lt;strong&gt;剪贴板共享&lt;/strong&gt;，在一台设备复制文字、图片，另一台直接粘贴。&lt;/p&gt;
+&lt;p&gt;开源地址
+https://github.com/deskflow/deskflow/releases&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-deskflow-keyboard-sharing-20260529-202419.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;配置步骤&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;前置条件&lt;/strong&gt;：所有设备连在同一个局域网。&lt;/p&gt;
-&lt;p&gt;一、在&lt;strong&gt;常用键鼠的那台电脑&lt;/strong&gt;上，选择 默认项目，点启动。记下界面显示的 IP 地址。&lt;/p&gt;
+&lt;p&gt;一、在&lt;strong&gt;常用键鼠的那台电脑&lt;/strong&gt;上，选择 默认项目，点启动。记下界面显示的 IP 地址。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/1780123005581_d.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;二、在&lt;strong&gt;被控制的电脑&lt;/strong&gt;上，选择 第个项目 模式，输入刚才的 IP，点连接。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/2026-05-30-14-39.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;三、连接成功后，鼠标就能在两台设备间自由移动了，剪贴板也自动共享。&lt;/p&gt;
-&lt;h3&gt;下载&lt;/h3&gt;
-&lt;p&gt;链接：https://pan.xunlei.com/x/VOtVDBvm_M2lkqwih56aHFY8A1?pwd=25xa# 复制这段内容后打开「迅雷浏览器 App」即可获取。&lt;/p&gt;
+&lt;p&gt;注意  被控右边出 主控左边进
+如果你想上下移动，只需在主控配置服务器，将计算机显示器拖动到所需位置来配置布局。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/1780123261423_d.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Tips&lt;/em&gt;：若遇网络问题，可通过公众号：&lt;strong&gt;大强同学&lt;/strong&gt; 后台回复 &lt;strong&gt;Deskflow&lt;/strong&gt;，领取最新安装包下载地址。&lt;/p&gt;
 &lt;h3&gt;常见问题&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;连不上？&lt;/strong&gt; 两个检查点：&lt;/p&gt;
 &lt;ul&gt;
+&lt;li&gt;确保两个计算机名字不要唯一&lt;/li&gt;
 &lt;li&gt;关闭防火墙试试&lt;/li&gt;
-&lt;li&gt;在设置 → 首选项里关闭 TLS 加密&lt;/li&gt;
+&lt;li&gt;在编译 → 首选项里关闭 TLS 加密&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;工具自带简体中文，在高级设置里切换，mac 版也一样，唯一的短板是不支持文件拖拽传输，但这属于锦上添花，日常操作已经够用了。&lt;/p&gt;
+&lt;p&gt;工具自带简体中文，在编辑-首选项-高级-语言，唯一的短板是不支持文件拖拽传输，但这属于锦上添花，日常操作已经够用了。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&amp;gt;&amp;gt;&amp;gt;&lt;strong&gt;延伸阅读&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/Pb6wnycAxgDxZmvj4cfx9Q&quot;&gt;1套键盘鼠标控制2台电脑&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/YuyO7YIVx4XkCgxjaBJ22Q&quot;&gt;MFCMouseEffect鼠标映射&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;p&gt;以上，既然看到这里了，如果觉得不错，随手&lt;strong&gt;点个赞、在看、转发&lt;/strong&gt;三连吧！想第一时间收到推送，可以给我个星标⭐️～&lt;/p&gt;
+&lt;p&gt;谢谢你看我的文章，我们，下次再见。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/%E6%9C%AA%E5%91%BD%E5%90%8D%E7%9A%84%E8%AE%BE%E8%AE%A1.webp&quot; alt=&quot;&quot; /&gt;
+&lt;em&gt;&amp;gt;/ 作者：大强同学&lt;/em&gt;
+&lt;em&gt;&amp;gt;/ 更多干货，请访问：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;参考教程&lt;/strong&gt;
+https://www.cnblogs.com/zjw-blog/p/18930736&lt;/p&gt;
 </content:encoded></item><item><title>微信内容同步到Obsidian方案</title><link>https://dqtx.cc/posts/software/%E5%BE%AE%E4%BF%A1%E5%86%85%E5%AE%B9%E5%90%8C%E6%AD%A5obsidian/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E5%BE%AE%E4%BF%A1%E5%86%85%E5%AE%B9%E5%90%8C%E6%AD%A5obsidian/</guid><pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;微信里看到的好文章、一闪而过的灵感、随手录的语音备忘——怎么快速存进 Obsidian？本文介绍两种实测可用的同步方案。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-wechat-obsidian-20260526-174500.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;方案一：笔记同步助手&lt;/h3&gt;
@@ -958,6 +1791,48 @@ SORT readingTime DESC
 &lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/%E6%9C%AA%E5%91%BD%E5%90%8D%E7%9A%84%E8%AE%BE%E8%AE%A1.webp&quot; alt=&quot;&quot; /&gt;
 &lt;em&gt;&amp;gt;/ 作者：大强同学&lt;/em&gt;
 &lt;em&gt;&amp;gt;/ 更多干货，请访问：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+</content:encoded></item><item><title>Obsidian插件Terminal配置</title><link>https://dqtx.cc/posts/software/obsidian%E6%8F%92%E4%BB%B6terminal%E9%85%8D%E7%BD%AE/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/obsidian%E6%8F%92%E4%BB%B6terminal%E9%85%8D%E7%BD%AE/</guid><pubDate>Sun, 24 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;打开 Obsidian 设置，进入「Terminal」插件的「配置」页面。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;选择任意兼容预设，点击「编辑」，命名为「PowerShell 整合式」，前置选择「powershell: 整合式」。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260524152702768.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;点击「参数」前的加号，添加参数 &lt;code&gt;-NoLogo&lt;/code&gt;；将默认 &lt;code&gt;python3&lt;/code&gt; 替换为系统真实 Python 路径。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;-NoLogo
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;C:\Users\Administrator\AppData\Local\Programs\Python\Python314\python.exe
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;点击「检查」验证配置，若提示依赖异常，按提示安装/升级对应依赖。
+我这边报错了所以需要安装两个依赖包。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;pip install psutil&amp;gt;=5.9.5 pywinctl&amp;gt;=0.0.50
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;返回设置页面，将该配置设为默认，重启 Obsidian 后即可正常使用终端。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/a40746dd7c4aef1a757eedac61ca79e9.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/8kCbGmeXvB7cuJZGHaCdkw&quot;&gt;19 个 Obsidian 神仙插件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/2eqmgz77JXHaYgL6-TWBdA&quot;&gt;一键把 Get 笔记同步到 Obsidian&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/24oTrC1tttUs18Qv7cRwRQ&quot;&gt;Obsidian同步Notion最佳实践&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/LvxZCJG99fzyYbgmDJ73fA&quot;&gt;Dataview与Templater插件联动&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/kPjIpHmzciWY8_3ettEVsg&quot;&gt;Obsidian日记半自动化&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/lgdJ7DYSqRIS1b13QQnk3A&quot;&gt;Obsidian附件图片管理插件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/45pUXcmcifTzTcdrlrTWHQ&quot;&gt;Obsidian插件LinkStowr最佳实践&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/pdbv5g8wGVga9z4n52homw&quot;&gt;Obsidian的插件Claudian报错&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/9qTRLHvoNQKUF2Ac2iVRvA&quot;&gt;Karpathy 的 LLM Wiki最佳实践&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/4SEsM-AWoEhPXiD49oNB9g&quot;&gt;Obsidian推送微信插件配置CF Worker代理方案&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;以上，既然看到这里了，如果觉得不错，随手点个赞、在看、转发三连吧，如果想第一时间收到推送，也可以给我个星标⭐️～&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;谢谢你看我的文章，我们，下次再见。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&amp;gt;/ 作者：大强同学&lt;/em&gt;
+&lt;em&gt;&amp;gt;/ 更多干货，请访问：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 </content:encoded></item><item><title>Obsidian+Git备份指南</title><link>https://dqtx.cc/posts/software/obsidian--git-%E5%A4%87%E4%BB%BD%E5%85%A8%E6%B5%81%E7%A8%8B%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/obsidian--git-%E5%A4%87%E4%BB%BD%E5%85%A8%E6%B5%81%E7%A8%8B%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/</guid><pubDate>Sun, 24 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Obsidian 的核心价值在于「本地优先」——你的笔记数据完全归你所有。但「本地优先」也意味着你需要自己兜底数据安全：写了几百天的笔记，可能因为一次硬盘故障、误删、代码翻车甚至电脑丢失就全部消失。&lt;/p&gt;
 &lt;p&gt;而这套 Git 备份方案，用不到 15 分钟就能让你的知识库拥有：&lt;strong&gt;定时自动备份 + 完整历史版本控制 + 免费远程存储&lt;/strong&gt;。电脑坏了就换新电脑，一条 &lt;code&gt;git clone&lt;/code&gt; 就能完整恢复——不需要额外付费，不需要复杂操作，一次配置终身受用。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-obsidian-git-backup-20260524-195651.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -1047,48 +1922,6 @@ SORT readingTime DESC
 &lt;p&gt;以上，既然看到这里了，如果觉得不错，随手&lt;strong&gt;点个赞、在看、转发&lt;/strong&gt;三连吧，如果想第一时间收到推送，也可以给我个星标⭐️～&lt;/p&gt;
 &lt;p&gt;谢谢你看我的文章，我们，下次再见。
 &lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/%E6%9C%AA%E5%91%BD%E5%90%8D%E7%9A%84%E8%AE%BE%E8%AE%A1.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&amp;gt;/ 作者：大强同学&lt;/em&gt;
-&lt;em&gt;&amp;gt;/ 更多干货，请访问：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-</content:encoded></item><item><title>Obsidian插件Terminal配置</title><link>https://dqtx.cc/posts/software/obsidian%E6%8F%92%E4%BB%B6terminal%E9%85%8D%E7%BD%AE/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/obsidian%E6%8F%92%E4%BB%B6terminal%E9%85%8D%E7%BD%AE/</guid><pubDate>Sun, 24 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;打开 Obsidian 设置，进入「Terminal」插件的「配置」页面。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;选择任意兼容预设，点击「编辑」，命名为「PowerShell 整合式」，前置选择「powershell: 整合式」。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260524152702768.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;点击「参数」前的加号，添加参数 &lt;code&gt;-NoLogo&lt;/code&gt;；将默认 &lt;code&gt;python3&lt;/code&gt; 替换为系统真实 Python 路径。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;-NoLogo
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;C:\Users\Administrator\AppData\Local\Programs\Python\Python314\python.exe
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol&gt;
-&lt;li&gt;点击「检查」验证配置，若提示依赖异常，按提示安装/升级对应依赖。
-我这边报错了所以需要安装两个依赖包。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;pip install psutil&amp;gt;=5.9.5 pywinctl&amp;gt;=0.0.50
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol&gt;
-&lt;li&gt;返回设置页面，将该配置设为默认，重启 Obsidian 后即可正常使用终端。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/a40746dd7c4aef1a757eedac61ca79e9.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/8kCbGmeXvB7cuJZGHaCdkw&quot;&gt;19 个 Obsidian 神仙插件&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/2eqmgz77JXHaYgL6-TWBdA&quot;&gt;一键把 Get 笔记同步到 Obsidian&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/24oTrC1tttUs18Qv7cRwRQ&quot;&gt;Obsidian同步Notion最佳实践&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/LvxZCJG99fzyYbgmDJ73fA&quot;&gt;Dataview与Templater插件联动&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/kPjIpHmzciWY8_3ettEVsg&quot;&gt;Obsidian日记半自动化&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/lgdJ7DYSqRIS1b13QQnk3A&quot;&gt;Obsidian附件图片管理插件&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/45pUXcmcifTzTcdrlrTWHQ&quot;&gt;Obsidian插件LinkStowr最佳实践&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/pdbv5g8wGVga9z4n52homw&quot;&gt;Obsidian的插件Claudian报错&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/9qTRLHvoNQKUF2Ac2iVRvA&quot;&gt;Karpathy 的 LLM Wiki最佳实践&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/4SEsM-AWoEhPXiD49oNB9g&quot;&gt;Obsidian推送微信插件配置CF Worker代理方案&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;以上，既然看到这里了，如果觉得不错，随手点个赞、在看、转发三连吧，如果想第一时间收到推送，也可以给我个星标⭐️～&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;谢谢你看我的文章，我们，下次再见。&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&amp;gt;/ 作者：大强同学&lt;/em&gt;
 &lt;em&gt;&amp;gt;/ 更多干货，请访问：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 </content:encoded></item><item><title>右键菜单管理工具</title><link>https://dqtx.cc/posts/software/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E7%AE%A1%E7%90%86/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E7%AE%A1%E7%90%86/</guid><pubDate>Sun, 24 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你有没有遇到过，装了一批软件之后，右键菜单突然多了十几个不知道从哪来的选项？&lt;/p&gt;
@@ -4445,6 +5278,21 @@ curl -o ~/.claude/CLAUDE.md \
 &lt;p&gt;Karpathy 的核心洞察就一句话：&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;别告诉 AI 怎么做，告诉它什么算做完，然后放手让它跑。&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
+</content:encoded></item><item><title>一个信息追踪 Python 脚本</title><link>https://dqtx.cc/posts/technical/%E4%B8%80%E4%B8%AA%E4%BF%A1%E6%81%AF%E8%BF%BD%E8%B8%AA-python-%E8%84%9A%E6%9C%AC/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E4%B8%80%E4%B8%AA%E4%BF%A1%E6%81%AF%E8%BF%BD%E8%B8%AA-python-%E8%84%9A%E6%9C%AC/</guid><pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这个开源项目，你丢一个名字/手机号/IP给它，得到关联的社交媒体账号、归属地、地理位置信息。&lt;/p&gt;
+&lt;p&gt;在 GitHub 已获取 11.8k star。
+项目地址
+https://github.com/HunxByts/GhostTrack&lt;/p&gt;
+&lt;p&gt;仅仅一个 Python 脚本，用来做 IP / 手机号 / 用户名的基础 OSINT 信息收集。&lt;/p&gt;
+&lt;p&gt;三个模块，覆盖常见情报场景：&lt;/p&gt;
+&lt;p&gt;IP Tracker：输入目标 IP，可获取基础地理位置信息，也可以结合 Seeker 等工具做进一步关联分析（例如辅助反查真实 IP）
+Phone Tracker：手机号归属地、运营商信息查询，属于 OSINT 中很常见的基础能力
+Username Tracker：输入用户名，跨多个平台搜索公开账号信息，把分散的社交媒体痕迹拼接起来&lt;/p&gt;
+&lt;p&gt;适合人群：&lt;/p&gt;
+&lt;p&gt;做渗透测试前期信息收集的安全工程师
+学习 OSINT 方法论的安全方向学生
+CTF 比赛中需要快速做信息侦察的选手
+对信息安全和数据关联分析感兴趣的开发者&lt;/p&gt;
+&lt;p&gt;⚠️ 需要强调：该工具仅用于合法授权的安全研究与学习用途，禁止用于任何未经授权的个人追踪或隐私侵犯行为。&lt;/p&gt;
 </content:encoded></item><item><title>ShareX截屏录屏教程！</title><link>https://dqtx.cc/posts/software/sharex/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/sharex/</guid><pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;关闭通知&lt;/h3&gt;
 &lt;p&gt;位置：动作设置→通知
 建议把“任务完成后显示短暂通知”取消打勾
@@ -4473,21 +5321,6 @@ https://mp.weixin.qq.com/s/npeJO3MccOCS0QSTIWYefw
 https://utgd.net/article/20685
 一个软件，满足你所有的截图需求：ShareX
 https://sspai.com/post/43937&lt;/p&gt;
-</content:encoded></item><item><title>一个信息追踪 Python 脚本</title><link>https://dqtx.cc/posts/technical/%E4%B8%80%E4%B8%AA%E4%BF%A1%E6%81%AF%E8%BF%BD%E8%B8%AA-python-%E8%84%9A%E6%9C%AC/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E4%B8%80%E4%B8%AA%E4%BF%A1%E6%81%AF%E8%BF%BD%E8%B8%AA-python-%E8%84%9A%E6%9C%AC/</guid><pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这个开源项目，你丢一个名字/手机号/IP给它，得到关联的社交媒体账号、归属地、地理位置信息。&lt;/p&gt;
-&lt;p&gt;在 GitHub 已获取 11.8k star。
-项目地址
-https://github.com/HunxByts/GhostTrack&lt;/p&gt;
-&lt;p&gt;仅仅一个 Python 脚本，用来做 IP / 手机号 / 用户名的基础 OSINT 信息收集。&lt;/p&gt;
-&lt;p&gt;三个模块，覆盖常见情报场景：&lt;/p&gt;
-&lt;p&gt;IP Tracker：输入目标 IP，可获取基础地理位置信息，也可以结合 Seeker 等工具做进一步关联分析（例如辅助反查真实 IP）
-Phone Tracker：手机号归属地、运营商信息查询，属于 OSINT 中很常见的基础能力
-Username Tracker：输入用户名，跨多个平台搜索公开账号信息，把分散的社交媒体痕迹拼接起来&lt;/p&gt;
-&lt;p&gt;适合人群：&lt;/p&gt;
-&lt;p&gt;做渗透测试前期信息收集的安全工程师
-学习 OSINT 方法论的安全方向学生
-CTF 比赛中需要快速做信息侦察的选手
-对信息安全和数据关联分析感兴趣的开发者&lt;/p&gt;
-&lt;p&gt;⚠️ 需要强调：该工具仅用于合法授权的安全研究与学习用途，禁止用于任何未经授权的个人追踪或隐私侵犯行为。&lt;/p&gt;
 </content:encoded></item><item><title>Xiaomi MiMo百万亿 Token 激励计划</title><link>https://dqtx.cc/posts/aihacks/xiaomi-mimo%E7%99%BE%E4%B8%87%E4%BA%BFtoken/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/xiaomi-mimo%E7%99%BE%E4%B8%87%E4%BA%BFtoken/</guid><pubDate>Wed, 29 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Xiaomi MiMo 将面向全球 AI 用户进行免费 Token 发放，我们将在 30 天内发放总计 100 万亿（100T） Token 权益，赠完即止。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260429164836641.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;活动说明&lt;/h3&gt;
