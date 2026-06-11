@@ -20,5 +20,5 @@ last_updated: 2026-05-27
 
 - [[Step-Plan]] — 阶跃星辰 Coding Plan 实体
 - [[CC-Switch]] — API 桥接工具
-- [[Codex]] — OpenAI 编程 Agent
+- [[../../ZEN交付/Codex插件界面补丁]] — OpenAI 编程 Agent
 - [[Coding-Plan-选型方法论]] — 模型选型策略

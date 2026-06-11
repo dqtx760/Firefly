@@ -1,5 +1,5 @@
 ---
-title: Anthropic自己慌了
+title: Anthropic：当 AI 开始构建自身
 published: 2026-06-05
 tags:
   - ai

@@ -5,6 +5,11 @@ https://pay.ldxp.cn/shop/2425
 取号
 https://getcodex.nnai.uk/
 
+codex-XHQP-7C92-RN4L
+
+plus-5F6Q-M6JW-4E83
+plus-5F6Q-M6JW-4E83
+
 ```
 另外，为了安全起见，建议马上去做：
 

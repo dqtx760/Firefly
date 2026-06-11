@@ -22,7 +22,10 @@
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/a40746dd7c4aef1a757eedac61ca79e9.webp)
 
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/未命名的设计（2）.webp)
-
+```
+如需远程协助，可通过向日葵或 ToDesk 远程处理。加**维信dqtx33**  
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/0beb8bef640f4e87d2d2cdc56be71bfa.webp)
+```
 ### 参照1
 **PS.**
 

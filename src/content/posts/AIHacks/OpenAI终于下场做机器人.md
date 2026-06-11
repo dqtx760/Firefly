@@ -1,5 +1,5 @@
 ---
-title: OpenAI终于下场做机器人，ChatGPT的下一站不是聊天，而是现实世界
+title: OpenAI终于下场做机器人了！
 published: 2026-06-01
 tags:
   - openai
