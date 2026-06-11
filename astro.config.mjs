@@ -261,6 +261,7 @@ export default defineConfig({
 		],
 	},
 	vite: {
+		assetsInclude: ["**/*.amr"],
 		plugins: [
 			{
 				name: "ignore-canvas-and-attachments",
