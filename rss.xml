@@ -489,6 +489,39 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/tech-shrimp&quot;&gt;tech-shrimp&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>Agnes 免费 API 接入 Codex 指南</title><link>https://dqtx.cc/posts/aihacks/agnes%E5%85%8D%E8%B4%B9api%E6%8E%A5%E5%85%A5codex/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/agnes%E5%85%8D%E8%B4%B9api%E6%8E%A5%E5%85%A5codex/</guid><pubDate>Sat, 13 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;近期Codex翻车踩了个大坑：接入DeepSeek国产模型后，基础对话、编程功能一切正常，但硬性bug无法规避——&lt;strong&gt;不支持图像与视频生成&lt;/strong&gt;。对于需要一站式创作的创作者来说，这个缺陷几乎无法接受。&lt;/p&gt;
+&lt;p&gt;所幸我偶然发现了一款神仙免费API：Agnes 2.0 Flash。功能全面碾压同类接口，同时支持对话、AI生图、AI生视频，无任何付费门槛，实测稳定性、生成质量双在线，直接替代残缺版Codex。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-agnes-codex-20260613-183633.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;四步接 Codex++&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;一、注册拿 Key&lt;/strong&gt;
+打开 &lt;a href=&quot;https://agnes-ai.com&quot;&gt;agnes-ai.com&lt;/a&gt;，用 Google/GitHub 登录，左侧菜单「API 密钥」→ 创建新密钥。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260613172153682.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;二、安装 Codex++&lt;/strong&gt;
+https://github.com/BigPizzaV3/CodexPlusPlus/releases/latest
+对应系统版本安装。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260613180554472.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;三、配置供应商&lt;/strong&gt;
+Codex++ 管理工具 → 供应商配置 → 添加供应商：&lt;/p&gt;
+&lt;p&gt;保存 → 设为使用 → 重启。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260613181219768.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;四、安装生图/生视频 Skill&lt;/strong&gt;
+装这个 https://github.com/Yacey/agnes-ai-generation-skill
+实现模型自动路由。装好后在 Codex 里就能直接对话、生图、生视频。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260613182312484.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;开始使用&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;使用 Agnes 帮我生成一张高信息密度的未来城市图片。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;使用 Agnes 创建图片 一个可爱Q版的硅胶护腕托，外形基于【🐼】表情，采用柔软的食品级硅胶材质，表面为亲肤哑光质感，内部填充慢回弹棉，拟人化卡通风格，表情生动，双手张开趴在桌面上，呈现出拥抱手腕的姿势，整体造型圆润软萌，颜色为【🐼】配色，风格治愈可爱，适合办公使用，背景为白色纯色，柔和布光，产品摄影风格，前视角或45度俯视，高清细节，突出硅胶质感与舒适功能
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;使用 Agnes 把这张图片生成一段电影感视频。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260614190638233.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;不过这个有技能也有点点问题，一次对话生成任务完成后，在同一个对话框里进行任务是不行的，只是玩一下哈！&lt;/p&gt;
+&lt;p&gt;以上，既然看到这里了，如果觉得不错，随手&lt;strong&gt;点个赞、在看、转发&lt;/strong&gt;三连吧！想第一时间收到推送，可以给我个星标⭐️～&lt;/p&gt;
+&lt;p&gt;谢谢你看我的文章，我们，下次再见。&lt;/p&gt;
+&lt;p&gt;如需远程协助，可通过向日葵或 ToDesk 远程处理。加&lt;strong&gt;维信dqtx33&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&amp;gt;/ 作者：大强同学&lt;/em&gt;
+&lt;em&gt;&amp;gt;/ 更多干货，请访问：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 </content:encoded></item><item><title>MiMo Code 2.5 限免中</title><link>https://dqtx.cc/posts/aihacks/mimo-code-25-%E9%99%90%E5%85%8D/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/mimo-code-25-%E9%99%90%E5%85%8D/</guid><pubDate>Thu, 11 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;小米的 MiMo Code 2.5 目前 &lt;strong&gt;限时免费&lt;/strong&gt; 中，开启 MiMo Auto 模式就能零配置匿名使用，不需要绑 API Key，适合尝鲜。&lt;/p&gt;
 &lt;p&gt;项目地址：
 https://github.com/XiaomiMiMo/MiMo-Code&lt;/p&gt;
@@ -895,7 +928,7 @@ github.com/eze-is/web-access&lt;/li&gt;
 &lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/%E6%9C%AA%E5%91%BD%E5%90%8D%E7%9A%84%E8%AE%BE%E8%AE%A1.webp&quot; alt=&quot;&quot; /&gt;
 &lt;em&gt;&amp;gt;/ 作者：大强同学&lt;/em&gt;
 &lt;em&gt;&amp;gt;/ 更多干货，请访问：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-</content:encoded></item><item><title>ChatGPT Plus 现在可以当 Python 库来调用</title><link>https://dqtx.cc/posts/aihacks/codex-python-sdk/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/codex-python-sdk/</guid><pubDate>Thu, 04 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;昨天 OpenAI 悄悄发了个Python SDK，没上热搜，但我看到之后直接愣住了。&lt;/p&gt;
+</content:encoded></item><item><title>OpenAI 悄悄发了个Python SDK</title><link>https://dqtx.cc/posts/aihacks/codex-python-sdk/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/codex-python-sdk/</guid><pubDate>Thu, 04 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;昨天 OpenAI 悄悄发了个Python SDK，没上热搜，但我看到之后直接愣住了。&lt;/p&gt;
 &lt;p&gt;你花 20 美元/月的 ChatGPT Plus，突然能干一件之前干不了的事。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-ai-one-line-20260604-230136.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;一句话说清楚：ChatGPT Plus 现在可以当 Python 库来调用了。&lt;/strong&gt;&lt;/p&gt;
@@ -1791,48 +1824,6 @@ SORT readingTime DESC
 &lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/%E6%9C%AA%E5%91%BD%E5%90%8D%E7%9A%84%E8%AE%BE%E8%AE%A1.webp&quot; alt=&quot;&quot; /&gt;
 &lt;em&gt;&amp;gt;/ 作者：大强同学&lt;/em&gt;
 &lt;em&gt;&amp;gt;/ 更多干货，请访问：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-</content:encoded></item><item><title>Obsidian插件Terminal配置</title><link>https://dqtx.cc/posts/software/obsidian%E6%8F%92%E4%BB%B6terminal%E9%85%8D%E7%BD%AE/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/obsidian%E6%8F%92%E4%BB%B6terminal%E9%85%8D%E7%BD%AE/</guid><pubDate>Sun, 24 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;打开 Obsidian 设置，进入「Terminal」插件的「配置」页面。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;选择任意兼容预设，点击「编辑」，命名为「PowerShell 整合式」，前置选择「powershell: 整合式」。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260524152702768.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;点击「参数」前的加号，添加参数 &lt;code&gt;-NoLogo&lt;/code&gt;；将默认 &lt;code&gt;python3&lt;/code&gt; 替换为系统真实 Python 路径。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;-NoLogo
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;C:\Users\Administrator\AppData\Local\Programs\Python\Python314\python.exe
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol&gt;
-&lt;li&gt;点击「检查」验证配置，若提示依赖异常，按提示安装/升级对应依赖。
-我这边报错了所以需要安装两个依赖包。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;pip install psutil&amp;gt;=5.9.5 pywinctl&amp;gt;=0.0.50
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol&gt;
-&lt;li&gt;返回设置页面，将该配置设为默认，重启 Obsidian 后即可正常使用终端。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/a40746dd7c4aef1a757eedac61ca79e9.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/8kCbGmeXvB7cuJZGHaCdkw&quot;&gt;19 个 Obsidian 神仙插件&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/2eqmgz77JXHaYgL6-TWBdA&quot;&gt;一键把 Get 笔记同步到 Obsidian&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/24oTrC1tttUs18Qv7cRwRQ&quot;&gt;Obsidian同步Notion最佳实践&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/LvxZCJG99fzyYbgmDJ73fA&quot;&gt;Dataview与Templater插件联动&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/kPjIpHmzciWY8_3ettEVsg&quot;&gt;Obsidian日记半自动化&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/lgdJ7DYSqRIS1b13QQnk3A&quot;&gt;Obsidian附件图片管理插件&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/45pUXcmcifTzTcdrlrTWHQ&quot;&gt;Obsidian插件LinkStowr最佳实践&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/pdbv5g8wGVga9z4n52homw&quot;&gt;Obsidian的插件Claudian报错&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/9qTRLHvoNQKUF2Ac2iVRvA&quot;&gt;Karpathy 的 LLM Wiki最佳实践&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/4SEsM-AWoEhPXiD49oNB9g&quot;&gt;Obsidian推送微信插件配置CF Worker代理方案&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;以上，既然看到这里了，如果觉得不错，随手点个赞、在看、转发三连吧，如果想第一时间收到推送，也可以给我个星标⭐️～&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;谢谢你看我的文章，我们，下次再见。&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&amp;gt;/ 作者：大强同学&lt;/em&gt;
-&lt;em&gt;&amp;gt;/ 更多干货，请访问：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 </content:encoded></item><item><title>Obsidian+Git备份指南</title><link>https://dqtx.cc/posts/software/obsidian--git-%E5%A4%87%E4%BB%BD%E5%85%A8%E6%B5%81%E7%A8%8B%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/obsidian--git-%E5%A4%87%E4%BB%BD%E5%85%A8%E6%B5%81%E7%A8%8B%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/</guid><pubDate>Sun, 24 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Obsidian 的核心价值在于「本地优先」——你的笔记数据完全归你所有。但「本地优先」也意味着你需要自己兜底数据安全：写了几百天的笔记，可能因为一次硬盘故障、误删、代码翻车甚至电脑丢失就全部消失。&lt;/p&gt;
 &lt;p&gt;而这套 Git 备份方案，用不到 15 分钟就能让你的知识库拥有：&lt;strong&gt;定时自动备份 + 完整历史版本控制 + 免费远程存储&lt;/strong&gt;。电脑坏了就换新电脑，一条 &lt;code&gt;git clone&lt;/code&gt; 就能完整恢复——不需要额外付费，不需要复杂操作，一次配置终身受用。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-obsidian-git-backup-20260524-195651.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -1922,6 +1913,48 @@ SORT readingTime DESC
 &lt;p&gt;以上，既然看到这里了，如果觉得不错，随手&lt;strong&gt;点个赞、在看、转发&lt;/strong&gt;三连吧，如果想第一时间收到推送，也可以给我个星标⭐️～&lt;/p&gt;
 &lt;p&gt;谢谢你看我的文章，我们，下次再见。
 &lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/%E6%9C%AA%E5%91%BD%E5%90%8D%E7%9A%84%E8%AE%BE%E8%AE%A1.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&amp;gt;/ 作者：大强同学&lt;/em&gt;
+&lt;em&gt;&amp;gt;/ 更多干货，请访问：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+</content:encoded></item><item><title>Obsidian插件Terminal配置</title><link>https://dqtx.cc/posts/software/obsidian%E6%8F%92%E4%BB%B6terminal%E9%85%8D%E7%BD%AE/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/obsidian%E6%8F%92%E4%BB%B6terminal%E9%85%8D%E7%BD%AE/</guid><pubDate>Sun, 24 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;打开 Obsidian 设置，进入「Terminal」插件的「配置」页面。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;选择任意兼容预设，点击「编辑」，命名为「PowerShell 整合式」，前置选择「powershell: 整合式」。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260524152702768.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;点击「参数」前的加号，添加参数 &lt;code&gt;-NoLogo&lt;/code&gt;；将默认 &lt;code&gt;python3&lt;/code&gt; 替换为系统真实 Python 路径。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;-NoLogo
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;C:\Users\Administrator\AppData\Local\Programs\Python\Python314\python.exe
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;点击「检查」验证配置，若提示依赖异常，按提示安装/升级对应依赖。
+我这边报错了所以需要安装两个依赖包。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;pip install psutil&amp;gt;=5.9.5 pywinctl&amp;gt;=0.0.50
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;返回设置页面，将该配置设为默认，重启 Obsidian 后即可正常使用终端。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/a40746dd7c4aef1a757eedac61ca79e9.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/8kCbGmeXvB7cuJZGHaCdkw&quot;&gt;19 个 Obsidian 神仙插件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/2eqmgz77JXHaYgL6-TWBdA&quot;&gt;一键把 Get 笔记同步到 Obsidian&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/24oTrC1tttUs18Qv7cRwRQ&quot;&gt;Obsidian同步Notion最佳实践&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/LvxZCJG99fzyYbgmDJ73fA&quot;&gt;Dataview与Templater插件联动&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/kPjIpHmzciWY8_3ettEVsg&quot;&gt;Obsidian日记半自动化&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/lgdJ7DYSqRIS1b13QQnk3A&quot;&gt;Obsidian附件图片管理插件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/45pUXcmcifTzTcdrlrTWHQ&quot;&gt;Obsidian插件LinkStowr最佳实践&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/pdbv5g8wGVga9z4n52homw&quot;&gt;Obsidian的插件Claudian报错&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/9qTRLHvoNQKUF2Ac2iVRvA&quot;&gt;Karpathy 的 LLM Wiki最佳实践&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/4SEsM-AWoEhPXiD49oNB9g&quot;&gt;Obsidian推送微信插件配置CF Worker代理方案&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;以上，既然看到这里了，如果觉得不错，随手点个赞、在看、转发三连吧，如果想第一时间收到推送，也可以给我个星标⭐️～&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;谢谢你看我的文章，我们，下次再见。&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;&amp;gt;/ 作者：大强同学&lt;/em&gt;
 &lt;em&gt;&amp;gt;/ 更多干货，请访问：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 </content:encoded></item><item><title>右键菜单管理工具</title><link>https://dqtx.cc/posts/software/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E7%AE%A1%E7%90%86/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E7%AE%A1%E7%90%86/</guid><pubDate>Sun, 24 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你有没有遇到过，装了一批软件之后，右键菜单突然多了十几个不知道从哪来的选项？&lt;/p&gt;
@@ -5278,21 +5311,6 @@ curl -o ~/.claude/CLAUDE.md \
 &lt;p&gt;Karpathy 的核心洞察就一句话：&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;别告诉 AI 怎么做，告诉它什么算做完，然后放手让它跑。&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-</content:encoded></item><item><title>一个信息追踪 Python 脚本</title><link>https://dqtx.cc/posts/technical/%E4%B8%80%E4%B8%AA%E4%BF%A1%E6%81%AF%E8%BF%BD%E8%B8%AA-python-%E8%84%9A%E6%9C%AC/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E4%B8%80%E4%B8%AA%E4%BF%A1%E6%81%AF%E8%BF%BD%E8%B8%AA-python-%E8%84%9A%E6%9C%AC/</guid><pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这个开源项目，你丢一个名字/手机号/IP给它，得到关联的社交媒体账号、归属地、地理位置信息。&lt;/p&gt;
-&lt;p&gt;在 GitHub 已获取 11.8k star。
-项目地址
-https://github.com/HunxByts/GhostTrack&lt;/p&gt;
-&lt;p&gt;仅仅一个 Python 脚本，用来做 IP / 手机号 / 用户名的基础 OSINT 信息收集。&lt;/p&gt;
-&lt;p&gt;三个模块，覆盖常见情报场景：&lt;/p&gt;
-&lt;p&gt;IP Tracker：输入目标 IP，可获取基础地理位置信息，也可以结合 Seeker 等工具做进一步关联分析（例如辅助反查真实 IP）
-Phone Tracker：手机号归属地、运营商信息查询，属于 OSINT 中很常见的基础能力
-Username Tracker：输入用户名，跨多个平台搜索公开账号信息，把分散的社交媒体痕迹拼接起来&lt;/p&gt;
-&lt;p&gt;适合人群：&lt;/p&gt;
-&lt;p&gt;做渗透测试前期信息收集的安全工程师
-学习 OSINT 方法论的安全方向学生
-CTF 比赛中需要快速做信息侦察的选手
-对信息安全和数据关联分析感兴趣的开发者&lt;/p&gt;
-&lt;p&gt;⚠️ 需要强调：该工具仅用于合法授权的安全研究与学习用途，禁止用于任何未经授权的个人追踪或隐私侵犯行为。&lt;/p&gt;
 </content:encoded></item><item><title>ShareX截屏录屏教程！</title><link>https://dqtx.cc/posts/software/sharex/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/sharex/</guid><pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;关闭通知&lt;/h3&gt;
 &lt;p&gt;位置：动作设置→通知
 建议把“任务完成后显示短暂通知”取消打勾
@@ -5321,6 +5339,21 @@ https://mp.weixin.qq.com/s/npeJO3MccOCS0QSTIWYefw
 https://utgd.net/article/20685
 一个软件，满足你所有的截图需求：ShareX
 https://sspai.com/post/43937&lt;/p&gt;
+</content:encoded></item><item><title>一个信息追踪 Python 脚本</title><link>https://dqtx.cc/posts/technical/%E4%B8%80%E4%B8%AA%E4%BF%A1%E6%81%AF%E8%BF%BD%E8%B8%AA-python-%E8%84%9A%E6%9C%AC/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E4%B8%80%E4%B8%AA%E4%BF%A1%E6%81%AF%E8%BF%BD%E8%B8%AA-python-%E8%84%9A%E6%9C%AC/</guid><pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这个开源项目，你丢一个名字/手机号/IP给它，得到关联的社交媒体账号、归属地、地理位置信息。&lt;/p&gt;
+&lt;p&gt;在 GitHub 已获取 11.8k star。
+项目地址
+https://github.com/HunxByts/GhostTrack&lt;/p&gt;
+&lt;p&gt;仅仅一个 Python 脚本，用来做 IP / 手机号 / 用户名的基础 OSINT 信息收集。&lt;/p&gt;
+&lt;p&gt;三个模块，覆盖常见情报场景：&lt;/p&gt;
+&lt;p&gt;IP Tracker：输入目标 IP，可获取基础地理位置信息，也可以结合 Seeker 等工具做进一步关联分析（例如辅助反查真实 IP）
+Phone Tracker：手机号归属地、运营商信息查询，属于 OSINT 中很常见的基础能力
+Username Tracker：输入用户名，跨多个平台搜索公开账号信息，把分散的社交媒体痕迹拼接起来&lt;/p&gt;
+&lt;p&gt;适合人群：&lt;/p&gt;
+&lt;p&gt;做渗透测试前期信息收集的安全工程师
+学习 OSINT 方法论的安全方向学生
+CTF 比赛中需要快速做信息侦察的选手
+对信息安全和数据关联分析感兴趣的开发者&lt;/p&gt;
+&lt;p&gt;⚠️ 需要强调：该工具仅用于合法授权的安全研究与学习用途，禁止用于任何未经授权的个人追踪或隐私侵犯行为。&lt;/p&gt;
 </content:encoded></item><item><title>Xiaomi MiMo百万亿 Token 激励计划</title><link>https://dqtx.cc/posts/aihacks/xiaomi-mimo%E7%99%BE%E4%B8%87%E4%BA%BFtoken/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/xiaomi-mimo%E7%99%BE%E4%B8%87%E4%BA%BFtoken/</guid><pubDate>Wed, 29 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Xiaomi MiMo 将面向全球 AI 用户进行免费 Token 发放，我们将在 30 天内发放总计 100 万亿（100T） Token 权益，赠完即止。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260429164836641.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;活动说明&lt;/h3&gt;
