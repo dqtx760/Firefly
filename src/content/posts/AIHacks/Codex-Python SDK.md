@@ -1,5 +1,5 @@
 ---
-title: ChatGPT Plus 现在可以当 Python 库来调用
+title: OpenAI 悄悄发了个Python SDK
 published: 2026-06-04
 tags: []
 category: AIHacks
@@ -7,7 +7,6 @@ draft: false
 pinned: false
 image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260604225624259.webp
 ---
-
 昨天 OpenAI 悄悄发了个Python SDK，没上热搜，但我看到之后直接愣住了。
 
 你花 20 美元/月的 ChatGPT Plus，突然能干一件之前干不了的事。

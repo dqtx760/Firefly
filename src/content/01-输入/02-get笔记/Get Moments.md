@@ -1,12 +1,12 @@
 ---
-createdDate: 2026/6/4
+createdDate: 2026/6/12
 tags:
-  - "录音笔记"
-  - "Claude_Code"
-  - "AI大模型"
-  - "GPT"
+  - "AI链接笔记"
+  - "英伟达"
+  - "Codex"
+  - "AI技能包"
 ---
 
-![[01-输入/02-get笔记/Notes/2026-06-04/memo@不同AI大模型在作图、代码开发能力的使用体验对比_1.md]]
+![[01-输入/02-get笔记/Notes/2026-06-12/memo@英伟达内部推荐：提升Codex效率的四大核心Skill包解析_1.md]]
 
 ---

@@ -93,6 +93,7 @@ https://github.com/dqtx760/skills-manage
 | 剪映SRT校对员           | [SRT-Proofreader](https://clawhub.ai/kapiai/srt-proofreader#versions)                                             |     |       |
 | 音频转mrkdown文字       | [local-audio-transcriber](https://github.com/chujianyun/skills/blob/main/skills/local-audio-transcriber/SKILL.md) |     |       |
 | 剪映                 | https://github.com/Ceeon/videocut-skills/tree/main                                                                |     |       |
+| 剪口播                | [ai-jian-koubo](https://github.com/lcbuaaliu/ai-jian-koubo)                                                       |     |       |
 ### 制作PPt 思维导图
 
 | PPT skill      | [ian-handdrawn-ppt](https://github.com/helloianneo/ian-handdrawn-ppt)           | 手绘风 | [点此查看](https://x.com/ianneo_ai/status/2048047226782670931)    |

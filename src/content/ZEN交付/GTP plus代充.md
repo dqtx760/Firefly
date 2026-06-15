@@ -1,4 +1,9 @@
 
+---
+https://web3chirou.com/cat/38
+https://pay.ldxp.cn/shop
+
+----
 
 ### ChatGPT Plus试用30天协助开通
 
@@ -55,6 +60,10 @@ https://web3chirou.com/item/201  94
 多个平台比价，让我瞧瞧谁更便宜
 https://aibijia.org/
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260604002459956.webp)
+### 卡商导航
+https://cardnav.xyz/
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260612005724215.webp)
+
 
 ### Appark-App Store 实时比价
 全球 App Store 实时比价: 快速找到最便宜订阅的国家，支持百万应用游戏
@@ -65,6 +74,12 @@ https://appark.ai/cn/cheapest-price
 实时抓取并对比全球各大区 App Store 的应用价格，帮您找到购买数字产品的最佳时机
 https://appstoreprice.org/zh/apps
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260604002820860.webp)
+### App Store 价格查询
+https://app.17nas.com/
+
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260612005000129.webp)
+
+
 ### AppHunt- iCloud+ 的跨区价格查询
 基于 Apple Support 官方价格快照与实时汇率换算，查看 iCloud+ 的跨区 App Store 标价参考。
 https://www.apphunt.cc/#icloud
