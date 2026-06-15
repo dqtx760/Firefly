@@ -1,14 +1,12 @@
 ---
-title: Codex 必装插件清单
-published: 2026-06-15
+title: Codex必装插件清单
+published: 2026-06-16
 tags:
-  - codex
-  - ai
-  - workflow
+  - Codex
 category: AIHacks
-draft: true
+draft: false
 pinned: false
-image:
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/01-codex-plugins-list.webp
 ---
 最近整理了一套 Codex 插件清单，发现很多人其实只把 Codex 当成"写代码工具"，但它真正强的地方，是可以通过插件连接更多工作场景。
 
