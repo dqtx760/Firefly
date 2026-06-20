@@ -47,3 +47,5 @@ https://mp.weixin.qq.com/s/EQoA2Lqf4wk6sf-STZTeLw
 在多台电脑之间无缝同步Claude Code 配置和会话。命令行工具，*我配置失败*
 
 https://github.com/ikook-wang/cc-sync/blob/main/README_zh-CN.md
+
+

@@ -212,3 +212,14 @@
 - **归档**: 117 个 Notes 文件全部移入 `01-输入/archive/02-get笔记/Notes/`（含已编译和低价值文件）
 - **并行代理**: 7 个，其中 2 个有文件（Agent-02: 22 篇, Agent-03: 2 篇），5 个为空
 - **备注**: 本次更新了 SKILL.md 归档规则——02-get笔记 目录仅归档 Notes/ 子目录，不动 get attachment、Get Canvas、Get Moments
+
+## [2026-06-20] ingest | 编译 01-输入/01-Clipings（1 个文件）
+
+- **处理文件**: `01-输入/01-Clipings/深入理解 Claude Code：从 CLAUDE.md 到 Hooks、Skills、Subagents.md`
+- **创建页面**:
+  - **来源摘要**: [[摘要-Claude-Code上下文注入方法]]
+  - **概念**: [[Claude-Code上下文注入方法]], [[CLAUDE_md]], [[Claude-Code-Rules]], [[Claude-Code-Subagents]], [[Claude-Code-Hooks]], [[Claude-Code-Output-Styles]], [[Claude-Code-System-Prompt-Append]], [[Dynamic-Workflows]]
+- **更新页面**: [[Claude_Code]]（增量合并：新增上下文注入体系 + Dynamic Workflows 能力描述 + 新来源）
+- **冲突**: 无
+- **归档**: 源文件移入 `01-输入/archive/01-Clipings/`
+- **并行代理**: 1 个（Agent-01: 1 篇）

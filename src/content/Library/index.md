@@ -15,6 +15,9 @@
 - [[摘要-ClaudeCode-GrepOverRAG最佳实践]] — Claude Code 放弃 RAG 用 Grep 搜索代码的设计哲学与最佳实践
 - [[摘要-归藏社交卡片Skill]] — 归藏 guizang-social-card-skill：小红书图文与公众号封面对生成
 
+### 2026-06-20 编译新增
+- [[摘要-Claude-Code上下文注入方法]] — Claude Code 7 种上下文注入方法 + Dynamic Workflows 全解析
+
 ### 2026-05-29 编译新增（第二批：get笔记）
 - [[摘要-ClaudeCode-Obsidian-NotebookLM集成]] — Claude Code + Obsidian + NotebookLM 零成本 AI 知识库集成
 - [[摘要-OpenAI-Codex营销技能集]] — Codex 7+1 营销内容创作技能（兼容 Claude Code）
@@ -139,6 +142,14 @@
 
 ### AI 工具与方法论
 - [[AI_Knowledge_Management]] — AI 知识管理新范式：人机协同的知识资产编译与维护
+- [[Claude-Code上下文注入方法]] — 7 种上下文注入方法总览：不同指令不同生命周期
+- [[CLAUDE_md]] — CLAUDE.md 项目说明书，启动即加载的全程 token 消耗
+- [[Claude-Code-Rules]] — Rules 路径限定约束，碰到特定文件才生效
+- [[Claude-Code-Subagents]] — Subagents 独立上下文窗口子代理
+- [[Claude-Code-Hooks]] — Hooks 确定性触发脚本，绕过上下文的安全护栏
+- [[Claude-Code-Output-Styles]] — Output Styles system prompt 人设注入
+- [[Claude-Code-System-Prompt-Append]] — System Prompt CLI 临时追加
+- [[Dynamic-Workflows]] — 动态工作流：Claude 自写编排脚本协调多 agent
 - [[Lolm_Wiki_Framework]] — Karpathy 的知识管理框架：三种文件、三个操作、三种工具
 - [[Local_Knowledge_Base_LLM]] — 本地知识库 + 大模型：个人数据的智能检索与认知分析
 - [[MCP协议]] — 模型上下文协议：AI 工具间的连接桥梁
@@ -201,4 +212,4 @@
 
 ---
 
-*最后更新：2026-05-29（get笔记编译：知识管理三阶段演进 + Codex营销技能 + 第二大脑文件夹结构 + LTO 2.0 + AI团队变革 + 12个实体 + 6个概念）*
+*最后更新：2026-06-20（Clipings编译：Claude Code上下文注入方法 + 8个概念页面）*

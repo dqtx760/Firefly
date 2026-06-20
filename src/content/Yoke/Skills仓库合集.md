@@ -16,12 +16,69 @@ Claude Skills 作为 AI 助手的功能拓展核心，能精准对接各类场�
 **开源地址：**
 https://github.com/dqtx760/skills-manage
 
-### 参照：[斜杠命令合集](斜杠命令合集.md)
+### 参照：[AI skill命令速查](../Xenia/AI%20skill命令速查.md)
 
 
-## 我推荐的Skills列表
----
-#### 元能力拓展
+
+### 制图
+
+| 文章配图                      |                                                                                                                | 宝玉   | 点此查看                                                      |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------- | ---- | --------------------------------------------------------- |
+| 生成信息卡                     | [ljg-card](https://github.com/lijigang/ljg-skills/tree/master/skills/ljg-card)                                 | 李继刚  | [效果示例](https://x.com/berryxia/status/2036963670014779468) |
+| 一键生成小红书 / 小绿书 / 即刻 / X 卡片 | [AI Card](https://www.voxflow.studio/apps/ai-card)                                                             |      |                                                           |
+| 小红书卡片                     | [guizang-social-card-skill](https://github.com/op7418/guizang-social-card-skill)                               | 歸藏   |                                                           |
+| 将任意文本、网页或 URL 转化卡片        | [claude-design-card](https://github.com/geekjourneyx/claude-design-card)                                       | 极客杰尼 |                                                           |
+| 课程知识海报生成器                 | [COURSE-POSTER-SKILL](https://github.com/lui2015/COURSE-POSTER-SKILL)                                          |      |                                                           |
+| 文章配图                      | [baoyu-article-illustrator](https://github.com/JimLiu/baoyu-skills/tree/main/skills/baoyu-article-illustrator) |      |                                                           |
+
+### 撰写文案
+
+| 功能                 | skill开源地址                                                                                                         | 备注  | 使用&效果 |
+| ------------------ | ----------------------------------------------------------------------------------------------------------------- | --- | ----- |
+| 卡兹克风格创作            | [khazix-skills](https://github.com/KKKKhazix/khazix-skills)                                                       |     |       |
+| 根据AIHOT,生成视频的脚本    | https://github.com/Joel-Z-code/aihot-video-copy-skill                                                             |     |       |
+| **视频一键转换为精美文章**    | https://github.com/Librarier-f/video-to-article-skill                                                             |     |       |
+| 像做手术一样写作           | [ljg-writes](https://github.com/lijigang/ljg-skills/tree/master/skills/ljg-writes)                                | 李继刚 |       |
+| 即刻/X 动态改写与创作       | [x-post](https://github.com/zephyrwang6/allSkills/tree/main/x-post)                                               |     |       |
+| X导师.skill          | [alchaincyf/x-mentor-skill](https://github.com/alchaincyf/x-mentor-skill)                                         | 花叔  | 点此查看  |
+| 公众号写作              | [wewrite](https://github.com/oaker-io/wewrite)                                                                    |     |       |
+| 自媒体写作              | [writing-assistant-skill](https://github.com/Ceeon/writing-assistant-skill)                                       |     |       |
+| 教程制作               | [yao-tutorial-skill](https://github.com/yaojingang/yao-open-skills/tree/main/skills/yao-tutorial-skill)           |     |       |
+| 协作式文档创作            | [doc-coauthoring](https://github.com/zephyrwang6/allSkills/tree/main/doc-coauthoring)                             |     |       |
+| 多角度选题生成（推文+公众号）    | [content-topic-generator](https://github.com/zephyrwang6/allSkills/tree/main/content-topic-generator)             |     |       |
+| 文章改写优化（含 4 种写作风格库） | [content-rewriting-2601](https://github.com/zephyrwang6/allSkills/tree/main/content-rewriting-2601)               |     |       |
+| 深度文章评价/解读          | [article-review](https://github.com/zephyrwang6/allSkills/tree/main/article-review)                               |     |       |
+| 文章去AI味             | [humanizer](https://github.com/blader/humanizer)                                                                  |     |       |
+| 剪映SRT校对员           | [SRT-Proofreader](https://clawhub.ai/kapiai/srt-proofreader#versions)                                             |     |       |
+| 音频转mrkdown文字       | [local-audio-transcriber](https://github.com/chujianyun/skills/blob/main/skills/local-audio-transcriber/SKILL.md) |     |       |
+| 剪映                 | https://github.com/Ceeon/videocut-skills/tree/main                                                                |     |       |
+| 剪口播                | [ai-jian-koubo](https://github.com/lcbuaaliu/ai-jian-koubo)                                                       |     |       |
+### HTML/思维导图
+
+| PPT skill      | [ian-handdrawn-ppt](https://github.com/helloianneo/ian-handdrawn-ppt)           | 手绘风 | [点此查看](https://x.com/ianneo_ai/status/2048047226782670931)    |
+| -------------- | ------------------------------------------------------------------------------- | --- | ------------------------------------------------------------- |
+| PPT skill      | [guizang-ppt-skill](https://github.com/op7418/guizang-ppt-skill)                | 歸藏  | [点此查看](https://x.com/op7418/status/2048245950813282481)       |
+| PPT skill      | [zarazhangrui/frontend-slides](https://github.com/zarazhangrui/frontend-slides) | 张咋啦 | [点此查看](https://x.com/zarazhangrui/status/2016337615843434646) |
+| PPT Skill      | [alchaincyf/huashu-design](https://github.com/alchaincyf/huashu-design)         | 花叔  | [效果示例](https://skill.huasheng.ai/)                            |
+| 一个可播放的思维导图 PPT | [mindmap-ppt#](https://github.com/agegr/mindmap-ppt#)                           |     |                                                               |
+
+### 制作网站
+
+| 功能                                | skill开源地址                                                                                   | 备注         | 使用&效果                                                     |
+| --------------------------------- | ------------------------------------------------------------------------------------------- | ---------- | --------------------------------------------------------- |
+| 前端设计去“AI味”统                       | [frontend-design](https://github.com/anthropics/skills/tree/main/skills/frontend-design)    | anthropics |                                                           |
+| 设计总监                              | [ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)              |            | [styles](https://www.uupm.cc/#styles)                     |
+| skill 落地页                         | [skill-site-generator](https://github.com/eze-is/skill-site-generator)                      | -泽Eze      | [效果示例](https://eze-is.github.io/skill-site-generator/)    |
+| 前端设计更出色                           | [impeccable](https://github.com/pbakaus/impeccable/tree/main/.claude/skills/impeccable)     |            |                                                           |
+| 复刻大厂ui设计                          | [Vawesome-design-md](https://github.com/VoltAgent/awesome-design-md)                        |            | [使用帮助](https://mp.weixin.qq.com/s/n0PNmmeBENxj5h2A3guWfg) |
+| 网站审计                              | [Website-Audit](https://github.com/MarcinKilarski/Website-Audit)                            |            |                                                           |
+| 把飞书Wiki 知识库变成精美静态网站               | [feishu-doc-webify](https://github.com/wocha-xiaoli/feishu-doc-webify)                      |            |                                                           |
+| **任何内容 → 播客 / PPT / 思维导图 / Quiz** | [qiaomu-anything-to-notebooklm](https://github.com/joeseesun/qiaomu-anything-to-notebooklm) |            |                                                           |
+| 顶级UI/UX设计资料库）                     | [ui-ux-pro-max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)                    |            |                                                           |
+| Anthropic官方前端设计                   | frontend-design                                                                             |            |                                                           |
+
+
+### 元能力拓展
 
 | 功能                 | skill开源地址                                                                                     | 备注      | 使用&效果                                                                                   |
 | ------------------ | --------------------------------------------------------------------------------------------- | ------- | --------------------------------------------------------------------------------------- |
@@ -42,66 +99,14 @@ https://github.com/dqtx760/skills-manage
 | 让llm说人话            | [talk-normal](https://github.com/hexiecs/talk-normal/blob/main/README_CN.md)                  |         |                                                                                         |
 | AI HOT 日报和全部 AI 动态 | [aihot](https://github.com/KKKKhazix/khazix-skills/blob/main/aihot/SKILL.md)                  | 数字生命卡兹克 |                                                                                         |
 
-#### 软件开发
+### 软件开发
 
 | 功能       | skill开源地址                                          | 备注  | 使用&效果 |
 | -------- | -------------------------------------------------- | --- | ----- |
 | 软件代理开发框架 | [superpowers](https://github.com/obra/superpowers) |     |       |
 | 23个专家角色  | [gstack](https://github.com/garrytan/gstack)       |     |       |
 
-#### 制作网站
 
-| 功能                                | skill开源地址                                                                                   | 备注         | 使用&效果                                                     |
-| --------------------------------- | ------------------------------------------------------------------------------------------- | ---------- | --------------------------------------------------------- |
-| 前端设计去“AI味”统                       | [frontend-design](https://github.com/anthropics/skills/tree/main/skills/frontend-design)    | anthropics |                                                           |
-| 设计总监                              | [ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)              |            | [styles](https://www.uupm.cc/#styles)                     |
-| skill 落地页                         | [skill-site-generator](https://github.com/eze-is/skill-site-generator)                      | -泽Eze      | [效果示例](https://eze-is.github.io/skill-site-generator/)    |
-| 前端设计更出色                           | [impeccable](https://github.com/pbakaus/impeccable/tree/main/.claude/skills/impeccable)     |            |                                                           |
-| 复刻大厂ui设计                          | [Vawesome-design-md](https://github.com/VoltAgent/awesome-design-md)                        |            | [使用帮助](https://mp.weixin.qq.com/s/n0PNmmeBENxj5h2A3guWfg) |
-| 网站审计                              | [Website-Audit](https://github.com/MarcinKilarski/Website-Audit)                            |            |                                                           |
-| 把飞书Wiki 知识库变成精美静态网站               | [feishu-doc-webify](https://github.com/wocha-xiaoli/feishu-doc-webify)                      |            |                                                           |
-| **任何内容 → 播客 / PPT / 思维导图 / Quiz** | [qiaomu-anything-to-notebooklm](https://github.com/joeseesun/qiaomu-anything-to-notebooklm) |            |                                                           |
-| 顶级UI/UX设计资料库）                     | [ui-ux-pro-max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)                    |            |                                                           |
-| Anthropic官方前端设计                   | frontend-design                                                                             |            |                                                           |
-
-#### 制作图片卡片
-
-| 文章配图                      | [baoyu-article-illustrator](https://github.com/JimLiu/baoyu-skills/tree/main/skills/baoyu-article-illustrator) | 宝玉   | 点此查看                                                      |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------- | ---- | --------------------------------------------------------- |
-| 生成信息卡                     | [ljg-card](https://github.com/lijigang/ljg-skills/tree/master/skills/ljg-card)                                 | 李继刚  | [效果示例](https://x.com/berryxia/status/2036963670014779468) |
-| 一键生成小红书 / 小绿书 / 即刻 / X 卡片 | [AI Card](https://www.voxflow.studio/apps/ai-card)                                                             |      |                                                           |
-| 小红书卡片                     | [guizang-social-card-skill](https://github.com/op7418/guizang-social-card-skill)                               | 歸藏   |                                                           |
-| 将任意文本、网页或 URL 转化卡片        | [claude-design-card](https://github.com/geekjourneyx/claude-design-card)                                       | 极客杰尼 |                                                           |
-| 课程知识海报生成器                 | [COURSE-POSTER-SKILL](https://github.com/lui2015/COURSE-POSTER-SKILL)                                          |      |                                                           |
-
-#### 撰写文案
-
-| 功能                 | skill开源地址                                                                                                         | 备注  | 使用&效果 |
-| ------------------ | ----------------------------------------------------------------------------------------------------------------- | --- | ----- |
-| 卡兹克风格创作            | [khazix-skills](https://github.com/KKKKhazix/khazix-skills)                                                       |     |       |
-| 像做手术一样写作           | [ljg-writes](https://github.com/lijigang/ljg-skills/tree/master/skills/ljg-writes)                                | 李继刚 |       |
-| 即刻/X 动态改写与创作       | [x-post](https://github.com/zephyrwang6/allSkills/tree/main/x-post)                                               |     |       |
-| X导师.skill          | [alchaincyf/x-mentor-skill](https://github.com/alchaincyf/x-mentor-skill)                                         | 花叔  | 点此查看  |
-| 公众号写作              | [wewrite](https://github.com/oaker-io/wewrite)                                                                    |     |       |
-| 自媒体写作              | [writing-assistant-skill](https://github.com/Ceeon/writing-assistant-skill)                                       |     |       |
-| 教程制作               | [yao-tutorial-skill](https://github.com/yaojingang/yao-open-skills/tree/main/skills/yao-tutorial-skill)           |     |       |
-| 协作式文档创作            | [doc-coauthoring](https://github.com/zephyrwang6/allSkills/tree/main/doc-coauthoring)                             |     |       |
-| 多角度选题生成（推文+公众号）    | [content-topic-generator](https://github.com/zephyrwang6/allSkills/tree/main/content-topic-generator)             |     |       |
-| 文章改写优化（含 4 种写作风格库） | [content-rewriting-2601](https://github.com/zephyrwang6/allSkills/tree/main/content-rewriting-2601)               |     |       |
-| 深度文章评价/解读          | [article-review](https://github.com/zephyrwang6/allSkills/tree/main/article-review)                               |     |       |
-| 文章去AI味             | [humanizer](https://github.com/blader/humanizer)                                                                  |     |       |
-| 剪映SRT校对员           | [SRT-Proofreader](https://clawhub.ai/kapiai/srt-proofreader#versions)                                             |     |       |
-| 音频转mrkdown文字       | [local-audio-transcriber](https://github.com/chujianyun/skills/blob/main/skills/local-audio-transcriber/SKILL.md) |     |       |
-| 剪映                 | https://github.com/Ceeon/videocut-skills/tree/main                                                                |     |       |
-| 剪口播                | [ai-jian-koubo](https://github.com/lcbuaaliu/ai-jian-koubo)                                                       |     |       |
-### 制作PPt 思维导图
-
-| PPT skill      | [ian-handdrawn-ppt](https://github.com/helloianneo/ian-handdrawn-ppt)           | 手绘风 | [点此查看](https://x.com/ianneo_ai/status/2048047226782670931)    |
-| -------------- | ------------------------------------------------------------------------------- | --- | ------------------------------------------------------------- |
-| PPT skill      | [guizang-ppt-skill](https://github.com/op7418/guizang-ppt-skill)                | 歸藏  | [点此查看](https://x.com/op7418/status/2048245950813282481)       |
-| PPT skill      | [zarazhangrui/frontend-slides](https://github.com/zarazhangrui/frontend-slides) | 张咋啦 | [点此查看](https://x.com/zarazhangrui/status/2016337615843434646) |
-| PPT Skill      | [alchaincyf/huashu-design](https://github.com/alchaincyf/huashu-design)         | 花叔  | [效果示例](https://skill.huasheng.ai/)                            |
-| 一个可播放的思维导图 PPT | [mindmap-ppt#](https://github.com/agegr/mindmap-ppt#)                           |     |                                                               |
 
 [Notion备份](https://www.notion.so/skill-347351994e408091a13be04d19c62d1e)
 

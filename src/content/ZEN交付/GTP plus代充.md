@@ -4,6 +4,36 @@ https://web3chirou.com/cat/38
 https://pay.ldxp.cn/shop
 
 ----
+### 成品 PLUS
+
+```
+UPI 渠道 - ChatGPT Plus 月卡 成品号
+```
+https://cardnav.xyz/shops?q=UPI+%E6%B8%A0%E9%81%93+-+ChatGPT+Plus+%E6%9C%88%E5%8D%A1+%E6%88%90%E5%93%81%E5%8F%B7
+https://pay.ldxp.cn/item/3u95tq  22
+https://pay.ldxp.cn/item/ezuy1s   24
+https://pay.ldxp.cn/item/tkzf0b   34
+
+
+邮件
+[https://email.nloop.cc/](https://email.nloop.cc/)
+
+### 代充 PLUS
+https://cardnav.xyz/shops?q=plus+%E4%BB%A3%E5%85%85&sort=price-asc
+
+| 说明              | 地址                                 | 价格  |
+| --------------- | ---------------------------------- | --- |
+| 印度upi代充gpt plus | https://catfk.com/item/nqybo8      | 18  |
+| 1个月PLUS代充 临期促销  | https://faka.redeemgpt.com/item/91 | 105 |
+| IOs订阅质保掉订阅      | https://faka.redeemgpt.com/item/88 | 120 |
+| Plus菲区代充        | https://aisou.pro/item/49          | 125 |
+| plus 菲律宾人工代充    | https://web3chirou.com/item/438    | 130 |
+|                 |                                    |     |
+|                 |                                    |     |
+
+
+
+
 
 ### ChatGPT Plus试用30天协助开通
 
@@ -93,6 +123,7 @@ https://sms.fur.li/
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260604005732980.webp)
 ### GamsGo
 这个平台规模相对大一些，ChatGPT 号有独享和共享两种模式，整体稳定性会更好一些。
+30天：共享 $4.77 独享$18.99   （32  128）
 https://www.gamsgo.com/zh
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260604010134412.webp)
 
@@ -205,3 +236,7 @@ Gemini 3.1 Al Pro随机地区 12月----35
 
 
 
+
+### ChatGPT Pro 20x  每月 978 元
+操作教程
+https://x.com/qi9098/status/2062279411052036537

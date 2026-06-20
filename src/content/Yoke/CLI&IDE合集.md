@@ -7,6 +7,7 @@
 - **Zed**（高性能编辑器+AI，速度极快）----- [Zed](../posts/AIHacks/Zed.md)
 - **Antigravity**（新兴AI IDE，轻量智能）-----[Antigravity](../posts/AIHacks/Antigravity.md)
 - **阿里Qoder**（阿里系，中文项目友好）----[阿里Qoder](../posts/AIHacks/阿里Qoder.md)
+- 智谱 ZCode---- [ZCode](https://zcode.z.ai/en)
 
 
 ### 二、传统 IDE + AI 插件
@@ -37,6 +38,7 @@
 - **Hermes Agent**（Nous Research，开源）
 - **OpenClaw**（社区开源生态）------[openclaw](../posts/AIHacks/openclaw.md)
 - **OpenCode**（OpenCode AI，开源）
+- Mimocode ----[开源地址](https://github.com/XiaomiMiMo/MiMo-Code/tree/main)  Mimo2.5 限时免费中  
 
 #### 🇨🇳 国产版
 - **Qwen Code**（通义千问/阿里云）

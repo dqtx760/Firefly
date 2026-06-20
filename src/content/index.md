@@ -26,9 +26,9 @@ C:\Users\Administrator\AISkills\UpdateCheck\SKILL.md
 
 
 ### Xenia
-- [知识库管理斜杠命令](Xenia/%E7%9F%A5%E8%AF%86%E5%BA%93%E7%AE%A1%E7%90%86%E6%96%9C%E6%9D%A0%E5%91%BD%E4%BB%A4.md)
+- [AI SKILL-Obsidian管理](Xenia/AI%20SKILL-Obsidian管理.md)
 - [3D风格PPT风格](Xenia/3D%E9%A3%8E%E6%A0%BCPPT%E9%A3%8E%E6%A0%BC.md)
-- [金句](Xenia/%E9%87%91%E5%8F%A5.md)
+- [金句摘抄](Xenia/金句摘抄.md)
 - [AI眼中的我2.0](Xenia/AI%E7%9C%BC%E4%B8%AD%E7%9A%84%E6%88%912.0.md)
 - [文末mrkdown](Xenia/%E6%96%87%E6%9C%ABmrkdown.md)
 - [花叔21个斜杠命令](Xenia/%E8%8A%B1%E5%8F%9421%E4%B8%AA%E6%96%9C%E6%9D%A0%E5%91%BD%E4%BB%A4.md)

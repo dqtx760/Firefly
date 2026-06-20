@@ -1,5 +1,0 @@
----
-Source:
-created:
-tags:
----
