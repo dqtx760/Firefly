@@ -336,6 +336,8 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.superclueai.com/&quot;&gt;中文大模型测评基准&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.datalearner.com/leaderboards&quot;&gt;AI大模型评测排行榜&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://pinchbench.com/&quot;&gt;大模型排行榜&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.helpaio.com/transit/table&quot;&gt;AI中转站评测比价&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://relaypulse.top/&quot;&gt;全球大模型稳定性监测&lt;/a&gt;
@@ -489,6 +491,1439 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/tech-shrimp&quot;&gt;tech-shrimp&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>Canvasight画布插件</title><link>https://dqtx.cc/posts/aihacks/canvasight%E7%94%BB%E5%B8%83%E6%8F%92%E4%BB%B6/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/canvasight%E7%94%BB%E5%B8%83%E6%8F%92%E4%BB%B6/</guid><pubDate>Mon, 13 Jul 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;在GitHub上发现了一个挺有意思的 Codex 插件，分享给大家。这名字叫Canvasight&lt;/p&gt;
+&lt;p&gt;它不是传统意义上的思维导图插件，而是给 Codex 加了一块“可执行画布”：先把复杂任务拆成节点，再从任意节点继续让 Codex 往下做。&lt;/p&gt;
+&lt;p&gt;项目地址：Niall-Young/Canvasight&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260713175944329.webp&quot; alt=&quot;1301&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;安装时，可以直接把下面这句发给 Codex：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;github.com/Niall-Young/Canvasight 安装下
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;装好之后，就可以让它把本地资料转换成画布。我用自己的自我介绍文档做了一次测试：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;D:\project2026\fuwari\src\content\posts\Technical\00自我介绍.md 使用 Canvasight 帮我做一个画布
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260713172035515.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;这也是它和普通思维导图最大的区别。&lt;/p&gt;
+&lt;p&gt;普通思维导图解决的是“我怎么把想法分层整理出来”，Canvasight 更进一步，解决的是“我怎么把整理出来的结构继续推进成结果”。&lt;/p&gt;
+&lt;p&gt;比如一篇长文章，可以拆成定位、受众、证据、服务、风险和下一步；一个代码项目，可以拆成模块、依赖、待改文件和验证方式；一个商业服务，也可以拆成用户痛点、交付流程、报价、入口和转化路径。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260713180950142.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;它比较有价值的地方在于，节点不是几个孤立关键词，而是可以承载完整上下文、提示词、附件和执行范围。你点某个节点运行，Codex 就能围绕这个节点继续写文案、改文件、查代码或生成计划。&lt;/p&gt;
+&lt;p&gt;换句话说，它把“整理结构”和“继续执行”接在了一起，不需要每次都从一大段聊天记录里重新找背景。&lt;/p&gt;
+&lt;p&gt;所以 Canvasight 更适合三类场景：第一，长资料结构化，比如自我介绍、课程大纲、产品文档；第二，复杂任务拆解，比如网站改版、代码库分析、工作流部署；第三，多轮协作推进，比如先画出全局，再逐个节点执行。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260713182127329.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;它不替代聊天，也不只是画图。它真正解决的是：先把事情想清楚，再把每个分支继续做下去。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;延伸阅读：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;如果你对这种“把复杂任务拆成可执行技能”的方式感兴趣，也可以看看 dbskill 这一类技能合集：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;dontbesilent2025/dbskill&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;以上，既然看到这里了，如果对你有所帮助，还望不吝点赞与关注，这也是对我最大的鼓励与支持。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;感谢你拨冗阅读，山高水长，我们期待下篇文章与你再见。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&amp;gt;/ 更多Agent实战干货
+迎访问我的博客：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+</content:encoded></item><item><title>Codex制作历史人物视频</title><link>https://dqtx.cc/posts/aihacks/codex%E5%88%B6%E4%BD%9C%E5%8E%86%E5%8F%B2%E4%BA%BA%E7%89%A9%E8%A7%86%E9%A2%91/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/codex%E5%88%B6%E4%BD%9C%E5%8E%86%E5%8F%B2%E4%BA%BA%E7%89%A9%E8%A7%86%E9%A2%91/</guid><description>从一个历史人物名字开始，自动生成脚本、图片、首尾帧动态视频，并写入剪映草稿。</description><pubDate>Fri, 03 Jul 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这篇教程讲一个很实用的自动化流程：&lt;/p&gt;
+&lt;p&gt;你只输入一个历史人物名字，比如“诸葛亮”，然后让 AI 帮你一路生成：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;视频标题&lt;/li&gt;
+&lt;li&gt;生平经历脚本&lt;/li&gt;
+&lt;li&gt;每一段画面描述&lt;/li&gt;
+&lt;li&gt;9:16 人物场景图&lt;/li&gt;
+&lt;li&gt;首尾帧动态视频&lt;/li&gt;
+&lt;li&gt;剪映草稿&lt;/li&gt;
+&lt;li&gt;字幕、标题、背景音乐&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;最后你打开剪映，就能看到一个已经排好时间线的草稿。&lt;/p&gt;
+&lt;p&gt;它不是“AI 直接变出一个成片”，而是把短视频制作拆成一条流水线。每一步都有明确产物，失败了也知道卡在哪里。&lt;/p&gt;
+&lt;h2&gt;这条流水线的原理&lt;/h2&gt;
+&lt;p&gt;先讲清楚原理，后面操作就不迷糊。&lt;/p&gt;
+&lt;p&gt;整个流程可以理解成：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;人物名
+  -&amp;gt; 脚本和分镜
+  -&amp;gt; 生成图片
+  -&amp;gt; 图片变动态视频
+  -&amp;gt; 写入剪映草稿
+  -&amp;gt; 人工打开剪映检查和导出
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;其中最关键的有两件事。&lt;/p&gt;
+&lt;p&gt;第一，首尾帧视频。&lt;/p&gt;
+&lt;p&gt;如果我们有 8 张图片，就可以这样组合：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;第 1 张图 -&amp;gt; 第 2 张图 = 第 1 段视频
+第 2 张图 -&amp;gt; 第 3 张图 = 第 2 段视频
+第 3 张图 -&amp;gt; 第 4 张图 = 第 3 段视频
+...
+第 7 张图 -&amp;gt; 第 8 张图 = 第 7 段视频
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这就是“首尾帧”。第一张图规定视频开头，第二张图规定视频结尾，中间的动作由图生视频模型补出来。&lt;/p&gt;
+&lt;p&gt;第二，剪映草稿不是神秘文件。&lt;/p&gt;
+&lt;p&gt;剪映草稿本质上是一组 JSON 文件和素材文件。里面记录了：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;视频素材在哪里&lt;/li&gt;
+&lt;li&gt;音频素材在哪里&lt;/li&gt;
+&lt;li&gt;字幕写什么&lt;/li&gt;
+&lt;li&gt;每段素材从第几秒开始，到第几秒结束&lt;/li&gt;
+&lt;li&gt;标题和字幕的字体、颜色、位置&lt;/li&gt;
+&lt;li&gt;草稿分辨率和轨道信息&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;capcut-mate&lt;/code&gt; 这个开源工具做的事，就是帮我们自动写这些剪映草稿文件。它不是模拟鼠标去点剪映，而是直接生成剪映能识别的草稿。&lt;/p&gt;
+&lt;h2&gt;前置准备&lt;/h2&gt;
+&lt;p&gt;下面以 Windows 为例。小白按顺序装就行。&lt;/p&gt;
+&lt;h2&gt;1. 安装剪映专业版&lt;/h2&gt;
+&lt;p&gt;先安装剪映，因为最终草稿要在剪映里打开。&lt;/p&gt;
+&lt;p&gt;官网：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;https://www.capcut.cn/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;安装完成后，记住你的剪映草稿目录。一般在：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;C:\Users\你的用户名\AppData\Local\JianyingPro\User Data\Projects\com.lveditor.draft
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果你不知道自己的用户名，可以打开 PowerShell，输入：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;echo $env:USERNAME
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;例如用户名是 &lt;code&gt;Administrator&lt;/code&gt;，草稿目录通常就是：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;C:\Users\Administrator\AppData\Local\JianyingPro\User Data\Projects\com.lveditor.draft
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;后面生成的草稿要放到这个目录里。&lt;/p&gt;
+&lt;h2&gt;2. 安装 Python&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;capcut-mate&lt;/code&gt; 是 Python 项目，所以必须安装 Python。&lt;/p&gt;
+&lt;p&gt;建议安装 Python 3.11 或更新版本。&lt;/p&gt;
+&lt;p&gt;下载地址：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;https://www.python.org/downloads/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;安装时注意勾选：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Add python.exe to PATH
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;安装好以后，打开 PowerShell，检查：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;python --version
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;看到类似下面的输出就说明成功：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Python 3.11.x
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;3. 安装 Git&lt;/h2&gt;
+&lt;p&gt;Git 用来下载开源项目。&lt;/p&gt;
+&lt;p&gt;下载地址：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;https://git-scm.com/download/win
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;安装后检查：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git --version
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;能看到版本号就可以。&lt;/p&gt;
+&lt;h2&gt;4. 安装 FFmpeg&lt;/h2&gt;
+&lt;p&gt;FFmpeg 用来处理视频。&lt;/p&gt;
+&lt;p&gt;如果你只是调用云端图生视频，理论上可以不装。但建议安装，因为本地测试、抽帧、转码都很有用。&lt;/p&gt;
+&lt;p&gt;最简单的方法是用 winget：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;winget install Gyan.FFmpeg
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;安装后重新打开 PowerShell，检查：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ffmpeg -version
+ffprobe -version
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;都能看到版本信息就可以。&lt;/p&gt;
+&lt;h2&gt;5. 安装 uv&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;capcut-mate&lt;/code&gt; 官方推荐用 &lt;code&gt;uv&lt;/code&gt; 管理 Python 依赖。&lt;/p&gt;
+&lt;p&gt;在 PowerShell 里运行：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;powershell -ExecutionPolicy ByPass -c &quot;irm https://astral.sh/uv/install.ps1 | iex&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;安装后重新打开 PowerShell，检查：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;uv --version
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;6. 安装 capcut-mate&lt;/h2&gt;
+&lt;p&gt;找一个你准备放项目的目录，例如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cd D:\
+mkdir ai-video-workflow
+cd D:\ai-video-workflow
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;下载项目：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git clone https://github.com/Hommy-master/capcut-mate.git
+cd capcut-mate
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;安装依赖：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;uv sync
+uv pip install -e .[windows]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;启动服务：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;uv run main.py
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;启动成功后，浏览器打开：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;http://127.0.0.1:30000/docs
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果能看到 API 文档，就说明 &lt;code&gt;capcut-mate&lt;/code&gt; 跑起来了。&lt;/p&gt;
+&lt;p&gt;这个工具的官方文档在这里：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;https://docs.jcaigc.cn/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;常用接口有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;create_draft&lt;/code&gt;：创建剪映草稿&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;add_videos&lt;/code&gt;：添加视频&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;add_captions&lt;/code&gt;：添加标题和字幕&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;add_audios&lt;/code&gt;：添加音频&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;save_draft&lt;/code&gt;：保存草稿&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;7. 准备 AI 接口 Key&lt;/h2&gt;
+&lt;p&gt;完整流水线需要三类能力。&lt;/p&gt;
+&lt;p&gt;第一类：文本生成。&lt;/p&gt;
+&lt;p&gt;用来生成标题、人物生平脚本、画面描述。你可以用 ChatGPT、Claude、DeepSeek、豆包、Kimi 等模型。&lt;/p&gt;
+&lt;p&gt;第二类：图片生成。&lt;/p&gt;
+&lt;p&gt;用来根据画面描述生成 9:16 图片。可以用豆包 Seedream、即梦、Midjourney、可灵、通义万相等。&lt;/p&gt;
+&lt;p&gt;第三类：图生视频。&lt;/p&gt;
+&lt;p&gt;用来把两张图做成首尾帧动态视频。PDF 里用的是火山方舟里的 Seedance / 即梦接口，示例模型是：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;doubao-seedance-1-5-pro-251215
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这一类接口通常需要：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;API Key&lt;/li&gt;
+&lt;li&gt;首帧图片 URL&lt;/li&gt;
+&lt;li&gt;尾帧图片 URL&lt;/li&gt;
+&lt;li&gt;提示词&lt;/li&gt;
+&lt;li&gt;视频时长&lt;/li&gt;
+&lt;li&gt;分辨率&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;注意，很多云端视频接口不接受你电脑里的本地图片路径，必须给它公网图片 URL。&lt;/p&gt;
+&lt;p&gt;所以你还需要一个图床，或者一个能把图片上传成公网链接的工具。&lt;/p&gt;
+&lt;h2&gt;推荐目录结构&lt;/h2&gt;
+&lt;p&gt;为了不乱，建议新建一个工作目录：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;D:\ai-video-workflow\historical-video-demo
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;里面放这些文件夹：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;historical-video-demo
+├─ script.json
+├─ images
+├─ videos
+├─ drafts
+└─ logs
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;解释一下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;script.json&lt;/code&gt;：保存标题、字幕、画面描述&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;images&lt;/code&gt;：保存生成出来的 8 张图&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;videos&lt;/code&gt;：保存生成出来的 7 段动态视频&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;drafts&lt;/code&gt;：保存剪映草稿或草稿链接&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;logs&lt;/code&gt;：保存每一步 API 返回结果&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;详细步骤&lt;/h2&gt;
+&lt;p&gt;下面按“诸葛亮”举例。&lt;/p&gt;
+&lt;h2&gt;第一步：让 AI 生成脚本和分镜&lt;/h2&gt;
+&lt;p&gt;你可以直接把下面这段发给 AI：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;帮我做一个历史人物短视频，人物是：诸葛亮。
+
+请输出 JSON，结构如下：
+{
+  &quot;title&quot;: &quot;视频标题&quot;,
+  &quot;scenes&quot;: [
+    {
+      &quot;caption&quot;: &quot;这一段字幕，适合 5 秒内读完&quot;,
+      &quot;image_prompt&quot;: &quot;这一段画面描述，用于生成 9:16 图片&quot;
+    }
+  ]
+}
+
+要求：
+1. 一共 8 段 scenes
+2. 每段 caption 讲诸葛亮的一段生平经历
+3. 每段 image_prompt 要适合生成竖屏历史人物画面
+4. 风格统一，电影感，古代中国，真实质感
+5. 不要输出多余解释，只输出 JSON
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;你会得到类似这样的结构：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{
+  &quot;title&quot;: &quot;诸葛亮：乱世里的清醒头脑&quot;,
+  &quot;scenes&quot;: [
+    {
+      &quot;caption&quot;: &quot;诸葛亮年轻时隐居隆中，读书、观天下，也等一个值得托付的人。&quot;,
+      &quot;image_prompt&quot;: &quot;古代中国雪夜草庐，年轻诸葛亮在烛光下读书，竹简与地图铺在案上，9:16，电影感&quot;
+    }
+  ]
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;把完整结果保存为：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;D:\ai-video-workflow\historical-video-demo\script.json
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;第二步：生成 8 张图片&lt;/h2&gt;
+&lt;p&gt;拿 &lt;code&gt;script.json&lt;/code&gt; 里的 8 个 &lt;code&gt;image_prompt&lt;/code&gt; 去生图。&lt;/p&gt;
+&lt;p&gt;生图时统一要求：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;比例：9:16
+风格：电影感、真实质感、古代中国、人物一致性尽量保持
+输出格式：png 或 jpg
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;生成后命名为：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;scene-01.png
+scene-02.png
+scene-03.png
+scene-04.png
+scene-05.png
+scene-06.png
+scene-07.png
+scene-08.png
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;放到：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;D:\ai-video-workflow\historical-video-demo\images
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;到这里，你应该有 8 张竖屏图片。&lt;/p&gt;
+&lt;h2&gt;第三步：把图片上传成公网 URL&lt;/h2&gt;
+&lt;p&gt;如果你要走真正的 AI 首尾帧视频，这一步很重要。&lt;/p&gt;
+&lt;p&gt;云端图生视频接口通常不能读取：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;D:\ai-video-workflow\historical-video-demo\images\scene-01.png
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;它需要类似这样的公网链接：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;https://example.com/scene-01.png
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;你可以用这些方式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;自己的对象存储，例如阿里云 OSS、腾讯云 COS、Cloudflare R2&lt;/li&gt;
+&lt;li&gt;图床工具，例如 PicList&lt;/li&gt;
+&lt;li&gt;你自己的服务器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;上传后保存一个图片链接清单：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{
+  &quot;images&quot;: [
+    {
+      &quot;name&quot;: &quot;scene-01.png&quot;,
+      &quot;url&quot;: &quot;https://你的图床/scene-01.png&quot;
+    },
+    {
+      &quot;name&quot;: &quot;scene-02.png&quot;,
+      &quot;url&quot;: &quot;https://你的图床/scene-02.png&quot;
+    }
+  ]
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;保存为：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;D:\ai-video-workflow\historical-video-demo\image_links.json
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;第四步：生成 7 段首尾帧动态视频&lt;/h2&gt;
+&lt;p&gt;有 8 张图后，按相邻图片生成 7 段视频：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;scene-01 -&amp;gt; scene-02
+scene-02 -&amp;gt; scene-03
+scene-03 -&amp;gt; scene-04
+scene-04 -&amp;gt; scene-05
+scene-05 -&amp;gt; scene-06
+scene-06 -&amp;gt; scene-07
+scene-07 -&amp;gt; scene-08
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;每段 5 秒。&lt;/p&gt;
+&lt;p&gt;提示词可以这样写：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;首帧中的人物和场景自然过渡到尾帧画面，镜头缓慢推进，人物动作克制自然，衣袖和环境有轻微运动，历史电影质感，一镜到底，画面稳定，不要突然变脸，不要出现文字。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果调用火山方舟 Seedance，核心请求大概长这样：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;curl -X POST https://ark.cn-beijing.volces.com/api/v3/contents/generations/tasks \
+  -H &quot;Content-Type: application/json&quot; \
+  -H &quot;Authorization: Bearer 你的ARK_API_KEY&quot; \
+  -d &apos;{
+    &quot;model&quot;: &quot;doubao-seedance-1-5-pro-251215&quot;,
+    &quot;content&quot;: [
+      {
+        &quot;type&quot;: &quot;text&quot;,
+        &quot;text&quot;: &quot;首帧中的人物和场景自然过渡到尾帧画面，镜头缓慢推进，人物动作克制自然，历史电影质感，一镜到底。 --duration 5 --camerafixed false --watermark false&quot;
+      },
+      {
+        &quot;type&quot;: &quot;image_url&quot;,
+        &quot;image_url&quot;: {
+          &quot;url&quot;: &quot;https://你的图床/scene-01.png&quot;
+        }
+      },
+      {
+        &quot;type&quot;: &quot;image_url&quot;,
+        &quot;image_url&quot;: {
+          &quot;url&quot;: &quot;https://你的图床/scene-02.png&quot;
+        }
+      }
+    ]
+  }&apos;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;不同平台的参数名可能不一样，但思路一样：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;模型 + 提示词 + 首帧图 + 尾帧图 + 时长 + 分辨率
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;生成成功后，把 7 个视频链接保存为：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;D:\ai-video-workflow\historical-video-demo\video_links.json
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;格式建议：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;{
+  &quot;videos&quot;: [
+    {
+      &quot;start_image&quot;: &quot;scene-01.png&quot;,
+      &quot;end_image&quot;: &quot;scene-02.png&quot;,
+      &quot;video_url&quot;: &quot;https://生成的视频链接/01.mp4&quot;
+    },
+    {
+      &quot;start_image&quot;: &quot;scene-02.png&quot;,
+      &quot;end_image&quot;: &quot;scene-03.png&quot;,
+      &quot;video_url&quot;: &quot;https://生成的视频链接/02.mp4&quot;
+    }
+  ]
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;如果你暂时没有图生视频 API&lt;/h2&gt;
+&lt;p&gt;没有 API Key 也可以先跑通本地测试版。&lt;/p&gt;
+&lt;p&gt;这一步不是 AI 真图生视频，而是用 FFmpeg 做动态过渡，用来验证剪映草稿流水线。&lt;/p&gt;
+&lt;p&gt;在图片目录有 8 张图的情况下，可以先生成 7 段本地过渡视频。&lt;/p&gt;
+&lt;p&gt;PowerShell 示例：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$src = &quot;D:\ai-video-workflow\historical-video-demo\images&quot;
+$out = &quot;D:\ai-video-workflow\historical-video-demo\videos&quot;
+New-Item -ItemType Directory -Force -Path $out | Out-Null
+
+for ($i = 1; $i -le 7; $i++) {
+  $a = Join-Path $src (&quot;scene-{0:D2}.png&quot; -f $i)
+  $b = Join-Path $src (&quot;scene-{0:D2}.png&quot; -f ($i + 1))
+  $mp4 = Join-Path $out (&quot;transition-{0:D2}-{1:D2}.mp4&quot; -f $i, ($i + 1))
+
+  ffmpeg -y -loop 1 -t 5 -i $a -loop 1 -t 5 -i $b `
+    -filter_complex &quot;[0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,zoompan=z=&apos;min(zoom+0.0008,1.10)&apos;:d=150:s=1080x1920:fps=30,setsar=1[v0];[1:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,zoompan=z=&apos;max(1.10-0.0008*on,1.0)&apos;:d=150:s=1080x1920:fps=30,setsar=1[v1];[v0][v1]xfade=transition=smoothleft:duration=5:offset=0,format=yuv420p[v]&quot; `
+    -map &quot;[v]&quot; -t 5 -r 30 -c:v libx264 -pix_fmt yuv420p -movflags +faststart $mp4
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;检查视频：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ffprobe -v error -select_streams v:0 -show_entries stream=width,height,duration,nb_frames -of json &quot;D:\ai-video-workflow\historical-video-demo\videos\transition-01-02.mp4&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;看到 &lt;code&gt;width&lt;/code&gt; 是 &lt;code&gt;1080&lt;/code&gt;，&lt;code&gt;height&lt;/code&gt; 是 &lt;code&gt;1920&lt;/code&gt;，&lt;code&gt;duration&lt;/code&gt; 是 &lt;code&gt;5&lt;/code&gt; 左右，就说明视频正常。&lt;/p&gt;
+&lt;h2&gt;第五步：让 capcut-mate 读取视频&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;capcut-mate&lt;/code&gt; 的 &lt;code&gt;add_videos&lt;/code&gt; 接口需要视频 URL。&lt;/p&gt;
+&lt;p&gt;如果你的视频已经是公网链接，可以直接用。&lt;/p&gt;
+&lt;p&gt;如果你只是本地测试，可以在视频目录启动一个本地静态服务：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cd D:\ai-video-workflow\historical-video-demo\videos
+python -m http.server 30003 --bind 127.0.0.1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后本地视频 URL 就是：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;http://127.0.0.1:30003/transition-01-02.mp4
+http://127.0.0.1:30003/transition-02-03.mp4
+...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;浏览器打开其中一个链接，如果能下载或播放，就说明服务正常。&lt;/p&gt;
+&lt;h2&gt;第六步：创建剪映草稿&lt;/h2&gt;
+&lt;p&gt;确保 &lt;code&gt;capcut-mate&lt;/code&gt; 正在运行：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;http://127.0.0.1:30000/docs
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;创建草稿，宽高是 1080x1920：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Invoke-RestMethod `
+  -Uri &quot;http://127.0.0.1:30000/openapi/capcut-mate/v1/create_draft&quot; `
+  -Method Post `
+  -ContentType &quot;application/json&quot; `
+  -Body &apos;{&quot;width&quot;:1080,&quot;height&quot;:1920}&apos;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;成功后会返回一个 &lt;code&gt;draft_url&lt;/code&gt;。后面所有操作都要带着它。&lt;/p&gt;
+&lt;h2&gt;第七步：按时间线添加视频&lt;/h2&gt;
+&lt;p&gt;假设 7 段视频，每段 5 秒，总长 35 秒。&lt;/p&gt;
+&lt;p&gt;剪映接口里的时间单位通常是微秒。&lt;/p&gt;
+&lt;p&gt;所以：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1 秒 = 1000000
+5 秒 = 5000000
+35 秒 = 35000000
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;7 段时间线应该这样排：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;第 1 段：0        -&amp;gt; 5000000
+第 2 段：5000000  -&amp;gt; 10000000
+第 3 段：10000000 -&amp;gt; 15000000
+第 4 段：15000000 -&amp;gt; 20000000
+第 5 段：20000000 -&amp;gt; 25000000
+第 6 段：25000000 -&amp;gt; 30000000
+第 7 段：30000000 -&amp;gt; 35000000
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;video_infos&lt;/code&gt; 的结构类似这样：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[
+  {
+    &quot;video_url&quot;: &quot;http://127.0.0.1:30003/transition-01-02.mp4&quot;,
+    &quot;width&quot;: 1080,
+    &quot;height&quot;: 1920,
+    &quot;start&quot;: 0,
+    &quot;end&quot;: 5000000,
+    &quot;duration&quot;: 5000000,
+    &quot;volume&quot;: 0
+  },
+  {
+    &quot;video_url&quot;: &quot;http://127.0.0.1:30003/transition-02-03.mp4&quot;,
+    &quot;width&quot;: 1080,
+    &quot;height&quot;: 1920,
+    &quot;start&quot;: 5000000,
+    &quot;end&quot;: 10000000,
+    &quot;duration&quot;: 5000000,
+    &quot;volume&quot;: 0
+  }
+]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;真实调用时，把 7 段都放进去，然后请求 &lt;code&gt;add_videos&lt;/code&gt;。&lt;/p&gt;
+&lt;h2&gt;第八步：添加标题&lt;/h2&gt;
+&lt;p&gt;标题用第一次 &lt;code&gt;add_captions&lt;/code&gt; 单独添加。&lt;/p&gt;
+&lt;p&gt;例如标题是：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;诸葛亮：乱世里的清醒头脑
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;标题覆盖整条视频时间线：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[
+  {
+    &quot;start&quot;: 0,
+    &quot;end&quot;: 35000000,
+    &quot;text&quot;: &quot;诸葛亮：乱世里的清醒头脑&quot;,
+    &quot;font_size&quot;: 15
+  }
+]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;标题样式：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;border_color #000000
+font 江湖体
+font_size 15
+line_spacing 10
+text_color #ffffff
+transform_y 1369
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;注意，标题和字幕要分两次调用 &lt;code&gt;add_captions&lt;/code&gt;，不要混在一起。&lt;/p&gt;
+&lt;h2&gt;第九步：添加字幕&lt;/h2&gt;
+&lt;p&gt;字幕用第二次 &lt;code&gt;add_captions&lt;/code&gt; 添加。&lt;/p&gt;
+&lt;p&gt;字幕要和每段视频对应：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[
+  {
+    &quot;start&quot;: 0,
+    &quot;end&quot;: 5000000,
+    &quot;text&quot;: &quot;诸葛亮年轻时隐居隆中，读书、观天下，也等一个值得托付的人。&quot;,
+    &quot;font_size&quot;: 12
+  },
+  {
+    &quot;start&quot;: 5000000,
+    &quot;end&quot;: 10000000,
+    &quot;text&quot;: &quot;刘备三顾茅庐，不只是请一位军师，更是在请一套改变命运的判断。&quot;,
+    &quot;font_size&quot;: 12
+  }
+]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;字幕样式：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;border_color #000000
+font 江湖体
+font_size 12
+line_spacing 10
+text_color #ffde00
+transform_y -794
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;第十步：添加背景音乐&lt;/h2&gt;
+&lt;p&gt;调用 &lt;code&gt;add_audios&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;示例音频：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;https://od.cdnux.com/3561/i/2026/02/20/3kvn0.mp3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;音频时间线要和视频总长一致。&lt;/p&gt;
+&lt;p&gt;如果视频总长 35 秒，就写：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[
+  {
+    &quot;audio_url&quot;: &quot;https://od.cdnux.com/3561/i/2026/02/20/3kvn0.mp3&quot;,
+    &quot;start&quot;: 0,
+    &quot;end&quot;: 35000000,
+    &quot;duration&quot;: 35000000,
+    &quot;volume&quot;: 1.0
+  }
+]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果你做的是 8 段视频，总长 40 秒，那就改成：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;40000000
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;第十一步：保存草稿&lt;/h2&gt;
+&lt;p&gt;最后调用 &lt;code&gt;save_draft&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;它会把当前草稿状态保存下来。&lt;/p&gt;
+&lt;p&gt;保存成功后，你会得到草稿链接，类似：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;http://127.0.0.1:30000/openapi/capcut-mate/v1/get_draft?draft_id=xxxx
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这个链接可以查看草稿文件列表。&lt;/p&gt;
+&lt;p&gt;如果你要在剪映里直接看到草稿，还需要把生成的草稿目录复制到剪映草稿目录。&lt;/p&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;capcut-mate\output\draft\xxxx
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;复制到：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;C:\Users\你的用户名\AppData\Local\JianyingPro\User Data\Projects\com.lveditor.draft\诸葛亮-自动视频测试
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后重启剪映。&lt;/p&gt;
+&lt;h2&gt;一个完整的 Python 调用脚本&lt;/h2&gt;
+&lt;p&gt;如果你不想一个接口一个接口手动点，可以写一个 Python 脚本统一调用。&lt;/p&gt;
+&lt;p&gt;下面是最小示例。你需要按自己的路径和视频链接改一下。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;import json
+from pathlib import Path
+
+import requests
+
+
+BASE = &quot;http://127.0.0.1:30000/openapi/capcut-mate/v1&quot;
+RUN_DIR = Path(r&quot;D:\ai-video-workflow\historical-video-demo&quot;)
+SCRIPT = json.loads((RUN_DIR / &quot;script.json&quot;).read_text(encoding=&quot;utf-8-sig&quot;))
+
+SEGMENT_US = 5_000_000
+SEGMENT_COUNT = 7
+TOTAL_US = SEGMENT_US * SEGMENT_COUNT
+
+VIDEO_URLS = [
+    f&quot;http://127.0.0.1:30003/transition-{i:02d}-{i + 1:02d}.mp4&quot;
+    for i in range(1, SEGMENT_COUNT + 1)
+]
+
+
+def post(name, payload):
+    response = requests.post(f&quot;{BASE}/{name}&quot;, json=payload, timeout=180)
+    data = response.json()
+    if not response.ok or data.get(&quot;code&quot;) not in (None, 0):
+        raise RuntimeError(f&quot;{name} failed: {data}&quot;)
+    return data.get(&quot;data&quot;, data)
+
+
+created = post(&quot;create_draft&quot;, {&quot;width&quot;: 1080, &quot;height&quot;: 1920})
+draft_url = created[&quot;draft_url&quot;].replace(
+    &quot;https://capcut-mate.jcaigc.cn/openapi/capcut-mate/v1&quot;,
+    BASE,
+)
+
+video_infos = []
+for index, url in enumerate(VIDEO_URLS):
+    start = index * SEGMENT_US
+    end = (index + 1) * SEGMENT_US
+    video_infos.append({
+        &quot;video_url&quot;: url,
+        &quot;width&quot;: 1080,
+        &quot;height&quot;: 1920,
+        &quot;start&quot;: start,
+        &quot;end&quot;: end,
+        &quot;duration&quot;: SEGMENT_US,
+        &quot;volume&quot;: 0,
+    })
+
+post(&quot;add_videos&quot;, {
+    &quot;draft_url&quot;: draft_url,
+    &quot;video_infos&quot;: json.dumps(video_infos, ensure_ascii=False),
+    &quot;alpha&quot;: 1.0,
+    &quot;scale_x&quot;: 1.0,
+    &quot;scale_y&quot;: 1.0,
+    &quot;transform_x&quot;: 0,
+    &quot;transform_y&quot;: 0,
+})
+
+post(&quot;add_captions&quot;, {
+    &quot;draft_url&quot;: draft_url,
+    &quot;captions&quot;: json.dumps([
+        {
+            &quot;start&quot;: 0,
+            &quot;end&quot;: TOTAL_US,
+            &quot;text&quot;: SCRIPT[&quot;title&quot;],
+            &quot;font_size&quot;: 15,
+        }
+    ], ensure_ascii=False),
+    &quot;border_color&quot;: &quot;#000000&quot;,
+    &quot;font&quot;: &quot;江湖体&quot;,
+    &quot;font_size&quot;: 15,
+    &quot;line_spacing&quot;: 10,
+    &quot;text_color&quot;: &quot;#ffffff&quot;,
+    &quot;transform_y&quot;: 1369,
+})
+
+caption_infos = []
+for index, scene in enumerate(SCRIPT[&quot;scenes&quot;][:SEGMENT_COUNT]):
+    start = index * SEGMENT_US
+    end = (index + 1) * SEGMENT_US
+    caption_infos.append({
+        &quot;start&quot;: start,
+        &quot;end&quot;: end,
+        &quot;text&quot;: scene[&quot;caption&quot;],
+        &quot;font_size&quot;: 12,
+    })
+
+post(&quot;add_captions&quot;, {
+    &quot;draft_url&quot;: draft_url,
+    &quot;captions&quot;: json.dumps(caption_infos, ensure_ascii=False),
+    &quot;border_color&quot;: &quot;#000000&quot;,
+    &quot;font&quot;: &quot;江湖体&quot;,
+    &quot;font_size&quot;: 12,
+    &quot;line_spacing&quot;: 10,
+    &quot;text_color&quot;: &quot;#ffde00&quot;,
+    &quot;transform_y&quot;: -794,
+})
+
+post(&quot;add_audios&quot;, {
+    &quot;draft_url&quot;: draft_url,
+    &quot;audio_infos&quot;: json.dumps([{
+        &quot;audio_url&quot;: &quot;https://od.cdnux.com/3561/i/2026/02/20/3kvn0.mp3&quot;,
+        &quot;start&quot;: 0,
+        &quot;end&quot;: TOTAL_US,
+        &quot;duration&quot;: TOTAL_US,
+        &quot;volume&quot;: 1.0,
+    }], ensure_ascii=False),
+})
+
+saved = post(&quot;save_draft&quot;, {&quot;draft_url&quot;: draft_url})
+print(saved.get(&quot;draft_url&quot;, draft_url))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;运行：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;python run_capcut_workflow.py
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果最后打印出 &lt;code&gt;draft_url&lt;/code&gt;，说明整条剪映写入流程跑通了。&lt;/p&gt;
+&lt;h2&gt;常见问题&lt;/h2&gt;
+&lt;h2&gt;1. 为什么 8 张图只生成 7 段视频？&lt;/h2&gt;
+&lt;p&gt;因为首尾帧是相邻两张图生成一段视频。&lt;/p&gt;
+&lt;p&gt;8 张图之间只有 7 个间隔，所以是 7 段。&lt;/p&gt;
+&lt;p&gt;如果你想要 8 段视频，可以让最后一张图单独生成一个 5 秒镜头，或者再补一张第 9 张图。&lt;/p&gt;
+&lt;h2&gt;2. 为什么云端视频接口不认本地图片？&lt;/h2&gt;
+&lt;p&gt;因为云端服务器访问不到你电脑的 &lt;code&gt;D:\xxx\scene-01.png&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;它只能访问公网 URL，所以要先上传图床。&lt;/p&gt;
+&lt;h2&gt;3. 为什么剪映里看不到草稿？&lt;/h2&gt;
+&lt;p&gt;常见原因有三个：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;草稿没有复制到剪映草稿目录&lt;/li&gt;
+&lt;li&gt;剪映没有重启&lt;/li&gt;
+&lt;li&gt;草稿 JSON 里的素材路径不对&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;先检查草稿目录里是否有：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;draft_content.json
+draft_info.json
+assets
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果这些都有，再重启剪映。&lt;/p&gt;
+&lt;h2&gt;4. 为什么视频总长不对？&lt;/h2&gt;
+&lt;p&gt;大概率是时间线单位写错。&lt;/p&gt;
+&lt;p&gt;记住：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1 秒 = 1000000 微秒
+5 秒 = 5000000 微秒
+35 秒 = 35000000 微秒
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;每段视频的 &lt;code&gt;start&lt;/code&gt; 和 &lt;code&gt;end&lt;/code&gt; 必须首尾相接，不能都写 0。&lt;/p&gt;
+&lt;h2&gt;5. 为什么字幕和视频对不上？&lt;/h2&gt;
+&lt;p&gt;字幕数组要和视频数组顺序一致。&lt;/p&gt;
+&lt;p&gt;例如第 3 段视频是 &lt;code&gt;scene-03 -&amp;gt; scene-04&lt;/code&gt;，那第 3 条字幕也应该讲第 3 个场景。&lt;/p&gt;
+&lt;h2&gt;最后总结&lt;/h2&gt;
+&lt;p&gt;这套流水线最重要的不是某一个模型，而是结构化。&lt;/p&gt;
+&lt;p&gt;你要把每一步都保存成文件：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;script.json
+image_links.json
+video_links.json
+capcut_api_run.json
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这样一来，哪一步失败都可以单独重跑。&lt;/p&gt;
+&lt;p&gt;真正稳定的自动化不是“一句话生成大片”，而是把一件复杂的事拆成很多可检查的小步骤：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;脚本可检查
+图片可检查
+视频可检查
+时间线可检查
+剪映草稿可检查
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;当你能把“诸葛亮”跑通，换成“李白”“王阳明”“苏轼”“武则天”，本质上只是换一个人物名。&lt;/p&gt;
+&lt;p&gt;这就是这条历史人物视频流水线的价值。&lt;/p&gt;
+</content:encoded></item><item><title>Obscura：Agent专用浏览器</title><link>https://dqtx.cc/posts/aihacks/obscuraagent%E4%B8%93%E7%94%A8%E6%B5%8F%E8%A7%88%E5%99%A8/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/obscuraagent%E4%B8%93%E7%94%A8%E6%B5%8F%E8%A7%88%E5%99%A8/</guid><pubDate>Thu, 02 Jul 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近看到一个很有意思的开源项目：Obscura。&lt;/p&gt;
+&lt;p&gt;它不是给人日常上网用的浏览器。它是一个用 Rust 写的无头浏览器，更适合自动化任务、网页抓取和 AI Agent。&lt;/p&gt;
+&lt;p&gt;传统方案里，很多自动化任务会直接拉起 Chrome，再用 Puppeteer 或 Playwright 去控制它。能用，但重。Chrome 本身就大，启动慢，占内存也高。Obscura 想解决的就是这件事：让程序像浏览器一样打开网页、执行 JavaScript、读取页面内容，但不用真的启动一整个 Chrome。&lt;/p&gt;
+&lt;p&gt;它的官方介绍里有几个数字很抓人：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;约 70MB 的二进制文件&lt;/li&gt;
+&lt;li&gt;运行时约 30MB 内存&lt;/li&gt;
+&lt;li&gt;页面加载约 85 毫秒&lt;/li&gt;
+&lt;li&gt;内置追踪器拦截&lt;/li&gt;
+&lt;li&gt;支持 Chrome DevTools Protocol&lt;/li&gt;
+&lt;li&gt;可以被 Puppeteer 和 Playwright 连接&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;简单说，你电脑上的 Chrome 还照常用；自动化任务里那套笨重的 Chrome，可以考虑交给它。&lt;/p&gt;
+&lt;p&gt;项目地址：&lt;/p&gt;
+&lt;p&gt;https://github.com/h4ckf0r0day/obscura&lt;/p&gt;
+&lt;h2&gt;它真正有用的地方：让 AI 读网页&lt;/h2&gt;
+&lt;p&gt;现在很多 AI 工作流都有一个共同问题：AI 本身不能稳定地看到网页。&lt;/p&gt;
+&lt;p&gt;普通 HTTP 请求只能拿到网页源码，但很多现代网站的内容是 JavaScript 渲染出来的。你用 &lt;code&gt;curl&lt;/code&gt; 抓，可能只看到一堆空壳；真正的正文、按钮、评论、榜单，要等浏览器执行完脚本才出现。&lt;/p&gt;
+&lt;p&gt;这时候就需要一个“像浏览器一样”的工具。&lt;/p&gt;
+&lt;p&gt;Obscura 的价值就在这里：它可以打开网页，执行 JavaScript，再把渲染后的 HTML、正文、链接、资源地址交给后面的 AI 处理。&lt;/p&gt;
+&lt;p&gt;对科技博主来说，这个能力很实用。它不是炫技，它可以直接进入内容生产流程。&lt;/p&gt;
+&lt;h2&gt;场景一：自动化选题&lt;/h2&gt;
+&lt;p&gt;每天早上，让 Codex 或其他 Agent 调用 Obscura，去抓几个固定来源：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Hacker News&lt;/li&gt;
+&lt;li&gt;GitHub Trending&lt;/li&gt;
+&lt;li&gt;Product Hunt&lt;/li&gt;
+&lt;li&gt;AI 工具榜单&lt;/li&gt;
+&lt;li&gt;V2EX 科技节点&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;抓到标题和链接之后，再交给 AI 总结：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;今天哪些话题反复出现？&lt;/li&gt;
+&lt;li&gt;哪些工具值得看？&lt;/li&gt;
+&lt;li&gt;哪些讨论适合做短视频？&lt;/li&gt;
+&lt;li&gt;哪些只是热闹，但没有内容价值？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这样一来，选题就不再完全靠刷信息流。你可以让工具先跑一遍，自己只做最后判断。&lt;/p&gt;
+&lt;h2&gt;场景二：爆款文案分析&lt;/h2&gt;
+&lt;p&gt;做一期视频之前，把 5 到 10 个资料链接丢给脚本。Obscura 负责把网页正文抓下来，AI 再整理成：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;核心观点&lt;/li&gt;
+&lt;li&gt;可引用数据&lt;/li&gt;
+&lt;li&gt;争议点&lt;/li&gt;
+&lt;li&gt;适合做标题的角度&lt;/li&gt;
+&lt;li&gt;口播大纲&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这一步最省时间。&lt;/p&gt;
+&lt;p&gt;很多人写稿慢，卡的往往是资料整理。资料散在网页、博客、文档、论坛帖子里，手动复制很烦。Obscura 这类工具可以先把资料收拢起来，再让 AI 做第一轮归纳。&lt;/p&gt;
+&lt;p&gt;最后还是人来判断，但前面的体力活少很多。&lt;/p&gt;
+&lt;h2&gt;场景三：公司和产品情报采集&lt;/h2&gt;
+&lt;p&gt;你输入一个公司名，脚本自动访问它的官网、博客、文档、招聘页、GitHub，然后让 AI 生成一份“公司技术画像”。&lt;/p&gt;
+&lt;p&gt;比如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;它在招什么岗位？&lt;/li&gt;
+&lt;li&gt;技术栈是什么？&lt;/li&gt;
+&lt;li&gt;最近发了什么产品？&lt;/li&gt;
+&lt;li&gt;有没有开源项目？&lt;/li&gt;
+&lt;li&gt;适不适合投简历、合作，或者写一期分析？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这类内容很适合科技博主。它不只是搬运新闻，更像是把公开信息重新整理成一个判断。&lt;/p&gt;
+&lt;h2&gt;但它不是万能浏览器&lt;/h2&gt;
+&lt;p&gt;Obscura 适合轻量级网页抓取、JS 渲染、CDP 自动化。它不适合替代完整 Chrome。&lt;/p&gt;
+&lt;p&gt;比如，截图、复杂登录、强交互验证码、像素级页面渲染，这些就不是它的强项。遇到银行、风控很重的网站，或者必须真人交互的网站，还是得回到真实浏览器。&lt;/p&gt;
+&lt;p&gt;所以更准确的定位是：&lt;/p&gt;
+&lt;p&gt;Obscura 适合给 AI Agent 当一双轻量级的眼睛。它负责快速打开网页、读取内容、交给 AI 分析。真正需要人判断、登录、交互的地方，还是人来接管。&lt;/p&gt;
+&lt;p&gt;如果你是做科技内容、AI 工具、自动化工作流的，Obscura 这种项目值得关注。它背后代表的趋势很明确：AI 不只是聊天，它开始需要浏览器、终端、文件系统这些真实工具。&lt;/p&gt;
+&lt;p&gt;能不能用好 AI，慢慢会变成一个问题：你有没有给它配好手和眼睛。&lt;/p&gt;
+&lt;h2&gt;本机已经安装的相关工具&lt;/h2&gt;
+&lt;p&gt;这次顺手查了一下电脑上已经有的同类工具，后续可以按场景选择。&lt;/p&gt;
+&lt;h3&gt;轻量网页读取&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Obscura：轻量无头浏览器，适合快速抓网页、执行 JavaScript、提取正文和链接。&lt;/li&gt;
+&lt;li&gt;requests / httpx / curl_cffi：适合普通网页请求、接口请求和简单内容抓取。&lt;/li&gt;
+&lt;li&gt;BeautifulSoup4：适合解析 HTML，提取标题、链接、正文块。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;完整浏览器自动化&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Playwright：已经安装，浏览器内核也在本机，可以做页面交互、截图、登录态操作、复杂网页自动化。&lt;/li&gt;
+&lt;li&gt;Puppeteer：全局 npm 已安装，适合 Node.js 里的 Chrome 自动化。&lt;/li&gt;
+&lt;li&gt;Chrome：本机已安装，可以配合 CDP、Playwright、Puppeteer 或 MCP 工具使用。&lt;/li&gt;
+&lt;li&gt;chrome-devtools-mcp：可以让 AI 通过 Chrome DevTools 控制浏览器。&lt;/li&gt;
+&lt;li&gt;bb-browser：AI Agent 浏览器自动化工具，可以打开网页、获取快照、点击、填表，也有站点 adapter。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;社交平台和内容采集&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;MediaCrawler：位于 &lt;code&gt;D:\zed-workspace\MediaCrawler&lt;/code&gt;，支持小红书、抖音、快手、B站、微博、贴吧、知乎等公开信息采集，底层使用 Playwright。&lt;/li&gt;
+&lt;li&gt;agent-reach：偏 Agent 联网和平台访问。&lt;/li&gt;
+&lt;li&gt;xreach / xfetch：X/Twitter 抓取 CLI，可以搜索、读推文、线程和用户内容。&lt;/li&gt;
+&lt;li&gt;jike-web-cli：即刻平台 CLI，位于 &lt;code&gt;C:\Users\Administrator\pipx\venvs\jike-web-cli&lt;/code&gt;，可以搜索帖子、查看圈子、读取用户和评论，适合抓即刻上的选题和评论素材。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;反检测和浏览器指纹相关&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;camoufox：偏反检测浏览器自动化。&lt;/li&gt;
+&lt;li&gt;patchright：Playwright 方向的反检测自动化工具。&lt;/li&gt;
+&lt;li&gt;browserforge：浏览器指纹生成相关工具。&lt;/li&gt;
+&lt;li&gt;browser_cookie3：读取本机浏览器 Cookie，适合复用登录态。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;当前没有安装&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Selenium：未安装。&lt;/li&gt;
+&lt;li&gt;Scrapy：未安装。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;简单记法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;抓普通网页：requests / httpx / BeautifulSoup4。&lt;/li&gt;
+&lt;li&gt;抓需要 JS 渲染的网页：Obscura 或 Playwright。&lt;/li&gt;
+&lt;li&gt;要登录、点击、截图：Playwright / Puppeteer / Chrome。&lt;/li&gt;
+&lt;li&gt;抓社交平台公开内容：MediaCrawler、xreach、xfetch。&lt;/li&gt;
+&lt;li&gt;给 AI 操作浏览器：bb-browser、chrome-devtools-mcp。&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded></item><item><title>MediaCrawler工具抓评论</title><link>https://dqtx.cc/posts/aihacks/mediacrawler%E5%B7%A5%E5%85%B7%E6%8A%93%E8%AF%84%E8%AE%BA/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/mediacrawler%E5%B7%A5%E5%85%B7%E6%8A%93%E8%AF%84%E8%AE%BA/</guid><pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;我经常刷「姜胡说」的视频，他前阵子提到一个很有意思的观点，现在很多手机用户遇到问题，已经不一定会先去搜索引擎了，而是直接在短视频平台里搜。更有意思的是，他们看完视频以后，如果还有疑问，往往会直接把问题留在评论区。&lt;/p&gt;
+&lt;p&gt;这一下就让我有点触动。如果用户的问题正在从搜索框迁移到评论区，那评论区就不只是互动区了，它其实已经变成了一个很真实的需求入口。&lt;/p&gt;
+&lt;p&gt;刚好我自己这段时间在做 Codex 内容，本来想做一批 Codex 相关的短视频选题。按以前的方式，我大概会打开抖音，搜关键词，看几个视频，翻评论区，手动复制一些高赞评论，然后凭感觉总结用户痛点。&lt;/p&gt;
+&lt;p&gt;这个流程当然能做，但它太手工了，而且很容易变成一种「我以为用户关心这个」。我以为大家关心工具测评，结果评论区真正高频的是 Token 太贵、怎么登录、怎么接模型、普通人到底能不能用。&lt;/p&gt;
+&lt;p&gt;这就很尴尬。所以我当时冒出来一个念头，能不能直接从评论区里找选题？不是凭感觉找，而是真的抓一批评论回来，让 AI 从高赞评论、高回复评论、重复出现的问题里，提炼出用户真正的痛点，最后做成 10 条短视频或者文章选题。&lt;/p&gt;
+&lt;p&gt;我想跑通的就是这件事，给一个关键词，比如 codex，让 AI 去抖音里搜索相关内容，抓一批评论，提炼痛点，再输出选题。听起来不复杂，但这里有个前提，AI 自己不能凭空抓评论区，它需要一个工具。&lt;/p&gt;
+&lt;h3&gt;先找一个能抓评论的工具&lt;/h3&gt;
+&lt;p&gt;我一开始的想法很朴素，既然要抓社交平台评论，那就先找一个成熟一点的采集工具。&lt;/p&gt;
+&lt;p&gt;github搜了下找到了 MediaCrawler，它支持抖音、小红书、快手、B站、微博、贴吧、知乎这些平台，能按关键词搜索，也能保存内容和评论。&lt;/p&gt;
+&lt;p&gt;于是第一步不是写 Skill，而是把工具装好。这点其实挺重要的，很多人一说自动化，就直接开始写提示词、设计流程、想未来有多爽。但真正落地的时候，第一块砖永远是，工具能不能跑。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260701002929723.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;我把 MediaCrawler 装到本地，用 uv 创建环境、安装依赖，再处理浏览器问题。中间也不是一步到位，第一次跑的时候，Chrome 的 CDP 端口没开，工具连不上浏览器。后来改成单独的 user-data-dir，再让浏览器开放 9222 端口，流程才跑通。&lt;/p&gt;
+&lt;p&gt;最后用 MediaCrawler 搜索 codex，抓到了 14 条相关视频和 276 条评论。这里我还挺兴奋的，因为这不是一个抽象设想了，它真的从评论区拿到了数据。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260701003022261.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;跑通以后，价值才开始出现&lt;/h3&gt;
+&lt;p&gt;抓到评论以后，下一步就是分析。我让 AI 先看高赞评论，结果很有意思，评论里集中出现了几类痛点。&lt;/p&gt;
+&lt;p&gt;有人问，为什么一定要学这个。有人问，Codex 怎么安装。有人说，小白装了工具还是小白。有人吐槽 Token 太贵。有人纠结 Codex、Claude Code、国产 Agent 到底该选哪个。有人担心 AI 编程工具会不会让程序员失业。&lt;/p&gt;
+&lt;p&gt;这些评论一摆出来，选题就不再是空想了，它变成了一组来自用户嘴里的问题。&lt;/p&gt;
+&lt;p&gt;然后我让 AI 按固定结构整理成 10 条短视频脚本，每条都有简短标题、发布标题、标签，正文按钩子、痛点、解决方案、金句四段式来写。&lt;/p&gt;
+&lt;p&gt;比如「我缺的是 Codex 吗？我缺的是 Token」这个选题，就不是拍脑袋来的，它来自评论区真实高赞。这种感觉很不一样，以前做选题，是我在猜用户想看什么，现在做选题，是用户先把问题说出来，我只是把它整理成内容。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260701003128375.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;然后我突然意识到，这件事不该只做一次&lt;/h3&gt;
+&lt;p&gt;说真的，到这一步，普通人可能就结束了。抓完评论，写完 10 条选题，文件保存好，任务完成。&lt;/p&gt;
+&lt;p&gt;但我当时突然想到一个更有意思的事，既然这个流程已经跑通了，为什么不把它封装成一个 Skill？&lt;/p&gt;
+&lt;p&gt;下次我不应该再重新解释一遍，不应该再告诉 AI，先打开 MediaCrawler，再抓评论，再分析高赞，再归纳痛点，再按四段式写 10 条选题，再保存到固定目录。这太浪费了。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260701003230649.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;如果一个流程已经被验证有效，它就不应该只是一次聊天记录，它应该变成一个能力，也就是 Skill。&lt;/p&gt;
+&lt;p&gt;这就是我最近对 AI 工作流最深的一个感受，不要把 AI 当成一次性问答机，要把每一次跑通的流程，沉淀成下一次可以直接调用的能力。这才叫复利。&lt;/p&gt;
+&lt;h3&gt;把一次流程变成复利&lt;/h3&gt;
+&lt;p&gt;这个案例真正想表达的，不是 Skill 有多复杂。恰恰相反，它很朴素，从一个具体需求开始，我想从评论区找选题，然后发现抓评论需要工具，于是安装 MediaCrawler，让 AI 调用它抓评论，跑通以后再封装成 Skill。&lt;/p&gt;
+&lt;p&gt;很多人理解 Skill，会以为它就是一段更长的提示词。我觉得不是，Skill 真正有价值的地方，是它记录了一个已经被验证过的工作方式。比如默认抓哪个平台、用哪个工具、数据写到哪里、最后按什么格式输出、发布前还要检查违禁词和限流风险，这些细节写进去以后，就不需要每次重新解释。&lt;/p&gt;
+&lt;p&gt;这就是我说的复利。一次跑通的流程，如果只停留在聊天记录里，它的价值就发生一次。但如果被封装成 Skill，它就变成了下一次工作的起点。少解释一次背景，少复制一次路径，少忘一次格式，少漏一次检查，这些小事叠起来，就是一套属于自己的工作系统。&lt;/p&gt;
+&lt;p&gt;从评论区找选题只是一个例子。同样的方法，也可以用在客户调研、竞品分析、爆款拆解、销售话术、社群问题整理、产品 FAQ、知识库更新。你每跑通一个流程，就多一个自己的 Skill，也少一块重复劳动。&lt;/p&gt;
+</content:encoded></item><item><title>自由画布AI工作流</title><link>https://dqtx.cc/posts/aihacks/%E8%87%AA%E7%94%B1%E7%94%BB%E5%B8%83ai%E5%B7%A5%E4%BD%9C%E6%B5%81/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E8%87%AA%E7%94%B1%E7%94%BB%E5%B8%83ai%E5%B7%A5%E4%BD%9C%E6%B5%81/</guid><description>记录一次给朋友电脑安装 Infinite-Canvas 的可复制步骤。</description><pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;想把 Infinite-Canvas 安装到朋友电脑上，先别讲 API、模型协议和 ComfyUI。第一目标是让网页能打开。&lt;/p&gt;
+&lt;p&gt;项目地址
+https://github.com/hero8152/Infinite-Canvas/tree/main&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;Uploading file...8lx8f&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;第一步，下载项目。朋友会用 Git 的话，打开 PowerShell，进入准备保存项目的目录，例如 &lt;code&gt;D:\AI-Tools&lt;/code&gt;，执行 &lt;code&gt;git clone https://github.com/hero8152/Infinite-Canvas.git&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;不会 Git 也没关系，直接在 GitHub 页面点绿色的 &lt;code&gt;Code&lt;/code&gt;，选择 &lt;code&gt;Download ZIP&lt;/code&gt;，下载后解压到固定目录，比如 &lt;code&gt;D:\Infinite-Canvas&lt;/code&gt;。不建议放在微信下载目录或桌面临时文件夹。&lt;/p&gt;
+&lt;p&gt;第二步，安装依赖。进入项目目录，先看有没有 &lt;code&gt;python\python.exe&lt;/code&gt;。如果有，说明项目自带 Python，直接双击 &lt;code&gt;安装依赖.bat&lt;/code&gt;。如果没有，就先安装 Python 3.10 或 3.11，安装时勾选 &lt;code&gt;Add Python to PATH&lt;/code&gt;，再运行 &lt;code&gt;安装依赖.bat&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;第三步，启动服务。依赖安装完成后，双击 &lt;code&gt;run.bat&lt;/code&gt;。正常情况下浏览器会打开 &lt;code&gt;http://127.0.0.1:3000/&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;能看到页面，就说明本地服务已经跑起来了。API Key、ModelScope、ComfyUI 地址不用提前改代码，进入网页后在左下角设置里填。用在线模型就填请求地址和 key；连本地 ComfyUI 就先启动 ComfyUI，再填本机地址。&lt;/p&gt;
+&lt;p&gt;常见问题也很集中：3000 端口被占用，就关掉之前的运行窗口；依赖安装失败，多半是网络问题，换网络后重跑；页面打不开，就看运行窗口有没有报错。&lt;/p&gt;
+&lt;p&gt;一句话总结：先跑起来，再配置模型。能打开网页以后，再按需要填对应配置。&lt;/p&gt;
+</content:encoded></item><item><title>我把 Codex 用成了一个 AI 工作台</title><link>https://dqtx.cc/posts/aihacks/codex-app%E6%8C%87%E5%8D%97/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/codex-app%E6%8C%87%E5%8D%97/</guid><pubDate>Sun, 28 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;如果你每天都在用 AI，但工作效率并没有明显变高，那问题可能不是你不会提问。&lt;/p&gt;
+&lt;p&gt;也不是你还没找到那个传说中的万能提示词。&lt;/p&gt;
+&lt;p&gt;更可能是&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;你一直把 AI 当成聊天窗口&lt;/strong&gt;。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260628160849164.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;问一句，答一句。今天问完，明天重新解释。换一个项目，再重新介绍一遍背景。换一个工具，再重新复制一遍资料。&lt;/p&gt;
+&lt;p&gt;这就很尴尬。&lt;/p&gt;
+&lt;p&gt;AI 看起来很聪明，但你的工作还是你自己在搬。&lt;/p&gt;
+&lt;p&gt;你不是不会用 AI。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;你只是一直在用一次性 AI。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;聊天记录越来越多，但你的工作系统没有变强。提示词收藏越来越多，但真正干活的时候，还是要从头开始。&lt;/p&gt;
+&lt;p&gt;我最近越来越确定一件事，&lt;strong&gt;真正拉开差距的，不是你会不会写 prompt，而是你有没有把 AI 接进自己的真实工作流。&lt;/strong&gt;&lt;/p&gt;
+&lt;h3&gt;大多数人用 AI，都停在了第一层&lt;/h3&gt;
+&lt;p&gt;第一层是什么？&lt;/p&gt;
+&lt;p&gt;聊天，写一段文案，总结一篇文章，改一个标题，翻译一段内容。&lt;/p&gt;
+&lt;p&gt;这些当然有用。&lt;/p&gt;
+&lt;p&gt;但它们都有一个共同问题，太一次性了。&lt;/p&gt;
+&lt;p&gt;今天生成一条脚本，明天又重新生成。&lt;/p&gt;
+&lt;p&gt;今天整理一份资料，过两天又找不到。&lt;/p&gt;
+&lt;p&gt;今天写了一个很好用的提示词，下次遇到类似任务，还得在聊天记录里翻半天。&lt;/p&gt;
+&lt;p&gt;你以为你在使用 AI。&lt;/p&gt;
+&lt;p&gt;其实你只是在不断消耗 AI。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;消耗一次，爽一次，但没有复利。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;我以前也是这么用的。&lt;/p&gt;
+&lt;p&gt;直到我开始用 Codex。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/01-chat-vs-workbench.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;Codex 最值钱的地方，不是写代码&lt;/h3&gt;
+&lt;p&gt;很多朋友一听 Codex，就下意识觉得，这是程序员的东西。&lt;/p&gt;
+&lt;p&gt;我又不会写代码，我是不是用不上？&lt;/p&gt;
+&lt;p&gt;坦率讲，这个想法太正常了。&lt;/p&gt;
+&lt;p&gt;毕竟它看起来确实像开发工具。&lt;/p&gt;
+&lt;p&gt;但我自己用下来，反而觉得 Codex 最有意思的地方，不是写代码。&lt;/p&gt;
+&lt;p&gt;而是它可以进入你的工作现场。&lt;/p&gt;
+&lt;p&gt;它能读你的文件，能理解你的项目，能按照你的规则修改文档。&lt;/p&gt;
+&lt;p&gt;它也能调用命令行，操作浏览器，联动飞书、Obsidian、本地文件、网页、部署工具。&lt;/p&gt;
+&lt;p&gt;更重要的是，它可以把你反复做的事情沉淀下来。&lt;/p&gt;
+&lt;p&gt;比如写成 AGENTS.md，做成 skill，变成一套 SOP，沉淀到你的知识库里。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;这就不是聊天了。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;这是工作台。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/02-workbench-framework.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;我做这个知识库，是为了解决一个很具体的问题&lt;/h3&gt;
+&lt;p&gt;我不想再写一堆看起来很全，但用户买完不知道从哪开始的资料。&lt;/p&gt;
+&lt;p&gt;说实话，这种知识库太多了。&lt;/p&gt;
+&lt;p&gt;几十个目录，上百个链接，看起来很值。&lt;/p&gt;
+&lt;p&gt;但用户点进去以后，第一反应是，我到底先看哪一个？&lt;/p&gt;
+&lt;p&gt;所以这套知识库不是我坐在那里凭空整理出来的。&lt;/p&gt;
+&lt;p&gt;它是我在真实任务里一点点沉淀出来的。&lt;/p&gt;
+&lt;p&gt;写文章、改文件、整理飞书知识库、生成口播脚本、上传图床、检查文档、修复编码问题、验证命令结果。&lt;/p&gt;
+&lt;p&gt;这些事情我都让 Codex 实际干过，也踩过坑。&lt;/p&gt;
+&lt;p&gt;所以我更在意的不是“内容看起来全不全”。&lt;/p&gt;
+&lt;p&gt;而是你照着做的时候，能不能真的跑起来。&lt;/p&gt;
+&lt;p&gt;所以我做这个「Codex APP 指南」的时候，第一件事不是堆内容。&lt;/p&gt;
+&lt;p&gt;而是设计路径。&lt;/p&gt;
+&lt;p&gt;一个普通人，怎么从零开始，把 Codex 用到真实工作里？&lt;/p&gt;
+&lt;p&gt;第一步，先跑起来。第二步，学会指挥它。第三步，让它理解你的项目和规则。&lt;/p&gt;
+&lt;p&gt;第四步，把重复工作沉淀成流程。第五步，接入浏览器、飞书、Obsidian、本地文件这些真实工具。&lt;/p&gt;
+&lt;p&gt;最后，形成你自己的 AI 工作台。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;这才是这套知识库真正想卖的东西。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;不是一个教程合集，而是一条从聊天窗口走向工作系统的路。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260628160309561.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;你会在里面看到什么&lt;/h3&gt;
+&lt;p&gt;这套知识库里，我整理了几个部分。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;新手地图&lt;/strong&gt;，告诉你先看什么，后看什么，做到什么程度算跑通。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Codex 桌面 App 下载与安装&lt;/strong&gt;，让你先把工具装起来，而不是卡在第一步。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;订阅、界面、手机接管桌面任务&lt;/strong&gt;，这些是基础，但基础不清楚，后面都白搭。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;AGENTS.md、规则、记忆、项目 SOP&lt;/strong&gt;，这些东西听起来不性感，但它们决定了 Codex 会不会每次都像第一次认识你。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;浏览器自动化、Chrome、Computer Use、飞书 CLI、Obsidian&lt;/strong&gt;，这些是把 AI 接进真实工具的关键。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;实战案例&lt;/strong&gt;，比如搭网站、写脚本、生成演示 HTML、整理飞书知识库、沉淀爆款 skill。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260628160431618.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;你学完以后，最直接的变化不是“我又知道了一个工具”。&lt;/p&gt;
+&lt;p&gt;而是你的很多工作，终于不用每次从零开始。&lt;/p&gt;
+&lt;p&gt;以后让 AI 改文章，它可以先读你的账号定位和写作规则。&lt;/p&gt;
+&lt;p&gt;以后做短视频，不是临时问一句选题，而是从选题库、脚本模板、发布标题一路跑下来。&lt;/p&gt;
+&lt;p&gt;以后整理知识库，不是手动复制粘贴，而是让 Codex 按规则读、写、验证。&lt;/p&gt;
+&lt;p&gt;以后做一个小项目，也不用每次重新摸索目录、命令、部署流程。&lt;/p&gt;
+&lt;p&gt;你会开始拥有一套可以复用、可以检查、可以继续生长的 AI 工作方式。&lt;/p&gt;
+&lt;p&gt;还有参考资料。&lt;/p&gt;
+&lt;p&gt;我把 Codex 官方文档里一些关键概念也整理了出来。&lt;/p&gt;
+&lt;p&gt;比如 Rules、Hooks、Memories、Record &amp;amp; Replay。&lt;/p&gt;
+&lt;p&gt;为什么要做这个？&lt;/p&gt;
+&lt;p&gt;因为付费知识库不能只靠我说。&lt;strong&gt;关键概念要有来源，重要判断要能查证。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这样你后面自己用的时候，心里才稳。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260628160543136.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;它适合谁&lt;/h3&gt;
+&lt;p&gt;如果你只是想找一个 AI 聊天工具。&lt;/p&gt;
+&lt;p&gt;那这套知识库可能不是最适合你。&lt;/p&gt;
+&lt;p&gt;但如果你是下面几类人，我觉得你会很需要。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;你是内容创作者&lt;/strong&gt;，每天要写文章、写脚本、做选题、整理素材，但脑子里总觉得乱。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;你是运营&lt;/strong&gt;，要做活动、写文案、整理用户反馈、维护知识库，但每天都在重复劳动。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;你是知识工作者&lt;/strong&gt;，资料很多，笔记很多，收藏很多，但真正工作时还是找不到、用不上。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;你是独立开发者&lt;/strong&gt;，想用 AI 做网站、做产品、写文档、部署上线，但不想每次都从零摸索。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;你是正在做知识付费的人&lt;/strong&gt;，不只是想卖一份资料，而是想把自己的经验做成一套可交付的路径。&lt;/p&gt;
+&lt;p&gt;如果你在这些场景里。&lt;/p&gt;
+&lt;p&gt;那我想说一句比较直接的话。&lt;/p&gt;
+&lt;p&gt;你缺的可能不是更多 AI 工具。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;你缺的是一个能把工具、资料、规则、流程串起来的工作台。&lt;/strong&gt;&lt;/p&gt;
+&lt;h3&gt;这套知识库能帮你少踩什么坑&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;第一，不再每次都从零解释。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;你会知道怎么写规则，怎么整理项目上下文，怎么让 Codex 开工前先读懂你的工作方式。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第二，不再只靠提示词硬撑。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;你会把重复任务沉淀成文档、SOP、skill，而不是用完就丢。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第三，不再让 AI 乱动东西。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;你会知道哪些任务只读，哪些任务允许写草稿，哪些任务必须人工确认。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第四，不再把知识库做成资料夹。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;你会看到学习路径、案例页、参考资料、待办任务这些模块怎么组织。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第五，不再只停留在会用工具。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;你会开始设计自己的工作流。&lt;/p&gt;
+&lt;p&gt;这五件事，单独看都不夸张。&lt;/p&gt;
+&lt;p&gt;但连起来以后，差别很大。&lt;/p&gt;
+&lt;p&gt;因为它们解决的是同一个问题。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;怎么让 AI 不只是回答你，而是进入你的工作。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/04-five-pitfalls.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;我不想把它吹成万能药&lt;/h3&gt;
+&lt;p&gt;Codex 不是魔法。它会出错，需要规则，也需要你验收。&lt;/p&gt;
+&lt;p&gt;它也不是所有任务都适合自动化。&lt;/p&gt;
+&lt;p&gt;有些流程，你自己都没跑顺，就急着交给 AI，只会更乱。&lt;/p&gt;
+&lt;p&gt;所以在这套知识库里，我会反复强调一件事。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;先定义边界，再交代任务，最后验收结果。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;会用 AI 的人，不是胆子最大的人。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;是边界最清楚的人。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这也是我自己踩了一堆坑之后，最想写进去的东西。&lt;/p&gt;
+&lt;p&gt;比如飞书 CLI 写入文档，不能只看命令成功。&lt;/p&gt;
+&lt;p&gt;还要读回验证。&lt;/p&gt;
+&lt;p&gt;比如批量生成口播稿，不能只看内容多，还要检查 Day 数量和代码块数量。&lt;/p&gt;
+&lt;p&gt;比如让 AI 修改文件，不能一句你帮我优化一下就完事，要说清楚目标、材料、边界、验收标准。&lt;/p&gt;
+&lt;p&gt;这些细节不性感。&lt;/p&gt;
+&lt;p&gt;但真正让 AI 稳定干活的，&lt;strong&gt;就是这些细节。&lt;/strong&gt;&lt;/p&gt;
+&lt;h3&gt;如果你想系统学 Codex&lt;/h3&gt;
+&lt;p&gt;我已经把这套内容整理成了飞书知识库。&lt;/p&gt;
+&lt;p&gt;名字就叫：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Codex APP 指南&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;它会持续更新。&lt;/p&gt;
+&lt;p&gt;我会继续往里面补&lt;strong&gt;实战案例、踩坑记录、官方概念、提示词模板、短视频脚本、销售页拆解、自动化流程&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;我希望它最后不是一本静态教程。&lt;/p&gt;
+&lt;p&gt;而是一个&lt;strong&gt;不断生长的 AI 工作台样板&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;你可以照着学，也可以照着改，最后搭出自己的版本。&lt;/p&gt;
+&lt;p&gt;如果你自己从零摸索，可能三天还卡在配置、订阅、权限、命令和文档结构上。&lt;/p&gt;
+&lt;p&gt;如果你只看官方文档，概念可能看懂了，但落到自己的工作里，还是不知道先做哪一步。&lt;/p&gt;
+&lt;p&gt;所以这不是买几篇教程。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;这是买一条已经踩过坑的路径。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;它真正帮你省下来的，是反复试错、反复重来、反复解释背景的时间。&lt;/p&gt;
+&lt;p&gt;如果你已经开始用 AI 做真实工作，但总觉得效率没有形成复利，这套知识库会很适合你。&lt;/p&gt;
+&lt;p&gt;如果你想加入，可以通过下面这个入口购买。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/zhsihiku.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;付款后，请添加我的微信：&lt;strong&gt;dqtx33&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;添加时备注：&lt;strong&gt;Codex APP 指南&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;我会在确认后，把飞书知识库链接发给你。&lt;/p&gt;
+&lt;p&gt;这套知识库目前采用&lt;strong&gt;邀请审核制&lt;/strong&gt;，主要是为了保证早期用户质量。&lt;/p&gt;
+&lt;p&gt;正常付款并备注后，我会人工确认并发送飞书知识库链接。&lt;/p&gt;
+&lt;p&gt;我希望先进来的是一批真的想把 AI 用到工作里的人，而不是只收藏资料的人。&lt;/p&gt;
+&lt;p&gt;另外，前几名加入的同学，我会额外赠送一份&lt;strong&gt;神秘礼物&lt;/strong&gt;，方向会和 Codex 工作流、提示词模板或知识库搭建有关。&lt;/p&gt;
+&lt;p&gt;如果你还在犹豫，也没关系。&lt;/p&gt;
+&lt;p&gt;你可以先问自己一个问题：&lt;/p&gt;
+&lt;p&gt;你现在用 AI，是不是还停留在问一句、答一句？&lt;/p&gt;
+&lt;p&gt;如果是，那你迟早会遇到一个瓶颈。&lt;/p&gt;
+&lt;p&gt;AI 很强，但你的工作没有因此变成系统。&lt;/p&gt;
+&lt;p&gt;而这套知识库想解决的，就是这个问题。&lt;/p&gt;
+&lt;p&gt;最后送你一句我最近越来越相信的话。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;提示词是消耗品，工作流才是资产。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Codex 值得学的地方，不是让你多会一个工具。&lt;/p&gt;
+&lt;p&gt;而是让你开始拥有自己的&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;AI 工作系统&lt;/strong&gt;。&lt;/p&gt;
+</content:encoded></item><item><title>一个会自我进化的Obsidian知识库</title><link>https://dqtx.cc/posts/aihacks/%E4%B8%80%E4%B8%AA%E4%BC%9A%E8%87%AA%E6%88%91%E8%BF%9B%E5%8C%96%E7%9A%84obsidian%E7%9F%A5%E8%AF%86%E5%BA%93/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E4%B8%80%E4%B8%AA%E4%BC%9A%E8%87%AA%E6%88%91%E8%BF%9B%E5%8C%96%E7%9A%84obsidian%E7%9F%A5%E8%AF%86%E5%BA%93/</guid><pubDate>Mon, 22 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;收藏夹吃灰、笔记找不到、灵感转眼忘——问题不是你不够努力，而是没有一套系统。&lt;/p&gt;
+&lt;p&gt;我花了两个月时间，把三套顶级方法论整合在一起，做了一个&lt;strong&gt;会自己整理的 Obsidian 知识库模板&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;一套基于 PARA + Zettelkasten + LLM Wiki 三套方法论整合的知识管理系统。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-obsidian-ai-wiki.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;三套方法论，各管一件事&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;方法论&lt;/th&gt;
+&lt;th&gt;提出者&lt;/th&gt;
+&lt;th&gt;管什么&lt;/th&gt;
+&lt;th&gt;核心理念&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;PARA&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Tiago Forte&lt;/td&gt;
+&lt;td&gt;信息分类&lt;/td&gt;
+&lt;td&gt;按行动性分类，不是按主题&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Zettelkasten&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Niklas Luhmann&lt;/td&gt;
+&lt;td&gt;知识连接&lt;/td&gt;
+&lt;td&gt;卡片+链接，越积累越产生新洞见&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;LLM Wiki&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Andrej Karpathy&lt;/td&gt;
+&lt;td&gt;自动维护&lt;/td&gt;
+&lt;td&gt;知识编译一次，持续更新&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;这套模板，就是把他们的方法整合在一起，让你直接用。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/01-framework-three-methods.webp&quot; alt=&quot;三套方法论如何组合成 Obsidian 知识库模板&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;知识库的四层结构&lt;/h3&gt;
+&lt;p&gt;大多数知识管理的失败，是因为「只存不流」。我设计了一套&lt;strong&gt;有流动方向&lt;/strong&gt;的四层结构：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;┌─────────────────────────────────────────────────────────┐
+│  输入层：原始资料（外部输入，不可变）                       │
+├─────────────────────────────────────────────────────────┤
+│  中间层：Wiki（LLM 提炼，可查询）                         │
+├─────────────────────────────────────────────────────────┤
+│  输出层：项目（你的作品：视频、文章、产品）                 │
+├─────────────────────────────────────────────────────────┤
+│  沉淀层：领域（你的方法论、经验、指南）                     │
+└─────────────────────────────────────────────────────────┘
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/02-framework-four-layers.webp&quot; alt=&quot;Obsidian 知识库的输入层、中间层、输出层和沉淀层&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;知识怎么流动？&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;外部世界
+  ↓
+原始资料（网页剪藏、文章、论文）—— 不可变
+  ↓ /ingest 技能
+Wiki（LLM 自动维护）—— 结构化、可查询
+  ↓
+  ├→ 你查询 → 直接使用
+  ├→ 沉淀到 领域 → 你的方法论
+  └→ 输出到 项目 → 视频、文章
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;关键区别：&lt;strong&gt;Wiki 是「别人的知识」，领域是「你的知识」。&lt;/strong&gt; 从 Wiki 到领域，不是复制，而是重新写——加入你的理解、你的应用、你的经验。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/03-flowchart-knowledge-flow.webp&quot; alt=&quot;知识从外部世界流入 Wiki 并输出到项目和领域&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;每个目录的职责&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;目录&lt;/th&gt;
+&lt;th&gt;本质&lt;/th&gt;
+&lt;th&gt;谁写&lt;/th&gt;
+&lt;th&gt;谁读&lt;/th&gt;
+&lt;th&gt;类比&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;灵感库&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;碎片想法&lt;/td&gt;
+&lt;td&gt;你&lt;/td&gt;
+&lt;td&gt;LLM&lt;/td&gt;
+&lt;td&gt;便利贴&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;原始资料&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;外部输入&lt;/td&gt;
+&lt;td&gt;你放&lt;/td&gt;
+&lt;td&gt;LLM&lt;/td&gt;
+&lt;td&gt;文件柜&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Wiki&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;结构化知识&lt;/td&gt;
+&lt;td&gt;LLM&lt;/td&gt;
+&lt;td&gt;你&lt;/td&gt;
+&lt;td&gt;图书馆&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;领域&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;你的方法论&lt;/td&gt;
+&lt;td&gt;你+LLM&lt;/td&gt;
+&lt;td&gt;你&lt;/td&gt;
+&lt;td&gt;笔记本&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;参考资料&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;外部原始资料&lt;/td&gt;
+&lt;td&gt;你+LLM&lt;/td&gt;
+&lt;td&gt;你&lt;/td&gt;
+&lt;td&gt;资料夹&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;项目&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;具体任务&lt;/td&gt;
+&lt;td&gt;你+LLM&lt;/td&gt;
+&lt;td&gt;你&lt;/td&gt;
+&lt;td&gt;任务清单&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;归档&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;已完成内容&lt;/td&gt;
+&lt;td&gt;自动&lt;/td&gt;
+&lt;td&gt;你&lt;/td&gt;
+&lt;td&gt;档案室&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr /&gt;
+&lt;h3&gt;PARA：按行动性分类&lt;/h3&gt;
+&lt;p&gt;PARA 的核心不是按主题分类，而是&lt;strong&gt;按行动性分类&lt;/strong&gt;：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;分类&lt;/th&gt;
+&lt;th&gt;含义&lt;/th&gt;
+&lt;th&gt;特征&lt;/th&gt;
+&lt;th&gt;举例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;P&lt;/strong&gt;rojects&lt;/td&gt;
+&lt;td&gt;项目&lt;/td&gt;
+&lt;td&gt;有截止日期，做完就结束&lt;/td&gt;
+&lt;td&gt;这期视频、这次活动&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;A&lt;/strong&gt;reas&lt;/td&gt;
+&lt;td&gt;领域&lt;/td&gt;
+&lt;td&gt;长期维护，没有终点&lt;/td&gt;
+&lt;td&gt;内容创作、客户服务&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;R&lt;/strong&gt;esources&lt;/td&gt;
+&lt;td&gt;资源&lt;/td&gt;
+&lt;td&gt;外部资料，可能有用&lt;/td&gt;
+&lt;td&gt;官方文档、别人教程&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;A&lt;/strong&gt;rchive&lt;/td&gt;
+&lt;td&gt;归档&lt;/td&gt;
+&lt;td&gt;不再活跃，保留记录&lt;/td&gt;
+&lt;td&gt;完成的项目、过时资料&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;三个原则&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;按行动性分类，不是按主题&lt;/li&gt;
+&lt;li&gt;定期流动，项目完成 → 归档&lt;/li&gt;
+&lt;li&gt;领域只放自己的，参考资料放外部的&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;h3&gt;Zettelkasten：卡片+链接&lt;/h3&gt;
+&lt;p&gt;Zettelkasten 的核心是&lt;strong&gt;原子化 + 链接&lt;/strong&gt;。每个想法写成一张独立卡片，用 &lt;code&gt;[[]]&lt;/code&gt; 把相关卡片串起来。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;三种卡片类型&lt;/strong&gt;：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;类型&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;th&gt;举例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;闪念卡&lt;/td&gt;
+&lt;td&gt;突然想到的碎片&lt;/td&gt;
+&lt;td&gt;灵感库里的内容&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;洞见卡&lt;/td&gt;
+&lt;td&gt;经过思考的结论&lt;/td&gt;
+&lt;td&gt;某个方法论的核心观点&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;文献卡&lt;/td&gt;
+&lt;td&gt;从外部摘录的内容&lt;/td&gt;
+&lt;td&gt;读书笔记、文章摘录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;链接原则&lt;/strong&gt;：不要只链接「相关的」，要链接「能产生新想法的」。一张卡片至少链接 2 张其他卡片。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h3&gt;LLM Wiki：让 AI 帮你维护&lt;/h3&gt;
+&lt;p&gt;传统 RAG 每次提问都从原始文档重新检索，没有积累。LLM Wiki 的核心区别是：&lt;strong&gt;知识编译一次，持续更新。&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;传统 RAG：  原始文档 → 每次重新检索 → 回答（无积累）
+LLM Wiki：  原始文档 → LLM 编译成 wiki → 持续更新 → 回答（有积累）
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;三层架构&lt;/strong&gt;：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;层级&lt;/th&gt;
+&lt;th&gt;说明&lt;/th&gt;
+&lt;th&gt;谁负责&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Raw Sources&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;原始资料（文章、论文、图片、数据）&lt;/td&gt;
+&lt;td&gt;你（不可变，只读）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;The Wiki&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;LLM 生成的 markdown 文件&lt;/td&gt;
+&lt;td&gt;LLM（创建、更新、维护）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;The Schema&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;配置文件（如 CLAUDE.md）&lt;/td&gt;
+&lt;td&gt;你和 LLM 共同演化&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;三个核心操作&lt;/strong&gt;：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;操作&lt;/th&gt;
+&lt;th&gt;功能&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Ingest&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;处理新来源 → 提取关键信息 → 整合到现有 wiki&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Query&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;基于 wiki 回答问题，有价值的写回 wiki&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Lint&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;定期健康检查：矛盾、过时、孤儿页面&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr /&gt;
+&lt;h3&gt;10 个 AI 自动化技能&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/04-infographic-ai-skills.webp&quot; alt=&quot;10 个 AI 自动化技能组成捕获、组织、创造和维护闭环&quot; /&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;技能&lt;/th&gt;
+&lt;th&gt;命令&lt;/th&gt;
+&lt;th&gt;功能&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;知识卡片&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;/card&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;灵感/口播 → 结构化卡片（钩子+痛点+方案+金句）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;卡片可视化&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;/card-picture&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;文字 → 学术风格信息图&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;视频脚本&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;/card-video&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;卡片 → 口播逐字稿&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;摄入&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;/ingest&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;新文章/论文 → 自动整合到 wiki&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;查询&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;/query&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;基于 wiki 回答问题，有价值的写回 wiki&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;健康检查&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;/lint&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;扫描矛盾、孤儿页面、过时内容&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;项目管理&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;/project&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;创建项目、更新进度&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;每日复盘&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;/daily&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;扫描灵感库、检查进度、输出报告&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;发布&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;/publish&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;生成封面标题、发布标题、标签&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;归档&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;/archive&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;自动归档已完成项目&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;五套模板&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;模板&lt;/th&gt;
+&lt;th&gt;用途&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;视频脚本模板&lt;/td&gt;
+&lt;td&gt;封面标题、发布标题、标签、状态&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;知识卡片模板&lt;/td&gt;
+&lt;td&gt;来源、关联卡片&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;项目模板&lt;/td&gt;
+&lt;td&gt;截止日期、任务清单&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;文章模板&lt;/td&gt;
+&lt;td&gt;平台、阅读量&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;学习笔记模板&lt;/td&gt;
+&lt;td&gt;来源、学习时长&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr /&gt;
+&lt;h3&gt;实际工作流&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;场景 1：看到一篇好文章&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1. 剪藏到 原始资料/文章/
+2. /ingest → Wiki 自动生成结构化页面
+3. 有问题 → /query → 从 Wiki 中找答案
+4. 有价值 → 沉淀到 领域/
+5. 要做内容 → 调用 Wiki 和领域 → 输出到 项目/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;场景 2：突然有个灵感&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1. 语音转文字，记录到 灵感库/
+2. /card → 生成钩子+痛点+方案+金句
+3. /card-picture → 自动生成可视化配图
+4. /card-video → 自动转成口播逐字稿
+5. /publish → 自动生成标题和标签
+6. 录制视频，发布，归档
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;场景 3：读一本书&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1. 记录读书笔记到 参考资料/
+2. 提炼方法论，沉淀到 领域/
+3. /card 生成视频脚本
+4. 录制视频，发布，归档
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;场景 4：每日复盘&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/daily
+  ↓ 自动扫描灵感库、项目进度、wiki 健康
+  ↓ 输出复盘报告 + 建议行动
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;h3&gt;设计原则&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;先捕捉，后整理&lt;/strong&gt; — 不要让灵感溜走&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;用自己的话&lt;/strong&gt; — 不要只是摘抄&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;定期回顾&lt;/strong&gt; — 发现新的链接和洞见&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;输出倒逼输入&lt;/strong&gt; — 写作是最好的学习&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;h3&gt;适合谁？&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ 内容创作者（视频、文章、课程）&lt;/li&gt;
+&lt;li&gt;✅ 知识工作者（需要管理大量信息）&lt;/li&gt;
+&lt;li&gt;✅ 终身学习者（读书、学课程）&lt;/li&gt;
+&lt;li&gt;✅ 想用 AI 提升效率的人&lt;/li&gt;
+&lt;li&gt;❌ 纯轻量笔记需求（备忘录就够了）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;总结&lt;/h3&gt;
+&lt;p&gt;这套知识库的核心就一句话：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;你只管输入，系统帮你输出。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;灵感不丢失，知识有连接，AI 帮整理，输出更高效。&lt;/p&gt;
+&lt;p&gt;以上，既然看到这里了，如果对你有所帮助，还望不吝点赞与关注，这也是对我最大的鼓励与支持。&lt;/p&gt;
+&lt;p&gt;感谢你拨冗阅读，山高水长，我们期待下篇文章与你再见。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&amp;gt;/ 更多Agent实战干货
+迎访问我的博客：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;文章来源&lt;/strong&gt;：&lt;a href=&quot;https://mp.weixin.qq.com/s/5LkcBS6TvwXEGxIMiA-1jQ&quot;&gt;点此查看&lt;/a&gt;&lt;/p&gt;
+</content:encoded></item><item><title>自用电脑提示词软件</title><link>https://dqtx.cc/posts/software/%E8%87%AA%E7%94%A8%E7%94%B5%E8%84%91%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%BD%AF%E4%BB%B6/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E8%87%AA%E7%94%A8%E7%94%B5%E8%84%91%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%BD%AF%E4%BB%B6/</guid><description>一款 Windows 上可用的开源提词器，支持语音自动跟读、防截屏和专注模式。</description><pubDate>Mon, 22 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近找到一个挺适合线上会议和录视频使用的开源提词器。它是一个面向 Windows 的桌面提词器，核心思路很简单：把讲稿贴进去，然后在会议、直播或录制时悬浮在屏幕上辅助阅读。&lt;/p&gt;
+&lt;p&gt;项目地址
+https://github.com/pyzskw/meeting-teleprompter
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260623000420398.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;它最吸引我的地方有三个。
+第一是语音自动跟读，开启识别后，它会根据你朗读的内容自动高亮当前文字并滚动，不需要手动翻页。
+第二是防截屏模式，在腾讯会议、Zoom、飞书等共享桌面时，提词器窗口可以只让自己看到，别人看不到。
+第三是专注模式，可以隐藏标题栏和多余按钮，只留下文字区域，看起来更干净，也更不打扰当前工作画面。&lt;/p&gt;
+&lt;p&gt;这个项目基于 Electron 开发，语音识别用的是 sherpa-onnx，所以首次使用前需要在设置里下载或导入离线语音模型。
+模型准备好之后，就可以在本地完成识别，不依赖云端服务。对网络不稳定、或者不想把讲稿上传到第三方服务的人来说，这一点很实用。&lt;/p&gt;
+&lt;p&gt;整体看，它不是那种复杂的直播工具，而是一个小而准的会议辅助软件。适合做汇报、录课、录短视频口播，或者在远程会议里准备一些不想被别人看到的提示词。&lt;/p&gt;
 </content:encoded></item><item><title>微信接入 Codex，手机也能远程开发</title><link>https://dqtx.cc/posts/aihacks/%E5%BE%AE%E4%BF%A1%E6%8E%A5%E5%85%A5-codex%E6%89%8B%E6%9C%BA%E4%B9%9F%E8%83%BD%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E5%BE%AE%E4%BF%A1%E6%8E%A5%E5%85%A5-codex%E6%89%8B%E6%9C%BA%E4%B9%9F%E8%83%BD%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91/</guid><pubDate>Sun, 21 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这两天折腾了一个挺有意思的东西：&lt;/p&gt;
 &lt;p&gt;把个人微信接到 Codex 上。&lt;/p&gt;
 &lt;p&gt;以后不用一直坐在电脑前开着 Codex APP。人在外面，手机微信里发一句话，家里或办公室那台电脑上的 Codex 就能收到任务，继续帮你改代码、查项目、跑命令、整理文件。&lt;/p&gt;
@@ -597,10 +2032,10 @@ D:\zed-workspace
 &lt;p&gt;现在变成了：&lt;/p&gt;
 &lt;p&gt;想到什么，微信发一句。&lt;/p&gt;
 &lt;p&gt;对于改代码、整理文件、写博客、查项目状态这类任务，这个体验已经很实用了。&lt;/p&gt;
-&lt;p&gt;以上，既然看到这里了，如果对你有所帮助，还望不吝点赞与关注，这也是对我最大的鼓励。&lt;/p&gt;
+&lt;p&gt;以上，既然看到这里了，如果对你有所帮助，还望不吝点赞与关注，这也是对我最大的鼓励与支持。&lt;/p&gt;
 &lt;p&gt;感谢你拨冗阅读，山高水长，我们下次再见。&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&amp;gt;/ 更多干货，欢迎访问我的博客：
-&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&amp;gt;/ 更多可落地干货教程
+欢迎访问我的博客：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 </content:encoded></item><item><title>AI 使用场景速查</title><link>https://dqtx.cc/posts/aihacks/ai%E7%9A%84%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/ai%E7%9A%84%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/</guid><pubDate>Fri, 19 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;我每天跟 AI 打交道，经常有人问我同一个问题：&lt;strong&gt;AI 到底能干啥？&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;不是那种宏大的「AI 将改变世界」，而是很实际的那种——我手头这事，AI 能帮我干吗？&lt;/p&gt;
 &lt;p&gt;我整理了一下自己日常用得最多的几个场景，分门别类列出来。不是什么高深理论，都是我自己试过、正在用的。&lt;/p&gt;
@@ -656,7 +2091,7 @@ D:\zed-workspace
 &lt;p&gt;这个清单不是什么「AI 终极指南」，它只是一个&lt;strong&gt;使用记录&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;AI 的能力在快速变化，我上个月还觉得某个事 AI 干不了，这个月发现已经有成熟的方案了。所以我的建议是：&lt;strong&gt;不要等学会了再用，而是边用边学。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;遇到一个具体问题，想一想：这件事能不能交给 AI 做？试试看，不行再自己动手。试多了你就知道哪些事适合 AI，哪些事还得自己来。&lt;/p&gt;
-</content:encoded></item><item><title>多 Agent 共用技能？我撸了一个自动同步方案</title><link>https://dqtx.cc/posts/aihacks/%E5%A4%9Aagent%E5%85%B1%E7%94%A8%E6%8A%80%E8%83%BD-%E4%B8%AD%E5%A4%AE%E4%BB%93%E5%BA%93%E6%96%B9%E6%A1%88/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E5%A4%9Aagent%E5%85%B1%E7%94%A8%E6%8A%80%E8%83%BD-%E4%B8%AD%E5%A4%AE%E4%BB%93%E5%BA%93%E6%96%B9%E6%A1%88/</guid><pubDate>Fri, 19 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你装了多少个 Agent？我数了一下自己电脑上——Claude Code、Codex、Qwen、Gemini CLI、Reasonix、WorkBuddy，6 个。每个都有自己的 skills 目录，每个都要单独装 skill。&lt;/p&gt;
+</content:encoded></item><item><title>Install to Central技能</title><link>https://dqtx.cc/posts/aihacks/%E5%A4%9Aagent%E5%85%B1%E7%94%A8%E6%8A%80%E8%83%BD-%E4%B8%AD%E5%A4%AE%E4%BB%93%E5%BA%93%E6%96%B9%E6%A1%88/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E5%A4%9Aagent%E5%85%B1%E7%94%A8%E6%8A%80%E8%83%BD-%E4%B8%AD%E5%A4%AE%E4%BB%93%E5%BA%93%E6%96%B9%E6%A1%88/</guid><pubDate>Fri, 19 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你装了多少个 Agent？我数了一下自己电脑上——Claude Code、Codex、Qwen、Gemini CLI、Reasonix、WorkBuddy，6 个。每个都有自己的 skills 目录，每个都要单独装 skill。&lt;/p&gt;
 &lt;p&gt;一开始我觉得没什么，装就装呗。直到有一天我在 Claude Code 里装了一个超级好用的 skill，切到 Gemini 想用的时候发现——没有。又切回 Claude 看一眼目录结构，再手动给 Gemini 拷一份。然后隔天更新了 skill，又要同步一遍。&lt;/p&gt;
 &lt;p&gt;烦了。真的烦了。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-agent-skills-central-20260619-204833.webp&quot; alt=&quot;&quot; /&gt;
@@ -785,7 +2220,7 @@ C:\Users\Administrator\.workbuddy\skills\
 &lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/%E6%9C%AA%E5%91%BD%E5%90%8D%E7%9A%84%E8%AE%BE%E8%AE%A1.webp&quot; alt=&quot;&quot; /&gt;
 &lt;em&gt;&amp;gt;/ 作者：大强同学&lt;/em&gt;
 &lt;em&gt;&amp;gt;/ 更多干货，请访问：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-</content:encoded></item><item><title>改造 Ian Xiaohei Illustrations 技能：Gemini 后端 + 图床自动上传</title><link>https://dqtx.cc/posts/aihacks/an-xiaohei-ilustrations%E6%94%B9%E9%80%A0/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/an-xiaohei-ilustrations%E6%94%B9%E9%80%A0/</guid><pubDate>Thu, 18 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天这篇文章，我教大家如何去改造一个 skill。最近我在 GitHub 上发现了一个生图的 skill，效果也不错，但是有几点问题：&lt;/p&gt;
+</content:encoded></item><item><title>改造an-Xiaohei-ilustrations</title><link>https://dqtx.cc/posts/aihacks/an-xiaohei-ilustrations%E6%94%B9%E9%80%A0/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/an-xiaohei-ilustrations%E6%94%B9%E9%80%A0/</guid><pubDate>Thu, 18 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天这篇文章，我教大家如何去改造一个 skill。最近我在 GitHub 上发现了一个生图的 skill，效果也不错，但是有几点问题：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;后端生图需要自己配置 API：我想到自己有 Gemini 的 PRO 会员，那我为什么不能去调用它呢？&lt;/li&gt;
 &lt;li&gt;形象是小黑形象：我想着是不是可以让 AI 帮我去改造换一下，结果就可以了。&lt;/li&gt;
@@ -945,7 +2380,7 @@ composition, aspect ratio. Do not add any new text or objects.
 &lt;/table&gt;
 &lt;p&gt;整个过程的本质是：&lt;strong&gt;一个好 skill 的核心价值在于它的工作流设计（怎么消化文章、怎么选配图点、怎么组织 prompt、怎么 QA），而不是绑定某个具体的生图工具。&lt;/strong&gt; 后端生图工具、角色形象、输出渠道这三层都是可替换的「插件」，只要保持接口一致，换个实现就能让 skill 适配你自己的需求。&lt;/p&gt;
 &lt;p&gt;这也是我改造 skill 的通用思路：先读懂它的工作流设计，找到卡住的环节，再针对性地补一个本地实现。下一次你拿到一个好 skill 但环境对不上时，不妨也这么拆一下。&lt;/p&gt;
-</content:encoded></item><item><title>SpaceX正式以600亿美元收购Cursor：马斯克的AI编程帝国梦</title><link>https://dqtx.cc/posts/aihacks/spacex%E6%AD%A3%E5%BC%8F%E4%BB%A5600%E4%BA%BF%E7%BE%8E%E5%85%83%E6%94%B6%E8%B4%ADcursor/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/spacex%E6%AD%A3%E5%BC%8F%E4%BB%A5600%E4%BA%BF%E7%BE%8E%E5%85%83%E6%94%B6%E8%B4%ADcursor/</guid><pubDate>Wed, 17 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;刚刷到新闻的时候我愣了一下——SpaceX花600亿美元把Cursor给买了。&lt;/p&gt;
+</content:encoded></item><item><title>SpaceX正式以600亿美元收购Cursor</title><link>https://dqtx.cc/posts/aihacks/spacex%E6%AD%A3%E5%BC%8F%E4%BB%A5600%E4%BA%BF%E7%BE%8E%E5%85%83%E6%94%B6%E8%B4%ADcursor/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/spacex%E6%AD%A3%E5%BC%8F%E4%BB%A5600%E4%BA%BF%E7%BE%8E%E5%85%83%E6%94%B6%E8%B4%ADcursor/</guid><pubDate>Wed, 17 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;刚刷到新闻的时候我愣了一下——SpaceX花600亿美元把Cursor给买了。&lt;/p&gt;
 &lt;p&gt;这事儿发生在SpaceX刚IPO完的几天后。马斯克这边火箭刚上市，那边转手就把AI编程领域最火的公司收入囊中。你说这人是真闲不住。&lt;/p&gt;
 &lt;p&gt;SEC文件说交易大概Q3完成。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Generated_Image_16jmz816jmz816jm.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -5040,71 +6475,6 @@ https://github.com/zarazhangrui/beautiful-html-templates&lt;/p&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/jaywcjlove/quick-rss/issues&quot;&gt;jaywcjlove/quick-rss&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/ruanyf/weekly/issues&quot;&gt;ruanyf/weekly&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>一键推送Obsidian笔记到微信</title><link>https://dqtx.cc/posts/workflow/wechat-converter%E6%8F%92%E4%BB%B6/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/wechat-converter%E6%8F%92%E4%BB%B6/</guid><pubDate>Mon, 04 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近使用了一款叫「Wechat Converter」的 Obsidian 插件，觉得挺好用的，支持一键将 Obsidian 中的 Markdown 文档推送至微信公众号草稿箱。&lt;/p&gt;
-&lt;p&gt;但由于我网络 IP 经常变化，直接请求微信 API 会被拦截，本文将详细拆解配置代理流程，重点解决代理服务部署问题，让你顺利落地插件功能。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260504184445684.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;获取 AppID 与 AppSecret&lt;/h3&gt;
-&lt;p&gt;在&lt;strong&gt;微信开发者平台&lt;/strong&gt;获取公众号的核心凭证，用于插件与微信 API 对接：&lt;/p&gt;
-&lt;p&gt;进入「我的业务与服务 → 公众号 → 基础信息」，就可以看到「AppID」与「AppSecret」。&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h3&gt;部署 CF Worker 服务&lt;/h3&gt;
-&lt;h4&gt;第一步：创建 Cloudflare Worker&lt;/h4&gt;
-&lt;ol&gt;
-&lt;li&gt;登录 Cloudflare Dashboard。&lt;/li&gt;
-&lt;li&gt;左侧菜单 &lt;code&gt;计算&lt;/code&gt; → &lt;code&gt;Workers 和 Pages&lt;/code&gt; → &lt;code&gt;创建应用程序&lt;/code&gt; → &lt;code&gt;从 Hello World! 开始&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;为服务命名（建议命名为 &lt;code&gt;wechat-proxy&lt;/code&gt;），点击 &lt;code&gt;部署&lt;/code&gt; 部署初始版本。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr /&gt;
-&lt;h4&gt;第二步：编辑 Worker 代码&lt;/h4&gt;
-&lt;ol&gt;
-&lt;li&gt;前往此页面，点击复制 &lt;code&gt;Cloudflare Worker&lt;/code&gt; 方案的完整代理代码。&lt;/li&gt;
-&lt;li&gt;回到 Cloudflare 仪表盘，点击右上角 &lt;code&gt;编辑代码&lt;/code&gt;，&lt;code&gt;删除所有原有代码&lt;/code&gt;，粘贴复制的代码。&lt;/li&gt;
-&lt;li&gt;点击 &lt;code&gt;部署&lt;/code&gt;。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr /&gt;
-&lt;h4&gt;第三步：配置微信 IP 白名单&lt;/h4&gt;
-&lt;p&gt;你需要将 Cloudflare 的出口 IP 添加到微信公众号后台。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;登录微信公众号平台&lt;/li&gt;
-&lt;li&gt;进入 &lt;code&gt;设置与开发&lt;/code&gt; → &lt;code&gt;安全中心&lt;/code&gt; → &lt;code&gt;IP 白名单&lt;/code&gt;。&lt;/li&gt;
-&lt;li&gt;复制以下 IP 列表，粘贴到输入框中并保存：&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;173.245.48.0/20
-103.21.244.0/22
-103.22.200.0/22
-103.31.4.0/22
-141.101.64.0/18
-108.162.192.0/18
-190.93.240.0/20
-188.114.96.0/20
-197.234.240.0/22
-198.41.128.0/17
-162.158.0.0/15
-104.16.0.0/13
-104.24.0.0/14
-172.64.0.0/13
-131.0.72.0/22
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;最终插件配置&lt;/h3&gt;
-&lt;p&gt;打开 Obsidian，进入本插件设置页。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;code&gt;添加账号&lt;/code&gt;：填写「公众号名字」、「AppID」与「AppSecret」。&lt;/li&gt;
-&lt;li&gt;找到 &lt;code&gt;高级设置&lt;/code&gt; → &lt;code&gt;API 代理地址&lt;/code&gt;，填入你的代理 URL。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;注意事项：
-Cloudflare 的 IP 列表可能会偶发变动，若出现连接问题，请查阅 Cloudflare 官方 IP 列表，官方页面同时包含 IPv4 和 IPv6 列表，&lt;strong&gt;请仅复制 IPv4 列表&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;另外，Obsidian不要有 WebP 格式图片。如果你使用 PicList 并安装了压缩插件，图片可能会被自动转换为 WebP 格式，导致推送失败。还有就是正文中不要插入微信以外的超链接。&lt;/p&gt;
-&lt;h3&gt;相关资料&lt;/h3&gt;
-&lt;p&gt;→ Wechat Converter
-https://github.com/DavidLam-oss/obsidian-wechat-converter&lt;/p&gt;
-&lt;p&gt;→ 微信开发者平台
-https://developers.weixin.qq.com/&lt;/p&gt;
-&lt;p&gt;→ 部署替换代码
-https://xiaoweibox.top/chats/wechat-proxy.html&lt;/p&gt;
-&lt;p&gt;→ Cloudflare 官网
-https://dash.cloudflare.com/&lt;/p&gt;
-&lt;p&gt;→ Cloudflare 官方 IP 列表
-https://www.cloudflare.com/ips&lt;/p&gt;
 </content:encoded></item><item><title>网站CF加速配置指南</title><link>https://dqtx.cc/posts/technical/%E7%BD%91%E7%AB%99cf%E5%8A%A0%E9%80%9F%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E7%BD%91%E7%AB%99cf%E5%8A%A0%E9%80%9F%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97/</guid><pubDate>Mon, 04 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;本文为通过 EdgeOne 部署的静态网站，提供一套完整、可直接落地的 Cloudflare（CF）优选配置方案，兼顾全球 CDN 加速、国内三网访问稳定性与安全防护，高效解决海外托管常见的延迟高、丢包问题。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260504162956507.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;一、基础 DNS 解析配置&lt;/h3&gt;
@@ -5192,6 +6562,71 @@ https://www.cloudflare.com/ips&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;nslookup www.dqtx.cc
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;解析结果若返回 Cloudflare 节点 IP，即代表 CDN 已成功启用。此时用户访问流程为「用户→CF 节点→源站」，网站访问速度、稳定性与安全性均得到全面提升。&lt;/p&gt;
+</content:encoded></item><item><title>一键推送Obsidian笔记到微信</title><link>https://dqtx.cc/posts/workflow/wechat-converter%E6%8F%92%E4%BB%B6/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/wechat-converter%E6%8F%92%E4%BB%B6/</guid><pubDate>Mon, 04 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近使用了一款叫「Wechat Converter」的 Obsidian 插件，觉得挺好用的，支持一键将 Obsidian 中的 Markdown 文档推送至微信公众号草稿箱。&lt;/p&gt;
+&lt;p&gt;但由于我网络 IP 经常变化，直接请求微信 API 会被拦截，本文将详细拆解配置代理流程，重点解决代理服务部署问题，让你顺利落地插件功能。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260504184445684.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;获取 AppID 与 AppSecret&lt;/h3&gt;
+&lt;p&gt;在&lt;strong&gt;微信开发者平台&lt;/strong&gt;获取公众号的核心凭证，用于插件与微信 API 对接：&lt;/p&gt;
+&lt;p&gt;进入「我的业务与服务 → 公众号 → 基础信息」，就可以看到「AppID」与「AppSecret」。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h3&gt;部署 CF Worker 服务&lt;/h3&gt;
+&lt;h4&gt;第一步：创建 Cloudflare Worker&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;登录 Cloudflare Dashboard。&lt;/li&gt;
+&lt;li&gt;左侧菜单 &lt;code&gt;计算&lt;/code&gt; → &lt;code&gt;Workers 和 Pages&lt;/code&gt; → &lt;code&gt;创建应用程序&lt;/code&gt; → &lt;code&gt;从 Hello World! 开始&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;为服务命名（建议命名为 &lt;code&gt;wechat-proxy&lt;/code&gt;），点击 &lt;code&gt;部署&lt;/code&gt; 部署初始版本。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;h4&gt;第二步：编辑 Worker 代码&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;前往此页面，点击复制 &lt;code&gt;Cloudflare Worker&lt;/code&gt; 方案的完整代理代码。&lt;/li&gt;
+&lt;li&gt;回到 Cloudflare 仪表盘，点击右上角 &lt;code&gt;编辑代码&lt;/code&gt;，&lt;code&gt;删除所有原有代码&lt;/code&gt;，粘贴复制的代码。&lt;/li&gt;
+&lt;li&gt;点击 &lt;code&gt;部署&lt;/code&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;h4&gt;第三步：配置微信 IP 白名单&lt;/h4&gt;
+&lt;p&gt;你需要将 Cloudflare 的出口 IP 添加到微信公众号后台。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;登录微信公众号平台&lt;/li&gt;
+&lt;li&gt;进入 &lt;code&gt;设置与开发&lt;/code&gt; → &lt;code&gt;安全中心&lt;/code&gt; → &lt;code&gt;IP 白名单&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;复制以下 IP 列表，粘贴到输入框中并保存：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;173.245.48.0/20
+103.21.244.0/22
+103.22.200.0/22
+103.31.4.0/22
+141.101.64.0/18
+108.162.192.0/18
+190.93.240.0/20
+188.114.96.0/20
+197.234.240.0/22
+198.41.128.0/17
+162.158.0.0/15
+104.16.0.0/13
+104.24.0.0/14
+172.64.0.0/13
+131.0.72.0/22
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;最终插件配置&lt;/h3&gt;
+&lt;p&gt;打开 Obsidian，进入本插件设置页。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;添加账号&lt;/code&gt;：填写「公众号名字」、「AppID」与「AppSecret」。&lt;/li&gt;
+&lt;li&gt;找到 &lt;code&gt;高级设置&lt;/code&gt; → &lt;code&gt;API 代理地址&lt;/code&gt;，填入你的代理 URL。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;注意事项：
+Cloudflare 的 IP 列表可能会偶发变动，若出现连接问题，请查阅 Cloudflare 官方 IP 列表，官方页面同时包含 IPv4 和 IPv6 列表，&lt;strong&gt;请仅复制 IPv4 列表&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;另外，Obsidian不要有 WebP 格式图片。如果你使用 PicList 并安装了压缩插件，图片可能会被自动转换为 WebP 格式，导致推送失败。还有就是正文中不要插入微信以外的超链接。&lt;/p&gt;
+&lt;h3&gt;相关资料&lt;/h3&gt;
+&lt;p&gt;→ Wechat Converter
+https://github.com/DavidLam-oss/obsidian-wechat-converter&lt;/p&gt;
+&lt;p&gt;→ 微信开发者平台
+https://developers.weixin.qq.com/&lt;/p&gt;
+&lt;p&gt;→ 部署替换代码
+https://xiaoweibox.top/chats/wechat-proxy.html&lt;/p&gt;
+&lt;p&gt;→ Cloudflare 官网
+https://dash.cloudflare.com/&lt;/p&gt;
+&lt;p&gt;→ Cloudflare 官方 IP 列表
+https://www.cloudflare.com/ips&lt;/p&gt;
 </content:encoded></item><item><title>Kami：专业排版技能</title><link>https://dqtx.cc/posts/aihacks/kami/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/kami/</guid><pubDate>Sun, 03 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;AI生成文档最大的问题不是内容差，而是排版千篇一律的灰色平庸。&lt;/p&gt;
 &lt;p&gt;Kami（紙）是一个面向AI Agent的文档排版设计系统，用一套约束语言让每份输出都像专业印刷品。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;项目地址&lt;/strong&gt;：https://github.com/tw93/kami&lt;/p&gt;
@@ -5987,6 +7422,21 @@ curl -o ~/.claude/CLAUDE.md \
 &lt;p&gt;Karpathy 的核心洞察就一句话：&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;别告诉 AI 怎么做，告诉它什么算做完，然后放手让它跑。&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
+</content:encoded></item><item><title>一个信息追踪 Python 脚本</title><link>https://dqtx.cc/posts/technical/%E4%B8%80%E4%B8%AA%E4%BF%A1%E6%81%AF%E8%BF%BD%E8%B8%AA-python-%E8%84%9A%E6%9C%AC/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E4%B8%80%E4%B8%AA%E4%BF%A1%E6%81%AF%E8%BF%BD%E8%B8%AA-python-%E8%84%9A%E6%9C%AC/</guid><pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这个开源项目，你丢一个名字/手机号/IP给它，得到关联的社交媒体账号、归属地、地理位置信息。&lt;/p&gt;
+&lt;p&gt;在 GitHub 已获取 11.8k star。
+项目地址
+https://github.com/HunxByts/GhostTrack&lt;/p&gt;
+&lt;p&gt;仅仅一个 Python 脚本，用来做 IP / 手机号 / 用户名的基础 OSINT 信息收集。&lt;/p&gt;
+&lt;p&gt;三个模块，覆盖常见情报场景：&lt;/p&gt;
+&lt;p&gt;IP Tracker：输入目标 IP，可获取基础地理位置信息，也可以结合 Seeker 等工具做进一步关联分析（例如辅助反查真实 IP）
+Phone Tracker：手机号归属地、运营商信息查询，属于 OSINT 中很常见的基础能力
+Username Tracker：输入用户名，跨多个平台搜索公开账号信息，把分散的社交媒体痕迹拼接起来&lt;/p&gt;
+&lt;p&gt;适合人群：&lt;/p&gt;
+&lt;p&gt;做渗透测试前期信息收集的安全工程师
+学习 OSINT 方法论的安全方向学生
+CTF 比赛中需要快速做信息侦察的选手
+对信息安全和数据关联分析感兴趣的开发者&lt;/p&gt;
+&lt;p&gt;⚠️ 需要强调：该工具仅用于合法授权的安全研究与学习用途，禁止用于任何未经授权的个人追踪或隐私侵犯行为。&lt;/p&gt;
 </content:encoded></item><item><title>ShareX截屏录屏教程！</title><link>https://dqtx.cc/posts/software/sharex/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/sharex/</guid><pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;关闭通知&lt;/h3&gt;
 &lt;p&gt;位置：动作设置→通知
 建议把“任务完成后显示短暂通知”取消打勾
@@ -6015,21 +7465,6 @@ https://mp.weixin.qq.com/s/npeJO3MccOCS0QSTIWYefw
 https://utgd.net/article/20685
 一个软件，满足你所有的截图需求：ShareX
 https://sspai.com/post/43937&lt;/p&gt;
-</content:encoded></item><item><title>一个信息追踪 Python 脚本</title><link>https://dqtx.cc/posts/technical/%E4%B8%80%E4%B8%AA%E4%BF%A1%E6%81%AF%E8%BF%BD%E8%B8%AA-python-%E8%84%9A%E6%9C%AC/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E4%B8%80%E4%B8%AA%E4%BF%A1%E6%81%AF%E8%BF%BD%E8%B8%AA-python-%E8%84%9A%E6%9C%AC/</guid><pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这个开源项目，你丢一个名字/手机号/IP给它，得到关联的社交媒体账号、归属地、地理位置信息。&lt;/p&gt;
-&lt;p&gt;在 GitHub 已获取 11.8k star。
-项目地址
-https://github.com/HunxByts/GhostTrack&lt;/p&gt;
-&lt;p&gt;仅仅一个 Python 脚本，用来做 IP / 手机号 / 用户名的基础 OSINT 信息收集。&lt;/p&gt;
-&lt;p&gt;三个模块，覆盖常见情报场景：&lt;/p&gt;
-&lt;p&gt;IP Tracker：输入目标 IP，可获取基础地理位置信息，也可以结合 Seeker 等工具做进一步关联分析（例如辅助反查真实 IP）
-Phone Tracker：手机号归属地、运营商信息查询，属于 OSINT 中很常见的基础能力
-Username Tracker：输入用户名，跨多个平台搜索公开账号信息，把分散的社交媒体痕迹拼接起来&lt;/p&gt;
-&lt;p&gt;适合人群：&lt;/p&gt;
-&lt;p&gt;做渗透测试前期信息收集的安全工程师
-学习 OSINT 方法论的安全方向学生
-CTF 比赛中需要快速做信息侦察的选手
-对信息安全和数据关联分析感兴趣的开发者&lt;/p&gt;
-&lt;p&gt;⚠️ 需要强调：该工具仅用于合法授权的安全研究与学习用途，禁止用于任何未经授权的个人追踪或隐私侵犯行为。&lt;/p&gt;
 </content:encoded></item><item><title>Xiaomi MiMo百万亿 Token 激励计划</title><link>https://dqtx.cc/posts/aihacks/xiaomi-mimo%E7%99%BE%E4%B8%87%E4%BA%BFtoken/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/xiaomi-mimo%E7%99%BE%E4%B8%87%E4%BA%BFtoken/</guid><pubDate>Wed, 29 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Xiaomi MiMo 将面向全球 AI 用户进行免费 Token 发放，我们将在 30 天内发放总计 100 万亿（100T） Token 权益，赠完即止。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260429164836641.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;活动说明&lt;/h3&gt;
@@ -7227,6 +8662,74 @@ cd C:\Users\Administrator\AISkills
 &lt;/ol&gt;
 &lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;参考资料&lt;/strong&gt;：&lt;a href=&quot;https://mp.weixin.qq.com/s/XWS97jr_PwcbbmKkZVqbyw&quot;&gt;点此查看&lt;/a&gt;&lt;/p&gt;
+</content:encoded></item><item><title>我push博客时泄露了API</title><link>https://dqtx.cc/posts/technical/push%E6%B3%84%E9%9C%B2api/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/push%E6%B3%84%E9%9C%B2api/</guid><pubDate>Tue, 21 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天在推送 &lt;code&gt;fuwari&lt;/code&gt; 博客仓库到 GitHub 时，遭遇了一个意料之外但又在情理之中的拦截。GitHub 直接拒绝了我的推送，提示发现了「Secret（密钥）」泄露。经过排查和修复，两个仓库的 API Token 泄露风险已解除。写下这篇文章，既是复盘，也是给有类似经历的朋友一个参考。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260421233006929.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;事件回顾&lt;/h2&gt;
+&lt;p&gt;像往常一样，我在 Obsidian 中写完一篇博客后，执行 &lt;code&gt;git push&lt;/code&gt; 准备推送到 GitHub。然而这次推送失败了，错误信息如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;remote: error: GH013: Repository rule violations found for refs/heads/main.
+remote:
+remote: - Push cannot contain secrets
+remote:
+remote:  — Notion API Token ——————————————————————————————————
+remote:    locations:
+remote:      - commit: 25f1c5df1c410ba48f6890a8961371de5cf6cef8
+remote:        path: src/content/.obsidian/plugins/share-to-notionnext/data.json:29
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;GitHub 的 &lt;strong&gt;Push Protection（推送保护）&lt;/strong&gt; 功能检测到了我的 Notion API Token 泄露。问题出在 Obsidian 插件 &lt;code&gt;Share to NotionNext&lt;/code&gt; 的配置文件 &lt;code&gt;data.json&lt;/code&gt; 中，我配置了 Notion 的 API 密钥，而这个文件被 Git 跟踪并推送到了远程仓库。&lt;/p&gt;
+&lt;p&gt;有趣的是，同步排查另一个仓库 &lt;code&gt;zhishiku&lt;/code&gt; 时，我发现它虽然也安装了同样的插件、同样包含 API Token，却没有被拦截。这可能是因为 Token 格式（&lt;code&gt;ntn_&lt;/code&gt; 开头）的识别率不同，或者该仓库的 Push Protection 设置没有 fuwari 那么严格。但不管怎样，这确实是一个安全隐患。&lt;/p&gt;
+&lt;h2&gt;问题根因&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;为什么 API Token 会泄露到 GitHub？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;核心原因是：&lt;strong&gt;Obsidian 的 &lt;code&gt;.obsidian&lt;/code&gt; 目录被 Git 跟踪了。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;.obsidian&lt;/code&gt; 是 Obsidian 的配置目录，里面包含了插件配置、主题设置、工作区状态等信息。当我们安装像 &lt;code&gt;Share to NotionNext&lt;/code&gt; 这类需要 API 密钥的插件时，插件会把配置（包括 Token）保存在 &lt;code&gt;data.json&lt;/code&gt; 文件中。如果这个目录被 Git 跟踪，每次推送都会把这些敏感信息一起送到远程仓库。&lt;/p&gt;
+&lt;p&gt;GitHub 提供了 Secret Scanning（密钥扫描）功能，会自动扫描推送的内容，识别常见的密钥格式（如 AWS Key、Notion Token、OpenAI API Key 等），发现后会拦截推送并通知开发者。这就是为什么 fuwari 仓库被拦截的原因。&lt;/p&gt;
+&lt;h2&gt;解决方案&lt;/h2&gt;
+&lt;h3&gt;方案一：修改 .gitignore（推荐）&lt;/h3&gt;
+&lt;p&gt;最简单有效的方案是把 &lt;code&gt;.obsidian/&lt;/code&gt; 目录加入 &lt;code&gt;.gitignore&lt;/code&gt;，让 Git 忽略这个目录。具体步骤如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;在项目根目录的 &lt;code&gt;.gitignore&lt;/code&gt; 文件中添加：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.obsidian/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;从 Git 跟踪中移除已存在的 &lt;code&gt;.obsidian&lt;/code&gt; 目录：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git rm --cached -r .obsidian/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;提交并推送：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git add .gitignore
+git commit -m &quot;chore: ignore .obsidian directory&quot;
+git push
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这样操作后，&lt;code&gt;.obsidian&lt;/code&gt; 目录会保留在本地，但不会被 Git 跟踪，API Token 也就不会再泄露了。&lt;/p&gt;
+&lt;h3&gt;方案二：清理 Git 历史&lt;/h3&gt;
+&lt;p&gt;如果已经推送了包含 Token 的提交，需要从 Git 历史中彻底删除它。可以使用 &lt;code&gt;git filter-repo&lt;/code&gt; 工具：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# 安装工具
+pip install git-filter-repo
+
+# 从历史中移除指定文件
+git filter-repo --path .obsidian/plugins/share-to-notionnext/data.json --invert-paths --force
+
+# 重新添加 remote 并推送
+git remote add origin your-repo-url
+git push --force
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;注意：这种方法会重写 Git 历史，如果与其他开发者共享仓库，需要协调好。&lt;/p&gt;
+&lt;h3&gt;方案三：轮换 API Token&lt;/h3&gt;
+&lt;p&gt;无论采用哪种方案，都建议&lt;strong&gt;重新生成 API Token&lt;/strong&gt;。即使已经修复了泄露问题，旧的 Token 可能已经在某个时刻被恶意获取。前往相关服务的设置页面（如 Notion 集成设置）生成新的密钥，并更新本地配置。&lt;/p&gt;
+&lt;h2&gt;经验总结&lt;/h2&gt;
+&lt;p&gt;这次事件虽然是个「事故」，但也带来了几点有价值的思考：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第一，敏感配置一定要排除在 Git 跟踪之外。&lt;/strong&gt; 不只是 &lt;code&gt;.obsidian&lt;/code&gt;，任何包含 API Key、Token、密码的文件都应该加入 &lt;code&gt;.gitignore&lt;/code&gt;。常见的包括 &lt;code&gt;.env&lt;/code&gt;、&lt;code&gt;.env.local&lt;/code&gt;、&lt;code&gt;config/secrets.json&lt;/code&gt; 等。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第二，GitHub 的 Push Protection 是最后一道防线，而非第一道。&lt;/strong&gt; 这次能被拦截是幸运的，说明 GitHub 的密钥扫描确实在起作用。但并非所有格式的密钥都能被识别，这次 &lt;code&gt;zhishiku&lt;/code&gt; 仓库的 Token 就漏过了扫描。所以不能依赖 GitHub 的保护，自己做好防范才是根本。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第三，本地配置不影响使用。&lt;/strong&gt; 很多人担心忽略 &lt;code&gt;.obsidian&lt;/code&gt; 后会影响 Obsidian 的功能。实际上 &lt;code&gt;.gitignore&lt;/code&gt; 只是阻止 Git 跟踪，不影响文件的本地存在和使用。插件配置会正常读取本地文件，只是不会同步到远程仓库。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第四，定期排查仓库安全。&lt;/strong&gt; 建议定期检查自己的仓库是否有敏感信息泄露，可以用 GitHub 的「Secret scanning alerts」功能查看已泄露的密钥（如果有的话）。&lt;/p&gt;
+&lt;h2&gt;附：两个仓库的修复记录&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260422222241120.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;修复完成后，两个仓库都安全了，以后再也不用担心 API Token 泄露的问题。&lt;/p&gt;
+&lt;p&gt;文章来源：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;  远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/p&gt;
 </content:encoded></item><item><title>Obsidian 同步 Notion 神插件</title><link>https://dqtx.cc/posts/workflow/ob%E5%90%8C%E6%AD%A5notion%E6%8F%92%E4%BB%B6/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/ob%E5%90%8C%E6%AD%A5notion%E6%8F%92%E4%BB%B6/</guid><pubDate>Tue, 21 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;我最近发现了一个超好用的 Obsidian 神器，叫 Share to NotionNext！&lt;/p&gt;
 &lt;p&gt;可以直接把Obsidian里的Markdown同步到Notion数据库，还能自动生成NotionNext博客，告别复制粘贴、排版错乱，一篇文章秒发博客。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260421200259532.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
@@ -7330,74 +8833,6 @@ https://v.douyin.com/4K4Njgxq0Oc/&lt;/p&gt;
 https://mp.weixin.qq.com/s/kPjIpHmzciWY8_3ettEVsg&lt;/p&gt;
 &lt;p&gt;→NotionNext帮助手册：
 https://docs.tangly1024.com/about&lt;/p&gt;
-</content:encoded></item><item><title>我push博客时泄露了API</title><link>https://dqtx.cc/posts/technical/push%E6%B3%84%E9%9C%B2api/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/push%E6%B3%84%E9%9C%B2api/</guid><pubDate>Tue, 21 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天在推送 &lt;code&gt;fuwari&lt;/code&gt; 博客仓库到 GitHub 时，遭遇了一个意料之外但又在情理之中的拦截。GitHub 直接拒绝了我的推送，提示发现了「Secret（密钥）」泄露。经过排查和修复，两个仓库的 API Token 泄露风险已解除。写下这篇文章，既是复盘，也是给有类似经历的朋友一个参考。
-&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260421233006929.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;事件回顾&lt;/h2&gt;
-&lt;p&gt;像往常一样，我在 Obsidian 中写完一篇博客后，执行 &lt;code&gt;git push&lt;/code&gt; 准备推送到 GitHub。然而这次推送失败了，错误信息如下：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;remote: error: GH013: Repository rule violations found for refs/heads/main.
-remote:
-remote: - Push cannot contain secrets
-remote:
-remote:  — Notion API Token ——————————————————————————————————
-remote:    locations:
-remote:      - commit: 25f1c5df1c410ba48f6890a8961371de5cf6cef8
-remote:        path: src/content/.obsidian/plugins/share-to-notionnext/data.json:29
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;GitHub 的 &lt;strong&gt;Push Protection（推送保护）&lt;/strong&gt; 功能检测到了我的 Notion API Token 泄露。问题出在 Obsidian 插件 &lt;code&gt;Share to NotionNext&lt;/code&gt; 的配置文件 &lt;code&gt;data.json&lt;/code&gt; 中，我配置了 Notion 的 API 密钥，而这个文件被 Git 跟踪并推送到了远程仓库。&lt;/p&gt;
-&lt;p&gt;有趣的是，同步排查另一个仓库 &lt;code&gt;zhishiku&lt;/code&gt; 时，我发现它虽然也安装了同样的插件、同样包含 API Token，却没有被拦截。这可能是因为 Token 格式（&lt;code&gt;ntn_&lt;/code&gt; 开头）的识别率不同，或者该仓库的 Push Protection 设置没有 fuwari 那么严格。但不管怎样，这确实是一个安全隐患。&lt;/p&gt;
-&lt;h2&gt;问题根因&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;为什么 API Token 会泄露到 GitHub？&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;核心原因是：&lt;strong&gt;Obsidian 的 &lt;code&gt;.obsidian&lt;/code&gt; 目录被 Git 跟踪了。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;.obsidian&lt;/code&gt; 是 Obsidian 的配置目录，里面包含了插件配置、主题设置、工作区状态等信息。当我们安装像 &lt;code&gt;Share to NotionNext&lt;/code&gt; 这类需要 API 密钥的插件时，插件会把配置（包括 Token）保存在 &lt;code&gt;data.json&lt;/code&gt; 文件中。如果这个目录被 Git 跟踪，每次推送都会把这些敏感信息一起送到远程仓库。&lt;/p&gt;
-&lt;p&gt;GitHub 提供了 Secret Scanning（密钥扫描）功能，会自动扫描推送的内容，识别常见的密钥格式（如 AWS Key、Notion Token、OpenAI API Key 等），发现后会拦截推送并通知开发者。这就是为什么 fuwari 仓库被拦截的原因。&lt;/p&gt;
-&lt;h2&gt;解决方案&lt;/h2&gt;
-&lt;h3&gt;方案一：修改 .gitignore（推荐）&lt;/h3&gt;
-&lt;p&gt;最简单有效的方案是把 &lt;code&gt;.obsidian/&lt;/code&gt; 目录加入 &lt;code&gt;.gitignore&lt;/code&gt;，让 Git 忽略这个目录。具体步骤如下：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;在项目根目录的 &lt;code&gt;.gitignore&lt;/code&gt; 文件中添加：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;.obsidian/
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;从 Git 跟踪中移除已存在的 &lt;code&gt;.obsidian&lt;/code&gt; 目录：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;git rm --cached -r .obsidian/
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;提交并推送：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;git add .gitignore
-git commit -m &quot;chore: ignore .obsidian directory&quot;
-git push
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;这样操作后，&lt;code&gt;.obsidian&lt;/code&gt; 目录会保留在本地，但不会被 Git 跟踪，API Token 也就不会再泄露了。&lt;/p&gt;
-&lt;h3&gt;方案二：清理 Git 历史&lt;/h3&gt;
-&lt;p&gt;如果已经推送了包含 Token 的提交，需要从 Git 历史中彻底删除它。可以使用 &lt;code&gt;git filter-repo&lt;/code&gt; 工具：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# 安装工具
-pip install git-filter-repo
-
-# 从历史中移除指定文件
-git filter-repo --path .obsidian/plugins/share-to-notionnext/data.json --invert-paths --force
-
-# 重新添加 remote 并推送
-git remote add origin your-repo-url
-git push --force
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;注意：这种方法会重写 Git 历史，如果与其他开发者共享仓库，需要协调好。&lt;/p&gt;
-&lt;h3&gt;方案三：轮换 API Token&lt;/h3&gt;
-&lt;p&gt;无论采用哪种方案，都建议&lt;strong&gt;重新生成 API Token&lt;/strong&gt;。即使已经修复了泄露问题，旧的 Token 可能已经在某个时刻被恶意获取。前往相关服务的设置页面（如 Notion 集成设置）生成新的密钥，并更新本地配置。&lt;/p&gt;
-&lt;h2&gt;经验总结&lt;/h2&gt;
-&lt;p&gt;这次事件虽然是个「事故」，但也带来了几点有价值的思考：&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;第一，敏感配置一定要排除在 Git 跟踪之外。&lt;/strong&gt; 不只是 &lt;code&gt;.obsidian&lt;/code&gt;，任何包含 API Key、Token、密码的文件都应该加入 &lt;code&gt;.gitignore&lt;/code&gt;。常见的包括 &lt;code&gt;.env&lt;/code&gt;、&lt;code&gt;.env.local&lt;/code&gt;、&lt;code&gt;config/secrets.json&lt;/code&gt; 等。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;第二，GitHub 的 Push Protection 是最后一道防线，而非第一道。&lt;/strong&gt; 这次能被拦截是幸运的，说明 GitHub 的密钥扫描确实在起作用。但并非所有格式的密钥都能被识别，这次 &lt;code&gt;zhishiku&lt;/code&gt; 仓库的 Token 就漏过了扫描。所以不能依赖 GitHub 的保护，自己做好防范才是根本。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;第三，本地配置不影响使用。&lt;/strong&gt; 很多人担心忽略 &lt;code&gt;.obsidian&lt;/code&gt; 后会影响 Obsidian 的功能。实际上 &lt;code&gt;.gitignore&lt;/code&gt; 只是阻止 Git 跟踪，不影响文件的本地存在和使用。插件配置会正常读取本地文件，只是不会同步到远程仓库。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;第四，定期排查仓库安全。&lt;/strong&gt; 建议定期检查自己的仓库是否有敏感信息泄露，可以用 GitHub 的「Secret scanning alerts」功能查看已泄露的密钥（如果有的话）。&lt;/p&gt;
-&lt;h2&gt;附：两个仓库的修复记录&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260422222241120.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;修复完成后，两个仓库都安全了，以后再也不用担心 API Token 泄露的问题。&lt;/p&gt;
-&lt;p&gt;文章来源：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;  远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/p&gt;
 </content:encoded></item><item><title>谷歌新产品&amp;功能</title><link>https://dqtx.cc/posts/software/00google/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/00google/</guid><pubDate>Mon, 20 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这篇文章将在后续的时间里会持续更新谷歌最新推出的一些新产品，不限于各种新品或原本产品的新功能。&lt;/p&gt;
 &lt;h2&gt;产品-Google App&lt;/h2&gt;
 &lt;p&gt;Windows 版下载： &lt;strong&gt;&lt;a href=&quot;https://search.google/google-app/desktop/&quot;&gt;点击前往&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
@@ -12526,66 +13961,6 @@ category: Technical
 &lt;h2&gt;网易爆米花（手机端/TV端）&lt;/h2&gt;
 &lt;p&gt;网易爆米花官网：&lt;a href=&quot;https://bmh.163.com/&quot;&gt;点此直达&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;添加WebDAV，自动刮削&lt;/p&gt;
-</content:encoded></item><item><title>OBS摄像头一键移动插件</title><link>https://dqtx.cc/posts/workflow/obs%E6%8F%92%E4%BB%B6%E6%91%84%E5%83%8F%E5%A4%B4%E7%A7%BB%E5%8A%A8/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/obs%E6%8F%92%E4%BB%B6%E6%91%84%E5%83%8F%E5%A4%B4%E7%A7%BB%E5%8A%A8/</guid><description>想让 OBS 摄像头实现「一键移动+一键复位」的平滑效果？不管是直播过场切换、录课构图调整，还是避免画面遮挡，motion-effect 插件都能轻松搞定！无需复杂操作，3 步就能实现精准位移，让你的...</description><pubDate>Thu, 15 Jan 2026 11:20:00 GMT</pubDate><content:encoded>&lt;p&gt;想让 OBS 摄像头实现「一键移动+一键复位」的平滑效果？不管是直播过场切换、录课构图调整，还是避免画面遮挡，motion-effect 插件都能轻松搞定！无需复杂操作，3 步就能实现精准位移，让你的画面切换更专业～&lt;/p&gt;
-&lt;h2&gt;一、插件简介&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;开发者：CatxFish（免费开源）&lt;/li&gt;
-&lt;li&gt;核心功能：画面平滑运动控制（平移、旋转、变焦等），支持往返触发&lt;/li&gt;
-&lt;li&gt;适配设备：绝大多数普通 USB 摄像头、部分 PTZ 摄像头&lt;/li&gt;
-&lt;li&gt;兼容系统：Windows、macOS、Linux&lt;/li&gt;
-&lt;li&gt;项目地址：https://github.com/CatxFish/motion-effect&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;二、安装步骤&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;下载对应系统安装包，解压后将文件放入 obs-studio 主文件夹&lt;/li&gt;
-&lt;li&gt;重启 OBS 完成生效&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2&gt;三、前置准备&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;场景名：教程（可自定义）&lt;/li&gt;
-&lt;li&gt;源：摄像头、显示器（按需添加）&lt;/li&gt;
-&lt;li&gt;目标效果：按快捷键 → 摄像头右下移动；再按快捷键 → 摄像头左上返回&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;四、配置流程&lt;/h2&gt;
-&lt;h3&gt;1. 记录初始坐标&lt;/h3&gt;
-&lt;p&gt;右键「源→摄像头」→ 变换→编辑变换，记录初始坐标（示例：1725, 489）&lt;/p&gt;
-&lt;h3&gt;2. 添加运动滤镜&lt;/h3&gt;
-&lt;p&gt;选中场景「教程」→ 右键→滤镜→效果滤镜→左下角「+」→ 选择「Motion」&lt;br /&gt;
-命名滤镜（自定义），核心参数配置：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Trigger Behavior 设为「Hotkey (Round trip)」（往返模式）&lt;/li&gt;
-&lt;li&gt;填写记录的初始坐标与目标坐标（示例目标：1735, 539）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260117005310134.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;3. 绑定快捷键&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;OBS 顶部→设置→快捷键&lt;/li&gt;
-&lt;li&gt;找到对应滤镜，为「Forward」和「Backward」绑定同一快捷键（示例：Alt+K）&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260117005511984.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;五、效果说明&lt;/h2&gt;
-&lt;p&gt;&lt;img alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;以上就是 motion-effect 插件的核心配置流程，全程聚焦「快速部署+实用效果」，无需多余步骤！插件轻量开源，兼容主流系统与摄像头，如需调整移动距离、速度或拓展多档位，直接修改坐标与参数即可。&lt;/p&gt;
-&lt;p&gt;✨ &lt;strong&gt;互动时间&lt;/strong&gt;&lt;br /&gt;
-你平时用 OBS 做直播/录课时，还遇到过哪些画面调整的难题？欢迎在评论区留言分享，我会一一解答～&lt;/p&gt;
-&lt;p&gt;如果觉得这篇教程对你有帮助，别忘了&lt;strong&gt;点赞+收藏+转发&lt;/strong&gt;三连呀！关注我，后续分享更多OBS 实用技巧、效率工具干货，下次见～ 👋&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;大强远程技术支持：742112.xyz&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;+86新注册电报，绕过sms收费
-1、换IP，建议，美 日 新 节点，不建议香港节点。
-2、换客户端，telegramx，或者这两个。
-[telegramx](https://github.com/TGX-Android/Telegram-X/releases) [第三方客户端](https://github.com/forkgram/TelegramAndroid/releases) [飞机旧版](https://www.apkmirror.com/uploads/?devcategory=telegram-fz-llc) 
-
-3、卡bug，可以邮箱验证优先邮箱验证。
-
-遇到付费解密强制重启app，多试几次有概率可以跳过。
-&lt;/code&gt;&lt;/pre&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;+86新注册电报，绕过sms收费&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;1、换IP，建议，美 日 新 节点，不建议香港节点。
-2、换客户端，telegramx，或者这两个。
-&lt;a href=&quot;https://github.com/TGX-Android/Telegram-X/releases&quot;&gt;telegramx&lt;/a&gt; &lt;a href=&quot;https://github.com/forkgram/TelegramAndroid/releases&quot;&gt;第三方客户端&lt;/a&gt; &lt;a href=&quot;https://www.apkmirror.com/uploads/?devcategory=telegram-fz-llc&quot;&gt;飞机旧版&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;3、卡bug，可以邮箱验证优先邮箱验证。遇到付费解密强制重启app，多试几次有概率可以跳过。&lt;/p&gt;
-&lt;/blockquote&gt;
 </content:encoded></item><item><title>Passkeys通行密钥</title><link>https://dqtx.cc/posts/technical/passkeys%E9%80%9A%E8%A1%8C%E5%AF%86%E9%92%A5/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/passkeys%E9%80%9A%E8%A1%8C%E5%AF%86%E9%92%A5/</guid><description>你是否厌倦了记密码？设个简单的不安全，设个复杂的记不住？每次登录还要翻找密码本、或者点那该死的&apos;忘记密码&apos;？这几天测试了一圈Passkeys（通行密钥），我只能...</description><pubDate>Thu, 15 Jan 2026 11:20:00 GMT</pubDate><content:encoded>&lt;p&gt;你是否厌倦了记密码？设个简单的不安全，设个复杂的记不住？每次登录还要翻找密码本、或者点那该死的&quot;忘记密码&quot;？这几天测试了一圈&lt;strong&gt;Passkeys（通行密钥）&lt;/strong&gt;，我只能说：**真TM牛逼！**以后再也不用记密码了，指纹一按、Face ID 一扫，直接登录，速度那叫一个快！今天就给大家分享这个让密码彻底淘汰的神仙技术。&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h2&gt;一、什么是 Passkeys？&lt;/h2&gt;
@@ -12748,6 +14123,66 @@ https://www.passkeys.com/websites-with-passkey-support-sites-directory&lt;/p&gt;
 &lt;li&gt;建议配合密码管理器使用，覆盖不支持的场景&lt;/li&gt;
 &lt;li&gt;多设备备份很重要，别只依赖单一设备&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>OBS摄像头一键移动插件</title><link>https://dqtx.cc/posts/workflow/obs%E6%8F%92%E4%BB%B6%E6%91%84%E5%83%8F%E5%A4%B4%E7%A7%BB%E5%8A%A8/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/obs%E6%8F%92%E4%BB%B6%E6%91%84%E5%83%8F%E5%A4%B4%E7%A7%BB%E5%8A%A8/</guid><description>想让 OBS 摄像头实现「一键移动+一键复位」的平滑效果？不管是直播过场切换、录课构图调整，还是避免画面遮挡，motion-effect 插件都能轻松搞定！无需复杂操作，3 步就能实现精准位移，让你的...</description><pubDate>Thu, 15 Jan 2026 11:20:00 GMT</pubDate><content:encoded>&lt;p&gt;想让 OBS 摄像头实现「一键移动+一键复位」的平滑效果？不管是直播过场切换、录课构图调整，还是避免画面遮挡，motion-effect 插件都能轻松搞定！无需复杂操作，3 步就能实现精准位移，让你的画面切换更专业～&lt;/p&gt;
+&lt;h2&gt;一、插件简介&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;开发者：CatxFish（免费开源）&lt;/li&gt;
+&lt;li&gt;核心功能：画面平滑运动控制（平移、旋转、变焦等），支持往返触发&lt;/li&gt;
+&lt;li&gt;适配设备：绝大多数普通 USB 摄像头、部分 PTZ 摄像头&lt;/li&gt;
+&lt;li&gt;兼容系统：Windows、macOS、Linux&lt;/li&gt;
+&lt;li&gt;项目地址：https://github.com/CatxFish/motion-effect&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;二、安装步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;下载对应系统安装包，解压后将文件放入 obs-studio 主文件夹&lt;/li&gt;
+&lt;li&gt;重启 OBS 完成生效&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;三、前置准备&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;场景名：教程（可自定义）&lt;/li&gt;
+&lt;li&gt;源：摄像头、显示器（按需添加）&lt;/li&gt;
+&lt;li&gt;目标效果：按快捷键 → 摄像头右下移动；再按快捷键 → 摄像头左上返回&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;四、配置流程&lt;/h2&gt;
+&lt;h3&gt;1. 记录初始坐标&lt;/h3&gt;
+&lt;p&gt;右键「源→摄像头」→ 变换→编辑变换，记录初始坐标（示例：1725, 489）&lt;/p&gt;
+&lt;h3&gt;2. 添加运动滤镜&lt;/h3&gt;
+&lt;p&gt;选中场景「教程」→ 右键→滤镜→效果滤镜→左下角「+」→ 选择「Motion」&lt;br /&gt;
+命名滤镜（自定义），核心参数配置：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Trigger Behavior 设为「Hotkey (Round trip)」（往返模式）&lt;/li&gt;
+&lt;li&gt;填写记录的初始坐标与目标坐标（示例目标：1735, 539）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260117005310134.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;3. 绑定快捷键&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;OBS 顶部→设置→快捷键&lt;/li&gt;
+&lt;li&gt;找到对应滤镜，为「Forward」和「Backward」绑定同一快捷键（示例：Alt+K）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260117005511984.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;五、效果说明&lt;/h2&gt;
+&lt;p&gt;&lt;img alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;以上就是 motion-effect 插件的核心配置流程，全程聚焦「快速部署+实用效果」，无需多余步骤！插件轻量开源，兼容主流系统与摄像头，如需调整移动距离、速度或拓展多档位，直接修改坐标与参数即可。&lt;/p&gt;
+&lt;p&gt;✨ &lt;strong&gt;互动时间&lt;/strong&gt;&lt;br /&gt;
+你平时用 OBS 做直播/录课时，还遇到过哪些画面调整的难题？欢迎在评论区留言分享，我会一一解答～&lt;/p&gt;
+&lt;p&gt;如果觉得这篇教程对你有帮助，别忘了&lt;strong&gt;点赞+收藏+转发&lt;/strong&gt;三连呀！关注我，后续分享更多OBS 实用技巧、效率工具干货，下次见～ 👋&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;大强远程技术支持：742112.xyz&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;+86新注册电报，绕过sms收费
+1、换IP，建议，美 日 新 节点，不建议香港节点。
+2、换客户端，telegramx，或者这两个。
+[telegramx](https://github.com/TGX-Android/Telegram-X/releases) [第三方客户端](https://github.com/forkgram/TelegramAndroid/releases) [飞机旧版](https://www.apkmirror.com/uploads/?devcategory=telegram-fz-llc) 
+
+3、卡bug，可以邮箱验证优先邮箱验证。
+
+遇到付费解密强制重启app，多试几次有概率可以跳过。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;+86新注册电报，绕过sms收费&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1、换IP，建议，美 日 新 节点，不建议香港节点。
+2、换客户端，telegramx，或者这两个。
+&lt;a href=&quot;https://github.com/TGX-Android/Telegram-X/releases&quot;&gt;telegramx&lt;/a&gt; &lt;a href=&quot;https://github.com/forkgram/TelegramAndroid/releases&quot;&gt;第三方客户端&lt;/a&gt; &lt;a href=&quot;https://www.apkmirror.com/uploads/?devcategory=telegram-fz-llc&quot;&gt;飞机旧版&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;3、卡bug，可以邮箱验证优先邮箱验证。遇到付费解密强制重启app，多试几次有概率可以跳过。&lt;/p&gt;
+&lt;/blockquote&gt;
 </content:encoded></item><item><title>API封装成Skill最佳实践</title><link>https://dqtx.cc/posts/workflow/api%E5%B0%81%E7%94%9F%E5%9B%BEskill/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/api%E5%B0%81%E7%94%9F%E5%9B%BEskill/</guid><description>最近被阿里巴巴通义MAI的Z-Image狠狠圈粉，不仅搭载了高效的 Z-Image-Turbo 模型，更关键的是每天能免费生 2000 张图，不管是生成文章视频...</description><pubDate>Sun, 30 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近被阿里巴巴通义MAI的Z-Image狠狠圈粉，不仅搭载了高效的 &lt;strong&gt;Z-Image-Turbo&lt;/strong&gt; 模型，更关键的是&lt;strong&gt;每天能免费生 2000 张图&lt;/strong&gt;，不管是生成文章视频封面还是异常创作，这个配额都完全够用。&lt;/p&gt;
 &lt;p&gt;恰巧这段时间我正在研究 Claude 的 Skills 功能，于是就萌生了一个想法：&lt;strong&gt;把 Z-Image 的免费生图能力和 Claude Skills 结合起来&lt;/strong&gt;，做一个专属生图 Skill，通过自然语言就可以生图到本地文件夹，既省时间又能充分利用免费配额。带着这个实操需求，我把整个创建过程整理成了这篇文章，希望能给同样喜欢折腾工具、需要生图功能的朋友提供一点参考～&lt;/p&gt;
 &lt;h2&gt;一.创建方法&lt;/h2&gt;
@@ -13438,6 +14873,8 @@ function extractFirstImageIgnoreFrontmatter(content) {
 &lt;p&gt;一个用 Rust 写的 CLI/TUI 下载工具，支持千+平台视频下载、BT 种子和 P2P 传输。
 https://github.com/julesklord/mangofetch
 &lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260514005811067.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;https://github.com/tonhowtf/omniget/blob/main/README_zh_CN.md
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260708231142451.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 </content:encoded></item><item><title>软件打包自解压方法</title><link>https://dqtx.cc/posts/software/7z%E5%8E%8B%E7%BC%A9%E5%8C%85%E8%87%AA%E8%A7%A3%E5%8E%8B%E5%88%B6%E4%BD%9C%E5%B7%A5%E5%85%B7/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/7z%E5%8E%8B%E7%BC%A9%E5%8C%85%E8%87%AA%E8%A7%A3%E5%8E%8B%E5%88%B6%E4%BD%9C%E5%B7%A5%E5%85%B7/</guid><description>你是不是也遇到过这种困扰？把文件打包成 7Z 压缩包发给别人，对方却不会解压，要么找不到合适的解压软件，要么对着压缩包手足无措；自己想给压缩包加个专属设置，普通...</description><pubDate>Tue, 20 May 2025 10:15:00 GMT</pubDate><content:encoded>&lt;p&gt;你是不是也遇到过这种困扰？把文件打包成 7Z 压缩包发给别人，对方却不会解压，要么找不到合适的解压软件，要么对着压缩包手足无措；自己想给压缩包加个专属设置，普通打包工具又满足不了需求。今天给大家安利一款超实用的 7Z 压缩包自解压制作工具，下面是使用教程！&lt;/p&gt;
 &lt;h2&gt;基本设置&lt;/h2&gt;
 &lt;blockquote&gt;
