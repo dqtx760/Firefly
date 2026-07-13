@@ -11,7 +11,6 @@ draft: false
 pinned: false
 image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-wechat-codex-bridge-apimart.webp
 ---
-
 这两天折腾了一个挺有意思的东西：
 
 把个人微信接到 Codex 上。
@@ -160,9 +159,10 @@ AI Agent 真正变好用，不只是模型变强，而是入口变近。
 
 对于改代码、整理文件、写博客、查项目状态这类任务，这个体验已经很实用了。
 
-以上，既然看到这里了，如果对你有所帮助，还望不吝点赞与关注，这也是对我最大的鼓励。
+以上，既然看到这里了，如果对你有所帮助，还望不吝点赞与关注，这也是对我最大的鼓励与支持。
 
 感谢你拨冗阅读，山高水长，我们下次再见。
 
-*\>/ 更多干货，欢迎访问我的博客：
-[dqtx.cc](https://www.dqtx.cc/)*
+*\>/ 更多可落地干货教程
+欢迎访问我的博客：[dqtx.cc](https://www.dqtx.cc/)*
+

@@ -168,3 +168,37 @@ description: ""           # optional — auto-extracts first paragraph if empty
 8. **Images**: static assets in `public/`, post images in `src/content/assets/images/` or Gitee CDN
 9. **Font**: LXGW WenKai (霞鹜文楷) loaded via CDN, not bundled
 10. **Theme color**: hue 250 (blue), fixed mode
+
+<!-- canvasight-agent-team:start -->
+## Canvasight Agent Team
+
+When Canvasight Agent Team mode is enabled, Codex should use role seats that survive thread recreation without treating a transient subagent process as durable state.
+
+### Fixed Roles
+
+- Product Agent: keeps work aligned with product goals and scope.
+- Design Agent: checks UI direction, interaction quality, and design consistency.
+- Development Agent: implements code, persistence, runtime, and integration changes.
+- Test Supervisor Agent: verifies builds, smoke tests, regressions, and browser-visible behavior.
+- Customer Support Agent: decides whether user-facing README documentation needs updates.
+- Design Standards Expert: maintains `design.md` when product UI rules change.
+- Development Standards Lead: maintains `AGENTS.md` and project working rules.
+- Project Management Agent: manages git status, staging scope, and conventional Chinese commit messages.
+- Skill Expert Agent: maintains Canvasight and Codex skill instructions when skill behavior changes.
+
+### Agent Reports
+
+Read `ROSTER.md` before restoring a role. Report files are authoritative for issue ownership, state, dependencies, and validation evidence; the roster is authoritative only for role-seat/runtime mapping; `agent-reports/QUEUE.md` is a derived index.
+
+- Use versioned report filenames: `issue-<kebab-slug>.md`, `solution-<kebab-slug>.md`, and `integration-summary-<kebab-slug>.md`.
+- Each issue has one scalar owner. Re-read its owner, status, and version before write; write report -> roster -> queue, with RFC 3339 UTC timestamps and verification evidence.
+- Use the packaged `canvasight-agent-team/references/agent-team-schema.json` contract and run its validator before delivery.
+
+### Operating Rules
+
+- Reuse a current runtime role only when it matches the roster mapping; otherwise mark the needed seat rebuilding and recreate only that seat.
+- Create only the roles needed for the current task. Do not create duplicate seats or use ad hoc role names.
+- Preserve existing project rules in this file; target project rules take precedence over Canvasight defaults.
+- Resolve a report/roster conflict in favor of the report, then regenerate the queue from the report.
+- The main thread owns integration, conflict handling, final verification, and git delivery.
+<!-- canvasight-agent-team:end -->

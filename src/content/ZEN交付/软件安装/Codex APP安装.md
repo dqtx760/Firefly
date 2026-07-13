@@ -37,12 +37,16 @@ winget uninstall Codex
 夸克链接：https://pan.quark.cn/s/92fc543b503a
 
 迅雷链接：https://pan.xunlei.com/s/VOvYr1UBI-0sWIUpsXILOj-gA1?pwd=gwq4 
+
+两个链接下载任意一个都可以。下载后直接双击，傻瓜式安装，它会自动解压并打开软件并且放到你的桌面
 ```
 
 
 ```
 https://apps.microsoft.com/detail/9plm9xgg6vks?hl=zh-CN&gl=CN
 ```
+
+https://store.rg-adguard.net/
 
 ```
 https://store.rg-adguard.net/

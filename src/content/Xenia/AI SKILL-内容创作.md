@@ -2,11 +2,11 @@
 ```
 根据这篇文章
 
-1. 调用/article-cover-16x9生成文章封面调用 ，调用/baoyu-article-illustrator生成配图
-2. 调用/cover-generator生成视频封面
-3. 调用/video-PostFlow视频发布文案
-4. 调用/Title生成文章标题
-5. 调用/x-post生成短文案
+调用/article-cover-16x9生成文章封面调用 ，调用/baoyu-article-illustrator生成配图
+调用/cover-generator生成视频封面
+调用/video-PostFlow视频发布文案
+调用/Title生成文章标题
+调用/x-post生成短文案
 
 ```
 
@@ -54,3 +54,8 @@
 ```
 /ai-jian-koubo
 ```
+
+```
+/demand-trigger-script 现在年轻人非常焦虑，帮我写个短视频脚本
+```
+

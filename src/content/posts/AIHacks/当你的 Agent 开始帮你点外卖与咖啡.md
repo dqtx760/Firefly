@@ -8,6 +8,7 @@ tags:
 category: AIHacks
 draft: false
 pinned: false
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260618005239356.webp
 ---
 说实话，刚知道 AI 能帮我点外卖的时候，我整个人是有点懵的。
 

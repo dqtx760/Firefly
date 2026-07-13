@@ -1,5 +1,5 @@
 ---
-title: 改造 Ian Xiaohei Illustrations 技能：Gemini 后端 + 图床自动上传
+title: 改造an-Xiaohei-ilustrations
 published: 2026-06-18
 tags:
   - skill
@@ -9,6 +9,7 @@ tags:
 category: AIHacks
 draft: false
 pinned: false
+image:
 ---
 
 今天这篇文章，我教大家如何去改造一个 skill。最近我在 GitHub 上发现了一个生图的 skill，效果也不错，但是有几点问题：

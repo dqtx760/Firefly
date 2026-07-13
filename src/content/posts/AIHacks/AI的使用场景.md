@@ -8,6 +8,7 @@ tags:
 category: AIHacks
 draft: false
 pinned: false
+image: 
 ---
 
 我每天跟 AI 打交道，经常有人问我同一个问题：**AI 到底能干啥？**

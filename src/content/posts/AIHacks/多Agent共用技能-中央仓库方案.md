@@ -1,5 +1,5 @@
 ---
-title: 多 Agent 共用技能？我撸了一个自动同步方案
+title: Install to Central技能
 published: 2026-06-19
 tags:
   - skill

@@ -6,6 +6,11 @@ https://pay.ldxp.cn/shop/2425
 https://getcodex.nnai.uk/
 
 
+
+
+codex-GNF8-CZZY-L2V4
+
+
 plus-5F6Q-M6JW-4E83
 plus-5F6Q-M6JW-4E83
 

@@ -22,9 +22,9 @@ rundll32 sysdm.cpl,EditEnvironmentVariables
 
 在用户环境变量中添加以下4个变量
 ```
-HTTP_PROXY    http://127.0.0.1:7890
-HTTPS_PROXY   http://127.0.0.1:7890
-ALL_PROXY     http://127.0.0.1:7890
+HTTP_PROXY    http://127.0.0.1:端口号
+HTTPS_PROXY   http://127.0.0.1:端口号
+ALL_PROXY     http://127.0.0.1:端口号
 NO_PROXY      localhost,127.0.0.1,: :1
 ```
 

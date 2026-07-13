@@ -30,6 +30,7 @@ https://github.com/dqtx760/skills-manage
 | 将任意文本、网页或 URL 转化卡片        | [claude-design-card](https://github.com/geekjourneyx/claude-design-card)                                       | 极客杰尼 |                                                           |
 | 课程知识海报生成器                 | [COURSE-POSTER-SKILL](https://github.com/lui2015/COURSE-POSTER-SKILL)                                          |      |                                                           |
 | 文章配图                      | [baoyu-article-illustrator](https://github.com/JimLiu/baoyu-skills/tree/main/skills/baoyu-article-illustrator) |      |                                                           |
+| 流程图、架构图                   | https://github.com/markdown-viewer/skills                                                                      |      |                                                           |
 
 ### 撰写文案
 
@@ -53,29 +54,33 @@ https://github.com/dqtx760/skills-manage
 | 音频转mrkdown文字       | [local-audio-transcriber](https://github.com/chujianyun/skills/blob/main/skills/local-audio-transcriber/SKILL.md) |     |       |
 | 剪映                 | https://github.com/Ceeon/videocut-skills/tree/main                                                                |     |       |
 | 剪口播                | [ai-jian-koubo](https://github.com/lcbuaaliu/ai-jian-koubo)                                                       |     |       |
-### HTML/思维导图
+| 视频剪辑               |                                                                                                                   |     |       |
+### HTML/思维导图/PPT
 
-| PPT skill      | [ian-handdrawn-ppt](https://github.com/helloianneo/ian-handdrawn-ppt)           | 手绘风 | [点此查看](https://x.com/ianneo_ai/status/2048047226782670931)    |
-| -------------- | ------------------------------------------------------------------------------- | --- | ------------------------------------------------------------- |
-| PPT skill      | [guizang-ppt-skill](https://github.com/op7418/guizang-ppt-skill)                | 歸藏  | [点此查看](https://x.com/op7418/status/2048245950813282481)       |
-| PPT skill      | [zarazhangrui/frontend-slides](https://github.com/zarazhangrui/frontend-slides) | 张咋啦 | [点此查看](https://x.com/zarazhangrui/status/2016337615843434646) |
-| PPT Skill      | [alchaincyf/huashu-design](https://github.com/alchaincyf/huashu-design)         | 花叔  | [效果示例](https://skill.huasheng.ai/)                            |
-| 一个可播放的思维导图 PPT | [mindmap-ppt#](https://github.com/agegr/mindmap-ppt#)                           |     |                                                               |
+| PPT skill      | [ian-handdrawn-ppt](https://github.com/helloianneo/ian-handdrawn-ppt)           | 手绘风     | [点此查看](https://x.com/ianneo_ai/status/2048047226782670931)    |
+| -------------- | ------------------------------------------------------------------------------- | ------- | ------------------------------------------------------------- |
+| PPT skill      | [guizang-ppt-skill](https://github.com/op7418/guizang-ppt-skill)                | 歸藏      | [点此查看](https://x.com/op7418/status/2048245950813282481)       |
+| PPT skill      | [zarazhangrui/frontend-slides](https://github.com/zarazhangrui/frontend-slides) | 张咋啦     | [点此查看](https://x.com/zarazhangrui/status/2016337615843434646) |
+| PPT Skill      | [alchaincyf/huashu-design](https://github.com/alchaincyf/huashu-design)         | 花叔      | [效果示例](https://skill.huasheng.ai/)                            |
+| 一个可播放的思维导图 PPT | [mindmap-ppt#](https://github.com/agegr/mindmap-ppt#)                           |         |                                                               |
+|                | https://github.com/SpaceZephyr/space-multi-design-ppt                           | 62个品牌规范 |                                                               |
+|                | https://github.com/chuspeeism/dashiAI-ppt-skill                                 | 可导出     |                                                               |
 
 ### 制作网站
 
-| 功能                                | skill开源地址                                                                                   | 备注         | 使用&效果                                                     |
-| --------------------------------- | ------------------------------------------------------------------------------------------- | ---------- | --------------------------------------------------------- |
-| 前端设计去“AI味”统                       | [frontend-design](https://github.com/anthropics/skills/tree/main/skills/frontend-design)    | anthropics |                                                           |
-| 设计总监                              | [ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)              |            | [styles](https://www.uupm.cc/#styles)                     |
-| skill 落地页                         | [skill-site-generator](https://github.com/eze-is/skill-site-generator)                      | -泽Eze      | [效果示例](https://eze-is.github.io/skill-site-generator/)    |
-| 前端设计更出色                           | [impeccable](https://github.com/pbakaus/impeccable/tree/main/.claude/skills/impeccable)     |            |                                                           |
-| 复刻大厂ui设计                          | [Vawesome-design-md](https://github.com/VoltAgent/awesome-design-md)                        |            | [使用帮助](https://mp.weixin.qq.com/s/n0PNmmeBENxj5h2A3guWfg) |
-| 网站审计                              | [Website-Audit](https://github.com/MarcinKilarski/Website-Audit)                            |            |                                                           |
-| 把飞书Wiki 知识库变成精美静态网站               | [feishu-doc-webify](https://github.com/wocha-xiaoli/feishu-doc-webify)                      |            |                                                           |
-| **任何内容 → 播客 / PPT / 思维导图 / Quiz** | [qiaomu-anything-to-notebooklm](https://github.com/joeseesun/qiaomu-anything-to-notebooklm) |            |                                                           |
-| 顶级UI/UX设计资料库）                     | [ui-ux-pro-max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)                    |            |                                                           |
-| Anthropic官方前端设计                   | frontend-design                                                                             |            |                                                           |
+| 功能                                | skill开源地址                                                                                   | 备注                                                  | 使用&效果                                                     |
+| --------------------------------- | ------------------------------------------------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------------- |
+| 复刻任何网站                            | https://github.com/Jane-xiaoer/claude-skill-web-clone                                       | https://x.com/xiaoerzhan/status/2071924492763529299 |                                                           |
+| 前端设计去“AI味”统                       | [frontend-design](https://github.com/anthropics/skills/tree/main/skills/frontend-design)    | anthropics                                          |                                                           |
+| 设计总监                              | [ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)              |                                                     | [styles](https://www.uupm.cc/#styles)                     |
+| skill 落地页                         | [skill-site-generator](https://github.com/eze-is/skill-site-generator)                      | -泽Eze                                               | [效果示例](https://eze-is.github.io/skill-site-generator/)    |
+| 前端设计更出色                           | [impeccable](https://github.com/pbakaus/impeccable/tree/main/.claude/skills/impeccable)     |                                                     |                                                           |
+| 复刻大厂ui设计                          | [Vawesome-design-md](https://github.com/VoltAgent/awesome-design-md)                        |                                                     | [使用帮助](https://mp.weixin.qq.com/s/n0PNmmeBENxj5h2A3guWfg) |
+| 网站审计                              | [Website-Audit](https://github.com/MarcinKilarski/Website-Audit)                            |                                                     |                                                           |
+| 把飞书Wiki 知识库变成精美静态网站               | [feishu-doc-webify](https://github.com/wocha-xiaoli/feishu-doc-webify)                      |                                                     |                                                           |
+| **任何内容 → 播客 / PPT / 思维导图 / Quiz** | [qiaomu-anything-to-notebooklm](https://github.com/joeseesun/qiaomu-anything-to-notebooklm) |                                                     |                                                           |
+| 顶级UI/UX设计资料库）                     | [ui-ux-pro-max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)                    |                                                     |                                                           |
+| Anthropic官方前端设计                   | frontend-design                                                                             |                                                     |                                                           |
 
 
 ### 元能力拓展

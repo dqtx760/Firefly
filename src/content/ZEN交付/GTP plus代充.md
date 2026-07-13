@@ -2,6 +2,8 @@
 ---
 https://web3chirou.com/cat/38
 https://pay.ldxp.cn/shop
+https://faka.redeemgpt.com/
+https://pay.ldxp.cn/shop/YQUOBIW1  
 
 ----
 ### 成品 PLUS
@@ -10,29 +12,56 @@ https://pay.ldxp.cn/shop
 UPI 渠道 - ChatGPT Plus 月卡 成品号
 ```
 https://cardnav.xyz/shops?q=UPI+%E6%B8%A0%E9%81%93+-+ChatGPT+Plus+%E6%9C%88%E5%8D%A1+%E6%88%90%E5%93%81%E5%8F%B7
-https://pay.ldxp.cn/item/3u95tq  22
-https://pay.ldxp.cn/item/ezuy1s   24
-https://pay.ldxp.cn/item/tkzf0b   34
+https://pay.qxvx.cn/shop/chatgpt.com  19
+https://xingbao-ai.shop/products/chatgpt-plus-monthly   40
+
+**发货模板**
+```
 
 
-邮件
-[https://email.nloop.cc/](https://email.nloop.cc/)
+邮件验证码接收地址
+https://email.nloop.cc/
+
+实在不懂的看图文教程：
+https://www.yuque.com/yingzi-adcpq/zkqzvb/crd1gz24zvicbey6?singleDoc#
+
+PS.登录codex需要接码，联系我即可，包含在内。
+```
+
+
+siphon.search4f+r62ww241dpfyh060p@icloud.com----http://icloudapi.xyz/show/BwpDCgVEAxpfEAstEBAJDAcBWggKFFccGB8ZXwMGBxZUAh4cDk4YHAcI/siphon.search4f%2Br62ww241dpfyh060p@icloud.com
+Plus成品号质保首登，纯净IP理论可用满一个月！按日抛理解！！
+
 
 ### 代充 PLUS
 https://cardnav.xyz/shops?q=plus+%E4%BB%A3%E5%85%85&sort=price-asc
 
-| 说明              | 地址                                 | 价格  |
-| --------------- | ---------------------------------- | --- |
-| 印度upi代充gpt plus | https://catfk.com/item/nqybo8      | 18  |
-| 1个月PLUS代充 临期促销  | https://faka.redeemgpt.com/item/91 | 105 |
-| IOs订阅质保掉订阅      | https://faka.redeemgpt.com/item/88 | 120 |
-| Plus菲区代充        | https://aisou.pro/item/49          | 125 |
-| plus 菲律宾人工代充    | https://web3chirou.com/item/438    | 130 |
-|                 |                                    |     |
-|                 |                                    |     |
+| 说明            | 地址                                          | 价格         |        |
+| ------------- | ------------------------------------------- | ---------- | ------ |
+| 菲区卡充 # CDK    | https://shop.mfttai.com/products/gptplus_03 | 123        |        |
+|               | https://pay.ldxp.cn/item/tj0smf             | 124        |        |
+| Plus美国区ios代充  | https://web3chirou.com/item/444             | 128 149 质保 |        |
+| PLUS代充IoS订阅质保 | https://faka.redeemgpt.com/item/89          | 125        |        |
+| Plus菲区代充      | https://aisou.pro/item/49                   | 125        |        |
+| plus 菲律宾人工代充  | https://web3chirou.com/item/438             | 130        |        |
+
+```
+对换步骤
+1. 要在网页上打开GPT，确保它是登录的状态
+2. 打开兑换网站：https://plus.whh985.xyz/ 输入你的卡密
+3. 新开浏览器标签页打开chatgpt.com/api/auth/session 获取全部内容 复制到对话框提交即可
+```
 
 
-
+### 0元资格代充
+| 说明      | 地址                              | 价格   |        |
+| ------- | ------------------------------- | ---- | ------ |
+| UPI自助充值 | https://fk.ybkjs.top/item/66    | 20   | 需有0元试用 |
+|         | https://pay.ldxp.cn/item/8ypzgh | 18.8 |        |
+IP风险检测
+https://ip.net.coffee/gpt/
+access_token
+https://chatgpt.com/api/auth/session
 
 
 ### ChatGPT Plus试用30天协助开通

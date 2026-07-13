@@ -2,11 +2,12 @@
 
 ## 📊 选题与分析
 
-| 技能                      | 斜杠命令                     | 用途                     |
-| ----------------------- | ------------------------ | ---------------------- |
-| aihot                   | /aihot                   | AI行业资讯日报               |
-| content-topic-generator | /content-topic-generator | 多角度选题生成（延伸/反驳/扩充/热点结合） |
-| comment-topics          | /comment-topics          | 抓取社交平台评论并生成短视频/文章选题脚本 |
+| 技能                      | 斜杠命令                     | 用途                     |              |
+| ----------------------- | ------------------------ | ---------------------- | ------------ |
+| aihot                   | /aihot                   | AI行业资讯日报               |              |
+| follow-builders         | /follow-builders 或 /ai  | AI builders digest，追踪 AI 建设者动态 |              |
+| content-topic-generator | /content-topic-generator | 多角度选题生成（延伸/反驳/扩充/热点结合） |              |
+| comment-topics          | /comment-topics          | 抓取社交平台评论并生成短视频/文章选题脚本  | 2026/06/30创建 |
 
 ---
 
@@ -110,11 +111,52 @@
 
 ## 🔗 平台集成
 
+| 技能                    | 斜杠命令                   | 用途                           |
+| --------------------- | ---------------------- | ---------------------------- |
+| xiaohongshu-cli       | /xiaohongshu-cli       | 小红书全操作CLI                    |
+| xiaohongshu-converter | /xiaohongshu-converter | 文章转小红书风格                     |
+| lark-im               | /lark-im               | 飞书集成                         |
+| zsxq-group            | /zsxq-group            | 知识星球管理：列出星球、浏览主题、查询标签、搜索成员   |
+| zsxq-topic            | /zsxq-topic            | 知识星球主题管理：搜索、查看、发布、编辑、评论和回答主题 |
+| zsxq-note             | /zsxq-note             | 知识星球公开笔记管理：创建、编辑、查看和删除笔记     |
+| zsxq-user             | /zsxq-user             | 知识星球用户信息：查看个人资料和发帖足迹         |
+| zsxq-shared           | /zsxq-shared           | 知识星球认证、诊断、通用 API 和安全规则       |
+
+---
+
+
+## 🧩 dbskill 商业工具箱
+
 | 技能 | 斜杠命令 | 用途 |
 |------|----------|------|
-| xiaohongshu-cli | /xiaohongshu-cli | 小红书全操作CLI |
-| xiaohongshu-converter | /xiaohongshu-converter | 文章转小红书风格 |
-| lark-im | /lark-im | 飞书集成 |
+| dbs | /dbs | dontbesilent 商业工具箱主入口，自动路由当前任务 |
+| dbs-diagnosis | /dbs-diagnosis | 商业模式、产品、定价和客户诊断 |
+| dbs-benchmark | /dbs-benchmark | 寻找和分析值得研究的对标 |
+| dbs-content | /dbs-content | 内容方向与创作做法诊断 |
+| dbs-hook | /dbs-hook | 短视频开头优化 |
+| dbs-xhs-title | /dbs-xhs-title | 小红书标题公式 |
+| dbs-resonateC | 文稿共鸣诊断 |
+| dbs-script-flow | /dbs-script-flow | 逐字稿结构与表达检查 |
+| dbs-ai-check | /dbs-ai-check | AI 写作特征识别 |
+| dbs-wechat-html | /dbs-wechat-html | 微信公众号 HTML 生成 |
+| dbs-spread | /dbs-spread | 传播心理与内容扩散分析 |
+| dbs-content-system | /dbs-content-system | 把大量素材搭成内容资产工程 |
+| dbs-deconstruct | /dbs-deconstruct | 概念拆解与问题澄清 |
+| dbs-goal | /dbs-goal | 目标清晰化 |
+| dbs-good-question | /dbs-good-question | 好问题生成器 |
+| dbs-action | /dbs-action | 行动受阻与执行力诊断 |
+| dbs-slowisfast | /dbs-slowisfast | 找长期更快的慢方法 |
+| dbs-decision | /dbs-decision | 决策记录与回填系统 |
+| dbs-save | /dbs-save | 保存当前诊断状态 |
+| dbs-restore | /dbs-restore | 恢复上次诊断状态 |
+| dbs-report | /dbs-report | 汇总多次存档生成报告 |
+| dbs-learning | /dbs-learning | 交互式学习与反馈迭代 |
+| dbs-chatroom | /dbs-chatroom | 多角色定向聊天室 |
+| dbs-chatroom-austrian | /dbs-chatroom-austrian | 奥派经济学聊天室 |
+| dbs-agent-migration | /dbs-agent-migration | 多端 Agent 工作台迁移 |
+| dbs-bridge | /dbs-bridge | Skill 或 skills 目录多端桥接 |
+| dbs-skill-cleaner | /dbs-skill-cleaner | 本地 skill 风险扫描与隔离建议 |
+| dbs-update | /dbs-update | 更新 dbskill 官方技能 |
 
 ---
 
@@ -129,7 +171,7 @@
 | hyperframes-cli              | HyperFrames CLI工具 |
 | hyperframes-registry         | HyperFrames注册表    |
 
-> 最后更新：2026-06-30
-> 已安装技能：60个
+> 最后更新：2026-07-13
+> 已安装技能：94个
 
 ---

@@ -1,4 +1,5 @@
 ---
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Generated_Image_82j3wq82j3wq82j3.webp
 title: DeepSeek-Reasonix体验
 published: 2026-06-16
 description: 同样是用 DeepSeek，选错工具等于白烧 token。这篇拆透 Reasonix 和 DeepSeek GUI 的真实差距，告诉你最优解。

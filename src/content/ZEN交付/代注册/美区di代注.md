@@ -7,17 +7,20 @@ https://account.apple.com/account/manage
 
 地址生成
 - [土耳其地址生成器](https://www.meiguodizhi.com/tr-address)  推荐城市：Istanbul、Ankara、Izmir
-- 附→ [尼日利亚地址生成器](https://cn.americaaddress.com/nigeria-address/)   [美国地址生成器](https://www.meiguodizhi.com/usa-address/montana)  推荐蒙大拿州，免税，订阅价格≤订20🔪
+- 附→ [尼日利亚地址生成器](https://cn.americaaddress.com/nigeria-address/)  
+- [美国地址生成器](https://www.meiguodizhi.com/usa-address/montana)  推荐蒙大拿州，免税，订阅价格≤订20🔪
+- https://usaddressgen.com/tax-free-address/ 美国地址生产期  
 
 ### **如何使用**
 打开App Store点击右上角的头像,再次点击头像进入 ,拉到最底部退出登录 
 输入你新的ID的账mi
 
 
-### 如何一键切换app store 地区
+### 如何一键切换app store 地
 
-安装一键切换 Apple ID这个快捷指令
+一键切换 Apple ID这个快捷指令
 https://www.icloud.com/shortcuts/73c9cc1bbd244225ae73fb9becb3e806
+https://www.icloud.com/shortcuts/2e209344431948609827c8908a89b03f
 
 比如，你现在上电视登录的是国区Id，但是突然想下载一个美区的软件
 1. 点击这个快捷指令→退出登录
@@ -39,3 +42,9 @@ https://www.icloud.com/shortcuts/73c9cc1bbd244225ae73fb9becb3e806
 不关的话，两个账号联系人、日历会混在一起，很乱。关掉同步只是让这个账号安静待着，不参与数据同步，但系统依然认识它、记得它。
 ```
 
+
+### 小技巧
+在设置-备忘录→“备忘录”账户→添加账户→icloud
+然后呢，填写你的另外一个其他区的 Apple ID
+
+在苹果商店更新任意软件，不用切换账号，无论现在登录哪个都可更新的 
