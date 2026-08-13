@@ -491,6 +491,394 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/tech-shrimp&quot;&gt;tech-shrimp&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>让AI亲手画图：开源项目 mcp_excalidraw 实战</title><link>https://dqtx.cc/posts/aihacks/%E8%AE%A9ai%E4%BA%B2%E6%89%8B%E7%94%BB%E5%9B%BE%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE-mcp_excalidraw-%E5%AE%9E%E6%88%98/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E8%AE%A9ai%E4%BA%B2%E6%89%8B%E7%94%BB%E5%9B%BE%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE-mcp_excalidraw-%E5%AE%9E%E6%88%98/</guid><pubDate>Wed, 12 Aug 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你有没有想过，让 AI 不只是&quot;生成一段代码&quot;或&quot;输出一张图片&quot;，而是直接在一块画布上，像人一样一笔一笔把图画出来，画完还能自己截图检查、修布局、重新排列？这就是 mcp_excalidraw 做的事——一个给 AI Agent 准备的 Excalidraw 画布工作台，GitHub 上已经 2200+ star。&lt;/p&gt;
+&lt;p&gt;我实际装下来用了一整天，从零画到导出 Obsidian 原生格式，体验是：它把&quot;AI 画图&quot;从&quot;一次性生成一张图&quot;升级成了&quot;AI 拥有一块持续的画布&quot;。这篇文章不讲虚的，只讲怎么装、怎么用、以及它能帮你解决什么实际问题。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://dqtx.cc/images/posts/excalidraw-mcp/cover-excalidraw-mcp.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;它解决了什么问题&lt;/h3&gt;
+&lt;p&gt;先说你最可能遇到的痛点：平时让 AI 画架构图、流程图，得到的往往是一张&quot;死图&quot;——生成完就定型了，想改一个节点、调一个箭头位置，只能重新生成，改起来非常痛苦。&lt;/p&gt;
+&lt;p&gt;mcp_excalidraw 的思路完全不同。它跑一个本地画布服务（&lt;code&gt;http://127.0.0.1:3000&lt;/code&gt;），AI 通过 CLI 或 MCP 协议在上面做&lt;strong&gt;元素级操作&lt;/strong&gt;：新建一个矩形、移动一个节点、改个颜色、加条箭头。改图像改代码一样精准，而不是推倒重来。&lt;/p&gt;
+&lt;p&gt;更关键的是它让 AI &lt;strong&gt;看得见自己的作品&lt;/strong&gt;。AI 画完可以截图自查，发现文字溢出、图形重叠，就自己修正，直到画好为止。这个&quot;画 → 看 → 改&quot;的闭环，是它和其他一次性生成工具最本质的区别。&lt;/p&gt;
+&lt;h3&gt;和官方 Excalidraw MCP 的区别&lt;/h3&gt;
+&lt;p&gt;Excalidraw 官方也有一个 MCP，但定位完全不同。官方版是&quot;对话内一次性出图&quot;（prompt in, diagram out），适合在聊天里快速画个示意图；而 mcp_excalidraw 是给&lt;strong&gt;编程型 Agent&lt;/strong&gt; 用的持续画布工作台——支持元素级增删改查、布局对齐、命名快照、Mermaid 转图、&lt;code&gt;.excalidraw&lt;/code&gt; 文件导出导入。&lt;/p&gt;
+&lt;p&gt;一句话总结：官方 MCP 让 AI 在聊天里展示图，这个项目让 AI 拥有一块能反复编辑的画布。对做博客、做文档、做项目交付的人来说，后者实用得多。&lt;/p&gt;
+&lt;h3&gt;安装：零配置，无需 API Key&lt;/h3&gt;
+&lt;p&gt;这是它最让我惊喜的地方。对比 Excalidraw+ 的官方 MCP（要付费工作区、要申请 API key），这个开源项目&lt;strong&gt;完全免费、纯本地运行、不需要任何密钥&lt;/strong&gt;。只需要 Node.js 20 以上（你电脑上基本都有）。&lt;/p&gt;
+&lt;p&gt;安装 skill 到你的 Agent 目录：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# 装到当前 Agent 的 skills 目录（Claude Code / Codex 都支持）
+npx -y mcp-excalidraw-server install-skill --dir &amp;lt;你的skills目录&amp;gt;
+
+# 或者按平台快捷安装
+npx -y mcp-excalidraw-server install-skill          # Claude Code
+npx -y mcp-excalidraw-server install-skill --target codex   # Codex
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;装好后，第一次运行画图命令会自动启动本地画布服务：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npx -y mcp-excalidraw-server start
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后浏览器打开 &lt;code&gt;http://127.0.0.1:3000&lt;/code&gt;，就能看到那块 AI 即将开始作画的画布了。整个安装过程零配置文件、零密钥，这是我实测最顺的一次。&lt;/p&gt;
+&lt;h3&gt;核心用法：一个例子看懂&lt;/h3&gt;
+&lt;p&gt;装好之后，让 AI 画一张&quot;内容创作工作流&quot;图，AI 会分步执行——你可以亲眼在左侧浏览器画布上看着它一笔一笔画出来。&lt;/p&gt;
+&lt;p&gt;第一步，创建中心节点和三个环节：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;echo &apos;[
+  {&quot;id&quot;:&quot;hub&quot;,&quot;type&quot;:&quot;rectangle&quot;,&quot;x&quot;:300,&quot;y&quot;:200,&quot;width&quot;:260,&quot;height&quot;:90,
+   &quot;text&quot;:&quot;AI 内容创作工作流&quot;,&quot;backgroundColor&quot;:&quot;#a5d8ff&quot;},
+  {&quot;id&quot;:&quot;s1&quot;,&quot;type&quot;:&quot;rectangle&quot;,&quot;x&quot;:700,&quot;y&quot;:60,&quot;width&quot;:220,&quot;height&quot;:70,
+   &quot;text&quot;:&quot;1. 选题&quot;,&quot;backgroundColor&quot;:&quot;#b2f2bb&quot;}
+]&apos; | npx -y mcp-excalidraw-server add
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;第二步，AI 截图自查，确认布局和文字没问题：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npx -y mcp-excalidraw-server describe     # 结构化描述当前场景
+npx -y mcp-excalidraw-server screenshot --out diagram.png   # 截图看实际效果
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;第三步，把成果导出成文件。重点来了——&lt;strong&gt;支持 Obsidian 原生格式&lt;/strong&gt;：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# 普通 .excalidraw 文件
+npx -y mcp-excalidraw-server export --out docs/architecture.excalidraw
+
+# Obsidian Excalidraw 插件原生格式（.md 结尾即可）
+npx -y mcp-excalidraw-server export --out 你的笔记库/diagrams/架构图.excalidraw.md
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;导出到 &lt;code&gt;.excalidraw.md&lt;/code&gt; 的文件，在 Obsidian 里用 Excalidraw 插件打开就是原生可编辑的画布，没有兼容模式警告，还能反向导入继续改。&lt;/p&gt;
+&lt;h3&gt;画布级操作一览&lt;/h3&gt;
+&lt;p&gt;CLI 提供的能力很完整，我实测常用的有这些：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;命令&lt;/th&gt;
+&lt;th&gt;作用&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;add&lt;/code&gt; / &lt;code&gt;apply&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;批量创建元素 / 一次性多操作（增改删）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;describe&lt;/code&gt; / &lt;code&gt;screenshot&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;AI 自查：读场景描述、截图看效果&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;query&lt;/code&gt; / &lt;code&gt;get&lt;/code&gt; / &lt;code&gt;update&lt;/code&gt; / &lt;code&gt;delete&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;元素级增删改查&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;arrange align/group/duplicate&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;布局：对齐、编组、复制&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;export&lt;/code&gt; / &lt;code&gt;import&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;文件导出导入（支持 Obsidian 格式）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;mermaid&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Mermaid 代码直接转画布图&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;snapshot save/restore&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;命名快照，改坏了能回滚&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;画布数据存在内存里，重启服务会清空——所以画完记得 &lt;code&gt;export&lt;/code&gt; 保存，或者用 &lt;code&gt;snapshot&lt;/code&gt; 做阶段备份。&lt;/p&gt;
+&lt;h3&gt;实测中的两个小坑&lt;/h3&gt;
+&lt;p&gt;第一，&lt;strong&gt;浏览器标签页要开着&lt;/strong&gt;。截图自查（&lt;code&gt;screenshot&lt;/code&gt;）和 Mermaid 转图依赖浏览器渲染，画布页 &lt;code&gt;http://127.0.0.1:3000&lt;/code&gt; 要保持一个打开的标签页，AI 才能&quot;看见&quot;自己画的图。只画图和导出则不需要。&lt;/p&gt;
+&lt;p&gt;第二，&lt;strong&gt;数据在内存，重启即失&lt;/strong&gt;。画布服务重启会清空所有元素，所以养成随手 &lt;code&gt;export&lt;/code&gt; 的习惯。也正因如此，它很适合&quot;画完导出到仓库&quot;这种工作流——图作为仓库里的 &lt;code&gt;.excalidraw&lt;/code&gt; 文件版本化管理，架构变了再 &lt;code&gt;import&lt;/code&gt; 回来改。&lt;/p&gt;
+&lt;h3&gt;适合谁用&lt;/h3&gt;
+&lt;p&gt;如果你的工作流符合下面任何一条，这个项目值得一试：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;写技术博客/文档，需要大量架构图、流程图，希望图能跟着代码一起版本管理&lt;/li&gt;
+&lt;li&gt;用 Obsidian 做知识库，想在里面维护可编辑的可视化笔记&lt;/li&gt;
+&lt;li&gt;用 Claude Code / Codex 这类编程 Agent，想让 AI 直接产出可编辑的图表交付物&lt;/li&gt;
+&lt;li&gt;团队协作时，希望多个人（或多 Agent）在同一块画布上并发操作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;项目信息&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;项目地址：&lt;code&gt;github.com/yctimlin/mcp_excalidraw&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;许可协议：MIT，完全开源免费&lt;/li&gt;
+&lt;li&gt;依赖：Node.js ≥ 20（无需 API Key、无需付费）&lt;/li&gt;
+&lt;li&gt;运行方式：本地画布服务 + CLI / MCP / REST 三种接口&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我装完之后最大的感受是：AI 工具圈正在从&quot;AI 生成内容给你看&quot;走向&quot;AI 直接在你的工作环境里干活&quot;。mcp_excalidraw 就是这种趋势里一个很典型的例子——它不给你一张图，而是给你一块 AI 能持续作画的画布。&lt;/p&gt;
+</content:encoded></item><item><title>18条codex实战清单</title><link>https://dqtx.cc/posts/aihacks/18%E6%9D%A1codex%E5%AE%9E%E6%88%98%E6%B8%85%E5%8D%95/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/18%E6%9D%A1codex%E5%AE%9E%E6%88%98%E6%B8%85%E5%8D%95/</guid><pubDate>Tue, 04 Aug 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Luna Max 核心技巧&lt;/h2&gt;
+&lt;h3&gt;设置 Luna Max 才是日常主力&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;进入设置：&lt;code&gt;Settings&lt;/code&gt; → &lt;code&gt;Configuration&lt;/code&gt; → &lt;code&gt;Available reasoning efforts&lt;/code&gt; → 勾选 &lt;code&gt;Max&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;选择模型：选择 &lt;code&gt;GPT-5.6 Luna + Max reasoning&lt;/code&gt;，直接设为默认模型。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;https://github.com/DannyMac180/sol-advisor
+帮我配置：Luna 5.6 Max 负责执行、Terra 处理常规任务，Sol 承担复杂任务；规划类工作固定启用 Sol High 模式
+
+
+# Advisor — orchestrator prompt
+
+You are the orchestrator. You do not write production code. You decompose,
+delegate, gate, and integrate. Every line of shipped code comes from an
+implementer subagent and passes a reviewer subagent that never saw the
+implementation reasoning.
+
+## Roles
+| Role | Who | Job |
+| Orchestrator | you | Read repo, split task, route, gate, integrate |
+| Implementer-fast | cheap/fast model | Routine: known pattern, bounded diff |
+| Implementer-deep | strongest model | Complex: unclear shape, cross-cutting, perf/concurrency/security |
+| Reviewer | fresh instance, no prior context | Adversarial review of diff alone |
+
+## Step 1 — Understand before splitting
+- Read every file the change touches. Trace flow end to end.
+- Grep every caller of any function you plan to modify.
+- State root cause in one sentence. Symptom is not root cause.
+If you cannot state root cause, you are not ready to delegate.
+
+## Step 2 — Route
+Fast when ALL: ≤2 files; pattern already in codebase (name the file);
+no concurrency/auth/money/migrations/public-API change; acceptance check
+writable in one line first.
+Deep when ANY: 3+ files or shape unclear; concurrency/ordering/retries;
+trust boundary (input, auth, secrets, payments); schema or hard-to-reverse;
+two prior attempts already failed review.
+Ambiguous → deep.
+
+## Step 3 — Delegation contract
+GOAL / FILES / PATTERN (path:line to imitate) / CONSTRAINTS / DONE WHEN.
+Third paragraph means unit too big — split it.
+
+## Step 4 — Review gate
+Reviewer gets diff + GOAL + CONSTRAINTS. Not your plan, not implementer
+reasoning. Fresh eyes or review is theater.
+Blocker → same implementer, reviewer lines verbatim, no paraphrase.
+Second blocker same unit → escalate to deep. risk → you decide, state it.
+
+## Step 5 — Integrate
+Run DONE WHEN yourself. Report what shipped, what failed, what skipped.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;在新任务中后面可以直接说&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;使用 advisor-orchestration 完成这个任务
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;在 agents.md 添加以下内容 部署成本降低到0&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;当我说‘deploy’时，完成测试、提交并推送此任务的更改。然后使用 gpt-5.6-luna 创建一个新的 Codex 项目任务，启用最大推理来审查并合并 PR，监控 exact-main CI 和自动部署，并验证生产环境。按照该任务完成并在此处报告结果。防止递归移交。
+
+遇到需要批量执行的子任务，自己spawn独立的Luna Max对话线程去跑，跑完把结果汇总回来。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;把 Luna 变成你的 Subagent&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;在 ~/.codex/agents/luna-worker.toml 创建一个名为 luna_worker 的自定义代理。
+
+使用以下设置：
+
+model = &quot;gpt-5.6-luna&quot;
+model_reasoning_effort = &quot;max&quot;
+
+为其提供描述和用于界定委托工作的指令。保留我配置的其余部分。对其与我安装的 Codex 版本进行验证，向我显示差异，然后使用 luna_worker 处理子代理任务。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;自动化与系统维护&lt;/h2&gt;
+&lt;h3&gt;设立自动化任务清理电脑永远不卡&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;创建一个自动化任务，每 20 分钟运行一次，以保持 Codex 顺畅运行。安全地停止陈旧或孤立的 headless 进程，在安全时清除一次性缓存，并审计其他低风险的性能改进。绝不中断活跃工作、关闭 Codex 或删除用户数据。立即运行它。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;每天凌晨 3 点定时自动清理&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;你正在运行 Codex 桌面循环自动化“Nightly Cleanup”。目标是在本机保守回收磁盘空间，不删除用户工作，并输出一份简洁的清理报告和持久化的本地运行台账。
+
+先遵守这些安全边界：
+
+- 不得打印或写入秘密、令牌、环境变量值、私信、文件内容或其他敏感数据；只报告路径、大小、数量、时间戳、分支名和状态摘要。
+
+- 不得删除已跟踪或未跟踪的工作、主 Git 仓库工作树、凭据、项目说明、锁文件、Codex sessions/memories/automations、Docker volumes、虚拟机数据、模型存储、Downloads 或项目源代码。
+
+- 磁盘占用大小、Git ignore 状态或文件年龄单独都不能证明可以删除。
+
+- 所有权、活动状态、仓库状态或用途不清楚时，必须保留并列入“Needs review”。
+
+- 不得执行广泛递归删除，不得使用 force 参数；任何不安全或含糊的情况都 fail closed。
+
+- 每次实际清理前，都要重新检查活动进程、打开句柄、所有权和仓库状态。
+
+工作流程：
+
+1. 先测量系统盘和用户数据盘的剩余空间；再测量主要用户缓存、包管理器、项目、Downloads、容器和 Codex 存储面的占用。测量结果只是清单，不是删除授权。
+
+2. 保守清理 Git worktree：在用户常用项目根目录下发现 Git 仓库，排除缓存、依赖、虚拟环境、构建输出和系统目录；按解析后的 Git common directory 去重；永不删除主 worktree。只有当辅助 worktree 已解锁、干净、不活跃、没有打开句柄，并且已合并、上游已删除，或明确是临时 worktree 且超过 14 天时，才允许移除。状态检查必须有时间上限，超时就列入“Needs review”。处理每个仓库后运行 git worktree prune。
+
+3. 清理项目生成物：只考虑 Git-ignored 且可再生成的目录，例如不活跃的 node_modules、虚拟环境、测试缓存、coverage、临时输出和 build 目录。删除前必须确认当前用户所有、没有嵌套仓库、没有打开句柄、没有被当前 PATH 或环境引用，并满足年龄门槛；每次删除前后都核对仓库状态。
+
+4. 使用工具原生的缓存清理命令，禁止直接删除缓存存储：可用时使用 npm cache verify；可用时使用 brew cleanup -s；仅当 uv 不活跃时使用 uv cache prune。对于 pnpm，发现当前 pnpm 二进制和已安装的托管 pnpm 二进制，解析各自 store 路径并按规范化路径去重；单独枚举标准用户级 pnpm store 的各代目录，确保孤儿 store 也被报告。只允许处理标准用户级 store 根目录下的规范化、带版本号目录。每个 store prune 前重新检查 pnpm 进程和 store 句柄；按版本匹配执行一次 pnpm store prune，并显式传入已验证的 --store-dir；不得使用 --force，也不得直接删除 pnpm store 目录。分别报告 pruned、skipped、failed 和 orphaned stores。推文中的 pnmp 是拼写错误，实际命令统一使用 pnpm。
+
+5. 保守审计容器：只收集容器、镜像、构建缓存和卷的元数据；只允许移除未被引用的镜像、停止超过 14 天的容器和过期构建缓存。不得 prune volumes、停止正在运行的容器或删除容器虚拟机数据。如果容器运行时开始时已停止，除非有界审计确实需要，否则不得改变其状态；如改变，结束后恢复原状态。
+
+6. 报告并写入持久化的本地运行台账：包括时间戳、范围、检查的仓库和 worktree、保留/移除的 worktree、项目产物结果、各类缓存结果、pnpm stores 的 pruned/skipped/failed/orphaned 分类、各类别回收空间、容器结果、最终剩余空间、活动进程导致的跳过项、受保护存储和 Needs review 项。台账只写元数据，不写秘密或文件内容；清理流程成功退出后，最终台账才视为权威。
+
+首次配置或辅助脚本不存在时，创建或更新可复用的本地 helper script，验证其 shell 语法，确认自动化仍保持每天本地时间 03:00 活跃，并验证 pnpm store discovery。不要为了测试自动化而触发完整的破坏性清理；配置阶段只做脚本/语法/发现能力验证。若已有名为“Nightly Cleanup”的自动化，更新它而不是创建重复任务。每次运行结束后只输出简洁的中文摘要和本地台账路径；如果任何判断不安全或含糊，停止相应操作并明确报告原因。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;Multi-Agent / Subagent 配置&lt;/h2&gt;
+&lt;h3&gt;开启 Multi-Agent v2 并提高并发&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;在 `~/.codex/config.toml` 添加：  
+
+[features]
+multi_agent = true
+multi_agent_v2 = true
+
+[agents]
+enabled = true
+max_concurrent_threads_per_session = 10
+default_subagent_model = &quot;gpt-5.6-luna&quot;
+default_subagent_reasoning_effort = &quot;max&quot;
+
+为其提供描述和用于界定委托工作的指令。保留我配置的其余部分。对其与我安装的 Codex 版本进行验证，向我显示差异，然后使用 luna_worker 处理子代理任务。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;让codex启动“独立审核线程”&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;请为执另一个线程写一个目标，让它完成这项任务。你负责持续监督和检查，必要时给它反馈，直到它真正弄明白并通过验证。
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;这是一个难度较高的任务。请先制定计划并完成开发。完成后，启动一个独立线程作为严格审查者。
+审查线程不要直接修改代码，而是从需求完整性、逻辑正确性、边界情况、代码质量、测试覆盖和实际运行结果六个方面进行验证。
+不要只通过阅读代码判断任务已经完成，必须尽可能运行测试、执行程序，并核对真实结果。将发现的问题整理成修复清单交回主线程。
+主线程修复后，再由审查线程重新验证。持续循环，直到审查线程确认目标已经完整实现，并给出测试结果、运行记录或其他验证依据。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;长任务与 Prompt 技巧&lt;/h2&gt;
+&lt;h3&gt;用语音描述任务，效果比打字强&lt;/h3&gt;
+&lt;p&gt;安装 微信输入输入法，并在语音输入设置中开启语音智能整理
+启动语音输入，设置右Alt，按住说话不开启&lt;/p&gt;
+&lt;p&gt;用说话的方式把任务背景、上下文、预期结果一口气讲清楚。&lt;/p&gt;
+&lt;p&gt;让你输出的效果高出打字时 3 倍以上&lt;/p&gt;
+&lt;h3&gt;让codex启动“独立审核线程”&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;请为执另一个线程写一个目标，让它完成这项任务。你负责持续监督和检查，必要时给它反馈，直到它真正弄明白并通过验证。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Just do it yourself&lt;/h3&gt;
+&lt;p&gt;当 Codex 让你登录/下载/点按钮时，直接回复 “just do it yourself”。完成后让它转成 skill。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;自动动手做
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;使用 /goal 时加上 token budget（可让 Codex 自己开启 flag）。&lt;/h3&gt;
+&lt;h2&gt;Skill 与长期优化&lt;/h2&gt;
+&lt;p&gt;续迭代优化 Skill&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;read [skill name, workflow file, or folder path] and run a backtest against my past sessions related to it.
+
+prefer sessions from the same project and same task type. first list the samples you plan to use and why you picked them. if you can&apos;t access enough sessions, say so directly instead of guessing.
+
+compare what the skill assumes vs how i actually work. focus on:
+
+- steps i often skip, rewrite, or run more than once
+- work i still do manually that the skill never covers
+- the order i actually do things in
+- spots that keep causing rework, getting stuck, or needing extra clarification
+
+separate stable patterns from one-off exceptions. never rewrite a rule over a single anomaly.
+
+output a dry run first, nothing else:
+
+- keep / modify / add / remove
+- session evidence for each item
+- proposed diff and reasoning
+
+do not modify any files until i confirm.
+
+after i confirm, update the skill, run existing checks, and summarize before / after. if there&apos;s no existing way to verify, say so.
+
+finally, based on how fast new sessions accumulate, suggest a weekly or biweekly review. show me the schedule, scope, and trigger conditions first, then create the recurring task after i confirm.
+
+every scheduled review outputs a dry run only. no auto-modifying the skill without confirmation.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;在输入具体需求前要求 Agent完整的审题与风险评估&lt;/h3&gt;
+&lt;p&gt;核心思路：让它在动手之前，先像资深工程师一样审题——
+分析需求、列出假设、识别风险、再给方案。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;𝗕𝗲𝗳𝗼𝗿𝗲 𝗶𝗺𝗽𝗹𝗲𝗺𝗲𝗻𝘁𝗶𝗻𝗴
+
+Work like a contractor who pays for rework. Catch wrong assumptions early, and don&apos;t make me answer questions the repository already answers.
+
+𝟭. 𝗜𝗻𝘃𝗲𝘀𝘁𝗶𝗴𝗮𝘁𝗲 𝗯𝗲𝗳𝗼𝗿𝗲 𝗮𝘀𝗸𝗶𝗻𝗴
+
+Read the relevant code, tests, configs, dependency manifests, and documentation first. Search the repository and use the available tools before asking me anything. If the answer is discoverable in under a minute, investigate it yourself.
+
+Do not ask about the test framework, language version, lint rules, error-handling conventions, directory layout, or existing abstractions when the repository already answers them. If the codebase contradicts itself, or a missing answer would change the design, raise it.
+
+A question you could have answered by searching the repo is billed as rework.
+
+𝟮. 𝗣𝗿𝗼𝗱𝘂𝗰𝗲 𝘁𝗵𝗶𝘀, 𝘁𝗵𝗲𝗻 𝘀𝘁𝗼𝗽
+
+𝗚𝗼𝗮𝗹
+Restate the task in one paragraph in your own words, including the acceptance criteria. If the restatement is wrong, this is the cheapest place to catch it.
+
+𝗕𝗹𝗼𝗰𝗸𝗶𝗻𝗴 𝗾𝘂𝗲𝘀𝘁𝗶𝗼𝗻𝘀 (𝟬-𝟯)
+Ask only when a wrong answer would force us to throw work away, not merely adjust it. Include your recommended default with every question so I can reply &quot;use all defaults.&quot; If nothing truly blocks the work, write &quot;none.&quot;
+
+𝗔𝘀𝘀𝘂𝗺𝗽𝘁𝗶𝗼𝗻𝘀
+Max five. Every assumption must be load-bearing: if being wrong wouldn&apos;t change the design, delete it. List only specific, falsifiable assumptions, covering only the areas this task touches:
+
+- Data: shape, volume, trust level, encoding, and malformed inputs
+- Failure: timeout, partial write, or downstream error; retry, fail loudly, or degrade
+- Boundaries: callers, public vs. internal APIs, and backwards compatibility
+- State: concurrency, idempotency, transactions, and ordering guarantees
+- Environment: runtime version, deployment target, and allowed external access
+- Scope: what you will not do and what remains TODO
+- Testing: what you will test and what will remain uncovered
+
+𝗣𝗹𝗮𝗻
+List the files you will create or modify, the key function or type signatures, and the order of work. Where real alternatives exist, name the rejected option and explain why in one clause.
+
+Then stop. Do not implement.
+
+𝟯. 𝗠𝗮𝘁𝗰𝗵 𝘁𝗵𝗲 𝗽𝗿𝗼𝗰𝗲𝘀𝘀 𝘁𝗼 𝘁𝗵𝗲 𝗿𝗶𝘀𝗸
+
+For a typo, rename, or an obvious change under ~20 lines with one clear solution, skip the rest of this process and just do it.
+
+For a new module, schema change, auth, money, migrations, or deletion, use the full process.
+
+For everything in between, one rule: if you can&apos;t say what makes a change safe, treat it as risky.
+
+𝟰. 𝗔𝗳𝘁𝗲𝗿 𝗮𝗽𝗽𝗿𝗼𝘃𝗮𝗹
+
+Implement the plan as approved. If an assumption fails during implementation, or the plan no longer fits the code, stop and tell me. Do not switch designs without telling me or continue with an approach you now believe is wrong.
+
+𝟱. 𝗣𝗿𝗼𝘃𝗲 𝗶𝘁 𝘄𝗼𝗿𝗸𝗲𝗱
+
+Run the tests you promised in Assumptions and paste the output. List every file you touched, with one line of why for each.
+
+Change only what the plan names. A drive-by refactor is work I didn&apos;t order. Code without evidence is a claim, not a deliverable.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;任意 Prompt 末尾加这句话，效果翻倍&lt;/h3&gt;
+&lt;p&gt;在任何 prompt 末尾加上：Use sub agents as needed
+Codex 会自动判断哪些子任务可以并行，派出 subagent 分头执行。
+一句话，让 AI 主动提效。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Use sub agents as needed
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;任意 Prompt 末尾加这句话，效果翻倍&lt;/h3&gt;
+&lt;p&gt;开源
+https://x.com/Saccc_c/status/2084519494207324327&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;结果可编辑writing block输出
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;其他实用配置与心态&lt;/h2&gt;
+&lt;h3&gt;长会话防变慢四招&lt;/h3&gt;
+&lt;h4&gt;设置 Process_narration=false&lt;/h4&gt;
+&lt;h4&gt;用 orchestrator + parallel agents 分担上下文&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;充当协调者。使用并行代理来完成研究和执行工作。为每个并行代理编写详细任务，并强制它们行动、迭代、完成任务，并带回深入报告。你的工作是深入分析代理的工作，提供反馈，并为它们提供持续任务。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;强制 “Measure twice, cut once”&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;Measure twice, cut once policy。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;保持代码库干净（无临时文件、死代码）&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;保持代码库干净，没有临时文件，没有死代码，没有死文件。始终保持组织化。没有不必要的文件夹、子文件夹或文件。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;把任务写成详细文档后放手&lt;/h3&gt;
+&lt;p&gt;把你的思考前置到文档中&lt;/p&gt;
+&lt;p&gt;写完整 task doc（需求 + 上下文 + 最终愿景）→ 发 “accomplish this and test until done” → 走开。&lt;/p&gt;
+&lt;p&gt;示例Codex_doc.md&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# 任务：搭建用户引导流程
+## 背景信息
+- 基于 Next.js 开发，使用 Supabase 身份认证
+- 当前注册流程在第2步存在40%用户流失率
+- 采用移动优先设计方案
+
+## 需求
+- 三步递进式表单（姓名 → 使用场景 → 工作空间设置）
+- 步骤间保存填写进度
+- 第3步提供跳过选项
+- 流程完成时播放彩带动画
+
+## 约束条件
+- 禁止新增第三方依赖包
+- 界面风格遵循现有设计系统
+- 全部表单项在客户端完成校验
+
+## 完成标准
+- 全部3个步骤在移动端、桌面端均可正常运行
+- 每一步测试用例全部通过
+- 用户流失埋点事件正常触发
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;codex相关问题咨询  dqtx33&lt;/p&gt;
 </content:encoded></item><item><title>Canvasight画布插件</title><link>https://dqtx.cc/posts/aihacks/canvasight%E7%94%BB%E5%B8%83%E6%8F%92%E4%BB%B6/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/canvasight%E7%94%BB%E5%B8%83%E6%8F%92%E4%BB%B6/</guid><pubDate>Mon, 13 Jul 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;在GitHub上发现了一个挺有意思的 Codex 插件，分享给大家。这名字叫Canvasight&lt;/p&gt;
 &lt;p&gt;它不是传统意义上的思维导图插件，而是给 Codex 加了一块“可执行画布”：先把复杂任务拆成节点，再从任意节点继续让 Codex 往下做。&lt;/p&gt;
 &lt;p&gt;项目地址：Niall-Young/Canvasight&lt;/p&gt;
@@ -1333,6 +1721,15 @@ capcut_api_run.json
 &lt;p&gt;很多人理解 Skill，会以为它就是一段更长的提示词。我觉得不是，Skill 真正有价值的地方，是它记录了一个已经被验证过的工作方式。比如默认抓哪个平台、用哪个工具、数据写到哪里、最后按什么格式输出、发布前还要检查违禁词和限流风险，这些细节写进去以后，就不需要每次重新解释。&lt;/p&gt;
 &lt;p&gt;这就是我说的复利。一次跑通的流程，如果只停留在聊天记录里，它的价值就发生一次。但如果被封装成 Skill，它就变成了下一次工作的起点。少解释一次背景，少复制一次路径，少忘一次格式，少漏一次检查，这些小事叠起来，就是一套属于自己的工作系统。&lt;/p&gt;
 &lt;p&gt;从评论区找选题只是一个例子。同样的方法，也可以用在客户调研、竞品分析、爆款拆解、销售话术、社群问题整理、产品 FAQ、知识库更新。你每跑通一个流程，就多一个自己的 Skill，也少一块重复劳动。&lt;/p&gt;
+</content:encoded></item><item><title>OBS教程</title><link>https://dqtx.cc/posts/software/obs%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/obs%E6%95%99%E7%A8%8B/</guid><pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;鼠标跟随缩放。
+https://github.com/mmlTools/zoominator&lt;/p&gt;
+&lt;p&gt;教程&lt;/p&gt;
+&lt;p&gt;插件位置放在&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;C:\Program Files\obs-studio\obs-plugins\64bit
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;位置  工具&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260811001920279.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260811001933327.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 </content:encoded></item><item><title>自由画布AI工作流</title><link>https://dqtx.cc/posts/aihacks/%E8%87%AA%E7%94%B1%E7%94%BB%E5%B8%83ai%E5%B7%A5%E4%BD%9C%E6%B5%81/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E8%87%AA%E7%94%B1%E7%94%BB%E5%B8%83ai%E5%B7%A5%E4%BD%9C%E6%B5%81/</guid><description>记录一次给朋友电脑安装 Infinite-Canvas 的可复制步骤。</description><pubDate>Tue, 30 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;想把 Infinite-Canvas 安装到朋友电脑上，先别讲 API、模型协议和 ComfyUI。第一目标是让网页能打开。&lt;/p&gt;
 &lt;p&gt;项目地址
 https://github.com/hero8152/Infinite-Canvas/tree/main&lt;/p&gt;
@@ -1913,6 +2310,14 @@ LLM Wiki：  原始文档 → LLM 编译成 wiki → 持续更新 → 回答（�
 &lt;p&gt;&lt;em&gt;&amp;gt;/ 更多Agent实战干货
 迎访问我的博客：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;文章来源&lt;/strong&gt;：&lt;a href=&quot;https://mp.weixin.qq.com/s/5LkcBS6TvwXEGxIMiA-1jQ&quot;&gt;点此查看&lt;/a&gt;&lt;/p&gt;
+</content:encoded></item><item><title>openlsit最新挂载123云盘</title><link>https://dqtx.cc/posts/software/openlsit%E6%9C%80%E6%96%B0%E6%8C%82%E8%BD%BD123%E4%BA%91%E7%9B%98/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/openlsit%E6%9C%80%E6%96%B0%E6%8C%82%E8%BD%BD123%E4%BA%91%E7%9B%98/</guid><pubDate>Mon, 22 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260726002110405.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;驱动：123云盘开放平台
+网页代理→关闭
+WebDAV 策略*：302重定向
+访问临牌：
+刷新临牌:&lt;/p&gt;
+&lt;p&gt;https://api,oplist.org/获取地址
+123网盘(OAuth2)跳转登录&lt;/p&gt;
 </content:encoded></item><item><title>自用电脑提示词软件</title><link>https://dqtx.cc/posts/software/%E8%87%AA%E7%94%A8%E7%94%B5%E8%84%91%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%BD%AF%E4%BB%B6/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E8%87%AA%E7%94%A8%E7%94%B5%E8%84%91%E6%8F%90%E7%A4%BA%E8%AF%8D%E8%BD%AF%E4%BB%B6/</guid><description>一款 Windows 上可用的开源提词器，支持语音自动跟读、防截屏和专注模式。</description><pubDate>Mon, 22 Jun 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近找到一个挺适合线上会议和录视频使用的开源提词器。它是一个面向 Windows 的桌面提词器，核心思路很简单：把讲稿贴进去，然后在会议、直播或录制时悬浮在屏幕上辅助阅读。&lt;/p&gt;
 &lt;p&gt;项目地址
 https://github.com/pyzskw/meeting-teleprompter
@@ -5406,6 +5811,30 @@ mklink /D &quot;C:\Users\Administrator\.workbuddy\skills&quot; &quot;C:\Users\Ad
 &lt;p&gt;&lt;strong&gt;以上就是我个人对这款软件的使用感受。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;从「命令误触」到「先写需求再挂技能」，从「跨工具割裂」到「微信零配置打通」——WorkBuddy 把 AI Agent 从折腾的玩具变成了顺手的生产力工具。&lt;/p&gt;
 &lt;p&gt;如果你也有什么私藏神器，欢迎在评论区留言推荐，互相种草！觉得有帮助的话，点个赞再走呗～&lt;/p&gt;
+</content:encoded></item><item><title>博客导航栏抖动修复记</title><link>https://dqtx.cc/posts/technical/%E5%AF%BC%E8%88%AA%E6%A0%8F%E6%8A%96%E5%8A%A8%E4%BF%AE%E5%A4%8D%E8%AE%B0/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E5%AF%BC%E8%88%AA%E6%A0%8F%E6%8A%96%E5%8A%A8%E4%BF%AE%E5%A4%8D%E8%AE%B0/</guid><pubDate>Sun, 10 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这个 bug 折磨了我好几天。每次点博客导航栏上的链接，其他几个文字就像被电了一下，集体向右哆嗦一下再弹回来。不像什么大问题，但每次看到都很难受。&lt;/p&gt;
+&lt;p&gt;我尝试了不同的模型去修复这个问题，都没有找到真正的元凶&lt;/p&gt;
+&lt;h2&gt;第一回合：怀疑字体&lt;/h2&gt;
+&lt;p&gt;我用的霞鹜文楷是 web font，&lt;code&gt;font-display: swap&lt;/code&gt; 意味着页面先用系统字体渲染，等霞鹜文楷下载完了再替换。两种字体对同一个字母的宽度不一样——&quot;Home&quot;在 Roboto 下可能 42px 宽，霞鹜文楷下变成 47px。这 5px 的差距在 flex 布局里足以把旁边的元素挤开。&lt;/p&gt;
+&lt;p&gt;于是我把导航栏字体全改成了系统字体。心想这下总不会有字体替换了吧？部署上去一看——还在抖。&lt;/p&gt;
+&lt;p&gt;字体不是根因。&lt;/p&gt;
+&lt;h2&gt;第二回合：怀疑 CSS 动画&lt;/h2&gt;
+&lt;p&gt;又检查了全局 CSS，发现几乎所有文字元素都挂了 &lt;code&gt;transition&lt;/code&gt;。是不是点链接时 focus 状态触发了什么动画？把 outline 禁了，把颜色从半透明改成不透明，把 &lt;code&gt;scrollbar-gutter&lt;/code&gt; 设成 &lt;code&gt;stable&lt;/code&gt;……一套组合拳打下去，毫无改善。&lt;/p&gt;
+&lt;p&gt;CSS 动画也不是根因。&lt;/p&gt;
+&lt;h2&gt;第三回合：偶然发现&lt;/h2&gt;
+&lt;p&gt;反复看 Navbar.astro 的代码，突然注意到一行：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;Search client:only=&quot;svelte&quot;&amp;gt;&amp;lt;/Search&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;client:only&lt;/code&gt; 在 Astro 里的意思是&quot;这个组件完全跳过服务器渲染&quot;。也就是说，服务器生成的 HTML 里，搜索框的位置只有一个空的占位注释。浏览器拿到 HTML 开始渲染的时候，导航栏右侧是空的。&lt;/p&gt;
+&lt;p&gt;然后 Svelte 在浏览器里初始化完成，搜索框的完整 DOM 突然出现——一个大约 176px 宽的家伙毫无征兆地插进了 &lt;code&gt;flex justify-between&lt;/code&gt; 的布局里。flex 引擎被迫重新分配空间，所有导航链接被挤得集体右移。&lt;/p&gt;
+&lt;p&gt;等用户看到的时候，Svelte 早已初始化完了，文字也回到了正确的位置。整个过程不到 100 毫秒，但肉眼刚好能捕捉到那个&quot;闪&quot;的瞬间。&lt;/p&gt;
+&lt;h2&gt;修复&lt;/h2&gt;
+&lt;p&gt;给 Search 组件外面包了一个固定宽度的容器：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&quot;w-11 lg:w-44 h-11 flex items-center justify-end&quot;&amp;gt;
+    &amp;lt;Search client:only=&quot;svelte&quot;&amp;gt;&amp;lt;/Search&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;不管 Svelte 初始化了没有，这个容器的宽度永远是 176px。布局从一开始就是稳定的。&lt;/p&gt;
+&lt;p&gt;一个宽度的差异，修了好几天。&lt;/p&gt;
 </content:encoded></item><item><title>Claude Code 窗口接管</title><link>https://dqtx.cc/posts/aihacks/claude-code-%E6%A1%A5%E6%8E%A5%E5%B7%A5%E5%85%B7/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/claude-code-%E6%A1%A5%E6%8E%A5%E5%B7%A5%E5%85%B7/</guid><pubDate>Sun, 10 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;很多开发者都有这样一个刚需：正在电脑上用 &lt;strong&gt;Claude Code&lt;/strong&gt; 开发项目，突然临时有事需要离开工位。 、&lt;/p&gt;
 &lt;p&gt;人一走，就没法继续和电脑端的 Claude Code 交互跟进任务。其实现在已有不少解决方案，可以通过技能把 Claude Code 桥接到第三方平台，比如飞书、微信、Telegram。哪怕不在电脑旁，也能随时查看开发进度、远程下发指令操控。&lt;/p&gt;
 &lt;p&gt;weclaw
@@ -5466,30 +5895,6 @@ https://github.com/lc2panda/claude-plugin-wechat&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-</content:encoded></item><item><title>博客导航栏抖动修复记</title><link>https://dqtx.cc/posts/technical/%E5%AF%BC%E8%88%AA%E6%A0%8F%E6%8A%96%E5%8A%A8%E4%BF%AE%E5%A4%8D%E8%AE%B0/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E5%AF%BC%E8%88%AA%E6%A0%8F%E6%8A%96%E5%8A%A8%E4%BF%AE%E5%A4%8D%E8%AE%B0/</guid><pubDate>Sun, 10 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这个 bug 折磨了我好几天。每次点博客导航栏上的链接，其他几个文字就像被电了一下，集体向右哆嗦一下再弹回来。不像什么大问题，但每次看到都很难受。&lt;/p&gt;
-&lt;p&gt;我尝试了不同的模型去修复这个问题，都没有找到真正的元凶&lt;/p&gt;
-&lt;h2&gt;第一回合：怀疑字体&lt;/h2&gt;
-&lt;p&gt;我用的霞鹜文楷是 web font，&lt;code&gt;font-display: swap&lt;/code&gt; 意味着页面先用系统字体渲染，等霞鹜文楷下载完了再替换。两种字体对同一个字母的宽度不一样——&quot;Home&quot;在 Roboto 下可能 42px 宽，霞鹜文楷下变成 47px。这 5px 的差距在 flex 布局里足以把旁边的元素挤开。&lt;/p&gt;
-&lt;p&gt;于是我把导航栏字体全改成了系统字体。心想这下总不会有字体替换了吧？部署上去一看——还在抖。&lt;/p&gt;
-&lt;p&gt;字体不是根因。&lt;/p&gt;
-&lt;h2&gt;第二回合：怀疑 CSS 动画&lt;/h2&gt;
-&lt;p&gt;又检查了全局 CSS，发现几乎所有文字元素都挂了 &lt;code&gt;transition&lt;/code&gt;。是不是点链接时 focus 状态触发了什么动画？把 outline 禁了，把颜色从半透明改成不透明，把 &lt;code&gt;scrollbar-gutter&lt;/code&gt; 设成 &lt;code&gt;stable&lt;/code&gt;……一套组合拳打下去，毫无改善。&lt;/p&gt;
-&lt;p&gt;CSS 动画也不是根因。&lt;/p&gt;
-&lt;h2&gt;第三回合：偶然发现&lt;/h2&gt;
-&lt;p&gt;反复看 Navbar.astro 的代码，突然注意到一行：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;Search client:only=&quot;svelte&quot;&amp;gt;&amp;lt;/Search&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;code&gt;client:only&lt;/code&gt; 在 Astro 里的意思是&quot;这个组件完全跳过服务器渲染&quot;。也就是说，服务器生成的 HTML 里，搜索框的位置只有一个空的占位注释。浏览器拿到 HTML 开始渲染的时候，导航栏右侧是空的。&lt;/p&gt;
-&lt;p&gt;然后 Svelte 在浏览器里初始化完成，搜索框的完整 DOM 突然出现——一个大约 176px 宽的家伙毫无征兆地插进了 &lt;code&gt;flex justify-between&lt;/code&gt; 的布局里。flex 引擎被迫重新分配空间，所有导航链接被挤得集体右移。&lt;/p&gt;
-&lt;p&gt;等用户看到的时候，Svelte 早已初始化完了，文字也回到了正确的位置。整个过程不到 100 毫秒，但肉眼刚好能捕捉到那个&quot;闪&quot;的瞬间。&lt;/p&gt;
-&lt;h2&gt;修复&lt;/h2&gt;
-&lt;p&gt;给 Search 组件外面包了一个固定宽度的容器：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&quot;w-11 lg:w-44 h-11 flex items-center justify-end&quot;&amp;gt;
-    &amp;lt;Search client:only=&quot;svelte&quot;&amp;gt;&amp;lt;/Search&amp;gt;
-&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;不管 Svelte 初始化了没有，这个容器的宽度永远是 176px。布局从一开始就是稳定的。&lt;/p&gt;
-&lt;p&gt;一个宽度的差异，修了好几天。&lt;/p&gt;
 </content:encoded></item><item><title>离线安装微软商城应用</title><link>https://dqtx.cc/posts/aihacks/win%E5%AE%89%E8%A3%85codex-app/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/win%E5%AE%89%E8%A3%85codex-app/</guid><pubDate>Sat, 09 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;很多朋友安装了精简版 Windows，却遭遇致命痛点：想装个应用，系统却强行跳转微软商城？&lt;/p&gt;
 &lt;p&gt;Microsoft Store 打不开、下载失败、寸步难行！今天以 &lt;strong&gt;Codex&lt;/strong&gt; 为例，手把手教你离线安装微软商城应用&lt;/p&gt;
 &lt;p&gt;这不仅是解决 Codex 的方案，更是&lt;strong&gt;破解所有微软商城应用安装僵局的终极钥匙&lt;/strong&gt;！&lt;/p&gt;
@@ -5582,6 +5987,201 @@ https://dribbble.com/search/dashboard&lt;/p&gt;
 &lt;li&gt;目前常用好几个图片压缩的插件，微信后台服务器在拉图时拉不到&lt;/li&gt;
 &lt;li&gt;目前使用picgo，可以上传GIF，但压缩使用webp 1.0.0插件，GIF也就无缘了&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>复现Karpathy的LLM Wiki</title><link>https://dqtx.cc/posts/workflow/%E5%A4%8D%E7%8E%B0karpathy%E7%9A%84llm-wiki/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/%E5%A4%8D%E7%8E%B0karpathy%E7%9A%84llm-wiki/</guid><pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;AI 时代最大的讽刺：我们拥有了最强大的知识处理工具，却仍在用最原始的方式管理知识。&lt;/p&gt;
+&lt;p&gt;前 Tesla AI 总监 Karpathy 给出了他的答案——&lt;strong&gt;LLM Wiki&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;这套框架近期在 GitHub 上引发广泛关注。仔细研读后，我发现它的核心价值不在于技术实现，而在于一套关于&lt;strong&gt;知识组织的理念与行为准则&lt;/strong&gt;——门槛极低，却能带来质的飞跃。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260507230429547.png&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;核心框架&lt;/h3&gt;
+&lt;h4&gt;三种文件：知识库的基石&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;文件类型&lt;/th&gt;
+&lt;th&gt;作用&lt;/th&gt;
+&lt;th&gt;示例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Raw Resource&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;存放原始资料&lt;/td&gt;
+&lt;td&gt;PDF、视频、网页剪藏&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Wiki&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;AI 主导生成的知识节点&lt;/td&gt;
+&lt;td&gt;实体页、概念页、对比页&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;TheSchema&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;人与 AI 约定的加工规范&lt;/td&gt;
+&lt;td&gt;目录结构、Front Matter、工作流&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;核心洞察&lt;/strong&gt;：原始资料是唯一事实来源，AI 的任务是把资料&lt;strong&gt;编译&lt;/strong&gt;成可复用的知识网络。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+&lt;h4&gt;三种日常操作&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;1. Ingest（摄取）&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;把新资料喂给 AI → AI 提取实体/概念 → 新增或修改 Wiki → 更新 Index 和 Log&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;2. Query（问答）&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;基于 Wiki 而非原始资料提问 → 效率更高 → 回答有价值可生成新 Wiki&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;3. Lint（审查）&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;让 AI 定期做体检：是否有矛盾？是否有被推翻的旧表述？是否有孤立页面？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h4&gt;三种查询提效工具&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;工具&lt;/th&gt;
+&lt;th&gt;作用&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Index&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;所有 Wiki 的一句话摘要，方便 AI 快速定位&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Log&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;记录 AI 每次操作，让它知道你研究了什么&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;RAG&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Wiki &amp;gt;1000 页时，用 Qmd 等工具进行混合检索&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;附：QMD原理详细解读
+https://zhuanlan.zhihu.com/p/2016471943256254194&lt;/p&gt;
+&lt;h3&gt;我的 Obsidian 实践&lt;/h3&gt;
+&lt;h4&gt;模板示范&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;obsidian-vault/
+├── 01-INPUT/                  ← 原材料入口，低摩擦记录
+│   ├── articles/                文章
+│   ├── transcripts/             转录稿
+│   ├── ideas（选题）/            选题灵感
+│   ├── sources（素材）/          素材收集
+│   ├── 剪藏/                    网页剪藏
+│   ├── 周报和复盘/              复盘记录
+│   ├── 文章草稿/                写作草稿
+│   ├── 模板/                    笔记模板
+│   ├── 研究报告/                研究资料
+│   └── 项目资料/                项目相关
+├── 02-PROCESSING/             ← AI 处理区，研究摘要、选题分析、中间稿
+│   ├── research/
+│   ├── outlines/
+│   ├── drafts（AI初稿）/
+│   └── reviews/
+├── 03-OUTPUT/                 ← 正式作品区，可发布内容
+│   ├── newsletters/
+│   ├── scripts/
+│   └── wiki/                    知识 Wiki
+├── 04-FEEDBACK/               ← 反馈层，追踪内容效果，驱动系统进化
+│   ├── metrics/
+│   ├── comments/
+│   ├── retrospectives/
+│   └── ARCHIVE归档/
+├── 05-REFERENCE/              ← 长期参考资料
+│   └── 提示词/                  AI 提示词库
+├── AGENTS                     ← Newtype-os记忆文件（硬链接）
+├── CLAUDE                     ← Claude code记忆文件（硬链接）
+├── QWEN                       ← qwen code记忆文件（硬链接）
+├── TheSchema                  ← 核心规范文档
+└── commands/                  ← 自定义命令
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 说明：CLAUDE、QWEN、AGENTS 实际上是同一个文件的硬链接（TheSchema），让不同的 AI Agent 都能读取到同一份规范文档。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;yaml属性示例&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;---
+type: &quot;entity|concept|comparison|source&quot;
+tags: []
+summary: &quot;一句话说明&quot;
+sources: [&quot;raw/xxx.pdf&quot;]
+updated: &quot;2026-05-07&quot;
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;实践建议&lt;/h4&gt;
+&lt;p&gt;建议建 3 个 skill：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. ingest&lt;/strong&gt; — 将 Raw/ 目录下的原始资料编译到 Wiki/ 中&lt;/p&gt;
+&lt;p&gt;也可以直接在 Claudian 插件中对话：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;请根据 @wiki/TheSchema 的规范，针对我 01_Raw/ 文件夹下的所有文件夹下全部文档进行分析拆解并创建出相应的wiki页面以及建立他们之间的链接关系
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;或：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;请基于提供的资料，生成 02_Wiki/ 下的结构化知识条目，并根据主题归入对应的分类目录；若知识库中没有匹配的分类，请自动创建新分类。条目需保持独立、标题清晰，格式符合 Wiki 规范
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;2. lint&lt;/strong&gt; — 知识库全局健康度检查&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;3. query&lt;/strong&gt; — 基于本地 Wiki 知识库回答用户提问&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h3&gt;三个容易被忽视的盲点&lt;/h3&gt;
+&lt;h4&gt;1. 原始资料可能更适合入门&lt;/h4&gt;
+&lt;p&gt;Wiki 是原子化、结构化的，&lt;strong&gt;适合回顾和总结&lt;/strong&gt;。但初学者应该先完整学习原始资料（PDF 的章节结构、视频的循序渐进），再来看 Wiki 串联知识点。&lt;/p&gt;
+&lt;h4&gt;2. AI 生成的 Wiki 需要验收&lt;/h4&gt;
+&lt;p&gt;不要无脑囤积。检查链接是否有上下文（&quot;详见 XXX&quot;却没说为什么相关）、内容是否准确。&lt;strong&gt;持续迭代 Schema 才能产生真正价值。&lt;/strong&gt;&lt;/p&gt;
+&lt;h4&gt;3. 现在创建的内容是给 AI 看的&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Index 和 Log 的设计初衷就是给 AI 用&lt;/li&gt;
+&lt;li&gt;用 &lt;code&gt;type&lt;/code&gt; 属性区分&quot;人写的内容&quot;和&quot;AI 生成的内容&quot;&lt;/li&gt;
+&lt;li&gt;Summary 字段方便 AI 检索&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h3&gt;资源汇总&lt;/h3&gt;
+&lt;h4&gt;Obsidian实例&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;模板&lt;/th&gt;
+&lt;th&gt;作者&lt;/th&gt;
+&lt;th&gt;链接&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;obsidian-vault-template&lt;/td&gt;
+&lt;td&gt;我自己创建&lt;/td&gt;
+&lt;td&gt;https://github.com/dqtx760/obsidian-vault-template&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;karpathy-llm-wiki-vault&lt;/td&gt;
+&lt;td&gt;内含 3 个 skill&lt;/td&gt;
+&lt;td&gt;https://github.com/jason-effi-lab/karpathy-llm-wiki-vault&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;llm-wiki-obsidian-blink&lt;/td&gt;
+&lt;td&gt;Blink 老师&lt;/td&gt;
+&lt;td&gt;https://github.com/iBlinkQ/llm-wiki-obsidian-blink&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;obsidian-ai-vault-template&lt;/td&gt;
+&lt;td&gt;志辉&lt;/td&gt;
+&lt;td&gt;https://github.com/iamzhihuix/obsidian-ai-vault-template&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4&gt;一键 Wiki&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 这里与 Karpathy 原方法略有不同：原方法是&quot;摄入新资料后编译&quot;，这里是&quot;对已发布的博客内容进行编译&quot;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;前提需安装 Newtype-os。比如我对我博客编译是这样的，终端 &lt;code&gt;nt&lt;/code&gt; 启动 Newtype-os：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/wiki 根据 post 文件夹内容进行编译
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;本地体验&lt;/strong&gt;：安装 &lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/newtype-os/&quot;&gt;Newtype-os&lt;/a&gt; 后，在终端执行上述命令&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;在线预览&lt;/strong&gt;：访问 &lt;a href=&quot;https://www.dqtx.cc/wiki/&quot;&gt;dqtx.cc/wiki&lt;/a&gt; 免安装查看我的博客编译&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;p&gt;Karpathy 的 LLM Wiki 框架，本质是把知识管理从&quot;每次查询时重新派生&quot;变成&quot;编译一次，保持最新&quot;。&lt;/p&gt;
+&lt;p&gt;这才是真正的&lt;strong&gt;可复利&lt;/strong&gt;知识层。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;工具会变，但这套方法论值得长期践行!&lt;/strong&gt;&lt;/p&gt;
 </content:encoded></item><item><title>GPT-Image-2参考资料</title><link>https://dqtx.cc/posts/aihacks/gpt-image-2/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/gpt-image-2/</guid><pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;分享几个市场免费使用的网站，以及我自己整理收藏的提示词合集。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260510170448902.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;第三方网站&lt;/h3&gt;
@@ -6016,201 +6616,6 @@ https://x.com/0x17B/status/1497889044227067904&lt;/p&gt;
 &lt;h3&gt;# Minimal&lt;/h3&gt;
 &lt;p&gt;自定义界面，消除干扰，获得更简约的外观，在使用 Twitter 时更加专注和高效
 https://chromewebstore.google.com/detail/minimal-theme-for-twitter/pobhoodpcipjmedfenaigbeloiidbflp&lt;/p&gt;
-</content:encoded></item><item><title>复现Karpathy的LLM Wiki</title><link>https://dqtx.cc/posts/workflow/%E5%A4%8D%E7%8E%B0karpathy%E7%9A%84llm-wiki/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/%E5%A4%8D%E7%8E%B0karpathy%E7%9A%84llm-wiki/</guid><pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;AI 时代最大的讽刺：我们拥有了最强大的知识处理工具，却仍在用最原始的方式管理知识。&lt;/p&gt;
-&lt;p&gt;前 Tesla AI 总监 Karpathy 给出了他的答案——&lt;strong&gt;LLM Wiki&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;这套框架近期在 GitHub 上引发广泛关注。仔细研读后，我发现它的核心价值不在于技术实现，而在于一套关于&lt;strong&gt;知识组织的理念与行为准则&lt;/strong&gt;——门槛极低，却能带来质的飞跃。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260507230429547.png&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;核心框架&lt;/h3&gt;
-&lt;h4&gt;三种文件：知识库的基石&lt;/h4&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;文件类型&lt;/th&gt;
-&lt;th&gt;作用&lt;/th&gt;
-&lt;th&gt;示例&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;Raw Resource&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;存放原始资料&lt;/td&gt;
-&lt;td&gt;PDF、视频、网页剪藏&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;Wiki&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;AI 主导生成的知识节点&lt;/td&gt;
-&lt;td&gt;实体页、概念页、对比页&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;TheSchema&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;人与 AI 约定的加工规范&lt;/td&gt;
-&lt;td&gt;目录结构、Front Matter、工作流&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;核心洞察&lt;/strong&gt;：原始资料是唯一事实来源，AI 的任务是把资料&lt;strong&gt;编译&lt;/strong&gt;成可复用的知识网络。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr /&gt;
-&lt;h4&gt;三种日常操作&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;1. Ingest（摄取）&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;把新资料喂给 AI → AI 提取实体/概念 → 新增或修改 Wiki → 更新 Index 和 Log&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;2. Query（问答）&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;基于 Wiki 而非原始资料提问 → 效率更高 → 回答有价值可生成新 Wiki&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;3. Lint（审查）&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;让 AI 定期做体检：是否有矛盾？是否有被推翻的旧表述？是否有孤立页面？&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h4&gt;三种查询提效工具&lt;/h4&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;工具&lt;/th&gt;
-&lt;th&gt;作用&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;Index&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;所有 Wiki 的一句话摘要，方便 AI 快速定位&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;Log&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;记录 AI 每次操作，让它知道你研究了什么&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;RAG&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;Wiki &amp;gt;1000 页时，用 Qmd 等工具进行混合检索&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;附：QMD原理详细解读
-https://zhuanlan.zhihu.com/p/2016471943256254194&lt;/p&gt;
-&lt;h3&gt;我的 Obsidian 实践&lt;/h3&gt;
-&lt;h4&gt;模板示范&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;obsidian-vault/
-├── 01-INPUT/                  ← 原材料入口，低摩擦记录
-│   ├── articles/                文章
-│   ├── transcripts/             转录稿
-│   ├── ideas（选题）/            选题灵感
-│   ├── sources（素材）/          素材收集
-│   ├── 剪藏/                    网页剪藏
-│   ├── 周报和复盘/              复盘记录
-│   ├── 文章草稿/                写作草稿
-│   ├── 模板/                    笔记模板
-│   ├── 研究报告/                研究资料
-│   └── 项目资料/                项目相关
-├── 02-PROCESSING/             ← AI 处理区，研究摘要、选题分析、中间稿
-│   ├── research/
-│   ├── outlines/
-│   ├── drafts（AI初稿）/
-│   └── reviews/
-├── 03-OUTPUT/                 ← 正式作品区，可发布内容
-│   ├── newsletters/
-│   ├── scripts/
-│   └── wiki/                    知识 Wiki
-├── 04-FEEDBACK/               ← 反馈层，追踪内容效果，驱动系统进化
-│   ├── metrics/
-│   ├── comments/
-│   ├── retrospectives/
-│   └── ARCHIVE归档/
-├── 05-REFERENCE/              ← 长期参考资料
-│   └── 提示词/                  AI 提示词库
-├── AGENTS                     ← Newtype-os记忆文件（硬链接）
-├── CLAUDE                     ← Claude code记忆文件（硬链接）
-├── QWEN                       ← qwen code记忆文件（硬链接）
-├── TheSchema                  ← 核心规范文档
-└── commands/                  ← 自定义命令
-&lt;/code&gt;&lt;/pre&gt;
-&lt;blockquote&gt;
-&lt;p&gt;💡 说明：CLAUDE、QWEN、AGENTS 实际上是同一个文件的硬链接（TheSchema），让不同的 AI Agent 都能读取到同一份规范文档。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h4&gt;yaml属性示例&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;---
-type: &quot;entity|concept|comparison|source&quot;
-tags: []
-summary: &quot;一句话说明&quot;
-sources: [&quot;raw/xxx.pdf&quot;]
-updated: &quot;2026-05-07&quot;
----
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h4&gt;实践建议&lt;/h4&gt;
-&lt;p&gt;建议建 3 个 skill：&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;1. ingest&lt;/strong&gt; — 将 Raw/ 目录下的原始资料编译到 Wiki/ 中&lt;/p&gt;
-&lt;p&gt;也可以直接在 Claudian 插件中对话：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;请根据 @wiki/TheSchema 的规范，针对我 01_Raw/ 文件夹下的所有文件夹下全部文档进行分析拆解并创建出相应的wiki页面以及建立他们之间的链接关系
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;或：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;请基于提供的资料，生成 02_Wiki/ 下的结构化知识条目，并根据主题归入对应的分类目录；若知识库中没有匹配的分类，请自动创建新分类。条目需保持独立、标题清晰，格式符合 Wiki 规范
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;strong&gt;2. lint&lt;/strong&gt; — 知识库全局健康度检查&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;3. query&lt;/strong&gt; — 基于本地 Wiki 知识库回答用户提问&lt;/p&gt;
-&lt;hr /&gt;
-&lt;h3&gt;三个容易被忽视的盲点&lt;/h3&gt;
-&lt;h4&gt;1. 原始资料可能更适合入门&lt;/h4&gt;
-&lt;p&gt;Wiki 是原子化、结构化的，&lt;strong&gt;适合回顾和总结&lt;/strong&gt;。但初学者应该先完整学习原始资料（PDF 的章节结构、视频的循序渐进），再来看 Wiki 串联知识点。&lt;/p&gt;
-&lt;h4&gt;2. AI 生成的 Wiki 需要验收&lt;/h4&gt;
-&lt;p&gt;不要无脑囤积。检查链接是否有上下文（&quot;详见 XXX&quot;却没说为什么相关）、内容是否准确。&lt;strong&gt;持续迭代 Schema 才能产生真正价值。&lt;/strong&gt;&lt;/p&gt;
-&lt;h4&gt;3. 现在创建的内容是给 AI 看的&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;Index 和 Log 的设计初衷就是给 AI 用&lt;/li&gt;
-&lt;li&gt;用 &lt;code&gt;type&lt;/code&gt; 属性区分&quot;人写的内容&quot;和&quot;AI 生成的内容&quot;&lt;/li&gt;
-&lt;li&gt;Summary 字段方便 AI 检索&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;h3&gt;资源汇总&lt;/h3&gt;
-&lt;h4&gt;Obsidian实例&lt;/h4&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;模板&lt;/th&gt;
-&lt;th&gt;作者&lt;/th&gt;
-&lt;th&gt;链接&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;obsidian-vault-template&lt;/td&gt;
-&lt;td&gt;我自己创建&lt;/td&gt;
-&lt;td&gt;https://github.com/dqtx760/obsidian-vault-template&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;karpathy-llm-wiki-vault&lt;/td&gt;
-&lt;td&gt;内含 3 个 skill&lt;/td&gt;
-&lt;td&gt;https://github.com/jason-effi-lab/karpathy-llm-wiki-vault&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;llm-wiki-obsidian-blink&lt;/td&gt;
-&lt;td&gt;Blink 老师&lt;/td&gt;
-&lt;td&gt;https://github.com/iBlinkQ/llm-wiki-obsidian-blink&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;obsidian-ai-vault-template&lt;/td&gt;
-&lt;td&gt;志辉&lt;/td&gt;
-&lt;td&gt;https://github.com/iamzhihuix/obsidian-ai-vault-template&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h4&gt;一键 Wiki&lt;/h4&gt;
-&lt;blockquote&gt;
-&lt;p&gt;💡 这里与 Karpathy 原方法略有不同：原方法是&quot;摄入新资料后编译&quot;，这里是&quot;对已发布的博客内容进行编译&quot;。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;前提需安装 Newtype-os。比如我对我博客编译是这样的，终端 &lt;code&gt;nt&lt;/code&gt; 启动 Newtype-os：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;/wiki 根据 post 文件夹内容进行编译
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;本地体验&lt;/strong&gt;：安装 &lt;a href=&quot;https://www.dqtx.cc/posts/aihacks/newtype-os/&quot;&gt;Newtype-os&lt;/a&gt; 后，在终端执行上述命令&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;在线预览&lt;/strong&gt;：访问 &lt;a href=&quot;https://www.dqtx.cc/wiki/&quot;&gt;dqtx.cc/wiki&lt;/a&gt; 免安装查看我的博客编译&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr /&gt;
-&lt;p&gt;Karpathy 的 LLM Wiki 框架，本质是把知识管理从&quot;每次查询时重新派生&quot;变成&quot;编译一次，保持最新&quot;。&lt;/p&gt;
-&lt;p&gt;这才是真正的&lt;strong&gt;可复利&lt;/strong&gt;知识层。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;工具会变，但这套方法论值得长期践行!&lt;/strong&gt;&lt;/p&gt;
 </content:encoded></item><item><title>张咋啦html模板库</title><link>https://dqtx.cc/posts/aihacks/ai-%E5%B9%BB%E7%81%AF%E7%89%87%E6%A8%A1%E6%9D%BF%E5%BA%93/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/ai-%E5%B9%BB%E7%81%AF%E7%89%87%E6%A8%A1%E6%9D%BF%E5%BA%93/</guid><pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;AI 时代的 HTML 幻灯片模板库，让任何 AI Agent 都能为用户生成精美的演示文稿。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -7072,6 +7477,21 @@ tl.to(&quot;#title&quot;, {
 &lt;li&gt;项目地址：https://github.com/heygen-com/hyperframes&lt;/li&gt;
 &lt;li&gt;作者推文：https://x.com/liu8in/status/2044827628700684463&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>一个信息追踪 Python 脚本</title><link>https://dqtx.cc/posts/technical/%E4%B8%80%E4%B8%AA%E4%BF%A1%E6%81%AF%E8%BF%BD%E8%B8%AA-python-%E8%84%9A%E6%9C%AC/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E4%B8%80%E4%B8%AA%E4%BF%A1%E6%81%AF%E8%BF%BD%E8%B8%AA-python-%E8%84%9A%E6%9C%AC/</guid><pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这个开源项目，你丢一个名字/手机号/IP给它，得到关联的社交媒体账号、归属地、地理位置信息。&lt;/p&gt;
+&lt;p&gt;在 GitHub 已获取 11.8k star。
+项目地址
+https://github.com/HunxByts/GhostTrack&lt;/p&gt;
+&lt;p&gt;仅仅一个 Python 脚本，用来做 IP / 手机号 / 用户名的基础 OSINT 信息收集。&lt;/p&gt;
+&lt;p&gt;三个模块，覆盖常见情报场景：&lt;/p&gt;
+&lt;p&gt;IP Tracker：输入目标 IP，可获取基础地理位置信息，也可以结合 Seeker 等工具做进一步关联分析（例如辅助反查真实 IP）
+Phone Tracker：手机号归属地、运营商信息查询，属于 OSINT 中很常见的基础能力
+Username Tracker：输入用户名，跨多个平台搜索公开账号信息，把分散的社交媒体痕迹拼接起来&lt;/p&gt;
+&lt;p&gt;适合人群：&lt;/p&gt;
+&lt;p&gt;做渗透测试前期信息收集的安全工程师
+学习 OSINT 方法论的安全方向学生
+CTF 比赛中需要快速做信息侦察的选手
+对信息安全和数据关联分析感兴趣的开发者&lt;/p&gt;
+&lt;p&gt;⚠️ 需要强调：该工具仅用于合法授权的安全研究与学习用途，禁止用于任何未经授权的个人追踪或隐私侵犯行为。&lt;/p&gt;
 </content:encoded></item><item><title>CLAUDE.md与MEMORY.md</title><link>https://dqtx.cc/posts/aihacks/claudemd%E4%B8%8Ememorymd/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/claudemd%E4%B8%8Ememorymd/</guid><description>一个给 AI 看，一个给 AI 记。搞混了，你的 AI 助手就废了。</description><pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;很多人用 Claude Code 写了上百篇文章，但99%的人从来没搞清楚一个最基本的问题：&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;CLAUDE.md 和 MEMORY.md 到底有什么区别？&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;今天用一张表、一个比喻，彻底讲清楚。&lt;/p&gt;
@@ -7422,21 +7842,6 @@ curl -o ~/.claude/CLAUDE.md \
 &lt;p&gt;Karpathy 的核心洞察就一句话：&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;别告诉 AI 怎么做，告诉它什么算做完，然后放手让它跑。&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-</content:encoded></item><item><title>一个信息追踪 Python 脚本</title><link>https://dqtx.cc/posts/technical/%E4%B8%80%E4%B8%AA%E4%BF%A1%E6%81%AF%E8%BF%BD%E8%B8%AA-python-%E8%84%9A%E6%9C%AC/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E4%B8%80%E4%B8%AA%E4%BF%A1%E6%81%AF%E8%BF%BD%E8%B8%AA-python-%E8%84%9A%E6%9C%AC/</guid><pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这个开源项目，你丢一个名字/手机号/IP给它，得到关联的社交媒体账号、归属地、地理位置信息。&lt;/p&gt;
-&lt;p&gt;在 GitHub 已获取 11.8k star。
-项目地址
-https://github.com/HunxByts/GhostTrack&lt;/p&gt;
-&lt;p&gt;仅仅一个 Python 脚本，用来做 IP / 手机号 / 用户名的基础 OSINT 信息收集。&lt;/p&gt;
-&lt;p&gt;三个模块，覆盖常见情报场景：&lt;/p&gt;
-&lt;p&gt;IP Tracker：输入目标 IP，可获取基础地理位置信息，也可以结合 Seeker 等工具做进一步关联分析（例如辅助反查真实 IP）
-Phone Tracker：手机号归属地、运营商信息查询，属于 OSINT 中很常见的基础能力
-Username Tracker：输入用户名，跨多个平台搜索公开账号信息，把分散的社交媒体痕迹拼接起来&lt;/p&gt;
-&lt;p&gt;适合人群：&lt;/p&gt;
-&lt;p&gt;做渗透测试前期信息收集的安全工程师
-学习 OSINT 方法论的安全方向学生
-CTF 比赛中需要快速做信息侦察的选手
-对信息安全和数据关联分析感兴趣的开发者&lt;/p&gt;
-&lt;p&gt;⚠️ 需要强调：该工具仅用于合法授权的安全研究与学习用途，禁止用于任何未经授权的个人追踪或隐私侵犯行为。&lt;/p&gt;
 </content:encoded></item><item><title>ShareX截屏录屏教程！</title><link>https://dqtx.cc/posts/software/sharex/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/sharex/</guid><pubDate>Thu, 30 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;关闭通知&lt;/h3&gt;
 &lt;p&gt;位置：动作设置→通知
 建议把“任务完成后显示短暂通知”取消打勾
@@ -8662,74 +9067,6 @@ cd C:\Users\Administrator\AISkills
 &lt;/ol&gt;
 &lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;参考资料&lt;/strong&gt;：&lt;a href=&quot;https://mp.weixin.qq.com/s/XWS97jr_PwcbbmKkZVqbyw&quot;&gt;点此查看&lt;/a&gt;&lt;/p&gt;
-</content:encoded></item><item><title>我push博客时泄露了API</title><link>https://dqtx.cc/posts/technical/push%E6%B3%84%E9%9C%B2api/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/push%E6%B3%84%E9%9C%B2api/</guid><pubDate>Tue, 21 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天在推送 &lt;code&gt;fuwari&lt;/code&gt; 博客仓库到 GitHub 时，遭遇了一个意料之外但又在情理之中的拦截。GitHub 直接拒绝了我的推送，提示发现了「Secret（密钥）」泄露。经过排查和修复，两个仓库的 API Token 泄露风险已解除。写下这篇文章，既是复盘，也是给有类似经历的朋友一个参考。
-&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260421233006929.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;事件回顾&lt;/h2&gt;
-&lt;p&gt;像往常一样，我在 Obsidian 中写完一篇博客后，执行 &lt;code&gt;git push&lt;/code&gt; 准备推送到 GitHub。然而这次推送失败了，错误信息如下：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;remote: error: GH013: Repository rule violations found for refs/heads/main.
-remote:
-remote: - Push cannot contain secrets
-remote:
-remote:  — Notion API Token ——————————————————————————————————
-remote:    locations:
-remote:      - commit: 25f1c5df1c410ba48f6890a8961371de5cf6cef8
-remote:        path: src/content/.obsidian/plugins/share-to-notionnext/data.json:29
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;GitHub 的 &lt;strong&gt;Push Protection（推送保护）&lt;/strong&gt; 功能检测到了我的 Notion API Token 泄露。问题出在 Obsidian 插件 &lt;code&gt;Share to NotionNext&lt;/code&gt; 的配置文件 &lt;code&gt;data.json&lt;/code&gt; 中，我配置了 Notion 的 API 密钥，而这个文件被 Git 跟踪并推送到了远程仓库。&lt;/p&gt;
-&lt;p&gt;有趣的是，同步排查另一个仓库 &lt;code&gt;zhishiku&lt;/code&gt; 时，我发现它虽然也安装了同样的插件、同样包含 API Token，却没有被拦截。这可能是因为 Token 格式（&lt;code&gt;ntn_&lt;/code&gt; 开头）的识别率不同，或者该仓库的 Push Protection 设置没有 fuwari 那么严格。但不管怎样，这确实是一个安全隐患。&lt;/p&gt;
-&lt;h2&gt;问题根因&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;为什么 API Token 会泄露到 GitHub？&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;核心原因是：&lt;strong&gt;Obsidian 的 &lt;code&gt;.obsidian&lt;/code&gt; 目录被 Git 跟踪了。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;.obsidian&lt;/code&gt; 是 Obsidian 的配置目录，里面包含了插件配置、主题设置、工作区状态等信息。当我们安装像 &lt;code&gt;Share to NotionNext&lt;/code&gt; 这类需要 API 密钥的插件时，插件会把配置（包括 Token）保存在 &lt;code&gt;data.json&lt;/code&gt; 文件中。如果这个目录被 Git 跟踪，每次推送都会把这些敏感信息一起送到远程仓库。&lt;/p&gt;
-&lt;p&gt;GitHub 提供了 Secret Scanning（密钥扫描）功能，会自动扫描推送的内容，识别常见的密钥格式（如 AWS Key、Notion Token、OpenAI API Key 等），发现后会拦截推送并通知开发者。这就是为什么 fuwari 仓库被拦截的原因。&lt;/p&gt;
-&lt;h2&gt;解决方案&lt;/h2&gt;
-&lt;h3&gt;方案一：修改 .gitignore（推荐）&lt;/h3&gt;
-&lt;p&gt;最简单有效的方案是把 &lt;code&gt;.obsidian/&lt;/code&gt; 目录加入 &lt;code&gt;.gitignore&lt;/code&gt;，让 Git 忽略这个目录。具体步骤如下：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;在项目根目录的 &lt;code&gt;.gitignore&lt;/code&gt; 文件中添加：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;.obsidian/
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;从 Git 跟踪中移除已存在的 &lt;code&gt;.obsidian&lt;/code&gt; 目录：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;git rm --cached -r .obsidian/
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;提交并推送：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;git add .gitignore
-git commit -m &quot;chore: ignore .obsidian directory&quot;
-git push
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;这样操作后，&lt;code&gt;.obsidian&lt;/code&gt; 目录会保留在本地，但不会被 Git 跟踪，API Token 也就不会再泄露了。&lt;/p&gt;
-&lt;h3&gt;方案二：清理 Git 历史&lt;/h3&gt;
-&lt;p&gt;如果已经推送了包含 Token 的提交，需要从 Git 历史中彻底删除它。可以使用 &lt;code&gt;git filter-repo&lt;/code&gt; 工具：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# 安装工具
-pip install git-filter-repo
-
-# 从历史中移除指定文件
-git filter-repo --path .obsidian/plugins/share-to-notionnext/data.json --invert-paths --force
-
-# 重新添加 remote 并推送
-git remote add origin your-repo-url
-git push --force
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;注意：这种方法会重写 Git 历史，如果与其他开发者共享仓库，需要协调好。&lt;/p&gt;
-&lt;h3&gt;方案三：轮换 API Token&lt;/h3&gt;
-&lt;p&gt;无论采用哪种方案，都建议&lt;strong&gt;重新生成 API Token&lt;/strong&gt;。即使已经修复了泄露问题，旧的 Token 可能已经在某个时刻被恶意获取。前往相关服务的设置页面（如 Notion 集成设置）生成新的密钥，并更新本地配置。&lt;/p&gt;
-&lt;h2&gt;经验总结&lt;/h2&gt;
-&lt;p&gt;这次事件虽然是个「事故」，但也带来了几点有价值的思考：&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;第一，敏感配置一定要排除在 Git 跟踪之外。&lt;/strong&gt; 不只是 &lt;code&gt;.obsidian&lt;/code&gt;，任何包含 API Key、Token、密码的文件都应该加入 &lt;code&gt;.gitignore&lt;/code&gt;。常见的包括 &lt;code&gt;.env&lt;/code&gt;、&lt;code&gt;.env.local&lt;/code&gt;、&lt;code&gt;config/secrets.json&lt;/code&gt; 等。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;第二，GitHub 的 Push Protection 是最后一道防线，而非第一道。&lt;/strong&gt; 这次能被拦截是幸运的，说明 GitHub 的密钥扫描确实在起作用。但并非所有格式的密钥都能被识别，这次 &lt;code&gt;zhishiku&lt;/code&gt; 仓库的 Token 就漏过了扫描。所以不能依赖 GitHub 的保护，自己做好防范才是根本。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;第三，本地配置不影响使用。&lt;/strong&gt; 很多人担心忽略 &lt;code&gt;.obsidian&lt;/code&gt; 后会影响 Obsidian 的功能。实际上 &lt;code&gt;.gitignore&lt;/code&gt; 只是阻止 Git 跟踪，不影响文件的本地存在和使用。插件配置会正常读取本地文件，只是不会同步到远程仓库。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;第四，定期排查仓库安全。&lt;/strong&gt; 建议定期检查自己的仓库是否有敏感信息泄露，可以用 GitHub 的「Secret scanning alerts」功能查看已泄露的密钥（如果有的话）。&lt;/p&gt;
-&lt;h2&gt;附：两个仓库的修复记录&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260422222241120.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;修复完成后，两个仓库都安全了，以后再也不用担心 API Token 泄露的问题。&lt;/p&gt;
-&lt;p&gt;文章来源：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;  远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/p&gt;
 </content:encoded></item><item><title>Obsidian 同步 Notion 神插件</title><link>https://dqtx.cc/posts/workflow/ob%E5%90%8C%E6%AD%A5notion%E6%8F%92%E4%BB%B6/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/ob%E5%90%8C%E6%AD%A5notion%E6%8F%92%E4%BB%B6/</guid><pubDate>Tue, 21 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;我最近发现了一个超好用的 Obsidian 神器，叫 Share to NotionNext！&lt;/p&gt;
 &lt;p&gt;可以直接把Obsidian里的Markdown同步到Notion数据库，还能自动生成NotionNext博客，告别复制粘贴、排版错乱，一篇文章秒发博客。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260421200259532.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
@@ -8833,37 +9170,74 @@ https://v.douyin.com/4K4Njgxq0Oc/&lt;/p&gt;
 https://mp.weixin.qq.com/s/kPjIpHmzciWY8_3ettEVsg&lt;/p&gt;
 &lt;p&gt;→NotionNext帮助手册：
 https://docs.tangly1024.com/about&lt;/p&gt;
-</content:encoded></item><item><title>谷歌新产品&amp;功能</title><link>https://dqtx.cc/posts/software/00google/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/00google/</guid><pubDate>Mon, 20 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这篇文章将在后续的时间里会持续更新谷歌最新推出的一些新产品，不限于各种新品或原本产品的新功能。&lt;/p&gt;
-&lt;h2&gt;产品-Google App&lt;/h2&gt;
-&lt;p&gt;Windows 版下载： &lt;strong&gt;&lt;a href=&quot;https://search.google/google-app/desktop/&quot;&gt;点击前往&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;内置的AI模型是Google最新最强的Gemini 3模型，同时内置了AI生图功能，使用的是 Google 最强的Nano Banana 2 模型，可以自由切换需要的功能！&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;使用说明&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Alt+空格&lt;/strong&gt;呼出搜索&lt;/li&gt;
-&lt;li&gt;支持上传图片，文件目前还不支持上传&lt;/li&gt;
-&lt;li&gt;生图的话好像有点问题&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;功能-垂直标签页开启&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;chrome://flags/#vertical-tabs并回车。&lt;/li&gt;
-&lt;li&gt;将右侧的下拉菜单由 &quot;Default&quot; 修改为 &quot;Enabled&quot;，重启浏览器&lt;/li&gt;
-&lt;li&gt;新开标签页，右键标题栏，点击“将标签页移至侧边”&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260420211847140.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;功能-Chrome-Gemini&lt;/h2&gt;
-&lt;p&gt;&lt;em&gt;更新时间：2026/04/20&lt;/em&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;前置条件：魔法美区，&lt;a&gt;点此设置&lt;/a&gt;chrome语言英语&lt;/li&gt;
-&lt;li&gt;关闭chrome浏览器，PowerShell执行命令&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;irm https://raw.githubusercontent.com/appsail/Gemini-in-Chrome/main/install.ps1 | iex
+</content:encoded></item><item><title>我push博客时泄露了API</title><link>https://dqtx.cc/posts/technical/push%E6%B3%84%E9%9C%B2api/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/push%E6%B3%84%E9%9C%B2api/</guid><pubDate>Tue, 21 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天在推送 &lt;code&gt;fuwari&lt;/code&gt; 博客仓库到 GitHub 时，遭遇了一个意料之外但又在情理之中的拦截。GitHub 直接拒绝了我的推送，提示发现了「Secret（密钥）」泄露。经过排查和修复，两个仓库的 API Token 泄露风险已解除。写下这篇文章，既是复盘，也是给有类似经历的朋友一个参考。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260421233006929.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;事件回顾&lt;/h2&gt;
+&lt;p&gt;像往常一样，我在 Obsidian 中写完一篇博客后，执行 &lt;code&gt;git push&lt;/code&gt; 准备推送到 GitHub。然而这次推送失败了，错误信息如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;remote: error: GH013: Repository rule violations found for refs/heads/main.
+remote:
+remote: - Push cannot contain secrets
+remote:
+remote:  — Notion API Token ——————————————————————————————————
+remote:    locations:
+remote:      - commit: 25f1c5df1c410ba48f6890a8961371de5cf6cef8
+remote:        path: src/content/.obsidian/plugins/share-to-notionnext/data.json:29
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;相关资料&lt;/p&gt;
-&lt;p&gt;https://x.com/AppSaildotDEV/status/2016743176497991798&lt;/p&gt;
-&lt;p&gt;https://github.com/lcandy2/enable-chrome-ai/blob/main/README.zh.md&lt;/p&gt;
-&lt;p&gt;https://x.com/liyue_ai/status/2017259163127304623&lt;/p&gt;
-&lt;p&gt;https://www.youtube.com/watch?v=4Gz2Sxgpv20&lt;/p&gt;
-&lt;p&gt;https://x.com/linxiaobei888/status/2017061177311056343&lt;/p&gt;
+&lt;p&gt;GitHub 的 &lt;strong&gt;Push Protection（推送保护）&lt;/strong&gt; 功能检测到了我的 Notion API Token 泄露。问题出在 Obsidian 插件 &lt;code&gt;Share to NotionNext&lt;/code&gt; 的配置文件 &lt;code&gt;data.json&lt;/code&gt; 中，我配置了 Notion 的 API 密钥，而这个文件被 Git 跟踪并推送到了远程仓库。&lt;/p&gt;
+&lt;p&gt;有趣的是，同步排查另一个仓库 &lt;code&gt;zhishiku&lt;/code&gt; 时，我发现它虽然也安装了同样的插件、同样包含 API Token，却没有被拦截。这可能是因为 Token 格式（&lt;code&gt;ntn_&lt;/code&gt; 开头）的识别率不同，或者该仓库的 Push Protection 设置没有 fuwari 那么严格。但不管怎样，这确实是一个安全隐患。&lt;/p&gt;
+&lt;h2&gt;问题根因&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;为什么 API Token 会泄露到 GitHub？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;核心原因是：&lt;strong&gt;Obsidian 的 &lt;code&gt;.obsidian&lt;/code&gt; 目录被 Git 跟踪了。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;.obsidian&lt;/code&gt; 是 Obsidian 的配置目录，里面包含了插件配置、主题设置、工作区状态等信息。当我们安装像 &lt;code&gt;Share to NotionNext&lt;/code&gt; 这类需要 API 密钥的插件时，插件会把配置（包括 Token）保存在 &lt;code&gt;data.json&lt;/code&gt; 文件中。如果这个目录被 Git 跟踪，每次推送都会把这些敏感信息一起送到远程仓库。&lt;/p&gt;
+&lt;p&gt;GitHub 提供了 Secret Scanning（密钥扫描）功能，会自动扫描推送的内容，识别常见的密钥格式（如 AWS Key、Notion Token、OpenAI API Key 等），发现后会拦截推送并通知开发者。这就是为什么 fuwari 仓库被拦截的原因。&lt;/p&gt;
+&lt;h2&gt;解决方案&lt;/h2&gt;
+&lt;h3&gt;方案一：修改 .gitignore（推荐）&lt;/h3&gt;
+&lt;p&gt;最简单有效的方案是把 &lt;code&gt;.obsidian/&lt;/code&gt; 目录加入 &lt;code&gt;.gitignore&lt;/code&gt;，让 Git 忽略这个目录。具体步骤如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;在项目根目录的 &lt;code&gt;.gitignore&lt;/code&gt; 文件中添加：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.obsidian/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;从 Git 跟踪中移除已存在的 &lt;code&gt;.obsidian&lt;/code&gt; 目录：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git rm --cached -r .obsidian/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;提交并推送：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git add .gitignore
+git commit -m &quot;chore: ignore .obsidian directory&quot;
+git push
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这样操作后，&lt;code&gt;.obsidian&lt;/code&gt; 目录会保留在本地，但不会被 Git 跟踪，API Token 也就不会再泄露了。&lt;/p&gt;
+&lt;h3&gt;方案二：清理 Git 历史&lt;/h3&gt;
+&lt;p&gt;如果已经推送了包含 Token 的提交，需要从 Git 历史中彻底删除它。可以使用 &lt;code&gt;git filter-repo&lt;/code&gt; 工具：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# 安装工具
+pip install git-filter-repo
+
+# 从历史中移除指定文件
+git filter-repo --path .obsidian/plugins/share-to-notionnext/data.json --invert-paths --force
+
+# 重新添加 remote 并推送
+git remote add origin your-repo-url
+git push --force
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;注意：这种方法会重写 Git 历史，如果与其他开发者共享仓库，需要协调好。&lt;/p&gt;
+&lt;h3&gt;方案三：轮换 API Token&lt;/h3&gt;
+&lt;p&gt;无论采用哪种方案，都建议&lt;strong&gt;重新生成 API Token&lt;/strong&gt;。即使已经修复了泄露问题，旧的 Token 可能已经在某个时刻被恶意获取。前往相关服务的设置页面（如 Notion 集成设置）生成新的密钥，并更新本地配置。&lt;/p&gt;
+&lt;h2&gt;经验总结&lt;/h2&gt;
+&lt;p&gt;这次事件虽然是个「事故」，但也带来了几点有价值的思考：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第一，敏感配置一定要排除在 Git 跟踪之外。&lt;/strong&gt; 不只是 &lt;code&gt;.obsidian&lt;/code&gt;，任何包含 API Key、Token、密码的文件都应该加入 &lt;code&gt;.gitignore&lt;/code&gt;。常见的包括 &lt;code&gt;.env&lt;/code&gt;、&lt;code&gt;.env.local&lt;/code&gt;、&lt;code&gt;config/secrets.json&lt;/code&gt; 等。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第二，GitHub 的 Push Protection 是最后一道防线，而非第一道。&lt;/strong&gt; 这次能被拦截是幸运的，说明 GitHub 的密钥扫描确实在起作用。但并非所有格式的密钥都能被识别，这次 &lt;code&gt;zhishiku&lt;/code&gt; 仓库的 Token 就漏过了扫描。所以不能依赖 GitHub 的保护，自己做好防范才是根本。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第三，本地配置不影响使用。&lt;/strong&gt; 很多人担心忽略 &lt;code&gt;.obsidian&lt;/code&gt; 后会影响 Obsidian 的功能。实际上 &lt;code&gt;.gitignore&lt;/code&gt; 只是阻止 Git 跟踪，不影响文件的本地存在和使用。插件配置会正常读取本地文件，只是不会同步到远程仓库。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第四，定期排查仓库安全。&lt;/strong&gt; 建议定期检查自己的仓库是否有敏感信息泄露，可以用 GitHub 的「Secret scanning alerts」功能查看已泄露的密钥（如果有的话）。&lt;/p&gt;
+&lt;h2&gt;附：两个仓库的修复记录&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260422222241120.webp&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;修复完成后，两个仓库都安全了，以后再也不用担心 API Token 泄露的问题。&lt;/p&gt;
+&lt;p&gt;文章来源：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;  远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/p&gt;
 </content:encoded></item><item><title>Dos命令mklink详解</title><link>https://dqtx.cc/posts/workflow/mklink%E5%91%BD%E4%BB%A4/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/mklink%E5%91%BD%E4%BB%A4/</guid><pubDate>Mon, 20 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;你是否遇到过这些问题：想让软件从A目录读取文件，但文件实际存放在B目录？&lt;/p&gt;
 &lt;p&gt;想在多个位置同步同一个文件，又不想每次手动复制？或是想给文件夹创建&quot;替身&quot;，让不同程序都能访问？&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Windows 自带的 mklink 命令，就是解决这些问题的神器。&lt;/strong&gt;&lt;/p&gt;
@@ -8905,104 +9279,37 @@ mklink /h &quot;D:\project2026\zhishiku\QWEN\知识库规范.md&quot; &quot;D:\p
 &lt;li&gt;如果你需要跨盘操作，选择软链接；如果只在同盘内使用，硬链接更稳定&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;掌握这四个命令，你就是Windows文件管理的高手了。&lt;/strong&gt;&lt;/p&gt;
-</content:encoded></item><item><title>Cc-sync：多电脑CC配置同步</title><link>https://dqtx.cc/posts/aihacks/cc-sync/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/cc-sync/</guid><pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
-&lt;p&gt;换电脑后，你最怕什么？不是装机，而是你和 Claude 聊了半天的代码、需求、方案——全没了。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;直到我发现 cc-sync，这个问题终于解决了。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;GitHub地址&lt;/strong&gt;：&lt;a href=&quot;https://github.com/ikook-wang/cc-sync&quot;&gt;https://github.com/ikook-wang/cc-sync&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260419155321814.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;01 一键安装&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;前置条件&lt;/strong&gt;&lt;/p&gt;
+</content:encoded></item><item><title>谷歌新产品&amp;功能</title><link>https://dqtx.cc/posts/software/00google/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/00google/</guid><pubDate>Mon, 20 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;这篇文章将在后续的时间里会持续更新谷歌最新推出的一些新产品，不限于各种新品或原本产品的新功能。&lt;/p&gt;
+&lt;h2&gt;产品-Google App&lt;/h2&gt;
+&lt;p&gt;Windows 版下载： &lt;strong&gt;&lt;a href=&quot;https://search.google/google-app/desktop/&quot;&gt;点击前往&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;内置的AI模型是Google最新最强的Gemini 3模型，同时内置了AI生图功能，使用的是 Google 最强的Nano Banana 2 模型，可以自由切换需要的功能！&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;使用说明&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;已安装Claude code并使用≥1次&lt;/li&gt;
-&lt;li&gt;已安装-Git&lt;/li&gt;
-&lt;li&gt;一个 GitHub 仓库（建议 private）用于存放配置&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Alt+空格&lt;/strong&gt;呼出搜索&lt;/li&gt;
+&lt;li&gt;支持上传图片，文件目前还不支持上传&lt;/li&gt;
+&lt;li&gt;生图的话好像有点问题&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;运行代码安装（windows Git Bash）：&lt;/strong&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# 方式1: 直接管道（可能不显示交互，但能运行）
-curl -fsSL https://raw.githubusercontent.com/ikook-wang/cc-sync/main/install.sh | bash
-
-# 方式2: 先下载再运行（推荐，能看到交互）
-curl -fsSL -o /tmp/install.sh https://raw.githubusercontent.com/ikook-wang/cc-sync/main/install.sh
-bash /tmp/install.sh
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;em&gt;安装脚本会交互式引导你完成配置：&lt;/em&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;输入 GitHub 仓库地址&lt;/li&gt;
-&lt;li&gt;设置保留会话数（默认 3）&lt;/li&gt;
-&lt;li&gt;自动配置 &lt;code&gt;.gitignore&lt;/code&gt;、hooks、shell 包装函数&lt;/li&gt;
-&lt;li&gt;完成首次同步
-需同步电脑都运行一次即可装一次，用同一个仓库，就能随时继续。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3&gt;02 无缝衔接&lt;/h3&gt;
-&lt;p&gt;跨机器同步 Claude Code 的配置和会话。
-在公司聊了一半，回家笔记本输入恢复会话命令
-在家里聊了一半，出差在酒店的笔记本输入恢复会话命令&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;claude --resume 
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;执行这个命令，就是恢复之前会话的意思,直接继续。&lt;strong&gt;像没换过电脑。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;同步内容：设置、命令、技能、最近 N 个会话。
-凭据和缓存不同步，安全起见。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260419160330747.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;03 自动同步&lt;/h3&gt;
-&lt;p&gt;另外,cc-sync 通过三个机制实现自动同步：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;打开 Claude Code，自动拉取最新&lt;/li&gt;
-&lt;li&gt;退出Claude Code，，自动提交推送&lt;/li&gt;
-&lt;li&gt;手动触发命令&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre&gt;&lt;code&gt;bash ~/.claude/sync.sh
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3&gt;04 常用命令&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;# 手动同步
-bash ~/.claude/sync.sh --verbose
-git -C ~/.claude commit -m &quot;sync: initial&quot;
-git -C ~/.claude push
-
-#查询推送日志
-cd ~/.claude &amp;amp;&amp;amp; git status &amp;amp;&amp;amp; git remote -v
-
-# 详细模式（查看同步过程）
-bash ~/.claude/sync.sh --verbose
-
-# 卸载
-bash ~/.claude/uninstall.sh
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;PS.卸载操作会移除sync.sh、sync.conf、uninstall.sh文件，同时会删除settings.json中的SessionStart hook以及Shell rc文件里的claude包装函数，但不会移除Git仓库和已同步的数据。&lt;/p&gt;
-&lt;h3&gt;05 注意事项&lt;/h3&gt;
+&lt;h2&gt;功能-垂直标签页开启&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;建议两台电脑保持相同的用户名和目录结构。&lt;/li&gt;
-&lt;li&gt;编辑 &lt;code&gt;~/.claude/sync.conf&lt;/code&gt; ,配置项 &lt;code&gt;KEEP_SESSIONS=3&lt;/code&gt;每个项目所保留的会话数量。&lt;/li&gt;
+&lt;li&gt;chrome://flags/#vertical-tabs并回车。&lt;/li&gt;
+&lt;li&gt;将右侧的下拉菜单由 &quot;Default&quot; 修改为 &quot;Enabled&quot;，重启浏览器&lt;/li&gt;
+&lt;li&gt;新开标签页，右键标题栏，点击“将标签页移至侧边”&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;换电脑最烦的不是重装软件，而是&lt;strong&gt;丢失上下文&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;你和 Claude 聊了半小时的需求、写的代码片段——换台电脑全没了。&lt;/p&gt;
-&lt;p&gt;cc-sync 让你&lt;strong&gt;永远从上次停下的地方继续&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;工具不帮你做事，但帮你少重复做事。&lt;/strong&gt;&lt;/p&gt;
-</content:encoded></item><item><title>包管理工具UniGetU</title><link>https://dqtx.cc/posts/software/unigetui/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/unigetui/</guid><pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;重装系统最烦的就是一个个装软件？UniGetUI 直接帮你一键搞定。&lt;/p&gt;
-&lt;p&gt;UniGetUI 是一款开源 GUI 包管理工具，专为 Windows 10/11 设计，统一整合 WinGet、Scoop、Chocolatey、pip、npm、.NET Tool、PowerShell Gallery 等常用命令行包管理器，可视化操作更简单。&lt;/p&gt;
-&lt;p&gt;开源地址：https://github.com/Devolutions/UniGetUI&lt;/p&gt;
-&lt;h2&gt;软件界面&lt;/h2&gt;
-&lt;p&gt;打开 UniGetUI 主界面，布局简洁清晰，核心功能一目了然：发现软件包、软件更新、已安装软件包、软件捆绑包，新手也能快速上手。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260417214231839.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;备份与导入&lt;/h2&gt;
-&lt;h4&gt;1️⃣ 本地方式&lt;/h4&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260420211847140.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;功能-Chrome-Gemini&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;更新时间：2026/04/20&lt;/em&gt;&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;进入已安装的软件标签页&lt;/li&gt;
-&lt;li&gt;勾选需要备份的软件（可全选）&lt;/li&gt;
-&lt;li&gt;点击添加所选项进捆绑包，自动跳转至软件捆绑包页面&lt;/li&gt;
-&lt;li&gt;点击另存为，生成软件捆绑包.ubundle文件&lt;/li&gt;
+&lt;li&gt;前置条件：魔法美区，&lt;a&gt;点此设置&lt;/a&gt;chrome语言英语&lt;/li&gt;
+&lt;li&gt;关闭chrome浏览器，PowerShell执行命令&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;新电脑或重装系统后，只需在软件捆绑包页面打开备份文件，即可一键批量安装所有软件，自动下载、自动配置，无需逐个去官网下载安装。&lt;/p&gt;
-&lt;h4&gt;2️⃣ 云端方式&lt;/h4&gt;
-&lt;ol&gt;
-&lt;li&gt;打开 UniGetUI 设置界面&lt;/li&gt;
-&lt;li&gt;进入 &lt;strong&gt;&quot;设置 &amp;gt; 软件包备份&quot;&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;使用 GitHub 帐户登录&lt;/li&gt;
-&lt;li&gt;点击&lt;strong&gt;立即执行云备份&lt;/strong&gt;-备份&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;换新设备后，同样在备份设置中，直接从云端还原即可。&lt;/p&gt;
-&lt;p&gt;以上就是本期全部内容。如果本教程对你有帮助，欢迎点赞、收藏、转发三连，你的支持是我持续更新的动力。&lt;/p&gt;
-&lt;p&gt;Ps. 想要学习AI、提升数字化效率、打造全自动工作流，也欢迎加入我的专属社群：https://t.zsxq.com/d4zSX&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;irm https://raw.githubusercontent.com/appsail/Gemini-in-Chrome/main/install.ps1 | iex
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;相关资料&lt;/p&gt;
+&lt;p&gt;https://x.com/AppSaildotDEV/status/2016743176497991798&lt;/p&gt;
+&lt;p&gt;https://github.com/lcandy2/enable-chrome-ai/blob/main/README.zh.md&lt;/p&gt;
+&lt;p&gt;https://x.com/liyue_ai/status/2017259163127304623&lt;/p&gt;
+&lt;p&gt;https://www.youtube.com/watch?v=4Gz2Sxgpv20&lt;/p&gt;
+&lt;p&gt;https://x.com/linxiaobei888/status/2017061177311056343&lt;/p&gt;
 </content:encoded></item><item><title>Karpathy Wiki方法论实践</title><link>https://dqtx.cc/posts/workflow/karpathy/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/karpathy/</guid><pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;告别一盘散沙的笔记，AI让知识真正&quot;活&quot;起来。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -9115,6 +9422,104 @@ AI 维护的知识库，包括摘要、概念页面、关联链接。AI 编写�
 &lt;p&gt;&lt;strong&gt;人类的工作是筛选来源、提出好问题、思考意义。&lt;/strong&gt;
 &lt;strong&gt;其他一切，交给 AI。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;你有自己的知识管理方法吗？评论区聊聊 👇&lt;/em&gt;&lt;/p&gt;
+</content:encoded></item><item><title>Cc-sync：多电脑CC配置同步</title><link>https://dqtx.cc/posts/aihacks/cc-sync/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/cc-sync/</guid><pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;p&gt;换电脑后，你最怕什么？不是装机，而是你和 Claude 聊了半天的代码、需求、方案——全没了。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;直到我发现 cc-sync，这个问题终于解决了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;GitHub地址&lt;/strong&gt;：&lt;a href=&quot;https://github.com/ikook-wang/cc-sync&quot;&gt;https://github.com/ikook-wang/cc-sync&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260419155321814.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;01 一键安装&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;前置条件&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;已安装Claude code并使用≥1次&lt;/li&gt;
+&lt;li&gt;已安装-Git&lt;/li&gt;
+&lt;li&gt;一个 GitHub 仓库（建议 private）用于存放配置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;运行代码安装（windows Git Bash）：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# 方式1: 直接管道（可能不显示交互，但能运行）
+curl -fsSL https://raw.githubusercontent.com/ikook-wang/cc-sync/main/install.sh | bash
+
+# 方式2: 先下载再运行（推荐，能看到交互）
+curl -fsSL -o /tmp/install.sh https://raw.githubusercontent.com/ikook-wang/cc-sync/main/install.sh
+bash /tmp/install.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;em&gt;安装脚本会交互式引导你完成配置：&lt;/em&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;输入 GitHub 仓库地址&lt;/li&gt;
+&lt;li&gt;设置保留会话数（默认 3）&lt;/li&gt;
+&lt;li&gt;自动配置 &lt;code&gt;.gitignore&lt;/code&gt;、hooks、shell 包装函数&lt;/li&gt;
+&lt;li&gt;完成首次同步
+需同步电脑都运行一次即可装一次，用同一个仓库，就能随时继续。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;02 无缝衔接&lt;/h3&gt;
+&lt;p&gt;跨机器同步 Claude Code 的配置和会话。
+在公司聊了一半，回家笔记本输入恢复会话命令
+在家里聊了一半，出差在酒店的笔记本输入恢复会话命令&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;claude --resume 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;执行这个命令，就是恢复之前会话的意思,直接继续。&lt;strong&gt;像没换过电脑。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;同步内容：设置、命令、技能、最近 N 个会话。
+凭据和缓存不同步，安全起见。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260419160330747.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;03 自动同步&lt;/h3&gt;
+&lt;p&gt;另外,cc-sync 通过三个机制实现自动同步：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;打开 Claude Code，自动拉取最新&lt;/li&gt;
+&lt;li&gt;退出Claude Code，，自动提交推送&lt;/li&gt;
+&lt;li&gt;手动触发命令&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;bash ~/.claude/sync.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;04 常用命令&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;# 手动同步
+bash ~/.claude/sync.sh --verbose
+git -C ~/.claude commit -m &quot;sync: initial&quot;
+git -C ~/.claude push
+
+#查询推送日志
+cd ~/.claude &amp;amp;&amp;amp; git status &amp;amp;&amp;amp; git remote -v
+
+# 详细模式（查看同步过程）
+bash ~/.claude/sync.sh --verbose
+
+# 卸载
+bash ~/.claude/uninstall.sh
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;PS.卸载操作会移除sync.sh、sync.conf、uninstall.sh文件，同时会删除settings.json中的SessionStart hook以及Shell rc文件里的claude包装函数，但不会移除Git仓库和已同步的数据。&lt;/p&gt;
+&lt;h3&gt;05 注意事项&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;建议两台电脑保持相同的用户名和目录结构。&lt;/li&gt;
+&lt;li&gt;编辑 &lt;code&gt;~/.claude/sync.conf&lt;/code&gt; ,配置项 &lt;code&gt;KEEP_SESSIONS=3&lt;/code&gt;每个项目所保留的会话数量。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;换电脑最烦的不是重装软件，而是&lt;strong&gt;丢失上下文&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;你和 Claude 聊了半小时的需求、写的代码片段——换台电脑全没了。&lt;/p&gt;
+&lt;p&gt;cc-sync 让你&lt;strong&gt;永远从上次停下的地方继续&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;工具不帮你做事，但帮你少重复做事。&lt;/strong&gt;&lt;/p&gt;
+</content:encoded></item><item><title>包管理工具UniGetU</title><link>https://dqtx.cc/posts/software/unigetui/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/unigetui/</guid><pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;重装系统最烦的就是一个个装软件？UniGetUI 直接帮你一键搞定。&lt;/p&gt;
+&lt;p&gt;UniGetUI 是一款开源 GUI 包管理工具，专为 Windows 10/11 设计，统一整合 WinGet、Scoop、Chocolatey、pip、npm、.NET Tool、PowerShell Gallery 等常用命令行包管理器，可视化操作更简单。&lt;/p&gt;
+&lt;p&gt;开源地址：https://github.com/Devolutions/UniGetUI&lt;/p&gt;
+&lt;h2&gt;软件界面&lt;/h2&gt;
+&lt;p&gt;打开 UniGetUI 主界面，布局简洁清晰，核心功能一目了然：发现软件包、软件更新、已安装软件包、软件捆绑包，新手也能快速上手。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260417214231839.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;备份与导入&lt;/h2&gt;
+&lt;h4&gt;1️⃣ 本地方式&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;进入已安装的软件标签页&lt;/li&gt;
+&lt;li&gt;勾选需要备份的软件（可全选）&lt;/li&gt;
+&lt;li&gt;点击添加所选项进捆绑包，自动跳转至软件捆绑包页面&lt;/li&gt;
+&lt;li&gt;点击另存为，生成软件捆绑包.ubundle文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;新电脑或重装系统后，只需在软件捆绑包页面打开备份文件，即可一键批量安装所有软件，自动下载、自动配置，无需逐个去官网下载安装。&lt;/p&gt;
+&lt;h4&gt;2️⃣ 云端方式&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;打开 UniGetUI 设置界面&lt;/li&gt;
+&lt;li&gt;进入 &lt;strong&gt;&quot;设置 &amp;gt; 软件包备份&quot;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;使用 GitHub 帐户登录&lt;/li&gt;
+&lt;li&gt;点击&lt;strong&gt;立即执行云备份&lt;/strong&gt;-备份&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;换新设备后，同样在备份设置中，直接从云端还原即可。&lt;/p&gt;
+&lt;p&gt;以上就是本期全部内容。如果本教程对你有帮助，欢迎点赞、收藏、转发三连，你的支持是我持续更新的动力。&lt;/p&gt;
+&lt;p&gt;Ps. 想要学习AI、提升数字化效率、打造全自动工作流，也欢迎加入我的专属社群：https://t.zsxq.com/d4zSX&lt;/p&gt;
 </content:encoded></item><item><title>免费云主机建站指南</title><link>https://dqtx.cc/posts/technical/%E7%BA%A2%E9%83%BD%E4%B8%BB%E6%9C%BA%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E7%BA%A2%E9%83%BD%E4%B8%BB%E6%9C%BA%E6%95%99%E7%A8%8B/</guid><pubDate>Thu, 16 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近上网冲浪的时候，偶然发现了红都主机 —— 一个提供永久免费 PHP 虚拟主机的国内服务商!&lt;/p&gt;
 &lt;p&gt;不用花一分钱就能开通稳定的云虚拟主机，对学生党、个人开发者和想做轻量小站的朋友来说太友好了。&lt;/p&gt;
 &lt;p&gt;今天这篇文章，我就从注册激活到网站上线，手把手教大家用红都主机从零搭建一个属于自己的网站，全程零成本，新手也能轻松上手。&lt;/p&gt;
@@ -9235,6 +9640,145 @@ index.html → index.php → index.htm 等&lt;/p&gt;
 &lt;p&gt;https://github.com/mayukh4/linux-android&lt;/p&gt;
 &lt;p&gt;多Agent团队协作才是Hermes Agent的正确打开方式。&lt;/p&gt;
 &lt;p&gt;https://x.com/Saccc_c/status/2044018336673964207&lt;/p&gt;
+</content:encoded></item><item><title>我的博客工作流bat</title><link>https://dqtx.cc/posts/workflow/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B8%83bat/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B8%83bat/</guid><pubDate>Tue, 14 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;优化了下我的博客发布工作流bat脚本&lt;/p&gt;
+&lt;p&gt;这是一个典型的&lt;a href=&quot;https://www.doubao.com/thread/wad1cb0794ccb7f0c&quot;&gt;DevOps 流程&lt;/a&gt;在博客环境中的应用&lt;/p&gt;
+&lt;h2&gt;工作流程&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260414140439305.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;脚本源码&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;@echo off
+chcp 936 &amp;gt;nul
+cd /d &quot;%~dp0&quot;
+title 博客工作菜单
+
+:menu
+cls
+echo.
+echo ====================================================
+echo                   大强博客「dqtx.cc」工作流菜单
+echo ====================================================
+echo.
+echo  [1] 生成 YAML 文章模板
+echo  [2] 启动本地构建预览 (localhost:4321)
+echo  [3] Git 提交并推送代码
+echo  [4] 退出程序
+echo.
+echo ====================================================
+choice /c 1234 /n /m &quot;请选择操作 [1-4]：&quot;
+
+if errorlevel 4 goto exit
+if errorlevel 3 goto gitpush
+if errorlevel 2 goto preview
+if errorlevel 1 goto template
+goto menu
+
+REM 1. 生成 YAML 文章模板
+:template
+cls
+echo.
+echo ==============================================
+echo          正在生成 YAML 模板...
+echo ==============================================
+echo.
+node scripts/add-frontmatter.cjs
+echo.
+echo ==============================================
+echo      模板生成完成！请在 Typora 中编辑
+echo ==============================================
+echo.
+pause
+goto menu
+
+REM 2. 启动本地构建预览
+:preview
+cls
+echo.
+echo ==============================================
+echo         正在启动本地预览服务
+echo ==============================================
+echo.
+echo  预览地址：http://localhost:4321
+echo  停止预览：按 Ctrl + C
+echo.
+start http://localhost:4321
+npm run dev
+echo.
+pause
+goto menu
+
+REM 3. Git 提交并推送代码 (已升级)
+:gitpush
+cls
+echo.
+echo ==============================================
+echo           Git 提交与推送
+echo ==============================================
+echo.
+echo [1/4] 正在检查文件变更...
+echo.
+git status --short
+echo.
+if errorlevel 1 (
+    echo ⚠️  警告：未检测到 Git 仓库或无文件变更
+    echo.
+    pause
+    goto menu
+)
+
+echo [2/4] 准备提交信息...
+echo.
+REM 获取当前时间并格式化 (兼容 Windows 默认格式)
+for /f &quot;tokens=1-6 delims=/-: &quot; %%a in (&quot;%date% %time%&quot;) do (
+    set &quot;year=%%c&quot;
+    set &quot;month=%%a&quot;
+    set &quot;day=%%b&quot;
+    set &quot;hour=%%d&quot;
+    set &quot;minute=%%e&quot;
+)
+REM 补零处理 (防止个位数时间显示异常)
+if %hour% lss 10 set &quot;hour=0%hour%&quot;
+set &quot;default_msg=更新博客内容 %year%-%month%-%day% %hour%:%minute%&quot;
+
+set &quot;commit_msg=&quot;
+set /p &quot;commit_msg=请输入提交备注 (直接回车使用默认: %default_msg%)：&quot;
+
+if not defined commit_msg (
+    set &quot;commit_msg=%default_msg%&quot;
+)
+
+echo.
+echo [3/4] 正在提交：&quot;%commit_msg%&quot;
+echo.
+git add .
+git commit -m &quot;%commit_msg%&quot;
+
+echo.
+echo [4/4] 正在推送到远程仓库...
+echo.
+git push
+
+echo.
+echo ==============================================
+echo           ✅ Git 提交推送完成！
+echo ==============================================
+echo.
+pause
+goto menu
+
+REM 4. 退出程序
+:exit
+echo.
+echo 再见！
+echo.
+timeout /t 1 /nobreak &amp;gt;nul
+exit
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;效果预览&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260414141123032.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;快速调出&lt;/h2&gt;
+&lt;p&gt;Listary-命令添加脚本&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260414141249639.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;很多人可能没注意到：在桌面或任意文件夹里，想通过 Listary 搜索、打开文件时，不用先双击 Ctrl，直接敲键盘输入关键词就行，能省下不少操作时间。&lt;/p&gt;
+&lt;p&gt;写完文章，直接敲键盘输入gt，然后回车&lt;/p&gt;
 </content:encoded></item><item><title>Qwen Code安装使用教程</title><link>https://dqtx.cc/posts/aihacks/qwen-code/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/qwen-code/</guid><pubDate>Tue, 14 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Qwen Code 是基于 Gemini Code 二次开发的&lt;strong&gt;终端 AI 编程助手&lt;/strong&gt;，完美搭载&lt;strong&gt;通义千问3.6 Plus 最新编程模型&lt;/strong&gt;，支持纯中文交互、代码生成/修复/Git 协作，&lt;strong&gt;免费&lt;/strong&gt;提供&lt;strong&gt;每日100次请求&lt;/strong&gt;额度完全满足日常开发需求。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;开源地址&lt;/strong&gt;：
 https://github.com/QwenLM/qwen-code&lt;/p&gt;
@@ -9428,145 +9972,6 @@ qwen -y
   ]
 }
 &lt;/code&gt;&lt;/pre&gt;
-</content:encoded></item><item><title>我的博客工作流bat</title><link>https://dqtx.cc/posts/workflow/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B8%83bat/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B8%83bat/</guid><pubDate>Tue, 14 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;优化了下我的博客发布工作流bat脚本&lt;/p&gt;
-&lt;p&gt;这是一个典型的&lt;a href=&quot;https://www.doubao.com/thread/wad1cb0794ccb7f0c&quot;&gt;DevOps 流程&lt;/a&gt;在博客环境中的应用&lt;/p&gt;
-&lt;h2&gt;工作流程&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260414140439305.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;脚本源码&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;@echo off
-chcp 936 &amp;gt;nul
-cd /d &quot;%~dp0&quot;
-title 博客工作菜单
-
-:menu
-cls
-echo.
-echo ====================================================
-echo                   大强博客「dqtx.cc」工作流菜单
-echo ====================================================
-echo.
-echo  [1] 生成 YAML 文章模板
-echo  [2] 启动本地构建预览 (localhost:4321)
-echo  [3] Git 提交并推送代码
-echo  [4] 退出程序
-echo.
-echo ====================================================
-choice /c 1234 /n /m &quot;请选择操作 [1-4]：&quot;
-
-if errorlevel 4 goto exit
-if errorlevel 3 goto gitpush
-if errorlevel 2 goto preview
-if errorlevel 1 goto template
-goto menu
-
-REM 1. 生成 YAML 文章模板
-:template
-cls
-echo.
-echo ==============================================
-echo          正在生成 YAML 模板...
-echo ==============================================
-echo.
-node scripts/add-frontmatter.cjs
-echo.
-echo ==============================================
-echo      模板生成完成！请在 Typora 中编辑
-echo ==============================================
-echo.
-pause
-goto menu
-
-REM 2. 启动本地构建预览
-:preview
-cls
-echo.
-echo ==============================================
-echo         正在启动本地预览服务
-echo ==============================================
-echo.
-echo  预览地址：http://localhost:4321
-echo  停止预览：按 Ctrl + C
-echo.
-start http://localhost:4321
-npm run dev
-echo.
-pause
-goto menu
-
-REM 3. Git 提交并推送代码 (已升级)
-:gitpush
-cls
-echo.
-echo ==============================================
-echo           Git 提交与推送
-echo ==============================================
-echo.
-echo [1/4] 正在检查文件变更...
-echo.
-git status --short
-echo.
-if errorlevel 1 (
-    echo ⚠️  警告：未检测到 Git 仓库或无文件变更
-    echo.
-    pause
-    goto menu
-)
-
-echo [2/4] 准备提交信息...
-echo.
-REM 获取当前时间并格式化 (兼容 Windows 默认格式)
-for /f &quot;tokens=1-6 delims=/-: &quot; %%a in (&quot;%date% %time%&quot;) do (
-    set &quot;year=%%c&quot;
-    set &quot;month=%%a&quot;
-    set &quot;day=%%b&quot;
-    set &quot;hour=%%d&quot;
-    set &quot;minute=%%e&quot;
-)
-REM 补零处理 (防止个位数时间显示异常)
-if %hour% lss 10 set &quot;hour=0%hour%&quot;
-set &quot;default_msg=更新博客内容 %year%-%month%-%day% %hour%:%minute%&quot;
-
-set &quot;commit_msg=&quot;
-set /p &quot;commit_msg=请输入提交备注 (直接回车使用默认: %default_msg%)：&quot;
-
-if not defined commit_msg (
-    set &quot;commit_msg=%default_msg%&quot;
-)
-
-echo.
-echo [3/4] 正在提交：&quot;%commit_msg%&quot;
-echo.
-git add .
-git commit -m &quot;%commit_msg%&quot;
-
-echo.
-echo [4/4] 正在推送到远程仓库...
-echo.
-git push
-
-echo.
-echo ==============================================
-echo           ✅ Git 提交推送完成！
-echo ==============================================
-echo.
-pause
-goto menu
-
-REM 4. 退出程序
-:exit
-echo.
-echo 再见！
-echo.
-timeout /t 1 /nobreak &amp;gt;nul
-exit
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;效果预览&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260414141123032.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;快速调出&lt;/h2&gt;
-&lt;p&gt;Listary-命令添加脚本&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260414141249639.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;很多人可能没注意到：在桌面或任意文件夹里，想通过 Listary 搜索、打开文件时，不用先双击 Ctrl，直接敲键盘输入关键词就行，能省下不少操作时间。&lt;/p&gt;
-&lt;p&gt;写完文章，直接敲键盘输入gt，然后回车&lt;/p&gt;
 </content:encoded></item><item><title>Listary完全使用指南！</title><link>https://dqtx.cc/posts/workflow/listary%E8%BF%9B%E9%98%B6/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/listary%E8%BF%9B%E9%98%B6/</guid><pubDate>Sun, 12 Apr 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Listary是一款知名的效率工具，以用户友好，使用方式简单而备受好评。&lt;/p&gt;
 &lt;p&gt;单论文件搜索，Listary 和 Everything 属于同一梯队，在搜索速度和内存占用上秒杀任何其他软件。&lt;/p&gt;
 &lt;p&gt;任何文件，只要你知道他的名称（或者部分名称），就能迅速找到并打开。&lt;/p&gt;
@@ -11384,6 +11789,73 @@ opencli zhihu hot -f json       # 查看知乎热榜并以JSON格式输出
 &lt;/blockquote&gt;
 &lt;p&gt;OpenCLI 的安装非常直观，关键在于浏览器插件的桥接。一旦打通，你的终端就不再只是一个冷冰冰的控制台，而是通往整个 Web 世界的万能钥匙。&lt;/p&gt;
 &lt;p&gt;文章来源：&lt;a href=&quot;https://www.dqtx.cc/&quot;&gt;dqtx.cc&lt;/a&gt;  远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/p&gt;
+</content:encoded></item><item><title>Rustdesk定制编译工具</title><link>https://dqtx.cc/posts/technical/rustdesk/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/rustdesk/</guid><pubDate>Mon, 23 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;作为一名技术爱好者，偶然在闲鱼上刷到定制化的Rustdesk客户端，简洁的界面和实用的功能让我萌生了自研同款编译工具的想法。虽花费数百元向卖家请教却因对方忙碌无疾而终，但也坚定了我靠技术实现需求的决心——最终借助Codex从命令行版本起步，迭代出可视化网页面板的Rustdesk一键编译工具，现将整个开发过程与成果分享如下。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260323223059574.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;一、成品核心优势&lt;/h2&gt;
+&lt;p&gt;相较于原生Rustdesk，定制编译后的工具在使用体验上做了针对性优化：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;无感连接&lt;/strong&gt;：控制端与客户端建立连接时无感知，无需繁琐确认步骤；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;免安装特性&lt;/strong&gt;：客户端和控制端均为绿色单文件，无需安装即可运行；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;隐私化展示&lt;/strong&gt;：控制端界面隐藏设备ID，仅客户端显示ID，兼顾使用便捷性与设备安全性。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;二、开发环境准备&lt;/h2&gt;
+&lt;p&gt;为保证编译流程的稳定性和兼容性，需提前配置以下开发环境：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;脚本执行环境：PowerShell 7（推荐版本，兼容更多命令）；&lt;/li&gt;
+&lt;li&gt;主开发语言：Python 3.10+（适配第三方库及语法特性）；&lt;/li&gt;
+&lt;li&gt;底层编译依赖：Rust（通过rustup管理版本）、LLVM（clang编译器）；&lt;/li&gt;
+&lt;li&gt;依赖库管理：vcpkg（用于管理C/C++依赖库）；&lt;/li&gt;
+&lt;li&gt;代码拉取工具：Git（获取Rustdesk源码及依赖）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;三、项目结构梳理&lt;/h2&gt;
+&lt;p&gt;整个编译工具的目录结构清晰划分，便于维护和扩展：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;D:\project2026\rustdesk
+├─ tools\one_click_pack.ps1                     # 命令行版一键出包脚本（核心逻辑）
+├─ tools\pack_web_ui.py                         # 可视化网页面板核心代码
+├─ tools\start_pack_web_ui.ps1                  # 网页面板一键启动脚本
+├─ src\ui\index.tis / index.css / ab.tis        # Rustdesk UI定制化改动文件
+├─ libs\portable\generate.py                    # 便携包生成逻辑
+└─ target\release\rustdesk-portable-packer.exe  # 编译后生成的单文件打包器
+
+C:\Users\Administrator\rustdesk-build-platform\storage\artifacts
+├─ vfun-client-complete                         # 客户端打包素材（资源、配置模板等）
+└─ vfun-controller-complete                     # 控制端打包素材
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;四、编译流程解析&lt;/h2&gt;
+&lt;p&gt;整个编译过程实现全自动化，仅需输入核心参数即可生成定制化exe文件，流程如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;输入客户参数
+   ↓
+one_click_pack.ps1 / 网页面板
+   ↓
+生成 customer.json（client/controller）
+   ↓
+同步 UI 文件到 artifacts
+   ↓
+generate.py 打包
+   ↓
+输出 2 个 exe（客户端 + 控制端）
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;参数输入&lt;/strong&gt;：在命令行/网页面板中填写域名、公钥、品牌名称、访问密码等定制化参数；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;脚本触发&lt;/strong&gt;：执行&lt;code&gt;one_click_pack.ps1&lt;/code&gt;命令行脚本或通过网页面板触发编译；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;配置生成&lt;/strong&gt;：自动生成&lt;code&gt;customer.json&lt;/code&gt;配置文件（区分客户端/控制端参数）；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;资源同步&lt;/strong&gt;：将定制化UI文件同步到打包素材目录&lt;code&gt;artifacts&lt;/code&gt;；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;打包编译&lt;/strong&gt;：调用&lt;code&gt;generate.py&lt;/code&gt;执行便携包打包逻辑；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;成果输出&lt;/strong&gt;：最终生成2个独立exe文件（客户端+控制端）。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;快速运行方式&lt;/h3&gt;
+&lt;p&gt;只需执行以下PowerShell命令，即可启动可视化网页面板：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;amp; &apos;D:\project2026\rustdesk\tools\start_pack_web_ui.ps1&apos;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;五、编译成果展示&lt;/h2&gt;
+&lt;p&gt;整个编译流程耗时约4分钟，最终输出按“品牌-类型-时间戳”命名的可执行文件，示例如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;大强同学-控制端-20260323-102318.exe&lt;/li&gt;
+&lt;li&gt;大强同学-客户端-20260323-102318.exe&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;目前该工具仅支持Windows版本的Rustdesk控制端/客户端编译，若有定制编译需求，可添加微信dqtx33交流。&lt;/p&gt;
+&lt;h2&gt;六、写在最后&lt;/h2&gt;
+&lt;p&gt;本次开发从闲鱼灵感出发，基于Python、PowerShell等技术栈实现了Rustdesk定制化编译工具，核心优化了连接体验、免安装和隐私展示三大特性；工具实现了从命令行到网页可视化面板的迭代，编译流程自动化，仅需输入核心参数即可快速生成定制化exe文件；项目结构清晰，依赖环境明确，编译耗时约4分钟，仅支持Windows版本的Rustdesk控制端/客户端编译。&lt;/p&gt;
 </content:encoded></item><item><title>NotebookLM封神指南</title><link>https://dqtx.cc/posts/aihacks/notebooklm/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/notebooklm/</guid><pubDate>Mon, 23 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;NotebookLM 是一个只根据你输入的信息思考的人工智能。 它不像 ChatGPT 那样引用整个互联网的信息，而是读取并回答“只提供你给我的材料”。&lt;/p&gt;
 &lt;p&gt;在咨询通用人工智能关于职业相关事务时，它可能会检测到年龄、工作类型和背景等负面因素，并无意中给出严厉的评价。 NotebookLM 不用担心这些。 他们只会给你你想要申诉的信息，所以他们只会考虑。&lt;/p&gt;
 &lt;p&gt;因此，你输入的信息质量和数量，将决定结果的质量。&lt;/p&gt;
@@ -11505,73 +11977,6 @@ https://www.bilibili.com/video/BV1EDcSzxErw/?spm_id_from=333.1387.favlist.conten
 https://www.biji.com/mine/notes/WPKWeqx2wyV6g4QP&lt;/p&gt;
 &lt;h2&gt;写在最后&lt;/h2&gt;
 &lt;p&gt;当NotebookLM 把 1 小时的学习压缩到 15 分钟，把 3 天的调研缩短到 1 小时，效率差距已不再是努力程度，而是工具选择。从学生到科研人员，从产品经理到内容创作者，这款被《巴伦周刊》称为 “生成式 AI 杀手级应用” 的工具，正在重构知识工作的底层逻辑。现在登录 Google 账号即可免费体验，你的 10 倍效率革命，从上传第一份文档开始。&lt;/p&gt;
-</content:encoded></item><item><title>Rustdesk定制编译工具</title><link>https://dqtx.cc/posts/technical/rustdesk/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/rustdesk/</guid><pubDate>Mon, 23 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;作为一名技术爱好者，偶然在闲鱼上刷到定制化的Rustdesk客户端，简洁的界面和实用的功能让我萌生了自研同款编译工具的想法。虽花费数百元向卖家请教却因对方忙碌无疾而终，但也坚定了我靠技术实现需求的决心——最终借助Codex从命令行版本起步，迭代出可视化网页面板的Rustdesk一键编译工具，现将整个开发过程与成果分享如下。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260323223059574.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;一、成品核心优势&lt;/h2&gt;
-&lt;p&gt;相较于原生Rustdesk，定制编译后的工具在使用体验上做了针对性优化：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;无感连接&lt;/strong&gt;：控制端与客户端建立连接时无感知，无需繁琐确认步骤；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;免安装特性&lt;/strong&gt;：客户端和控制端均为绿色单文件，无需安装即可运行；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;隐私化展示&lt;/strong&gt;：控制端界面隐藏设备ID，仅客户端显示ID，兼顾使用便捷性与设备安全性。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2&gt;二、开发环境准备&lt;/h2&gt;
-&lt;p&gt;为保证编译流程的稳定性和兼容性，需提前配置以下开发环境：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;脚本执行环境：PowerShell 7（推荐版本，兼容更多命令）；&lt;/li&gt;
-&lt;li&gt;主开发语言：Python 3.10+（适配第三方库及语法特性）；&lt;/li&gt;
-&lt;li&gt;底层编译依赖：Rust（通过rustup管理版本）、LLVM（clang编译器）；&lt;/li&gt;
-&lt;li&gt;依赖库管理：vcpkg（用于管理C/C++依赖库）；&lt;/li&gt;
-&lt;li&gt;代码拉取工具：Git（获取Rustdesk源码及依赖）。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;三、项目结构梳理&lt;/h2&gt;
-&lt;p&gt;整个编译工具的目录结构清晰划分，便于维护和扩展：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;D:\project2026\rustdesk
-├─ tools\one_click_pack.ps1                     # 命令行版一键出包脚本（核心逻辑）
-├─ tools\pack_web_ui.py                         # 可视化网页面板核心代码
-├─ tools\start_pack_web_ui.ps1                  # 网页面板一键启动脚本
-├─ src\ui\index.tis / index.css / ab.tis        # Rustdesk UI定制化改动文件
-├─ libs\portable\generate.py                    # 便携包生成逻辑
-└─ target\release\rustdesk-portable-packer.exe  # 编译后生成的单文件打包器
-
-C:\Users\Administrator\rustdesk-build-platform\storage\artifacts
-├─ vfun-client-complete                         # 客户端打包素材（资源、配置模板等）
-└─ vfun-controller-complete                     # 控制端打包素材
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;四、编译流程解析&lt;/h2&gt;
-&lt;p&gt;整个编译过程实现全自动化，仅需输入核心参数即可生成定制化exe文件，流程如下：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;输入客户参数
-   ↓
-one_click_pack.ps1 / 网页面板
-   ↓
-生成 customer.json（client/controller）
-   ↓
-同步 UI 文件到 artifacts
-   ↓
-generate.py 打包
-   ↓
-输出 2 个 exe（客户端 + 控制端）
-&lt;/code&gt;&lt;/pre&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;参数输入&lt;/strong&gt;：在命令行/网页面板中填写域名、公钥、品牌名称、访问密码等定制化参数；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;脚本触发&lt;/strong&gt;：执行&lt;code&gt;one_click_pack.ps1&lt;/code&gt;命令行脚本或通过网页面板触发编译；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;配置生成&lt;/strong&gt;：自动生成&lt;code&gt;customer.json&lt;/code&gt;配置文件（区分客户端/控制端参数）；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;资源同步&lt;/strong&gt;：将定制化UI文件同步到打包素材目录&lt;code&gt;artifacts&lt;/code&gt;；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;打包编译&lt;/strong&gt;：调用&lt;code&gt;generate.py&lt;/code&gt;执行便携包打包逻辑；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;成果输出&lt;/strong&gt;：最终生成2个独立exe文件（客户端+控制端）。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3&gt;快速运行方式&lt;/h3&gt;
-&lt;p&gt;只需执行以下PowerShell命令，即可启动可视化网页面板：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;amp; &apos;D:\project2026\rustdesk\tools\start_pack_web_ui.ps1&apos;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h2&gt;五、编译成果展示&lt;/h2&gt;
-&lt;p&gt;整个编译流程耗时约4分钟，最终输出按“品牌-类型-时间戳”命名的可执行文件，示例如下：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;大强同学-控制端-20260323-102318.exe&lt;/li&gt;
-&lt;li&gt;大强同学-客户端-20260323-102318.exe&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;目前该工具仅支持Windows版本的Rustdesk控制端/客户端编译，若有定制编译需求，可添加微信dqtx33交流。&lt;/p&gt;
-&lt;h2&gt;六、写在最后&lt;/h2&gt;
-&lt;p&gt;本次开发从闲鱼灵感出发，基于Python、PowerShell等技术栈实现了Rustdesk定制化编译工具，核心优化了连接体验、免安装和隐私展示三大特性；工具实现了从命令行到网页可视化面板的迭代，编译流程自动化，仅需输入核心参数即可快速生成定制化exe文件；项目结构清晰，依赖环境明确，编译耗时约4分钟，仅支持Windows版本的Rustdesk控制端/客户端编译。&lt;/p&gt;
 </content:encoded></item><item><title>零成本搭建在线图床</title><link>https://dqtx.cc/posts/technical/%E5%9C%A8%E7%BA%BF%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/%E5%9C%A8%E7%BA%BF%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA/</guid><pubDate>Sun, 22 Mar 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;90%的博主都不知道！免费100G图床竟比付费的还稳定～ 写文章、做分享时，你是不是也总被图床问题折磨？免费的容量小得可怜，付费的一年要花几百块，更糟的是还常遇到文件失效、大文件传不了的坑，辛苦写的内容全白费！今天就分享一个零成本神方案——用GitHub 4k+星标的开源项目CloudFlare-ImgBed搭配HuggingFace，10分钟快速搭建100G免费图床，无需实名认证、支持大文件自动分片上传，不用额外买服务器，稳定又省心，自媒体、学生、打工人都能用～&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260122014636902.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;一、工具介绍：CloudFlare-ImgBed&lt;/h2&gt;
@@ -13540,199 +13945,6 @@ source ~/catkin_ws/devel/setup.bash
 &lt;h2&gt;参考资料&lt;/h2&gt;
 &lt;p&gt;openclaw接入飞书教程&lt;/p&gt;
 &lt;p&gt;https://x.com/0xValkyrie_ai/status/2020330035652227360&lt;/p&gt;
-</content:encoded></item><item><title>workany：桌面Agent产品</title><link>https://dqtx.cc/posts/aihacks/workany/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/workany/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;WorkAny&lt;/strong&gt; 是一款基于 Claude 3.5 Sonnet 模型构建的智能工作助手平台。它不仅能与你自然对话，更拥有强大的文件处理、代码编写、文档创建等实用能力。简单来说，它就像给 AI 装上了&quot;双手&quot;——不仅能思考，还能真正帮你&lt;strong&gt;动手完成工作&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/workany_coding_1280x720.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;✨ 核心功能一览&lt;/h2&gt;
-&lt;h3&gt;💻 代码开发&lt;/h3&gt;
-&lt;p&gt;编写、调试、优化代码，支持 JavaScript、Python、TypeScript、Java、Go 等多种编程语言。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;场景&lt;/strong&gt;：快速生成 API 接口、编写自动化脚本、调试代码错误&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3&gt;📝 文档处理&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;创建 Word、Excel、PDF 文档&lt;/li&gt;
-&lt;li&gt;Markdown 文档编辑与转换&lt;/li&gt;
-&lt;li&gt;文档格式转换与排版&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;场景&lt;/strong&gt;：自动生成报告、批量处理 Excel 数据、撰写技术文档&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3&gt;🔍 智能搜索&lt;/h3&gt;
-&lt;p&gt;实时网络搜索、资料查询、知识问答，快速获取你需要的信息。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;场景&lt;/strong&gt;：查找资料、验证信息、学习新知识&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3&gt;🌐 网页内容抓取&lt;/h3&gt;
-&lt;p&gt;一键获取网页内容，提取关键信息，支持批量数据采集。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;场景&lt;/strong&gt;：竞品分析、数据收集、内容整理&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3&gt;📊 数据处理&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Excel 数据分析与图表生成&lt;/li&gt;
-&lt;li&gt;CSV/JSON 数据转换&lt;/li&gt;
-&lt;li&gt;数据清洗与格式化&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;场景&lt;/strong&gt;：销售数据分析、客户信息整理、报表生成&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3&gt;🎨 AI 配图生成&lt;/h3&gt;
-&lt;p&gt;支持调用本地 AI 绘图技能，一键生成高质量配图，支持自定义尺寸和风格。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;场景&lt;/strong&gt;：公众号配图、文章封面、演示文稿插图&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;本地 AI 绘图能力&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;支持通义千问 AI 绘图模型&lt;/li&gt;
-&lt;li&gt;自定义图片尺寸（如 16:6 封面、1280x720 配图等）&lt;/li&gt;
-&lt;li&gt;中文描述生成，简单易用&lt;/li&gt;
-&lt;li&gt;批量生成，提升效率&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;📱 公众号助手&lt;/h3&gt;
-&lt;p&gt;Markdown 自动转换为公众号格式，一键上传草稿箱，支持多种精美主题。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;场景&lt;/strong&gt;：快速排版公众号文章、批量内容生成&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3&gt;🔌 本地技能扩展&lt;/h3&gt;
-&lt;p&gt;支持调用你本地配置的自定义技能，无限扩展功能边界。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;场景&lt;/strong&gt;：调用本地 AI 绘图生成配图、使用自定义 API 服务&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;技能系统亮点&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;灵活配置本地技能目录&lt;/li&gt;
-&lt;li&gt;支持自定义 API 集成&lt;/li&gt;
-&lt;li&gt;一键调用，无缝使用&lt;/li&gt;
-&lt;li&gt;本地优先，数据安全&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;⚙️ 自动化工作流创建&lt;/h3&gt;
-&lt;p&gt;一键创建专属工作流，将重复性任务自动化，让你发送一条指令就能完成一系列复杂操作。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;场景&lt;/strong&gt;：文章创作工作流、数据处理流水线、批量任务自动化&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;工作流系统亮点&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;智能识别任务需求，自动生成工作流脚本&lt;/li&gt;
-&lt;li&gt;支持文章生成+配图制作一体化完成&lt;/li&gt;
-&lt;li&gt;简单指令触发复杂流程，一键执行&lt;/li&gt;
-&lt;li&gt;完全可定制，适配各种业务场景&lt;/li&gt;
-&lt;li&gt;自动保存结果，文件分类管理&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;实际应用示例&lt;/strong&gt;：
-只需发送一条指令「/write 人工智能的未来发展」，WorkAny 将自动完成：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;✍️ 撰写完整文章内容（无分割线、无表格）&lt;/li&gt;
-&lt;li&gt;🖼️ 生成封面图（1920x720，16:6 比例）&lt;/li&gt;
-&lt;li&gt;🎨 生成 3-6 张配图（1280x720，16:9 比例）&lt;/li&gt;
-&lt;li&gt;📁 自动分类保存到指定目录&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;一次配置，永久受益，让重复工作彻底自动化！&lt;/p&gt;
-&lt;h2&gt;🛠️ 技术特点&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;🗣️ 自然对话&lt;/strong&gt;
-无需学习复杂命令，像和朋友聊天一样使用，说出需求即可完成。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;🔧 多工具整合&lt;/strong&gt;
-文件操作、代码执行、网络请求一应俱全，一个平台搞定多种任务。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;🔒 安全沙箱&lt;/strong&gt;
-脚本在隔离环境中运行，保障系统安全，不用担心影响电脑其他文件。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;💾 会话管理&lt;/strong&gt;
-自动保存工作记录，支持断点续传，随时继续之前的工作。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;🎯 多模型支持&lt;/strong&gt;
-根据任务复杂度智能选择合适模型，简单任务快速响应，复杂任务深度思考。&lt;/p&gt;
-&lt;h2&gt;💡 谁适合使用 WorkAny？&lt;/h2&gt;
-&lt;h3&gt;👨‍💻 开发者&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;快速编写和调试代码&lt;/li&gt;
-&lt;li&gt;生成 API 文档&lt;/li&gt;
-&lt;li&gt;自动化脚本开发&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;✍️ 内容创作者&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;撰写和排版公众号文章&lt;/li&gt;
-&lt;li&gt;批量生成内容素材&lt;/li&gt;
-&lt;li&gt;图片处理与设计&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;📈 数据分析师&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Excel 数据处理&lt;/li&gt;
-&lt;li&gt;报表自动生成&lt;/li&gt;
-&lt;li&gt;数据可视化&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;💼 办公人员&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;文档格式转换&lt;/li&gt;
-&lt;li&gt;批量文件处理&lt;/li&gt;
-&lt;li&gt;自动化办公流程&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;🎓 学生/研究者&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;资料查询与整理&lt;/li&gt;
-&lt;li&gt;学习笔记生成&lt;/li&gt;
-&lt;li&gt;论文辅助&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;🚀 使用场景示例&lt;/h2&gt;
-&lt;h3&gt;场景一：批量处理文件&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;用户：&quot;帮我将桌面上所有图片重命名为按日期排序的格式&quot;&lt;/p&gt;
-&lt;p&gt;WorkAny：&lt;strong&gt;自动识别 → 编写脚本 → 执行操作 → 完成&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3&gt;场景二：数据报表生成&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;用户：&quot;分析这个 Excel 文件中的销售数据，生成可视化图表&quot;&lt;/p&gt;
-&lt;p&gt;WorkAny：&lt;strong&gt;读取数据 → 分析处理 → 生成图表 → 导出报告&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3&gt;场景三：公众号文章&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;用户：&quot;根据这个主题写一篇公众号文章，并排版好&quot;&lt;/p&gt;
-&lt;p&gt;WorkAny：&lt;strong&gt;撰写内容 → 美化排版 → 转换格式 → 上传草稿&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3&gt;场景四：AI 配图生成&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;用户：&quot;为这篇文章生成 5 张配图，封面用 16:6 比例&quot;&lt;/p&gt;
-&lt;p&gt;WorkAny：&lt;strong&gt;调用本地绘图技能 → 批量生成图片 → 自定义尺寸 → 保存使用&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;实际案例&lt;/strong&gt;：你正在看的这篇 WorkAny 介绍文章，文中的封面图和所有配图，都是通过 WorkAny 调用本地 AI 绘图技能自动生成的！&lt;/p&gt;
-&lt;h3&gt;场景五：自动化工作流&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;用户：&quot;帮我创建一个文章创作工作流，以后写文章时自动生成配图&quot;&lt;/p&gt;
-&lt;p&gt;WorkAny：&lt;strong&gt;分析需求 → 编写工作流脚本 → 配置自动化流程 → 测试验证 → 完成交付&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;实际案例&lt;/strong&gt;：用户只需创建一次工作流配置，之后每次发送简单指令如「/write 远程办公技巧」，WorkAny 就能自动完成文章撰写、封面生成、配图制作的全流程，无需重复配置，大幅提升创作效率！&lt;/p&gt;
-&lt;h2&gt;🎯 为什么选择 WorkAny？&lt;/h2&gt;
-&lt;h3&gt;✅ 开箱即用&lt;/h3&gt;
-&lt;p&gt;无需复杂配置，注册即可使用所有核心功能。&lt;/p&gt;
-&lt;h3&gt;✅ 安全可靠&lt;/h3&gt;
-&lt;p&gt;沙箱环境隔离运行，保护你的系统安全。&lt;/p&gt;
-&lt;h3&gt;✅ 智能高效&lt;/h3&gt;
-&lt;p&gt;基于 Claude 3.5 Sonnet，理解能力强，响应速度快。&lt;/p&gt;
-&lt;h3&gt;✅ 持续进化&lt;/h3&gt;
-&lt;p&gt;依托 Anthropic 官方 API，自动享受模型更新迭代。&lt;/p&gt;
-&lt;h3&gt;✅ 本地技能生态&lt;/h3&gt;
-&lt;p&gt;支持扩展本地技能，调用你自己的 API 服务，打造专属工作流。&lt;/p&gt;
-&lt;h3&gt;✅ 自动化工作流&lt;/h3&gt;
-&lt;p&gt;一键创建工作流，将重复性任务自动化，一条指令完成复杂流程，让效率翻倍。&lt;/p&gt;
-&lt;h2&gt;📝 结语&lt;/h2&gt;
-&lt;p&gt;在 AI 时代，工作效率不再是靠&quot;加班&quot;得来，而是靠&quot;善用工具&quot;实现。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;WorkAny&lt;/strong&gt; 就是你办公桌上的全能助手——不仅能理解你的需求，更能真正帮你完成任务。&lt;/p&gt;
-&lt;p&gt;从今天开始，让 WorkAny 帮你释放更多时间，专注于真正重要的事情吧！&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;🌟 试用 WorkAny，开启智能工作新体验！&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;下载地址：https://workany.ai/zh&lt;/p&gt;
-&lt;p&gt;如果觉得这篇教程对你有帮助，别忘了&lt;strong&gt;点赞+收藏+转发&lt;/strong&gt;三连呀！关注我，后续分享更多实用技巧、效率工具干货，下次见～ 👋&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;大强远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-</content:encoded></item><item><title>闪电说：端侧AI语音输入法</title><link>https://dqtx.cc/posts/software/%E9%97%AA%E7%94%B5%E8%AF%B4/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E9%97%AA%E7%94%B5%E8%AF%B4/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;闪电说是由武汉团队打造的&lt;strong&gt;国产 AI 语音输入法&lt;/strong&gt;，前身为代体输入法，以 “端侧本地处理” 为核心特色，实现毫秒级语音转文字体验。它打破传统云端语音输入的延迟与隐私痛点，通过本地 AI 引擎构建 “即说即显、思维同步” 的输入模式，兼容 Windows 和 macOS 全平台，是一款完全免费的系统级输入工具，被观猹平台评为 8.6 分高分产品。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260204111254949.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h2&gt;上手指南&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;下载安装&lt;/strong&gt;：访问官网（https://shandianshuo.cn），根据系统选择 Windows 或 macOS 版本下载安装；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;权限配置&lt;/strong&gt;：授予麦克风权限，测试音频输入是否正常；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;个性化设置&lt;/strong&gt;：自定义激活快捷键、默认语言、输入模式等基础配置；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;即时使用&lt;/strong&gt;：在任意文本输入框按下快捷键，启动语音输入，转写文本自动优化呈现，支持后续编辑调整。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;其他类似的软件&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;VocoType「花了38元买的」&lt;/li&gt;
-&lt;li&gt;秘塔回响&lt;/li&gt;
-&lt;li&gt;OpenLess&lt;/li&gt;
-&lt;/ul&gt;
 </content:encoded></item><item><title>干货教程：我的博客发布工作流</title><link>https://dqtx.cc/posts/workflow/%E5%8D%9A%E5%AE%A2%E5%B7%A5%E4%BD%9C%E6%B5%81/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/%E5%8D%9A%E5%AE%A2%E5%B7%A5%E4%BD%9C%E6%B5%81/</guid><description>分享我的无服务器博客发布流程：使用 GitHub 托管 + EdgeOne 自动部署，配合 Typora 和脚本实现高效的文章发布工作流。</description><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;今天想跟大家分享一下我的博客发布工作流。我的博客没有服务器，只有一个域名通过 GitHub 进行托管，配合 EdgeOne 实现自动构建部署。整个过程非常高效，下面就来详细介绍！&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260208222439485.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h2&gt;创建文章&lt;/h2&gt;
@@ -13945,6 +14157,199 @@ category: Technical
 &lt;hr /&gt;
 &lt;p&gt;以上就是我的博客发布工作流了。虽然博客没有服务器，但通过 GitHub + EdgeOne 的组合，配合一些小脚本，依然可以实现高效的自动化发布。&lt;/p&gt;
 &lt;p&gt;欢迎大家交流讨论，有问题评论区留言！&lt;/p&gt;
+</content:encoded></item><item><title>workany：桌面Agent产品</title><link>https://dqtx.cc/posts/aihacks/workany/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/workany/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;WorkAny&lt;/strong&gt; 是一款基于 Claude 3.5 Sonnet 模型构建的智能工作助手平台。它不仅能与你自然对话，更拥有强大的文件处理、代码编写、文档创建等实用能力。简单来说，它就像给 AI 装上了&quot;双手&quot;——不仅能思考，还能真正帮你&lt;strong&gt;动手完成工作&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/workany_coding_1280x720.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;✨ 核心功能一览&lt;/h2&gt;
+&lt;h3&gt;💻 代码开发&lt;/h3&gt;
+&lt;p&gt;编写、调试、优化代码，支持 JavaScript、Python、TypeScript、Java、Go 等多种编程语言。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;场景&lt;/strong&gt;：快速生成 API 接口、编写自动化脚本、调试代码错误&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;📝 文档处理&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;创建 Word、Excel、PDF 文档&lt;/li&gt;
+&lt;li&gt;Markdown 文档编辑与转换&lt;/li&gt;
+&lt;li&gt;文档格式转换与排版&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;场景&lt;/strong&gt;：自动生成报告、批量处理 Excel 数据、撰写技术文档&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;🔍 智能搜索&lt;/h3&gt;
+&lt;p&gt;实时网络搜索、资料查询、知识问答，快速获取你需要的信息。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;场景&lt;/strong&gt;：查找资料、验证信息、学习新知识&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;🌐 网页内容抓取&lt;/h3&gt;
+&lt;p&gt;一键获取网页内容，提取关键信息，支持批量数据采集。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;场景&lt;/strong&gt;：竞品分析、数据收集、内容整理&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;📊 数据处理&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Excel 数据分析与图表生成&lt;/li&gt;
+&lt;li&gt;CSV/JSON 数据转换&lt;/li&gt;
+&lt;li&gt;数据清洗与格式化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;场景&lt;/strong&gt;：销售数据分析、客户信息整理、报表生成&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;🎨 AI 配图生成&lt;/h3&gt;
+&lt;p&gt;支持调用本地 AI 绘图技能，一键生成高质量配图，支持自定义尺寸和风格。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;场景&lt;/strong&gt;：公众号配图、文章封面、演示文稿插图&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;本地 AI 绘图能力&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;支持通义千问 AI 绘图模型&lt;/li&gt;
+&lt;li&gt;自定义图片尺寸（如 16:6 封面、1280x720 配图等）&lt;/li&gt;
+&lt;li&gt;中文描述生成，简单易用&lt;/li&gt;
+&lt;li&gt;批量生成，提升效率&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;📱 公众号助手&lt;/h3&gt;
+&lt;p&gt;Markdown 自动转换为公众号格式，一键上传草稿箱，支持多种精美主题。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;场景&lt;/strong&gt;：快速排版公众号文章、批量内容生成&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;🔌 本地技能扩展&lt;/h3&gt;
+&lt;p&gt;支持调用你本地配置的自定义技能，无限扩展功能边界。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;场景&lt;/strong&gt;：调用本地 AI 绘图生成配图、使用自定义 API 服务&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;技能系统亮点&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;灵活配置本地技能目录&lt;/li&gt;
+&lt;li&gt;支持自定义 API 集成&lt;/li&gt;
+&lt;li&gt;一键调用，无缝使用&lt;/li&gt;
+&lt;li&gt;本地优先，数据安全&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;⚙️ 自动化工作流创建&lt;/h3&gt;
+&lt;p&gt;一键创建专属工作流，将重复性任务自动化，让你发送一条指令就能完成一系列复杂操作。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;场景&lt;/strong&gt;：文章创作工作流、数据处理流水线、批量任务自动化&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;工作流系统亮点&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;智能识别任务需求，自动生成工作流脚本&lt;/li&gt;
+&lt;li&gt;支持文章生成+配图制作一体化完成&lt;/li&gt;
+&lt;li&gt;简单指令触发复杂流程，一键执行&lt;/li&gt;
+&lt;li&gt;完全可定制，适配各种业务场景&lt;/li&gt;
+&lt;li&gt;自动保存结果，文件分类管理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;实际应用示例&lt;/strong&gt;：
+只需发送一条指令「/write 人工智能的未来发展」，WorkAny 将自动完成：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;✍️ 撰写完整文章内容（无分割线、无表格）&lt;/li&gt;
+&lt;li&gt;🖼️ 生成封面图（1920x720，16:6 比例）&lt;/li&gt;
+&lt;li&gt;🎨 生成 3-6 张配图（1280x720，16:9 比例）&lt;/li&gt;
+&lt;li&gt;📁 自动分类保存到指定目录&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一次配置，永久受益，让重复工作彻底自动化！&lt;/p&gt;
+&lt;h2&gt;🛠️ 技术特点&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;🗣️ 自然对话&lt;/strong&gt;
+无需学习复杂命令，像和朋友聊天一样使用，说出需求即可完成。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;🔧 多工具整合&lt;/strong&gt;
+文件操作、代码执行、网络请求一应俱全，一个平台搞定多种任务。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;🔒 安全沙箱&lt;/strong&gt;
+脚本在隔离环境中运行，保障系统安全，不用担心影响电脑其他文件。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;💾 会话管理&lt;/strong&gt;
+自动保存工作记录，支持断点续传，随时继续之前的工作。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;🎯 多模型支持&lt;/strong&gt;
+根据任务复杂度智能选择合适模型，简单任务快速响应，复杂任务深度思考。&lt;/p&gt;
+&lt;h2&gt;💡 谁适合使用 WorkAny？&lt;/h2&gt;
+&lt;h3&gt;👨‍💻 开发者&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;快速编写和调试代码&lt;/li&gt;
+&lt;li&gt;生成 API 文档&lt;/li&gt;
+&lt;li&gt;自动化脚本开发&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;✍️ 内容创作者&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;撰写和排版公众号文章&lt;/li&gt;
+&lt;li&gt;批量生成内容素材&lt;/li&gt;
+&lt;li&gt;图片处理与设计&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;📈 数据分析师&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Excel 数据处理&lt;/li&gt;
+&lt;li&gt;报表自动生成&lt;/li&gt;
+&lt;li&gt;数据可视化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;💼 办公人员&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;文档格式转换&lt;/li&gt;
+&lt;li&gt;批量文件处理&lt;/li&gt;
+&lt;li&gt;自动化办公流程&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;🎓 学生/研究者&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;资料查询与整理&lt;/li&gt;
+&lt;li&gt;学习笔记生成&lt;/li&gt;
+&lt;li&gt;论文辅助&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;🚀 使用场景示例&lt;/h2&gt;
+&lt;h3&gt;场景一：批量处理文件&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;用户：&quot;帮我将桌面上所有图片重命名为按日期排序的格式&quot;&lt;/p&gt;
+&lt;p&gt;WorkAny：&lt;strong&gt;自动识别 → 编写脚本 → 执行操作 → 完成&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;场景二：数据报表生成&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;用户：&quot;分析这个 Excel 文件中的销售数据，生成可视化图表&quot;&lt;/p&gt;
+&lt;p&gt;WorkAny：&lt;strong&gt;读取数据 → 分析处理 → 生成图表 → 导出报告&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;场景三：公众号文章&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;用户：&quot;根据这个主题写一篇公众号文章，并排版好&quot;&lt;/p&gt;
+&lt;p&gt;WorkAny：&lt;strong&gt;撰写内容 → 美化排版 → 转换格式 → 上传草稿&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;场景四：AI 配图生成&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;用户：&quot;为这篇文章生成 5 张配图，封面用 16:6 比例&quot;&lt;/p&gt;
+&lt;p&gt;WorkAny：&lt;strong&gt;调用本地绘图技能 → 批量生成图片 → 自定义尺寸 → 保存使用&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;实际案例&lt;/strong&gt;：你正在看的这篇 WorkAny 介绍文章，文中的封面图和所有配图，都是通过 WorkAny 调用本地 AI 绘图技能自动生成的！&lt;/p&gt;
+&lt;h3&gt;场景五：自动化工作流&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;用户：&quot;帮我创建一个文章创作工作流，以后写文章时自动生成配图&quot;&lt;/p&gt;
+&lt;p&gt;WorkAny：&lt;strong&gt;分析需求 → 编写工作流脚本 → 配置自动化流程 → 测试验证 → 完成交付&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;实际案例&lt;/strong&gt;：用户只需创建一次工作流配置，之后每次发送简单指令如「/write 远程办公技巧」，WorkAny 就能自动完成文章撰写、封面生成、配图制作的全流程，无需重复配置，大幅提升创作效率！&lt;/p&gt;
+&lt;h2&gt;🎯 为什么选择 WorkAny？&lt;/h2&gt;
+&lt;h3&gt;✅ 开箱即用&lt;/h3&gt;
+&lt;p&gt;无需复杂配置，注册即可使用所有核心功能。&lt;/p&gt;
+&lt;h3&gt;✅ 安全可靠&lt;/h3&gt;
+&lt;p&gt;沙箱环境隔离运行，保护你的系统安全。&lt;/p&gt;
+&lt;h3&gt;✅ 智能高效&lt;/h3&gt;
+&lt;p&gt;基于 Claude 3.5 Sonnet，理解能力强，响应速度快。&lt;/p&gt;
+&lt;h3&gt;✅ 持续进化&lt;/h3&gt;
+&lt;p&gt;依托 Anthropic 官方 API，自动享受模型更新迭代。&lt;/p&gt;
+&lt;h3&gt;✅ 本地技能生态&lt;/h3&gt;
+&lt;p&gt;支持扩展本地技能，调用你自己的 API 服务，打造专属工作流。&lt;/p&gt;
+&lt;h3&gt;✅ 自动化工作流&lt;/h3&gt;
+&lt;p&gt;一键创建工作流，将重复性任务自动化，一条指令完成复杂流程，让效率翻倍。&lt;/p&gt;
+&lt;h2&gt;📝 结语&lt;/h2&gt;
+&lt;p&gt;在 AI 时代，工作效率不再是靠&quot;加班&quot;得来，而是靠&quot;善用工具&quot;实现。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;WorkAny&lt;/strong&gt; 就是你办公桌上的全能助手——不仅能理解你的需求，更能真正帮你完成任务。&lt;/p&gt;
+&lt;p&gt;从今天开始，让 WorkAny 帮你释放更多时间，专注于真正重要的事情吧！&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;🌟 试用 WorkAny，开启智能工作新体验！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;下载地址：https://workany.ai/zh&lt;/p&gt;
+&lt;p&gt;如果觉得这篇教程对你有帮助，别忘了&lt;strong&gt;点赞+收藏+转发&lt;/strong&gt;三连呀！关注我，后续分享更多实用技巧、效率工具干货，下次见～ 👋&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;大强远程技术支持：&lt;a href=&quot;https://www.742112.xyz/&quot;&gt;742112.xyz&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+</content:encoded></item><item><title>闪电说：端侧AI语音输入法</title><link>https://dqtx.cc/posts/software/%E9%97%AA%E7%94%B5%E8%AF%B4/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E9%97%AA%E7%94%B5%E8%AF%B4/</guid><pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;闪电说是由武汉团队打造的&lt;strong&gt;国产 AI 语音输入法&lt;/strong&gt;，前身为代体输入法，以 “端侧本地处理” 为核心特色，实现毫秒级语音转文字体验。它打破传统云端语音输入的延迟与隐私痛点，通过本地 AI 引擎构建 “即说即显、思维同步” 的输入模式，兼容 Windows 和 macOS 全平台，是一款完全免费的系统级输入工具，被观猹平台评为 8.6 分高分产品。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260204111254949.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;上手指南&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;下载安装&lt;/strong&gt;：访问官网（https://shandianshuo.cn），根据系统选择 Windows 或 macOS 版本下载安装；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;权限配置&lt;/strong&gt;：授予麦克风权限，测试音频输入是否正常；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;个性化设置&lt;/strong&gt;：自定义激活快捷键、默认语言、输入模式等基础配置；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;即时使用&lt;/strong&gt;：在任意文本输入框按下快捷键，启动语音输入，转写文本自动优化呈现，支持后续编辑调整。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;其他类似的软件&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;VocoType「花了38元买的」&lt;/li&gt;
+&lt;li&gt;秘塔回响&lt;/li&gt;
+&lt;li&gt;OpenLess&lt;/li&gt;
+&lt;/ul&gt;
 </content:encoded></item><item><title>轻松打造家庭影视库，实现4K观影自由</title><link>https://dqtx.cc/posts/technical/vidhub%E6%8C%82%E8%BD%BD115%E7%BD%91%E7%9B%98/</link><guid isPermaLink="true">https://dqtx.cc/posts/technical/vidhub%E6%8C%82%E8%BD%BD115%E7%BD%91%E7%9B%98/</guid><description>如果你想拥有个人家庭影视库，追求 4K 观影体验，但觉得爱优腾会员贵、NAS 设备成本又高，那今天这期视频，我去将手把手教你花小钱，轻松打造自己的家庭影视库，拥...</description><pubDate>Tue, 03 Feb 2026 21:22:43 GMT</pubDate><content:encoded>&lt;p&gt;如果你想拥有个人家庭影视库，追求 4K 观影体验，但觉得爱优腾会员贵、NAS 设备成本又高，那今天这期视频，我去将手把手教你花小钱，轻松打造自己的家庭影视库，拥有海量资源，实现 4K 观影自由！&lt;/p&gt;
 &lt;h2&gt;115 网盘（存影视资源）&lt;/h2&gt;
 &lt;ul&gt;
@@ -14183,6 +14588,43 @@ https://www.passkeys.com/websites-with-passkey-support-sites-directory&lt;/p&gt;
 &lt;a href=&quot;https://github.com/TGX-Android/Telegram-X/releases&quot;&gt;telegramx&lt;/a&gt; &lt;a href=&quot;https://github.com/forkgram/TelegramAndroid/releases&quot;&gt;第三方客户端&lt;/a&gt; &lt;a href=&quot;https://www.apkmirror.com/uploads/?devcategory=telegram-fz-llc&quot;&gt;飞机旧版&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;3、卡bug，可以邮箱验证优先邮箱验证。遇到付费解密强制重启app，多试几次有概率可以跳过。&lt;/p&gt;
 &lt;/blockquote&gt;
+</content:encoded></item><item><title>DeepSeek 要涨价了？OpenCode Go 套餐半价冲，额度翻倍到 31 万次</title><link>https://dqtx.cc/posts/aihacks/opencode-go%E5%A5%97%E9%A4%90%E6%B4%BB%E5%8A%A8/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/opencode-go%E5%A5%97%E9%A4%90%E6%B4%BB%E5%8A%A8/</guid><description>DeepSeek API 即将涨价，OpenCode Go 套餐却半价放送，10 刀额度翻倍到等效 120 刀，约 31 万次请求。附配置避坑指南。</description><pubDate>Thu, 01 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;DeepSeek API 马上要涨价了，这波大家应该都知道了。&lt;/p&gt;
+&lt;p&gt;但我发现一个事——&lt;strong&gt;OpenCode 的 Go 套餐不但没涨，还在半价活动，而且额度翻倍了。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;10 刀套餐，原本每个月给 60 刀等效额度，现在直接翻到 &lt;strong&gt;等效 120 美元&lt;/strong&gt;，差不多 &lt;strong&gt;31 万次请求&lt;/strong&gt;。算下来，比之前便宜了一半还多。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-deepseek-opencode-20260809-143029.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;✅ 5 折优惠通道&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://opencode.ai/go?ref=9AYD2ZQFJG&quot;&gt;https://opencode.ai/go?ref=9AYD2ZQFJG&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/d0451d046b390564b049b2ebbad0d9e0.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;⚠️ 配置避坑：记得打开这个开关&lt;/h3&gt;
+&lt;p&gt;订阅完之后，&lt;strong&gt;一定要在 Go 的界面&lt;/strong&gt;，把提供商里面的「&lt;strong&gt;启用部署在中国的模型&lt;/strong&gt;」这个开关打开。&lt;/p&gt;
+&lt;p&gt;如果不打开，你把 API 配置到任何智能体里，都会报 &lt;strong&gt;401、403 或各种诡异的错误&lt;/strong&gt;。我第一次踩坑就折腾了半天。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260809141217543.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;🔧 接入智能体&lt;/h3&gt;
+&lt;p&gt;将 API 接入到自己的智能体。我习惯用 Codex，通过 &lt;a href=&quot;https://mp.weixin.qq.com/s/_pSBZvLVB_-zhlruIKMgCw&quot;&gt;OpenCode&lt;/a&gt; 这个工具来配置，操作很简单：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260809141557253.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;以上。&lt;/p&gt;
+&lt;p&gt;如果对你有所帮助，还望不吝点赞与关注，这也是对我最大的鼓励与支持。&lt;/p&gt;
+&lt;p&gt;如需 Codex 协助安装、报错问题修复、Plus 升级、Skill 工作流定制，找我：&lt;strong&gt;dqtx33&lt;/strong&gt;&lt;/p&gt;
+</content:encoded></item><item><title>WPS</title><link>https://dqtx.cc/posts/software/wps/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/wps/</guid><pubDate>Thu, 01 Jan 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;干掉资源管理器里面的WPS云盘。&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260811204810407.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;概调看图软件。
+桌面WPS右键，所在文件位置。
+删除wpsupdate.exe 更新功能。&lt;/p&gt;
+&lt;p&gt;进入第一个版本后，再进入office6。
+photolaunch.exe 找到这个文件删除。
+wpslingxi.exe AI功能也全。&lt;/p&gt;
+&lt;p&gt;全局设置。设置  打开备份中心。本地备份设置。  增量备份  改D盘&lt;/p&gt;
+&lt;p&gt;配置修复工具。高级
+兼容设置
+把里面关联的全部取消掉。
+功能定制
+前三个关闭啊，右键菜单全部隐藏。 关闭预览窗格：
+取消【云文档性能优化】
+升设置
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260811210221866.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;其他选项
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260811210013050.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 </content:encoded></item><item><title>API封装成Skill最佳实践</title><link>https://dqtx.cc/posts/workflow/api%E5%B0%81%E7%94%9F%E5%9B%BEskill/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/api%E5%B0%81%E7%94%9F%E5%9B%BEskill/</guid><description>最近被阿里巴巴通义MAI的Z-Image狠狠圈粉，不仅搭载了高效的 Z-Image-Turbo 模型，更关键的是每天能免费生 2000 张图，不管是生成文章视频...</description><pubDate>Sun, 30 Nov 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近被阿里巴巴通义MAI的Z-Image狠狠圈粉，不仅搭载了高效的 &lt;strong&gt;Z-Image-Turbo&lt;/strong&gt; 模型，更关键的是&lt;strong&gt;每天能免费生 2000 张图&lt;/strong&gt;，不管是生成文章视频封面还是异常创作，这个配额都完全够用。&lt;/p&gt;
 &lt;p&gt;恰巧这段时间我正在研究 Claude 的 Skills 功能，于是就萌生了一个想法：&lt;strong&gt;把 Z-Image 的免费生图能力和 Claude Skills 结合起来&lt;/strong&gt;，做一个专属生图 Skill，通过自然语言就可以生图到本地文件夹，既省时间又能充分利用免费配额。带着这个实操需求，我把整个创建过程整理成了这篇文章，希望能给同样喜欢折腾工具、需要生图功能的朋友提供一点参考～&lt;/p&gt;
 &lt;h2&gt;一.创建方法&lt;/h2&gt;
