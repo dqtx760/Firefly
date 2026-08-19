@@ -8,7 +8,7 @@ tags:
 category: AIHacks
 draft: true
 pinned: false
-image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/未命名的设计.webp
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260602205452599.webp
 ---
 我最近越来越觉得，读书笔记的下一步，不是整理得更漂亮，而是变成一个能被调用的 AI Skill。
 

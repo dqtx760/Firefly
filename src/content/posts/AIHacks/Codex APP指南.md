@@ -1,5 +1,5 @@
 ---
-title: Codex工作台
+title: Codex实战手册
 published: 2026-06-28
 tags:
   - Codex
@@ -10,7 +10,7 @@ tags:
 category: AIHacks
 draft: false
 pinned: false
-image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-codex-workflow-20260628.webp
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260628160309561.webp
 ---
 如果你每天都在用 AI，但工作效率并没有明显变高，那问题可能不是你不会提问。
 

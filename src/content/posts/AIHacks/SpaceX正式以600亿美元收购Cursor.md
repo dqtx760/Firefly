@@ -10,7 +10,7 @@ tags:
 category: AIHacks
 draft: false
 pinned: false
-image: https://cdn.vox-cdn.com/thumbor/K3lHv6x3u1fYp6s6X7XH7Y9X8Z0=/0x0:2000x1125/1200x800/filters:focal(840x404:1160x724)/cdn.vox-cdn.com/uploads/chorus_image/image/72345678/STKB355_SPACEX_E.jpg
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Generated_Image_16jmz816jmz816jm.webp
 ---
 刚刷到新闻的时候我愣了一下——SpaceX花600亿美元把Cursor给买了。
 

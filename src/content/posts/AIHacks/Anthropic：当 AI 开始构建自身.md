@@ -8,7 +8,7 @@ tags:
 category: AIHacks
 draft: false
 pinned: false
-image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/未命名的设计.webp
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-ai-builds-itself-20260605-215215.webp
 ---
 Anthropic，做 Claude 的那家公司，昨天发了一篇长文。
 
