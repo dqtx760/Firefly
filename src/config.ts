@@ -107,6 +107,11 @@ export const navBarConfig: NavBarConfig = {
 			external: false,
 		},
 		{
+			name: "OpenList",
+			url: "https://dqtx.fly.dev/",
+			external: true,
+		},
+		{
 			name: "远程服务",
 			url: "https://fix.dqtx.cc/",
 			external: true,

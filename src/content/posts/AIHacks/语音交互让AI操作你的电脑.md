@@ -8,7 +8,7 @@ tags:
 category: AIHacks
 draft: false
 pinned: false
-image: /images/zhiyan-windows-cover.png
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260718162305080.webp
 ---
 我一直觉得，电脑上的 AI 最有用的地方，不是陪你聊天，而是能真的帮你做事。
 
