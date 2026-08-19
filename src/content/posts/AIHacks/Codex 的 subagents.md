@@ -1,5 +1,5 @@
 ---
-title: Codex 的 subagents
+title: Codex子代理
 published: 2026-06-23
 tags:
   - Codex

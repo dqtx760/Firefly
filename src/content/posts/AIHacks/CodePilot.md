@@ -1,5 +1,5 @@
 ---
-title: CodePilot安装使用教程
+title: CodePilot
 published: 2026-03-07
 tags:
   - Claudecode

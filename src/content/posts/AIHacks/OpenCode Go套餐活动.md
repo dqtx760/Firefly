@@ -1,6 +1,6 @@
 ---
 published: 2026-01-01
-title: DeepSeek 要涨价了？OpenCode Go 套餐半价冲，额度翻倍到 31 万次
+title: OCGo套餐
 description: DeepSeek API 即将涨价，OpenCode Go 套餐却半价放送，10 刀额度翻倍到等效 120 刀，约 31 万次请求。附配置避坑指南。
 image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-deepseek-opencode-20260809-143029.webp
 ---

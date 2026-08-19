@@ -1,5 +1,5 @@
 ---
-title: 一个会自我进化的Obsidian知识库
+title: Obsidian自生长化知识库
 published: 2026-06-22
 tags:
   - Obsidian

@@ -1,5 +1,5 @@
 ---
-title: Agnes 免费 API 接入 Codex 指南
+title: Agnes接CDX
 published: 2026-06-13
 tags:
   - ai
@@ -19,6 +19,9 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-agnes-
 
 **一、注册拿 Key**
 打开 [agnes-ai.com](https://agnes-ai.com)，用 Google/GitHub 登录，左侧菜单「API 密钥」→ 创建新密钥。
+
+我是用GitHub登录的。
+
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260613172153682.webp)
 
 **二、安装 Codex++**

@@ -1,5 +1,5 @@
 ---
-title: Karpathy的CLAUDE.md没那么神
+title: Karpathy的CLAUDE.md解读
 published: 2026-05-23
 tags:
   - claude

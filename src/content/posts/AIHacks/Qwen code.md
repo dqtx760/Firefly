@@ -1,5 +1,5 @@
 ---
-title: Qwen Code安装使用教程
+title: Qwen code安装与使用
 published: 2026-04-14
 tags:
   - Agent

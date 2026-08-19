@@ -1,5 +1,5 @@
 ---
-title: 用 AI 两年，我劝你别太依赖它
+title: AI使用两年复盘
 published: 2026-05-16
 tags: []
 category: AIHacks

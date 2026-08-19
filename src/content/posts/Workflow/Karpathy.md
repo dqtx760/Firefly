@@ -1,5 +1,5 @@
 ---
-title: Karpathy Wiki方法论实践
+title: Karpathy知识管理方法论
 published: 2026-04-18
 tags:
   - 方法论

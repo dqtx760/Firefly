@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "conversations": [
+    {
+      "id": "conv_msg908yo_68ykgrmn",
+      "title": "你好",
+      "agentId": "claude",
+      "createdAt": 1785944102496,
+      "updatedAt": 1785944277635,
+      "messages": [
+        {
+          "id": "msg_msg94031_3my7g75z",
+          "role": "user",
+          "content": "你好",
+          "createdAt": 1785944277613,
+          "agentId": "claude"
+        },
+        {
+          "id": "msg_msg94031_om52azj4",
+          "role": "error",
+          "content": "\nFailed to start claude: spawn C:\\Users\\Administrator\\AppData\\Roaming\\npm\\claude ENOENT",
+          "createdAt": 1785944277613,
+          "agentId": "claude",
+          "metadata": {
+            "durationMs": 21
+          }
+        }
+      ]
+    }
+  ]
+}

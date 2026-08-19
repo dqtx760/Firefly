@@ -1,5 +1,5 @@
 ---
-title: 在飞书里和 Claude 对话
+title: 在飞微信、飞书和 Claude 对话
 published: 2026-05-23
 tags:
   - claude

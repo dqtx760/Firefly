@@ -10,7 +10,7 @@ tags:
 category: AIHacks
 draft: false
 pinned: false
-image: 
+image:
 ---
 
 这篇教程讲一个很实用的自动化流程：

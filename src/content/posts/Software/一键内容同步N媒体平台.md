@@ -1,5 +1,5 @@
 ---
-title: 一键内容同步N媒体平台
+title: 内容多平台同步
 published: 2026-05-01
 tags:
   - chrome插件

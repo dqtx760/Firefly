@@ -1,16 +1,16 @@
 ---
-image:
+image: null
 title: 自由画布AI工作流
 published: 2026-06-30
 description: 记录一次给朋友电脑安装 Infinite-Canvas 的可复制步骤。
 tags:
-  - AI工具
-  - 本地部署
-  - Infinite-Canvas
+- AI工具
+- 本地部署
+- Infinite-Canvas
 category: AIHacks
 draft: false
+pinned: false
 ---
-
 想把 Infinite-Canvas 安装到朋友电脑上，先别讲 API、模型协议和 ComfyUI。第一目标是让网页能打开。
 
 项目地址

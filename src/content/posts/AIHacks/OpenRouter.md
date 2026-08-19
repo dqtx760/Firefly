@@ -1,5 +1,5 @@
 ---
-title: OpenRouter免费模型食用指南
+title: OpenRouter免费模型
 published: 2026-04-28
 tags: []
 category: AIHacks

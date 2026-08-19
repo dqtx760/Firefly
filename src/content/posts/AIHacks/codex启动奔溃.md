@@ -1,5 +1,5 @@
 ---
-title: Windows系统Codex APP 启动崩溃
+title: codex启动奔溃
 published: 2026-06-10
 tags: []
 category: AIHacks

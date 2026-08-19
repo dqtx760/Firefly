@@ -1,5 +1,5 @@
 ---
-title: Codex必装插件清单
+title: Codex插件清单
 published: 2026-06-16
 tags:
   - Codex

@@ -1,5 +1,5 @@
 ---
-title: 包管理工具UniGetU
+title: UniGetUI包管理工具
 published: 2026-04-18
 tags:
   - 软件推荐

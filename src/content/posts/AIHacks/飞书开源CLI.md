@@ -1,5 +1,5 @@
 ---
-title: 飞书lark-cli，45天获万星！
+title: 飞书开源CLI
 published: 2026-05-15
 tags:
   - 飞书

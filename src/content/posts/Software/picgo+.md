@@ -1,5 +1,5 @@
 ---
-title: picgo/Piclist图床
+title: picgo+
 published: 2026-05-09
 tags: []
 category: Software

@@ -1,5 +1,5 @@
 ---
-title: Claude code 安装教程
+title: Claude
 published: 2026-04-24
 tags:
   - Claudecode

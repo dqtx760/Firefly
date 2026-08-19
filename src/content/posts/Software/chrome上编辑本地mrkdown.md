@@ -1,5 +1,5 @@
 ---
-title: 在chrome上编辑本地md拓展
+title: chrome上编辑本地mrkdown
 published: 2026-04-10
 tags:
   - chrome插件

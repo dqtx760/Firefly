@@ -1,5 +1,5 @@
 ---
-title: OpenAI 悄悄发了个Python SDK
+title: Codex-Python SDK
 published: 2026-06-04
 tags: []
 category: AIHacks

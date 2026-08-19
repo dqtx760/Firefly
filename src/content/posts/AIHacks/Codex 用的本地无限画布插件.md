@@ -1,5 +1,5 @@
 ---
-title: Codex 用的本地无限画布插件
+title: Codex无限画布
 published: 2026-06-21
 tags:
   - codex

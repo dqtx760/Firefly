@@ -29,14 +29,14 @@
 
 ### 知识库
 
-| 工具 | 平台 | 状态 | 版本 | 复制即用 |
-|------|------|------|------|----------|
-| lark | 飞书 | ✅ 可用 | v1.0.32 | 用 lark 搜索飞书文档里关于 xxx 的笔记 |
-| lark-mcp | 飞书 | ✅ 可用 | v0.5.1 | 通过飞书 MCP 查询 xxx 文档内容 |
-| gh | GitHub | ✅ 可用 | v2.88.0 | 用 gh 创建一个新仓库或查看 PR 状态 |
-| Notion | Notion | 🔌 连接器 | - | 在 Notion 里查一下 xxx 数据库的最新记录 |
-| Office | 微软 Office | 🔌 连接器 | - | 用 Office 连接器打开并编辑 xxx 文档 |
-| Obsidian CLI | 本地笔记 | ⚠️ 需确认 | - | 在 Obsidian 笔记库中搜索 xxx 相关笔记 |
+| 工具           | 平台        | 状态     | 版本      | 复制即用                       |
+| ------------ | --------- | ------ | ------- | -------------------------- |
+| lark         | 飞书        | ✅ 可用   | v1.0.32 | 用 lark 搜索飞书文档里关于 xxx 的笔记   |
+| lark-mcp     | 飞书        | ✅ 可用   | v0.5.1  | 通过飞书 MCP 查询 xxx 文档内容       |
+| gh           | GitHub    | ✅ 可用   | v2.88.0 | 用 gh 创建一个新仓库或查看 PR 状态      |
+| Notion       | Notion    | 🔌 连接器 | -       | 在 Notion 里查一下 xxx 数据库的最新记录 |
+| Office       | 微软 Office | 🔌 连接器 | -       | 用 Office 连接器打开并编辑 xxx 文档   |
+| Obsidian CLI | 本地笔记      | ⚠️ 需确认 | -       | 在 Obsidian 笔记库中搜索 xxx 相关笔记 |
 
 ### 微信生态
 
@@ -60,11 +60,11 @@ added 210 packages in 17s
 
 ### AI 搜索
 
-| 工具 | 平台 | 状态 | 版本 | 复制即用 |
-|------|------|------|------|----------|
-| gsearch | Google | ✅ 可用 | 内置 | 用 gsearch 搜索 xxx 最新资讯 |
-| mcporter (Exa) | 互联网 | ✅ 可用 | v0.8.1 | 用 mcporter 深度检索 xxx 相关信息 |
-| web-access | Chrome | ✅ 可用 | 内置 v2.4.0 | 用 web-access 打开这个网页并提取关键信息 |
+| 工具             | 平台     | 状态   | 版本        | 复制即用                       |
+| -------------- | ------ | ---- | --------- | -------------------------- |
+| gsearch        | Google | ✅ 可用 | 内置        | 用 gsearch 搜索 xxx 最新资讯      |
+| mcporter (Exa) | 互联网    | ✅ 可用 | v0.8.1    | 用 mcporter 深度检索 xxx 相关信息   |
+| web-access     | Chrome | ✅ 可用 | 内置 v2.4.0 | 用 web-access 打开这个网页并提取关键信息 |
 
 ### 网页抓取
 

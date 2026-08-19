@@ -1,5 +1,5 @@
 ---
-title: Listary完全使用指南！
+title: Listary进阶
 published: 2026-04-12
 tags:
   - 工作流
@@ -235,4 +235,4 @@ C:\Users\%username%\AppData\Roaming\Listary\UserProfile\Settings\Preferences.jso
 
 ***大强同学：[dqtx.cc](https://www.dqtx.cc/)***
 
-***远程服务:[742112.xyz](https://www.742112.xyz/)***
+***远程服务:[fix.dqtx.cc](https://fix.dqtx.cc/)***

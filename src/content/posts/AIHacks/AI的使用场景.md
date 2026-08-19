@@ -1,5 +1,5 @@
 ---
-title: AI 使用场景速查
+title: 判断AI使用场景
 published: 2026-06-19
 tags:
   - AI
@@ -8,7 +8,7 @@ tags:
 category: AIHacks
 draft: false
 pinned: false
-image: 
+image:
 ---
 
 我每天跟 AI 打交道，经常有人问我同一个问题：**AI 到底能干啥？**

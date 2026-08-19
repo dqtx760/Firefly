@@ -1,5 +1,5 @@
 ---
-title: Obsidian 同步 Notion 神插件
+title: OB同步notion插件
 published: 2026-04-21
 tags:
   - Obsidian插件

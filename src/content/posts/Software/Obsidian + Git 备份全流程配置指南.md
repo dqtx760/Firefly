@@ -1,5 +1,5 @@
 ---
-title: Obsidian+Git备份指南
+title: Obsidian + Git 备份
 published: 2026-05-24
 tags: []
 category: Software

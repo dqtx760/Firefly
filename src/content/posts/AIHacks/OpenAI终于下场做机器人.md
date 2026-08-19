@@ -1,5 +1,5 @@
 ---
-title: OpenAI终于下场做机器人了！
+title: OpenAI终于下场做机器人
 published: 2026-06-01
 tags:
   - openai

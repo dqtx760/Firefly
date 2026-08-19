@@ -1,5 +1,5 @@
 ---
-title: 魔搭社区免费token活动
+title: 魔搭Token福利
 published: 2025-08-18
 tags:
   - AI

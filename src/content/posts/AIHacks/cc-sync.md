@@ -1,5 +1,5 @@
 ---
-title: Cc-sync：多电脑CC配置同步
+title: cc-sync
 published: 2026-04-18
 tags:
   - Claudecode

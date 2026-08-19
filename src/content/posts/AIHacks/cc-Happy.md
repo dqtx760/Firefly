@@ -1,5 +1,5 @@
 ---
-title: Happy：给Claude一双翅膀
+title: cc-Happy
 published: 2026-02-14
 tags:
   - Claudecode
@@ -86,6 +86,6 @@ happy codex  # 启动Codex
 
 
 
-**大强远程技术支持：[742112.xyz](https://www.742112.xyz/)**
+**大强远程技术支持：[fix.dqtx.cc](https://fix.dqtx.cc/)**
 
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-20260306064028188.webp)

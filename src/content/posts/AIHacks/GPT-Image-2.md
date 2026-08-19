@@ -1,5 +1,5 @@
 ---
-title: GPT-Image-2参考资料
+title: GPT-Image生图提示词网站
 published: 2026-05-07
 tags:
   - GPT

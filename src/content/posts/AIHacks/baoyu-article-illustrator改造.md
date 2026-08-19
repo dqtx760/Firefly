@@ -1,5 +1,5 @@
 ---
-title: 文章封面&配图技能
+title: 宝玉文章封面&配图技能改造
 published: 2026-05-17
 tags:
   - skill

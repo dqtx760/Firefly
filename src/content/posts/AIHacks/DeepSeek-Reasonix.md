@@ -1,14 +1,15 @@
 ---
 image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Generated_Image_82j3wq82j3wq82j3.webp
-title: DeepSeek-Reasonix体验
+title: DSR体验
 published: 2026-06-16
 description: 同样是用 DeepSeek，选错工具等于白烧 token。这篇拆透 Reasonix 和 DeepSeek GUI 的真实差距，告诉你最优解。
 tags:
-  - DeepSeek
-  - AI工具
-  - 测评
+- DeepSeek
+- AI工具
+- 测评
 category: AIHacks
 draft: false
+pinned: false
 ---
 **结论先说**：如果你以 DeepSeek 模型为主，**终端选 Reasonix，别选 GUI**。
 
@@ -124,7 +125,14 @@ GUI 适合所有人，Reasonix 只适合"把 DeepSeek 用到极致"的人。
 
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Generated_Image_y9etlay9etlay9et.webp)
 
----
+
+### 补充全局规范
+
+Reasonix 和 Codex 一样，全局指令文件也叫 AGENTS.md，放在 %AppData%\reasonix\AGENTS.md
+
+不过 Reasonix 比 Codex 稍灵活一些：
+CLAUDE.md、REASONIX.md、CLAUDE.md 都可以被这个识别。
+
 
 **相关链接**
 
@@ -134,6 +142,3 @@ GUI 适合所有人，Reasonix 只适合"把 DeepSeek 用到极致"的人。
  <https://deepseek-gui.com/>
 
 如需远程协助，可通过向日葵或 ToDesk 远程处理。加**维信dqtx33**  
-
-*\>/ 作者：大强同学*
-*\>/ 更多干货，请访问：[dqtx.cc](https://www.dqtx.cc/)*

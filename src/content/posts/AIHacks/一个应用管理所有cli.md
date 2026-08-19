@@ -1,5 +1,5 @@
 ---
-title: 一个应用管理所有cli
+title: CLI统一管理
 published: 2026-06-23
 tags:
   - Codex

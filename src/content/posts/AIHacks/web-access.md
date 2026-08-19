@@ -1,5 +1,5 @@
 ---
-title: Claude联网神器：Web Access
+title: web-access技能
 published: 2026-03-26
 tags:
   - skill

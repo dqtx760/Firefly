@@ -9,7 +9,7 @@ tags:
 category: AIHacks
 draft: false
 pinned: false
-image: 
+image:
 ---
 最近看到一个很有意思的开源项目：Obscura。
 

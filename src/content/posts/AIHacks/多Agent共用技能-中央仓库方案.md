@@ -1,5 +1,5 @@
 ---
-title: Install to Central技能
+title: 技能中央仓库
 published: 2026-06-19
 tags:
   - skill

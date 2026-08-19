@@ -1,5 +1,5 @@
 ---
-title: NotebookLM封神指南
+title: NBLM指南
 published: 2026-03-23
 tags:
   - AI

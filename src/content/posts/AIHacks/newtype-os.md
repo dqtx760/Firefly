@@ -1,5 +1,5 @@
 ---
-title: Newtype-os完整工作流指南
+title: Newtype工作流
 published: 2026-03-30
 tags:
   - Agent

@@ -1,5 +1,5 @@
 ---
-title: Xiaomi MiMo百万亿 Token 激励计划
+title: Xiaomi MiMo百万亿Token
 published: 2026-04-29
 tags: []
 category: AIHacks

@@ -1,5 +1,5 @@
 ---
-title: API封装成Skill最佳实践
+title: API封装Skill
 published: 2025-11-30
 description: 最近被阿里巴巴通义MAI的Z-Image狠狠圈粉，不仅搭载了高效的 Z-Image-Turbo 模型，更关键的是每天能免费生 2000 张图，不管是生成文章视频...
 tags:

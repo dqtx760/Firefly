@@ -1,5 +1,5 @@
 ---
-title: Gemini cli 登录异常解法
+title: Gemini cli 安装&异常处理
 published: 2026-05-14
 tags: []
 category: AIHacks

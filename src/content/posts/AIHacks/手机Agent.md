@@ -1,7 +1,10 @@
 ---
-title: 手机上的Agent软件
+title: 手机Agent：Open Minis
 published: 2026-05-12
-tags: [AI Agent, iOS, 效率工具]
+tags:
+  - AI Agent
+  - iOS
+  - 效率工具
 category: AIHacks
 draft: false
 pinned: false

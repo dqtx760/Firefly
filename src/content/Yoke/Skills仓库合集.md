@@ -65,6 +65,7 @@ https://github.com/dqtx760/skills-manage
 | 一个可播放的思维导图 PPT | [mindmap-ppt#](https://github.com/agegr/mindmap-ppt#)                           |         |                                                               |
 |                | https://github.com/SpaceZephyr/space-multi-design-ppt                           | 62个品牌规范 |                                                               |
 |                | https://github.com/chuspeeism/dashiAI-ppt-skill                                 | 可导出     |                                                               |
+| 逆向了 kimi 的 PPT | https://github.com/Binaryify/open-kimi-ppt-skill                                |         |                                                               |
 
 ### 制作网站
 
@@ -85,24 +86,25 @@ https://github.com/dqtx760/skills-manage
 
 ### 元能力拓展
 
-| 功能                 | skill开源地址                                                                                     | 备注      | 使用&效果                                                                                   |
-| ------------------ | --------------------------------------------------------------------------------------------- | ------- | --------------------------------------------------------------------------------------- |
-| 帮你创建技能             | [Skill-Creator](https://github.com/anthropics/skills/blob/main/skills/skill-creator/SKILL.md) |         |                                                                                         |
-| 找到最匹配skills        | [find-skills](https://github.com/vercel-labs/skills/tree/main/skills/find-skills)             |         |                                                                                         |
-| 一行切换模型             | [cc-switcher](https://github.com/idongdongh/cc-switcher)                                      |         |                                                                                         |
-| 自动纠正记录             | [self-improving-agent](https://github.com/peterskoett/self-improving-agent)                   |         |                                                                                         |
-| 项目规划               | [planning-with-files](https://github.com/OthmanAdi/planning-with-files)                       |         | 点此查看                                                                                    |
-| 记忆持久化              | [Claude-mem](https://github.com/thedotmack/claude-mem)                                        |         | 点此查看                                                                                    |
-| 私董会                | [advisory-board](https://github.com/Backtthefuture/huangshu/tree/main/skills/advisory-board)  | 黄叔      |                                                                                         |
-| 跨平台搜索              | [Agent-Reach](https://github.com/Panniantong/Agent-Reach)                                     |         |                                                                                         |
-| chrome 自动化         | [Web Access](https://github.com/eze-is/web-access)                                            | -泽Eze   | [点此查看](https://www.dqtx.cc/posts/aihacks/web-access/)                                   |
-| 女娲.skill           | [alchaincyf/nuwa-skill](https://github.com/alchaincyf/nuwa-skill)                             | 花叔      | 点此查看                                                                                    |
-| Obsidia可视化X3       | [obsidian-visual-skills](https://github.com/axtonliu/axton-obsidian-visual-skills)            | Axton   | [使用说明](https://github.com/axtonliu/axton-obsidian-visual-skills/blob/main/README_CN.md) |
-| obsidian-bases     | [obsidian-bases](https://github.com/kepano/obsidian-skills/tree/main/skills/obsidian-bases)   | kepano  |                                                                                         |
-| 推送顶尖信息到Telegram    | [follow-builders](https://github.com/zarazhangrui/follow-builders/blob/main/README.zh-CN.md)  | 张咋啦     |                                                                                         |
-| 多Agent协调工作         | [axtonliu/ai-pair](https://github.com/axtonliu/ai-pair)                                       | Axton   | 点此查看                                                                                    |
-| 让llm说人话            | [talk-normal](https://github.com/hexiecs/talk-normal/blob/main/README_CN.md)                  |         |                                                                                         |
-| AI HOT 日报和全部 AI 动态 | [aihot](https://github.com/KKKKhazix/khazix-skills/blob/main/aihot/SKILL.md)                  | 数字生命卡兹克 |                                                                                         |
+| 功能                  | skill开源地址                                                                                     | 备注      | 使用&效果                                                                                   |
+| ------------------- | --------------------------------------------------------------------------------------------- | ------- | --------------------------------------------------------------------------------------- |
+| 帮你创建技能              | [Skill-Creator](https://github.com/anthropics/skills/blob/main/skills/skill-creator/SKILL.md) |         |                                                                                         |
+| 9w个技能里找到最匹配skills   | [find-skills](https://github.com/vercel-labs/skills/tree/main/skills/find-skills)             |         |                                                                                         |
+| 160w个技能里找到最匹配skills | https://github.com/MemTensor/skills-vote                                                      |         |                                                                                         |
+| 一行切换模型              | [cc-switcher](https://github.com/idongdongh/cc-switcher)                                      |         |                                                                                         |
+| 自动纠正记录              | [self-improving-agent](https://github.com/peterskoett/self-improving-agent)                   |         |                                                                                         |
+| 项目规划                | [planning-with-files](https://github.com/OthmanAdi/planning-with-files)                       |         | 点此查看                                                                                    |
+| 记忆持久化               | [Claude-mem](https://github.com/thedotmack/claude-mem)                                        |         | 点此查看                                                                                    |
+| 私董会                 | [advisory-board](https://github.com/Backtthefuture/huangshu/tree/main/skills/advisory-board)  | 黄叔      |                                                                                         |
+| 跨平台搜索               | [Agent-Reach](https://github.com/Panniantong/Agent-Reach)                                     |         |                                                                                         |
+| chrome 自动化          | [Web Access](https://github.com/eze-is/web-access)                                            | -泽Eze   | [点此查看](https://www.dqtx.cc/posts/aihacks/web-access/)                                   |
+| 女娲.skill            | [alchaincyf/nuwa-skill](https://github.com/alchaincyf/nuwa-skill)                             | 花叔      | 点此查看                                                                                    |
+| Obsidia可视化X3        | [obsidian-visual-skills](https://github.com/axtonliu/axton-obsidian-visual-skills)            | Axton   | [使用说明](https://github.com/axtonliu/axton-obsidian-visual-skills/blob/main/README_CN.md) |
+| obsidian-bases      | [obsidian-bases](https://github.com/kepano/obsidian-skills/tree/main/skills/obsidian-bases)   | kepano  |                                                                                         |
+| 推送顶尖信息到Telegram     | [follow-builders](https://github.com/zarazhangrui/follow-builders/blob/main/README.zh-CN.md)  | 张咋啦     |                                                                                         |
+| 多Agent协调工作          | [axtonliu/ai-pair](https://github.com/axtonliu/ai-pair)                                       | Axton   | 点此查看                                                                                    |
+| 让llm说人话             | [talk-normal](https://github.com/hexiecs/talk-normal/blob/main/README_CN.md)                  |         |                                                                                         |
+| AI HOT 日报和全部 AI 动态  | [aihot](https://github.com/KKKKhazix/khazix-skills/blob/main/aihot/SKILL.md)                  | 数字生命卡兹克 |                                                                                         |
 
 ### 软件开发
 
@@ -122,6 +124,9 @@ https://github.com/dqtx760/skills-manage
 [5 个才是真正值得必装的](https://x.com/BTCqzy1/status/2048628785793425837)
 
 ## 11个Skill聚合战
+https://vibe-coding-radar.vercel.app/skills.html?v=weekly-refresh-20260708
+
+https://github.com/anbeime/skill
 
 https://www.skills.sh/hot
 

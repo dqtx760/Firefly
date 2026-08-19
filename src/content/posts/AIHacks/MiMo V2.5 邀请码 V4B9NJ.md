@@ -1,5 +1,5 @@
 ---
-title: 小米MiMo V2.5 邀请码 V4B9NJ
+title: MiMo2.5邀请码
 published: 2026-05-01
 tags:
   - 邀请码

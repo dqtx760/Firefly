@@ -1,5 +1,5 @@
 ---
-title: Obsidian首页控制台插件
+title: OB首页控制台插件
 published: 2026-05-28
 tags:
   - obsidian

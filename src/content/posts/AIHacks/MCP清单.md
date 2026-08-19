@@ -79,6 +79,15 @@ https://github.com/modelcontextprotocol/servers/tree/main/sequential-thinking
 更多
 https://ai.codefather.cn/mcp
 
+
+### 其他
+
+一个中文敏感词/违禁词检测 MCP
+支持小红书、抖音、快手、B站专属词库
+https://github.com/CCCpan/chinese-sensitive-words-mcp
+
+
+
 ## 二、完整MCP配置文件
 适配 Cursor、Claude 桌面端、TRAE 等客户端，直接写入 mcp.json 即可使用。
 ```json

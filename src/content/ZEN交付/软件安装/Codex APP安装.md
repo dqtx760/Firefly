@@ -1,4 +1,5 @@
-
+github.com/xqnode/codex-zh-CN
+中文汉化
 
 ### wiget安装
 1. `Win + X,选「终端(管理员)」`
@@ -51,6 +52,8 @@ https://store.rg-adguard.net/
 ```
 https://store.rg-adguard.net/
 ```
+
+cd 下载文件目录
 
 Win + X, PowerShell**管理员运行**
 ```

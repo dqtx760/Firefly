@@ -1,5 +1,5 @@
 ---
-title: 短短30天，AI圈炸了！
+title: 4月AI时间线
 published: 2026-04-25
 tags:
   - AI

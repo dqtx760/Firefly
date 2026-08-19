@@ -1,5 +1,5 @@
 ---
-title: 高颜值封面Gem
+title: gemini生成高级封面
 published: 2026-05-12
 tags: []
 category: AIHacks

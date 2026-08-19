@@ -1,5 +1,5 @@
 ---
-title: 微信接入 Codex，手机也能远程开发
+title: 微信接入Codex
 published: 2026-06-21
 tags:
   - ai

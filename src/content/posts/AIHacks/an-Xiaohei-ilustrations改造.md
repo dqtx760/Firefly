@@ -1,5 +1,5 @@
 ---
-title: 改造an-Xiaohei-ilustrations
+title: 改造小黑插画skill
 published: 2026-06-18
 tags:
   - skill

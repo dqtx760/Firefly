@@ -1,5 +1,5 @@
 ---
-title: 封装生图 Skill：Gemini 网页版接口逆向调用指南
+title: 封装生图skill
 published: 2026-06-17
 tags:
   - skill

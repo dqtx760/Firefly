@@ -78,7 +78,7 @@ irm https://get.activated.win | iex
 
 ### **超链接**
 
-[大强远程支持](https://www.742112.xyz/)
+[大强远程支持](https://fix.dqtx.cc/)
 
 [GitHub加速下载](https://yishijie.gitlab.io/ziyuan/)
 

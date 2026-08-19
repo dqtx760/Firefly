@@ -1,5 +1,5 @@
 ---
-title: 我把 Codex 用成了一个 AI 工作台
+title: Codex工作台
 published: 2026-06-28
 tags:
   - Codex

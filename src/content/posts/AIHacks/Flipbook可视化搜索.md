@@ -1,5 +1,5 @@
 ---
-title: Flipbook 可视化搜索
+title: Flipbook搜索
 published: 2026-04-26
 tags: []
 category: AIHacks

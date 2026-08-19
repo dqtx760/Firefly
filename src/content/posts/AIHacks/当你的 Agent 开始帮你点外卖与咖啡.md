@@ -1,5 +1,5 @@
 ---
-title: 当你的 Agent 开始帮你点外卖与咖啡
+title: Agent点外卖
 published: 2026-06-17
 tags:
   - WorkBuddy

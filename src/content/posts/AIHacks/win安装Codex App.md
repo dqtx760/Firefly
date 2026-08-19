@@ -1,5 +1,5 @@
 ---
-title: 离线安装微软商城应用
+title: 离线安装微软商城软件
 published: 2026-05-09
 tags:
   - Codex
@@ -59,4 +59,4 @@ Add-AppxPackage .\你下载的文件名.Msix
 
 **有用的话，欢迎收藏转发！** 
 
-文章来源：[dqtx.cc](https://www.dqtx.cc/)  远程技术支持：[742112.xyz](https://www.742112.xyz/)
+文章来源：[dqtx.cc](https://www.dqtx.cc/)  远程技术支持：[fix.dqtx.cc](https://fix.dqtx.cc/)

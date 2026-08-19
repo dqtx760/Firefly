@@ -1,5 +1,5 @@
 ---
-title: 我push博客时泄露了API
+title: push泄露API
 published: 2026-04-21
 tags:
   - 经验复盘
@@ -107,4 +107,4 @@ git push --force
 
 修复完成后，两个仓库都安全了，以后再也不用担心 API Token 泄露的问题。
 
-文章来源：[dqtx.cc](https://www.dqtx.cc/)  远程技术支持：[742112.xyz](https://www.742112.xyz/)
+文章来源：[dqtx.cc](https://www.dqtx.cc/)  远程技术支持：[fix.dqtx.cc](https://fix.dqtx.cc/)

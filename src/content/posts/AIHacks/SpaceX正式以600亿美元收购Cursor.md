@@ -1,5 +1,5 @@
 ---
-title: SpaceX正式以600亿美元收购Cursor
+title: SpaceX收购Cursor
 published: 2026-06-17
 tags:
   - AI

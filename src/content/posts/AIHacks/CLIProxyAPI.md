@@ -1,5 +1,5 @@
 ---
-title: CLIProxyAPI教程
+title: CLI代理API
 published: 0202-02-14
 tags:
   - 技术教程

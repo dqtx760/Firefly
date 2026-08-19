@@ -1,5 +1,5 @@
 ---
-title: Antigravity安装使用教程
+title: AG安装指南
 published: 2025-02-15
 tags:
   - Agent

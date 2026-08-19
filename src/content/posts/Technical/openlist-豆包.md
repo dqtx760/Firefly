@@ -1,5 +1,5 @@
 ---
-title: OpenList挂载豆包云盘
+title: openlist挂载豆包云盘
 published: 2025-09-18T10:30:00.000Z
 tags:
   - openlsit
@@ -66,4 +66,4 @@ root_id
 
 
 
-**大强远程技术支持：[742112.xyz](https://www.742112.xyz/)**
+**大强远程技术支持：[fix.dqtx.cc](https://fix.dqtx.cc/)**

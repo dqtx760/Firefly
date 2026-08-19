@@ -1,5 +1,5 @@
 ---
-title: 微信内容同步到Obsidian方案
+title: 微信内容同步Obsidian
 published: 2026-05-26
 tags:
   - obsidian

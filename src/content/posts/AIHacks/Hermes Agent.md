@@ -1,5 +1,5 @@
 ---
-title: Hermes Agent上手指南。
+title: Hermes Agent教程
 published: 2026-04-15
 tags:
   - Agent
@@ -12,14 +12,16 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-202604
 最近叫Hermes Agent的开源项目，短短两个月GitHub星标冲到8万+，被无数开发者称为"OpenClaw的真正对手"。它不是又一个聊天机器人，也不是IDE里的代码助手，而是一个真正会随着你一起成长、越用越聪明的自主AI Agent。
 
 
+项目地址：
+https://github.com/NousResearch/hermes-agent
 
-项目地址：https://github.com/NousResearch/hermes-agent
-
+官网
+https://hermes-agent.nousresearch.com/
 
 
 最近很多养虾的朋友，安装了Hermes Agent
 
-
+![1278](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260729190103812.webp)
 
 ## 01.安装步骤
 
@@ -33,8 +35,10 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-202604
 
 ### **安装命令**
 
+PowerShell执行
+
 ```
-curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
+irm https://hermes-agent.nousresearch.com/install.ps1 | iex
 ```
 
 安装完成后，脚本会自动进入引导设置，选择 **Quick setup** 模式，然后按提示配置模型。推荐选 OpenRouter，进入后可以选免费模型（如 g*oogle/gemma-4-31b-it:free*），零成本跑起来先体验。
@@ -147,3 +151,18 @@ https://github.com/mayukh4/linux-android
 
 https://x.com/Saccc_c/status/2044018336673964207
 
+
+
+2026/07/30补充
+
+Hermes 的全局身份文件SOUL.md  每次会话都会自动加载
+它设置的是 agent 的身份/人格，不是项目规则，但始终加载。
+```
+C:\Users\Administrator\.hermes\SOUL.md
+```
+
+如果想让项目规则跨目录继承，应该用 `.hermes.md`。
+1. `.hermes.md` / `HERMES.md`（会向上遍历到 git 根）
+2. `AGENTS.md` / `agents.md`（只看当前目录）
+
+![991](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260730023909211.webp)

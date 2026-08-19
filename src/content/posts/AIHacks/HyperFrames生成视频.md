@@ -1,5 +1,5 @@
 ---
-title: HyperFrames：用HTML写视频框架
+title: HTML视频框架
 published: 2026-04-30T16:00:00.000Z
 tags:
   - Claudecode

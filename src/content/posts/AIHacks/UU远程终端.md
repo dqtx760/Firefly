@@ -1,5 +1,5 @@
 ---
-title: UU远程手机终端操作CC
+title: UU远程终端操作智能体
 published: 2026-05-25
 tags:
   - cli
@@ -7,6 +7,7 @@ tags:
 category: AIHacks
 draft: false
 image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-uu-remote-v1.webp
+pinned: false
 ---
 用手机操控电脑终端，这事以前要么折腾 SSH，要么忍着 TeamViewer 的笨重。现在 UU 远程一个功能就解决了——**手机直接打开电脑的 cmd 终端**，丝滑敲 CLI。
 

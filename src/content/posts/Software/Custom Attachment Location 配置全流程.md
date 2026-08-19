@@ -1,5 +1,5 @@
 ---
-title: Custom Attachment Location 配置全流程
+title: Obsidian附件管理插件推荐
 published: 2026-05-20
 tags:
   - Obsidian插件

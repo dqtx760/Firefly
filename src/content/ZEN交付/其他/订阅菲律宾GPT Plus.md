@@ -23,9 +23,3 @@ https://www.fakexy.com/ph-fake-address-generator-metro-manila
 菲律宾 Apple Gift Card” 或 “PH Apple 礼品卡” / “菲律宾区苹果充值”
 ```
 
-兑换
-
-
-RT5uEEr@cG
-
-micky@icloud.com

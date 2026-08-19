@@ -1,5 +1,5 @@
 ---
-title: Skills-Link完全使用指南!
+title: 技能链接指南
 published: 2026-04-24
 tags:
   - skill

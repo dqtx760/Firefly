@@ -1,5 +1,5 @@
 ---
-title: OpenCLI安装与配置全攻略
+title: OpenCli
 published: 2026-03-24
 tags:
   - cli
@@ -59,5 +59,5 @@ OpenCLI 的安装非常直观，关键在于浏览器插件的桥接。一旦打
 
 
 
-文章来源：[dqtx.cc](https://www.dqtx.cc/)  远程技术支持：[742112.xyz](https://www.742112.xyz/)
+文章来源：[dqtx.cc](https://www.dqtx.cc/)  远程技术支持：[fix.dqtx.cc](https://fix.dqtx.cc/)
 

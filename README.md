@@ -267,7 +267,7 @@ export const navBarConfig: NavBarConfig = {
   links: [
     { name: "电视喵", url: "https://tv.dqtx.cc/" },
     { name: "工坊", url: "https://app.dqtx.cc/" },
-    { name: "远程", url: "https://www.742112.xyz/" },
+    { name: "远程", url: "https://fix.dqtx.cc/" },
   ],
 };
 ```

@@ -1,5 +1,5 @@
 ---
-title: 一键推送Obsidian笔记到微信
+title: Wechat-Converter插件
 published: 2026-05-04
 tags:
   - Obsidian插件

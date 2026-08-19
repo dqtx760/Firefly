@@ -1,5 +1,5 @@
 ---
-title: 如何将微信读书同步Obsidian？
+title: 微信读书同步Obsidian
 published: 2026-05-26
 tags:
   - Obsidian插件

@@ -1,5 +1,5 @@
 ---
-title: WezTerm终端配置指南
+title: WezTerm终端安装与使用
 published: 2026-04-06
 tags:
   - 终端
@@ -193,3 +193,12 @@ config.default_prog = { 'nu' }
 config.default_prog = { 'powershell.exe', '-NoLogo' }
 ```
 
+
+### 补充 2026/07/26
+
+Typora 团队出的终端，Mac已上线，Windows没有上线
+https://otty.sh/  
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260726021102290.webp)
+
+con-terminal  终端
+https://github.com/nowledge-co/con-terminal

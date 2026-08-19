@@ -1,5 +1,5 @@
 ---
-title: Dos命令mklink详解
+title: mklink命令使用指南
 published: 2026-04-20
 tags:
   - Windows

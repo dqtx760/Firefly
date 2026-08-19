@@ -1,5 +1,5 @@
 ---
-title: AI Skill 的价值，不是聊天
+title: AISkill的价值
 published: 2026-06-02
 tags:
   - skill

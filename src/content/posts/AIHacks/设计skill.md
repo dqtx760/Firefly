@@ -1,5 +1,5 @@
 ---
-title: 让 AI 帮你做出设计师级别的 PPT 和网页
+title: 设计相关skill
 published: 2026-06-09
 tags:
   - design

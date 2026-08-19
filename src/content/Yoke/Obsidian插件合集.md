@@ -16,83 +16,118 @@ image:
 ![image.png](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260508215907976.png)
 
 
-### 1. **Enhancing Export**
+## 碎片记录
 
-文件导出增强插件，支持多种格式导出
+### Journal Partner
+类似朋友圈
 
-### 2. **Advanced Canvas**
+### Memoria
 
-画布功能增强，支持更多节点类型
 
-### 3. BRAT
-
-测试版插件管理工具，可安装beta版插件
-
-### 4. Calendar
-
-日历视图插件，支持日记和任务管理
-
-### 5. Claudian
+## 效率
+### Claudian
 
 AI助手集成，与Claude、Codex对话
 
-### 6. Custom Frames
-
-将网页作为面板嵌入Obsidian
-
-### 7. Dataview
-
-强大的数据查询和动态列表功能
-
-### 8. Excalidraw
-
-手绘风格的白板绘图工具
-
-### 9. Floating Search
+###  Floating Search
 
 全局快速搜索浮窗
 
-### 10. Git
-
-本地文件版本控制同步github
-https://www.cnblogs.com/dqtx33/p/20096314
-
-### 11. Image auto upload
-
-图片自动上传到图床
-
-### 12. LinkStowr
-
-双向链接管理与预览
-https://mp.weixin.qq.com/s/45pUXcmcifTzTcdrlrTWHQ
-
-### 13. Notebook Navigator
-
-笔记导航可视化预览
-
-### 14. ObShare
-
-分享笔记到飞书
-
-### 15. Share to NotionNext
-
-同步笔记到Notion
-https://mp.weixin.qq.com/s/24oTrC1tttUs18Qv7cRwRQ
-
-### 16. Style Settings
-
-主题样式自定义配置
-
-### 17. Templater
+### Templater
 
 高级模板功能，超越内置模板
 
-### 18. Terminal
+### Dataview
+
+强大的数据查询和动态列表功能
+
+### Custom Attachment Location 
+
+把本地图片的格式标准成一个Markdown的语法，进行统一管理
+https://www.cnblogs.com/dqtx33/p/20087607
+
+### 仿 Notion Blocks插件
+obsidian-dragger
+https://github.com/Ariestar/obsidian-dragger
+notion-block
+https://github.com/BCS1037/notion-block/releases/tag/1.0.0
+
+可以随意拖动
+
+### Clear Unused Images
+
+一键清除没有被文章引用本地图片
+https://www.cnblogs.com/dqtx33/p/20142595
+
+### Terminal
 
 在Obsidian中集成终端
 https://www.cnblogs.com/dqtx33/p/20142731
 
-### 19. Wechat Converter
+### PDF+++
+PDF 文件的阅读，处理
+
+### print（打印）
+ 打印笔记
+ 
+### Better Export PDF
+将markdown文件导出为PDF，可以保存到任意位置。
+
+### Notes to HTML Pages
+将 Markdown 文件导出为 HTML，排版很好看，但是有个问题：不能够自定义其他位置，只能够导出到 Obsidian 根目录的一个文件夹下。
+
+### Export Image XHS
+
+一键导出 PNG/JPG，可复制到剪贴板，预设 3:4 竖版小红书比例卡片，可加头像。
+
+## 进来
+
+### 笔记同步助手
+
+### get-to-obsidian
+
+get笔记自动同步obsidian 
+https://www.cnblogs.com/dqtx33/p/20121719
+
+### Flomo Importer Enhanced
+不用开flomo会员，就可以把flomo笔记同步到obsidian
+
+### Weread
+微信读书进来
+
+
+### LinkStowr
+
+双向链接管理与预览
+https://mp.weixin.qq.com/s/45pUXcmcifTzTcdrlrTWHQ
+
+### Obsidian Web Clipper --chrome插件
+https://chromewebstore.google.com/detail/obsidian-web-clipper/cnjifjpddelmedmihgijeibhnjfabmlf?hl=zh-CN&utm_source=ext_sidebar
+
+### Bilibili-Obsidian-Clipper---chrome插件
+https://mp.weixin.qq.com/s/LWGqnFQerdxw7SNhgxw8Zg
+
+## 出去
+
+### Git
+
+本地文件版本控制同步github
+https://www.cnblogs.com/dqtx33/p/20096314
+
+### Image auto upload
+
+图片自动上传到图床
+
+### ObShare
+
+分享笔记到飞书
+
+### Share to NotionNext
+
+同步笔记到Notion
+https://mp.weixin.qq.com/s/24oTrC1tttUs18Qv7cRwRQ
+
+### Wechat Converter
 
 微信公众号文章格式转换，作者DavidLam
 https://github.com/DavidLam-oss/obsidian-wechat-converter
@@ -100,28 +135,42 @@ https://github.com/DavidLam-oss/obsidian-wechat-converter
 Obsidian推送微信插件配置CF Worker代理方案
 https://mp.weixin.qq.com/s/4SEsM-AWoEhPXiD49oNB9g
 
-### 20.仿 Notion Blocks插件
-obsidian-dragger
-https://github.com/Ariestar/obsidian-dragger
-notion-block
-https://github.com/BCS1037/notion-block/releases/tag/1.0.0
 
-### 21.Custom Attachment Location 
+## 其他
+###  **Advanced Canvas**
 
-把本地图片的格式标准成一个Markdown的语法，进行统一管理
-https://www.cnblogs.com/dqtx33/p/20087607
+画布功能增强，支持更多节点类型
 
-### 22.Clear Unused Images
+###  BRAT
 
-一键清除没有被文章引用本地图片
-https://www.cnblogs.com/dqtx33/p/20142595
+测试版插件管理工具，可安装beta版插件
 
-### 23.get-to-obsidian
+### Calendar
 
-get笔记自动同步obsidian 
-https://www.cnblogs.com/dqtx33/p/20121719
+日历视图插件，支持日记和任务管理
 
 
+### Custom Frames
+
+将网页作为面板嵌入Obsidian
+
+
+### Excalidraw
+
+手绘风格的白板绘图工具
+
+
+
+### Notebook Navigator
+
+笔记导航可视化预览
+
+
+### Style Settings
+
+主题样式自定义配置
+
+---
 
 如果你也有什么私藏神器，欢迎在评论区留言推荐，互相种草！觉得有帮助的话，点个赞再走呗～
 

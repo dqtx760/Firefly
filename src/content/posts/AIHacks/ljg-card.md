@@ -1,5 +1,5 @@
 ---
-title: ljg-card 信息卡片生成技能
+title: ljg-card
 published: 2026-03-01
 tags:
   - skill

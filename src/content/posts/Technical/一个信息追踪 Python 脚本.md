@@ -1,5 +1,5 @@
 ---
-title: 一个信息追踪 Python 脚本
+title: Python信息追踪
 published: 2026-04-30
 tags: []
 category: Technical

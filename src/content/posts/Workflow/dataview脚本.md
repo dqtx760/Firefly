@@ -1,5 +1,5 @@
 ---
-title: Dataview与Templater插件联动示例
+title: dataview脚本
 published: 2026-04-12
 tags:
   - Obsidian插件
@@ -312,7 +312,7 @@ Templater 负责赋予笔记交互的灵魂，DataviewJS 负责榨干数据的�
 
 ***大强同学：[dqtx.cc](https://www.dqtx.cc/)***
 
-***远程服务:[742112.xyz](https://www.742112.xyz/)***
+***远程服务:[fix.dqtx.cc](https://fix.dqtx.cc/)***
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: 最新passwall安装教程
+title: passwall插件使用指南
 published: 2026-03-16
 tags:
   - Openwrt

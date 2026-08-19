@@ -1,5 +1,5 @@
 ---
-title: 5个抓取AI skill
+title: 5个抓取AI技能
 published: 2026-06-06
 tags: []
 category: AIHacks

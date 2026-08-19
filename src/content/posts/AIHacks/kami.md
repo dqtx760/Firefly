@@ -1,5 +1,5 @@
 ---
-title: Kami：专业排版技能
+title: kami
 published: 2026-05-03
 tags:
   - skill

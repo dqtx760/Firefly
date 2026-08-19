@@ -1,5 +1,5 @@
 ---
-title: CLAUDE.md与MEMORY.md
+title: Claude与记忆
 description: 一个给 AI 看，一个给 AI 记。搞混了，你的 AI 助手就废了。
 published: 2026-04-30
 tags:

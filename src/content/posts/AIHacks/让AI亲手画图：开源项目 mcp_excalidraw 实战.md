@@ -1,5 +1,5 @@
 ---
-title: 让AI亲手画图：开源项目 mcp_excalidraw 实战
+title: AI画板实战
 published: 2026-08-12
 tags:
   - excalidraw

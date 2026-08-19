@@ -45,18 +45,25 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/202605151503
 
 
 
-### 手动扩容
+### 手动扩容 
 
 适用场景：你只有一个C盘，但需要一个D盘。
 
 压缩卷-大小（NX1024）新建简单卷-D
 
-![](http://www.kdocs.cn/api/v3/office/copy/LzBiQXRKMFdqYWpuVnhscUNzZUhwSzRKU3lEWlRtSjBpMTlCY2IzendML0xNY1NvNGJuRk12SnYzUlNXOUtib3dhbFI1MVFJc284dnlnOEo5UDNGeUJ1VVpxTjdYek1HMkphdHB2SVBqNDIvMTBKT0Fnc09mZU1DVWlHZlpPOU96U2hPdnNuRklERitsdERCOHF1MnpNKy9Nc1NyNVhpTU9uUGZJR1VVY0ZMemZZN09tdkdHQkc2V0tQd2t4aC82dGNHNGtaeC8vZzNrVFI5SUZFUkxRT2xiZW9Kc3dUSFFDMmN3OVNwblBpbHlLWWZ2OWtQbStXcU5Ta2QrZFlrNE9nOXdSWk9qZmpJPQ==/attach/object/ZGW2FLRAABQDY?)
+### 命令
+
 
 
 ### 参考资料
-软件清理[https://qltc.lanzoue.com/i7S3e19fu89i](https://qltc.lanzoue.com/i7S3e19fu89i)
+360清理ProSysCleanPro
+https://qltc.lanzoue.com/i7S3e19fu89i
 
-1. [软件下载](https://www.uy5.net/diskgenius/)
-2. [操作教程](https://www.bilibili.com/video/BV1AY4y1Y7wB/?spm_id_from=333.337.search-card.all.click&vd_source=206031f494850e57fd6c92ace02b1bed)
+Diskgenius
+```
+D:\software\图吧工具箱\图吧工具箱202502\tools\硬盘工具
+```
+
+参考视频
+https://www.bilibili.com/video/BV1AY4y1Y7wB/?spm_id_from=333.337.search-card.all.click&vd_source=206031f494850e57fd6c92ace02b1bed)
 

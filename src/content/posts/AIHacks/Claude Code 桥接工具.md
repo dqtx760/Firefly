@@ -1,11 +1,11 @@
 ---
-title: Claude Code 窗口接管
+title: Claude Code 桥接工具
 published: 2026-05-10
 tags: []
 category: AIHacks
 draft: false
 pinned: false
-image: 
+image:
 ---
 很多开发者都有这样一个刚需：正在电脑上用 **Claude Code** 开发项目，突然临时有事需要离开工位。 、
 

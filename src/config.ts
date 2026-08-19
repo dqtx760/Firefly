@@ -108,12 +108,12 @@ export const navBarConfig: NavBarConfig = {
 		},
 		{
 			name: "远程服务",
-			url: "https://www.742112.xyz/",
+			url: "https://fix.dqtx.cc/",
 			external: true,
 		},
 		{
-			name: "电视喵",
-			url: "https://tv.dqtx.cc/", // Internal links should not include the base path, as it is automatically added
+			name: "作品集",
+			url: "https://os.dqtx.cc/", // Internal links should not include the base path, as it is automatically added
 			external: true, // Show an external link icon and will open in a new tab
 		},
 		{

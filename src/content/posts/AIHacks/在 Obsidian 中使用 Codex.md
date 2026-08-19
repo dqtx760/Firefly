@@ -1,5 +1,5 @@
 ---
-title: 在 Obsidian 中使用 Codex
+title: 在OB中Codex
 published: 2026-06-28
 tags:
   - codex

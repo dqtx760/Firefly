@@ -44,3 +44,6 @@ src/content/.obsidian/
 
 # Memoria 附件副本（构建时自动生成）
 public/memoria-attachments/
+
+# Obsidian 可视化产出（不进博客）
+src/content/01-输入/visual/

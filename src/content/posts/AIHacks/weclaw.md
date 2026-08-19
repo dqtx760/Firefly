@@ -1,5 +1,5 @@
 ---
-title: weclaw：微信桥接Agent工具
+title: weclaw
 published: 2026-03-20
 tags:
   - 命令行工具
@@ -121,5 +121,5 @@ https://github.com/qufei1993/cc-weixin
 
 
 
-PS.如需远程配置，联系**微信：dqtx33**  远程客户端下载网址：[742112.xyz](742112.xyz)
+PS.如需远程配置，联系**微信：dqtx33**  远程客户端下载网址：[fix.dqtx.cc](fix.dqtx.cc)
 

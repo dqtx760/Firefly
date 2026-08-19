@@ -1,5 +1,5 @@
 ---
-title: PassWall2双栈无忧配置指南
+title: PassWall2使用指南
 published: 2026-03-17
 tags:
   - Openwrt

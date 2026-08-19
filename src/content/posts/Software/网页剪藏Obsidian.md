@@ -1,5 +1,5 @@
 ---
-title: chrome插件Obsidian Web Clipper
+title: 网页剪藏Ob浏览器插件
 published: 2026-05-26
 tags:
   - obsidian

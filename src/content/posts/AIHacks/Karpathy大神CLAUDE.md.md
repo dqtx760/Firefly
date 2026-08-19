@@ -1,5 +1,5 @@
 ---
-title: Karpathy大神CLAUDE.md
+title: Karpathy指令
 published: 2026-04-30
 tags: []
 category: AIHacks

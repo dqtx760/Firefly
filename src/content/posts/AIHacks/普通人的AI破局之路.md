@@ -4,12 +4,13 @@ published: 2026-05-21
 description: AI重构了职业形态，但绝大多数人还在用旧地图找新出路。
 image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-ai-road-20260521-185500.webp
 tags:
-  - AI
-  - 副业
-  - 兴趣变现
-  - 普通人
+- AI
+- 副业
+- 兴趣变现
+- 普通人
 category: AIHacks
 draft: true
+pinned: false
 ---
 故事是这样的。
 

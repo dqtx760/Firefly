@@ -1,5 +1,5 @@
 ---
-title: Typora图床完整配置教程
+title: Piclist图床
 published: 2025-03-10T16:20:00.000Z
 description: 如果你经常写 Markdown 文档，那么 Typora 是一款非常好用的编辑器。而在图片管理方面，推荐搭配免费的图床工具 PicList，它支持一键上传图片到...
 tags:
@@ -107,7 +107,7 @@ PicList 默认没有内置 Gitee 图床，所以需要单独安装插件。打�
 
 ## 拓展：AWS S3--Cloudflare R2&全球CDN图床
 
-文字教程：https://gdfr.dpdns.org/r2-guide/
+文字教程： https://gdfr.dpdns.org/r2-guide/
 
 视频教程：https://www.youtube.com/watch?v=vD6ns5UEETs
 

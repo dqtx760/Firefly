@@ -57,43 +57,43 @@ Agent 不应该只停留在聊天窗口里，而是要能连接真实工具，�
 
 ## 二、读写型连接器
 
-| 连接器         | 能力范围                             | 当前电脑对应的底层工具                                                                       | 状态                       |
-| ----------- | -------------------------------- | --------------------------------------------------------------------------------- | ------------------------ |
-| Office      | Word、Excel、PowerPoint 文件读取、生成、编辑 | 未检测到 `winword` / `excel` / `powerpnt` / `soffice` 命令；可用本地文件工具、`python` 或后续安装文档处理库（如 `python-docx`、`openpyxl`） | 未检测到专用 CLI               |
-| Obsidian    | 笔记读取、写入、搜索、整理、建索引                | 已检测到 `obsidian` 桌面程序；未检测到独立 `obsidian-cli`                                        | 部分可用，CLI 待补              |
-| 飞书          | 文档、表格、多维表格、群消息、日历、任务读写           | 已安装 `lark-cli`(v1.0.32)；已安装 `lark-mcp`(v0.5.1)；当前也有 Lark MCP 工具可调用                                 | ✅ **双层接入** (CLI + MCP)       |
-| Notion      | 页面、数据库读取与写入                      | 未检测到 `notion` / `notion-cli`；WorkBuddy 连接器显示 disconnected                                  | 待安装或改用 Notion API        |
-| GitHub      | Repo、Issue、PR、Actions、Release 读写 | 已安装 `gh`；已安装 `git`                                                                | ✅ 已接入                      |
-| X / Twitter | 发帖、搜索、读取时间线、互动、私信                | 已安装 `twitter`(v0.8.5, pipx)；已安装 `xreach`(v0.3.3) / `xfetch`(v0.2.1)；**注意：pipx 暴露命令名为 `twitter` 而非 `twitter-cli`**                          | ✅ **双层接入** (CLI + 抓取)       |
-| 即刻          | 动态发布、读取、互动                       | 已安装 `jike`(v0.1.1, pipx)；**注意：pipx 暴露命令名为 `jike` 而非 `jike-web-cli`**                               | ✅ 已接入（之前文档误标为未安装）     |
-| 小红书         | 笔记搜索、读取、发布、评论、点赞、收藏              | 已安装 `xhs`（`xiaohongshu-cli`, pipx）                                                      | ✅ 已接入                      |
-| 滴答清单        | 任务读取、创建、更新、完成                    | 未检测到 `ticktick` / `ticktick-cli`                                                  | 待安装或改用 API               |
-| Discord     | 频道消息读取、发送、Bot 操作                 | 未检测到 `discord-cli`                                                                | 待安装或改用 Discord API       |
-| Telegram    | 消息读取、发送、频道管理                     | 未检测到 `tg` / `tg-cli` / `telegram`                                                 | 待安装                      |
-| 微信群聊        | 群聊消息读取、发送、摘要、提醒                  | 已安装 `wechat-ai`(v0.5.0)；已安装 `cc-weixin`(v0.2.0)，但 `cc-weixin` 偏交互式，当前非交互终端直接运行受限；另有 `camoufox`(v0.4.11) 可做反检测浏览器抓取公众号                  | ⚠️ 有工具，需确认登录与运行方式          |
+| 连接器         | 能力范围                             | 当前电脑对应的底层工具                                                                                                           | 状态                     |
+| ----------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------- | ---------------------- |
+| Office      | Word、Excel、PowerPoint 文件读取、生成、编辑 | 未检测到 `winword` / `excel` / `powerpnt` / `soffice` 命令；可用本地文件工具、`python` 或后续安装文档处理库（如 `python-docx`、`openpyxl`）         | 未检测到专用 CLI             |
+| Obsidian    | 笔记读取、写入、搜索、整理、建索引                | 已检测到 `obsidian` 桌面程序；未检测到独立 `obsidian-cli`                                                                            | 部分可用，CLI 待补            |
+| 飞书          | 文档、表格、多维表格、群消息、日历、任务读写           | 已安装 `lark-cli`(v1.0.32)；已安装 `lark-mcp`(v0.5.1)；当前也有 Lark MCP 工具可调用                                                    | ✅ **双层接入** (CLI + MCP) |
+| Notion      | 页面、数据库读取与写入                      | 未检测到 `notion` / `notion-cli`；WorkBuddy 连接器显示 disconnected                                                             | 待安装或改用 Notion API      |
+| GitHub      | Repo、Issue、PR、Actions、Release 读写 | 已安装 `gh`；已安装 `git`                                                                                                    | ✅ 已接入                  |
+| X / Twitter | 发帖、搜索、读取时间线、互动、私信                | 已安装 `twitter`(v0.8.5, pipx)；已安装 `xreach`(v0.3.3) / `xfetch`(v0.2.1)；**注意：pipx 暴露命令名为 `twitter` 而非 `twitter-cli`**     | ✅ **双层接入** (CLI + 抓取)  |
+| 即刻          | 动态发布、读取、互动                       | 已安装 `jike`(v0.1.1, pipx)；**注意：pipx 暴露命令名为 `jike` 而非 `jike-web-cli`**                                                  | ✅ 已接入（之前文档误标为未安装）      |
+| 小红书         | 笔记搜索、读取、发布、评论、点赞、收藏              | 已安装 `xhs`（`xiaohongshu-cli`, pipx）                                                                                    | ✅ 已接入                  |
+| 滴答清单        | 任务读取、创建、更新、完成                    | 未检测到 `ticktick` / `ticktick-cli`                                                                                      | 待安装或改用 API             |
+| Discord     | 频道消息读取、发送、Bot 操作                 | 未检测到 `discord-cli`                                                                                                    | 待安装或改用 Discord API     |
+| Telegram    | 消息读取、发送、频道管理                     | 未检测到 `tg` / `tg-cli` / `telegram`                                                                                     | 待安装                    |
+| 微信群聊        | 群聊消息读取、发送、摘要、提醒                  | 已安装 `wechat-ai`(v0.5.0)；已安装 `cc-weixin`(v0.2.0)，但 `cc-weixin` 偏交互式，当前非交互终端直接运行受限；另有 `camoufox`(v0.4.11) 可做反检测浏览器抓取公众号 | ⚠️ 有工具，需确认登录与运行方式      |
 
 ---
 
 ## 三、搜索读取型连接器
 
-| 连接器 | 能力范围 | 当前电脑对应的底层工具 | 状态 |
-| --- | --- | --- | --- |
-| Google | 网页搜索、资料检索、关键词调研 | 已安装 `gsearch`（Rust 编译，cargo 安装） | ✅ 已接入 |
-| 全网 AI 搜索 | 任意关键词深度搜索、内容发现、多语言检索 | 已安装 `mcporter`(v0.8.1, Exa 驱动) | ✅ **已接入（新增）** |
-| 通用网页抓取 | 任意 URL 内容提取、HTML→Markdown 清洗 | 已安装 `xfetch`(v0.2.1, npm)；`xreach`(v0.3.3, Agent-Reach 17 平台)；`chrome-devtools-mcp`(浏览器级) | ✅ **多层覆盖** |
-| Gmail | 邮件搜索、读取、摘要、草稿生成 | 未检测到 `gmail` / `gmail-cli` | 待安装或改用 Gmail API |
-| YouTube / 油管 | 视频搜索、字幕读取、频道监控、内容摘要 | 已安装 `yt-dlp`(视频/字幕/元数据)；未检测到 `youtube-cli`；搜索可配合 `gsearch` | ⚠️ 可读视频/字幕，缺专用搜索 CLI |
-| 公众号 | 文章搜索、读取、摘要、选题分析 | 已安装 `cc-weixin`(v0.2.0) + `camoufox`(v0.4.11, 反检测浏览器) + `bb-browser` + `chrome-devtools-mcp` | ✅ **已接入（三层方案：CLI + 反检测 + 浏览器）** |
-| 微信群聊 | 聊天记录搜索、读取、摘要、提醒 | 已安装 `wechat-ai`(v0.5.0) / `cc-weixin`(v0.2.0)；没有检测到独立聊天记录搜索 CLI | ⚠️ 有工具，需确认微信登录态和本地数据读取方案 |
-| V2EX | 帖子搜索、读取、话题监控 | 未检测到 `v2ex` / `v2ex-cli`；可用 `gsearch` + `xfetch` 网页抓取 | 待安装专用 CLI |
-| B站 | 视频搜索、字幕/评论读取、UP 主内容监控 | 已安装 `bilibili-cli`(v0.6.2) + `bilibili-api-python`(v17.4.1) + `yt-dlp`(视频下载) | ✅ **已接入（之前文档误标为 malformed）** |
-| 抖音 | 视频搜索、账号内容读取、热点监控 | 已安装 `douyin-mcp-server`(v1.2.1, MCP 协议) | ✅ **已接入（新增）** |
-| 小宇宙 | 播客搜索、节目读取、摘要 | 未检测到 `xiaoyuzhou-cli`；已安装 `feedparser`(v6.0.12)，可配合 RSS 源使用 | ⚠️ 有 RSS 解析能力，缺专用 CLI |
-| 微博 | 热搜、话题、博文读取、账号监控 | 已安装 `weibo-cli`(pip) | ✅ 已接入只读能力 |
-| 小红书 | 笔记搜索、用户搜索、评论读取、热点读取 | 已安装 `xhs`（`xiaohongshu-cli`, pipx） | ✅ 已接入 |
-| X / Twitter | 推文搜索、用户读取、线程读取、通知读取、列表读取 | 已安装 `xreach`(v0.3.3) / `xfetch`(v0.2.1)；`twitter`(v0.8.5) 也支持搜索和时间线 | ✅ **双层接入** |
-| LinkedIn | 职场内容搜索、人物/公司信息读取 | 已安装 `linkedin-scraper-mcp`(pip, MCP 协议) | ✅ **已接入（新增）** |
-| RSS 订阅源 | 博客/播客/新闻自动聚合与监控 | 已安装 `feedparser`(v6.0.12, Python 库) | ✅ **已接入（新增）** |
+| 连接器          | 能力范围                         | 当前电脑对应的底层工具                                                                                  | 状态                              |
+| ------------ | ---------------------------- | -------------------------------------------------------------------------------------------- | ------------------------------- |
+| Google       | 网页搜索、资料检索、关键词调研              | 已安装 `gsearch`（Rust 编译，cargo 安装）                                                              | ✅ 已接入                           |
+| 全网 AI 搜索     | 任意关键词深度搜索、内容发现、多语言检索         | 已安装 `mcporter`(v0.8.1, Exa 驱动)                                                               | ✅ **已接入（新增）**                   |
+| 通用网页抓取       | 任意 URL 内容提取、HTML→Markdown 清洗 | 已安装 `xfetch`(v0.2.1, npm)；`xreach`(v0.3.3, Agent-Reach 17 平台)；`chrome-devtools-mcp`(浏览器级)    | ✅ **多层覆盖**                      |
+| Gmail        | 邮件搜索、读取、摘要、草稿生成              | 未检测到 `gmail` / `gmail-cli`                                                                   | 待安装或改用 Gmail API                |
+| YouTube / 油管 | 视频搜索、字幕读取、频道监控、内容摘要          | 已安装 `yt-dlp`(视频/字幕/元数据)；未检测到 `youtube-cli`；搜索可配合 `gsearch`                                   | ⚠️ 可读视频/字幕，缺专用搜索 CLI            |
+| 公众号          | 文章搜索、读取、摘要、选题分析              | 已安装 `cc-weixin`(v0.2.0) + `camoufox`(v0.4.11, 反检测浏览器) + `bb-browser` + `chrome-devtools-mcp` | ✅ **已接入（三层方案：CLI + 反检测 + 浏览器）** |
+| 微信群聊         | 聊天记录搜索、读取、摘要、提醒              | 已安装 `wechat-ai`(v0.5.0) / `cc-weixin`(v0.2.0)；没有检测到独立聊天记录搜索 CLI                              | ⚠️ 有工具，需确认微信登录态和本地数据读取方案        |
+| V2EX         | 帖子搜索、读取、话题监控                 | 未检测到 `v2ex` / `v2ex-cli`；可用 `gsearch` + `xfetch` 网页抓取                                        | 待安装专用 CLI                       |
+| B站           | 视频搜索、字幕/评论读取、UP 主内容监控        | 已安装 `bilibili-cli`(v0.6.2) + `bilibili-api-python`(v17.4.1) + `yt-dlp`(视频下载)                 | ✅ **已接入（之前文档误标为 malformed）**    |
+| 抖音           | 视频搜索、账号内容读取、热点监控             | 已安装 `douyin-mcp-server`(v1.2.1, MCP 协议)                                                      | ✅ **已接入（新增）**                   |
+| 小宇宙          | 播客搜索、节目读取、摘要                 | 未检测到 `xiaoyuzhou-cli`；已安装 `feedparser`(v6.0.12)，可配合 RSS 源使用                                  | ⚠️ 有 RSS 解析能力，缺专用 CLI           |
+| 微博           | 热搜、话题、博文读取、账号监控              | 已安装 `weibo-cli`(pip)                                                                         | ✅ 已接入只读能力                       |
+| 小红书          | 笔记搜索、用户搜索、评论读取、热点读取          | 已安装 `xhs`（`xiaohongshu-cli`, pipx）                                                           | ✅ 已接入                           |
+| X / Twitter  | 推文搜索、用户读取、线程读取、通知读取、列表读取     | 已安装 `xreach`(v0.3.3) / `xfetch`(v0.2.1)；`twitter`(v0.8.5) 也支持搜索和时间线                          | ✅ **双层接入**                      |
+| LinkedIn     | 职场内容搜索、人物/公司信息读取             | 已安装 `linkedin-scraper-mcp`(pip, MCP 协议)                                                      | ✅ **已接入（新增）**                   |
+| RSS 订阅源      | 博客/播客/新闻自动聚合与监控              | 已安装 `feedparser`(v6.0.12, Python 库)                                                          | ✅ **已接入（新增）**                   |
 
 ---
 

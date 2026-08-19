@@ -2,16 +2,17 @@
 title: 18条codex实战清单
 published: 2026-08-04
 tags:
-- ai
-- codex
-- agent
-- workflow
-- token
-- api
-- gpt
+  - ai
+  - codex
+  - agent
+  - workflow
+  - token
+  - api
+  - gpt
 category: AIHacks
 draft: false
 pinned: false
+image: 
 ---
 ## Luna Max 核心技巧
 ### 设置 Luna Max 才是日常主力

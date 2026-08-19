@@ -1,5 +1,5 @@
 ---
-title: 英伟达免费 API 申请流程
+title: 英伟达API申请
 published: 2026-04-23
 tags: [NVIDIA, API, AI]
 category: AIHacks

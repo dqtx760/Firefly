@@ -1,5 +1,5 @@
 ---
-title: Gsearch-cli实现Agent调用谷歌
+title: Agent谷歌搜索
 published: 2026-05-14
 tags:
   - CLI

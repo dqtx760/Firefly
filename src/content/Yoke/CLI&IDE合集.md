@@ -1,43 +1,54 @@
 
 
-### 一、AI IDE
+### 一、AI IDE/GUI 形态
+
+- **Claude Desktop**（官方桌面客户端）→ https://claude.com/download
+- Codex→ https://chatgpt.com/zh-Hans-CN/codex/
+- grok-app→ https://github.com/RongleCat/grok-app
+- **Antigravity**（新兴AI IDE，轻量智能）-----[Antigravity](../posts/AIHacks/Antigravity.md)
+
+- **WorkBuddy**(腾讯云 全场景 AI 智能体工作台 )----[WorkBuddy](../posts/AIHacks/WorkBuddy.md)  新手送30天
+- **Qoder work**（阿里系，中文项目友好）----[阿里Qoder](../posts/AIHacks/阿里Qoder.md)       羊毛：送30天专业版，包括一些积分,可用qwen3.8 max
+- ZCode---- [ZCode](https://zcode.z.ai/en)  智谱出品新人送额度
+
 - **Cursor**（最火，综合最强，个人首选）
 - **Windsurf**（原Codeium，体验好、多模型）
 - **Trae**（字节，中文适配最强、免费）
+
+- **Hermes Agent**→ https://hermes-agent.nousresearch.com/
+- OpenWorker→ https://openworker.com/   吴恩达老师开发 
+- NewMax→  https://newmax.cc/download
+- Cindy →    https://cindy.app/
+- Reasonix→ https://reasonix.io/
+- **CodePilot**（桌面端AI编程助手）----[CodePilot](../posts/AIHacks/CodePilot.md)
+
 - **Zed**（高性能编辑器+AI，速度极快）----- [Zed](../posts/AIHacks/Zed.md)
-- **Antigravity**（新兴AI IDE，轻量智能）-----[Antigravity](../posts/AIHacks/Antigravity.md)
-- **阿里Qoder**（阿里系，中文项目友好）----[阿里Qoder](../posts/AIHacks/阿里Qoder.md)
-- 智谱 ZCode---- [ZCode](https://zcode.z.ai/en)
+- Kun(国产Codex)→ https://deepseek-gui.com/
+- **WorkAny**（多场景AI工作台）-------------------[WorkAny](../posts/AIHacks/WorkAny.md)
+- **Craft Agents**（可视化Agent编排）------------------
+- open-connector→ https://github.com/oomol-lab/open-connector
+- **oh-my-openagent**（GUI 管理 OpenClaw 系）
+- **claude-desktop-cn**（Claude 桌面版汉化）------------------
 
 
-### 二、传统 IDE + AI 插件
+### 二.、传统 IDE + AI 插件
 - **VS Code + Copilot**（生态最稳、企业标配）
 - **IntelliJ IDEA 2026 + JetBrains AI**（Java/Kotlin 最强）
 - **VS Code + 通义灵码 / 文心快码**（国产、中文强）
+- Obsidian+Claudian 
 
 
-
-### 三、其他 GUI 形态
-- **CodePilot**（桌面端AI编程助手）----[CodePilot](../posts/AIHacks/CodePilot.md)
-- **WorkBuddy**(腾讯云 全场景 AI 智能体工作台 )----[WorkBuddy](../posts/AIHacks/WorkBuddy.md)
-- **WorkAny**（多场景AI工作台）-------------------[WorkAny](../posts/AIHacks/WorkAny.md)
-- **Craft Agents**（可视化Agent编排）------------------
-- **oh-my-openagent**（GUI 管理 OpenClaw 系）
-- **claude-desktop-cn**（Claude 桌面版汉化）------------------
-- **Claude Desktop**（官方桌面客户端）
-
-
-
-### 四、纯 CLI 命令行 AI Agent
+### 三、纯 CLI 命令行 AI Agent
 #### 🌍 海外版
 - **Claude Code**（Anthropic，代码能力最强）------------------[Claude code 安装](../posts/AIHacks/Claude%20code%20安装.md)
 - **Codex CLI**（OpenAI，工程化稳）------------------[codex-cn-bridge](../posts/AIHacks/codex-cn-bridge.md)  [win安装Codex App](../posts/AIHacks/win安装Codex%20App.md)
 - **Gemini CLI**（Google，多模态强）------------------[Gemini cli 安装&异常处理](../posts/AIHacks/Gemini%20cli%20安装&异常处理.md)
 - **GitHub Copilot CLI**（GitHub/Microsoft，生态无缝）
+- OMP(oh-my-pi)--- https://github.com/can1357/oh-my-pi   可以登录 Google Antigravity
 - **Aider**（独立开源，轻量好用）
 - **Hermes Agent**（Nous Research，开源）
 - **OpenClaw**（社区开源生态）------[openclaw](../posts/AIHacks/openclaw.md)
-- **OpenCode**（OpenCode AI，开源）
+- **OpenCode**（OpenCode AI，开源）  https://opencode.ai/
 - Mimocode ----[开源地址](https://github.com/XiaomiMiMo/MiMo-Code/tree/main)  Mimo2.5 限时免费中  
 
 #### 🇨🇳 国产版
@@ -45,7 +56,7 @@
 - **iFlow CLI**（阿里心流）
 - **CodeBuddy Code**（腾讯）
 - **CodeGeeX CLI**（智谱AI/腾讯云）
-- **Kimi CLI**（月之暗面 Moonshot）
+- **Kimi Code CLI**（月之暗面 Moonshot） https://github.com/MoonshotAI/kimi-code
 - **KimiClaw**（月之暗面，OpenClaw 系）
 - **DeepSeek-TUI**（深度求索 DeepSeek）
 - **SolonCode CLI**（无耳科技）
@@ -57,7 +68,7 @@
 **其他魔改**
 Newtype-os -----[newtype-os](../posts/AIHacks/newtype-os.md)
 
-### 五、**桥梁联动型 CLI**
+### 五.、**桥梁联动型 CLI**
 自身无独立 AI 推理能力、不能单独运行，依附主流 AI Agent 调用，充当中间桥梁，让 AI 通过它调用第三方软件 / 平台 / 系统能力，实现跨生态操控。
 
 **社交内容发布互动类**

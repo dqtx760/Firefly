@@ -1,5 +1,5 @@
 ---
-title: 本地部署LLM&硬件参数
+title: LLM本地部署
 published: 2026-05-07
 tags:
   - LLM
@@ -145,3 +145,12 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/202605071911
 
 > **提示**：实际显存需求受量化精度、上下文长度、batch size 影响。本文数据基于 INT4 量化、单 batch、默认上下文长度估算。如需长上下文（64K+），建议显存预留额外 4-8GB。MoE 模型的显存占用需同时考虑总参数量和激活参数量，建议使用 vLLM 或 SGLang 以获得最佳效率。
 
+
+
+### 开源模型
+
+### MiniMax H3 本地运行门槛大降！
+GGUF 量化版来了 Q2 量化版本仅 8.49 GB，
+主流消费级显卡（如 RTX 3060 12G）也能轻松跑起来！以前跑本地视频生成模型极吃显存，
+现在轻量化方案（GGUF / nvfp4）百花齐放，本地生成视频终于接地气了。
+https://huggingface.co/realrebelai/MiniMax-H3_GGUFs/tree/main

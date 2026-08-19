@@ -1,5 +1,5 @@
 ---
-title: 360T7刷FanchmWrt教程
+title: FanchmWrt系统刷机
 published: 2026-03-16
 tags:
   - Openwrt
@@ -12,11 +12,7 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/Gemini_Gener
 
 FanchmWrt是一款完全开源的家庭防火墙系统，基于官方 OpenWrt 同源开发（代码已全开源，GitHub 可查），但它在内核层做了大量针对家用场景的深度优化，内置了许多原本只有企业级软路由或专业防火墙才有的功能。简单来说，它把 OpenWrt 的极致可玩性 + 企业级网络管控能力，塞进了一套对普通家庭用户更友好的界面和体验。
 
-
-
 FanchmWrt官网：www.fanchmwrt.com/
-
-
 
 
 最近闲来无事，给自己的 360T7从现有OpenWrt直接刷了 FanchmWrt，实际体验非常不错——配置简单、功能齐全、稳定性高。下面分享完整刷机步骤（以 Breed 不死 Uboot 方式为主，最安全、零变砖风险）。
@@ -81,5 +77,5 @@ FanchmWrt官网：www.fanchmwrt.com/
 
 以上，如刷机过程中遇到任何问题欢迎评论区留言
 
-大强远程技术支持→[742112.xyz](742112.xyz)
+大强远程技术支持→[fix.dqtx.cc](fix.dqtx.cc)
 

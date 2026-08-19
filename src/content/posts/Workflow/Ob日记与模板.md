@@ -1,5 +1,5 @@
 ---
-title: Obsidian日记半自动化流程
+title: Ob日记与模板
 published: 2026-04-08
 tags:
   - Obsidian插件
