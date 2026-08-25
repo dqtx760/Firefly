@@ -1,0 +1,13 @@
+{
+  "name": "dqtx-cli",
+  "version": "0.1.0",
+  "description": "在终端搜索并打开大强博客文章",
+  "type": "module",
+  "bin": {
+    "dqtx": "bin/dqtx.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}

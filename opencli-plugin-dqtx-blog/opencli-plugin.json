@@ -1,0 +1,6 @@
+{
+  "name": "dqtx-blog",
+  "version": "0.1.0",
+  "description": "只读访问 blog.dqtx.cc 大强博客文章",
+  "opencli": ">=1.8.6"
+}

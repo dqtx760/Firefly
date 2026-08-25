@@ -1,0 +1,9 @@
+{
+  "name": "opencli-plugin-dqtx-blog",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "只读访问 blog.dqtx.cc 大强博客文章",
+  "peerDependencies": {
+    "@jackwener/opencli": ">=1.8.6"
+  }
+}

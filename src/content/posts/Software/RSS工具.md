@@ -40,3 +40,6 @@ https://xiaoshuapp.com/blog/posts/10-web-rss-reader.html
 
 karpathy大佬推荐的 RSS 优质信息源列表
 
+向阳乔木精选 35+ 海外优质 Newsletter，还有Paul Graham等知名大V博客
+https://github.com/joeseesun/qmreader
+https://rss.qiaomu.ai/  后台加载有点慢

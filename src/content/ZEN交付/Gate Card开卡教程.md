@@ -64,9 +64,8 @@
 
 
  #### 2 订阅Gpt  Mastercard或Apple Pay方式
-这个我目前还没试。
-
-https://app.bxjddjt.com/card/application?ref=VFYXXQHCVA&ref_type=130&channel=17&currency=USD
+可能会拒绝，解决办法：可以试一下手机网页端 → Google Pay → U卡
+https://x.com/wei_yuann/status/2088185112001417706?s=20
 
 
 3参加活动

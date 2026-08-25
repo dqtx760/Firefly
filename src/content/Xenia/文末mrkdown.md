@@ -7,7 +7,9 @@
 
 感谢你拨冗阅读，山高水长，我们期待下篇文章与你再见。
 
-*\>/ 更多Agent、Obsidian与自动化工作流实操,访问博客：[dqtx.cc](https://www.dqtx.cc/)*
+*\>/ 更多Agent、Obsidian与自动化工作流实操,访问我主页：[dqtx.cc](https://www.dqtx.cc/)*
+
+公众号：大强同学
 ```
 
 
@@ -57,7 +59,7 @@
 
 | 平台         | 链接                                                                                                                                             |
 | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| 🌐 官网      | [dqtx.cc](https://www.dqtx.cc/)  [ai.dqtx.cc](https://ai.dqtx.cc/)    [os.dqtx.cc](https://os.dqtx.cc/)                                                                         |
+| 🌐 官网      | [dqtx.cc](https://www.dqtx.cc/)   [os.dqtx.cc](https://os.dqtx.cc/)                                                                         |
 | 𝕏 Twitter | [@Derek Zhao](https://x.com/dqtx760)                                                                                                           |
 | 📺 B站      | [大强同学_](https://space.bilibili.com/491358682/upload/video)                                                                                     |
 | ▶️ YouTube | [@Derek Zhao](https://www.youtube.com/@dqtx760/videos)                                                                                         |

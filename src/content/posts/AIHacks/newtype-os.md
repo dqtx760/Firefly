@@ -71,16 +71,7 @@ C:\Users\Administrator\.config\newtype\newtype-profile.json
 
 ### Agent 团队
 
-| Agent            | 角色  | 职责                        |
-| ---------------- | --- | ------------------------- |
-| **Chief**        | 主编  | 你的对话入口——思考伙伴 + 任务协调       |
-| **Deputy**       | 副主编 | Chief 的执行层，调度下游专家         |
-| **Researcher**   | 研究员 | 外部情报搜集、趋势发现               |
-| **Fact-Checker** | 核查员 | 事实验证、来源可信度评估              |
-| **Archivist**    | 档案员 | 内部知识库检索与关联                |
-| **Extractor**    | 提取员 | PDF/图片/网页内容提取，转为 Markdown |
-| **Writer**       | 撰稿人 | 将素材转化为结构化初稿               |
-| **Editor**       | 编辑  | 语言润色、逻辑加固、风格统一            |
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260821233713432.webp)
 
 ### 内置 Skills 与 MCP 服务器
 
