@@ -346,6 +346,56 @@
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/tech-shrimp&quot;&gt;tech-shrimp&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+</content:encoded></item><item><title>豆包工作保姆级教程</title><link>https://dqtx.cc/posts/aihacks/%E8%B1%86%E5%8C%85%E5%B7%A5%E4%BD%9C%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/%E8%B1%86%E5%8C%85%E5%B7%A5%E4%BD%9C%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B/</guid><pubDate>Wed, 26 Aug 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;豆包工作上线了。&lt;/p&gt;
+&lt;p&gt;这是豆包&lt;strong&gt;面向生产力场景&lt;/strong&gt;推出的一款全新 Agent 产品，可以围绕你的目标自主拆解任务、调用工具、持续推进复杂工作流程。&lt;/p&gt;
+&lt;p&gt;豆包工作还与飞书深度打通，让 Agent基于企业上下文更准确地完成工作。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260825222338074.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;你可以在最新版豆包电脑版中使用它：点击“&lt;strong&gt;新工作任务&lt;/strong&gt;”，或在新对话中选择“&lt;strong&gt;工作&lt;/strong&gt;”模式。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260825195452415.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;截图中显示可领取 30 天订阅权益，具体以活动页面为准。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/19dddbd97abbfb19ee8d205ea3c0231c.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;01. 技能·连接器·伙伴&lt;/h3&gt;
+&lt;p&gt;技能，说白了就是让智能体会做什么。拿“画画”举例：先想好画什么，再画出骨架，最后补上细节和上色。每个人的画法都不一样，那怎么把这套方法交给别人？以前靠师傅带徒弟，一遍遍教；现在可以把流程做成技能，让智能体照着执行，也可以直接上传别人做好的技能。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260825201354127.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;连接器像一个转接头：一头接你的需求，一头接各种工具和数据，让两边能连起来干活。&lt;/p&gt;
+&lt;p&gt;以腾讯会议连接器为例。接入后，你可以让它创建会议链接、同步到飞书群；会议结束后，还可以协助整理纪要并保存到指定位置，省去来回切换的操作。具体能做到哪一步，要以连接器的授权范围和实际配置为准。&lt;/p&gt;
+&lt;p&gt;点击左侧功能区的“技能·连接器·伙伴”，就能看到官方内置的连接器，如飞书、Notion、腾讯文档和腾讯会议。想安装哪个，点击右侧加号即可。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260825204207711.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;在“工作伙伴·小队”里添加工作伙伴或小队。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260825200456488.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;添加后，它们会显示在左侧功能区。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260825200746813.webp&quot; alt=&quot;&quot; /&gt;
+我这里试用了一个叫“爆款内容创作小队”的小队。进入对话后，右侧会显示小队详情面板。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260825200950685.webp&quot; alt=&quot;&quot; /&gt;
+你可以查看小队成员，也可以点击右上角的“添加伙伴”继续扩充。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260825200923744.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;02. 从复杂任务到持续交付&lt;/h3&gt;
+&lt;p&gt;如果把日常对话中的豆包比作一个帮你搭把手的同事，豆包工作更像能接住一段流程的数字员工。你给它明确的目标和边界，它会拆解任务、调用工具，并持续推进这段工作；关键判断和最终验收仍然要由你来做。&lt;/p&gt;
+&lt;p&gt;接下来，我给它安排了一个调研任务：把结果写入一个新建的飞书知识库。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260825203002932.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;几分钟后，它交付了任务结果，给出了6个领域的调研结果，并按我的要求为每个领域配了一张信息图。&lt;/p&gt;
+&lt;p&gt;如果你需要这份知识库，可以后台回复&lt;strong&gt;AI学习&lt;/strong&gt; 免费获取&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260825204553092.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;03. 文档翻译&lt;/h3&gt;
+&lt;p&gt;在日常对话里处理很长的 PDF 或文献，往往受上下文长度和文件处理能力限制，体验不一定稳定。对需要翻译长篇英文文献的人来说，工作模式更适合处理这类需要连续推进的任务：先说明要求，再让它围绕同一份材料持续处理。&lt;/p&gt;
+&lt;p&gt;建议先安装下图中的这个连接器。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260825210435734.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;比如，我这里上传了一本英文电子书。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260825210324393.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;过了一阵子，他给了一份word格式的中文版本。
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260825224638666.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;04. 定时任务&lt;/h3&gt;
+&lt;p&gt;点击左侧功能区的“定时任务”，把需求发给它，让它创建任务即可。比如这里，我让它创建了一个每隔 3 小时执行一次的 C 盘清理任务。这个例子主要用来演示定时功能；涉及系统清理时，先确认清理范围和回滚方式，不要直接交给它自动执行。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260825211102428.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;05. 手机远程控机，随时随地办公&lt;/h3&gt;
+&lt;p&gt;很多职场人都有这样的困扰：下班离开电脑、通勤或出差时，遇到紧急工作不方便处理；面对耗时较长的文件处理和数据汇总，又得守着电脑等结果。&lt;/p&gt;
+&lt;p&gt;豆包工作的&lt;strong&gt;手机远程控机功能&lt;/strong&gt;能缓解这个问题。&lt;/p&gt;
+&lt;p&gt;需要注意的是：在手机端打开豆包后，可以在历史对话中找到此前在电脑端选过项目文件夹的对话，再继续推进；但新建任务暂时不能选择项目文件夹。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/ae8b060542a76ddde0f3a50ac2ea97db.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;6.写在最后&lt;/h3&gt;
+&lt;p&gt;豆包工作最值得试的地方，不是多了几个“会干活”的功能，而是你终于可以把一段清楚、重复、能验收的工作交给它持续推进。&lt;/p&gt;
+&lt;p&gt;不过，不要上来就让它碰客户资料或关键业务流程。涉及系统清理、文件删除和敏感信息时，先确认权限、范围和回滚方式；可以先从风险低、结果好检查的任务开始，如整理一场会议纪要、定时汇总公开信息。任务跑通后，再逐步接入文档、日历和协作工具。&lt;/p&gt;
+&lt;p&gt;AI 办公真正省下来的，不是几分钟的点击时间，而是反复切换、重复交代和一直守着电脑的精力。你负责判断目标和验收结果，豆包工作负责把流程往前推。这样用，才算把 AI 变成真正能协作的工作伙伴。&lt;/p&gt;
 </content:encoded></item><item><title>Obsidian核心插件：工作区</title><link>https://dqtx.cc/posts/software/obsidian%E6%A0%B8%E5%BF%83%E6%8F%92%E4%BB%B6%E5%B7%A5%E4%BD%9C%E5%8C%BA/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/obsidian%E6%A0%B8%E5%BF%83%E6%8F%92%E4%BB%B6%E5%B7%A5%E4%BD%9C%E5%8C%BA/</guid><pubDate>Tue, 25 Aug 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;昨天有个用Ob写财经公众号内容的粉丝，他说每天写完文章发表前，都会打开一个微信公众号排版插件做预览，但是每次都要这样摆弄窗口很麻烦，有没有解决办法？&lt;/p&gt;
 &lt;p&gt;我跟他讲，其实只需一招，你只需要将核心插件当中的&lt;strong&gt;工作区&lt;/strong&gt;这个功能开启。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260825025939894.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -416,6 +466,10 @@ https://github.com/88lin/workbuddy-auto-signin&lt;/p&gt;
 &lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260824014225799.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 </content:encoded></item><item><title>录屏批注软件</title><link>https://dqtx.cc/posts/software/%E5%BD%95%E5%B1%8F%E6%89%B9%E6%B3%A8%E8%BD%AF%E4%BB%B6/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E5%BD%95%E5%B1%8F%E6%89%B9%E6%B3%A8%E8%BD%AF%E4%BB%B6/</guid><pubDate>Mon, 24 Aug 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;下快捷键（&lt;strong&gt;快捷键优先&lt;/strong&gt;），随时在桌面上自由绘画、标注。适用于课堂演示 / 会议讲解 / 录屏批注。
 https://github.com/ifer47/markeron/blob/master/README_zh.md&lt;/p&gt;
+</content:encoded></item><item><title>抖音批量无水印下载工具</title><link>https://dqtx.cc/posts/software/%E6%8A%96%E9%9F%B3%E6%89%B9%E9%87%8F%E6%97%A0%E6%B0%B4%E5%8D%B0%E4%B8%8B%E8%BD%BD%E5%B7%A5%E5%85%B7/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E6%8A%96%E9%9F%B3%E6%89%B9%E9%87%8F%E6%97%A0%E6%B0%B4%E5%8D%B0%E4%B8%8B%E8%BD%BD%E5%B7%A5%E5%85%B7/</guid><pubDate>Mon, 24 Aug 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;https://github.com/anYuJia/better-douyin/releases&quot;&gt;https://github.com/anYuJia/better-douyin/releases&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;有图形界面，可以直接登录抖音，不需要手动获取cookies。&lt;/p&gt;
+&lt;p&gt;支持批量下载，单个或者批量都可以&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260824023751698.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 </content:encoded></item><item><title>邮箱客户端better-email</title><link>https://dqtx.cc/posts/software/%E9%82%AE%E7%AE%B1%E5%AE%A2%E6%88%B7%E7%AB%AFbetter-email/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E9%82%AE%E7%AE%B1%E5%AE%A2%E6%88%B7%E7%AB%AFbetter-email/</guid><pubDate>Mon, 24 Aug 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;https://github.com/anYuJia/better-email&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260824022748072.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;h3&gt;126邮箱&lt;/h3&gt;
@@ -429,10 +483,6 @@ SMTP 服务器smtp.126.com:465
 设置→POP3/SMTP/IMAP→授权密码管理：新增授权密码
 PS.每个账号最多设置2个授权密码，开通邮箱会员后可设置10个
 &lt;/code&gt;&lt;/pre&gt;
-</content:encoded></item><item><title>抖音批量无水印下载工具</title><link>https://dqtx.cc/posts/software/%E6%8A%96%E9%9F%B3%E6%89%B9%E9%87%8F%E6%97%A0%E6%B0%B4%E5%8D%B0%E4%B8%8B%E8%BD%BD%E5%B7%A5%E5%85%B7/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E6%8A%96%E9%9F%B3%E6%89%B9%E9%87%8F%E6%97%A0%E6%B0%B4%E5%8D%B0%E4%B8%8B%E8%BD%BD%E5%B7%A5%E5%85%B7/</guid><pubDate>Mon, 24 Aug 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;https://github.com/anYuJia/better-douyin/releases&quot;&gt;https://github.com/anYuJia/better-douyin/releases&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;有图形界面，可以直接登录抖音，不需要手动获取cookies。&lt;/p&gt;
-&lt;p&gt;支持批量下载，单个或者批量都可以&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260824023751698.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 </content:encoded></item><item><title>OpenAI 让 Codex「假装有灵魂」？</title><link>https://dqtx.cc/posts/aihacks/codex-%E7%B3%BB%E7%BB%9F%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%A6%81%E8%81%8A%E5%93%A5%E5%B8%83%E6%9E%97%E4%BD%86%E5%8F%88%E8%A6%81%E5%AE%83%E6%9C%89%E7%81%B5%E9%AD%82/</link><guid isPermaLink="true">https://dqtx.cc/posts/aihacks/codex-%E7%B3%BB%E7%BB%9F%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%A6%81%E8%81%8A%E5%93%A5%E5%B8%83%E6%9E%97%E4%BD%86%E5%8F%88%E8%A6%81%E5%AE%83%E6%9C%89%E7%81%B5%E9%AD%82/</guid><pubDate>Sun, 23 Aug 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;最近 Reddit 上出了一件挺有意思的事。&lt;/p&gt;
 &lt;p&gt;一个叫 GarlicoinAccount 的网友发了个帖子，发到 r/nottheonion（专门放「这不可能是真的但居然是真的」类新闻的子版），标题特别长：&lt;/p&gt;
 &lt;blockquote&gt;
@@ -10769,6 +10819,36 @@ http://learnui.qiaomu.ai/sites/&lt;/p&gt;
 &lt;h3&gt;单网站&lt;/h3&gt;
 &lt;p&gt;解剖学三维模型。
 https://anatomy-livid.vercel.app/&lt;/p&gt;
+</content:encoded></item><item><title>几个推特有关的插件</title><link>https://dqtx.cc/posts/software/%E5%87%A0%E4%B8%AA%E6%8E%A8%E7%89%B9%E6%9C%89%E5%85%B3%E7%9A%84%E6%8F%92%E4%BB%B6/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E5%87%A0%E4%B8%AA%E6%8E%A8%E7%89%B9%E6%9C%89%E5%85%B3%E7%9A%84%E6%8F%92%E4%BB%B6/</guid><pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Twitter Video&lt;/h3&gt;
+&lt;p&gt;下载推特视频
+https://chromewebstore.google.com/detail/twitter-videogif-download/lpfalnepgkapbckncailhheiabcjlbje?hl=zh-CN&amp;amp;utm_source=ext_sidebar
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260507004604717.png&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;X 爆款监测&lt;/h3&gt;
+&lt;p&gt;调用x内置的Grok生成推文回复
+https://chromewebstore.google.com/detail/x-viral-monitor/dkplofpecmjmbhgjgleeflcnfgfkdfpd
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260507004215890.png&quot; alt=&quot;image.png&quot; /&gt;
+监控当前页面热点
+&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260507004423972.png&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;XHunt&lt;/h3&gt;
+&lt;p&gt;监控web3推文&lt;/p&gt;
+&lt;h3&gt;x-capture&lt;/h3&gt;
+&lt;p&gt;一键从 X/Twitter 里的提示词推文提取结构化 Prompt
+https://x.com/LouwlouAiDev/status/2051932155505516861
+https://github.com/denghuichao/x-capture&lt;/p&gt;
+&lt;h3&gt;两个热帖搜索网站&lt;/h3&gt;
+&lt;p&gt;https://sopilot.net/zh/hot-tweets
+https://x-sou.com/&lt;/p&gt;
+&lt;h3&gt;X Data Scraper&lt;/h3&gt;
+&lt;p&gt;任意页面的数据抓取  &lt;a href=&quot;https://x.com/ttmouse/status/2001941518765183033&quot;&gt;演示&lt;/a&gt;
+https://chromewebstore.google.com/detail/x-data-scraper/icnlkhdghnkbmcfcjjgbmndigmofnocn?hl=en-US&lt;/p&gt;
+&lt;h3&gt;Twillot&lt;/h3&gt;
+&lt;p&gt;实现书签的搜索功能 找推文方便很多  &lt;a href=&quot;https://x.com/0x17B/status/1497889044227067904&quot;&gt;高级技巧&lt;/a&gt;
+https://chromewebstore.google.com/detail/twillot-your-twitter-orga/flkokionhgagpmnhlngldhbfnblmenen
+网页⬇️
+https://x.com/0x17B/status/1497889044227067904&lt;/p&gt;
+&lt;h3&gt;# Minimal&lt;/h3&gt;
+&lt;p&gt;自定义界面，消除干扰，获得更简约的外观，在使用 Twitter 时更加专注和高效
+https://chromewebstore.google.com/detail/minimal-theme-for-twitter/pobhoodpcipjmedfenaigbeloiidbflp&lt;/p&gt;
 </content:encoded></item><item><title>Warp终端测评记录</title><link>https://dqtx.cc/posts/software/warp/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/warp/</guid><pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;10小时GitHub狂揽3万星，OpenAI亲自下场成为Founding Sponsor，由Rust原生打造的Warp终端，正在以颠覆性的方式，彻底改写开发者对命令行工具的认知。&lt;/p&gt;
 &lt;h3&gt;安装&lt;/h3&gt;
 &lt;ul&gt;
@@ -10852,36 +10932,6 @@ function cc { claude --dangerously-skip-permissions }
 &lt;p&gt;体验下来，Warp 的垂直侧边标签体验格外出色，多开 AI Agent 会话一目了然，批量切换工作流也十分顺手。&lt;/p&gt;
 &lt;p&gt;唯一小小的遗憾就是，软件默认右键无法直接一键粘贴，稍微影响日常操作的流畅度。&lt;/p&gt;
 &lt;p&gt;即便有这点小瑕疵，也完全不影响它作为终端工具的综合实力，侧边标签加持下的多会话管理，依旧是重度多开、常驻 AI Agent 用户的绝佳选择。&lt;/p&gt;
-</content:encoded></item><item><title>几个推特有关的插件</title><link>https://dqtx.cc/posts/software/%E5%87%A0%E4%B8%AA%E6%8E%A8%E7%89%B9%E6%9C%89%E5%85%B3%E7%9A%84%E6%8F%92%E4%BB%B6/</link><guid isPermaLink="true">https://dqtx.cc/posts/software/%E5%87%A0%E4%B8%AA%E6%8E%A8%E7%89%B9%E6%9C%89%E5%85%B3%E7%9A%84%E6%8F%92%E4%BB%B6/</guid><pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;Twitter Video&lt;/h3&gt;
-&lt;p&gt;下载推特视频
-https://chromewebstore.google.com/detail/twitter-videogif-download/lpfalnepgkapbckncailhheiabcjlbje?hl=zh-CN&amp;amp;utm_source=ext_sidebar
-&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260507004604717.png&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;X 爆款监测&lt;/h3&gt;
-&lt;p&gt;调用x内置的Grok生成推文回复
-https://chromewebstore.google.com/detail/x-viral-monitor/dkplofpecmjmbhgjgleeflcnfgfkdfpd
-&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260507004215890.png&quot; alt=&quot;image.png&quot; /&gt;
-监控当前页面热点
-&lt;img src=&quot;https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260507004423972.png&quot; alt=&quot;image.png&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;XHunt&lt;/h3&gt;
-&lt;p&gt;监控web3推文&lt;/p&gt;
-&lt;h3&gt;x-capture&lt;/h3&gt;
-&lt;p&gt;一键从 X/Twitter 里的提示词推文提取结构化 Prompt
-https://x.com/LouwlouAiDev/status/2051932155505516861
-https://github.com/denghuichao/x-capture&lt;/p&gt;
-&lt;h3&gt;两个热帖搜索网站&lt;/h3&gt;
-&lt;p&gt;https://sopilot.net/zh/hot-tweets
-https://x-sou.com/&lt;/p&gt;
-&lt;h3&gt;X Data Scraper&lt;/h3&gt;
-&lt;p&gt;任意页面的数据抓取  &lt;a href=&quot;https://x.com/ttmouse/status/2001941518765183033&quot;&gt;演示&lt;/a&gt;
-https://chromewebstore.google.com/detail/x-data-scraper/icnlkhdghnkbmcfcjjgbmndigmofnocn?hl=en-US&lt;/p&gt;
-&lt;h3&gt;Twillot&lt;/h3&gt;
-&lt;p&gt;实现书签的搜索功能 找推文方便很多  &lt;a href=&quot;https://x.com/0x17B/status/1497889044227067904&quot;&gt;高级技巧&lt;/a&gt;
-https://chromewebstore.google.com/detail/twillot-your-twitter-orga/flkokionhgagpmnhlngldhbfnblmenen
-网页⬇️
-https://x.com/0x17B/status/1497889044227067904&lt;/p&gt;
-&lt;h3&gt;# Minimal&lt;/h3&gt;
-&lt;p&gt;自定义界面，消除干扰，获得更简约的外观，在使用 Twitter 时更加专注和高效
-https://chromewebstore.google.com/detail/minimal-theme-for-twitter/pobhoodpcipjmedfenaigbeloiidbflp&lt;/p&gt;
 </content:encoded></item><item><title>复现Karpathy的LLM Wiki</title><link>https://dqtx.cc/posts/workflow/%E5%A4%8D%E7%8E%B0karpathy%E7%9A%84llm-wiki/</link><guid isPermaLink="true">https://dqtx.cc/posts/workflow/%E5%A4%8D%E7%8E%B0karpathy%E7%9A%84llm-wiki/</guid><pubDate>Thu, 07 May 2026 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;AI 时代最大的讽刺：我们拥有了最强大的知识处理工具，却仍在用最原始的方式管理知识。&lt;/p&gt;
 &lt;p&gt;前 Tesla AI 总监 Karpathy 给出了他的答案——&lt;strong&gt;LLM Wiki&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;这套框架近期在 GitHub 上引发广泛关注。仔细研读后，我发现它的核心价值不在于技术实现，而在于一套关于&lt;strong&gt;知识组织的理念与行为准则&lt;/strong&gt;——门槛极低，却能带来质的飞跃。&lt;/p&gt;
