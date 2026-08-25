@@ -1,4 +1,5 @@
 ---
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260824013900969.webp
 title: "chrome插件：飞书文档导出"
 published: 2026-08-24
 tags: []

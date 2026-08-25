@@ -1,4 +1,5 @@
 ---
+image: 
 title: "WorkBuddy 每日签到脚本"
 published: 2026-08-24
 tags: []

@@ -1,4 +1,5 @@
 ---
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260824022748072.webp
 title: "邮箱客户端better-email"
 published: 2026-08-24
 tags: []

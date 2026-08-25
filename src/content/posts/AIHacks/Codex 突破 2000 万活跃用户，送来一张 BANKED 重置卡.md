@@ -1,4 +1,5 @@
 ---
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260822121214534.webp
 title: "Codex 突破 2000 万活跃用户，送来一张 BANKED 重置卡"
 published: 2026-08-22
 tags: []

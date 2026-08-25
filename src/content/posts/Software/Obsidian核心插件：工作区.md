@@ -1,4 +1,5 @@
 ---
+image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260825025939894.webp
 title: "Obsidian核心插件：工作区"
 published: 2026-08-25
 tags: []

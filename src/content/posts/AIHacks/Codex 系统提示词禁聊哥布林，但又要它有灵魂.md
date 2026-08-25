@@ -9,6 +9,7 @@ tags:
 category: AIHacks
 draft: false
 pinned: false
+image: 
 ---
 
 最近 Reddit 上出了一件挺有意思的事。
