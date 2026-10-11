@@ -86,7 +86,7 @@ note: {{note}}
 
 #### 飞书文档合集
 
-```dataview
+```text
 TABLE WITHOUT ID
   title AS "名称",
   url AS "链接",
@@ -100,7 +100,7 @@ SORT date DESC
 
 #### Notion文档合集
 
-```dataview
+```text
 TABLE WITHOUT ID
   title AS "名称",
   url AS "链接",
@@ -114,7 +114,7 @@ SORT date DESC
 
 #### github项目
 
-```dataview
+```text
 TABLE WITHOUT ID
   title AS "名称",
   url AS "链接",
@@ -128,7 +128,7 @@ SORT date DESC
 
 #### AI工具
 
-```dataview
+```text
 TABLE WITHOUT ID
   title AS "名称",
   url AS "链接",
@@ -143,7 +143,7 @@ SORT date DESC
 
 #### 全部链接
 
-```dataview
+```text
 TABLE WITHOUT ID
   title AS "名称",
   url AS "链接",

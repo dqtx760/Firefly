@@ -8,85 +8,96 @@ import path from "node:path";
 const memoriaDir = path.resolve("src/content/Memoria");
 
 // 解析 Memoria 笔记
-const mdFiles = fs.readdirSync(memoriaDir).filter(f => f.endsWith(".md"));
+const mdFiles = fs.readdirSync(memoriaDir).filter((f) => f.endsWith(".md"));
 
 interface Note {
-  date: string;
-  weekday: string;
-  time: string;
-  content: string;
-  images: string[];
-  tags: string[];
+	date: string;
+	weekday: string;
+	time: string;
+	content: string;
+	images: string[];
+	tags: string[];
 }
 
 const notes: Note[] = [];
 
 for (const file of mdFiles) {
-  const raw = fs.readFileSync(path.join(memoriaDir, file), "utf-8");
-  const dayBlocks = raw.split(/(?=^## \d{4}-\d{2}-\d{2})/m);
+	const raw = fs.readFileSync(path.join(memoriaDir, file), "utf-8");
+	const dayBlocks = raw.split(/(?=^## \d{4}-\d{2}-\d{2})/m);
 
-  for (const block of dayBlocks) {
-    const dayMatch = block.match(/^## (\d{4}-\d{2}-\d{2})\s+(.*)/m);
-    if (!dayMatch) continue;
-    const date = dayMatch[1];
-    const weekday = dayMatch[2];
+	for (const block of dayBlocks) {
+		const dayMatch = block.match(/^## (\d{4}-\d{2}-\d{2})\s+(.*)/m);
+		if (!dayMatch) continue;
+		const date = dayMatch[1];
+		const weekday = dayMatch[2];
 
-    const memoBlocks = block.split(/(?=^- \d{2}:\d{2})/m);
-    for (const memo of memoBlocks) {
-      const memoMatch = memo.match(/^- (\d{2}:\d{2})\s*\n?([\s\S]*)/);
-      if (!memoMatch) continue;
-      const time = memoMatch[1];
-      let content = memoMatch[2].trim();
-      const images: string[] = [];
-      const imageRegex = /!\[\[([^\]]+)\]\]/g;
-      let match;
-      while ((match = imageRegex.exec(content)) !== null) {
-        images.push(`/memoria-attachments/${match[1]}`);
-      }
-      content = content.replace(/!\[\[[^\]]+\]\]/g, "").trim();
-      // 提取 #标签
-      const tags: string[] = [];
-      const tagRegex = /#([\w一-鿿-]+)/g;
-      let tagMatch;
-      while ((tagMatch = tagRegex.exec(content)) !== null) {
-        tags.push(tagMatch[1]);
-      }
-      content = content.replace(/#[\w一-鿿-]+/g, "").replace(/^ +/gm, "").replace(/\n{2,}/g, "\n").trim();
-      // 将 URL 转为链接，再转义其余 HTML
-      content = content.replace(/(https?:\/\/[^\s<)]+)/g, '\x00LINK\x00$1\x00/LINK\x00');
-      content = content
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;");
-      content = content.replace(/\x00LINK\x00([^\x00]+)\x00\/LINK\x00/g,
-        '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>');
-      notes.push({ date, weekday, time, content, images, tags });
-    }
-  }
+		const memoBlocks = block.split(/(?=^- \d{2}:\d{2})/m);
+		for (const memo of memoBlocks) {
+			const memoMatch = memo.match(/^- (\d{2}:\d{2})\s*\n?([\s\S]*)/);
+			if (!memoMatch) continue;
+			const time = memoMatch[1];
+			let content = memoMatch[2].trim();
+			const images: string[] = [];
+			const imageRegex = /!\[\[([^\]]+)\]\]/g;
+			let match;
+			while ((match = imageRegex.exec(content)) !== null) {
+				images.push(`/memoria-attachments/${match[1]}`);
+			}
+			content = content.replace(/!\[\[[^\]]+\]\]/g, "").trim();
+			// 提取 #标签
+			const tags: string[] = [];
+			const tagRegex = /#([\w一-鿿-]+)/g;
+			let tagMatch;
+			while ((tagMatch = tagRegex.exec(content)) !== null) {
+				tags.push(tagMatch[1]);
+			}
+			content = content
+				.replace(/#[\w一-鿿-]+/g, "")
+				.replace(/^ +/gm, "")
+				.replace(/\n{2,}/g, "\n")
+				.trim();
+			// 将 URL 转为链接，再转义其余 HTML
+			content = content.replace(
+				/(https?:\/\/[^\s<)]+)/g,
+				"\x00LINK\x00$1\x00/LINK\x00",
+			);
+			content = content
+				.replace(/&/g, "&amp;")
+				.replace(/</g, "&lt;")
+				.replace(/>/g, "&gt;");
+			content = content.replace(
+				/\x00LINK\x00([^\x00]+)\x00\/LINK\x00/g,
+				'<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>',
+			);
+			notes.push({ date, weekday, time, content, images, tags });
+		}
+	}
 }
 
-notes.sort((a, b) => `${b.date}T${b.time}`.localeCompare(`${a.date}T${a.time}`));
+notes.sort((a, b) =>
+	`${b.date}T${b.time}`.localeCompare(`${a.date}T${a.time}`),
+);
 
 // 按日期分组
 const grouped = new Map<string, Note[]>();
 for (const note of notes) {
-  if (!grouped.has(note.date)) grouped.set(note.date, []);
-  grouped.get(note.date)!.push(note);
+	if (!grouped.has(note.date)) grouped.set(note.date, []);
+	grouped.get(note.date)!.push(note);
 }
 
 // 收集所有标签
-const allTags = Array.from(new Set(notes.flatMap(n => n.tags)));
+const allTags = Array.from(new Set(notes.flatMap((n) => n.tags)));
 
 // 生成日期列表（用于右侧导航）
 const dates = Array.from(grouped.entries())
-  .sort(([a], [b]) => b.localeCompare(a))
-  .map(([date, dayNotes]) => ({ date, weekday: dayNotes[0].weekday }));
+	.sort(([a], [b]) => b.localeCompare(a))
+	.map(([date, dayNotes]) => ({ date, weekday: dayNotes[0].weekday }));
 
 function formatDate(dateStr: string): string {
-  const d = new Date(dateStr + "T00:00:00");
-  const month = d.getMonth() + 1;
-  const day = d.getDate();
-  return `${month}月${day}日`;
+	const d = new Date(dateStr + "T00:00:00");
+	const month = d.getMonth() + 1;
+	const day = d.getDate();
+	return `${month}月${day}日`;
 }
 ---
 

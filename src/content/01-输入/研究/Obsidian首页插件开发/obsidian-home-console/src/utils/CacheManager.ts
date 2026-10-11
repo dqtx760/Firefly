@@ -4,36 +4,36 @@
  */
 
 export class CacheManager<T> {
-  private cache: Map<string, { data: T; timestamp: number }> = new Map();
-  private ttl: number;
+	private cache: Map<string, { data: T; timestamp: number }> = new Map();
+	private ttl: number;
 
-  constructor(ttlMs: number = 30000) {
-    this.ttl = ttlMs;
-  }
+	constructor(ttlMs: number = 30000) {
+		this.ttl = ttlMs;
+	}
 
-  get(key: string): T | null {
-    const entry = this.cache.get(key);
-    if (!entry) return null;
-    if (Date.now() - entry.timestamp > this.ttl) {
-      this.cache.delete(key);
-      return null;
-    }
-    return entry.data;
-  }
+	get(key: string): T | null {
+		const entry = this.cache.get(key);
+		if (!entry) return null;
+		if (Date.now() - entry.timestamp > this.ttl) {
+			this.cache.delete(key);
+			return null;
+		}
+		return entry.data;
+	}
 
-  set(key: string, data: T): void {
-    this.cache.set(key, { data, timestamp: Date.now() });
-  }
+	set(key: string, data: T): void {
+		this.cache.set(key, { data, timestamp: Date.now() });
+	}
 
-  invalidate(key?: string): void {
-    if (key) {
-      this.cache.delete(key);
-    } else {
-      this.cache.clear();
-    }
-  }
+	invalidate(key?: string): void {
+		if (key) {
+			this.cache.delete(key);
+		} else {
+			this.cache.clear();
+		}
+	}
 
-  has(key: string): boolean {
-    return this.get(key) !== null;
-  }
+	has(key: string): boolean {
+		return this.get(key) !== null;
+	}
 }

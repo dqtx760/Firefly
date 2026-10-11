@@ -182,9 +182,14 @@ function getBlogSlugByPath(): Map<string, string> {
 			if (entry.isDirectory()) {
 				scanDir(fullPath);
 			} else if (entry.isFile() && entry.name.endsWith(".md")) {
-				const relativePath = path.relative(POSTS_DIR, fullPath).replace(/\\/g, "/");
+				const relativePath = path
+					.relative(POSTS_DIR, fullPath)
+					.replace(/\\/g, "/");
 				const normalizedPath = normalizePostPath(relativePath);
-				const slug = normalizedPath.split("/").map(normalizePostSlugPart).join("/");
+				const slug = normalizedPath
+					.split("/")
+					.map(normalizePostSlugPart)
+					.join("/");
 				slugs.set(normalizedPath, slug);
 				slugs.set(slug, slug);
 			}
@@ -199,14 +204,23 @@ function getBlogSlugByPath(): Map<string, string> {
 function convertPostPathToBlogSlug(relativePath: string): string | null {
 	const normalizedPath = normalizePostPath(relativePath);
 	const blogSlugByPath = getBlogSlugByPath();
-	return blogSlugByPath.get(normalizedPath) ?? blogSlugByPath.get(normalizedPath.split("/").map(normalizePostSlugPart).join("/")) ?? null;
+	return (
+		blogSlugByPath.get(normalizedPath) ??
+		blogSlugByPath.get(
+			normalizedPath.split("/").map(normalizePostSlugPart).join("/"),
+		) ??
+		null
+	);
 }
 
 function convertWikiFileNameToBlogSlug(fileName: string): string | null {
 	const nameWithoutExt = fileName.replace(/\.md$/, "");
 
 	for (const [postPath, slug] of getBlogSlugByPath()) {
-		if (postPath.endsWith(`/${nameWithoutExt}`) || slug.endsWith(`/${normalizePostSlugPart(nameWithoutExt)}`)) {
+		if (
+			postPath.endsWith(`/${nameWithoutExt}`) ||
+			slug.endsWith(`/${normalizePostSlugPart(nameWithoutExt)}`)
+		) {
 			return slug;
 		}
 	}
@@ -237,13 +251,15 @@ function preprocessWikiContent(content: string): string {
 		// 检查是否是表格行（包含 | 符号）
 		if (line.includes("|")) {
 			// 分割表格单元格
-			const cells = line.split("|").map(cell => cell.trim());
+			const cells = line.split("|").map((cell) => cell.trim());
 
 			// 处理每个单元格
-			const processedCells = cells.map(cell => {
+			const processedCells = cells.map((cell) => {
 				// 检查单元格是否包含 .md 文件名
 				// 匹配以 .md 结尾的单词（前面是字母、数字或中文，后面是标点或空白）
-				const mdFileMatch = cell.match(/([\w\u4e00-\u9fa5-]+\.md)(?=[,，、。\s]|$)/);
+				const mdFileMatch = cell.match(
+					/([\w\u4e00-\u9fa5-]+\.md)(?=[,，、。\s]|$)/,
+				);
 
 				if (mdFileMatch) {
 					const fileName = mdFileMatch[1];
@@ -280,21 +296,23 @@ export function createMarkdownParser(): markdownIt {
 		const token = tokens[idx];
 		// 获取下一个 token（inline token）中的文本内容
 		const nextToken = tokens[idx + 1];
-		if (nextToken && nextToken.type === 'inline') {
+		if (nextToken && nextToken.type === "inline") {
 			const text = nextToken.content;
 			const slug = text
 				.toLowerCase()
 				.replace(/[^\w一-龥]+/g, "-")
 				.replace(/^-|-$/g, "");
-			token.attrSet('id', slug);
+			token.attrSet("id", slug);
 		}
 		return self.renderToken(tokens, idx, options);
 	};
 
 	// 重写链接渲染规则
-	const defaultRender = md.renderer.rules.link_open || function (tokens, idx, options, env, self) {
-		return self.renderToken(tokens, idx, options);
-	};
+	const defaultRender =
+		md.renderer.rules.link_open ||
+		function (tokens, idx, options, env, self) {
+			return self.renderToken(tokens, idx, options);
+		};
 
 	md.renderer.rules.link_open = function (tokens, idx, options, env, self) {
 		const token = tokens[idx];
@@ -328,7 +346,13 @@ export function createMarkdownParser(): markdownIt {
 				token.attrs[hrefIndex][1] = `/wiki/${cleanHref}/`;
 			}
 			// 处理指向 wiki 的相对链接（不以 / 开头，不以 http 开头，不以 .md 结尾）
-			else if (href && !href.startsWith("http") && !href.startsWith("/") && !href.startsWith("#") && !href.endsWith(".md")) {
+			else if (
+				href &&
+				!href.startsWith("http") &&
+				!href.startsWith("/") &&
+				!href.startsWith("#") &&
+				!href.endsWith(".md")
+			) {
 				// 可能是 wiki 内部的无扩展名链接
 				// 保持原样，让浏览器处理
 			}
@@ -347,7 +371,9 @@ export function renderWikiContent(content: string): string {
 	// 移除开头的一级标题
 	const contentWithoutFirstH1 = content.replace(/^#\s+.+$/m, "").trim();
 	// 预处理内容
-	const preprocessedContent = preprocessWikiContent(preprocessPostLinks(contentWithoutFirstH1));
+	const preprocessedContent = preprocessWikiContent(
+		preprocessPostLinks(contentWithoutFirstH1),
+	);
 	// 创建解析器
 	const md = createMarkdownParser();
 	// 渲染

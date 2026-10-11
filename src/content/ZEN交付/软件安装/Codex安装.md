@@ -1,7 +1,9 @@
 
 ### 一.配置环境
 代理工具
+```
 https://haha-1366927206.cos.accelerate.myqcloud.com/tutorial/windows/clashverge/Clash.Verge_2.5.0-rc_x64-setup.exe
+```
 流量购买
 https://cokecloud.net/#/register?code=L2FOV7Yb
 github下载加速
@@ -24,7 +26,14 @@ winget install Git.Git
 ```
 winget install Codex -s msstore --accept-source-agreements
 ```
-#### 方式2：离线包安装
+
+####  方式2：自动部署工具
+
+访问
+https://gpt.dqtx.cc/
+https://codexapp.agentsmirror.com/
+
+#### 方式3：离线包安装
 Codex微软地址
 https://apps.microsoft.com/detail/9plm9xgg6vks?hl=zh-CN&gl=CN
 微软商店离线解析
@@ -38,17 +47,18 @@ https://store.rg-adguard.net/
 
 #### 方式2：接入第三方模型
 
-可借助工具
+##### 配置工具
 https://github.com/lidge-jun/opencodex/blob/main/readme/README.zh-CN.md
 https://github.com/farion1231/cc-switch/releases/tag/v3.18.0
 
-购买DeepSeekseek API
+##### API Key
+DeepSeekseek API
 https://platform.deepseek.com/api_keys
 
-
+Agnes API
+[Agnes AI配置codex](../Codex报错修复/Agnes%20AI配置codex.md)
 
 
 客户问题
 - 没有gpt账号→注册google
 - 没有魔法→安装配置
-- 

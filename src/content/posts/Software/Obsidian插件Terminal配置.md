@@ -21,14 +21,14 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/202605241527
 -NoLogo
 ```
 
-```Plain
+```text
 C:\Users\Administrator\AppData\Local\Programs\Python\Python314\python.exe
 ```
 
 4. 点击「检查」验证配置，若提示依赖异常，按提示安装/升级对应依赖。
 我这边报错了所以需要安装两个依赖包。
 
-```Plain
+```text
 pip install psutil>=5.9.5 pywinctl>=0.0.50
 ```
 

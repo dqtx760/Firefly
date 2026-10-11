@@ -28,13 +28,13 @@ OMP 支持 macOS、Linux 和 Windows，并且与你现有的工具链（如 Clau
 
 请根据你的操作系统和环境选择复制对应的安装命令：
 
-| 命令 | 说明 |
-| :--- | :--- |
-| curl -fsSL https://omp.sh/install \| sh | macOS / Linux 一键安装脚本 |
-| brew install can1357/tap/omp | macOS Homebrew 安装命令 |
+| 命令                                       | 说明                            |
+| :--------------------------------------- | :---------------------------- |
+| curl -fsSL https://omp.sh/install \| sh  | macOS / Linux 一键安装脚本          |
+| brew install can1357/tap/omp             | macOS Homebrew 安装命令           |
 | bun install -g @oh-my-pi/pi-coding-agent | Bun 安装命令（推荐，需要 bun >= 1.3.14） |
-| irm https://omp.sh/install.ps1 \| iex | Windows PowerShell 一键安装命令 |
-| mise use -g github:can1357/oh-my-pi | mise 锁版本安装命令 |
+| irm https://omp.sh/install.ps1 \| iex    | Windows PowerShell 一键安装命令     |
+| mise use -g github:can1357/oh-my-pi      | mise 锁版本安装命令                  |
 
 ### 2. 配置 Shell 自动补全
 
@@ -185,3 +185,12 @@ OMP 的强大得益于它集成了 31 个内置工具，在此列出核心重点
 - `rewind` / `checkpoint` 是 setting-gated 工具（**默认关闭**），需在配置中启用（如 `~/.omp/agent/config.yml` 或相关设置开启对应工具）后才能在对话中调用。
 - 上下文太满、回复变慢时，最实用的是说 `rewind 压缩前面的过程，保留结论`；想干净重来就开新会话（`omp` 自动建新会话，`--resume` 可回到旧会话）。
 - 压缩不会丢失你明确保留的结论（checkpoint/rewind 会生成一份报告作为新上下文起点）。
+
+
+**关于作者**
+- 大强同学主页：[dqtx.cc](https://www.dqtx.cc/)
+- 大强同学作品集：[os.dqtx.cc](https://os.dqtx.cc/)
+- 大强同学博客：[blog.dqtx.cc](https://blog.dqtx.cc/)
+- 大强同学github：[dqtx760](https://github.com/dqtx760)
+- 大强同学openlist：[dqtx.fly.dev](https://dqtx.fly.dev/)
+

@@ -4,7 +4,10 @@ import { glob } from "astro/loaders";
 // 空集合：阻止 Astro 自动为这些目录创建带默认 loader 的 collection
 const emptyGlob = (dir: string) =>
 	defineCollection({
-		loader: glob({ pattern: "__never_match__/**/*", base: `./src/content/${dir}` }),
+		loader: glob({
+			pattern: "__never_match__/**/*",
+			base: `./src/content/${dir}`,
+		}),
 	});
 
 const postsCollection = defineCollection({

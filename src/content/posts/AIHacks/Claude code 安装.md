@@ -28,7 +28,7 @@ winget install Git.Git
 ```
 
 ### Claude Code
-```Plain
+```text
 npm install -g @anthropic-ai/claude-code
 ```
 
@@ -141,7 +141,7 @@ Claude code在终端使用正常， 但在Obsidian的插件中Claudian对话异�
 ```
 
 MiniMax
-```JSON
+```json
 {
   "env": {
     "ANTHROPIC_BASE_URL": "https://api.minimaxi.com/anthropic",

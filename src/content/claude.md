@@ -245,12 +245,13 @@ obsidian files vault=zhishiku folder="posts/AIHacks"
 
 ## 九、工具链速查
 
-| 用途     | 工具                      |
-|----------|---------------------------|
-| 内容生产 | khazix-writer             |
-| 文章配图 | baoyu-article-illustrator |
-| 封面图   | GPT-Image-2 API           |
-| 图床上传 | PicGo → Gitee             |
-| 飞书操作 | lark-cli                  |
-| 网页抓取 | Agent-Reach               |
-| 笔记管理 | Obsidian CLI              |
+| 用途      | 工具                        |
+| ------- | ------------------------- |
+| 内容生产    | khazix-writer             |
+| 公众号文章封面 | article-cover-16x9        |
+| 文章配图    | baoyu-article-illustrator |
+| 封面图     | GPT-Image-2 API           |
+| 图床上传    | PicGo → Gitee             |
+| 飞书操作    | lark-cli                  |
+| 网页抓取    | Agent-Reach               |
+| 笔记管理    | Obsidian CLI              |

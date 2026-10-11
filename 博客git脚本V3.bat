@@ -62,15 +62,8 @@ if errorlevel 1 (
 
 echo [2/4] 正在准备提交信息...
 echo.
-for /f "tokens=1-6 delims=/-: " %%a in ("%date% %time%") do (
-    set "year=%%c"
-    set "month=%%a"
-    set "day=%%b"
-    set "hour=%%d"
-    set "minute=%%e"
-)
-if %hour% lss 10 set "hour=0%hour%"
-set "default_msg=更新博客 %year%-%month%-%day% %hour%:%minute%"
+rem 中文系统下 %date% 带星期前缀，按分隔符取字段会取错，改用 PowerShell 取时间
+for /f "usebackq tokens=*" %%i in (`powershell -NoProfile -Command "Get-Date -Format 'yyyy-MM-dd HH:mm'"`) do set "default_msg=更新博客 %%i"
 
 set "commit_msg="
 set /p "commit_msg=请输入提交信息（直接按回车使用默认信息）："
@@ -115,8 +108,8 @@ echo  预览地址：http://localhost:4321
 echo  修改文件后网页会实时更新
 echo  按 Ctrl + C 停止开发服务
 echo.
-start "" http://localhost:4321
-npm run dev
+rem --open 让 astro 在服务就绪后再开浏览器（先开浏览器会看到“无法访问”）
+npm run dev -- --open
 echo.
 pause
 goto menu

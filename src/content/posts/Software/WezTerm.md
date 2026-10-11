@@ -19,12 +19,26 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/image-202604
 
 ## 一、先安装 3 个工具
 
-### 1. WezTerm
-   
-    https://wezterm.org/install/windows.html
-    Windows (setup.exe)「推荐」
-    会自动集成在鼠标右键上下文菜单中
-    建议安装默认位置
+### WezTerm
+
+WezTerm 提供两个下载通道，按需选择：
+
+**① 官方正式版（Stable）** —— 官网默认挂着、winget 提供的版本
+
+- 下载页：https://wezterm.org/install/windows.html
+- 点 "Windows (setup.exe)" 即可，会自动集成到鼠标右键上下文菜单，建议安装默认位置。
+- 也可 winget 安装：`winget install wez.wezterm`（winget 只登记 stable 通道）。
+- 当前正式版为 `20240203-110809-5046fc22`，**自 2024-02 起已停止更新**，长期不收 bug 修复。
+
+**② Nightly 每夜构建版（推荐）** —— 开发者每夜从主分支自动打包
+
+- 下载地址（链接固定，文件每天被覆盖更新，可直接收藏）：
+  https://github.com/wezterm/wezterm/releases/download/nightly/WezTerm-nightly-setup.exe
+- 包含 Stable 之后的所有新特性与修复，WezTerm 社区与重度用户普遍使用。
+- 安装后 WezTerm 自带更新检查，有新构建时会主动提示，无需手动反复下载。
+- 校验文件地址：在上面的链接后加 `.sha256`。
+
+> 本文作者当前使用的是 Nightly 通道。
 
 ###  Nushell二进制文件
    
@@ -95,17 +109,16 @@ starship preset pastel-powerline -o ~/.config/starship.toml
 - 默认启动 NuShell，并提供 NuShell、PowerShell、Cmd 的快速启动菜单。
 - 字体使用 CaskaydiaCove Nerd Font，大小为 14，适合编程和阅读。
 - 启动时窗口自动居中显示，初始大小为 120 列 × 40 行，关闭窗口时不提示确认。
-- 该终端工具启动时将自动打开4个标签页并分别运行对应智能体：标签1执行`qwen -y`，标签2执行`claude --dangerously-skip-permissions`，标签3启动`gemini`，标签5为普通Shell。
-- 4 个标签页都有清晰标题
+- 启动时自动打开 1 个 Shell 标签页（标题为 Shell），其余标签按需自行新建。
 
 **鼠标操作优化：**
-- 右键：智能处理，有选中文字时自动复制并清除选中，无选中时直接粘贴。
+- 右键：直接粘贴剪贴板内容。**Shift + 右键**：复制当前选中文字。
 - 普通左键点击和拖拽：用于正常选中文字。
 - Shift + 左键拖拽：安全选中文字模式，推荐在 Qwen Code 等 AI 聊天工具中使用，可有效避免选中时打断输出（Request cancelled）或自动跳回底部的问题。
 - Ctrl + 左键拖拽：用于拖动整个窗口，无需按住其他额外按键即可移动窗口。
 
 **快捷键：**
-- 支持 Ctrl + t 新建标签页、Ctrl + w 关闭当前面板、Alt + w 关闭当前标签页。
+- 支持 Ctrl + t 新建标签页、Ctrl + w 退出整个 WezTerm 应用、Alt + w 关闭当前标签页。
 - 支持 Alt + Shift + 方向键进行面板分割，Ctrl + 方向键切换面板。
 - 支持 Ctrl + 1~8 快速切换标签页。
 - Ctrl + u 清空当前行。
@@ -118,7 +131,7 @@ starship preset pastel-powerline -o ~/.config/starship.toml
 
 **后续标签增删话术**
 ```
-C:\Users\Administrator\.wezterm.lua把启动区块从 4 个标签改成 3 个，并按顺序：Claude → Qwen → Shell。
+C:\Users\Administrator\.wezterm.lua：在 gui-startup 的启动区块里增删 spawn_window / set_title，即可调整启动标签数量与顺序，例如改成 Claude → Qwen → Shell。
 ```
 
 #### 快捷键总览
@@ -126,7 +139,7 @@ C:\Users\Administrator\.wezterm.lua把启动区块从 4 个标签改成 3 个，
 | 快捷键               | 功能说明                      |
 | ----------------- | ------------------------- |
 | `Ctrl + t`        | 新建标签页 (SpawnTab)          |
-| `Ctrl + w`        | 关闭整个窗口 (CloseCurrentPane) |
+| `Ctrl + w`        | 退出整个应用 (QuitApplication)    |
 | `Alt + w`         | 关闭当前标签页 (CloseCurrentTab) |
 | `Ctrl + u`        | 清空当前行 (Send Ctrl+U)       |
 | `Alt + Shift + →` | 水平分割面板 (SplitHorizontal)  |
@@ -148,7 +161,8 @@ C:\Users\Administrator\.wezterm.lua把启动区块从 4 个标签改成 3 个，
 
 | 操作                          | 功能说明                                      |
 |-------------------------------|-----------------------------------------------|
-| 右键单击                      | 有选中文字 → 复制并清除选中<br>无选中 → 粘贴 |
+| 右键单击                      | 直接粘贴剪贴板内容                            |
+| Shift + 右键单击              | 复制当前选中文字                              |
 | 左键点击 + 拖拽               | 正常选中文字                                  |
 | **Shift + 左键拖拽**          | 安全选中文字（推荐用于 Qwen 聊天，避免打断输出） |
 | **Ctrl + 左键拖拽**           | 拖动窗口                                      |
@@ -160,7 +174,7 @@ C:\Users\Administrator\.wezterm.lua把启动区块从 4 个标签改成 3 个，
 ## 四、常见问题（Q&A）
 
 **Q1：右键为什么有时候复制，有时候粘贴？**  
-A1：右键采用了智能逻辑。如果当前有选中文字，右键会自动复制并清除选中；如果没有选中文字，右键则直接粘贴剪贴板内容。这样使用更方便。
+A1：右键本身只做粘贴（直接粘贴剪贴板内容）。你看到的「复制」其实是 **Shift + 右键** 的绑定——它负责复制当前选中文字。两者分开：右键 = 粘贴，Shift + 右键 = 复制，并不存在「智能判断」。
 
 **Q2：在 Qwen Code 等 AI 聊天时，选中文字经常出现 “Request cancelled” 怎么办？**  
 A2：这是因为程序开启了鼠标报告模式。解决方法是按住 **Shift** 键，再用左键拖拽选中文字。这样可以绕过鼠标报告，避免打断 AI 输出。
@@ -175,7 +189,7 @@ A4：因为 AI 聊天工具会捕获鼠标事件。推荐始终使用 **Shift + 
 A5：使用快捷键 `Ctrl + 1` 到 `Ctrl + 8` 可以快速切换到对应的标签页。
 
 **Q6：背景图片不显示或太亮/太暗怎么办？**  
-A6：检查图片路径是否正确（当前路径为 D:/data/images/meinv.png）。可以调整 background 中的 opacity 值（当前为 0.85），数值越小*背景越透明*。
+A6：检查图片路径是否正确（当前路径为 D:/data/images/meinv.png）。可以调整 background 中的 opacity 值（当前为 1.5），数值越小*背景越透明*。
 
 **Q7：配置修改后没有生效怎么办？**  
 A7：按快捷键 `Ctrl + Shift + R` 重新加载配置。如果仍然无效，请完全关闭 WezTerm 后再重新打开。

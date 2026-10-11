@@ -5,6 +5,7 @@ published: 2026-08-22
 tags: []
 category: AIHacks
 draft: false
+pinned: false
 ---
 
 为了庆祝 Codex 本周活跃用户突破 2000 万，Tibo 这位“Reset 圣人”在 8 月 21 日宣布，会向 Codex 和 ChatGPT Work 付费用户发放一次可储存的 BANKED 重置。

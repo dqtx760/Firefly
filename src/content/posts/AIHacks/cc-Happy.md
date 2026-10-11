@@ -46,7 +46,7 @@ https://github.com/slopus/happy
 
 PowerShell运行如下安装命令
 
-```Plain
+```text
 npm install -g happy-coder
 ```
 
@@ -54,7 +54,7 @@ npm install -g happy-coder
 
 安装完成后，以后启动 Claude Code 时，把`claude`命令换成`happy`就行了。
 
-```Plain
+```text
 happy      # 启动Claude
 # 或者
 happy codex  # 启动Codex

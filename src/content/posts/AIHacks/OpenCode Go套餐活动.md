@@ -6,6 +6,7 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/cover-deepse
 tags: []
 category: AIHacks
 draft: false
+pinned: false
 ---
 DeepSeek API 马上要涨价了，这波大家应该都知道了。
 

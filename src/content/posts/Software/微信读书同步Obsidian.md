@@ -81,7 +81,7 @@ category: 分类
 
 举个例子，你可以建一个 Dataview 面板：
 
-```dataview
+```text
 TABLE author, readingTime
 FROM "Weread"
 SORT readingTime DESC

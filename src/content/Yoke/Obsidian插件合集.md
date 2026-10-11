@@ -41,6 +41,9 @@ AI助手集成，与Claude、Codex对话
 
 强大的数据查询和动态列表功能
 
+### Immersive Folder
+
+文件夹管理，让你保持专注
 ### Custom Attachment Location 
 
 把本地图片的格式标准成一个Markdown的语法，进行统一管理
@@ -158,7 +161,6 @@ https://mp.weixin.qq.com/s/4SEsM-AWoEhPXiD49oNB9g
 ### Excalidraw
 
 手绘风格的白板绘图工具
-
 
 
 ### Notebook Navigator

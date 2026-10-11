@@ -24,7 +24,7 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/202605201812
 2. 是否重命名附件文件→开启✅
 3. Markdown URL格式填写（位置在插件页底部位置）
 
-```Plain
+```text
 assets/${noteFileName}/${generatedAttachmentFileName}
 ```
 

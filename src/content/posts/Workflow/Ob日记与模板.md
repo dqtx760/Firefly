@@ -72,7 +72,7 @@ Dataview是 Obsidian 里的“智能检索 + 数据统计工具”
 
 **今日新建**
 
-```dataview
+```text
 table without id
   file.folder as "分类",
   file.link as "笔记"
@@ -82,7 +82,7 @@ sort file.folder, file.name asc
 
 **今日修改**
 
-```dataview
+```text
 list
 where file.mday = date("{{date}}")
 sort file.mtime asc

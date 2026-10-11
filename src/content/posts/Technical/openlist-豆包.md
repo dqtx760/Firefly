@@ -26,7 +26,7 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/202511301523
 
 搜索关键词
 
-```Plain
+```text
 sid_guard
 ```
 
@@ -44,7 +44,7 @@ OpenList 挂载豆包网盘，需要指定访问目录。
 
 这个用于挂载整个网盘，进入文件夹，再出来，再进去，搜索
 
-```Plain
+```text
 root_id
 ```
 

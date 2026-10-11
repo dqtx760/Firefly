@@ -28,7 +28,7 @@ export function getStaticPaths() {
 	collectSlugs(tree);
 
 	return [
-		{ params: { slug: "" } },  // /wiki/ → index
+		{ params: { slug: "" } }, // /wiki/ → index
 		...slugs.map((slug) => ({
 			params: { slug },
 		})),

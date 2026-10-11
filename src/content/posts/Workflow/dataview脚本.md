@@ -45,7 +45,7 @@ Obsidian 自带搜索虽好用，但没法把结果固定在笔记里形成动�
 
 原生搜索做不到的 “结果留存” 它能实现，还能给不同核心项目建专属 “搜索看板笔记”。
 
-````dataviewjs
+````javascript
 ```dataviewjs
 // 1. 设置你要搜索的关键词（测试成功后可换回 Templater 标签）
 const prompt = "chrome";  
@@ -96,7 +96,7 @@ if (results.length > 0) {
 
 借助 DataviewJS 的双向绑定属性，完美契合 GTD（搞定一切）的做事理念。
 
-````dataviewjs
+````javascript
 ```dataviewjs
 // 1. 弹窗输入任务关键词 (留空直接回车则显示所有未完成任务)
 const keyword = "<% tp.system.prompt('搜索未完成任务的关键词 (留空则显示所有):') %>";
@@ -128,7 +128,7 @@ if (tasks.length > 0) {
 
 结合 luxon 时间库，能精准复盘个人知识产出节奏，是写复盘报告的神器。。
 
-````dataviewjs
+````javascript
 ```dataviewjs
 // 1. 弹窗询问天数，默认值为 7
 const daysInput = "<% tp.system.prompt('查看最近几天修改过的笔记？(输入数字)', '7') %>";
@@ -172,7 +172,7 @@ if (isNaN(days)) {
 
 自动扫描全库，找出所有真实字符数低于你设定阈值的笔记，让你批量处理或补充内容。用 trim() 过滤无意义空格和换行，比系统自带的文件大小排序精准得多，强迫症必备。
 
-````dataviewjs
+````javascript
 ```dataviewjs
 // 1. 弹窗询问字数阈值，默认 50 个字符
 const minLengthInput = "<% tp.system.prompt('查找字符数少于多少的笔记？', '50') %>";
@@ -219,7 +219,7 @@ if (results.length > 0) {
 
 真正践行卢曼卡片盒笔记法 “发现意外连接” 的核心，让死知识 “活” 起来
 
-````dataviewjs
+````javascript
 ```dataviewjs
 // 1. 弹窗询问抽取几条随机笔记 (默认抽 3 条)
 const countInput = "<% tp.system.prompt('想要碰撞几个随机灵感？(输入数字)', '3') %>";
@@ -264,7 +264,7 @@ Obsidian 的灵魂是双向链接，但经常只记录不整理的话，很多�
 
 从宏观视角给知识库 “体检”，促使我们从单纯的知识 “收集者” 变成 “编织者”，最大化知识的复利效应。
 
-````dataviewjs
+````javascript
 ```dataviewjs
 // 1. 弹窗确认是否扫描（可以用来做简单的交互确认）
 const confirm = "<% tp.system.prompt('输入 Y 开始扫描全局孤岛笔记：', 'Y') %>";

@@ -137,7 +137,7 @@ AutoHotkey提供了专门的编译工具：
 
 Python可以使用pyinstaller工具进行资源分配：
 
-```custom
+```bash
 **安装打包工具**
 pip install pyinstaller
 

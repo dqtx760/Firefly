@@ -1,3 +1,46 @@
+### 2026/09/15  最近常用
+### 飞书知识库
+codex实战手册
+https://xodnytdcaw.feishu.cn/wiki/VY48wXqeWiAgGvk6tpMc1WQmneN?fromScene=spaceOverview
+
+
+
+### 飞书教程
+
+自助充zhi兑换教程
+https://xodnytdcaw.feishu.cn/docx/D5swdrD1KoTpWgxVJ96cexeInUc?from=from_copylink
+
+如何加入「ChatGpt实战手册」知识库
+https://xodnytdcaw.feishu.cn/docx/N0pCd4G4poHgOexf7O5c8hbVnBe?from=from_copylink
+
+Codex安装到登录使用指南！
+https://xodnytdcaw.feishu.cn/docx/ERgHdMhMkomsi2xSv6mchKlYnqd?from=from_copylink
+
+Codex半年更新与进阶玩法
+https://xodnytdcaw.feishu.cn/docx/MBOMdhqxIocokKxgLqUcRRQenCd?from=from_copylink
+
+GPT会员套餐对比
+https://xodnytdcaw.feishu.cn/wiki/F7fbwwE4IibEKFk57X4caGcVnXf?from=from_copylink
+
+muse教程---已和谐
+https://xodnytdcaw.feishu.cn/docx/Wkdjdgr9soecdfxkGV5cvHwpn4f
+
+### notion文档
+
+GitHub 趋势榜日报
+https://app.notion.com/p/GitHub-3ef351994e4081a8827ae6c2e2a72b08
+​
+Reddit r/MuseAgent 社区收集的 25 个 Muse 真实使用案例​
+https://app.notion.com/p/d6f4c66229284cadb1b438e817fa9c31?v=2b7393fc24274a09b58271b52a2aa56a​
+​
+我用muse生成的使用案例​
+https://app.notion.com/p/007fd71350964a88afc61c459b3b4e87?v=afa4c1a91ff84e7cb4cf51a8fa234579  多维表格​
+https://app.notion.com/p/Muse-167-3e9351994e4081839052d6b3f44cf3f8  文档​
+网友用muse生成的使用案例​
+https://muse.ai/s/muse-use-cases-xuxf6fkdeq4oxw​
+
+
+
 
 ### 云文档
 

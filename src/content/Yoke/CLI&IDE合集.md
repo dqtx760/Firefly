@@ -1,19 +1,70 @@
 
+### 海外模型厂商自研通用大模型对话客户端
 
-### 一、AI IDE/GUI 形态
+| 公司        | 桌面版                                           | cli版本                                         | 订阅套餐                                         |
+| --------- | --------------------------------------------- | --------------------------------------------- | -------------------------------------------- |
+| Anthropic | [Claude Desktop](https://claude.com/download) | Claude Code                                   | Claude Pro、Claude Max 5X                     |
+| OpenAI    | [ChatGPT](https://claude.com/download)        | codex                                         | ChatGPT Go/Plus、pro5x/20X                    |
+| Google    | [Antigravity](https://antigravity.google/)    | gemini                                        | Google AI Plus、Google AI Pro、Google AI Ultra |
+| SpaceXAI  | [Grok Bot](https://x.ai/bot)                  | [grok](https://github.com/RongleCat/grok-app) | Super Grok/Plus/Heavy                        |
 
-- **Claude Desktop**（官方桌面客户端）→ https://claude.com/download
-- Codex→ https://chatgpt.com/zh-Hans-CN/codex/
-- grok-app→ https://github.com/RongleCat/grok-app
-- **Antigravity**（新兴AI IDE，轻量智能）-----[Antigravity](../posts/AIHacks/Antigravity.md)
+### 国内模型厂商自研通用大模型对话客户端
 
-- **WorkBuddy**(腾讯云 全场景 AI 智能体工作台 )----[WorkBuddy](../posts/AIHacks/WorkBuddy.md)  新手送30天
-- **Qoder work**（阿里系，中文项目友好）----[阿里Qoder](../posts/AIHacks/阿里Qoder.md)       羊毛：送30天专业版，包括一些积分,可用qwen3.8 max
-- ZCode---- [ZCode](https://zcode.z.ai/en)  智谱出品新人送额度
+| 厂商           | 自研模型系列       | 通用对话桌面客户端            | 编程/办公桌面客户端                                                                               | 官方 CLI                  | C 端订阅/付费                            | 移动端     | API开放平台                                                    |
+| ------------ | ------------ | -------------------- | ---------------------------------------------------------------------------------------- | ----------------------- | ----------------------------------- | ------- | ---------------------------------------------------------- |
+| **字节跳动**     | 豆包 / Seed 系列 | ✅ 豆包/豆包工作/飞书         | ✅ Trae（AI IDE）                                                                           | ❌ 无官方豆包 CLI             | 豆包标准/加强/高级套餐                        | APP     | [火山方舟](https://www.volcengine.com/product/ark)             |
+| **腾讯**       | 混元系列         | ✅ 元宝 / WorkBuddy     | —                                                                                        | ✅ `codebuddy`（wb）       | WorkBuddy 体验/标准/高级/旗舰版              | APP、小程序 | [腾讯云混元大模型](https://cloud.tencent.com/product/hunyuan)      |
+| **月之暗面**     | Kimi 系列      | ✅ Kimi 桌面版           | —                                                                                        | ✅ `kimi`（Kimi Code CLI） | Andante/Moderato/Allegretto/Allegro | APP、小程序 | [月之暗面 Moonshot](https://platform.moonshot.cn)              |
+| **阿里巴巴**     | 通义千问 / Qwen  | ✅ 通义千问桌面版            | ✅ [千问办公](https://www.qianwenai.com/agents/qwenwork)（原 [QoderWork](https://qoder.com/zh)） | ✅ `qwen-code`           | Qwen Code Coding Plan / Token Plan  |         | [阿里云百炼](https://dashscope.aliyun.com/)                     |
+| **百度**       | 文心一言 / 文小言   | ✅ 文心一言桌面端            | —                                                                                        | ❌ 无官方 CLI               | **2025.4 起全面免费**（原专业版已取消）           |         | [百度智能云千帆](https://qianfan.baidu.com/)                      |
+| **智谱 AI**    | GLM 系列       | ✅ 智谱清言桌面版            | ✅ ZCode（编程 ADE）                                                                          | ❌ 无官方 CLI               | 连续包月/高档会员/GLM Coding Plan           |         | [智谱AI开放平台](https://open.bigmodel.cn)                       |
+| **科大讯飞**     | 星火系列         | ✅ 星火桌面端              | —                                                                                        | ❌ 无官方 CLI               | 星火会员                                |         | [科大讯飞星火开放平台](https://xinghuo.xfyun.cn/openapi)             |
+| **阶跃星辰**     | Step 系列      | ✅ StepClaw（阶跃龙虾桌面伙伴） | —                                                                                        | ❌ 无官方 CLI               | 订阅制                                 |         | [阶跃星辰开放平台](https://platform.stepfun.com)                   |
+| **MiniMax**  | abab / 海螺    | ✅ 海螺 AI 桌面端          | —                                                                                        | ❌ 无官方 CLI               | 订阅/应用内购买                            |         | [MiniMax开放平台](https://api.minimax.chat)                    |
+| **华为**       | 盘古系列         | ✅ 盘古助手桌面端（政企）        | —                                                                                        | ❌ 无官方 CLI               | 企业授权                                |         | [华为云盘古大模型](https://www.huaweicloud.com/product/pangu.html) |
+| **小米**       | MiMo 系列      | ❌ 无独立桌面版             | —                                                                                        | ✅MiMo Code              | Token Plan（Credit 点数体系）             |         | [小米Mimo开放平台](https://platform.xiaomimimo.com)              |
+| **DeepSeek** | DeepSeek 系列  | ❌ 无官方桌面版             | —                                                                                        | ✅ `dsh`（开源）             | **C 端全免费**                          |         | [DeepSeek开放平台](https://platform.deepseek.com)              |
+| **零一万物**     | Yi 系列        | ❌ 无 C 端桌面版           | —                                                                                        | ❌ 无官方 CLI               | B 端企业授权                             |         | [零一万物开放平台](https://platform.lingyiwanwu.com)               |
 
-- **Cursor**（最火，综合最强，个人首选）
-- **Windsurf**（原Codeium，体验好、多模型）
-- **Trae**（字节，中文适配最强、免费）
+
+
+
+**洞察**
+
+- 办公：
+	- 国内：Workbuddy、飞书豆包办公、千问办公
+	- 海外：codex、Grok Bot、Claude code（Clauddian插件）
+	- 模型：deepseek-v4-flash、qwen3.8-max、deepseek-v4-pro
+- 编程：
+	- 客户端：ZCode、QoderWork、Trae、Antigravity、zed   其他：reasonix、Cindy、CodePilot
+	- 命令行cli：OMP、kimi cli、qwen code、DeepSeek harness
+	- 模型：gpt-6-astra、Gemini 3.8 Flash、grok-4.6、gpt-5.6-sol、Kimi-K3、GLM-5.3-Flash
+
+选择建议：
+1. 不差预算就用最好的，想省钱就权衡利弊
+2. 综合方面桌面版推荐codex或Workbuddy，Codex 独有的 Computer Use / Browser Use 相关能力,Workbuddy国内非常完善的连接器技能生态
+3. 喜欢命令行推荐OMP，pi agent重构版，无比节省token
+
+我在用那些模型：
+- 日常免费模型：Hy4 preview、Hy3、step-3.7-flash
+- 日常对话：豆包、kimi、grok、gpt
+- 项目维护:Gemini 3.8 Flash、GLM-5.3-Flash  
+- 项目计划：gpt-6-astra、gpt-5.6-sol
+
+
+### AI 编程 IDE/编辑器
+
+| 产品名称                           | 开发公司                | 桌面版                           | CLI 版本                   | 订阅套餐                               | 支持底层模型                                      | 备注                        |
+| ------------------------------ | ------------------- | ----------------------------- | ------------------------ | ---------------------------------- | ------------------------------------------- | ------------------------- |
+| **Cursor**                     | Anysphere           | Cursor 编辑器                    | `cursor-agent`           | Hobby / Pro / Pro+ / Ultra / Teams | Claude、GPT、Gemini、Grok、DeepSeek、Composer 自研 | 2026 年推出官方 CLI            |
+| **Zed**                        | Zed Industries      | Zed 编辑器                       | `zed`（编辑器启动器，非 AI Agent） | 免费开源                               | OpenAI、Anthropic、Gemini 等                   | 通过 ACP 接入外部 Agent         |
+| **Continue**                   | Continue Dev        | VS Code / JetBrains 插件        | `cn`（`@continuedev/cli`） | 开源免费为主                             | 几乎全量模型                                      | **2026.6 已停止开发**          |
+| **Windsurf / Devin Desktop**   | Codeium → Cognition | Windsurf 编辑器（现 Devin Desktop） | —                        | Free / Pro / Teams / Max           | Claude、GPT、Gemini、SWE-1 自研                  | 2026.6 已更名为 Devin Desktop |
+| **Trae**                       | 字节跳动                | Trae Code / Trae Work         | —                        | 免费版 + 付费档位                         | 豆包、Claude、GPT                               | 国产 AI IDE                 |
+| [Zcode](https://zcode.z.ai/en) | 智谱 AI               |                               |                          |                                    |                                             |                           |
+
+
+个人开发者
 
 - **Hermes Agent**→ https://hermes-agent.nousresearch.com/
 - OpenWorker→ https://openworker.com/   吴恩达老师开发 
@@ -21,14 +72,12 @@
 - Cindy →    https://cindy.app/
 - Reasonix→ https://reasonix.io/
 - **CodePilot**（桌面端AI编程助手）----[CodePilot](../posts/AIHacks/CodePilot.md)
-
-- **Zed**（高性能编辑器+AI，速度极快）----- [Zed](../posts/AIHacks/Zed.md)
-- Kun(国产Codex)→ https://deepseek-gui.com/
 - **WorkAny**（多场景AI工作台）-------------------[WorkAny](../posts/AIHacks/WorkAny.md)
 - **Craft Agents**（可视化Agent编排）------------------
 - open-connector→ https://github.com/oomol-lab/open-connector
 - **oh-my-openagent**（GUI 管理 OpenClaw 系）
 - **claude-desktop-cn**（Claude 桌面版汉化）------------------
+
 
 
 ### 二.、传统 IDE + AI 插件

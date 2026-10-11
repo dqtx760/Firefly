@@ -306,7 +306,7 @@ Change only what the plan names. A drive-by refactor is work I didn't order. Cod
 Codex 会自动判断哪些子任务可以并行，派出 subagent 分头执行。
 一句话，让 AI 主动提效。
 
-```Plain
+```text
 Use sub agents as needed
 ```
 

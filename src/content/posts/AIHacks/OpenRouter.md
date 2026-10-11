@@ -16,7 +16,6 @@ image: https://gitee.com/da-qiang-classmate/typora/raw/master/image/202604282320
 OpenRouter 提供了免费模型，CC Switch 让你一键把这些模型接入 Claude Code，不用手动改配置文件，全程可视化操作。
 
 ```
-```*
 OpenRouter（免费模型 Ling-2.6-1T）
         ↓
   CC Switch（可视化管理 + 一键切换）

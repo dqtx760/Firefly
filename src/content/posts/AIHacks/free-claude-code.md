@@ -67,7 +67,7 @@ uv sync
 
 ### 第四步：配置 .env 文件
 
-```env
+```dotenv
 NVIDIA_NIM_API_KEY="nvapi-你的Key"
 
 # 模型映射：所有 Claude 模型都映射到这里
@@ -175,7 +175,7 @@ NVIDIA NIM 免费层 40 次/分钟，对于日常开发完全够用。复杂任�
 
 1. 编辑 `D:\project2026\free-claude-code\.env`
 2. 修改 `MODEL` 的值：
-   ```env
+   ```dotenv
    MODEL="nvidia_nim/z-ai/glm-5.1"      # GLM-5.1
    MODEL="nvidia_nim/minimaxai/minimax-m2.7"  # MiniMax M2.7
    MODEL="nvidia_nim/moonshotai/kimi-k2-thinking"  # Kimi K2

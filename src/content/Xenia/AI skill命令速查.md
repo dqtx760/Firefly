@@ -15,6 +15,7 @@
 | /find-skills             | 发现和安装新技能                       |              |
 | /采集                      | 采集短视频评论并AI分析用户痛点和内容选题          |              |
 | /agently-mail            | 操作邮件/管理收件箱。                    |              |
+| /dqtx-WeFlow-Daily       | 指定微信群名，通过 WeFlow 读取聊天记录生成固定模板 HTML 群聊日报 | 2026/10/03   |
 
 其他相关工具补充
 - jike-web-cli
@@ -136,6 +137,7 @@ excalidraw / mermaid / Obsidian Canvas 三件套（axton-obsidian-visual-skills�
 | /install-to-central <url> | 从GitHub安装技能到中央仓库      |
 | /find-skills              | 找技能                   |
 | /project-cairn            | 把项目工作沉淀为可复用的知识。       |
+| /yao-meta-skill           | 技能工程元技能：创建/优化/评测 skill，含打包发布与 trigger 评测 |
 
 image-vision  MCP 识图 
 
@@ -292,7 +294,7 @@ Eva-skill（路由）
 | hyperframes-registry   | HyperFrames注册表    |
 
 
-> 最后更新：2026-08-23（新增 gbro-cover-design）
+> 最后更新：2026-10-03（新增 dqtx-WeFlow-Daily）
 
 
 ---

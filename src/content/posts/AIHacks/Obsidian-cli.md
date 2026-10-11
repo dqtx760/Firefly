@@ -46,19 +46,19 @@ Obsidian会自动将CLI二进制文件添加到系统PATH。
 
 打开新的PowerShell终端窗口，运行：
 
-```PowerShell
+```powershell
 obsidian version
 ```
 
 成功输出类似：
 
-```Plain
+```text
 Obsidian CLI 1.12.4
 ```
 
 ### 第四步（如果提示command not found）
 
-```PowerShell
+```powershell
 # 手动添加到当前会话
 $env:PATH += ";$env:LOCALAPPDATA\Programs\Obsidian\"
 
@@ -72,7 +72,7 @@ obsidian version
 
 1. ### 浏览笔记库（TUI模式）
 
-```PowerShell
+```powershell
 obsidian
 ```
 
@@ -80,7 +80,7 @@ obsidian
 
 1. ### 打开今日日记
 
-```PowerShell
+```powershell
 obsidian daily
 ```
 
@@ -88,7 +88,7 @@ obsidian daily
 
 1. ### 全文搜索
 
-```PowerShell
+```powershell
 obsidian search query="PKM"
 ```
 
@@ -96,7 +96,7 @@ obsidian search query="PKM"
 
 1. ### 快速捕获想法
 
-```PowerShell
+```powershell
 obsidian daily:append content="突然想到一个绝妙的主意"
 ```
 
@@ -104,7 +104,7 @@ obsidian daily:append content="突然想到一个绝妙的主意"
 
 1. ### 查看笔记库统计
 
-```PowerShell
+```powershell
 obsidian files total
 obsidian tags sort=count
 ```
@@ -115,7 +115,7 @@ obsidian tags sort=count
 
 ### 高级搜索
 
-```PowerShell
+```powershell
 # 按标签搜索
 obsidian search query="[tag:publish]"
 
@@ -128,7 +128,7 @@ obsidian search query="meeting" format=json
 
 ### 文件操作
 
-```PowerShell
+```powershell
 # 创建新笔记
 obsidian create name="新笔记" content="# 标题`n内容"
 
@@ -141,7 +141,7 @@ obsidian properties:set file="项目A" status=active type=text
 
 ### 任务管理
 
-```PowerShell
+```powershell
 # 查看所有待办
 obsidian tasks
 
@@ -164,7 +164,7 @@ obsidian task:complete task=任务ID
 
 **步骤2：创建插件目录**
 
-```Plain
+```text
 你的笔记库/.obsidian/plugins/claudian/
 ```
 
@@ -180,7 +180,7 @@ obsidian task:complete task=任务ID
 
 ### 案例1：知识库研究员
 
-```Plain
+```text
 > 搜索我笔记库里所有关于"第二大脑"的内容，总结出5个核心要点
 ```
 
@@ -192,7 +192,7 @@ AI会：
 
 ### 案例2：写作助手
 
-```Plain
+```text
 > 把我上周的日记里有价值的内容整理成一篇800字的公众号文章
 ```
 
@@ -204,49 +204,49 @@ AI会：
 
 ### 案例3：任务梳理
 
-```Plain
+```text
 > 列出我笔记库里所有标记为[status:pending]的任务，按优先级排序
 ```
 
 ### 案例4：批量重命名标签
 
-```Plain
+```text
 > 把所有笔记里的 #会议 标签改成 #例会
 ```
 
 ### 案例5：信息聚合
 
-```Plain
+```text
 > 搜索最近30天创建的笔记，提取所有链接，生成一个知识图谱总结
 ```
 
 ### 案例6：内容改写
 
-```Plain
+```text
 > 读取"投资笔记"，把它改写成适合发小红书的版本，保持核心观点但语言更口语化
 ```
 
 ### 案例7：周报自动生成
 
-```Plain
+```text
 > 读取我本周的日记和工作笔记，生成一份周报，包含：本周完成事项、待办事项、学习收获
 ```
 
 ### 案例8：碎片整理
 
-```Plain
+```text
 > 扫描Inbox文件夹下所有笔记，把相似主题的整理到一起，生成一个主题索引
 ```
 
 ### 案例9：深度研究
 
-```Plain
+```text
 > 我想了解"AI笔记"这个主题，先搜索我笔记库里所有相关内容，然后列出我还缺什么角度
 ```
 
 ### 案例10：数据库查询
 
-```Plain
+```text
 > 搜索所有包含"价格"关键词的笔记，提取其中的数字信息，生成一个对比表格
 ```
 

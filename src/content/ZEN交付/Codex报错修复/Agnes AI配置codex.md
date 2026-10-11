@@ -28,7 +28,8 @@ https://apihub.agnes-ai.com/v1
 
 ##### CC Switch
 
-> 注意确认 **Codex 路由已启用**，一定要在「路由映射」添加模型，CC Switch本地把 Codex 的 Responses 请求翻译成 Chat Completions 请求，再发给 Agnes AI
+> 注意确认 **Codex 路由已启用**，一定要在「路由映射」添加模型,现在要添加2.5（2.0已弃用）
+> CC Switch本地把 Codex 的 Responses 请求翻译成 Chat Completions 请求，再发给 Agnes AI
 
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20260813171847590.webp)
 

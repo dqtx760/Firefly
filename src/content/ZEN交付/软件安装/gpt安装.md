@@ -31,3 +31,11 @@ https://mp.weixin.qq.com/s/a1ZFvg29EFFFX45dqquH4Q
 谷歌邮件转发设置
 检查是否存在陌生转发地址，第一时间将其删除或修改为您自己的其他邮箱，确保后续验证码不被截获。
 https://mail.google.com/mail/u/0/#settings/fwdandpop
+
+
+
+无法使用谷歌三件套的，可以使用这个 MicroG-RE
+https://github.com/MorpheApp/MicroG-RE/releases
+
+华为手机获取 Google Play 安装方案 (2026版)
+https://appark.ai/cn/huawei-harmonyos-google-play

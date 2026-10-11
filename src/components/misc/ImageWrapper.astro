@@ -31,7 +31,7 @@ if (isLocal) {
 	const files = import.meta.glob<ImageMetadata>(
 		"../../**/*.{avif,gif,jpeg,jpg,png,svg,webp}",
 		{
-		import: "default",
+			import: "default",
 		},
 	);
 	let normalizedPath = path
