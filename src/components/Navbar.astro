@@ -18,7 +18,7 @@ let links: NavBarLink[] = navBarConfig.links.map(
 		return item;
 	},
 );
-const moreLinkNames = ["OpenList", "作品集", "远程服务", "友链", "赞助"];
+const moreLinkNames = ["OpenList", "作品集", "远程服务", "友链", "羊毛雷达", "赞助"];
 const moreLinks = moreLinkNames
 	.map((name) => links.find((link) => link.name === name))
 	.filter((link): link is NavBarLink => link !== undefined);

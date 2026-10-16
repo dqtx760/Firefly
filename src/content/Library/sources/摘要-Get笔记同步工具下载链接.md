@@ -16,5 +16,5 @@ last_updated: 2026-05-27
 
 ## 关联连接
 
-- [[get-to-obsidian]] — 工具实体，本文为其补充下载渠道
+- [[../entities/get-to-obsidian]] — 工具实体，本文为其补充下载渠道
 - [[Get笔记]] — 该工具同步的数据来源

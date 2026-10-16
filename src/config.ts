@@ -58,8 +58,8 @@ export const siteConfig: SiteConfig = {
 	favicon: [
 		// Leave this array empty to use the default favicon
 		{
-			src: "/avatar.jpg",
-			sizes: "32x32",
+			src: "/favicon/avatar-profile.png",
+			sizes: "224x224",
 		},
 	],
 	officialSites: [
@@ -109,6 +109,11 @@ export const navBarConfig: NavBarConfig = {
 		{
 			name: "OpenList",
 			url: "https://dqtx.fly.dev/",
+			external: true,
+		},
+		{
+			name: "羊毛雷达",
+			url: "https://free.dqtx.cc/",
 			external: true,
 		},
 		{

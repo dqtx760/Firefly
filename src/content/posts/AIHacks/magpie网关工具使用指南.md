@@ -28,5 +28,10 @@ https://usemagpie.ai/zh/
 
 ![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20261011164856347.webp)
 
+开启Workbuddy自动签到
+
+![](https://gitee.com/da-qiang-classmate/typora/raw/master/image/20261014125521818.webp)
+
+
 ### 类似的工具
 https://github.com/lidge-jun/opencodex

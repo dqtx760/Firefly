@@ -95,7 +95,7 @@
 - [[wechat-claude-code]] — 微信使用 Claude Code 的开源方案
 - [[Superpowers]] — Claude Code 增强功能
 - [[ClawBot]] — 微信 Bot 框架
-- [[get-to-obsidian]] — Get 笔记同步到 Obsidian 的工具
+- [[entities/get-to-obsidian]] — Get 笔记同步到 Obsidian 的工具
 - [[Craft Agent]] — 免费开源 AI 工作工具，面向普通用户
 - [[Astron-Coding-Plan]] — 讯飞星辰低价 Coding Plan
 - [[iOS快捷指令]] — iOS 内置自动化工具，7 种触发方式
@@ -117,7 +117,7 @@
 - [[Get笔记]] — Get 笔记插件
 - [[Obsidian]] — Obsidian 笔记软件
 - [[数字月牙湖]] — 数字乡村网站项目
-- [[拆解一切问题]] — 横田尚哉著作
+- [[entities/拆解一切问题]] — 横田尚哉著作
 - [[Flow_CLI]] — 命令行 AI 智能助手，永久免费
 - [[ShareX]] — Windows 多区域截图加特效工具
 - [[Resource_Hacker]] — Windows 资源编辑/软件汉化工具

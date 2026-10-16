@@ -56,7 +56,7 @@ C:\Users\Administrator\AISkills\UpdateCheck\SKILL.md
 - [AI SKILL-内容创作](Xenia/AI%20SKILL-%E5%86%85%E5%AE%B9%E5%88%9B%E4%BD%9C.md)
 - [爆款视频拆解](Xenia/%E7%88%86%E6%AC%BE%E8%A7%86%E9%A2%91%E6%8B%86%E8%A7%A3.md)
 - [任务待办收集箱](Xenia/%E4%BB%BB%E5%8A%A1%E5%BE%85%E5%8A%9E%E6%94%B6%E9%9B%86%E7%AE%B1.md)
-- [3D风格PPT风格](Xenia/提示词/3D风格PPT风格.md)
+- [3D风格PPT风格](project/Codex学习/提示词/3D风格PPT风格.md)
 - [选题参考指南](Xenia/%E9%80%89%E9%A2%98%E5%8F%82%E8%80%83%E6%8C%87%E5%8D%97.md)
 - [AI skill目录](Xenia/AI%20skill%E7%9B%AE%E5%BD%95.md)
 - [Ob知识管理技能skill](Xenia/Ob知识管理技能skill.md)

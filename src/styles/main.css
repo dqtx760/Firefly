@@ -1,5 +1,30 @@
 @tailwind components;
 
+/* JOMMANS Falchion 鼠标指针，保留链接、输入和禁用状态的区别。 */
+@media (pointer: fine) {
+    html {
+        cursor: url("/cursors/jommans-falchion/Arrow.cur"), default;
+    }
+
+    a[href], button, summary, select, [role="button"],
+    input[type="button"], input[type="submit"], input[type="reset"],
+    input[type="checkbox"], input[type="radio"], input[type="range"],
+    .cursor-pointer {
+        cursor: url("/cursors/jommans-falchion/Hand.cur"), pointer !important;
+    }
+
+    textarea, input:not([type]), input[type="text"], input[type="search"],
+    input[type="email"], input[type="url"], input[type="tel"],
+    input[type="password"], input[type="number"],
+    [contenteditable="true"], .cursor-text {
+        cursor: url("/cursors/jommans-falchion/IBeam.cur"), text !important;
+    }
+
+    button:disabled, input:disabled, select:disabled, textarea:disabled {
+        cursor: not-allowed !important;
+    }
+}
+
 /* 禁用点击时的 focus outline 避免抖动 */
 *:focus, *:focus-visible { outline: none !important; }
 /* 防止页面切换时滚动条出现/消失导致的横向抖动 */

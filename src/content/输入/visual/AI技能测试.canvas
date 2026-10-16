@@ -1,0 +1,19 @@
+{
+	"nodes":[
+		{"id":"c-root","type":"text","x":400,"y":100,"width":260,"height":80,"color":"4","text":"AI 技能测试\n（Canvas 思维导图）"},
+		{"id":"c-1","type":"text","x":100,"y":300,"width":220,"height":60,"color":"1","text":"Excalidraw"},
+		{"id":"c-2","type":"text","x":380,"y":300,"width":220,"height":60,"color":"2","text":"Mermaid"},
+		{"id":"c-3","type":"text","x":660,"y":300,"width":220,"height":60,"color":"3","text":"Canvas"},
+		{"id":"c-4","type":"text","x":240,"y":450,"width":200,"height":50,"color":"1","text":"手绘风格图"},
+		{"id":"c-5","type":"text","x":480,"y":450,"width":200,"height":50,"color":"2","text":"流程图"},
+		{"id":"c-6","type":"text","x":620,"y":450,"width":200,"height":50,"color":"3","text":"交互式画布"}
+	],
+	"edges":[
+		{"id":"e1","fromNode":"c-root","fromSide":"bottom","toNode":"c-1","toSide":"top","color":"1"},
+		{"id":"e2","fromNode":"c-root","fromSide":"bottom","toNode":"c-2","toSide":"top","color":"2"},
+		{"id":"e3","fromNode":"c-root","fromSide":"bottom","toNode":"c-3","toSide":"top","color":"3"},
+		{"id":"e4","fromNode":"c-1","fromSide":"bottom","toNode":"c-4","toSide":"top","color":"1","label":"产出"},
+		{"id":"e5","fromNode":"c-2","fromSide":"bottom","toNode":"c-5","toSide":"top","color":"2","label":"产出"},
+		{"id":"e6","fromNode":"c-3","fromSide":"bottom","toNode":"c-6","toSide":"top","color":"3","label":"产出"}
+	]
+}

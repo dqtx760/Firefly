@@ -37,15 +37,6 @@ image:
 | Codex重置    | https://github.com/dqtx760/codex-resets       | 自建公共 | [tick.dqtx.cc](https://tick.dqtx.cc/) |     |
 | Codex登入免验证 | https://github.com/dqtx760/codex-session-auth |      | https://cdx.dqtx.cc/                  |     |
 
-### 桌面版程序
-
-
-| 说明        | 仓库地址                                          | 属性   | 创建日期       |
-| --------- | --------------------------------------------- | ---- | ---------- |
-| 智能语音助手    | https://github.com/dqtx760/zhiyan-Voice-Agent | 自建公共 | 2026/07/18 |
-| 大强博客终端搜索器 | https://github.com/dqtx760/dq-cli             |      |            |
-
-
 
 ### 在线工具
 
@@ -70,12 +61,23 @@ image:
 | ---- | -------------------------------------------- | ------ | -------------------- |
 | 远程   | https://github.com/dqtx760/remote            | 自建公共   | https://fix.dqtx.cc/ |
 
+### 桌面版程序
+
+
+| 说明        | 仓库地址                                               | 属性   | 创建日期       |
+| --------- | -------------------------------------------------- | ---- | ---------- |
+| 智能语音助手    | https://github.com/dqtx760/zhiyan-Voice-Agent      | 自建公共 | 2026/07/18 |
+| 大强博客终端搜索器 | https://github.com/dqtx760/dq-cli                  |      |            |
+| Recly（录频） | https://github.com/dqtx760/Recly                   |      |            |
+| 微信客服      | https://github.com/dqtx760/sightflow-desktop-agent | 私有   |            |
 ### chrome插件
 
 
 | chrome插件 | https://github.com/dqtx760/StarTab | 自建公共 |     |
 | -------- | ---------------------------------- | ---- | --- |
-| chrome插件 | https://github.com/dqtx760/Snaply  | 自建公共 |     |
+| 标签页      | https://github.com/dqtx760/Snaply  | 自建公共 |     |
+| 搜索       |                                    |      |     |
+| 一份分发     |                                    |      |     |
 
 
 
@@ -106,6 +108,7 @@ image:
 | 让你的DeepSeek拥有识图能力。 | https://github.com/dqtx760/glm4v-vision-mcp         | 自建公共 | 2026/08/04 |
 | 让你的DeepSeek拥有生图能力。 | https://github.com/dqtx760/deepseek-imagegen        | 自建公共 | 2026/08/04 |
 | wezterm终端自动化配置脚本   | https://github.com/dqtx760/wezterm-kit/tree/main    |      |            |
+| 群聊转HTML            | https://github.com/dqtx760/dqtx-WeFlow-Daily        |      |            |
 | 单文件安装包             | https://github.com/dqtx760/dqtx-make-sfx            | 自建公共 | 2026/10/10 |
 
 

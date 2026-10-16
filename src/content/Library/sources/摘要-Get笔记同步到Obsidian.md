@@ -17,6 +17,6 @@ last_updated: 2026-05-27
 ## 关联连接
 
 - [[Get笔记]] — 数据来源方，biji.com 服务
-- [[get-to-obsidian]] — 同步插件本体
+- [[../entities/get-to-obsidian]] — 同步插件本体
 - [[Obsidian]] — 目标笔记平台
 - [[知识同步工作流]] — 从外部工具同步到个人知识库的方法论
